@@ -1,0 +1,13 @@
+[build]
+  command = "yarn build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Multi-Comune: i link dedicati (/erba, /sarzana, /vigne-e-vini ...) e tutte
+# le pagine interne vengono servite dall'app, che riconosce il Comune dal link.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
