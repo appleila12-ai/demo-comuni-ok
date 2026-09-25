@@ -1,6 +1,6 @@
 // Pagina dedicata "Aiuti sul Territorio" — versione grande con banner visivi.
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   ImageBackground,
   Linking,
@@ -21,7 +21,6 @@ import * as Sharing from "expo-sharing";
 import * as FileSystem from "expo-file-system/legacy";
 
 import { colors, fonts, radius, spacing } from "@/src/theme";
-import { storage } from "@/src/utils/storage";
 import { IMAGES } from "@/src/lib/images";
 import { MonoImage } from "@/src/components/MonoImage";
 import { ComuneLogo } from "@/src/components/ComuneLogo";
@@ -30,7 +29,6 @@ import {
   buildGuideHtml,
   getHelpCards,
   REGIONAL_PORTALS,
-  REGIONE_KEY,
 } from "@/src/lib/territorio";
 import { addVaultFile } from "@/src/lib/vault";
 import { comune } from "@/src/config/comune";
@@ -46,15 +44,10 @@ export default function Territorio() {
   useSezione("territorio");
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const [regione, setRegione] = useState(comune.regione);
+  // La regione è sempre quella del Comune (non si sceglie a mano)
+  const regione = comune.regione;
   const [downloading, setDownloading] = useState(false);
 
-  useEffect(() => {
-    (async () => {
-      const r = await storage.getItem<string>(REGIONE_KEY, "");
-      if (r) setRegione(r);
-    })();
-  }, []);
 
   const portal = REGIONAL_PORTALS[regione];
   const t = comune.theme;

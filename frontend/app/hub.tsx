@@ -1,13 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 import {
-  Modal,
   Pressable,
   ScrollView,
   StyleSheet,
   Text,
   View,
 } from "react-native";
-import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
+import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@react-native-vector-icons/ionicons";
 import { useFocusEffect, useRouter } from "expo-router";
 
@@ -16,7 +15,6 @@ import { storage } from "@/src/utils/storage";
 import { Wordmark } from "@/src/components/Brand";
 import { EtichettaComune, HeaderComune } from "@/src/components/HeaderComune";
 import { formatDate, listReports, Report } from "@/src/lib/reports";
-import { REGIONE_KEY, REGIONI } from "@/src/lib/territorio";
 import { comune } from "@/src/config/comune";
 import { registra, useSezione } from "@/src/lib/statistiche";
 
@@ -24,83 +22,123 @@ const MOMENTO_KEY = "tutelapp:hub:momento";
 
 type Momento = "diagnosi" | "iter" | "diritti" | null;
 
-const MOMENTI: { id: Exclude<Momento, null>; label: string }[] = [
-  { id: "diagnosi", label: "Ho appena ricevuto una diagnosi" },
-  { id: "iter", label: "Ho già avviato una pratica" },
-  { id: "diritti", label: "Voglio capire i miei diritti" },
+const MOMENTI: { id: Exclude<Momento, null>; label: string; sub: string; icon: any }[] = [
+  {
+    id: "diagnosi",
+    label: "Ho appena ricevuto una diagnosi",
+    sub: "Ti mostriamo i primi passi e come ottenere il riconoscimento",
+    icon: "leaf-outline",
+  },
+  {
+    id: "iter",
+    label: "Ho già avviato una pratica",
+    sub: "Segui le tappe, le scadenze e cosa preparare",
+    icon: "footsteps-outline",
+  },
+  {
+    id: "diritti",
+    label: "Voglio capire i miei diritti",
+    sub: "Scopri aiuti, agevolazioni e permessi che ti spettano",
+    icon: "shield-checkmark-outline",
+  },
 ];
 
-// Le 4 sezioni principali — raggiungibili dopo la domanda
-const SEZIONI = [
+type Link = { label: string; route: string };
+type Tappa = {
+  id: string;
+  titolo: string;
+  testo: string;
+  icon: any;
+  color: { main: string; soft: string };
+  principale: Link;
+  altri: Link[];
+};
+
+// Tutte le sezioni dell'app, messe in ordine come un percorso
+const TAPPE: Tappa[] = [
+  {
+    id: "diagnosi",
+    titolo: "Dopo la diagnosi",
+    testo: "Esenzione dal ticket, malattia al lavoro, sportello sociale: le prime cose da sapere.",
+    icon: "leaf-outline",
+    color: topics.percorso,
+    principale: { label: "Primi passi", route: "/primi-passi" },
+    altri: [],
+  },
+  {
+    id: "riconoscimento",
+    titolo: "Il riconoscimento",
+    testo: "Dal certificato del medico alla visita INPS, fino al verbale.",
+    icon: "document-text-outline",
+    color: topics.invalidita,
+    principale: { label: "Il percorso passo passo", route: "/percorso" },
+    altri: [{ label: "Cosa cambia con la riforma", route: "/riforma" }],
+  },
+  {
+    id: "pratica",
+    titolo: "Segui la tua pratica",
+    testo: "Segna le tappe e ricevi un promemoria per le scadenze importanti.",
+    icon: "footsteps-outline",
+    color: topics.salute,
+    principale: { label: "La mia pratica", route: "/tracker" },
+    altri: [{ label: "Le mie scadenze", route: "/scadenze" }],
+  },
+  {
+    id: "diritti",
+    titolo: "I tuoi diritti",
+    testo: "Aiuti economici, permessi, agevolazioni e le lettere per chiederli.",
+    icon: "shield-checkmark-outline",
+    color: topics.esenzioni,
+    principale: { label: "A cosa hai diritto", route: "/agevolazioni" },
+    altri: [
+      { label: "Valutazione personalizzata", route: "/valutazione" },
+      { label: "Lettere pronte", route: "/lettere" },
+      { label: "Importi aggiornati", route: "/importi" },
+    ],
+  },
   {
     id: "progetto",
-    icon: "sparkles-outline" as const,
-    title: "Il mio Progetto di Vita",
-    sub: "I tuoi desideri, da portare all'équipe che valuta (UVM)",
-    route: "/progetto",
+    titolo: "Il Progetto di Vita",
+    testo: "Prepara i tuoi desideri da portare all'équipe che valuta (UVM) e al Comune.",
+    icon: "sparkles-outline",
     color: topics.lavoro,
-  },
-  {
-    id: "tracker",
-    icon: "footsteps-outline" as const,
-    title: "La mia pratica",
-    sub: "A che punto sei, tappa dopo tappa",
-    route: "/tracker",
-    color: topics.salute,
-  },
-  {
-    id: "primi-passi",
-    icon: "leaf-outline" as const,
-    title: "Primi passi dopo una diagnosi",
-    sub: "Esenzioni, malattia e sportello sociale",
-    route: "/primi-passi",
-    color: topics.percorso,
-  },
-  {
-    id: "supporto",
-    icon: "people-outline" as const,
-    title: "Punti di supporto",
-    sub: "Filo diretto con INPS e Comune",
-    route: "/contatti",
-    color: topics.patronato,
+    principale: { label: "Il mio Progetto di Vita", route: "/progetto" },
+    altri: [],
   },
   {
     id: "territorio",
-    icon: "home-outline" as const,
-    title: "Aiuti sul territorio",
-    sub: "Assistenza a casa, trasporti e servizi del Comune",
-    route: "/territorio",
-    color: topics.esenzioni,
+    titolo: "Gli aiuti vicino a te",
+    testo: "Assistenza a casa, trasporti e i contatti dei servizi del territorio.",
+    icon: "home-outline",
+    color: topics.patronato,
+    principale: { label: "Aiuti sul territorio", route: "/territorio" },
+    altri: [{ label: "Punti di supporto", route: "/contatti" }],
   },
-] as const;
-
-const STRUMENTI = [
-  { href: "/agevolazioni", icon: "gift-outline" as const, title: "A cosa hai diritto", sub: "Bonus, agevolazioni e servizi in 2 minuti" },
-  { href: "/lettere", icon: "create-outline" as const, title: "Lettere pronte", sub: "Richieste al Comune e al lavoro, da stampare o inviare" },
-  { href: "/scadenze", icon: "alarm-outline" as const, title: "Le mie scadenze", sub: "Ricorsi, revisioni, ISEE: promemoria sul calendario" },
 ];
+
+/** Da quale tappa partire in base al momento scelto */
+const PARTENZA: Record<Exclude<Momento, null>, string> = {
+  diagnosi: "diagnosi",
+  iter: "pratica",
+  diritti: "diritti",
+};
 
 export default function Hub() {
   useSezione("orientarsi");
   const router = useRouter();
-  const insets = useSafeAreaInsets();
 
-  const [regione, setRegione] = useState(comune.regione);
-  const [regionOpen, setRegionOpen] = useState(false);
   const [history, setHistory] = useState<Report[]>([]);
   const [momento, setMomento] = useState<Momento>(null);
   const [guidaOpen, setGuidaOpen] = useState(false);
 
   useEffect(() => {
     (async () => {
-      const r = await storage.getItem<string>(REGIONE_KEY, "");
-      if (r) setRegione(r);
       const m = await storage.getItem<string>(MOMENTO_KEY, "");
       if (m === "diagnosi" || m === "iter" || m === "diritti") setMomento(m);
     })();
   }, []);
 
-  // Storico valutazioni: si aggiorna ogni volta che si torna in home
+  // Storico valutazioni: si aggiorna ogni volta che si torna qui
   useFocusEffect(
     useCallback(() => {
       let active = true;
@@ -121,17 +159,13 @@ export default function Hub() {
     registra("momento", m);
     if (m === "diagnosi") return router.push("/percorso");
     if (m === "iter") return router.push("/tracker");
-    // Diritti: ultimo risultato salvato se esiste, altrimenti il questionario
     const list = await listReports();
     if (list.length > 0) router.push(`/risultati/${list[0].id}`);
     else router.push("/valutazione");
   };
 
-  const pickRegion = (r: string) => {
-    setRegione(r);
-    storage.setItem(REGIONE_KEY, r);
-    setRegionOpen(false);
-  };
+  const partenza = momento ? PARTENZA[momento] : null;
+  const vai = (route: string) => router.push(route as any);
 
   return (
     <SafeAreaView style={styles.safe} edges={["top", "bottom"]}>
@@ -140,7 +174,7 @@ export default function Hub() {
         contentContainerStyle={styles.container}
         showsVerticalScrollIndicator={false}
       >
-        {/* Top bar: indietro + logo */}
+        {/* Top bar: indietro + logo + stemma */}
         <View style={styles.topBar} testID="home-topbar">
           <Pressable
             onPress={() => router.back()}
@@ -157,184 +191,155 @@ export default function Hub() {
           </View>
         </View>
 
-        {/* Titolo sezione — navigatore di transizione */}
         <View style={styles.pageTitleBox} testID="home-title">
           <Text style={styles.pageTitle}>Orientarsi insieme</Text>
           <Text style={styles.pageSub}>
-            Il tuo navigatore: capisci a che punto sei e cosa puoi attivare
-            con la Riforma della disabilità (D.Lgs. 62/2024).
+            Dove sei adesso e qual è il prossimo passo, con le regole della Riforma
+            della disabilità (D.Lgs. 62/2024).
           </Text>
           <View style={{ marginTop: 10 }}>
             <EtichettaComune testID="hub-comune" />
           </View>
+          <Text style={styles.regioneNota} testID="hub-regione">
+            Informazioni per la Regione {comune.regione}
+          </Text>
         </View>
 
-        {/* Domanda filtro: in che momento sei? */}
-        <View style={styles.filterCard} testID="hub-filter-card">
-          <Text style={styles.filterQuestion}>In che momento sei?</Text>
-          <View style={styles.filterCol}>
-            {MOMENTI.map((m) => {
-              const on = momento === m.id;
-              return (
-                <Pressable
-                  key={m.id}
-                  onPress={() => pickMomento(m.id)}
-                  style={[styles.filterBtn, on && styles.filterBtnOn]}
-                  accessibilityRole="button"
-                  accessibilityState={{ selected: on }}
-                  testID={`hub-momento-${m.id}`}
-                >
-                  <Ionicons
-                    name={on ? "checkmark-circle" : "ellipse-outline"}
-                    size={18}
-                    color={on ? colors.onBrandPrimary : colors.brandPrimary}
-                  />
-                  <Text style={[styles.filterBtnText, on && styles.filterBtnTextOn]}>
-                    {m.label}
-                  </Text>
-                </Pressable>
-              );
-            })}
-          </View>
+        {/* 1 — Da dove partire */}
+        <Text style={styles.sectionLabel}>DA DOVE VUOI PARTIRE?</Text>
+        <View style={styles.momenti} testID="hub-filter-card">
+          {MOMENTI.map((m) => {
+            const on = momento === m.id;
+            return (
+              <Pressable
+                key={m.id}
+                onPress={() => pickMomento(m.id)}
+                style={({ pressed }) => [
+                  styles.momento,
+                  on && styles.momentoOn,
+                  pressed && { opacity: 0.9 },
+                ]}
+                accessibilityRole="button"
+                accessibilityState={{ selected: on }}
+                testID={`hub-momento-${m.id}`}
+              >
+                <View style={[styles.momentoIcon, on && { backgroundColor: colors.surface }]}>
+                  <Ionicons name={m.icon} size={22} color={colors.brandPrimaryDark} />
+                </View>
+                <View style={styles.flex}>
+                  <Text style={styles.momentoTitle}>{m.label}</Text>
+                  <Text style={styles.momentoSub}>{m.sub}</Text>
+                </View>
+                <Ionicons name="arrow-forward" size={18} color={colors.brandPrimaryDark} />
+              </Pressable>
+            );
+          })}
         </View>
 
-        {/* Sezioni principali raggiungibili */}
-        <Text style={styles.sectionLabel}>LE TUE SEZIONI</Text>
-        <View style={styles.grid}>
-          {SEZIONI.map((s) => (
-            <Pressable
-              key={s.id}
-              onPress={() => router.push(s.route)}
-              style={({ pressed }) => [styles.gridCard, pressed && { opacity: 0.9 }]}
-              accessibilityRole="button"
-              accessibilityLabel={s.title}
-              testID={`hub-card-${s.id}`}
-            >
-              <View style={[styles.gridIcon, { backgroundColor: s.color.soft }]}>
-                <Ionicons name={s.icon} size={26} color={s.color.main} />
+        {/* 2 — Tutto il percorso, in ordine */}
+        <Text style={styles.sectionLabel}>IL PERCORSO, TAPPA DOPO TAPPA</Text>
+        <View style={styles.tappe} testID="hub-tappe">
+          {TAPPE.map((t, i) => {
+            const qui = partenza === t.id;
+            const ultima = i === TAPPE.length - 1;
+            return (
+              <View key={t.id} style={styles.tappaRiga} testID={`hub-tappa-${t.id}`}>
+                <View style={styles.tappaSx}>
+                  <View style={[styles.tappaNum, { backgroundColor: qui ? colors.brandPrimaryDark : t.color.soft }]}>
+                    <Text style={[styles.tappaNumText, qui && { color: "#FFFFFF" }]}>{i + 1}</Text>
+                  </View>
+                  {!ultima && <View style={styles.tappaLinea} />}
+                </View>
+                <View style={[styles.tappaCard, qui && styles.tappaCardQui]}>
+                  {qui && <Text style={styles.tappaQui}>SEI QUI</Text>}
+                  <View style={styles.tappaHead}>
+                    <Ionicons name={t.icon} size={18} color={t.color.main} />
+                    <Text style={styles.tappaTitolo}>{t.titolo}</Text>
+                  </View>
+                  <Text style={styles.tappaTesto}>{t.testo}</Text>
+                  <Pressable
+                    onPress={() => vai(t.principale.route)}
+                    style={({ pressed }) => [styles.tappaBtn, pressed && { opacity: 0.85 }]}
+                    accessibilityRole="button"
+                    testID={`hub-card-${t.id}`}
+                  >
+                    <Text style={styles.tappaBtnText}>{t.principale.label}</Text>
+                    <Ionicons name="arrow-forward" size={15} color="#FFFFFF" />
+                  </Pressable>
+                  {t.altri.length > 0 && (
+                    <View style={styles.tappaAltri}>
+                      {t.altri.map((l) => (
+                        <Pressable
+                          key={l.route}
+                          onPress={() => vai(l.route)}
+                          hitSlop={6}
+                          accessibilityRole="link"
+                          style={styles.tappaLink}
+                        >
+                          <Text style={styles.tappaLinkText}>{l.label}</Text>
+                          <Ionicons name="chevron-forward" size={13} color={colors.brandPrimaryDark} />
+                        </Pressable>
+                      ))}
+                    </View>
+                  )}
+                </View>
               </View>
-              <Text style={styles.gridTitle}>{s.title}</Text>
-              <Text style={styles.gridSub}>{s.sub}</Text>
-            </Pressable>
-          ))}
+            );
+          })}
         </View>
 
-        {/* Strumenti pratici */}
-        <Text style={styles.sectionLabel}>STRUMENTI PRATICI</Text>
-        {STRUMENTI.map((st) => (
-          <Pressable
-            key={st.href}
-            onPress={() => router.push(st.href as any)}
-            style={({ pressed }) => [styles.navCard, pressed && { opacity: 0.9 }]}
-            accessibilityRole="button"
-            accessibilityLabel={st.title}
-            testID={`hub-strumento-${st.href.slice(1)}`}
-          >
-            <View style={[styles.navIcon, { backgroundColor: colors.brandSecondary }]}>
-              <Ionicons name={st.icon} size={22} color={colors.brandPrimaryDark} />
-            </View>
-            <View style={styles.flex}>
-              <Text style={styles.navTitle}>{st.title}</Text>
-              <Text style={styles.navSub}>{st.sub}</Text>
-            </View>
-            <Ionicons name="chevron-forward" size={18} color={colors.borderStrong} />
-          </Pressable>
-        ))}
+        {/* Valutazioni già fatte */}
+        {history.length > 0 && (
+          <View style={styles.historyBox} testID="home-history">
+            <Text style={styles.historyLabel}>LE TUE VALUTAZIONI</Text>
+            {history.map((r) => (
+              <Pressable
+                key={r.id}
+                onPress={() => router.push(`/risultati/${r.id}`)}
+                style={({ pressed }) => [styles.historyRow, pressed && { opacity: 0.8 }]}
+                accessibilityRole="button"
+                testID={`home-history-item-${r.id}`}
+              >
+                <View style={styles.historyIcon}>
+                  <Ionicons name="document-text-outline" size={16} color={colors.brandPrimary} />
+                </View>
+                <View style={styles.flex}>
+                  <Text style={styles.historyTitle} numberOfLines={1}>
+                    {r.answers.who} · {r.answers.work}
+                  </Text>
+                  <Text style={styles.historyDate}>{formatDate(r.createdAt)}</Text>
+                </View>
+                <Ionicons name="chevron-forward" size={16} color={colors.borderStrong} />
+              </Pressable>
+            ))}
+          </View>
+        )}
 
-        {/* Il percorso per il riconoscimento */}
-        <Pressable
-          onPress={() => router.push("/percorso")}
-          style={({ pressed }) => [styles.navCard, pressed && { opacity: 0.9 }]}
-          accessibilityRole="button"
-          accessibilityLabel="Il percorso per il riconoscimento"
-          testID="hub-branch-no"
-        >
-          <View style={[styles.navIcon, { backgroundColor: colors.brandSecondary }]}>
-            <Ionicons name="footsteps-outline" size={22} color={colors.brandPrimary} />
-          </View>
-          <View style={styles.flex}>
-            <Text style={styles.navTitle}>Il percorso per il riconoscimento</Text>
-            <Text style={styles.navSub}>
-              Regione, step dalla diagnosi al verbale e avvio del percorso guidato
-            </Text>
-          </View>
-          <Ionicons name="chevron-forward" size={18} color={colors.borderStrong} />
-        </Pressable>
-
-        {/* Cosa cambia con la riforma → pagina dedicata */}
-        <Pressable
-          onPress={() => router.push("/riforma")}
-          style={({ pressed }) => [styles.navCard, pressed && { opacity: 0.9 }]}
-          accessibilityRole="button"
-          accessibilityLabel="Cosa cambia con la riforma"
-          testID="hub-riforma"
-        >
-          <View style={[styles.navIcon, { backgroundColor: colors.brandSecondary }]}>
-            <Ionicons name="megaphone-outline" size={22} color={colors.brandPrimary} />
-          </View>
-          <View style={styles.flex}>
-            <Text style={styles.navTitle}>Cosa cambia con la riforma</Text>
-            <Text style={styles.navSub}>
-              Valutazione unica INPS, criteri OMS, Progetto di Vita e tutele per chi ha già un verbale
-            </Text>
-          </View>
-          <Ionicons name="chevron-forward" size={18} color={colors.borderStrong} />
-        </Pressable>
-
-        {/* Sotto-sezioni: FAQ + Importi */}
+        {/* Domande e parole difficili */}
         <View style={styles.quickRow}>
-            <Pressable
-              onPress={() => router.push("/faq")}
-              style={({ pressed }) => [styles.quickCard, pressed && { opacity: 0.9 }]}
-              accessibilityRole="button"
-              testID="home-faq-link"
-            >
-              <Ionicons name="help-circle-outline" size={22} color={colors.brandPrimary} />
-              <Text style={styles.quickTitle}>Domande Frequenti</Text>
-              <Text style={styles.quickSub}>Risposte chiare e glossario</Text>
-            </Pressable>
-            <Pressable
-              onPress={() => router.push("/importi")}
-              style={({ pressed }) => [styles.quickCard, pressed && { opacity: 0.9 }]}
-              accessibilityRole="button"
-              testID="home-importi-link"
-            >
-              <Ionicons name="cash-outline" size={22} color={colors.brandPrimary} />
-              <Text style={styles.quickTitle}>Importi Aggiornati</Text>
-              <Text style={styles.quickSub}>Cifre e limiti di reddito</Text>
-            </Pressable>
-          </View>
-
-        {/* Impostazioni: regione (i dati restano sul dispositivo) */}
-        <View style={styles.accountBox} testID="hub-account-box">
-          <Text style={styles.accountLabel}>IMPOSTAZIONI</Text>
           <Pressable
-            onPress={() => setRegionOpen(true)}
-            style={({ pressed }) => [styles.accountRow, pressed && { opacity: 0.85 }]}
+            onPress={() => router.push("/faq")}
+            style={({ pressed }) => [styles.quickCard, pressed && { opacity: 0.9 }]}
             accessibilityRole="button"
-            accessibilityLabel={`La tua regione: ${regione}. Tocca per cambiare`}
-            testID="home-region-pill"
+            testID="home-faq-link"
           >
-            <Ionicons name="location-outline" size={18} color={colors.brandPrimary} />
-            <View style={styles.flex}>
-              <Text style={styles.accountRowTitle}>Regione</Text>
-              <Text style={styles.accountRowSub} testID="home-region-value">{regione}</Text>
-            </View>
-            <Ionicons name="chevron-forward" size={16} color={colors.borderStrong} />
+            <Ionicons name="help-circle-outline" size={22} color={colors.brandPrimary} />
+            <Text style={styles.quickTitle}>Domande frequenti</Text>
+            <Text style={styles.quickSub}>Risposte chiare</Text>
           </Pressable>
-
-          <View style={styles.accountRow} testID="hub-dati-locali">
-            <Ionicons name="phone-portrait-outline" size={18} color={colors.brandPrimary} />
-            <View style={styles.flex}>
-              <Text style={styles.accountRowTitle}>I tuoi dati restano tuoi</Text>
-              <Text style={styles.accountRowSub}>
-                Nessun account: tutto resta salvato solo su questo dispositivo
-              </Text>
-            </View>
-          </View>
+          <Pressable
+            onPress={() => router.push("/faq?sezione=glossario" as any)}
+            style={({ pressed }) => [styles.quickCard, pressed && { opacity: 0.9 }]}
+            accessibilityRole="button"
+            testID="home-glossario-link"
+          >
+            <Ionicons name="book-outline" size={22} color={colors.brandPrimary} />
+            <Text style={styles.quickTitle}>Glossario</Text>
+            <Text style={styles.quickSub}>Le parole difficili</Text>
+          </Pressable>
         </View>
 
-        {/* Box informativo: Questa guida fa per te? */}
+        {/* Questa guida fa per te? */}
         <View style={styles.guidaBox} testID="hub-guida-box">
           <Pressable
             onPress={() => setGuidaOpen((o) => !o)}
@@ -364,107 +369,81 @@ export default function Hub() {
           )}
         </View>
 
+        <View style={styles.datiRiga} testID="hub-dati-locali">
+          <Ionicons name="phone-portrait-outline" size={16} color={colors.onSurfaceSecondary} />
+          <Text style={styles.datiText}>
+            Nessun account: i tuoi dati restano salvati solo su questo dispositivo.
+          </Text>
+        </View>
+
         <View style={styles.spacer} />
-
-        {/* Storico valutazioni */}
-        {history.length > 0 && (
-          <View style={styles.historyBox} testID="home-history">
-            <Text style={styles.historyLabel}>LE TUE VALUTAZIONI</Text>
-            {history.map((r) => (
-              <Pressable
-                key={r.id}
-                onPress={() => router.push(`/risultati/${r.id}`)}
-                style={({ pressed }) => [
-                  styles.historyRow,
-                  pressed && { opacity: 0.8 },
-                ]}
-                accessibilityRole="button"
-                testID={`home-history-item-${r.id}`}
-              >
-                <View style={styles.historyIcon}>
-                  <Ionicons
-                    name="document-text-outline"
-                    size={16}
-                    color={colors.brandPrimary}
-                  />
-                </View>
-                <View style={styles.flex}>
-                  <Text style={styles.historyTitle} numberOfLines={1}>
-                    {r.answers.who} · {r.answers.work}
-                  </Text>
-                  <Text style={styles.historyDate}>
-                    {formatDate(r.createdAt)}
-                  </Text>
-                </View>
-                <Ionicons
-                  name="chevron-forward"
-                  size={16}
-                  color={colors.borderStrong}
-                />
-              </Pressable>
-            ))}
-          </View>
-        )}
       </ScrollView>
-
-      {/* Region modal */}
-      <Modal
-        visible={regionOpen}
-        transparent
-        animationType="fade"
-        onRequestClose={() => setRegionOpen(false)}
-      >
-        <Pressable
-          style={styles.modalBackdrop}
-          onPress={() => setRegionOpen(false)}
-        >
-          <Pressable
-            style={[styles.sheet, { paddingBottom: insets.bottom + spacing.lg }]}
-            onPress={(e) => e.stopPropagation()}
-          >
-            <View style={styles.sheetHandle} />
-            <Text style={styles.sheetTitle}>Scegli la regione</Text>
-            <ScrollView
-              style={styles.sheetScroll}
-              showsVerticalScrollIndicator={false}
-            >
-              {REGIONI.map((r) => {
-                const isSel = r === regione;
-                return (
-                  <Pressable
-                    key={r}
-                    onPress={() => pickRegion(r)}
-                    style={({ pressed }) => [
-                      styles.sheetItem,
-                      pressed && { opacity: 0.7 },
-                    ]}
-                    testID={`region-option-${r}`}
-                  >
-                    <Text
-                      style={[
-                        styles.sheetItemText,
-                        isSel && styles.sheetItemTextSelected,
-                      ]}
-                    >
-                      {r}
-                    </Text>
-                    {isSel && (
-                      <Ionicons name="checkmark" size={20} color={colors.brandPrimary} />
-                    )}
-                  </Pressable>
-                );
-              })}
-            </ScrollView>
-          </Pressable>
-        </Pressable>
-      </Modal>
-
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.background },
+  regioneNota: { fontSize: 12, color: colors.onSurfaceSecondary, marginTop: 6 },
+  momenti: { gap: spacing.sm, marginBottom: spacing.lg },
+  momento: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.md,
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: radius.lg,
+    padding: spacing.md,
+  },
+  momentoOn: { borderColor: colors.brandPrimaryDark, borderWidth: 1.5, backgroundColor: colors.brandSecondary },
+  momentoIcon: {
+    width: 44,
+    height: 44,
+    borderRadius: radius.md,
+    backgroundColor: colors.brandSecondary,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  momentoTitle: { fontSize: 15.5, fontWeight: "800", color: colors.onSurface, lineHeight: 20 },
+  momentoSub: { fontSize: 12.5, lineHeight: 17, color: colors.onSurfaceSecondary, marginTop: 2 },
+  tappe: { marginBottom: spacing.lg },
+  tappaRiga: { flexDirection: "row", gap: spacing.md },
+  tappaSx: { alignItems: "center", width: 30 },
+  tappaNum: { width: 30, height: 30, borderRadius: 15, alignItems: "center", justifyContent: "center" },
+  tappaNumText: { fontSize: 14, fontWeight: "800", color: colors.onSurface },
+  tappaLinea: { flex: 1, width: 2, backgroundColor: colors.border, marginVertical: 4 },
+  tappaCard: {
+    flex: 1,
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: radius.lg,
+    padding: spacing.md,
+    marginBottom: spacing.md,
+  },
+  tappaCardQui: { borderColor: colors.brandPrimaryDark, borderWidth: 1.5 },
+  tappaQui: { fontSize: 10, fontWeight: "800", letterSpacing: 1, color: colors.brandPrimaryDark, marginBottom: 4 },
+  tappaHead: { flexDirection: "row", alignItems: "center", gap: 8 },
+  tappaTitolo: { fontFamily: fonts.serif, fontSize: 17, fontWeight: "700", color: colors.onSurface, flex: 1 },
+  tappaTesto: { fontSize: 13.5, lineHeight: 19, color: colors.onSurfaceSecondary, marginTop: 4 },
+  tappaBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    alignSelf: "flex-start",
+    gap: 6,
+    backgroundColor: colors.brandPrimaryDark,
+    borderRadius: radius.pill,
+    paddingHorizontal: 14,
+    paddingVertical: 9,
+    marginTop: spacing.sm,
+  },
+  tappaBtnText: { color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
+  tappaAltri: { flexDirection: "row", flexWrap: "wrap", gap: 14, marginTop: 10 },
+  tappaLink: { flexDirection: "row", alignItems: "center", gap: 2 },
+  tappaLinkText: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark, textDecorationLine: "underline" },
+  datiRiga: { flexDirection: "row", alignItems: "center", gap: 8, marginTop: spacing.md, paddingHorizontal: 4 },
+  datiText: { flex: 1, fontSize: 12, lineHeight: 17, color: colors.onSurfaceSecondary },
   flex: { flex: 1 },
   container: {
     flexGrow: 1,

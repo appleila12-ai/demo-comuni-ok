@@ -38,6 +38,7 @@ import {
 } from "@/src/lib/reports";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
+import { HeaderComune } from "@/src/components/HeaderComune";
 
 function toast(msg: string) {
   if (Platform.OS === "android") ToastAndroid.show(msg, ToastAndroid.SHORT);
@@ -138,15 +139,7 @@ export default function Risultati() {
             <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
           </Pressable>
           <Text style={styles.headerTitle}>I tuoi diritti</Text>
-          <Pressable
-            onPress={() => router.replace("/")}
-            style={styles.iconBtn}
-            hitSlop={12}
-            accessibilityLabel="Home"
-            testID="results-home-btn"
-          >
-            <Ionicons name="home-outline" size={20} color={colors.onSurface} />
-          </Pressable>
+          <HeaderComune />
         </View>
 
         <ScrollView

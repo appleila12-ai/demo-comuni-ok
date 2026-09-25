@@ -26,6 +26,7 @@ import Animated, {
 import { colors, fonts, radius, spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
 import { ComuneLogo } from "@/src/components/ComuneLogo";
+import { HeaderComune } from "@/src/components/HeaderComune";
 import { SezioniBar } from "@/src/components/SezioniBar";
 import { VaultSection } from "@/src/components/VaultSection";
 import { listReports, Report } from "@/src/lib/reports";
@@ -368,6 +369,7 @@ export default function Tracker() {
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>La tua pratica</Text>
+        <HeaderComune />
         <Pressable
           onPress={openNotifs}
           style={styles.iconBtn}

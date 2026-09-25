@@ -1,10 +1,8 @@
 // Il percorso per il riconoscimento — per chi non ha ancora un verbale.
-// Regione, step numerati dalla diagnosi al Progetto di Vita e avvio del
+// Step numerati dalla diagnosi al Progetto di Vita e avvio del
 // percorso guidato.
 
-import { useEffect, useState } from "react";
 import {
-  Modal,
   Pressable,
   ScrollView,
   StatusBar,
@@ -17,11 +15,9 @@ import Ionicons from "@react-native-vector-icons/ionicons";
 import { useRouter } from "expo-router";
 
 import { colors, fonts, radius, spacing } from "@/src/theme";
-import { storage } from "@/src/utils/storage";
 import { GuideStepsCard } from "@/src/components/NextStepsSection";
 import { QuestionarioValutazione } from "@/src/components/QuestionarioValutazione";
 import { SezioniBar } from "@/src/components/SezioniBar";
-import { REGIONE_KEY, REGIONI } from "@/src/lib/territorio";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import { HeaderComune } from "@/src/components/HeaderComune";
@@ -30,21 +26,6 @@ export default function PercorsoScreen() {
   useSezione("percorso");
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const [regione, setRegione] = useState(comune.regione);
-  const [regionOpen, setRegionOpen] = useState(false);
-
-  useEffect(() => {
-    storage.getItem<string>(REGIONE_KEY, "").then((r) => {
-      if (r) setRegione(r);
-    });
-  }, []);
-
-  const pickRegion = (r: string) => {
-    setRegione(r);
-    storage.setItem(REGIONE_KEY, r);
-    setRegionOpen(false);
-  };
-
   return (
     <SafeAreaView style={styles.safe} edges={["top"]} testID="percorso-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
@@ -78,28 +59,9 @@ export default function PercorsoScreen() {
           </Text>
         </View>
 
-        {/* Region — usata dal percorso guidato */}
-        <Pressable
-          onPress={() => setRegionOpen(true)}
-          style={({ pressed }) => [styles.regionCard, pressed && { opacity: 0.9 }]}
-          accessibilityRole="button"
-          accessibilityLabel={`La tua regione: ${regione}. Tocca per cambiare`}
-          testID="home-region-card"
-        >
-          <View style={styles.regionCardIcon}>
-            <Ionicons name="location-outline" size={22} color={colors.brandPrimary} />
-          </View>
-          <View style={styles.flex}>
-            <Text style={styles.regionCardLabel}>LA TUA REGIONE</Text>
-            <Text style={styles.regionCardValue} testID="home-region-value">
-              {regione}
-            </Text>
-          </View>
-          <View style={styles.regionCardCta}>
-            <Text style={styles.regionCardCtaText}>Cambia</Text>
-            <Ionicons name="chevron-down" size={14} color={colors.brandPrimary} />
-          </View>
-        </Pressable>
+        <Text style={styles.regioneNota} testID="percorso-regione">
+          Regole per {comune.nome} · Regione {comune.regione}
+        </Text>
 
         {/* Step numerati dalla diagnosi al Progetto di Vita */}
         <GuideStepsCard />
@@ -112,41 +74,6 @@ export default function PercorsoScreen() {
         <SezioniBar />
       </ScrollView>
 
-      {/* Region modal */}
-      <Modal
-        visible={regionOpen}
-        transparent
-        animationType="fade"
-        onRequestClose={() => setRegionOpen(false)}
-      >
-        <Pressable style={styles.modalBackdrop} onPress={() => setRegionOpen(false)}>
-          <Pressable
-            style={[styles.sheet, { paddingBottom: insets.bottom + spacing.lg }]}
-            onPress={(e) => e.stopPropagation()}
-          >
-            <View style={styles.sheetHandle} />
-            <Text style={styles.sheetTitle}>Scegli la regione</Text>
-            <ScrollView style={styles.sheetScroll} showsVerticalScrollIndicator={false}>
-              {REGIONI.map((r) => {
-                const isSel = r === regione;
-                return (
-                  <Pressable
-                    key={r}
-                    onPress={() => pickRegion(r)}
-                    style={({ pressed }) => [styles.sheetItem, pressed && { opacity: 0.7 }]}
-                    testID={`region-option-${r}`}
-                  >
-                    <Text style={[styles.sheetItemText, isSel && styles.sheetItemTextSelected]}>
-                      {r}
-                    </Text>
-                    {isSel && <Ionicons name="checkmark" size={20} color={colors.brandPrimary} />}
-                  </Pressable>
-                );
-              })}
-            </ScrollView>
-          </Pressable>
-        </Pressable>
-      </Modal>
     </SafeAreaView>
   );
 }
@@ -247,6 +174,7 @@ const styles = StyleSheet.create({
   },
   regionCardCtaText: { fontSize: 12, fontWeight: "800", color: colors.onSurface },
   questionario: { marginTop: spacing.xl },
+  regioneNota: { fontSize: 12.5, color: colors.onSurfaceSecondary, marginBottom: spacing.md, fontWeight: "600" },
 
   // Modal regione
   modalBackdrop: {
