@@ -35,6 +35,7 @@ import {
   saveProgetto,
 } from "@/src/lib/progetto";
 import { registra, useSezione } from "@/src/lib/statistiche";
+import { HeaderComune } from "@/src/components/HeaderComune";
 
 function toast(msg: string) {
   if (Platform.OS === "android") ToastAndroid.show(msg, ToastAndroid.SHORT);
@@ -136,7 +137,7 @@ export default function ProgettoDiVita() {
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Il mio Progetto di Vita</Text>
-        <View style={styles.iconBtn} />
+        <HeaderComune />
       </View>
 
       <KeyboardAvoidingView
@@ -158,7 +159,7 @@ export default function ProgettoDiVita() {
             <Text style={styles.avvisoText}>
               Questo strumento ti aiuta a preparare i tuoi pensieri prima di
               presentare la richiesta ufficiale: non sostituisce né la domanda
-              su SISDA (portale INPS) né il colloquio con l&apos;ATS.
+              su SISDA (portale INPS) né il colloquio con l&apos;Ambito Territoriale Sociale (ATS).
             </Text>
           </View>
 
@@ -318,7 +319,7 @@ export default function ProgettoDiVita() {
           )}
         </Pressable>
         <Text style={styles.footerHint}>
-          Da portare al colloquio con l&apos;UVM o al Comune
+          Da portare all&apos;incontro con l&apos;équipe che valuta (UVM) o al Comune
         </Text>
       </View>
     </SafeAreaView>

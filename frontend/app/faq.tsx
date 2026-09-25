@@ -22,6 +22,7 @@ import {
   loadAppContent,
 } from "@/src/lib/remoteContent";
 import { useSezione } from "@/src/lib/statistiche";
+import { HeaderComune } from "@/src/components/HeaderComune";
 
 export default function Faq() {
   useSezione("faq");
@@ -66,7 +67,7 @@ export default function Faq() {
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Domande e Glossario</Text>
-        <View style={styles.iconBtn} />
+        <HeaderComune />
       </View>
 
       {loading ? (

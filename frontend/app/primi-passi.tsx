@@ -17,6 +17,7 @@ import { SezioniBar } from "@/src/components/SezioniBar";
 import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
+import { HeaderComune } from "@/src/components/HeaderComune";
 
 function buildPrimiPassi() {
   return [
@@ -81,7 +82,7 @@ export default function PrimiPassiScreen() {
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Primi passi dopo una diagnosi</Text>
-        <View style={styles.iconBtn} />
+        <HeaderComune />
       </View>
 
       <ScrollView

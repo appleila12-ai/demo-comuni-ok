@@ -37,7 +37,7 @@ type Dati = {
 const ETICHETTE: Record<string, Record<string, string>> = {
   momento: {
     diagnosi: "Ho appena ricevuto una diagnosi",
-    iter: "Sto seguendo un iter",
+    iter: "Ho già avviato una pratica",
     diritti: "Voglio capire i miei diritti",
   },
   tappa: {
@@ -62,6 +62,9 @@ const ETICHETTE: Record<string, Record<string, string>> = {
     faq: "Domande frequenti",
     importi: "Importi aggiornati",
     "domande-104": "Domande sulla 104",
+    lettere: "Lettere pronte",
+    scadenze: "Le mie scadenze",
+    agevolazioni: "A cosa hai diritto",
   },
 };
 const etichetta = (m: string, v: string) => ETICHETTE[m]?.[v] ?? v;
@@ -135,6 +138,9 @@ function datiDiEsempio(): Dati {
       { v: "supporto", n: r(59) },
       { v: "riforma", n: r(51) },
       { v: "importi", n: r(33) },
+      { v: "agevolazioni", n: r(47) },
+      { v: "lettere", n: r(29) },
+      { v: "scadenze", n: r(18) },
     ],
     progetto_pdf: [{ v: "creato", n: r(26) }],
     questionario: [{ v: "completato", n: r(130) }],

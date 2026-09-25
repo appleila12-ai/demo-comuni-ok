@@ -51,6 +51,33 @@ const FEATURES = [
   },
 ];
 
+const STRUMENTI = [
+  {
+    id: "agevolazioni",
+    icon: "gift-outline" as const,
+    title: "A cosa hai diritto",
+    sub: "Bonus, agevolazioni e servizi in 2 minuti",
+    href: "/agevolazioni",
+    color: topics.esenzioni,
+  },
+  {
+    id: "lettere",
+    icon: "create-outline" as const,
+    title: "Lettere pronte",
+    sub: "Richieste al Comune e al lavoro, da stampare o inviare",
+    href: "/lettere",
+    color: topics.documenti,
+  },
+  {
+    id: "scadenze",
+    icon: "alarm-outline" as const,
+    title: "Le mie scadenze",
+    sub: "Ricorsi, revisioni, ISEE: promemoria sul calendario",
+    href: "/scadenze",
+    color: topics.salute,
+  },
+];
+
 const INFO_LINKS = [
   {
     id: "faq",
@@ -144,6 +171,7 @@ function HomeDelComune() {
             <Ionicons name="information-circle-outline" size={18} color="#6B4E16" />
             <Text style={styles.demoBannerText}>
               <Text style={styles.demoBannerStrong}>Versione dimostrativa. </Text>
+              {comune.tipo === "unione" ? "L'" : "Il "}
               {comune.nome} non ha aderito a TutelApp: questa pagina mostra come
               potrebbe funzionare. I recapiti sono quelli pubblicati sul sito
               ufficiale del Comune e potrebbero non essere aggiornati.
@@ -231,6 +259,30 @@ function HomeDelComune() {
           ))}
         </View>
 
+        {/* Strumenti pratici: aiutano a fare le pratiche */}
+        <Text style={styles.sectionLabel}>STRUMENTI PRATICI</Text>
+        <View style={styles.infoLinks}>
+          {STRUMENTI.map((l) => (
+            <Pressable
+              key={l.id}
+              onPress={() => router.push(l.href as any)}
+              style={({ pressed }) => [styles.infoLink, pressed && styles.pressed]}
+              accessibilityRole="button"
+              accessibilityLabel={l.title}
+              testID={`comune-strumento-${l.id}`}
+            >
+              <View style={[styles.infoLinkIcon, { backgroundColor: l.color.soft }]}>
+                <Ionicons name={l.icon} size={20} color={l.color.main} />
+              </View>
+              <View style={styles.flex}>
+                <Text style={styles.infoLinkTitle}>{l.title}</Text>
+                <Text style={styles.infoLinkSub}>{l.sub}</Text>
+              </View>
+              <Ionicons name="chevron-forward" size={16} color={colors.onSurfaceTertiary} />
+            </Pressable>
+          ))}
+        </View>
+
         {/* Informazioni utili: sempre disponibili, anche offline */}
         <Text style={styles.sectionLabel}>INFORMAZIONI UTILI</Text>
         <View style={styles.infoLinks}>
@@ -261,9 +313,13 @@ function HomeDelComune() {
             <Ionicons name="heart-outline" size={20} color={t.warmDark} />
           </View>
           <View style={styles.flex}>
-            <Text style={styles.infoTitle}>{comune.soggetto} resta al tuo fianco</Text>
+            <Text style={styles.infoTitle}>
+              {comune.dimostrativo
+                ? "I Servizi Sociali restano il tuo riferimento"
+                : `${comune.soggetto} resta al tuo fianco`}
+            </Text>
             <Text style={styles.infoText}>
-              TutelApp non sostituisce INPS, ATS, UVM o i servizi comunali.
+              TutelApp non sostituisce l&apos;INPS, l&apos;azienda sanitaria, l&apos;Ambito Territoriale Sociale o i servizi comunali.
               Ti aiuta a capire dove andare e cosa preparare.
             </Text>
           </View>

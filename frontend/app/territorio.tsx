@@ -35,6 +35,7 @@ import {
 import { addVaultFile } from "@/src/lib/vault";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
+import { HeaderComune } from "@/src/components/HeaderComune";
 
 function toast(msg: string) {
   if (Platform.OS === "android") ToastAndroid.show(msg, ToastAndroid.SHORT);
@@ -109,7 +110,7 @@ export default function Territorio() {
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Aiuti sul Territorio</Text>
-        <View style={styles.iconBtn} />
+        <HeaderComune />
       </View>
 
       <ScrollView
@@ -168,7 +169,7 @@ export default function Territorio() {
             {!!comune.telefono && (
               <Pressable
                 onPress={() => apri(`tel:${comune.telefono.replace(/\s/g, "")}`)}
-                style={[styles.actionBtn, { backgroundColor: t.warm }]}
+                style={[styles.actionBtn, { backgroundColor: t.warmDark }]}
                 accessibilityRole="button"
                 testID="territorio-comune-tel"
               >

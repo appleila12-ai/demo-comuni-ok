@@ -19,6 +19,7 @@ import { comune } from "@/src/config/comune";
 import { SezioniBar } from "@/src/components/SezioniBar";
 import { PaeseCard } from "@/src/components/PaeseCard";
 import { useSezione } from "@/src/lib/statistiche";
+import { HeaderComune } from "@/src/components/HeaderComune";
 
 interface ContactRow {
   icon: IoniconsIconName;
@@ -133,7 +134,7 @@ export default function Contatti() {
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Punti di supporto</Text>
-        <View style={styles.iconBtn} />
+        <HeaderComune />
       </View>
 
       <ScrollView

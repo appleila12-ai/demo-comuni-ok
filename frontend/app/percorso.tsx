@@ -24,6 +24,7 @@ import { SezioniBar } from "@/src/components/SezioniBar";
 import { REGIONE_KEY, REGIONI } from "@/src/lib/territorio";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
+import { HeaderComune } from "@/src/components/HeaderComune";
 
 export default function PercorsoScreen() {
   useSezione("percorso");
@@ -58,7 +59,7 @@ export default function PercorsoScreen() {
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Il percorso per il riconoscimento</Text>
-        <View style={styles.iconBtn} />
+        <HeaderComune />
       </View>
 
       <ScrollView

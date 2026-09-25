@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01",
+  "updatedAt": "2026-09-24",
   "fonte": "Circolare INPS importi 2026",
   "importi": [
     {
@@ -171,6 +171,22 @@
     {
       "t": "Riforma disabilità (D.Lgs 62/2024)",
       "d": "La nuova procedura valida in tutta Italia dal 2027: certificato unico, Valutazione di Base INPS e Progetto di Vita."
+    },
+    {
+      "t": "Verbale",
+      "d": "Il documento con cui l'INPS riconosce invalidità civile e/o handicap (Legge 104) dopo la visita. Con la riforma diventa il \"verbale unico\"."
+    },
+    {
+      "t": "SISDA",
+      "d": "Il servizio online sul portale INPS da cui si può chiedere l'avvio del Progetto di Vita."
+    },
+    {
+      "t": "ATS (Ambito Territoriale Sociale)",
+      "d": "L'insieme dei Comuni che gestiscono insieme i servizi sociali di una zona: qui si può chiedere il Progetto di Vita anche senza passare dal portale INPS. In Lombardia la sigla ATS indica anche l'Agenzia di Tutela della Salute, che è un'altra cosa."
+    },
+    {
+      "t": "SAD",
+      "d": "Servizio di Assistenza Domiciliare del Comune: aiuto a casa per la cura della persona e della casa, spesso in base all'ISEE."
     }
   ],
   "riforma": {

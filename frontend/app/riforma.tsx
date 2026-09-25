@@ -20,6 +20,7 @@ import { colors, fonts, radius, spacing } from "@/src/theme";
 import { AppContent, loadAppContent } from "@/src/lib/remoteContent";
 import { SezioniBar } from "@/src/components/SezioniBar";
 import { useSezione } from "@/src/lib/statistiche";
+import { HeaderComune } from "@/src/components/HeaderComune";
 
 const CAMBIO_ICONE = [
   "document-text-outline",
@@ -58,7 +59,7 @@ export default function RiformaScreen() {
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Cosa cambia con la riforma</Text>
-        <View style={styles.iconBtn} />
+        <HeaderComune />
       </View>
 
       {loading ? (

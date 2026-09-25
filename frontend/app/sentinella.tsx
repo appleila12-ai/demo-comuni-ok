@@ -193,7 +193,7 @@ export default function Sentinella() {
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Sentinella AI</Text>
-        <View style={styles.iconBtn} />
+        <View style={{ width: 40, height: 40 }} />
       </View>
 
       {loading ? (

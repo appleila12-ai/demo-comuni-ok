@@ -15,6 +15,7 @@ import { useRouter } from "expo-router";
 
 import { colors, fonts, radius, spacing } from "@/src/theme";
 import { QuestionarioValutazione } from "@/src/components/QuestionarioValutazione";
+import { HeaderComune } from "@/src/components/HeaderComune";
 
 export default function Wizard() {
   const router = useRouter();
@@ -38,7 +39,7 @@ export default function Wizard() {
             <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
           </Pressable>
           <Text style={styles.headerTitle}>Il percorso per il riconoscimento</Text>
-          <View style={styles.iconBtn} />
+          <HeaderComune />
         </View>
 
         <ScrollView

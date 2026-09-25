@@ -23,6 +23,7 @@ import {
 } from "@/src/lib/remoteContent";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
+import { HeaderComune } from "@/src/components/HeaderComune";
 
 export default function Importi() {
   useSezione("importi");
@@ -55,7 +56,7 @@ export default function Importi() {
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Importi e Prestazioni</Text>
-        <View style={styles.iconBtn} />
+        <HeaderComune />
       </View>
 
       {loading ? (

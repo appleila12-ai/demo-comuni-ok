@@ -14,6 +14,7 @@ import { useFocusEffect, useRouter } from "expo-router";
 import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { storage } from "@/src/utils/storage";
 import { Wordmark } from "@/src/components/Brand";
+import { EtichettaComune, HeaderComune } from "@/src/components/HeaderComune";
 import { formatDate, listReports, Report } from "@/src/lib/reports";
 import { REGIONE_KEY, REGIONI } from "@/src/lib/territorio";
 import { comune } from "@/src/config/comune";
@@ -25,7 +26,7 @@ type Momento = "diagnosi" | "iter" | "diritti" | null;
 
 const MOMENTI: { id: Exclude<Momento, null>; label: string }[] = [
   { id: "diagnosi", label: "Ho appena ricevuto una diagnosi" },
-  { id: "iter", label: "Sto seguendo un iter" },
+  { id: "iter", label: "Ho già avviato una pratica" },
   { id: "diritti", label: "Voglio capire i miei diritti" },
 ];
 
@@ -35,7 +36,7 @@ const SEZIONI = [
     id: "progetto",
     icon: "sparkles-outline" as const,
     title: "Il mio Progetto di Vita",
-    sub: "Costruisci i tuoi desideri da portare all'UVM",
+    sub: "I tuoi desideri, da portare all'équipe che valuta (UVM)",
     route: "/progetto",
     color: topics.lavoro,
   },
@@ -63,7 +64,21 @@ const SEZIONI = [
     route: "/contatti",
     color: topics.patronato,
   },
+  {
+    id: "territorio",
+    icon: "home-outline" as const,
+    title: "Aiuti sul territorio",
+    sub: "Assistenza a casa, trasporti e servizi del Comune",
+    route: "/territorio",
+    color: topics.esenzioni,
+  },
 ] as const;
+
+const STRUMENTI = [
+  { href: "/agevolazioni", icon: "gift-outline" as const, title: "A cosa hai diritto", sub: "Bonus, agevolazioni e servizi in 2 minuti" },
+  { href: "/lettere", icon: "create-outline" as const, title: "Lettere pronte", sub: "Richieste al Comune e al lavoro, da stampare o inviare" },
+  { href: "/scadenze", icon: "alarm-outline" as const, title: "Le mie scadenze", sub: "Ricorsi, revisioni, ISEE: promemoria sul calendario" },
+];
 
 export default function Hub() {
   useSezione("orientarsi");
@@ -137,7 +152,9 @@ export default function Hub() {
             <Ionicons name="chevron-back" size={20} color={colors.onSurface} />
           </Pressable>
           <Wordmark size="sm" showLogo={true} logoVariant="soft" />
-          <View style={styles.topRight} />
+          <View style={styles.topRight}>
+            <HeaderComune />
+          </View>
         </View>
 
         {/* Titolo sezione — navigatore di transizione */}
@@ -147,6 +164,9 @@ export default function Hub() {
             Il tuo navigatore: capisci a che punto sei e cosa puoi attivare
             con la Riforma della disabilità (D.Lgs. 62/2024).
           </Text>
+          <View style={{ marginTop: 10 }}>
+            <EtichettaComune testID="hub-comune" />
+          </View>
         </View>
 
         {/* Domanda filtro: in che momento sei? */}
@@ -198,6 +218,28 @@ export default function Hub() {
             </Pressable>
           ))}
         </View>
+
+        {/* Strumenti pratici */}
+        <Text style={styles.sectionLabel}>STRUMENTI PRATICI</Text>
+        {STRUMENTI.map((st) => (
+          <Pressable
+            key={st.href}
+            onPress={() => router.push(st.href as any)}
+            style={({ pressed }) => [styles.navCard, pressed && { opacity: 0.9 }]}
+            accessibilityRole="button"
+            accessibilityLabel={st.title}
+            testID={`hub-strumento-${st.href.slice(1)}`}
+          >
+            <View style={[styles.navIcon, { backgroundColor: colors.brandSecondary }]}>
+              <Ionicons name={st.icon} size={22} color={colors.brandPrimaryDark} />
+            </View>
+            <View style={styles.flex}>
+              <Text style={styles.navTitle}>{st.title}</Text>
+              <Text style={styles.navSub}>{st.sub}</Text>
+            </View>
+            <Ionicons name="chevron-forward" size={18} color={colors.borderStrong} />
+          </Pressable>
+        ))}
 
         {/* Il percorso per il riconoscimento */}
         <Pressable

@@ -60,7 +60,7 @@ const STAGES: Stage[] = [
     azione: {
       title: "Un piccolo passo per te",
       message:
-        "Quando hai inviato la richiesta (online su SISDA o all'ATS), segna qui la data: così teniamo il conto dei tempi insieme.",
+        "Quando hai inviato la richiesta (online sul portale INPS, servizio SISDA, oppure all'Ambito Territoriale Sociale – ATS), segna qui la data: così teniamo il conto dei tempi insieme.",
     },
   },
   {
@@ -719,7 +719,7 @@ export default function Tracker() {
           <View style={styles.flex}>
             <Text style={styles.progettoLinkTitle}>Prepara il tuo Progetto di Vita</Text>
             <Text style={styles.progettoLinkSub}>
-              Appunta i tuoi desideri prima dell&apos;incontro con l&apos;UVM
+              Appunta i tuoi desideri prima dell&apos;incontro con l&apos;équipe che valuta (UVM)
             </Text>
           </View>
           <Ionicons name="chevron-forward" size={18} color={colors.accentDark} />

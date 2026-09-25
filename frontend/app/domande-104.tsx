@@ -20,6 +20,7 @@ import { colors, fonts, radius, spacing } from "@/src/theme";
 import { Answers, listReports } from "@/src/lib/reports";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
+import { HeaderComune } from "@/src/components/HeaderComune";
 
 export default function Domande104Screen() {
   useSezione("domande-104");
@@ -48,7 +49,7 @@ export default function Domande104Screen() {
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Le domande sulla 104</Text>
-        <View style={styles.iconBtn} />
+        <HeaderComune />
       </View>
 
       <KeyboardAvoidingView
