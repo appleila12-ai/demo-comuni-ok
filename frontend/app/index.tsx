@@ -19,15 +19,9 @@ import { comune, comuneScelto } from "@/src/config/comune";
 import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
+import { CasellaRicerca } from "@/src/components/CasellaRicerca";
 
 const FEATURES = [
-  {
-    icon: "compass-outline" as const,
-    title: "Orientamento",
-    href: "/hub",
-    text: "Capisci quale percorso ti riguarda e qual è il prossimo passo.",
-    color: topics.percorso,
-  },
   {
     icon: "sparkles-outline" as const,
     title: "Progetto di Vita",
@@ -44,20 +38,20 @@ const FEATURES = [
   },
   {
     icon: "people-outline" as const,
-    title: "Punti di supporto",
-    href: "/contatti",
-    text: "Trova i servizi e i contatti del territorio.",
+    title: "Aiuti e contatti",
+    href: "/territorio",
+    text: "Servizi del Comune, assistenza a casa, INPS e numeri utili.",
     color: topics.patronato,
   },
 ];
 
 const STRUMENTI = [
   {
-    id: "agevolazioni",
-    icon: "gift-outline" as const,
-    title: "A cosa hai diritto",
-    sub: "Bonus, agevolazioni e servizi in 2 minuti",
-    href: "/agevolazioni",
+    id: "diritti",
+    icon: "shield-checkmark-outline" as const,
+    title: "I tuoi diritti",
+    sub: "Poche domande: aiuti, permessi, bonus e agevolazioni",
+    href: "/diritti",
     color: topics.esenzioni,
   },
   {
@@ -75,6 +69,14 @@ const STRUMENTI = [
     sub: "Ricorsi, revisioni, ISEE: promemoria sul calendario",
     href: "/scadenze",
     color: topics.salute,
+  },
+  {
+    id: "salute",
+    icon: "medkit-outline" as const,
+    title: "Salute vicino a te",
+    sub: "Prenota visite, farmacie di turno, guardia medica",
+    href: "/salute",
+    color: topics.patronato,
   },
 ];
 
@@ -198,6 +200,9 @@ function HomeDelComune() {
           </Text>
         </View>
 
+        {/* Scrivi cosa ti serve: la risposta arriva subito */}
+        <CasellaRicerca testID="home-ricerca" />
+
         {/* Immagine di accoglienza (prima era in una schermata a parte) */}
         <MonoImage
           source={require("../assets/images/brand/hero.jpg")}
@@ -224,7 +229,7 @@ function HomeDelComune() {
           <View style={styles.flex}>
             <Text style={styles.primaryCtaTitle}>Entra in TutelApp</Text>
             <Text style={styles.primaryCtaSub}>
-              Inizia dal punto in cui ti trovi
+              Il percorso passo passo, dalla diagnosi al Progetto di Vita
             </Text>
           </View>
         </Pressable>

@@ -291,7 +291,7 @@ export function calcola(r: Risposte): Agevolazione[] {
     titolo: "Aiuti dei Servizi Sociali",
     perche: "Assistenza a casa, trasporto per visite, contributi e sostegno ai familiari.",
     come: "Chiedi un colloquio con l'assistente sociale: puoi prepararlo con una lettera pronta.",
-    link: { label: "Aiuti sul territorio", href: "/territorio" },
+    link: { label: "Aiuti e contatti", href: "/territorio" },
   });
 
   return out;

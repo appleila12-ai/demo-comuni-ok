@@ -4,7 +4,6 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { useRouter } from "expo-router";
-import Ionicons from "@react-native-vector-icons/ionicons";
 
 import { comune } from "@/src/config/comune";
 import { ComuneLogo } from "@/src/components/ComuneLogo";
@@ -27,7 +26,7 @@ export function HeaderComune() {
   );
 }
 
-/** Etichetta "Comune di … · cambia" (per le pagine principali). */
+/** Etichetta "Comune di …" (per le pagine principali). Il Comune non si cambia dall'interno dell'app: arriva dal link del Comune. */
 export function EtichettaComune({ testID = "etichetta-comune" }: { testID?: string }) {
   const router = useRouter();
   const t = comune.theme;
@@ -47,16 +46,6 @@ export function EtichettaComune({ testID = "etichetta-comune" }: { testID?: stri
         <Text style={[styles.chipText, { color: t.warmDark }]} numberOfLines={1}>
           {comune.nome}
           {comune.dimostrativo ? " · demo" : ""}
-        </Text>
-      </Pressable>
-      <Pressable
-        onPress={() => router.push("/comuni")}
-        hitSlop={8}
-        accessibilityRole="link"
-        accessibilityLabel="Cambia Comune"
-      >
-        <Text style={styles.cambia}>
-          cambia <Ionicons name="swap-horizontal" size={12} />
         </Text>
       </Pressable>
     </View>

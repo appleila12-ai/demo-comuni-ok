@@ -8,12 +8,12 @@ import { useRouter } from "expo-router";
 
 import { colors, radius, spacing } from "@/src/theme";
 import { storage } from "@/src/utils/storage";
+import { listReports } from "@/src/lib/reports";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import {
   DOMANDE,
   calcola,
-  completate,
   type Agevolazione,
   type Risposte,
 } from "@/src/lib/agevolazioni";
@@ -36,15 +36,30 @@ export default function Agevolazioni() {
   const [risposte, setRisposte] = useState<Risposte>({});
   const [risultati, setRisultati] = useState(false);
 
+  // Le risposte già date nel questionario "I tuoi diritti" non si richiedono
+  const [dalQuestionario, setDalQuestionario] = useState<Partial<Risposte>>({});
+
   useEffect(() => {
     (async () => {
+      let salvate: Risposte = {};
       const raw = await storage.getItem<string>(KEY, "");
-      if (!raw) return;
-      try {
-        setRisposte(JSON.parse(raw));
-      } catch {
-        /* ignora */
+      if (raw) {
+        try {
+          salvate = JSON.parse(raw);
+        } catch {
+          /* ignora */
+        }
       }
+      const report = (await listReports())[0];
+      const note: Partial<Risposte> = {};
+      if (report) {
+        const a = report.answers as any;
+        note.per = a.who === "Io stesso/a" ? "me" : "familiare";
+        const w = String(a.work || "");
+        note.lavoro = w.startsWith("Dipendente") ? "dipendente" : w === "In cerca di lavoro" ? "cerca" : "altro";
+      }
+      setDalQuestionario(note);
+      setRisposte({ ...salvate, ...note });
     })();
   }, []);
 
@@ -55,7 +70,7 @@ export default function Agevolazioni() {
   };
 
   const elenco = useMemo(() => calcola(risposte), [risposte]);
-  const fatte = completate(risposte);
+  const visibili = DOMANDE.filter((d) => !(d.id in dalQuestionario));
 
   const apri = (href: string) => {
     if (href.startsWith("http")) Linking.openURL(href).catch(() => {});
@@ -65,7 +80,7 @@ export default function Agevolazioni() {
   if (risultati) {
     const aree = Array.from(new Set(elenco.map((a) => a.area)));
     return (
-      <Pagina titolo="A cosa hai diritto" testID="agevolazioni-risultati">
+      <Pagina titolo="Bonus e agevolazioni" testID="agevolazioni-risultati">
         <Pressable onPress={() => setRisultati(false)} hitSlop={8} style={styles.indietro}>
           <Ionicons name="arrow-back" size={14} color={colors.onSurface} />
           <Text style={styles.indietroText}>Cambia le risposte</Text>
@@ -130,13 +145,13 @@ export default function Agevolazioni() {
 
   return (
     <Pagina
-      titolo="A cosa hai diritto"
+      titolo="Bonus e agevolazioni"
       testID="agevolazioni-screen"
       piede={
         <View>
           <Text style={styles.progresso}>
-            Risposte date: {fatte} di {DOMANDE.length}
-            {fatte < DOMANDE.length ? " · puoi saltare quelle che non sai" : ""}
+            Risposte date: {visibili.filter((d) => risposte[d.id]).length} di {visibili.length}
+            {visibili.some((d) => !risposte[d.id]) ? " · puoi saltare quelle che non sai" : ""}
           </Text>
           <Bottone
             label="Vedi gli aiuti possibili"
@@ -151,7 +166,7 @@ export default function Agevolazioni() {
         Rispondi a qualche domanda: ti mostriamo bonus, agevolazioni e servizi a cui potresti
         avere diritto. Ci vogliono due minuti e le risposte restano su questo dispositivo.
       </Intro>
-      {DOMANDE.map((d) => (
+      {visibili.map((d) => (
         <Scelte
           key={d.id}
           domanda={d.testo}

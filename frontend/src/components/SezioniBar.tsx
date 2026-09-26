@@ -5,11 +5,11 @@ import Ionicons, { type IoniconsIconName } from "@react-native-vector-icons/ioni
 
 import { colors, radius, spacing } from "@/src/theme";
 
-const SEZIONI: { icon: IoniconsIconName; label: string; route: "/hub" | "/progetto" | "/tracker" | "/contatti" }[] = [
+const SEZIONI: { icon: IoniconsIconName; label: string; route: "/hub" | "/progetto" | "/tracker" | "/territorio" }[] = [
   { icon: "compass-outline", label: "Orientarsi insieme", route: "/hub" },
   { icon: "sparkles-outline", label: "Progetto di Vita", route: "/progetto" },
   { icon: "footsteps-outline", label: "La mia pratica", route: "/tracker" },
-  { icon: "people-outline", label: "Supporto", route: "/contatti" },
+  { icon: "people-outline", label: "Contatti", route: "/territorio" },
 ];
 
 export function SezioniBar() {

@@ -65,6 +65,7 @@ const ETICHETTE: Record<string, Record<string, string>> = {
     lettere: "Lettere pronte",
     scadenze: "Le mie scadenze",
     agevolazioni: "A cosa hai diritto",
+    salute: "Salute vicino a te",
   },
 };
 const etichetta = (m: string, v: string) => ETICHETTE[m]?.[v] ?? v;

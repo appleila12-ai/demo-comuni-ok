@@ -53,9 +53,9 @@ function buildPrimiPassi() {
   {
     id: "supporto",
     icon: "people-outline" as const,
-    title: "Punti di supporto",
+    title: "Aiuti e contatti",
     body: `Numeri e link ufficiali INPS e i servizi ${comune.delEnte}: primo ascolto, assistenza domiciliare, amministratore di sostegno.`,
-    route: "/contatti" as const,
+    route: "/territorio" as const,
     color: topics.percorso,
   },
   ];

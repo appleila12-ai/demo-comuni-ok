@@ -35,6 +35,14 @@ import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import { HeaderComune } from "@/src/components/HeaderComune";
 
+const ALTRI_CONTATTI = [
+  { icon: "call-outline", title: "INPS — 803 164", subtitle: "Gratuito da telefono fisso · Lun–Ven 8–20, Sab 8–14", type: "tel", value: "803164" },
+  { icon: "phone-portrait-outline", title: "INPS da cellulare — 06 164 164", subtitle: "A pagamento secondo il tuo gestore", type: "tel", value: "06164164" },
+  { icon: "globe-outline", title: "Sito e app INPS", subtitle: "Domande, verbali e stato della pratica (con SPID o CIE)", type: "web", value: "https://www.inps.it" },
+  { icon: "cash-outline", title: "Agenzia delle Entrate — 800 909 696", subtitle: "Agevolazioni fiscali: IVA 4%, detrazioni, bollo auto", type: "tel", value: "800909696" },
+  { icon: "medkit-outline", title: "Ministero della Salute — 1500", subtitle: "Numero di pubblica utilità per informazioni sanitarie", type: "tel", value: "1500" },
+] as const;
+
 function toast(msg: string) {
   if (Platform.OS === "android") ToastAndroid.show(msg, ToastAndroid.SHORT);
   else console.log(msg);
@@ -102,7 +110,7 @@ export default function Territorio() {
         >
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
-        <Text style={styles.headerTitle}>Aiuti sul Territorio</Text>
+        <Text style={styles.headerTitle}>Aiuti e contatti</Text>
         <HeaderComune />
       </View>
 
@@ -198,6 +206,23 @@ export default function Territorio() {
         {/* Unioni: il municipio di residenza */}
         <PaeseCard testID="territorio-paese" />
 
+        {/* Salute: prenotazioni, farmacie di turno, guardia medica */}
+        <Pressable
+          onPress={() => router.push("/salute" as any)}
+          style={({ pressed }) => [styles.punto, { borderColor: t.warm }, pressed && { opacity: 0.85 }]}
+          accessibilityRole="button"
+          testID="territorio-salute"
+        >
+          <View style={[styles.puntoIcon, { backgroundColor: t.warmSoft }]}>
+            <Ionicons name="medkit-outline" size={18} color={t.warmDark} />
+          </View>
+          <View style={styles.flex}>
+            <Text style={styles.puntoTitle}>Salute vicino a te</Text>
+            <Text style={styles.puntoSub}>Prenota visite ed esami, farmacie di turno, guardia medica</Text>
+          </View>
+          <Ionicons name="chevron-forward" size={18} color={t.warmDark} />
+        </Pressable>
+
         {/* Servizi del territorio indicati dal Comune */}
         {comune.puntiSupporto.length > 0 && (
           <View style={styles.section} testID="territorio-punti">
@@ -266,6 +291,32 @@ export default function Territorio() {
             </View>
           </View>
         ))}
+
+        {/* INPS e altri numeri utili (prima erano in "Punti di supporto") */}
+        <View style={styles.section} testID="territorio-altri-contatti">
+          <Text style={styles.sectionTitle}>INPS e altri numeri utili</Text>
+          {ALTRI_CONTATTI.map((p) => (
+            <Pressable
+              key={p.title}
+              onPress={() => apri(p.type === "tel" ? `tel:${p.value}` : p.value)}
+              style={({ pressed }) => [styles.punto, pressed && { opacity: 0.85 }]}
+              accessibilityRole="button"
+            >
+              <View style={[styles.puntoIcon, { backgroundColor: t.warmSoft }]}>
+                <Ionicons name={p.icon as any} size={18} color={t.warmDark} />
+              </View>
+              <View style={styles.flex}>
+                <Text style={styles.puntoTitle}>{p.title}</Text>
+                <Text style={styles.puntoSub}>{p.subtitle}</Text>
+              </View>
+              <Ionicons
+                name={p.type === "tel" ? "call-outline" : "open-outline"}
+                size={18}
+                color={t.warmDark}
+              />
+            </Pressable>
+          ))}
+        </View>
 
         {/* Portale regionale: informazione secondaria */}
         {portal && (

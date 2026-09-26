@@ -167,6 +167,21 @@ export default function Risultati() {
           {/* Il prossimo passo, in base al verbale */}
           <ProssimoPasso verbale={a.verbale} />
 
+          {/* Un solo percorso: da qui si completano bonus e agevolazioni */}
+          <Pressable
+            onPress={() => router.push("/agevolazioni" as any)}
+            style={({ pressed }) => [styles.agevolazioniBtn, pressed && { opacity: 0.9 }]}
+            accessibilityRole="button"
+            testID="results-agevolazioni"
+          >
+            <Ionicons name="gift-outline" size={22} color="#FFFFFF" />
+            <View style={{ flex: 1 }}>
+              <Text style={styles.agevolazioniTitolo}>Bonus e agevolazioni per te</Text>
+              <Text style={styles.agevolazioniSub}>Altre 4-6 domande: esenzioni, auto, bollette, Carta europea della disabilità</Text>
+            </View>
+            <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
+          </Pressable>
+
           {/* Percorso passo-passo + certificato + possibilità 104/invalidità */}
           <NextStepsSection
             work={a.work}
@@ -314,6 +329,17 @@ export default function Risultati() {
 }
 
 const styles = StyleSheet.create({
+  agevolazioniBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+    backgroundColor: colors.brandPrimaryDark,
+    borderRadius: 20,
+    padding: 14,
+    marginBottom: 16,
+  },
+  agevolazioniTitolo: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
+  agevolazioniSub: { color: "#FFFFFF", fontSize: 12.5, lineHeight: 17, marginTop: 2 },
   safe: { flex: 1, backgroundColor: colors.background },
   flex: { flex: 1 },
   centered: {

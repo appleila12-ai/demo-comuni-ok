@@ -89,9 +89,9 @@ const TAPPE: Tappa[] = [
     testo: "Aiuti economici, permessi, agevolazioni e le lettere per chiederli.",
     icon: "shield-checkmark-outline",
     color: topics.esenzioni,
-    principale: { label: "A cosa hai diritto", route: "/agevolazioni" },
+    principale: { label: "I tuoi diritti", route: "/diritti" },
     altri: [
-      { label: "Valutazione personalizzata", route: "/valutazione" },
+      { label: "Bonus e agevolazioni", route: "/agevolazioni" },
       { label: "Lettere pronte", route: "/lettere" },
       { label: "Importi aggiornati", route: "/importi" },
     ],
@@ -108,11 +108,11 @@ const TAPPE: Tappa[] = [
   {
     id: "territorio",
     titolo: "Gli aiuti vicino a te",
-    testo: "Assistenza a casa, trasporti e i contatti dei servizi del territorio.",
+    testo: "Assistenza a casa, trasporti, prenotazioni, farmacie di turno e i contatti del territorio.",
     icon: "home-outline",
     color: topics.patronato,
-    principale: { label: "Aiuti sul territorio", route: "/territorio" },
-    altri: [{ label: "Punti di supporto", route: "/contatti" }],
+    principale: { label: "Aiuti e contatti", route: "/territorio" },
+    altri: [{ label: "Salute vicino a te", route: "/salute" }],
   },
 ];
 

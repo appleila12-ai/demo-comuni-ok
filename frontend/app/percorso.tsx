@@ -16,7 +16,6 @@ import { useRouter } from "expo-router";
 
 import { colors, fonts, radius, spacing } from "@/src/theme";
 import { GuideStepsCard } from "@/src/components/NextStepsSection";
-import { QuestionarioValutazione } from "@/src/components/QuestionarioValutazione";
 import { SezioniBar } from "@/src/components/SezioniBar";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
@@ -66,10 +65,20 @@ export default function PercorsoScreen() {
         {/* Step numerati dalla diagnosi al Progetto di Vita */}
         <GuideStepsCard />
 
-        {/* Tutte le domande su una sola schermata */}
-        <View style={styles.questionario}>
-          <QuestionarioValutazione />
-        </View>
+        {/* Il questionario vive in un solo posto: "I tuoi diritti" */}
+        <Pressable
+          onPress={() => router.push("/diritti" as any)}
+          style={({ pressed }) => [styles.dirittiBtn, pressed && { opacity: 0.85 }]}
+          accessibilityRole="button"
+          testID="percorso-diritti"
+        >
+          <Ionicons name="shield-checkmark-outline" size={22} color="#FFFFFF" />
+          <View style={styles.flex}>
+            <Text style={styles.dirittiTitolo}>Scopri i tuoi diritti</Text>
+            <Text style={styles.dirittiSub}>Poche domande: ti diciamo cosa ti spetta e il prossimo passo</Text>
+          </View>
+          <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
+        </Pressable>
 
         <SezioniBar />
       </ScrollView>
@@ -174,6 +183,17 @@ const styles = StyleSheet.create({
   },
   regionCardCtaText: { fontSize: 12, fontWeight: "800", color: colors.onSurface },
   questionario: { marginTop: spacing.xl },
+  dirittiBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.md,
+    backgroundColor: colors.brandPrimaryDark,
+    borderRadius: radius.lg,
+    padding: spacing.md,
+    marginTop: spacing.lg,
+  },
+  dirittiTitolo: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
+  dirittiSub: { color: "#FFFFFF", fontSize: 12.5, lineHeight: 17, marginTop: 2 },
   regioneNota: { fontSize: 12.5, color: colors.onSurfaceSecondary, marginBottom: spacing.md, fontWeight: "600" },
 
   // Modal regione
