@@ -24,6 +24,7 @@ import { colors, fonts, radius, spacing } from "@/src/theme";
 import { IMAGES } from "@/src/lib/images";
 import { MonoImage } from "@/src/components/MonoImage";
 import { ComuneLogo } from "@/src/components/ComuneLogo";
+import { BottoneSalva } from "@/src/components/BottoneSalva";
 import { PaeseCard } from "@/src/components/PaeseCard";
 import {
   buildGuideHtml,
@@ -260,6 +261,16 @@ export default function Territorio() {
                   <Text style={styles.puntoTitle}>{p.title}</Text>
                   <Text style={styles.puntoSub}>{p.subtitle}</Text>
                 </View>
+                <BottoneSalva
+                  elemento={{
+                    id: `servizio:${p.title}`,
+                    titolo: p.title,
+                    sotto: p.subtitle,
+                    tel: p.action.type === "tel" ? p.action.value : undefined,
+                    url: p.action.type === "web" ? p.action.value : undefined,
+                    route: "/territorio",
+                  }}
+                />
                 <Ionicons
                   name={p.action.type === "tel" ? "call-outline" : "open-outline"}
                   size={18}

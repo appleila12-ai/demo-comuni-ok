@@ -11,6 +11,7 @@ import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import { associazioniDelComune, type Associazione } from "@/src/lib/associazioni";
 import { Avviso, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
+import { BottoneSalva } from "@/src/components/BottoneSalva";
 
 type Tab = "volontariato" | "sport";
 
@@ -45,6 +46,10 @@ function Scheda({ a, vicina }: { a: Associazione; vicina: boolean }) {
         {a.telefono ? <Azione icon="call-outline" label={a.telefono} onPress={() => apri(`tel:${a.telefono!.replace(/[^\d+]/g, "")}`)} /> : null}
         {a.email ? <Azione icon="mail-outline" label="Email" onPress={() => apri(`mailto:${a.email}`)} /> : null}
         {a.sito ? <Azione icon="globe-outline" label="Sito" onPress={() => apri(a.sito!)} /> : null}
+        <BottoneSalva
+          conTesto
+          elemento={{ id: `associazione:${a.nome}`, titolo: a.nome, sotto: a.cosa, tel: a.telefono, email: a.email, url: a.sito, route: "/associazioni" }}
+        />
       </View>
       {a.verificare ? <Text style={[paginaStili.piccolo, { marginTop: 6 }]}>Recapito da confermare.</Text> : null}
     </View>
@@ -91,7 +96,7 @@ export default function Associazioni() {
       {scheda === "volontariato" ? (
         <View testID="associazioni-volontariato">
           {d.volontariato.map((a) => <Scheda key={a.nome} a={a} vicina={d.vicina(a)} />)}
-          {d.volontariato.length === 0 ? (
+          {d.volontariatoLocali === 0 ? (
             <Avviso>
               Stiamo raccogliendo le associazioni della tua zona. Intanto chiedi ai {comune.ente}{" "}
               {comune.delEnte}: conoscono quelle attive sul territorio.

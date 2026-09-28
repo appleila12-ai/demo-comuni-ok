@@ -17,23 +17,31 @@ import { battipaglia } from "./battipaglia";
 import { bergamo } from "./bergamo";
 import { bollate } from "./bollate";
 import { brindisi } from "./brindisi";
+import { calolziocorte } from "./calolziocorte";
+import { caprarola } from "./caprarola";
 import { carpi } from "./carpi";
 import { carrara } from "./carrara";
+import { casatenovo } from "./casatenovo";
+import { castelSanGiovanni } from "./castel-san-giovanni";
 import { castelfrancoVeneto } from "./castelfranco-veneto";
 import { cesena } from "./cesena";
 import { chiavari } from "./chiavari";
 import { ciniselloBalsamo } from "./cinisello-balsamo";
 import { cittaDiCastello } from "./citta-di-castello";
+import { civitaCastellana } from "./civita-castellana";
 import { civitavecchia } from "./civitavecchia";
 import { colognoMonzese } from "./cologno-monzese";
 import { como } from "./como";
 import { conegliano } from "./conegliano";
+import { cortemaggiore } from "./cortemaggiore";
 import { cuneo } from "./cuneo";
 import { desio } from "./desio";
 import { empoli } from "./empoli";
 import { faenza } from "./faenza";
 import { fano } from "./fano";
+import { fiorenzuolaDArda } from "./fiorenzuola-d-arda";
 import { frascati } from "./frascati";
+import { galbiate } from "./galbiate";
 import { guidoniaMontecelio } from "./guidonia-montecelio";
 import { imola } from "./imola";
 import { jesolo } from "./jesolo";
@@ -46,19 +54,24 @@ import { lissone } from "./lissone";
 import { magenta } from "./magenta";
 import { mantova } from "./mantova";
 import { marsala } from "./marsala";
+import { merate } from "./merate";
 import { mira } from "./mira";
 import { monopoli } from "./monopoli";
+import { nepi } from "./nepi";
 import { olbia } from "./olbia";
 import { ortona } from "./ortona";
 import { osimo } from "./osimo";
 import { parabiago } from "./parabiago";
 import { pavia } from "./pavia";
+import { piacenza } from "./piacenza";
 import { pinerolo } from "./pinerolo";
 import { pioltello } from "./pioltello";
+import { podenzano } from "./podenzano";
 import { pontedera } from "./pontedera";
 import { portovenere } from "./portovenere";
 import { rapallo } from "./rapallo";
 import { riccoDelGolfo } from "./ricco-del-golfo";
+import { rottofreno } from "./rottofreno";
 import { rovereto } from "./rovereto";
 import { rozzano } from "./rozzano";
 import { sanBonifacio } from "./san-bonifacio";
@@ -69,10 +82,14 @@ import { seregno } from "./seregno";
 import { sestriLevante } from "./sestri-levante";
 import { sondrio } from "./sondrio";
 import { spinea } from "./spinea";
+import { tarquinia } from "./tarquinia";
 import { teramo } from "./teramo";
 import { treviso } from "./treviso";
+import { valmadrera } from "./valmadrera";
+import { vetralla } from "./vetralla";
 import { viareggio } from "./viareggio";
 import { vimercate } from "./vimercate";
+import { viterbo } from "./viterbo";
 
 export const COMUNI_DEMO: ComuneConfig[] = [
   alba,
@@ -87,23 +104,31 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   bergamo,
   bollate,
   brindisi,
+  calolziocorte,
+  caprarola,
   carpi,
   carrara,
+  casatenovo,
+  castelSanGiovanni,
   castelfrancoVeneto,
   cesena,
   chiavari,
   ciniselloBalsamo,
   cittaDiCastello,
+  civitaCastellana,
   civitavecchia,
   colognoMonzese,
   como,
   conegliano,
+  cortemaggiore,
   cuneo,
   desio,
   empoli,
   faenza,
   fano,
+  fiorenzuolaDArda,
   frascati,
+  galbiate,
   guidoniaMontecelio,
   imola,
   jesolo,
@@ -116,19 +141,24 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   magenta,
   mantova,
   marsala,
+  merate,
   mira,
   monopoli,
+  nepi,
   olbia,
   ortona,
   osimo,
   parabiago,
   pavia,
+  piacenza,
   pinerolo,
   pioltello,
+  podenzano,
   pontedera,
   portovenere,
   rapallo,
   riccoDelGolfo,
+  rottofreno,
   rovereto,
   rozzano,
   sanBonifacio,
@@ -139,8 +169,12 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   sestriLevante,
   sondrio,
   spinea,
+  tarquinia,
   teramo,
   treviso,
+  valmadrera,
+  vetralla,
   viareggio,
   vimercate,
+  viterbo,
 ];

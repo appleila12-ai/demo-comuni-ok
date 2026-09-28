@@ -14,25 +14,39 @@ import {
 } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import Ionicons from "@react-native-vector-icons/ionicons";
-import { useRouter } from "expo-router";
+import { useGlobalSearchParams, usePathname, useRouter } from "expo-router";
 
 import { colors, fonts, radius, spacing } from "@/src/theme";
 import { HeaderComune } from "@/src/components/HeaderComune";
+import { BottoneSalva } from "@/src/components/BottoneSalva";
 
 export function Pagina({
   titolo,
   testID,
   children,
   piede,
+  salvabile = true,
+  sottotitoloSalvato,
 }: {
   titolo: string;
   testID: string;
   children: React.ReactNode;
+  /** mostra il segnalibro per salvare la pagina (default sì) */
+  salvabile?: boolean;
+  /** riga descrittiva mostrata in "I miei salvati" */
+  sottotitoloSalvato?: string;
   /** Bottone fisso in basso (facoltativo) */
   piede?: React.ReactNode;
 }) {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const pathname = usePathname();
+  const params = useGlobalSearchParams();
+  const query = Object.entries(params)
+    .filter(([k, v]) => k !== "comune" && typeof v === "string" && v)
+    .map(([k, v]) => `${k}=${encodeURIComponent(String(v))}`)
+    .join("&");
+  const route = pathname + (query ? `?${query}` : "");
   return (
     <SafeAreaView style={s.safe} edges={["top"]} testID={testID}>
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
@@ -49,7 +63,15 @@ export function Pagina({
         <Text style={s.headerTitle} numberOfLines={1}>
           {titolo}
         </Text>
-        <HeaderComune />
+        <View style={s.destra}>
+          {salvabile ? (
+            <BottoneSalva
+              elemento={{ id: `pagina:${route}`, titolo, sotto: sottotitoloSalvato, route }}
+              testID={`${testID}-salva`}
+            />
+          ) : null}
+          <HeaderComune />
+        </View>
       </View>
       <ScrollView
         style={s.flex}
@@ -242,6 +264,7 @@ const s = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  destra: { flexDirection: "row", alignItems: "center" },
   headerTitle: {
     fontFamily: fonts.serif,
     flex: 1,

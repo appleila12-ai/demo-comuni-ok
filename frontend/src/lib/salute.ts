@@ -152,6 +152,14 @@ export const FARMACIE_TURNO: Record<string, FarmacieTurno> = {
     "titolo": "AUSL della Romagna – Ravenna",
     "url": "https://www.auslromagna.it/luoghi/farmacie/farmacie-turno-ravenna"
   },
+  "PC": {
+    "titolo": "AUSL di Piacenza – Portale farmacie",
+    "url": "https://portalefarmacie.ausl.pc.it"
+  },
+  "VT": {
+    "titolo": "Ordine dei Farmacisti di Viterbo",
+    "url": "https://www.ordinefarmacistiviterbo.it/?page_id=30"
+  },
   "RM": {
     "titolo": "Federfarma Roma",
     "url": "https://www.federfarmaroma.com/farmacie_aperte.php"

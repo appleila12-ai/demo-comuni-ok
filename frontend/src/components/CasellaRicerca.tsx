@@ -9,6 +9,7 @@ import { useRouter } from "expo-router";
 import { colors, fonts, radius, spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
 import { ESEMPI, cerca } from "@/src/lib/ricerca";
+import { BottoneSalva } from "@/src/components/BottoneSalva";
 
 export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string }) {
   const router = useRouter();
@@ -64,14 +65,20 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
           <View style={[styles.risposta, { backgroundColor: t.warmSoft }]}>
             <Text style={styles.rispostaTitolo}>{risultati[0].titolo}</Text>
             <Text style={styles.rispostaTesto}>{risultati[0].testo}</Text>
-            <Pressable
-              onPress={() => vai(risultati[0].route)}
-              style={({ pressed }) => [styles.btn, pressed && { opacity: 0.85 }]}
-              accessibilityRole="button"
-            >
-              <Text style={styles.btnText}>{risultati[0].bottone}</Text>
-              <Ionicons name="arrow-forward" size={16} color="#FFFFFF" />
-            </Pressable>
+            <View style={styles.rigaBottoni}>
+              <Pressable
+                onPress={() => vai(risultati[0].route)}
+                style={({ pressed }) => [styles.btn, { marginTop: 0 }, pressed && { opacity: 0.85 }]}
+                accessibilityRole="button"
+              >
+                <Text style={styles.btnText}>{risultati[0].bottone}</Text>
+                <Ionicons name="arrow-forward" size={16} color="#FFFFFF" />
+              </Pressable>
+              <BottoneSalva
+                conTesto
+                elemento={{ id: `risposta:${risultati[0].id}`, titolo: risultati[0].titolo, sotto: risultati[0].testo, route: risultati[0].route }}
+              />
+            </View>
           </View>
           {risultati.length > 1 && <Text style={styles.anche}>Potrebbe interessarti anche</Text>}
           {risultati.slice(1).map((r) => (
@@ -161,6 +168,7 @@ const styles = StyleSheet.create({
     marginTop: spacing.sm,
   },
   btnText: { color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
+  rigaBottoni: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: 8, marginTop: spacing.sm },
   anche: { fontSize: 11, fontWeight: "800", letterSpacing: 0.8, textTransform: "uppercase", color: colors.onSurfaceSecondary, marginTop: 4 },
   altra: {
     flexDirection: "row",

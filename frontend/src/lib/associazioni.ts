@@ -201,6 +201,17 @@ const SPORT_NAZIONALI: Associazione[] = [
   },
 ];
 
+// Valide per tutti i Comuni (consulenza anche a distanza)
+const VOLONTARIATO_OVUNQUE: Associazione[] = [
+  {
+    nome: "APS Gazebo Sanità e Beni Comuni",
+    cosa: "Consulenza civica e legale su diritti, sanità e invalidità civile.",
+    dove: "Via Don Lazzaro Troiani 10, 22030 Lasnigo (CO)",
+    email: "info@sanitabenicomuni.it",
+    comuni: ["como", "lecco", "valmadrera", "galbiate", "calolziocorte", "merate", "casatenovo"],
+  },
+];
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",
@@ -218,7 +229,7 @@ function ordina(lista: Associazione[]): Associazione[] {
 
 export function associazioniDelComune() {
   const prov = PER_PROVINCIA[comune.provincia];
-  const volontariato = ordina(prov?.volontariato ?? []);
+  const volontariato = [...ordina(prov?.volontariato ?? []), ...VOLONTARIATO_OVUNQUE];
   const sport = ordina(prov?.sport ?? []);
   const sportRegione = SPORT_REGIONE[comune.regione] ?? [];
   return {
@@ -226,6 +237,7 @@ export function associazioniDelComune() {
     sport,
     sportRegione,
     haElenco: volontariato.length + sport.length > 0,
+    volontariatoLocali: prov?.volontariato?.length ?? 0,
     volontariatoNazionali: VOLONTARIATO_NAZIONALI,
     sportNazionali: sportRegione.length ? [] : SPORT_NAZIONALI,
     vicina: (a: Associazione) => !!a.comuni?.includes(comune.slug),

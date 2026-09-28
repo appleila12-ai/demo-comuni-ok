@@ -434,6 +434,7 @@ export default function Tracker() {
                 Chiama
               </Text>
             </Pressable>
+            {!!comune.email && (
             <Pressable
               onPress={email}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
@@ -444,6 +445,7 @@ export default function Tracker() {
                 Email
               </Text>
             </Pressable>
+            )}
             <Pressable
               onPress={map}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}

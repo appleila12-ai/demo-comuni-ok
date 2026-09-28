@@ -20,6 +20,7 @@ import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
 import { CasellaRicerca } from "@/src/components/CasellaRicerca";
+import { useSalvati } from "@/src/lib/salvati";
 
 const FEATURES = [
   {
@@ -86,6 +87,14 @@ const STRUMENTI = [
     href: "/associazioni",
     color: topics.esenzioni,
   },
+  {
+    id: "salvati",
+    icon: "bookmark-outline" as const,
+    title: "I miei salvati",
+    sub: "Servizi, contatti e pagine messi da parte per dopo",
+    href: "/salvati",
+    color: topics.lavoro,
+  },
 ];
 
 const INFO_LINKS = [
@@ -136,6 +145,7 @@ export default function ComuneHome() {
 
 function HomeDelComune() {
   useSezione("home");
+  const { lista: salvati } = useSalvati();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const t = comune.theme;
@@ -210,6 +220,22 @@ function HomeDelComune() {
 
         {/* Scrivi cosa ti serve: la risposta arriva subito */}
         <CasellaRicerca testID="home-ricerca" />
+
+        {/* Scorciatoia ai salvati, solo se c'è qualcosa */}
+        {salvati.length > 0 && (
+          <Pressable
+            onPress={() => router.push("/salvati" as any)}
+            style={({ pressed }) => [styles.salvatiRiga, pressed && { opacity: 0.85 }]}
+            accessibilityRole="button"
+            testID="home-salvati"
+          >
+            <Ionicons name="bookmark" size={18} color={colors.brandPrimaryDark} />
+            <Text style={styles.salvatiTesto}>
+              I miei salvati · {salvati.length}
+            </Text>
+            <Ionicons name="chevron-forward" size={16} color={colors.brandPrimaryDark} />
+          </Pressable>
+        )}
 
         {/* Immagine di accoglienza (prima era in una schermata a parte) */}
         <MonoImage
@@ -360,6 +386,7 @@ function HomeDelComune() {
               <Ionicons name="call-outline" size={16} color={t.warmDark} />
               <Text style={[styles.contactValue, styles.contactLink]}>{comune.telefono}</Text>
             </Pressable>
+            {!!comune.email && (
             <Pressable
               onPress={() => Linking.openURL(`mailto:${comune.email}`).catch(() => {})}
               style={({ pressed }) => [styles.contactRow, pressed && styles.pressed]}
@@ -370,6 +397,7 @@ function HomeDelComune() {
               <Ionicons name="mail-outline" size={16} color={t.warmDark} />
               <Text style={[styles.contactValue, styles.contactLink]}>{comune.email}</Text>
             </Pressable>
+            )}
           </View>
 
           <Pressable
@@ -709,4 +737,17 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline",
   },
   pressed: { opacity: 0.78 },
+  salvatiRiga: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    alignSelf: "flex-start",
+    backgroundColor: colors.brandSecondary,
+    borderRadius: radius.pill,
+    paddingHorizontal: 14,
+    paddingVertical: 9,
+    marginTop: -spacing.sm,
+    marginBottom: spacing.lg,
+  },
+  salvatiTesto: { fontSize: 14, fontWeight: "800", color: colors.brandPrimaryDark },
 });
