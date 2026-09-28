@@ -223,6 +223,23 @@ export default function Territorio() {
           <Ionicons name="chevron-forward" size={18} color={t.warmDark} />
         </Pressable>
 
+        {/* Associazioni: volontariato e sport */}
+        <Pressable
+          onPress={() => router.push("/associazioni" as any)}
+          style={({ pressed }) => [styles.punto, { borderColor: t.warm }, pressed && { opacity: 0.85 }]}
+          accessibilityRole="button"
+          testID="territorio-associazioni"
+        >
+          <View style={[styles.puntoIcon, { backgroundColor: t.warmSoft }]}>
+            <Ionicons name="heart-outline" size={18} color={t.warmDark} />
+          </View>
+          <View style={styles.flex}>
+            <Text style={styles.puntoTitle}>Associazioni e sport</Text>
+            <Text style={styles.puntoSub}>Volontariato, famiglie e società sportive della zona</Text>
+          </View>
+          <Ionicons name="chevron-forward" size={18} color={t.warmDark} />
+        </Pressable>
+
         {/* Servizi del territorio indicati dal Comune */}
         {comune.puntiSupporto.length > 0 && (
           <View style={styles.section} testID="territorio-punti">

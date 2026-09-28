@@ -78,6 +78,14 @@ const STRUMENTI = [
     href: "/salute",
     color: topics.patronato,
   },
+  {
+    id: "associazioni",
+    icon: "heart-outline" as const,
+    title: "Associazioni e sport",
+    sub: "Volontariato, famiglie e sport per tutti nella tua zona",
+    href: "/associazioni",
+    color: topics.esenzioni,
+  },
 ];
 
 const INFO_LINKS = [

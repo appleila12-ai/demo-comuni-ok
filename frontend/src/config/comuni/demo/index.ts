@@ -8,6 +8,7 @@ import type { ComuneConfig } from "../types";
 import { alba } from "./alba";
 import { albenga } from "./albenga";
 import { ancona } from "./ancona";
+import { arcola } from "./arcola";
 import { arezzo } from "./arezzo";
 import { ascoliPiceno } from "./ascoli-piceno";
 import { asti } from "./asti";
@@ -55,7 +56,9 @@ import { pavia } from "./pavia";
 import { pinerolo } from "./pinerolo";
 import { pioltello } from "./pioltello";
 import { pontedera } from "./pontedera";
+import { portovenere } from "./portovenere";
 import { rapallo } from "./rapallo";
+import { riccoDelGolfo } from "./ricco-del-golfo";
 import { rovereto } from "./rovereto";
 import { rozzano } from "./rozzano";
 import { sanBonifacio } from "./san-bonifacio";
@@ -75,6 +78,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   alba,
   albenga,
   ancona,
+  arcola,
   arezzo,
   ascoliPiceno,
   asti,
@@ -122,7 +126,9 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   pinerolo,
   pioltello,
   pontedera,
+  portovenere,
   rapallo,
+  riccoDelGolfo,
   rovereto,
   rozzano,
   sanBonifacio,

@@ -112,7 +112,10 @@ const TAPPE: Tappa[] = [
     icon: "home-outline",
     color: topics.patronato,
     principale: { label: "Aiuti e contatti", route: "/territorio" },
-    altri: [{ label: "Salute vicino a te", route: "/salute" }],
+    altri: [
+      { label: "Salute vicino a te", route: "/salute" },
+      { label: "Associazioni e sport", route: "/associazioni" },
+    ],
   },
 ];
 
