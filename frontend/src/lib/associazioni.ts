@@ -208,6 +208,7 @@ const VOLONTARIATO_OVUNQUE: Associazione[] = [
     cosa: "Consulenza civica e legale su diritti, sanità e invalidità civile.",
     dove: "Via Don Lazzaro Troiani 10, 22030 Lasnigo (CO)",
     email: "info@sanitabenicomuni.it",
+    sito: "https://www.sanitabenicomuni.it",
     comuni: ["como", "lecco", "valmadrera", "galbiate", "calolziocorte", "merate", "casatenovo"],
   },
 ];
