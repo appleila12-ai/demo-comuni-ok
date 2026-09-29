@@ -4,11 +4,11 @@ import type { ComuneConfig } from "../types";
 // L'ente NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // In Trentino i servizi sociali sono della Comunità di Valle, non dei singoli
 // Comuni: un'unica versione per i 25 Comuni, il cittadino sceglie il suo paese.
-// Fonti: comunitadellegiudicarie.it (pagine Contatti servizi sociali e I Comuni,
-// settembre 2026; guida ai servizi 2024; pagina consultorio).
-// DA VERIFICARE con la Comunità: poli territoriali e sportelli delle assistenti
-// sociali (fonte non ufficiale e datata, per ora NON mostrati), Ufficio di Piano
-// e Spazio Argento (fonte 2024), recapiti dei singoli municipi.
+// Fonti: comunitadellegiudicarie.it (Contatti servizi sociali, I Comuni) e
+// "Recapiti Assistenti Sociali 2026" (PDF della Comunità, inviato dal Comune di
+// Borgo Chiese il 29/09/2026): segreterie, orari, poli e sportelli.
+// DA VERIFICARE: quale telefono dare per ciascun polo (nel PDF sono i numeri
+// delle assistenti sociali area anziani, tranne il Polo 2), recapiti dei municipi.
 export const giudicarie: ComuneConfig = {
   slug: "giudicarie",
   tipo: "unione",
@@ -48,12 +48,12 @@ export const giudicarie: ComuneConfig = {
   ],
 
   ente: "Servizio Socio-Assistenziale · Comunità delle Giudicarie",
-  responsabile: "Assistenti sociali della Comunità, per tutti i 25 Comuni",
+  responsabile: "Assistenti sociali della Comunità, organizzate in tre poli territoriali",
   indirizzo: "Via del Foro 3 (primo piano), 38079 Tione di Trento (TN)",
   telefono: "0465 339585",
   email: "serviziosocioassistenziale@comunitadellegiudicarie.it",
   pec: "c.giudicarie@legalmail.it",
-  orari: "Lun–Gio 9:00–12:00 e 14:00–16:00 · Ven 9:00–12:00",
+  orari: "Segreteria: lun–ven 9:00–12:00",
   sitoWeb: "https://www.comunitadellegiudicarie.it/Tematiche/Servizi-sociali/Contatti",
 
   logo: null, // stemma solo se fornito dalla Comunità
@@ -68,16 +68,37 @@ export const giudicarie: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizio Socio-Assistenziale – Giudicarie",
+      title: "Servizio Socio-Assistenziale – segreteria",
       subtitle:
-        "Assistenti sociali per tutti i Comuni della Comunità: chiedi quale sportello è più vicino al tuo paese · Via del Foro 3, Tione di Trento · Tel. 0465 339585",
+        "Per famiglie con minori e adulti, per tutti i 25 Comuni · Via del Foro 3, Tione di Trento · Lun–ven 9:00–12:00 · Tel. 0465 339585",
       action: { type: "tel", value: "0465339585" },
     },
     {
+      icon: "location-outline",
+      title: "Polo 1 – Valle del Chiese",
+      subtitle:
+        "Da Sella Giudicarie a Bondone (Storo, Borgo Chiese, Valdaone, Pieve di Bono-Prezzo…) · Condino, Casa Sanitaria, Via Roma 38 · Sportello lunedì 9:00–10:30 · Tel. 0465 621844",
+      action: { type: "tel", value: "0465621844" },
+    },
+    {
+      icon: "location-outline",
+      title: "Polo 2 – Giudicarie Esteriori, Tione e Busa",
+      subtitle:
+        "Tione, Borgo Lares, Tre Ville, Comano Terme, Bleggio Superiore, Fiavé, Stenico, San Lorenzo Dorsino · Sportello lunedì 9:00–10:30 a Ponte Arche (Via C. Battisti 38) e a Tione · Tel. 0465 339584",
+      action: { type: "tel", value: "0465339584" },
+    },
+    {
+      icon: "location-outline",
+      title: "Polo 3 – Val Rendena",
+      subtitle:
+        "Da Porte di Rendena a Madonna di Campiglio (Spiazzo, Pinzolo, Carisolo, Caderzone Terme…) · Spiazzo, Municipio, Via S. Vigilio 2 · Sportello lunedì 9:00–10:30 · Tel. 0465 801990",
+      action: { type: "tel", value: "0465801990" },
+    },
+    {
       icon: "heart-outline",
-      title: "Spazio Argento – Giudicarie",
-      subtitle: "Punto di riferimento per anziani, familiari e caregiver · Tel. 0465 339575",
-      action: { type: "tel", value: "0465339575" },
+      title: "Spazio Argento – anziani e caregiver",
+      subtitle: "Via del Foro 3, Tione di Trento · Lun–ven 9:00–12:00 · Tel. 0465 339570 · spazioargento@comunitadellegiudicarie.it",
+      action: { type: "tel", value: "0465339570" },
     },
     {
       icon: "chatbubbles-outline",
