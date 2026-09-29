@@ -15,6 +15,8 @@ export type Associazione = {
   sito?: string;
   /** slug dei Comuni in cui l'associazione è di casa (compare per prima lì) */
   comuni?: string[];
+  /** sigle delle province in cui è di casa (compare come "Vicino a te" in tutti i loro Comuni) */
+  province?: string[];
   verificare?: boolean;
 };
 
@@ -201,17 +203,19 @@ const SPORT_NAZIONALI: Associazione[] = [
   },
 ];
 
-// Valide per tutti i Comuni (consulenza anche a distanza)
-const VOLONTARIATO_OVUNQUE: Associazione[] = [
-  {
-    nome: "APS Gazebo Sanità e Beni Comuni",
-    cosa: "Consulenza civica e legale su diritti, sanità e invalidità civile.",
-    dove: "Via Don Lazzaro Troiani 10, 22030 Lasnigo (CO)",
-    email: "info@sanitabenicomuni.it",
-    sito: "https://www.sanitabenicomuni.it",
-    comuni: ["como", "lecco", "valmadrera", "galbiate", "calolziocorte", "merate", "casatenovo"],
-  },
-];
+// APS Gazebo: nelle province di Lecco, Piacenza e Viterbo (tutti i Comuni)
+const GAZEBO: Associazione = {
+  nome: "APS Gazebo Sanità e Beni Comuni",
+  cosa: "Consulenza civica e legale su diritti, sanità e invalidità civile.",
+  dove: "Via Don Lazzaro Troiani 10, 22030 Lasnigo (CO)",
+  email: "info@sanitabenicomuni.it",
+  sito: "https://www.sanitabenicomuni.it",
+  province: ["LC", "PC", "VT"],
+};
+for (const pr of GAZEBO.province!) {
+  PER_PROVINCIA[pr] = PER_PROVINCIA[pr] ?? { volontariato: [], sport: [] };
+  PER_PROVINCIA[pr].volontariato.unshift(GAZEBO);
+}
 
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
@@ -221,16 +225,17 @@ const VOLONTARIATO_NAZIONALI: Associazione[] = [
   },
 ];
 
+function eVicina(a: Associazione): boolean {
+  return !!(a.comuni?.includes(comune.slug) || a.province?.includes(comune.provincia));
+}
+
 function ordina(lista: Associazione[]): Associazione[] {
-  const slug = comune.slug;
-  const vicine = lista.filter((a) => a.comuni?.includes(slug));
-  const altre = lista.filter((a) => !a.comuni?.includes(slug));
-  return [...vicine, ...altre];
+  return [...lista.filter(eVicina), ...lista.filter((a) => !eVicina(a))];
 }
 
 export function associazioniDelComune() {
   const prov = PER_PROVINCIA[comune.provincia];
-  const volontariato = [...ordina(prov?.volontariato ?? []), ...VOLONTARIATO_OVUNQUE];
+  const volontariato = ordina(prov?.volontariato ?? []);
   const sport = ordina(prov?.sport ?? []);
   const sportRegione = SPORT_REGIONE[comune.regione] ?? [];
   return {
@@ -238,9 +243,9 @@ export function associazioniDelComune() {
     sport,
     sportRegione,
     haElenco: volontariato.length + sport.length > 0,
-    volontariatoLocali: prov?.volontariato?.length ?? 0,
+    volontariatoLocali: (prov?.volontariato ?? []).filter((a) => !a.province).length,
     volontariatoNazionali: VOLONTARIATO_NAZIONALI,
     sportNazionali: sportRegione.length ? [] : SPORT_NAZIONALI,
-    vicina: (a: Associazione) => !!a.comuni?.includes(comune.slug),
+    vicina: eVicina,
   };
 }
