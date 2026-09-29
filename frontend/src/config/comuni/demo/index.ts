@@ -42,6 +42,7 @@ import { fano } from "./fano";
 import { fiorenzuolaDArda } from "./fiorenzuola-d-arda";
 import { frascati } from "./frascati";
 import { galbiate } from "./galbiate";
+import { giudicarie } from "./giudicarie";
 import { guidoniaMontecelio } from "./guidonia-montecelio";
 import { imola } from "./imola";
 import { jesolo } from "./jesolo";
@@ -129,6 +130,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   fiorenzuolaDArda,
   frascati,
   galbiate,
+  giudicarie,
   guidoniaMontecelio,
   imola,
   jesolo,
