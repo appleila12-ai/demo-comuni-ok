@@ -13,6 +13,8 @@ export type Associazione = {
   telefono?: string;
   email?: string;
   sito?: string;
+  /** numero WhatsApp (si apre la chat) */
+  whatsapp?: string;
   /** slug dei Comuni in cui l'associazione è di casa (compare per prima lì) */
   comuni?: string[];
   /** sigle delle province in cui è di casa (compare come "Vicino a te" in tutti i loro Comuni) */
@@ -230,6 +232,30 @@ const GENITORI_TOSTI: Associazione = {
 for (const pr of GENITORI_TOSTI.province!) {
   PER_PROVINCIA[pr] = PER_PROVINCIA[pr] ?? { volontariato: [], sport: [] };
   PER_PROVINCIA[pr].volontariato.unshift(GENITORI_TOSTI);
+}
+
+// Genitori Tosti: gruppi locali raggiungibili solo su WhatsApp
+const GENITORI_TOSTI_LOCALI: Associazione[] = [
+  {
+    nome: "Genitori Tosti – Cologno Monzese",
+    cosa: "Gruppo locale di Genitori Tosti in Tutti i Posti: genitori di figli con disabilità che si sostengono e tutelano i diritti.",
+    dove: "Cologno Monzese",
+    whatsapp: "+39 349 0957263",
+    province: ["MI"],
+  },
+  {
+    nome: "Genitori Tosti – Lodi",
+    cosa: "Gruppo locale di Genitori Tosti in Tutti i Posti: genitori di figli con disabilità che si sostengono e tutelano i diritti.",
+    dove: "Lodi",
+    whatsapp: "+39 393 9212811",
+    province: ["LO"],
+  },
+];
+for (const g of GENITORI_TOSTI_LOCALI) {
+  for (const pr of g.province!) {
+    PER_PROVINCIA[pr] = PER_PROVINCIA[pr] ?? { volontariato: [], sport: [] };
+    PER_PROVINCIA[pr].volontariato.unshift(g);
+  }
 }
 
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
