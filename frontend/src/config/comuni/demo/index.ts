@@ -52,6 +52,7 @@ import { legnago } from "./legnago";
 import { legnano } from "./legnano";
 import { lerici } from "./lerici";
 import { lissone } from "./lissone";
+import { lodi } from "./lodi";
 import { magenta } from "./magenta";
 import { mantova } from "./mantova";
 import { marsala } from "./marsala";
@@ -141,6 +142,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   legnano,
   lerici,
   lissone,
+  lodi,
   magenta,
   mantova,
   marsala,
