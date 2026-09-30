@@ -217,6 +217,21 @@ for (const pr of GAZEBO.province!) {
   PER_PROVINCIA[pr].volontariato.unshift(GAZEBO);
 }
 
+// Genitori Tosti: sede a Verona, in tutti i Comuni della provincia
+const GENITORI_TOSTI: Associazione = {
+  nome: "Genitori Tosti in Tutti i Posti APS",
+  cosa: "Associazione di genitori con figli con disabilità: tutela dei diritti, inclusione scolastica, caregiver familiari e accessibilità.",
+  dove: "Via Fincato 41/b, 37131 Verona",
+  telefono: "339 2118094",
+  email: "genitoritosti@yahoo.it",
+  sito: "https://www.genitoritosti.it",
+  province: ["VR"],
+};
+for (const pr of GENITORI_TOSTI.province!) {
+  PER_PROVINCIA[pr] = PER_PROVINCIA[pr] ?? { volontariato: [], sport: [] };
+  PER_PROVINCIA[pr].volontariato.unshift(GENITORI_TOSTI);
+}
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",
