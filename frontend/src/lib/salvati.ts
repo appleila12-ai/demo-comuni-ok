@@ -13,6 +13,7 @@ export type Salvato = {
   tel?: string;
   email?: string;
   url?: string;
+  whatsapp?: string;
   quando?: number;
 };
 
