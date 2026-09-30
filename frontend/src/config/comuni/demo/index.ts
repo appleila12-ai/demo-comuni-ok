@@ -87,6 +87,7 @@ import { tarquinia } from "./tarquinia";
 import { teramo } from "./teramo";
 import { treviso } from "./treviso";
 import { valmadrera } from "./valmadrera";
+import { verona } from "./verona";
 import { vetralla } from "./vetralla";
 import { viareggio } from "./viareggio";
 import { vimercate } from "./vimercate";
@@ -175,6 +176,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   teramo,
   treviso,
   valmadrera,
+  verona,
   vetralla,
   viareggio,
   vimercate,
