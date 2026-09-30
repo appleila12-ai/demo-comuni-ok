@@ -196,6 +196,10 @@ export const FARMACIE_TURNO: Record<string, FarmacieTurno> = {
     "titolo": "ATS Brianza",
     "url": "https://www.ats-brianza.it/mnhome-farmacie-di-turno"
   },
+  "LO": {
+    "titolo": "ASST Lodi – Turni farmacie",
+    "url": "https://www.asst-lodi.it/en/turni-farmacie"
+  },
   "MI": {
     "titolo": "Federfarma Milano",
     "url": "https://www.federfarmamilano.it/servizi/cerca_farmacia.asp"
