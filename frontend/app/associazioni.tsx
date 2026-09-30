@@ -45,10 +45,11 @@ function Scheda({ a, vicina }: { a: Associazione; vicina: boolean }) {
       <View style={styles.azioni}>
         {a.telefono ? <Azione icon="call-outline" label={a.telefono} onPress={() => apri(`tel:${a.telefono!.replace(/[^\d+]/g, "")}`)} /> : null}
         {a.email ? <Azione icon="mail-outline" label="Email" onPress={() => apri(`mailto:${a.email}`)} /> : null}
+        {a.whatsapp ? <Azione icon="logo-whatsapp" label={a.whatsapp} onPress={() => apri(`https://wa.me/${a.whatsapp!.replace(/[^\d]/g, "")}`)} /> : null}
         {a.sito ? <Azione icon="globe-outline" label="Sito" onPress={() => apri(a.sito!)} /> : null}
         <BottoneSalva
           conTesto
-          elemento={{ id: `associazione:${a.nome}`, titolo: a.nome, sotto: a.cosa, tel: a.telefono, email: a.email, url: a.sito, route: "/associazioni" }}
+          elemento={{ id: `associazione:${a.nome}`, titolo: a.nome, sotto: a.cosa, tel: a.telefono, email: a.email, url: a.sito, whatsapp: a.whatsapp, route: "/associazioni" }}
         />
       </View>
       {a.verificare ? <Text style={[paginaStili.piccolo, { marginTop: 6 }]}>Recapito da confermare.</Text> : null}
