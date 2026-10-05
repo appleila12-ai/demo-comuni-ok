@@ -7,11 +7,11 @@ export interface GuideStep {
   body: string;
 }
 
-/** Percorso passo-passo secondo la Riforma della disabilità (D.Lgs. 62/2024) */
+/** Percorso passo-passo dove la Riforma della disabilità (D.Lgs. 62/2024) è attiva */
 export const NEXT_STEPS: GuideStep[] = [
   {
     title: "Vai dal tuo medico con la diagnosi",
-    body: "Chiedi al medico curante (o a un medico certificatore) il Certificato Medico Introduttivo e fattelo inviare all'INPS. Con la riforma questo certificato avvia da solo la valutazione: non serve più una domanda separata.",
+    body: "Chiedi al medico curante (o a un medico certificatore) il Certificato Medico Introduttivo e fattelo inviare all'INPS. Nella tua provincia questo certificato avvia da solo la valutazione: non serve una domanda separata.",
   },
   {
     title: "Un'unica valutazione di base",
@@ -31,17 +31,46 @@ export const NEXT_STEPS: GuideStep[] = [
   },
 ];
 
+/** Percorso passo-passo dove la riforma NON è ancora attiva (regole valide fino al 31/12/2026) */
+export const PASSI_REGOLE_ATTUALI: GuideStep[] = [
+  {
+    title: "Vai dal tuo medico con la diagnosi",
+    body: "Chiedi al medico curante (o a un medico certificatore) il Certificato Medico Introduttivo. Il medico lo invia all'INPS e ti dà una ricevuta con un codice: conservala. Il certificato vale 90 giorni.",
+  },
+  {
+    title: "Fai la domanda all'INPS entro 90 giorni",
+    body: "Con il codice del certificato presenti la domanda all'INPS: online con SPID oppure tramite un patronato, che lo fa gratis. Nella domanda indichi cosa chiedi: invalidità civile, Legge 104 o entrambe.",
+  },
+  {
+    title: "Vai alla visita",
+    body: "Ricevi la convocazione con data e luogo. Porta un documento e tutti i referti. Puoi farti accompagnare da un medico di fiducia. Se la persona non può uscire di casa, il medico può chiedere la visita a domicilio.",
+  },
+  {
+    title: "Ricevi il verbale",
+    body: "Il verbale indica la percentuale di invalidità e, se l'hai chiesta, la Legge 104 (comma 1 oppure comma 3, cioè grave). Da qui attivi esenzioni, agevolazioni e permessi. Se non sei d'accordo, hai 6 mesi per fare ricorso.",
+  },
+  {
+    title: "Chiedi un progetto personalizzato",
+    body: "Con il verbale puoi chiedere ai Servizi Sociali del Comune un progetto personalizzato di sostegni. Dal 2027, con la riforma, si chiamerà Progetto di Vita.",
+  },
+];
+
+/** I passi giusti per il territorio del Comune attivo */
+export function passiPercorso(riformaAttiva: boolean): GuideStep[] {
+  return riformaAttiva ? NEXT_STEPS : PASSI_REGOLE_ATTUALI;
+}
+
 /** Spiegazione del Certificato Medico Introduttivo (Riforma 2027) */
 export const CERT_EXPLAINER = {
   title: "Cos'è il Certificato Medico Introduttivo?",
   intro:
-    "È il documento che AVVIA tutta la pratica: con la riforma è il certificato stesso a far partire la valutazione, senza una domanda amministrativa separata.",
+    "È il documento che avvia la pratica per il riconoscimento dell'invalidità e della disabilità.",
   points: [
-    "Lo compila il tuo medico curante (o un medico certificatore abilitato) e lo invia telematicamente all'INPS.",
+    "Lo compila il tuo medico curante (o un medico certificatore abilitato) e lo invia online all'INPS.",
     "Contiene le diagnosi e i dati clinici: porta con te referti e documentazione aggiornata.",
-    "Ti viene consegnata una ricevuta: conservala, è il riferimento della tua pratica.",
-    "Avvia automaticamente l'unica valutazione di base (invalidità + disabilità insieme).",
-    "Costa in media tra 30€ e 80€, secondo la tariffa del medico.",
+    "Ti viene consegnata una ricevuta con un codice: conservala, è il riferimento della tua pratica.",
+    "Dove la riforma è attiva, il certificato basta ad avviare la valutazione. Altrove, entro 90 giorni serve anche la domanda all'INPS (online o tramite patronato).",
+    "Può essere a pagamento: chiedi al tuo medico quanto costa.",
   ],
   reform:
     "Con la Riforma della disabilità (D.Lgs. 62/2024), pienamente attiva dal 2027 in tutta Italia, la valutazione è unica e il certificato del medico la avvia da solo: una sola visita, un solo verbale.",

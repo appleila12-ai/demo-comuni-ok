@@ -42,7 +42,7 @@ export function VerbaleSection() {
         </View>
         <View style={styles.flex}>
           <Text style={[styles.label, { color: topics.esenzioni.main }]}>
-            DOPO IL VERBALE
+            Dopo il verbale
           </Text>
           <Text style={styles.title}>Verbale in mano: e ora?</Text>
         </View>
@@ -103,9 +103,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   label: {
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
   },
   title: {
     fontSize: 16,
@@ -116,8 +116,8 @@ const styles = StyleSheet.create({
   },
   body: { marginTop: spacing.md },
   intro: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
     marginBottom: spacing.md,
   },
@@ -148,8 +148,8 @@ const styles = StyleSheet.create({
     lineHeight: 19,
   },
   stepBody: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
   },
 });

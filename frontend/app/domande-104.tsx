@@ -39,7 +39,7 @@ export default function Domande104Screen() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="domande-104-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}

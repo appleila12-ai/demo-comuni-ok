@@ -51,7 +51,7 @@ export function Pagina({
     <SafeAreaView style={s.safe} edges={["top"]} testID={testID}>
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <View style={s.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}
           style={s.back}
           hitSlop={12}
@@ -242,7 +242,7 @@ export const paginaStili = StyleSheet.create({
     marginBottom: spacing.sm,
   },
   testo: { fontSize: 14, lineHeight: 21, color: colors.onSurface },
-  piccolo: { fontSize: 12, lineHeight: 18, color: colors.onSurfaceSecondary },
+  piccolo: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary },
 });
 
 const s = StyleSheet.create({
@@ -290,7 +290,7 @@ const s = StyleSheet.create({
     padding: spacing.md,
     marginBottom: spacing.md,
   },
-  avvisoText: { flex: 1, fontSize: 12.5, lineHeight: 18, color: colors.onSurface },
+  avvisoText: { flex: 1, fontSize: 14, lineHeight: 20, color: colors.onSurface },
   btn: {
     flexDirection: "row",
     alignItems: "center",
@@ -306,7 +306,7 @@ const s = StyleSheet.create({
   btnText: { fontSize: 15, fontWeight: "800" },
   campo: { marginBottom: spacing.md },
   campoLabel: { fontSize: 14, fontWeight: "800", color: colors.onSurface, marginBottom: 4 },
-  campoAiuto: { fontSize: 12, lineHeight: 17, color: colors.onSurfaceSecondary, marginBottom: 6 },
+  campoAiuto: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary, marginBottom: 6 },
   input: {
     backgroundColor: colors.surface,
     borderWidth: 1,

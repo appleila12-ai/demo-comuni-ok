@@ -111,7 +111,7 @@ export default function Risultati() {
       <SafeAreaView style={styles.safe}>
         <View style={styles.centered}>
           <Text style={styles.emptyText}>Report non trovato.</Text>
-          <Pressable onPress={() => router.replace("/")} style={styles.retryBtn}>
+          <Pressable accessibilityRole="button" onPress={() => router.replace("/")} style={styles.retryBtn}>
             <Text style={styles.retryBtnText}>Torna alla home</Text>
           </Pressable>
         </View>
@@ -129,7 +129,7 @@ export default function Risultati() {
         behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
         <View style={styles.header}>
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}
             style={styles.iconBtn}
             hitSlop={12}
@@ -197,7 +197,7 @@ export default function Risultati() {
             testID="rights-banner"
           >
             <View style={styles.sectionBannerOverlay} />
-            <Text style={styles.sectionBannerLabel}>I TUOI DIRITTI</Text>
+            <Text style={styles.sectionBannerLabel}>I tuoi diritti</Text>
             <Text style={styles.sectionBannerTitle}>
               Diritti e Permessi — Legge 104
             </Text>
@@ -230,7 +230,7 @@ export default function Risultati() {
             />
             <View style={styles.linkBannerBody}>
               <View style={styles.flex}>
-                <Text style={styles.linkBannerLabel}>SUL TERRITORIO</Text>
+                <Text style={styles.linkBannerLabel}>Sul territorio</Text>
                 <Text style={styles.linkBannerTitle}>
                   Aiuti Pratici sul Territorio
                 </Text>
@@ -339,7 +339,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   agevolazioniTitolo: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
-  agevolazioniSub: { color: "#FFFFFF", fontSize: 12.5, lineHeight: 17, marginTop: 2 },
+  agevolazioniSub: { color: "#FFFFFF", fontSize: 14, lineHeight: 20, marginTop: 2 },
   safe: { flex: 1, backgroundColor: colors.background },
   flex: { flex: 1 },
   centered: {
@@ -430,9 +430,9 @@ const styles = StyleSheet.create({
   },
   sectionBannerLabel: {
     color: colors.onSurface,
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
   },
   sectionBannerTitle: {
     color: colors.onSurface,
@@ -457,10 +457,10 @@ const styles = StyleSheet.create({
     padding: spacing.lg,
   },
   linkBannerLabel: {
-    fontSize: 9,
+    fontSize: 14,
     fontWeight: "800",
     color: colors.onSurface,
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
   },
   linkBannerTitle: {
     fontSize: 16,
@@ -470,8 +470,8 @@ const styles = StyleSheet.create({
     letterSpacing: -0.2,
   },
   linkBannerSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
     marginTop: 3,
   },
@@ -502,8 +502,8 @@ const styles = StyleSheet.create({
     color: colors.onBrandSecondary,
   },
   summarySub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceTertiary,
     marginTop: 2,
   },
@@ -543,9 +543,9 @@ const styles = StyleSheet.create({
   },
 
   disclaimer: {
-    fontSize: 12,
+    fontSize: 14,
     color: colors.onSurfaceTertiary,
-    lineHeight: 17,
+    lineHeight: 20,
     marginTop: spacing.md,
     textAlign: "center",
     fontStyle: "italic",

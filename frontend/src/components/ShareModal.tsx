@@ -55,8 +55,8 @@ export function ShareModal({ visible, onClose, shareUrl, qrUrl }: Props) {
       animationType="fade"
       onRequestClose={onClose}
     >
-      <Pressable style={styles.modalBackdrop} onPress={onClose}>
-        <Pressable style={styles.shareCard} onPress={(e) => e.stopPropagation()}>
+      <Pressable accessibilityRole="button" accessibilityLabel="Chiudi" style={styles.modalBackdrop} onPress={onClose}>
+        <Pressable accessible={false} style={styles.shareCard} onPress={(e) => e.stopPropagation()}>
           <Text style={styles.shareTitle}>Condividi con la famiglia</Text>
           <Text style={styles.shareSub}>
             Un familiare o caregiver può leggere il report inquadrando questo
@@ -80,7 +80,7 @@ export function ShareModal({ visible, onClose, shareUrl, qrUrl }: Props) {
             </Text>
           ) : null}
           <View style={styles.shareActions}>
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={handleCopyLink}
               style={({ pressed }) => [
                 styles.secondaryBtn,
@@ -95,7 +95,7 @@ export function ShareModal({ visible, onClose, shareUrl, qrUrl }: Props) {
               />
               <Text style={styles.secondaryBtnText}>Copia link</Text>
             </Pressable>
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={handleShareLink}
               style={({ pressed }) => [
                 styles.primaryBtn,
@@ -111,7 +111,7 @@ export function ShareModal({ visible, onClose, shareUrl, qrUrl }: Props) {
               <Text style={styles.primaryBtnText}>Condividi</Text>
             </Pressable>
           </View>
-          <Pressable onPress={onClose} style={styles.shareClose} testID="share-close-btn">
+          <Pressable accessibilityRole="button" onPress={onClose} style={styles.shareClose} testID="share-close-btn">
             <Text style={styles.shareCloseText}>Chiudi</Text>
           </Pressable>
         </Pressable>
@@ -144,8 +144,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   shareSub: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceTertiary,
     marginBottom: spacing.lg,
     textAlign: "center",
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
   },
   shareUrl: {
-    fontSize: 11,
+    fontSize: 14,
     color: colors.onSurfaceTertiary,
     textAlign: "center",
     marginBottom: spacing.md,

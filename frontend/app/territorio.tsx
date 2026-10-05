@@ -102,7 +102,7 @@ export default function Territorio() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="territorio-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -348,7 +348,7 @@ export default function Territorio() {
 
         {/* Portale regionale: informazione secondaria */}
         {portal && (
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => apri(portal.url)}
             style={styles.regionLine}
             hitSlop={6}
@@ -440,9 +440,9 @@ const styles = StyleSheet.create({
   },
   heroSub: {
     color: colors.onSurface,
-    fontSize: 12,
+    fontSize: 14,
     marginTop: 3,
-    lineHeight: 17,
+    lineHeight: 20,
   },
 
   comuneCard: {
@@ -452,7 +452,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   comuneTop: { flexDirection: "row", alignItems: "center", gap: spacing.md },
-  comuneEyebrow: { fontSize: 10, fontWeight: "800", letterSpacing: 1 },
+  comuneEyebrow: { fontSize: 14, fontWeight: "800", letterSpacing: 0.3 },
   comuneNome: {
     fontFamily: fonts.serif,
     fontSize: 19,
@@ -460,7 +460,7 @@ const styles = StyleSheet.create({
     color: colors.onSurface,
     marginTop: 2,
   },
-  comuneEnte: { fontSize: 13, color: colors.onSurfaceSecondary, marginTop: 1 },
+  comuneEnte: { fontSize: 14, color: colors.onSurfaceSecondary, marginTop: 1 },
   comuneText: {
     fontSize: 14,
     lineHeight: 20,
@@ -468,7 +468,7 @@ const styles = StyleSheet.create({
     marginTop: spacing.md,
     marginBottom: spacing.sm,
   },
-  comuneInfo: { fontSize: 12, lineHeight: 18, color: colors.onSurfaceSecondary },
+  comuneInfo: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary },
   comuneActions: { flexDirection: "row", flexWrap: "wrap", gap: spacing.sm, marginTop: spacing.md },
   actionBtn: {
     flexDirection: "row",
@@ -519,7 +519,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   puntoTitle: { fontSize: 14, fontWeight: "800", color: colors.onSurface },
-  puntoSub: { fontSize: 12, lineHeight: 17, color: colors.onSurfaceSecondary, marginTop: 2 },
+  puntoSub: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary, marginTop: 2 },
 
   regionLine: {
     flexDirection: "row",
@@ -527,7 +527,7 @@ const styles = StyleSheet.create({
     gap: 6,
     paddingVertical: spacing.sm,
   },
-  regionLineText: { flex: 1, fontSize: 12, lineHeight: 17, color: colors.onSurfaceTertiary },
+  regionLineText: { flex: 1, fontSize: 14, lineHeight: 20, color: colors.onSurfaceTertiary },
   regionLink: { fontWeight: "700", textDecorationLine: "underline" },
 
   card: {
@@ -556,9 +556,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   cardLabel: {
-    fontSize: 9,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
   },
   cardTitle: {
     fontSize: 16,
@@ -582,13 +582,13 @@ const styles = StyleSheet.create({
     borderRadius: radius.pill,
   },
   rowBadgeText: {
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: "800",
     letterSpacing: 0.4,
   },
   rowText: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
   },
 
@@ -605,7 +605,7 @@ const styles = StyleSheet.create({
   },
   guideBtnText: {
     color: colors.onBrandPrimary,
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: "800",
   },
 });

@@ -129,7 +129,7 @@ export default function Lettere() {
         </View>
       }
     >
-      <Pressable onPress={() => router.setParams({ id: "" })} hitSlop={8} style={styles.tutte}>
+      <Pressable accessibilityRole="button" onPress={() => router.setParams({ id: "" })} hitSlop={8} style={styles.tutte}>
         <Ionicons name="arrow-back" size={14} color={colors.onSurface} />
         <Text style={styles.tutteText}>Tutte le lettere</Text>
       </Pressable>
@@ -208,10 +208,10 @@ const styles = StyleSheet.create({
   icona: { width: 44, height: 44, borderRadius: radius.md, alignItems: "center", justifyContent: "center" },
   modelloTitolo: { fontSize: 15, fontWeight: "800", color: colors.onSurface, marginBottom: 2 },
   tutte: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: spacing.sm },
-  tutteText: { fontSize: 13, fontWeight: "700", color: colors.onSurface, textDecorationLine: "underline" },
+  tutteText: { fontSize: 14, fontWeight: "700", color: colors.onSurface, textDecorationLine: "underline" },
   titolo: { fontSize: 21, fontWeight: "800", color: colors.onSurface, marginBottom: 6 },
   anteprima: { backgroundColor: "#FFFFFF" },
-  anteprimaTesto: { fontSize: 13, lineHeight: 20, color: colors.onSurface },
+  anteprimaTesto: { fontSize: 14, lineHeight: 20, color: colors.onSurface },
   azioni: { gap: spacing.xs },
-  errore: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark, textAlign: "center", marginBottom: 4 },
+  errore: { fontSize: 14, fontWeight: "700", color: colors.brandPrimaryDark, textAlign: "center", marginBottom: 4 },
 });

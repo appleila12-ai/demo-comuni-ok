@@ -1,5 +1,6 @@
 import { storage } from "@/src/utils/storage";
-import { NEXT_STEPS } from "@/src/lib/content";
+import { passiPercorso } from "@/src/lib/content";
+import { statoRiforma } from "@/src/lib/riformaTerritorio";
 
 const BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;
 const DEVICE_KEY = "salutenav:deviceId";
@@ -348,7 +349,7 @@ export async function askAssistant(
 export function buildReportHtml(r: Report): string {
   const a = r.answers;
   const genDate = formatDate(r.createdAt);
-  const stepsHtml = NEXT_STEPS.map(
+  const stepsHtml = passiPercorso(statoRiforma().attiva).map(
     (s) =>
       `<li><b>${escapeHtml(s.title)}</b><br/><span class="step-body">${escapeHtml(s.body)}</span></li>`,
   ).join("");

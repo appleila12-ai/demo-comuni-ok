@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
   tabText: { fontSize: 14, fontWeight: "800", color: colors.onSurface },
   badge: {
     alignSelf: "flex-start",
-    fontSize: 11,
+    fontSize: 12,
     fontWeight: "800",
     borderRadius: radius.pill,
     paddingHorizontal: 8,
@@ -176,5 +176,5 @@ const styles = StyleSheet.create({
     paddingVertical: 7,
     maxWidth: "100%",
   },
-  azioneText: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark },
+  azioneText: { fontSize: 14, fontWeight: "700", color: colors.brandPrimaryDark },
 });

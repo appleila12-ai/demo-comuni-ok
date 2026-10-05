@@ -87,7 +87,7 @@ export function AssistantCard({ answers }: { answers?: Answers }) {
       <Text style={styles.aiSuggLabel}>Suggerimenti veloci</Text>
       <View style={styles.aiSuggs}>
         {suggestions.map((s, idx) => (
-          <Pressable
+          <Pressable accessibilityRole="button"
             key={s}
             onPress={() => {
               setQuestion(s);
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
     color: colors.onBrandSecondary,
     marginBottom: 2,
   },
-  aiSub: { fontSize: 13, color: colors.onSurfaceTertiary, lineHeight: 18 },
+  aiSub: { fontSize: 14, color: colors.onSurfaceTertiary, lineHeight: 20 },
   aiInputWrap: {
     backgroundColor: colors.surface,
     borderRadius: radius.md,
@@ -187,11 +187,10 @@ const styles = StyleSheet.create({
     ...Platform.select({ web: { outlineStyle: "none" } as any, default: {} }),
   },
   aiSuggLabel: {
-    fontSize: 11,
+    fontSize: 14,
     fontWeight: "800",
     color: colors.onSurfaceTertiary,
-    textTransform: "uppercase",
-    letterSpacing: 0.8,
+    letterSpacing: 0.3,
     marginBottom: spacing.sm,
   },
   aiSuggs: {
@@ -210,10 +209,10 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
   },
   aiSuggText: {
-    fontSize: 12,
+    fontSize: 14,
     color: colors.onSurface,
     fontWeight: "600",
-    lineHeight: 16,
+    lineHeight: 20,
   },
   aiAskBtn: {
     flexDirection: "row",
@@ -246,10 +245,10 @@ const styles = StyleSheet.create({
     marginBottom: spacing.xs,
   },
   aiAnswerLabel: {
-    fontSize: 11,
+    fontSize: 14,
     fontWeight: "800",
     color: colors.onSurface,
-    letterSpacing: 0.8,
+    letterSpacing: 0.3,
   },
   aiAnswerText: {
     fontSize: 14,

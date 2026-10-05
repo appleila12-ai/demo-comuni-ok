@@ -101,9 +101,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   sectionStep: {
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
   },
   sectionTitle: {
     fontSize: 16,
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     color: colors.onSurfaceSecondary,
   },
   sectionFooter: {
-    fontSize: 12,
+    fontSize: 14,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
     marginTop: spacing.md,

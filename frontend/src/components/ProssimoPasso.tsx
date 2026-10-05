@@ -65,7 +65,7 @@ export function ProssimoPasso({ verbale }: { verbale?: VerbaleOption }) {
           <Ionicons name={p.icon} size={22} color={p.color.main} />
         </View>
         <View style={styles.flex}>
-          <Text style={styles.eyebrow}>IL TUO PROSSIMO PASSO</Text>
+          <Text style={styles.eyebrow}>Il tuo prossimo passo</Text>
           <Text style={styles.title}>{p.title}</Text>
         </View>
       </View>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  eyebrow: { fontSize: 10, fontWeight: "800", letterSpacing: 1.1, color: colors.onSurfaceTertiary },
+  eyebrow: { fontSize: 14, fontWeight: "800", letterSpacing: 0.3, color: colors.onSurfaceTertiary },
   title: { fontFamily: fonts.serif, fontSize: 18, lineHeight: 23, fontWeight: "700", color: colors.onSurface },
   body: { fontSize: 14, lineHeight: 21, color: colors.onSurfaceSecondary, marginTop: spacing.md },
   cta: {

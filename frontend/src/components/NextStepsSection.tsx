@@ -10,9 +10,10 @@ import {
   CERT_EXPLAINER,
   INVALIDITY_BRACKETS,
   LAW104_BENEFITS,
-  NEXT_STEPS,
   PARTNER_NOTE,
+  passiPercorso,
 } from "@/src/lib/content";
+import { statoRiforma } from "@/src/lib/riformaTerritorio";
 import { CertOption, senzaContratto, WhoOption, WorkOption } from "@/src/lib/reports";
 
 interface Props {
@@ -24,6 +25,8 @@ interface Props {
 /** Card "Il Percorso" — 5 passi dall'avere la diagnosi ai benefici.
  *  Mostrata in HOME, sotto il bottone "Inizia il percorso". */
 export function GuideStepsCard() {
+  const stato = statoRiforma();
+  const passi = passiPercorso(stato.attiva);
   return (
     <View
       style={[styles.card, { borderLeftColor: topics.percorso.main }]}
@@ -35,13 +38,16 @@ export function GuideStepsCard() {
         </View>
         <View style={styles.flex}>
           <Text style={[styles.topicLabel, { color: topics.percorso.main }]}>
-            IL PERCORSO
+            Passo dopo passo
           </Text>
           <Text style={styles.cardTitle}>Hai la diagnosi in mano: e adesso?</Text>
         </View>
       </View>
+      <Text style={styles.statoRiforma} testID="guide-steps-riforma">
+        {stato.frase}
+      </Text>
       <View style={styles.timeline}>
-        {NEXT_STEPS.map((s, idx) => (
+        {passi.map((s, idx) => (
           <View key={s.title} style={styles.timelineRow}>
             <View style={styles.timelineLeft}>
               <View
@@ -49,7 +55,7 @@ export function GuideStepsCard() {
               >
                 <Text style={styles.stepDotText}>{idx + 1}</Text>
               </View>
-              {idx < NEXT_STEPS.length - 1 && (
+              {idx < passi.length - 1 && (
                 <View
                   style={[
                     styles.timelineBar,
@@ -101,7 +107,7 @@ export function NextStepsSection({ work, cert, who }: Props) {
           </View>
           <View style={styles.flex}>
             <Text style={[styles.topicLabel, { color: topics.documenti.main }]}>
-              DOCUMENTI
+              Documenti
             </Text>
             <Text style={styles.cardTitle}>{CERT_EXPLAINER.title}</Text>
           </View>
@@ -151,7 +157,7 @@ export function NextStepsSection({ work, cert, who }: Props) {
           </View>
           <View style={styles.flex}>
             <Text style={[styles.topicLabel, { color: topics.legge104.main }]}>
-              LEGGE 104
+              Legge 104
             </Text>
             <Text style={styles.cardTitle}>
               Se ti riconoscono la Legge 104
@@ -183,7 +189,7 @@ export function NextStepsSection({ work, cert, who }: Props) {
           </View>
           <View style={styles.flex}>
             <Text style={[styles.topicLabel, { color: topics.invalidita.main }]}>
-              INVALIDITÀ CIVILE
+              Invalidità civile
             </Text>
             <Text style={styles.cardTitle}>
               Cosa spetta in base alla percentuale
@@ -250,9 +256,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   topicLabel: {
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
   },
   cardTitle: {
     fontSize: 16,
@@ -294,6 +300,16 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingBottom: spacing.lg,
   },
+  statoRiforma: {
+    fontSize: 15,
+    lineHeight: 22,
+    fontWeight: "700",
+    color: colors.onSurface,
+    backgroundColor: colors.surfaceSecondary,
+    borderRadius: radius.md,
+    padding: spacing.md,
+    marginBottom: spacing.md,
+  },
   stepTitle: {
     fontSize: 14,
     fontWeight: "800",
@@ -302,8 +318,8 @@ const styles = StyleSheet.create({
     lineHeight: 19,
   },
   stepBody: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
   },
 
@@ -316,8 +332,8 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   certReform: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 20,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
     marginTop: spacing.md,
@@ -362,18 +378,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   bracketText: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "800",
   },
   footerNote: {
-    fontSize: 12,
+    fontSize: 14,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
     marginTop: spacing.md,
     paddingTop: spacing.sm,
     borderTopWidth: 1,
     borderTopColor: colors.divider,
-    lineHeight: 17,
+    lineHeight: 20,
   },
 
   // Partner note
@@ -388,8 +404,8 @@ const styles = StyleSheet.create({
   },
   partnerNoteText: {
     flex: 1,
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: topics.legge104.dark,
     fontWeight: "500",
   },
