@@ -258,6 +258,16 @@ for (const g of GENITORI_TOSTI_LOCALI) {
   }
 }
 
+// Ferentino (FR)
+PER_PROVINCIA.FR = PER_PROVINCIA.FR ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.FR.volontariato.unshift({
+  nome: "Andromeda APS",
+  cosa: "Associazione di promozione sociale impegnata nel sociale, nella cultura e nella formazione.",
+  dove: "Via Aldo Moro 157, 03013 Ferentino (FR)",
+  email: "andromedaaps24@gmail.com",
+  comuni: ["ferentino"],
+});
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",
