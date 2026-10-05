@@ -183,7 +183,7 @@ export default function Sentinella() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="sentinella-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -250,7 +250,7 @@ export default function Sentinella() {
               </View>
             </View>
           ) : (
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={startCheck}
               disabled={starting}
               style={[styles.startBtn, starting && styles.btnDisabled]}
@@ -338,7 +338,7 @@ export default function Sentinella() {
                   {!!r.nota && <Text style={styles.nota}>{r.nota}</Text>}
 
                   {!!r.fonte && (
-                    <Pressable
+                    <Pressable accessibilityRole="button"
                       onPress={() => Linking.openURL(r.fonte!).catch(() => {})}
                       hitSlop={6}
                       style={styles.linkRow}
@@ -353,7 +353,7 @@ export default function Sentinella() {
                   {pending &&
                     (r.tipo === "riforma" ? (
                       <View style={styles.actionsRow}>
-                        <Pressable
+                        <Pressable accessibilityRole="button"
                           onPress={() => resolve(r.nome, "ignora")}
                           disabled={resolving === r.nome}
                           style={[styles.applyBtn, resolving === r.nome && styles.btnDisabled]}
@@ -369,7 +369,7 @@ export default function Sentinella() {
                       </View>
                     ) : (
                     <View style={styles.actionsRow}>
-                      <Pressable
+                      <Pressable accessibilityRole="button"
                         onPress={() => resolve(r.nome, "applica")}
                         disabled={resolving === r.nome}
                         style={[styles.applyBtn, resolving === r.nome && styles.btnDisabled]}
@@ -382,7 +382,7 @@ export default function Sentinella() {
                         )}
                         <Text style={styles.applyText}>Applica aggiornamento</Text>
                       </Pressable>
-                      <Pressable
+                      <Pressable accessibilityRole="button"
                         onPress={() => resolve(r.nome, "ignora")}
                         disabled={resolving === r.nome}
                         style={styles.ignoreBtn}
@@ -474,14 +474,14 @@ const styles = StyleSheet.create({
   },
   introText: {
     flex: 1,
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onBrandSecondary,
     fontWeight: "600",
   },
 
   codeLabel: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.onSurface,
     marginBottom: spacing.xs,
@@ -498,7 +498,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.sm,
   },
   codeError: {
-    fontSize: 12,
+    fontSize: 14,
     color: colors.error,
     marginBottom: spacing.sm,
   },
@@ -527,8 +527,8 @@ const styles = StyleSheet.create({
   },
   runningTitle: { fontSize: 14, fontWeight: "800", color: colors.onSurface },
   runningSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
     marginTop: 2,
   },
@@ -542,7 +542,7 @@ const styles = StyleSheet.create({
     padding: spacing.md,
     marginBottom: spacing.md,
   },
-  errorText: { flex: 1, fontSize: 12, color: colors.error, fontWeight: "600" },
+  errorText: { flex: 1, fontSize: 14, color: colors.error, fontWeight: "600" },
 
   summaryRow: {
     flexDirection: "row",
@@ -553,8 +553,8 @@ const styles = StyleSheet.create({
   },
   summaryText: {
     flex: 1,
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
     fontWeight: "600",
   },
@@ -589,7 +589,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.sm,
     paddingVertical: 4,
   },
-  badgeText: { fontSize: 11, fontWeight: "800" },
+  badgeText: { fontSize: 12, fontWeight: "800" },
 
   valueRow: {
     flexDirection: "row",
@@ -599,18 +599,17 @@ const styles = StyleSheet.create({
   },
   valueLabel: {
     width: 64,
-    fontSize: 11,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.muted,
-    textTransform: "uppercase",
   },
   valueText: { flex: 1, fontSize: 14, fontWeight: "700", color: colors.onSurface },
   foundLabel: { color: colors.accentDark },
   foundText: { color: colors.accentDark, fontWeight: "800" },
 
   nota: {
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
     marginTop: spacing.sm,
   },
@@ -621,7 +620,7 @@ const styles = StyleSheet.create({
     marginTop: spacing.sm,
   },
   linkText: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.onSurface,
     textDecorationLine: "underline",
@@ -644,7 +643,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.md,
     minHeight: 44,
   },
-  applyText: { color: colors.onBrandPrimary, fontWeight: "800", fontSize: 13 },
+  applyText: { color: colors.onBrandPrimary, fontWeight: "800", fontSize: 14 },
   ignoreBtn: {
     borderRadius: radius.pill,
     borderWidth: 1,
@@ -655,7 +654,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  ignoreText: { color: colors.onSurfaceSecondary, fontWeight: "700", fontSize: 13 },
+  ignoreText: { color: colors.onSurfaceSecondary, fontWeight: "700", fontSize: 14 },
 
   appliedRow: {
     flexDirection: "row",
@@ -665,18 +664,18 @@ const styles = StyleSheet.create({
   },
   appliedText: {
     flex: 1,
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.onSurface,
-    lineHeight: 17,
+    lineHeight: 20,
   },
 
   disclaimer: {
-    fontSize: 11,
+    fontSize: 14,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
     textAlign: "center",
     marginTop: spacing.sm,
-    lineHeight: 16,
+    lineHeight: 20,
   },
 });

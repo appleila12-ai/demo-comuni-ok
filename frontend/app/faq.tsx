@@ -57,7 +57,7 @@ export default function Faq() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="faq-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -79,7 +79,7 @@ export default function Faq() {
           <Text style={styles.errText}>
             Contenuti non disponibili. Controlla la connessione.
           </Text>
-          <Pressable onPress={load} style={styles.retryBtn} testID="faq-retry">
+          <Pressable accessibilityRole="button" onPress={load} style={styles.retryBtn} testID="faq-retry">
             <Text style={styles.retryText}>Riprova</Text>
           </Pressable>
         </View>
@@ -94,7 +94,7 @@ export default function Faq() {
           showsVerticalScrollIndicator={false}
         >
           <Text style={[styles.groupLabel, { color: topics.legge104.main }]}>
-            DOMANDE FREQUENTI
+            Domande frequenti
           </Text>
           {content.faq.map((f, i) => {
             const open = openIdx === i;
@@ -131,7 +131,7 @@ export default function Faq() {
             ]}
             testID="faq-glossario"
           >
-            GLOSSARIO SEMPLICE
+            Glossario semplice
           </Text>
           {content.glossario.map((g) => (
             <View key={g.t} style={styles.glossRow}>
@@ -194,9 +194,9 @@ const styles = StyleSheet.create({
   },
   scroll: { paddingHorizontal: spacing.lg, paddingTop: spacing.sm },
   groupLabel: {
-    fontSize: 11,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
     marginBottom: spacing.sm,
   },
   faqCard: {
@@ -236,22 +236,22 @@ const styles = StyleSheet.create({
     marginBottom: spacing.sm,
   },
   glossTerm: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: "800",
     color: colors.onSurface,
   },
   glossDef: {
-    fontSize: 13,
-    lineHeight: 18,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
     marginTop: 2,
   },
   disclaimer: {
-    fontSize: 11,
+    fontSize: 14,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
     textAlign: "center",
     marginTop: spacing.md,
-    lineHeight: 16,
+    lineHeight: 20,
   },
 });

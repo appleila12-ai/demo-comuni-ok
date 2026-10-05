@@ -112,7 +112,7 @@ export default function ScegliComune() {
       >
         <View style={styles.header}>
           {!primoAccesso && (
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}
               style={styles.back}
               hitSlop={12}
@@ -163,7 +163,7 @@ export default function ScegliComune() {
               testID="comuni-search"
             />
             {query ? (
-              <Pressable
+              <Pressable accessibilityRole="button"
                 onPress={() => setQuery("")}
                 hitSlop={10}
                 accessibilityLabel="Cancella la ricerca"
@@ -299,12 +299,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.md,
   },
   searchInput: { flex: 1, fontSize: 16, color: colors.onSurface, paddingVertical: 10 },
-  count: { fontSize: 11, color: colors.onSurfaceTertiary, marginTop: spacing.sm, marginLeft: 4 },
+  count: { fontSize: 14, color: colors.onSurfaceTertiary, marginTop: spacing.sm, marginLeft: 4 },
   group: { marginTop: spacing.md },
   groupLabel: {
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginBottom: spacing.sm,
   },
@@ -335,7 +335,7 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: colors.onSurface,
   },
-  cardSub: { fontSize: 12, color: colors.onSurfaceTertiary, marginTop: 2 },
+  cardSub: { fontSize: 14, color: colors.onSurfaceTertiary, marginTop: 2 },
   empty: {
     alignItems: "center",
     gap: spacing.sm,
@@ -354,14 +354,14 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   emptyText: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
     textAlign: "center",
   },
   note: {
-    fontSize: 11,
-    lineHeight: 16,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceTertiary,
     textAlign: "center",
     marginTop: spacing.xl,

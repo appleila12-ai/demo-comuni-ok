@@ -360,7 +360,7 @@ export default function Tracker() {
 
       {/* Header */}
       <View style={[styles.header, { backgroundColor: warm.cream }]}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -371,7 +371,7 @@ export default function Tracker() {
         </Pressable>
         <Text style={styles.headerTitle}>La tua pratica</Text>
         <HeaderComune />
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={openNotifs}
           style={styles.iconBtn}
           hitSlop={12}
@@ -412,7 +412,7 @@ export default function Tracker() {
             <ComuneLogo size={comune.logo ? 56 : 36} />
             <View style={styles.flex}>
               <Text style={[styles.comuneEnte, { color: warm.warmDark }]}>
-                PRATICA SEGUITA DA
+                Pratica seguita da
               </Text>
               <Text style={styles.comuneNome} testID="tracker-comune-nome">
                 {comune.nome}
@@ -424,7 +424,7 @@ export default function Tracker() {
           <View style={styles.comuneDivider} />
 
           <View style={styles.comuneContacts}>
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={call}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
               testID="tracker-comune-call"
@@ -435,7 +435,7 @@ export default function Tracker() {
               </Text>
             </Pressable>
             {!!comune.email && (
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={email}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
               testID="tracker-comune-email"
@@ -446,7 +446,7 @@ export default function Tracker() {
               </Text>
             </Pressable>
             )}
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={map}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
               testID="tracker-comune-map"
@@ -611,7 +611,7 @@ export default function Tracker() {
                   )}
 
                   {/* Toggle editor */}
-                  <Pressable
+                  <Pressable accessibilityRole="button"
                     onPress={() => setOpenId(isOpen ? null : stage.id)}
                     style={styles.editToggle}
                     hitSlop={8}
@@ -680,7 +680,7 @@ export default function Tracker() {
                             </Text>
                           </Pressable>
                         )}
-                        <Pressable
+                        <Pressable accessibilityRole="button"
                           onPress={() => setOpenId(null)}
                           style={({ pressed }) => [
                             styles.saveBtn,
@@ -749,12 +749,14 @@ export default function Tracker() {
         animationType="slide"
         onRequestClose={() => setNotifOpen(false)}
       >
-        <Pressable
+        <Pressable accessibilityRole="button"
+          accessibilityLabel="Chiudi"
           style={styles.modalOverlay}
           onPress={() => setNotifOpen(false)}
           testID="tracker-notif-overlay"
         >
           <Pressable
+            accessible={false}
             style={[styles.sheet, { paddingBottom: insets.bottom + spacing.lg }]}
             onPress={(e) => e.stopPropagation()}
           >
@@ -762,7 +764,7 @@ export default function Tracker() {
             <View style={styles.sheetHead}>
               <Ionicons name="notifications-outline" size={20} color={warm.warmDark} />
               <Text style={styles.sheetTitle}>Avvisi e promemoria</Text>
-              <Pressable
+              <Pressable accessibilityRole="button"
                 onPress={() => setNotifOpen(false)}
                 hitSlop={10}
                 testID="tracker-notif-close"
@@ -856,7 +858,7 @@ const styles = StyleSheet.create({
     borderColor: "#FFFBF5",
   },
   bellBadgeText: {
-    fontSize: 9,
+    fontSize: 12,
     fontWeight: "800",
     color: colors.onSurface,
   },
@@ -874,9 +876,9 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   comuneEnte: {
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1,
+    letterSpacing: 0.3,
   },
   comuneNome: {
     fontSize: 17,
@@ -885,7 +887,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   comuneSub: {
-    fontSize: 12.5,
+    fontSize: 14,
     color: colors.onSurfaceSecondary,
     marginTop: 1,
   },
@@ -910,7 +912,7 @@ const styles = StyleSheet.create({
     minHeight: 44,
   },
   contactChipText: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: "700",
   },
   comuneInfoRow: {
@@ -920,17 +922,16 @@ const styles = StyleSheet.create({
     marginTop: spacing.md,
   },
   comuneInfoText: {
-    fontSize: 12,
+    fontSize: 14,
     color: colors.muted,
   },
 
   // Intro
   introLabel: {
-    fontSize: 11,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 0.8,
+    letterSpacing: 0.3,
     color: colors.muted,
-    textTransform: "uppercase",
   },
   introTitle: {
     fontSize: 20,
@@ -1014,7 +1015,7 @@ const styles = StyleSheet.create({
     color: colors.borderStrong,
   },
   stageDesc: {
-    fontSize: 13.5,
+    fontSize: 14,
     lineHeight: 20,
     color: colors.onSurfaceTertiary,
     marginTop: 4,
@@ -1029,7 +1030,7 @@ const styles = StyleSheet.create({
     paddingVertical: 3,
   },
   doneBadgeText: {
-    fontSize: 10.5,
+    fontSize: 12,
     fontWeight: "800",
     color: colors.onSurface,
   },
@@ -1039,7 +1040,7 @@ const styles = StyleSheet.create({
     paddingVertical: 3,
   },
   currentBadgeText: {
-    fontSize: 10.5,
+    fontSize: 12,
     fontWeight: "800",
     color: colors.onSurface,
   },
@@ -1062,11 +1063,11 @@ const styles = StyleSheet.create({
     color: colors.onSurfaceSecondary,
   },
   noteShown: {
-    fontSize: 13,
+    fontSize: 14,
     fontStyle: "italic",
     color: colors.onSurfaceSecondary,
     marginTop: spacing.sm,
-    lineHeight: 19,
+    lineHeight: 20,
   },
   nextStep: {
     flexDirection: "row",
@@ -1076,14 +1077,13 @@ const styles = StyleSheet.create({
     marginTop: spacing.md,
   },
   nextStepLabel: {
-    fontSize: 11,
+    fontSize: 14,
     fontWeight: "800",
     letterSpacing: 0.4,
-    textTransform: "uppercase",
   },
   nextStepText: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
     marginTop: 2,
   },
@@ -1100,14 +1100,14 @@ const styles = StyleSheet.create({
   },
   waitText: {
     flex: 1,
-    fontSize: 13.5,
+    fontSize: 14,
     fontWeight: "800",
     color: colors.onBrandSecondary,
-    lineHeight: 19,
+    lineHeight: 20,
   },
   waitReassure: {
-    fontSize: 12.5,
-    lineHeight: 18,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurface,
     marginTop: 6,
   },
@@ -1130,13 +1130,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   actionTitle: {
-    fontSize: 13.5,
+    fontSize: 14,
     fontWeight: "800",
     color: colors.onSurface,
   },
   actionText: {
-    fontSize: 12.5,
-    lineHeight: 18,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
     marginTop: 2,
   },
@@ -1148,7 +1148,7 @@ const styles = StyleSheet.create({
     alignSelf: "flex-start",
   },
   editToggleText: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.onSurface,
   },
@@ -1161,7 +1161,7 @@ const styles = StyleSheet.create({
     padding: spacing.md,
   },
   editorLabel: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.onSurfaceTertiary,
     marginBottom: 6,
@@ -1221,7 +1221,7 @@ const styles = StyleSheet.create({
   },
   reassureText: {
     flex: 1,
-    fontSize: 13.5,
+    fontSize: 14,
     lineHeight: 20,
     color: colors.onSurface,
     fontWeight: "600",
@@ -1251,8 +1251,8 @@ const styles = StyleSheet.create({
     color: colors.onAccent,
   },
   progettoLinkSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.accentDark,
     marginTop: 2,
   },
@@ -1290,8 +1290,8 @@ const styles = StyleSheet.create({
     color: colors.onSurface,
   },
   sheetSub: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceTertiary,
     marginTop: 4,
     marginBottom: spacing.lg,
@@ -1323,19 +1323,19 @@ const styles = StyleSheet.create({
     color: colors.onSurface,
   },
   notifWhen: {
-    fontSize: 11,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.muted,
   },
   notifMsg: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
     marginTop: 3,
   },
   sheetFoot: {
-    fontSize: 11.5,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.muted,
     textAlign: "center",
     marginTop: spacing.lg,

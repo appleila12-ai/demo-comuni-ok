@@ -28,6 +28,21 @@ export type Paese = {
   sitoWeb?: string;
 };
 
+/** Chi accompagna le famiglie nel Progetto di vita (solo per alcuni Comuni). */
+export type ContattoProgettoVita = {
+  nome: string;
+  descrizione: string;
+  /** Riferimento di persona, se c'è (es. "Segreteria: Lorenza Gastaldo") */
+  referente?: string;
+  indirizzo?: string;
+  orari?: string;
+  telefono?: string;
+  email?: string;
+  /** Un secondo canale, es. uno sportello informativo dell'associazione */
+  sportello?: { nome: string; descrizione: string; email?: string };
+  sitoWeb?: string;
+};
+
 export type ComuneConfig = {
   /** Identificativo nel link, minuscolo e senza spazi (es. "erba" → /erba) */
   slug: string;
@@ -82,6 +97,19 @@ export type ComuneConfig = {
 
   /** Azienda sanitaria locale: dove chiedere l'esenzione ticket per patologia */
   esenzioneTicket: { label: string; url: string };
+
+  /**
+   * Facoltativo: realtà del territorio che accompagna le famiglie nel
+   * Progetto di vita (es. un'associazione). Mostrato SOLO nella pagina
+   * "Il mio Progetto di Vita" di questo Comune.
+   */
+  contattoProgettoVita?: ContattoProgettoVita;
+
+  /**
+   * Facoltativo: nella pagina del Progetto di vita mostra in cima se la
+   * riforma è già attiva nella provincia (calcolato in automatico).
+   */
+  mostraStatoRiformaInProgetto?: boolean;
 
   /**
    * true = alcuni dati vanno ancora confermati con l'ente.

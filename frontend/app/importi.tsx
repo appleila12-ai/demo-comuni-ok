@@ -46,7 +46,7 @@ export default function Importi() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="importi-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -68,7 +68,7 @@ export default function Importi() {
           <Text style={styles.errText}>
             Contenuti non disponibili. Controlla la connessione.
           </Text>
-          <Pressable onPress={load} style={styles.retryBtn} testID="importi-retry">
+          <Pressable accessibilityRole="button" onPress={load} style={styles.retryBtn} testID="importi-retry">
             <Text style={styles.retryText}>Riprova</Text>
           </Pressable>
         </View>
@@ -82,7 +82,7 @@ export default function Importi() {
           showsVerticalScrollIndicator={false}
         >
           {/* Badge trasparenza — tieni premuto per aprire la Sentinella AI (admin) */}
-          <Pressable
+          <Pressable accessibilityRole="button"
             style={styles.updateBadge}
             testID="importi-updated-badge"
             onLongPress={HA_BACKEND ? () => router.push("/sentinella") : undefined}
@@ -125,7 +125,7 @@ export default function Importi() {
                 />
                 <Text style={styles.rowText}>{it.reddito}</Text>
               </View>
-              <Pressable
+              <Pressable accessibilityRole="button"
                 onPress={() => Linking.openURL(it.url).catch(() => {})}
                 hitSlop={6}
                 style={styles.linkRow}
@@ -201,8 +201,8 @@ const styles = StyleSheet.create({
   },
   updateText: {
     flex: 1,
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurface,
     fontWeight: "600",
   },
@@ -240,8 +240,8 @@ const styles = StyleSheet.create({
   rowIcon: { marginTop: 3 },
   rowText: {
     flex: 1,
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
   },
   linkRow: {
@@ -251,17 +251,17 @@ const styles = StyleSheet.create({
     marginTop: spacing.sm,
   },
   linkText: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.onSurface,
     textDecorationLine: "underline",
   },
   disclaimer: {
-    fontSize: 11,
+    fontSize: 14,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
     textAlign: "center",
     marginTop: spacing.sm,
-    lineHeight: 16,
+    lineHeight: 20,
   },
 });

@@ -39,7 +39,7 @@ export function LivelliSection() {
           <Ionicons name="stats-chart-outline" size={22} color={ACCENT} />
         </View>
         <View style={styles.flex}>
-          <Text style={[styles.label, { color: ACCENT }]}>RIFORMA 2027</Text>
+          <Text style={[styles.label, { color: ACCENT }]}>Riforma 2027</Text>
           <Text style={styles.title}>I 4 livelli di sostegno</Text>
         </View>
         <Ionicons
@@ -151,9 +151,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   label: {
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
   },
   title: {
     fontSize: 16,
@@ -164,8 +164,8 @@ const styles = StyleSheet.create({
   },
   body: { marginTop: spacing.md },
   intro: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
     marginBottom: spacing.md,
   },
@@ -190,13 +190,13 @@ const styles = StyleSheet.create({
     paddingBottom: spacing.md,
   },
   descrizione: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
     marginBottom: spacing.sm,
   },
   gruppoTitolo: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "800",
     color: colors.onSurface,
     marginTop: spacing.sm,
@@ -211,15 +211,15 @@ const styles = StyleSheet.create({
   },
   voceText: {
     flex: 1,
-    fontSize: 12.5,
-    lineHeight: 18,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
   },
   nota: {
-    fontSize: 11,
+    fontSize: 14,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
-    lineHeight: 16,
+    lineHeight: 20,
     marginTop: spacing.sm,
   },
   linkRiforma: {
@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
     minHeight: 44,
   },
   linkRiformaText: {
-    fontSize: 12.5,
+    fontSize: 14,
     fontWeight: "800",
     color: colors.onSurface,
   },

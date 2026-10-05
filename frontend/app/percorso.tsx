@@ -29,7 +29,7 @@ export default function PercorsoScreen() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="percorso-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -38,7 +38,7 @@ export default function PercorsoScreen() {
         >
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
-        <Text style={styles.headerTitle}>Il percorso per il riconoscimento</Text>
+        <Text style={styles.headerTitle} accessibilityRole="header">Come ottenere il riconoscimento</Text>
         <HeaderComune />
       </View>
 
@@ -52,9 +52,8 @@ export default function PercorsoScreen() {
             <Ionicons name="information-circle-outline" size={22} color={colors.brandPrimary} />
           </View>
           <Text style={styles.infoText}>
-            Prima serve il riconoscimento: il Progetto di Vita diventa
-            disponibile solo dopo aver ricevuto il verbale. Ecco il percorso
-            per ottenerlo, dal certificato medico introduttivo in avanti.
+            Per avere aiuti, permessi e il Progetto di Vita serve prima il
+            riconoscimento, cioè il verbale. Ecco cosa fare, un passo alla volta.
           </Text>
         </View>
 
@@ -160,10 +159,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   regionCardLabel: {
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: "800",
     color: colors.onSurface,
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
   },
   regionCardValue: {
     fontSize: 18,
@@ -181,7 +180,7 @@ const styles = StyleSheet.create({
     paddingVertical: 7,
     borderRadius: radius.pill,
   },
-  regionCardCtaText: { fontSize: 12, fontWeight: "800", color: colors.onSurface },
+  regionCardCtaText: { fontSize: 14, fontWeight: "800", color: colors.onSurface },
   questionario: { marginTop: spacing.xl },
   dirittiBtn: {
     flexDirection: "row",
@@ -193,8 +192,8 @@ const styles = StyleSheet.create({
     marginTop: spacing.lg,
   },
   dirittiTitolo: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
-  dirittiSub: { color: "#FFFFFF", fontSize: 12.5, lineHeight: 17, marginTop: 2 },
-  regioneNota: { fontSize: 12.5, color: colors.onSurfaceSecondary, marginBottom: spacing.md, fontWeight: "600" },
+  dirittiSub: { color: "#FFFFFF", fontSize: 14, lineHeight: 20, marginTop: 2 },
+  regioneNota: { fontSize: 14, color: colors.onSurfaceSecondary, marginBottom: spacing.md, fontWeight: "600" },
 
   // Modal regione
   modalBackdrop: {

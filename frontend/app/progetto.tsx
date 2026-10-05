@@ -24,6 +24,11 @@ import { comune } from "@/src/config/comune";
 import { SezioniBar } from "@/src/components/SezioniBar";
 import { AttivaProgettoSection } from "@/src/components/AttivaProgettoSection";
 import {
+  AvvisoComplessita,
+  ContattoProgettoVitaCard,
+  StatoRiformaProgetto,
+} from "@/src/components/ProgettoVitaAvvisi";
+import {
   AREE,
   AreaId,
   EMPTY_PROGETTO,
@@ -127,7 +132,7 @@ export default function ProgettoDiVita() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="progetto-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -153,15 +158,11 @@ export default function ProgettoDiVita() {
           showsVerticalScrollIndicator={false}
           keyboardShouldPersistTaps="handled"
         >
-          {/* Avviso: strumento di preparazione, non la domanda ufficiale */}
-          <View style={styles.avviso} testID="progetto-avviso">
-            <Ionicons name="information-circle-outline" size={18} color={colors.accentDark} />
-            <Text style={styles.avvisoText}>
-              Questo strumento ti aiuta a preparare i tuoi pensieri prima di
-              presentare la richiesta ufficiale: non sostituisce né la domanda
-              su SISDA (portale INPS) né il colloquio con l&apos;Ambito Territoriale Sociale (ATS).
-            </Text>
-          </View>
+          {/* In cima: il Progetto di vita è complesso, fallo con chi ti accompagna */}
+          <AvvisoComplessita posizione="inizio" />
+
+          {/* Solo per alcuni Comuni (es. Parma): stato della riforma nella provincia */}
+          <StatoRiformaProgetto />
 
           {/* Intro */}
           <View style={styles.introCard} testID="progetto-intro">
@@ -200,7 +201,7 @@ export default function ProgettoDiVita() {
             />
           </View>
 
-          <Text style={styles.sectionLabel}>LE AREE DELLA TUA VITA</Text>
+          <Text style={styles.sectionLabel}>Le aree della tua vita</Text>
 
           {AREE.map((a) => {
             const entry = progetto.aree[a.id];
@@ -291,6 +292,12 @@ export default function ProgettoDiVita() {
           {/* Come attivare il Progetto di Vita — dentro questa pagina */}
           <AttivaProgettoSection />
 
+          {/* In fondo: di nuovo l'invito a farsi accompagnare */}
+          <AvvisoComplessita posizione="fine" />
+
+          {/* Solo per alcuni Comuni (es. Parma): chi accompagna le famiglie */}
+          <ContattoProgettoVitaCard />
+
           <SezioniBar />
         </ScrollView>
       </KeyboardAvoidingView>
@@ -366,8 +373,8 @@ const styles = StyleSheet.create({
   },
   avvisoText: {
     flex: 1,
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.accentDark,
     fontWeight: "600",
   },
@@ -406,7 +413,7 @@ const styles = StyleSheet.create({
     paddingVertical: 7,
   },
   counterText: {
-    fontSize: 12.5,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.accentDark,
   },
@@ -419,9 +426,9 @@ const styles = StyleSheet.create({
     marginTop: spacing.lg,
   },
   nameLabel: {
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginBottom: 6,
   },
@@ -435,9 +442,9 @@ const styles = StyleSheet.create({
     minHeight: 44,
   },
   sectionLabel: {
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginTop: spacing.xl,
     marginBottom: spacing.sm,
@@ -472,7 +479,7 @@ const styles = StyleSheet.create({
     color: colors.onSurface,
   },
   areaHint: {
-    fontSize: 12,
+    fontSize: 14,
     color: colors.onSurfaceTertiary,
     marginTop: 2,
   },
@@ -492,7 +499,7 @@ const styles = StyleSheet.create({
     borderTopColor: colors.divider,
   },
   chipsLabel: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.onSurfaceTertiary,
     marginTop: spacing.md,
@@ -540,7 +547,7 @@ const styles = StyleSheet.create({
   },
   reassureText: {
     flex: 1,
-    fontSize: 13.5,
+    fontSize: 14,
     lineHeight: 20,
     color: colors.onSurface,
     fontWeight: "600",
@@ -570,7 +577,7 @@ const styles = StyleSheet.create({
   pdfBtnText: { fontSize: 16, fontWeight: "800", color: colors.onAccent },
   footerHint: {
     textAlign: "center",
-    fontSize: 11.5,
+    fontSize: 14,
     color: colors.muted,
     marginTop: 6,
   },

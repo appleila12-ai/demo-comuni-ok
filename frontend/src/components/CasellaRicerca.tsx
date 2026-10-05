@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
   },
   input: { flex: 1, fontSize: 16, color: colors.onSurface, paddingVertical: 10 },
   esempi: { marginTop: spacing.sm },
-  esempiLabel: { fontSize: 12, color: colors.onSurfaceSecondary, marginBottom: 6 },
+  esempiLabel: { fontSize: 14, color: colors.onSurfaceSecondary, marginBottom: 6 },
   chips: { flexDirection: "row", flexWrap: "wrap", gap: 6 },
   chip: {
     backgroundColor: colors.surfaceSecondary,
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 7,
   },
-  chipText: { fontSize: 13, color: colors.onSurface, fontWeight: "600" },
+  chipText: { fontSize: 14, color: colors.onSurface, fontWeight: "600" },
   risultati: { marginTop: spacing.md, gap: spacing.sm },
   risposta: { borderRadius: radius.md, padding: spacing.md },
   rispostaTitolo: { fontSize: 16, fontWeight: "800", color: colors.onSurface, marginBottom: 4 },
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
   },
   btnText: { color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
   rigaBottoni: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: 8, marginTop: spacing.sm },
-  anche: { fontSize: 11, fontWeight: "800", letterSpacing: 0.8, textTransform: "uppercase", color: colors.onSurfaceSecondary, marginTop: 4 },
+  anche: { fontSize: 14, fontWeight: "800", letterSpacing: 0.3, color: colors.onSurfaceSecondary, marginTop: 4 },
   altra: {
     flexDirection: "row",
     alignItems: "center",
@@ -181,6 +181,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
   },
   altraTitolo: { fontSize: 14, fontWeight: "800", color: colors.onSurface },
-  altraTesto: { fontSize: 12.5, lineHeight: 17, color: colors.onSurfaceSecondary, marginTop: 2 },
-  privacy: { fontSize: 11.5, color: colors.onSurfaceSecondary, marginTop: spacing.sm },
+  altraTesto: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary, marginTop: 2 },
+  privacy: { fontSize: 14, color: colors.onSurfaceSecondary, marginTop: spacing.sm },
 });

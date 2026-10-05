@@ -178,7 +178,7 @@ export function VaultSection({ report }: { report?: Report }) {
                   size={16}
                   color={topics.patronato.main}
                 />
-                <Pressable style={styles.flex} onPress={() => openFile(f)}>
+                <Pressable accessibilityRole="button" style={styles.flex} onPress={() => openFile(f)}>
                   <Text style={styles.fileName} numberOfLines={1}>
                     {f.name}
                   </Text>
@@ -186,7 +186,7 @@ export function VaultSection({ report }: { report?: Report }) {
                     {new Date(f.date).toLocaleDateString("it-IT")}
                   </Text>
                 </Pressable>
-                <Pressable
+                <Pressable accessibilityRole="button"
                   onPress={() => removeFile(f)}
                   hitSlop={8}
                   accessibilityLabel={`Elimina ${f.name}`}
@@ -239,7 +239,7 @@ const styles = StyleSheet.create({
     borderRadius: radius.pill,
   },
   badgeText: {
-    fontSize: 11,
+    fontSize: 12,
     fontWeight: "800",
     color: colors.onSurface,
   },
@@ -250,8 +250,8 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   body: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
     marginBottom: spacing.md,
   },
@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
   },
   actionBtnText: {
     color: colors.onSurface,
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "800",
   },
   actionBtnAlt: {
@@ -293,11 +293,11 @@ const styles = StyleSheet.create({
   },
   actionBtnAltText: {
     color: colors.onSurface,
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "800",
   },
   emptyText: {
-    fontSize: 12,
+    fontSize: 14,
     color: colors.onSurfaceTertiary,
     fontStyle: "italic",
   },
@@ -311,12 +311,12 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
   },
   fileName: {
-    fontSize: 12,
+    fontSize: 14,
     color: colors.onSurface,
     fontWeight: "700",
   },
   fileDate: {
-    fontSize: 10,
+    fontSize: 14,
     color: colors.onSurfaceTertiary,
     marginTop: 1,
   },

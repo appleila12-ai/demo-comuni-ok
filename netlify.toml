@@ -9,6 +9,15 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# Funzioni server (assistente). Cartella relativa alla cartella dell'app (frontend).
+[functions]
+  directory = "netlify/functions"
+
+# Nelle anteprime l'assistente è visibile; in produzione si accende
+# aggiungendo EXPO_PUBLIC_ASSISTENTE = "si" a [build.environment].
+[context.deploy-preview.environment]
+  EXPO_PUBLIC_ASSISTENTE = "si"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

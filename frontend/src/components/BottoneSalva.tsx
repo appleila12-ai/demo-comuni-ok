@@ -50,5 +50,5 @@ const styles = StyleSheet.create({
     alignSelf: "flex-start",
   },
   on: { backgroundColor: colors.brandSecondary },
-  testo: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark },
+  testo: { fontSize: 14, fontWeight: "700", color: colors.brandPrimaryDark },
 });
