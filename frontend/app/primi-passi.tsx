@@ -72,7 +72,7 @@ export default function PrimiPassiScreen() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="primi-passi-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -235,7 +235,7 @@ const styles = StyleSheet.create({
   },
   passoText: { fontSize: 14, lineHeight: 21, color: colors.onSurfaceSecondary },
   passoLink: { flexDirection: "row", alignItems: "center", gap: 6, minHeight: 40 },
-  passoLinkText: { fontSize: 13, fontWeight: "800", textDecorationLine: "underline" },
+  passoLinkText: { fontSize: 14, fontWeight: "800", textDecorationLine: "underline" },
   primiIntro: {
     fontSize: 14,
     lineHeight: 21,

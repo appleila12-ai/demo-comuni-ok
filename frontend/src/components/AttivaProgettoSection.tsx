@@ -13,7 +13,7 @@ const SISDA_URL =
 export function AttivaProgettoSection() {
   return (
     <View style={styles.wrap} testID="attiva-progetto-section">
-      <Text style={styles.sectionLabel}>COME ATTIVARE IL PROGETTO DI VITA</Text>
+      <Text style={styles.sectionLabel}>Come attivare il progetto di vita</Text>
 
       <View style={styles.okCard}>
         <View style={styles.okHead}>
@@ -74,9 +74,9 @@ const styles = StyleSheet.create({
   wrap: { marginTop: spacing.xl },
   flex: { flex: 1 },
   sectionLabel: {
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginBottom: spacing.sm,
   },
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     color: colors.onSurface,
     marginBottom: 4,
   },
-  stradaText: { fontSize: 13, lineHeight: 19, color: colors.onSurfaceSecondary },
+  stradaText: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary },
   primaryBtn: {
     flexDirection: "row",
     alignItems: "center",

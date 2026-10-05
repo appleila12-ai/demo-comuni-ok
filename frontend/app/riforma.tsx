@@ -21,6 +21,7 @@ import { AppContent, loadAppContent } from "@/src/lib/remoteContent";
 import { SezioniBar } from "@/src/components/SezioniBar";
 import { useSezione } from "@/src/lib/statistiche";
 import { HeaderComune } from "@/src/components/HeaderComune";
+import { statoRiforma } from "@/src/lib/riformaTerritorio";
 
 const CAMBIO_ICONE = [
   "document-text-outline",
@@ -49,7 +50,7 @@ export default function RiformaScreen() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="riforma-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -86,7 +87,12 @@ export default function RiformaScreen() {
             <View style={styles.introIcon}>
               <Ionicons name="megaphone-outline" size={22} color={colors.brandPrimary} />
             </View>
-            <Text style={styles.introText}>{riforma.intro}</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.introText}>{riforma.intro}</Text>
+              <Text style={[styles.introText, { marginTop: spacing.sm, fontWeight: "800" }]} testID="riforma-stato">
+                {statoRiforma().frase}
+              </Text>
+            </View>
           </View>
 
           {/* Cosa cambia */}
@@ -117,7 +123,7 @@ export default function RiformaScreen() {
           </View>
 
           {/* Fonte */}
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => Linking.openURL(riforma.fonteUrl).catch(() => {})}
             style={styles.fonteRow}
             hitSlop={6}
@@ -233,8 +239,8 @@ const styles = StyleSheet.create({
     marginBottom: 2,
   },
   cambioText: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
   },
 
@@ -253,7 +259,7 @@ const styles = StyleSheet.create({
   },
   salvaTitle: { fontSize: 15, fontWeight: "800", color: colors.onSurface },
   salvaText: {
-    fontSize: 13,
+    fontSize: 14,
     lineHeight: 20,
     color: colors.onSurface,
     fontWeight: "500",
@@ -267,7 +273,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.md,
   },
   fonteText: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.onSurface,
     textDecorationLine: "underline",

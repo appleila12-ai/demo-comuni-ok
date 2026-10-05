@@ -181,5 +181,5 @@ const styles = StyleSheet.create({
     padding: spacing.md,
   },
   emergenzaTitolo: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
-  emergenzaSub: { color: "#FFFFFF", fontSize: 12.5, marginTop: 2, lineHeight: 17 },
+  emergenzaSub: { color: "#FFFFFF", fontSize: 14, marginTop: 2, lineHeight: 20 },
 });

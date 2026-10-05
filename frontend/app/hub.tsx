@@ -71,7 +71,7 @@ const TAPPE: Tappa[] = [
     testo: "Dal certificato del medico alla visita INPS, fino al verbale.",
     icon: "document-text-outline",
     color: topics.invalidita,
-    principale: { label: "Il percorso passo passo", route: "/percorso" },
+    principale: { label: "Come ottenere il riconoscimento", route: "/percorso" },
     altri: [{ label: "Cosa cambia con la riforma", route: "/riforma" }],
   },
   {
@@ -179,7 +179,7 @@ export default function Hub() {
       >
         {/* Top bar: indietro + logo + stemma */}
         <View style={styles.topBar} testID="home-topbar">
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => router.back()}
             hitSlop={12}
             style={styles.hubBackBtn}
@@ -209,7 +209,7 @@ export default function Hub() {
         </View>
 
         {/* 1 — Da dove partire */}
-        <Text style={styles.sectionLabel}>DA DOVE VUOI PARTIRE?</Text>
+        <Text style={styles.sectionLabel}>Da dove vuoi partire?</Text>
         <View style={styles.momenti} testID="hub-filter-card">
           {MOMENTI.map((m) => {
             const on = momento === m.id;
@@ -240,7 +240,7 @@ export default function Hub() {
         </View>
 
         {/* 2 — Tutto il percorso, in ordine */}
-        <Text style={styles.sectionLabel}>IL PERCORSO, TAPPA DOPO TAPPA</Text>
+        <Text style={styles.sectionLabel}>Tutte le sezioni, in ordine</Text>
         <View style={styles.tappe} testID="hub-tappe">
           {TAPPE.map((t, i) => {
             const qui = partenza === t.id;
@@ -254,7 +254,7 @@ export default function Hub() {
                   {!ultima && <View style={styles.tappaLinea} />}
                 </View>
                 <View style={[styles.tappaCard, qui && styles.tappaCardQui]}>
-                  {qui && <Text style={styles.tappaQui}>SEI QUI</Text>}
+                  {qui && <Text style={styles.tappaQui}>Sei qui</Text>}
                   <View style={styles.tappaHead}>
                     <Ionicons name={t.icon} size={18} color={t.color.main} />
                     <Text style={styles.tappaTitolo}>{t.titolo}</Text>
@@ -294,7 +294,7 @@ export default function Hub() {
         {/* Valutazioni già fatte */}
         {history.length > 0 && (
           <View style={styles.historyBox} testID="home-history">
-            <Text style={styles.historyLabel}>LE TUE VALUTAZIONI</Text>
+            <Text style={styles.historyLabel}>Le tue valutazioni</Text>
             {history.map((r) => (
               <Pressable
                 key={r.id}
@@ -387,7 +387,7 @@ export default function Hub() {
 
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.background },
-  regioneNota: { fontSize: 12, color: colors.onSurfaceSecondary, marginTop: 6 },
+  regioneNota: { fontSize: 14, color: colors.onSurfaceSecondary, marginTop: 6 },
   momenti: { gap: spacing.sm, marginBottom: spacing.lg },
   momento: {
     flexDirection: "row",
@@ -409,7 +409,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   momentoTitle: { fontSize: 15.5, fontWeight: "800", color: colors.onSurface, lineHeight: 20 },
-  momentoSub: { fontSize: 12.5, lineHeight: 17, color: colors.onSurfaceSecondary, marginTop: 2 },
+  momentoSub: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary, marginTop: 2 },
   tappe: { marginBottom: spacing.lg },
   tappaRiga: { flexDirection: "row", gap: spacing.md },
   tappaSx: { alignItems: "center", width: 30 },
@@ -426,10 +426,10 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   tappaCardQui: { borderColor: colors.brandPrimaryDark, borderWidth: 1.5 },
-  tappaQui: { fontSize: 10, fontWeight: "800", letterSpacing: 1, color: colors.brandPrimaryDark, marginBottom: 4 },
+  tappaQui: { fontSize: 14, fontWeight: "800", letterSpacing: 0.3, color: colors.brandPrimaryDark, marginBottom: 4 },
   tappaHead: { flexDirection: "row", alignItems: "center", gap: 8 },
   tappaTitolo: { fontFamily: fonts.serif, fontSize: 17, fontWeight: "700", color: colors.onSurface, flex: 1 },
-  tappaTesto: { fontSize: 13.5, lineHeight: 19, color: colors.onSurfaceSecondary, marginTop: 4 },
+  tappaTesto: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary, marginTop: 4 },
   tappaBtn: {
     flexDirection: "row",
     alignItems: "center",
@@ -444,9 +444,9 @@ const styles = StyleSheet.create({
   tappaBtnText: { color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
   tappaAltri: { flexDirection: "row", flexWrap: "wrap", gap: 14, marginTop: 10 },
   tappaLink: { flexDirection: "row", alignItems: "center", gap: 2 },
-  tappaLinkText: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark, textDecorationLine: "underline" },
+  tappaLinkText: { fontSize: 14, fontWeight: "700", color: colors.brandPrimaryDark, textDecorationLine: "underline" },
   datiRiga: { flexDirection: "row", alignItems: "center", gap: 8, marginTop: spacing.md, paddingHorizontal: 4 },
-  datiText: { flex: 1, fontSize: 12, lineHeight: 17, color: colors.onSurfaceSecondary },
+  datiText: { flex: 1, fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary },
   flex: { flex: 1 },
   container: {
     flexGrow: 1,
@@ -530,9 +530,9 @@ const styles = StyleSheet.create({
 
   // Sezioni principali (griglia 2x2)
   sectionLabel: {
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginBottom: spacing.sm,
   },
@@ -569,8 +569,8 @@ const styles = StyleSheet.create({
     color: colors.onSurface,
   },
   gridSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceTertiary,
   },
 
@@ -601,8 +601,8 @@ const styles = StyleSheet.create({
     color: colors.onSurface,
   },
   navSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceTertiary,
     marginTop: 2,
   },
@@ -624,15 +624,15 @@ const styles = StyleSheet.create({
     minHeight: 88,
   },
   quickTitle: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: "800",
     color: colors.onSurface,
     marginTop: 2,
   },
   quickSub: {
-    fontSize: 11,
+    fontSize: 14,
     color: colors.onSurfaceTertiary,
-    lineHeight: 15,
+    lineHeight: 20,
   },
 
   spacer: { flex: 1, minHeight: spacing.lg },
@@ -647,9 +647,9 @@ const styles = StyleSheet.create({
     marginTop: spacing.lg,
   },
   accountLabel: {
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginTop: spacing.xs,
     marginBottom: spacing.xs,
@@ -663,7 +663,7 @@ const styles = StyleSheet.create({
     borderTopColor: colors.divider,
   },
   accountRowTitle: { fontSize: 14, fontWeight: "700", color: colors.onSurface },
-  accountRowSub: { fontSize: 12, color: colors.onSurfaceTertiary, marginTop: 1 },
+  accountRowSub: { fontSize: 14, color: colors.onSurfaceTertiary, marginTop: 1 },
 
   guidaBox: {
     backgroundColor: colors.surface,
@@ -687,7 +687,7 @@ const styles = StyleSheet.create({
     color: colors.onSurface,
   },
   guidaText: {
-    fontSize: 13,
+    fontSize: 14,
     lineHeight: 20,
     color: colors.onSurfaceSecondary,
     paddingBottom: spacing.md,
@@ -697,10 +697,10 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   historyLabel: {
-    fontSize: 10,
+    fontSize: 14,
     fontWeight: "800",
     color: colors.onSurfaceTertiary,
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     marginBottom: spacing.sm,
   },
   historyRow: {
@@ -723,12 +723,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   historyTitle: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.onSurface,
   },
   historyDate: {
-    fontSize: 11,
+    fontSize: 14,
     color: colors.onSurfaceTertiary,
     marginTop: 1,
   },

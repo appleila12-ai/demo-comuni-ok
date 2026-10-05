@@ -56,5 +56,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   itemOn: { backgroundColor: colors.brandSecondary },
-  label: { fontSize: 10.5, fontWeight: "700", color: colors.onSurface, textAlign: "center" },
+  label: { fontSize: 14, fontWeight: "700", color: colors.onSurface, textAlign: "center" },
 });

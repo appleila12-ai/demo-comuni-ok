@@ -18,9 +18,34 @@ import { PaeseCard } from "@/src/components/PaeseCard";
 import { comune, comuneScelto } from "@/src/config/comune";
 import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
-import { HA_BACKEND } from "@/src/config/servizi";
+import { HA_ASSISTENTE, HA_BACKEND } from "@/src/config/servizi";
 import { CasellaRicerca } from "@/src/components/CasellaRicerca";
 import { useSalvati } from "@/src/lib/salvati";
+
+// Le tre situazioni più comuni: un tocco e si arriva al punto
+const INGRESSI = [
+  {
+    id: "diagnosi",
+    icon: "leaf-outline" as const,
+    title: "Ho appena ricevuto una diagnosi",
+    sub: "Cosa fare, passo dopo passo, per ottenere il riconoscimento",
+    href: "/percorso",
+  },
+  {
+    id: "pratica",
+    icon: "footsteps-outline" as const,
+    title: "Ho già fatto la domanda",
+    sub: "Segui la tua pratica e le scadenze",
+    href: "/tracker",
+  },
+  {
+    id: "diritti",
+    icon: "shield-checkmark-outline" as const,
+    title: "Ho già il verbale",
+    sub: "Scopri aiuti, permessi e agevolazioni che ti spettano",
+    href: "/diritti",
+  },
+];
 
 const FEATURES = [
   {
@@ -123,13 +148,13 @@ const INFO_LINKS = [
     color: topics.esenzioni,
   },
   // L'assistente sulla 104 ha bisogno del server: compare solo se c'è
-  ...(HA_BACKEND
+  ...(HA_ASSISTENTE
     ? [
         {
           id: "domande-104",
           icon: "chatbubbles-outline" as const,
-          title: "Le domande sulla 104",
-          sub: "Chiedi e ricevi una risposta basata sulla normativa",
+          title: "Fai una domanda",
+          sub: "Scrivi il tuo dubbio: rispondiamo con le regole del tuo territorio",
           href: "/domande-104",
           color: topics.lavoro,
         },
@@ -245,31 +270,47 @@ function HomeDelComune() {
           style={styles.heroImage}
         />
 
-        {/* CTA principale */}
+        {/* Da dove parti? Tre ingressi diretti, senza passaggi intermedi */}
+        <Text style={styles.domandaIngresso} accessibilityRole="header">
+          Da dove parti?
+        </Text>
+        <View style={styles.ingressi}>
+          {INGRESSI.map((ing) => (
+            <Pressable
+              key={ing.id}
+              onPress={() => router.push(ing.href as any)}
+              style={({ pressed }) => [
+                styles.primaryCta,
+                styles.ingresso,
+                { backgroundColor: t.warm },
+                pressed && styles.pressed,
+              ]}
+              accessibilityRole="button"
+              accessibilityLabel={`${ing.title}. ${ing.sub}`}
+              testID={`comune-ingresso-${ing.id}`}
+            >
+              <View style={styles.ctaIcon}>
+                <Ionicons name={ing.icon} size={22} color={colors.onSurface} />
+              </View>
+              <View style={styles.flex}>
+                <Text style={styles.primaryCtaTitle}>{ing.title}</Text>
+                <Text style={styles.primaryCtaSub}>{ing.sub}</Text>
+              </View>
+              <Ionicons name="arrow-forward" size={20} color={colors.onSurface} />
+            </Pressable>
+          ))}
+        </View>
         <Pressable
           onPress={() => router.push("/hub")}
-          style={({ pressed }) => [
-            styles.primaryCta,
-            { backgroundColor: t.warm },
-            pressed && styles.pressed,
-          ]}
+          style={({ pressed }) => [styles.tutteSezioni, pressed && styles.pressed]}
           accessibilityRole="button"
-          accessibilityLabel="Entra in TutelApp"
           testID="comune-enter-app"
         >
-          <View style={styles.ctaIcon}>
-            <Ionicons name="arrow-forward" size={20} color={colors.onSurface} />
-          </View>
-          <View style={styles.flex}>
-            <Text style={styles.primaryCtaTitle}>Entra in TutelApp</Text>
-            <Text style={styles.primaryCtaSub}>
-              Il percorso passo passo, dalla diagnosi al Progetto di Vita
-            </Text>
-          </View>
+          <Text style={styles.tutteSezioniText}>Vedi tutte le sezioni</Text>
         </Pressable>
 
         {/* Cosa trovi */}
-        <Text style={styles.sectionLabel}>COSA PUOI FARE</Text>
+        <Text style={styles.sectionLabel} accessibilityRole="header">Cosa puoi fare</Text>
         <View style={styles.features}>
           {/* Ogni scheda porta alla sua sezione: niente riquadri "finti" */}
           {FEATURES.map((feature) => (
@@ -299,7 +340,7 @@ function HomeDelComune() {
         </View>
 
         {/* Strumenti pratici: aiutano a fare le pratiche */}
-        <Text style={styles.sectionLabel}>STRUMENTI PRATICI</Text>
+        <Text style={styles.sectionLabel} accessibilityRole="header">Strumenti pratici</Text>
         <View style={styles.infoLinks}>
           {STRUMENTI.map((l) => (
             <Pressable
@@ -323,7 +364,7 @@ function HomeDelComune() {
         </View>
 
         {/* Informazioni utili: sempre disponibili, anche offline */}
-        <Text style={styles.sectionLabel}>INFORMAZIONI UTILI</Text>
+        <Text style={styles.sectionLabel} accessibilityRole="header">Informazioni utili</Text>
         <View style={styles.infoLinks}>
           {INFO_LINKS.map((l) => (
             <Pressable
@@ -369,7 +410,7 @@ function HomeDelComune() {
 
         {/* Contatti */}
         <View style={styles.contactCard}>
-          <Text style={[styles.contactEyebrow, { color: t.warmDark }]}>HAI BISOGNO DI SUPPORTO?</Text>
+          <Text style={[styles.contactEyebrow, { color: t.warmDark }]}>Hai bisogno di supporto?</Text>
           <Text style={styles.contactTitle}>{comune.ente}</Text>
           <Text style={styles.contactText}>{comune.responsabile}</Text>
           <Text style={styles.contactText}>{comune.indirizzo}</Text>
@@ -460,7 +501,7 @@ const styles = StyleSheet.create({
     padding: 12,
     marginTop: 12,
   },
-  demoBannerText: { flex: 1, fontSize: 13, lineHeight: 19, color: "#4A3A14" },
+  demoBannerText: { flex: 1, fontSize: 14, lineHeight: 20, color: "#4A3A14" },
   demoBannerStrong: { fontWeight: "800" },
   safe: { flex: 1 },
   flex: { flex: 1 },
@@ -474,15 +515,15 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   aderenti: {
-    fontSize: 10,
-    lineHeight: 15,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceTertiary,
     marginTop: spacing.sm,
   },
   institutionEyebrow: {
-    fontSize: 9,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1,
+    letterSpacing: 0.3,
     marginBottom: 2,
   },
   institutionName: {
@@ -502,9 +543,9 @@ const styles = StyleSheet.create({
     marginBottom: spacing.xl,
   },
   kicker: {
-    fontSize: 9,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginTop: spacing.lg,
     marginBottom: spacing.sm,
@@ -549,17 +590,39 @@ const styles = StyleSheet.create({
     color: colors.onSurface,
   },
   primaryCtaSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurface,
     marginTop: 2,
   },
   sectionLabel: {
-    fontSize: 10,
+    fontSize: 16,
     fontWeight: "800",
-    letterSpacing: 1.2,
-    color: colors.onSurfaceTertiary,
+    color: colors.onSurface,
     marginBottom: spacing.md,
+  },
+  domandaIngresso: {
+    fontFamily: fonts.serif,
+    fontSize: 22,
+    fontWeight: "700",
+    color: colors.onSurface,
+    marginBottom: spacing.md,
+  },
+  ingressi: { gap: spacing.sm },
+  ingresso: { marginBottom: 0 },
+  tutteSezioni: {
+    alignSelf: "center",
+    minHeight: 48,
+    justifyContent: "center",
+    paddingHorizontal: spacing.lg,
+    marginTop: spacing.sm,
+    marginBottom: spacing.xl,
+  },
+  tutteSezioniText: {
+    fontSize: 16,
+    fontWeight: "700",
+    color: colors.onSurface,
+    textDecorationLine: "underline",
   },
   features: {
     gap: spacing.sm,
@@ -591,8 +654,8 @@ const styles = StyleSheet.create({
     color: colors.onSurface,
   },
   featureText: {
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceTertiary,
     marginTop: 2,
   },
@@ -625,8 +688,8 @@ const styles = StyleSheet.create({
     color: colors.onSurface,
   },
   infoLinkSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceTertiary,
     marginTop: 1,
   },
@@ -653,8 +716,8 @@ const styles = StyleSheet.create({
     marginBottom: 3,
   },
   infoText: {
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceSecondary,
   },
   contactCard: {
@@ -666,9 +729,8 @@ const styles = StyleSheet.create({
     marginBottom: spacing.lg,
   },
   contactEyebrow: {
-    fontSize: 9,
+    fontSize: 14,
     fontWeight: "800",
-    letterSpacing: 1,
     marginBottom: spacing.sm,
   },
   contactTitle: {
@@ -678,8 +740,8 @@ const styles = StyleSheet.create({
     color: colors.onSurface,
   },
   contactText: {
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurfaceTertiary,
   },
   contactRows: {
@@ -697,7 +759,7 @@ const styles = StyleSheet.create({
     minHeight: 36,
   },
   contactValue: {
-    fontSize: 13,
+    fontSize: 14,
     color: colors.onSurface,
     flex: 1,
   },
@@ -712,13 +774,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   contactButtonText: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "800",
     color: colors.onSurface,
   },
   footer: {
-    fontSize: 10,
-    lineHeight: 15,
+    fontSize: 14,
+    lineHeight: 20,
     textAlign: "center",
     color: colors.onSurfaceTertiary,
     paddingHorizontal: spacing.md,
@@ -732,7 +794,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.sm,
   },
   switchText: {
-    fontSize: 11,
+    fontSize: 14,
     color: colors.onSurfaceTertiary,
     textDecorationLine: "underline",
   },

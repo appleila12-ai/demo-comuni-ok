@@ -76,9 +76,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     maxWidth: "100%",
   },
-  chipText: { fontSize: 13, fontWeight: "700", flexShrink: 1 },
+  chipText: { fontSize: 14, fontWeight: "700", flexShrink: 1 },
   cambia: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.onSurfaceTertiary,
     textDecorationLine: "underline",

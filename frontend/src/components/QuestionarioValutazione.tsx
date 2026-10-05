@@ -299,16 +299,16 @@ function OptionCard({
 const styles = StyleSheet.create({
   block: { marginTop: spacing.xxl },
   progress: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.onSurfaceTertiary,
     textAlign: "center",
     marginTop: spacing.xl,
   },
-  missing: { fontSize: 12, fontWeight: "700", color: colors.brandPrimaryDark, marginBottom: spacing.sm },
+  missing: { fontSize: 14, fontWeight: "700", color: colors.brandPrimaryDark, marginBottom: spacing.sm },
   missingSummary: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.brandPrimaryDark,
     textAlign: "center",
     marginTop: spacing.sm,
@@ -323,7 +323,7 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   explainTitle: { fontFamily: fonts.serif, fontSize: 15, fontWeight: "700", color: colors.onSurface },
-  explainText: { fontSize: 13, lineHeight: 19, color: colors.onSurfaceSecondary },
+  explainText: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary },
   stepIconWrap: {
     flexDirection: "row",
     alignItems: "center",
@@ -339,10 +339,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   stepBadge: {
-    fontSize: 11,
+    fontSize: 12,
     fontWeight: "800",
     color: colors.onSurface,
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
   },
   question: {
     fontFamily: fonts.serif,
@@ -372,8 +372,8 @@ const styles = StyleSheet.create({
   },
   partnerNoteText: {
     flex: 1,
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurface,
     fontWeight: "500",
   },
@@ -450,8 +450,8 @@ const styles = StyleSheet.create({
   },
   certWarnText: {
     flex: 1,
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 14,
+    lineHeight: 20,
     color: colors.onSurface,
   },
   certWarnStrong: { fontWeight: "800" },

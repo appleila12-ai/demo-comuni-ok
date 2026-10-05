@@ -37,7 +37,7 @@ export function PaeseCard({ testID = "paese-card" }: { testID?: string }) {
               <Ionicons name="home-outline" size={20} color={t.warmDark} />
             </View>
             <View style={styles.flex}>
-              <Text style={[styles.eyebrow, { color: t.warmDark }]}>IL TUO COMUNE</Text>
+              <Text style={[styles.eyebrow, { color: t.warmDark }]}>Il tuo comune</Text>
               <Text style={styles.title} testID={`${testID}-nome`}>
                 Comune di {paese.nome}
               </Text>
@@ -123,7 +123,7 @@ export function PaeseCard({ testID = "paese-card" }: { testID?: string }) {
         transparent
         onRequestClose={() => setAperto(false)}
       >
-        <Pressable
+        <Pressable accessibilityRole="button"
           style={styles.backdrop}
           onPress={() => setAperto(false)}
           accessibilityLabel="Chiudi"
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  eyebrow: { fontSize: 9, fontWeight: "800", letterSpacing: 1, marginBottom: 2 },
+  eyebrow: { fontSize: 14, fontWeight: "800", letterSpacing: 0.3, marginBottom: 2 },
   title: {
     fontFamily: fonts.serif,
     fontSize: 16,
@@ -198,9 +198,9 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: colors.onSurface,
   },
-  text: { fontSize: 12, lineHeight: 18, color: colors.onSurfaceTertiary, marginTop: 2 },
+  text: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceTertiary, marginTop: 2 },
   change: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.onSurface,
     textDecorationLine: "underline",
@@ -220,8 +220,8 @@ const styles = StyleSheet.create({
     borderRadius: radius.pill,
     backgroundColor: colors.surfaceSecondary,
   },
-  chipText: { fontSize: 13, fontWeight: "700" },
-  hint: { fontSize: 11, lineHeight: 16, color: colors.onSurfaceTertiary, marginTop: spacing.md },
+  chipText: { fontSize: 14, fontWeight: "700" },
+  hint: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceTertiary, marginTop: spacing.md },
   pressed: { opacity: 0.8 },
   backdrop: { flex: 1, backgroundColor: "rgba(51,47,38,0.35)" },
   sheet: {
@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: colors.onSurface,
   },
-  sheetSub: { fontSize: 12, color: colors.onSurfaceTertiary, marginTop: 2, marginBottom: spacing.md },
+  sheetSub: { fontSize: 14, color: colors.onSurfaceTertiary, marginTop: 2, marginBottom: spacing.md },
   sheetList: { flexGrow: 0 },
   option: {
     minHeight: 48,
