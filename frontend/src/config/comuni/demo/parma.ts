@@ -6,7 +6,7 @@ import type { ComuneConfig } from "../types";
 // La provincia di Parma NON è tra quelle in sperimentazione della riforma
 // (fino al 31/12/2026): l'app lo calcola da sola dalla sigla "PR".
 // Contatto per il Progetto di vita: ANffAS Parma (dati dal sito anffasparma.it
-// e dal portale caregiver della Regione E-R) — chiedere il consenso ad ANffAS.
+// e dal portale caregiver della Regione E-R). ANffAS Parma ha dato l'ok (5/10/2026).
 export const parma: ComuneConfig = {
   slug: "parma",
   tipo: "comune",
