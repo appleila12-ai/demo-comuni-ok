@@ -77,11 +77,14 @@ export default async (req) => {
   // Accetta solo richieste dalla stessa app (limita l'uso della chiave da altri siti).
   // Il tetto di spesa va comunque impostato anche nella console del servizio AI.
   const origine = req.headers.get("origin");
-  const consentite = [process.env.URL, process.env.DEPLOY_PRIME_URL, process.env.DEPLOY_URL]
-    .filter(Boolean)
-    .map((u) => u.replace(/\/+$/, ""));
-  if (origine && consentite.length && !consentite.includes(origine)) {
-    return json(403, { error: "Origine non consentita" });
+  if (origine) {
+    let stessoSito = false;
+    try {
+      stessoSito = new URL(origine).host === new URL(req.url).host;
+    } catch {
+      stessoSito = false;
+    }
+    if (!stessoSito) return json(403, { error: "Origine non consentita" });
   }
 
   let body;
