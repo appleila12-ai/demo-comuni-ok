@@ -133,8 +133,16 @@ export default async (req) => {
     });
     if (!res.ok) {
       // Nei log solo il codice di errore, mai la domanda
-      console.error("assistente: errore servizio AI", res.status);
-      return json(502, { error: "Servizio AI non disponibile" });
+      // Solo codice e tipo di errore (utili per capire se è la chiave, il modello
+      // o il credito); mai la domanda né la chiave.
+      let tipo = "";
+      try {
+        tipo = (await res.json())?.error?.type || "";
+      } catch {
+        tipo = "";
+      }
+      console.error("assistente: errore servizio AI", res.status, tipo);
+      return json(502, { error: "Servizio AI non disponibile", codice: res.status, tipo });
     }
     const data = await res.json();
     const risposta = (data?.content || [])
