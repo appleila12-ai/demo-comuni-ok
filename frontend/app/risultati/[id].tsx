@@ -37,7 +37,7 @@ import {
   Report,
 } from "@/src/lib/reports";
 import { useSezione } from "@/src/lib/statistiche";
-import { HA_BACKEND } from "@/src/config/servizi";
+import { HA_ASSISTENTE } from "@/src/config/servizi";
 import { HeaderComune } from "@/src/components/HeaderComune";
 
 function toast(msg: string) {
@@ -304,7 +304,7 @@ export default function Risultati() {
           </View>
 
           {/* AI Assistant — solo se c'è il backend */}
-          {HA_BACKEND && <AssistantCard answers={a} />}
+          {HA_ASSISTENTE && <AssistantCard answers={a} />}
 
           {/* Ricorso / riesame */}
           <AppealSection />

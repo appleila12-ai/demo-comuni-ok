@@ -1,6 +1,8 @@
 import { storage } from "@/src/utils/storage";
 import { passiPercorso } from "@/src/lib/content";
 import { statoRiforma } from "@/src/lib/riformaTerritorio";
+import { comune } from "@/src/config/comune";
+import { ASSISTENTE_URL, HA_ASSISTENTE } from "@/src/config/servizi";
 
 const BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;
 const DEVICE_KEY = "salutenav:deviceId";
@@ -322,8 +324,8 @@ export async function askAssistant(
   question: string,
   answers?: Answers,
 ): Promise<string> {
-  if (!BACKEND_URL) return "Servizio non disponibile.";
-  const res = await fetch(`${BACKEND_URL}/api/assistant`, {
+  if (!HA_ASSISTENTE) return "Servizio non disponibile.";
+  const res = await fetch(ASSISTENTE_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -336,6 +338,17 @@ export async function askAssistant(
             cert: answers.cert,
           }
         : undefined,
+      // Dati pubblici del Comune: servono per rispondere sul territorio giusto
+      comune: {
+        nome: comune.nome,
+        provincia: comune.provincia,
+        regione: comune.regione,
+        statoRiforma: statoRiforma().frase,
+        ente: comune.ente,
+        telefono: comune.telefono,
+        email: comune.email,
+        orari: comune.orari,
+      },
     }),
   });
   if (!res.ok) {

@@ -16,17 +16,17 @@ import { colors, radius, spacing } from "@/src/theme";
 import { Answers, askAssistant, senzaContratto } from "@/src/lib/reports";
 
 const SUGGESTIONS_WORKER = [
+  "Io e mio fratello possiamo dividerci i permessi 104?",
+  "Come chiedo l'invalidità nel mio Comune?",
   "Mio padre vive in un'altra regione, ho diritto ai permessi?",
-  "Posso rifiutare il trasferimento di sede?",
   "Come si richiede il congedo straordinario di 2 anni?",
-  "Che percentuale di invalidità serve per l'accompagnamento?",
 ];
 
 const SUGGESTIONS_NO_WORK = [
+  "Come chiedo l'invalidità nel mio Comune?",
+  "Ci sono contributi della Regione per la disabilità?",
   "Quali aiuti economici spettano con l'invalidità civile?",
   "Come funziona l'indennità di accompagnamento?",
-  "Che percentuale serve per l'esenzione del ticket?",
-  "Sono pensionato: cosa cambia per me?",
 ];
 
 export function AssistantCard({ answers }: { answers?: Answers }) {
@@ -64,12 +64,18 @@ export function AssistantCard({ answers }: { answers?: Answers }) {
           <Ionicons name="chatbubbles-outline" size={22} color={colors.brandPrimary} />
         </View>
         <View style={styles.flex}>
-          <Text style={styles.aiTitle}>Fai una domanda alla Legge 104</Text>
+          <Text style={styles.aiTitle} accessibilityRole="header">Fai una domanda</Text>
           <Text style={styles.aiSub}>
-            Risposta immediata basata sulla normativa vigente.
+            Scrivi il tuo dubbio come lo scriveresti a un amico. Ti rispondiamo
+            con le regole valide per il tuo territorio.
           </Text>
         </View>
       </View>
+
+      <Text style={styles.aiAvviso} testID="assistant-privacy">
+        Non scrivere nomi, diagnosi o altri dati personali: non servono per
+        rispondere. La domanda non viene salvata.
+      </Text>
 
       <View style={styles.aiInputWrap}>
         <TextInput
@@ -134,8 +140,14 @@ export function AssistantCard({ answers }: { answers?: Answers }) {
             <Ionicons name="sparkles-outline" size={14} color={colors.brandPrimary} />
             <Text style={styles.aiAnswerLabel}>Risposta</Text>
           </View>
-          <Text style={styles.aiAnswerText} selectable>
+          <Text style={styles.aiAnswerText} selectable accessibilityLiveRegion="polite">
             {answer}
+          </Text>
+          <Text style={styles.aiAvviso} testID="assistant-ai-notice">
+            Risposta scritta da un assistente automatico (intelligenza
+            artificiale) sulla base di fonti verificate. Può sbagliare: prima
+            di decisioni importanti chiedi conferma ai Servizi Sociali del
+            Comune o a un patronato.
           </Text>
         </View>
       )}
@@ -172,6 +184,13 @@ const styles = StyleSheet.create({
     marginBottom: 2,
   },
   aiSub: { fontSize: 14, color: colors.onSurfaceTertiary, lineHeight: 20 },
+  aiAvviso: {
+    fontSize: 14,
+    lineHeight: 20,
+    color: colors.onSurface,
+    marginTop: spacing.sm,
+    marginBottom: spacing.sm,
+  },
   aiInputWrap: {
     backgroundColor: colors.surface,
     borderRadius: radius.md,

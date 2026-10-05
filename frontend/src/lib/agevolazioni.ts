@@ -135,7 +135,7 @@ export function calcola(r: Risposte): Agevolazione[] {
       area: "Salute",
       titolo: "Chiedere il riconoscimento (invalidità civile e Legge 104)",
       perche: "Quasi tutte le agevolazioni partono dal verbale.",
-      come: "Il primo passo è il certificato del medico di famiglia, che lo invia online all'INPS. Poi arriva la convocazione a visita.",
+      come: "Il primo passo è il certificato del medico di famiglia, che lo invia online all'INPS. Dove la riforma non è ancora attiva serve anche la domanda all'INPS entro 90 giorni: i passi giusti per il tuo Comune sono in \"Come ottenere il riconoscimento\".",
       link: { label: "Vedi i primi passi", href: "/primi-passi" },
     });
   }

@@ -19,7 +19,7 @@ import { SezioniBar } from "@/src/components/SezioniBar";
 import { colors, fonts, radius, spacing } from "@/src/theme";
 import { Answers, listReports } from "@/src/lib/reports";
 import { useSezione } from "@/src/lib/statistiche";
-import { HA_BACKEND } from "@/src/config/servizi";
+import { HA_ASSISTENTE } from "@/src/config/servizi";
 import { HeaderComune } from "@/src/components/HeaderComune";
 
 export default function Domande104Screen() {
@@ -48,7 +48,7 @@ export default function Domande104Screen() {
         >
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
-        <Text style={styles.headerTitle}>Le domande sulla 104</Text>
+        <Text style={styles.headerTitle} accessibilityRole="header">Fai una domanda</Text>
         <HeaderComune />
       </View>
 
@@ -62,11 +62,11 @@ export default function Domande104Screen() {
           showsVerticalScrollIndicator={false}
           keyboardShouldPersistTaps="handled"
         >
-          {HA_BACKEND ? (
+          {HA_ASSISTENTE ? (
             <AssistantCard answers={answers} />
           ) : (
             <Text style={{ fontSize: 14, lineHeight: 21, color: colors.onSurfaceSecondary }}>
-              L'assistente sulla 104 sarà disponibile a breve. Intanto trovi le
+              L'assistente sarà disponibile a breve. Intanto trovi le
               risposte più comuni in Domande frequenti.
             </Text>
           )}

@@ -18,7 +18,7 @@ import { PaeseCard } from "@/src/components/PaeseCard";
 import { comune, comuneScelto } from "@/src/config/comune";
 import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
-import { HA_BACKEND } from "@/src/config/servizi";
+import { HA_ASSISTENTE, HA_BACKEND } from "@/src/config/servizi";
 import { CasellaRicerca } from "@/src/components/CasellaRicerca";
 import { useSalvati } from "@/src/lib/salvati";
 
@@ -148,13 +148,13 @@ const INFO_LINKS = [
     color: topics.esenzioni,
   },
   // L'assistente sulla 104 ha bisogno del server: compare solo se c'è
-  ...(HA_BACKEND
+  ...(HA_ASSISTENTE
     ? [
         {
           id: "domande-104",
           icon: "chatbubbles-outline" as const,
-          title: "Le domande sulla 104",
-          sub: "Chiedi e ricevi una risposta basata sulla normativa",
+          title: "Fai una domanda",
+          sub: "Scrivi il tuo dubbio: rispondiamo con le regole del tuo territorio",
           href: "/domande-104",
           color: topics.lavoro,
         },
