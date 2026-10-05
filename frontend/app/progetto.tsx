@@ -24,6 +24,11 @@ import { comune } from "@/src/config/comune";
 import { SezioniBar } from "@/src/components/SezioniBar";
 import { AttivaProgettoSection } from "@/src/components/AttivaProgettoSection";
 import {
+  AvvisoComplessita,
+  ContattoProgettoVitaCard,
+  StatoRiformaProgetto,
+} from "@/src/components/ProgettoVitaAvvisi";
+import {
   AREE,
   AreaId,
   EMPTY_PROGETTO,
@@ -153,15 +158,11 @@ export default function ProgettoDiVita() {
           showsVerticalScrollIndicator={false}
           keyboardShouldPersistTaps="handled"
         >
-          {/* Avviso: strumento di preparazione, non la domanda ufficiale */}
-          <View style={styles.avviso} testID="progetto-avviso">
-            <Ionicons name="information-circle-outline" size={18} color={colors.accentDark} />
-            <Text style={styles.avvisoText}>
-              Questo strumento ti aiuta a preparare i tuoi pensieri prima di
-              presentare la richiesta ufficiale: non sostituisce né la domanda
-              su SISDA (portale INPS) né il colloquio con l&apos;Ambito Territoriale Sociale (ATS).
-            </Text>
-          </View>
+          {/* In cima: il Progetto di vita è complesso, fallo con chi ti accompagna */}
+          <AvvisoComplessita posizione="inizio" />
+
+          {/* Solo per alcuni Comuni (es. Parma): stato della riforma nella provincia */}
+          <StatoRiformaProgetto />
 
           {/* Intro */}
           <View style={styles.introCard} testID="progetto-intro">
@@ -290,6 +291,12 @@ export default function ProgettoDiVita() {
 
           {/* Come attivare il Progetto di Vita — dentro questa pagina */}
           <AttivaProgettoSection />
+
+          {/* In fondo: di nuovo l'invito a farsi accompagnare */}
+          <AvvisoComplessita posizione="fine" />
+
+          {/* Solo per alcuni Comuni (es. Parma): chi accompagna le famiglie */}
+          <ContattoProgettoVitaCard />
 
           <SezioniBar />
         </ScrollView>
