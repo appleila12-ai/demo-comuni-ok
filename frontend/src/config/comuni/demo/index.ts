@@ -39,6 +39,7 @@ import { desio } from "./desio";
 import { empoli } from "./empoli";
 import { faenza } from "./faenza";
 import { fano } from "./fano";
+import { ferentino } from "./ferentino";
 import { fiorenzuolaDArda } from "./fiorenzuola-d-arda";
 import { frascati } from "./frascati";
 import { galbiate } from "./galbiate";
@@ -129,6 +130,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   empoli,
   faenza,
   fano,
+  ferentino,
   fiorenzuolaDArda,
   frascati,
   galbiate,
