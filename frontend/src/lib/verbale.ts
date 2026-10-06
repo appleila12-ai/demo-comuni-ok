@@ -28,7 +28,7 @@ export const ESITO: Record<Esito, { etichetta: string }> = {
   "non-risulta": { etichetta: "Non risulta dal verbale" },
 };
 
-export type Area = "Lavoro" | "Soldi" | "Salute" | "Fisco e auto" | "Servizi e bonus";
+export type Area = "Lavoro" | "Altro" | "Salute" | "Fisco e auto" | "Servizi e bonus";
 
 export type Diritto = {
   id: string;
@@ -42,7 +42,7 @@ export type Diritto = {
   bonusId?: string;
 };
 
-export const AREE: Area[] = ["Soldi", "Lavoro", "Salute", "Fisco e auto", "Servizi e bonus"];
+export const AREE: Area[] = ["Altro", "Lavoro", "Salute", "Fisco e auto", "Servizi e bonus"];
 
 const INPS_104 = {
   label: "INPS · permessi per la Legge 104",
@@ -132,7 +132,7 @@ export function calcola(v: Verbale): Diritto[] {
   if (tot && v.eta === "adulto") {
     out.push({
       id: "pensione-inabilita",
-      area: "Soldi",
+      area: "Altro",
       titolo: "Pensione di inabilità",
       esito: "probabile",
       cosa: "Assegno mensile per chi ha l'invalidità civile al 100%. C'è un limite di reddito personale: controllalo sulla scheda INPS.",
@@ -142,7 +142,7 @@ export function calcola(v: Verbale): Diritto[] {
   } else if (tot && v.eta === "minore") {
     out.push({
       id: "minori-prestazioni",
-      area: "Soldi",
+      area: "Altro",
       titolo: "Prestazioni per i minori con invalidità",
       esito: "verificare",
       cosa: "Per i minori le prestazioni sono diverse da quelle degli adulti (per esempio l'indennità di frequenza o di accompagnamento). Chiedi quali spettano.",
@@ -152,7 +152,7 @@ export function calcola(v: Verbale): Diritto[] {
   } else if (tot && v.eta === "over67") {
     out.push({
       id: "over67",
-      area: "Soldi",
+      area: "Altro",
       titolo: "Prestazioni dopo i 67 anni",
       esito: "verificare",
       cosa: "Dopo l'età pensionabile le regole economiche cambiano (per esempio assegno sociale). Chiedi cosa vale nel tuo caso.",
@@ -164,7 +164,7 @@ export function calcola(v: Verbale): Diritto[] {
   if (v.accompagnamento === "si") {
     out.push({
       id: "accompagnamento-si",
-      area: "Soldi",
+      area: "Altro",
       titolo: "Indennità di accompagnamento",
       esito: "probabile",
       cosa: "Il verbale la riconosce. Controlla all'INPS che sia stata attivata: non parte da sola.",
@@ -174,7 +174,7 @@ export function calcola(v: Verbale): Diritto[] {
   } else if (v.accompagnamento === "no" && (tot || grave)) {
     out.push({
       id: "accompagnamento-no",
-      area: "Soldi",
+      area: "Altro",
       titolo: "Indennità di accompagnamento",
       esito: "non-risulta",
       cosa: "Non risulta dal verbale e non è automatica con il 100%. Spetta quando non si cammina senza aiuto o serve assistenza continua. Se pensi sia il tuo caso, fatti consigliare da un patronato.",
