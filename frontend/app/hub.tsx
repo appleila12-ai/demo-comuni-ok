@@ -91,6 +91,7 @@ const TAPPE: Tappa[] = [
     color: topics.esenzioni,
     principale: { label: "I tuoi diritti", route: "/diritti" },
     altri: [
+      { label: "Il tuo verbale: cosa ti spetta", route: "/verbale" },
       { label: "Bonus e agevolazioni", route: "/agevolazioni" },
       { label: "Lettere pronte", route: "/lettere" },
       { label: "Importi aggiornati", route: "/importi" },
