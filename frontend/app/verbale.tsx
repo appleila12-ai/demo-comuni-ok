@@ -1,0 +1,313 @@
+// "Il tuo verbale": la persona copia dal verbale pochi dati e l'app mostra
+// cosa POTREBBE spettarle, sempre "da confermare con l'ente".
+// Le risposte restano su questo dispositivo. Le regole sono in `src/lib/verbale.ts`.
+
+import React, { useEffect, useMemo, useState } from "react";
+import { Linking, Pressable, StyleSheet, Text, View } from "react-native";
+import Ionicons from "@react-native-vector-icons/ionicons";
+import { useRouter } from "expo-router";
+
+import { colors, radius, spacing } from "@/src/theme";
+import { comune } from "@/src/config/comune";
+import { storage } from "@/src/utils/storage";
+import { useSezione } from "@/src/lib/statistiche";
+import { AREE, calcola, completo, ESITO, type Diritto, type Esito, type Verbale } from "@/src/lib/verbale";
+import { Avviso, Bottone, Intro, Pagina, paginaStili, Scelte } from "@/src/components/Pagina";
+import { BottoneSalva } from "@/src/components/BottoneSalva";
+
+const KEY = "tutelapp:verbale";
+const apri = (url: string) => Linking.openURL(url).catch(() => {});
+
+const COLORI_ESITO: Record<Esito, string> = {
+  probabile: colors.successSoft,
+  verificare: colors.warningSoft,
+  "non-risulta": colors.surfaceTertiary,
+};
+
+function Scheda({ d, onBonus }: { d: Diritto; onBonus: () => void }) {
+  return (
+    <View style={paginaStili.card} testID={`verbale-${d.id}`}>
+      <View
+        style={[styles.badge, { backgroundColor: COLORI_ESITO[d.esito] }]}
+        accessible
+        accessibilityLabel={`Esito: ${ESITO[d.esito].etichetta}`}
+      >
+        <Ionicons
+          name={d.esito === "probabile" ? "checkmark-circle-outline" : d.esito === "verificare" ? "help-circle-outline" : "remove-circle-outline"}
+          size={16}
+          color={colors.onSurface}
+        />
+        <Text style={styles.badgeText}>{ESITO[d.esito].etichetta}</Text>
+      </View>
+      <Text style={styles.titolo} accessibilityRole="header">
+        {d.titolo}
+      </Text>
+      <Text style={styles.testo}>{d.cosa}</Text>
+      <Text style={styles.rigaTitolo}>Come si chiede</Text>
+      <Text style={styles.testo}>{d.comeSiChiede}</Text>
+      <View style={styles.piede}>
+        {d.bonusId ? (
+          <Pressable
+            onPress={onBonus}
+            style={({ pressed }) => [styles.link, pressed && { opacity: 0.85 }]}
+            accessibilityRole="button"
+            accessibilityLabel={`Vedi la scheda completa: ${d.titolo}`}
+          >
+            <Ionicons name="document-text-outline" size={16} color={colors.brandPrimaryDark} />
+            <Text style={styles.linkText}>Vedi la scheda completa</Text>
+          </Pressable>
+        ) : null}
+        {d.fonte ? (
+          <Pressable
+            onPress={() => apri(d.fonte!.url)}
+            style={({ pressed }) => [styles.link, pressed && { opacity: 0.85 }]}
+            accessibilityRole="link"
+            accessibilityLabel={`Apri la fonte: ${d.fonte.label}`}
+          >
+            <Ionicons name="open-outline" size={16} color={colors.brandPrimaryDark} />
+            <Text style={styles.linkText}>Apri la fonte ufficiale</Text>
+          </Pressable>
+        ) : null}
+        <BottoneSalva
+          conTesto
+          elemento={{ id: `verbale:${d.id}`, titolo: d.titolo, sotto: ESITO[d.esito].etichetta, route: "/verbale" }}
+        />
+      </View>
+      {d.fonte ? <Text style={styles.controllo}>{d.fonte.label}</Text> : null}
+    </View>
+  );
+}
+
+export default function VerbalePagina() {
+  useSezione("verbale-guida");
+  const router = useRouter();
+  const [v, setV] = useState<Verbale>({});
+  const [caricato, setCaricato] = useState(false);
+
+  useEffect(() => {
+    let vivo = true;
+    storage.getItem<string>(KEY, "").then((raw) => {
+      if (!vivo) return;
+      try {
+        if (raw) setV(JSON.parse(raw) as Verbale);
+      } catch {
+        /* risposte non leggibili: si riparte da zero */
+      }
+      setCaricato(true);
+    });
+    return () => {
+      vivo = false;
+    };
+  }, []);
+
+  const scegli = <K extends keyof Verbale>(k: K, val: Verbale[K]) => {
+    const nuovo = { ...v, [k]: val };
+    setV(nuovo);
+    storage.setItem(KEY, JSON.stringify(nuovo));
+  };
+
+  const cancella = () => {
+    setV({});
+    storage.setItem(KEY, "");
+  };
+
+  const pronto = caricato && completo(v);
+  const diritti = useMemo(() => (pronto ? calcola(v) : []), [pronto, v]);
+  const vaiBonus = () => router.push("/bonus" as any);
+
+  return (
+    <Pagina titolo="Il tuo verbale" testID="verbale-screen" sottotitoloSalvato="Cosa potrebbe spettarti">
+      <Intro>
+        Hai in mano il verbale e non sai cosa chiedere? Copia qui sotto i dati che trovi scritti: non serve la
+        diagnosi. Ti diciamo cosa potrebbe spettarti, da confermare con l'ente.
+      </Intro>
+      <Avviso>Le risposte restano su questo telefono: non le inviamo a nessuno.</Avviso>
+
+      <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+        Cosa c'è scritto sul verbale
+      </Text>
+      <View style={paginaStili.card}>
+        <Scelte
+          domanda="Legge 104"
+          aiuto="Cerca «Condizione di disabilità (Legge 104/92)»."
+          opzioni={[
+            { id: "nessuna", label: "Non riconosciuta" },
+            { id: "art3c1", label: "Art. 3 comma 1" },
+            { id: "art3c3", label: "Art. 3 comma 3 (gravità)" },
+          ]}
+          valore={v.legge104}
+          onScegli={(x) => scegli("legge104", x)}
+          testID="verbale-104"
+        />
+        <Scelte
+          domanda="Invalidità civile"
+          aiuto="Cerca «Invalido con...» e la percentuale."
+          opzioni={[
+            { id: "nessuna", label: "Non riconosciuta" },
+            { id: "fino45", label: "Fino al 45%" },
+            { id: "da46a99", label: "Dal 46% al 99%" },
+            { id: "100", label: "100% (totale e permanente)" },
+          ]}
+          valore={v.invalidita}
+          onScegli={(x) => scegli("invalidita", x)}
+          testID="verbale-invalidita"
+        />
+        <Scelte
+          domanda="Indennità di accompagnamento"
+          aiuto="Se è riconosciuta, sul verbale c'è scritto. Se non la trovi, scegli No."
+          opzioni={[
+            { id: "si", label: "Sì, è scritta" },
+            { id: "no", label: "No / non la trovo" },
+          ]}
+          valore={v.accompagnamento}
+          onScegli={(x) => scegli("accompagnamento", x)}
+          testID="verbale-accompagnamento"
+        />
+        <Scelte
+          domanda="Esonero da future visite di revisione"
+          aiuto="In fondo al verbale, alla voce «Esonero da future visite di revisione»."
+          opzioni={[
+            { id: "si", label: "Sì" },
+            { id: "no", label: "No" },
+            { id: "nonso", label: "Non lo so" },
+          ]}
+          valore={v.esonero}
+          onScegli={(x) => scegli("esonero", x)}
+          testID="verbale-esonero"
+        />
+      </View>
+
+      <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+        La tua situazione
+      </Text>
+      <View style={paginaStili.card}>
+        <Scelte
+          domanda="Età della persona con il verbale"
+          opzioni={[
+            { id: "minore", label: "Minorenne" },
+            { id: "adulto", label: "Da 18 a 66 anni" },
+            { id: "over67", label: "67 anni o più" },
+          ]}
+          valore={v.eta}
+          onScegli={(x) => scegli("eta", x)}
+          testID="verbale-eta"
+        />
+        <Scelte
+          domanda="Vive in una struttura residenziale?"
+          opzioni={[
+            { id: "no", label: "No, vive a casa" },
+            { id: "si", label: "Sì" },
+          ]}
+          valore={v.struttura}
+          onScegli={(x) => scegli("struttura", x)}
+          testID="verbale-struttura"
+        />
+        <Scelte
+          domanda="ISEE sociosanitario"
+          aiuto="Serve per i bonus. Se non ce l'hai ancora, scegli «Non lo so»."
+          opzioni={[
+            { id: "f35", label: "Fino a 35.000 euro" },
+            { id: "f50", label: "Da 35.001 a 50.000 euro" },
+            { id: "f65", label: "Da 50.001 a 65.000 euro" },
+            { id: "oltre", label: "Oltre 65.000 euro" },
+            { id: "nonso", label: "Non lo so" },
+          ]}
+          valore={v.isee}
+          onScegli={(x) => scegli("isee", x)}
+          testID="verbale-isee"
+        />
+        <Text style={styles.testo}>Comune: {comune.nomeBreve} · Regione: {comune.regione}</Text>
+      </View>
+
+      {!pronto ? (
+        <Avviso>Rispondi almeno a Legge 104, invalidità ed età per vedere cosa potrebbe spettarti.</Avviso>
+      ) : (
+        <>
+          {v.esonero === "no" ? (
+            <Avviso>
+              Il verbale non ti esonera dalle visite di revisione: potresti essere richiamato a visita. Segna la
+              data se è indicata sul verbale.
+            </Avviso>
+          ) : null}
+
+          {AREE.map((area) => {
+            const lista = diritti.filter((d) => d.area === area);
+            if (lista.length === 0) return null;
+            return (
+              <View key={area}>
+                <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+                  {area}
+                </Text>
+                {lista.map((d) => (
+                  <Scheda key={d.id} d={d} onBonus={vaiBonus} />
+                ))}
+              </View>
+            );
+          })}
+
+          <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+            Cosa fare adesso
+          </Text>
+          <View style={paginaStili.card} testID="verbale-passi">
+            <Text style={styles.testo}>
+              1. Il verbale non attiva nulla da solo: ogni prestazione ha la sua domanda.{"\n"}
+              2. INPS (o patronato, gratuito): pensione, indennità e permessi.{"\n"}
+              3. ASL: esenzione dal ticket e ausili.{"\n"}
+              4. Datore di lavoro: permessi della Legge 104, dopo la domanda all'INPS.{"\n"}
+              5. {comune.ente}: servizi sociali e bonus del territorio.
+            </Text>
+            {!!comune.telefono && (
+              <Pressable
+                onPress={() => apri(`tel:${comune.telefono.replace(/\s/g, "")}`)}
+                style={styles.link}
+                accessibilityRole="button"
+                accessibilityLabel={`Chiama ${comune.ente}`}
+              >
+                <Ionicons name="call-outline" size={16} color={colors.brandPrimaryDark} />
+                <Text style={styles.linkText}>Chiama {comune.telefono}</Text>
+              </Pressable>
+            )}
+          </View>
+
+          <Avviso>
+            Questa è una guida informativa, non una valutazione ufficiale e non sostituisce patronato, INPS o
+            servizi sociali. Ogni voce è "da confermare con l'ente" prima di fare domanda.
+          </Avviso>
+          <Bottone label="Cancella le mie risposte" icon="trash-outline" variante="vuoto" onPress={cancella} testID="verbale-cancella" />
+        </>
+      )}
+    </Pagina>
+  );
+}
+
+const styles = StyleSheet.create({
+  badge: {
+    alignSelf: "flex-start",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    paddingHorizontal: spacing.md,
+    paddingVertical: 6,
+    borderRadius: radius.pill,
+    marginBottom: spacing.sm,
+  },
+  badgeText: { fontSize: 14, fontWeight: "800", color: colors.onSurface },
+  titolo: { fontSize: 18, lineHeight: 24, fontWeight: "700", color: colors.onSurface, marginBottom: spacing.sm },
+  rigaTitolo: { fontSize: 14, fontWeight: "800", color: colors.onSurface, marginTop: spacing.sm, marginBottom: 2 },
+  testo: { fontSize: 15, lineHeight: 22, color: colors.onSurface },
+  piede: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: spacing.sm, marginTop: spacing.md },
+  link: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    minHeight: 44,
+    paddingHorizontal: spacing.md,
+    borderRadius: radius.pill,
+    borderWidth: 1.5,
+    borderColor: colors.brandPrimaryDark,
+    alignSelf: "flex-start",
+    marginTop: spacing.sm,
+  },
+  linkText: { fontSize: 14, fontWeight: "800", color: colors.brandPrimaryDark },
+  controllo: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary, marginTop: spacing.sm },
+});
