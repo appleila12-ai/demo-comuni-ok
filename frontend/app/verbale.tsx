@@ -17,6 +17,7 @@ import { calcolaEventi, daTestoItaliano, giorniDaOggi, inItaliano, type Scadenza
 import { BottoneSalva } from "@/src/components/BottoneSalva";
 
 const KEY = "tutelapp:verbale";
+const AREA_BONUS = "Bonus regionali e comunali";
 // Le date si salvano nello stesso posto di "Le mie scadenze", così compaiono anche lì e nel calendario.
 const KEY_SCAD = "tutelapp:scadenze";
 const isoInItaliano = (iso: string) => iso.split("-").reverse().join("/");
@@ -239,6 +240,20 @@ export default function VerbalePagina() {
 
   const pronto = caricato && completo(v);
   const diritti = useMemo(() => (pronto ? calcola(v) : []), [pronto, v]);
+  const mostraArea = (area: string) => {
+    const lista = diritti.filter((d) => d.area === area);
+    if (lista.length === 0) return null;
+    return (
+      <View key={area}>
+        <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+          {area}
+        </Text>
+        {lista.map((d) => (
+          <Scheda key={d.id} d={d} onBonus={vaiBonus} onLettera={vaiLettera} />
+        ))}
+      </View>
+    );
+  };
   const vaiBonus = () => router.push("/bonus" as any);
   const vaiLettera = (id: string) => router.push(`/lettere?id=${id}` as any);
   const vaiScadenze = () => router.push("/scadenze" as any);
@@ -360,20 +375,7 @@ export default function VerbalePagina() {
             </Avviso>
           ) : null}
 
-          {AREE.map((area) => {
-            const lista = diritti.filter((d) => d.area === area);
-            if (lista.length === 0) return null;
-            return (
-              <View key={area}>
-                <Text style={paginaStili.titoloSezione} accessibilityRole="header">
-                  {area}
-                </Text>
-                {lista.map((d) => (
-                  <Scheda key={d.id} d={d} onBonus={vaiBonus} onLettera={vaiLettera} />
-                ))}
-              </View>
-            );
-          })}
+          {AREE.filter((a) => a !== AREA_BONUS).map(mostraArea)}
 
           <Text style={paginaStili.titoloSezione} accessibilityRole="header">
             Cosa fare adesso
@@ -398,6 +400,8 @@ export default function VerbalePagina() {
               </Pressable>
             )}
           </View>
+
+          {mostraArea(AREA_BONUS)}
 
           <Avviso>
             Questa è una guida informativa, non una valutazione ufficiale e non sostituisce patronato, INPS o

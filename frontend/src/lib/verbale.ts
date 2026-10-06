@@ -28,7 +28,7 @@ export const ESITO: Record<Esito, { etichetta: string }> = {
   "non-risulta": { etichetta: "Non risulta dal verbale" },
 };
 
-export type Area = "Lavoro" | "Altro" | "Salute" | "Fisco e auto" | "Servizi e bonus";
+export type Area = "Lavoro" | "Altro" | "Salute" | "Fisco e auto" | "Bonus regionali e comunali";
 
 export type Diritto = {
   id: string;
@@ -44,7 +44,8 @@ export type Diritto = {
   letteraId?: string;
 };
 
-export const AREE: Area[] = ["Altro", "Lavoro", "Salute", "Fisco e auto", "Servizi e bonus"];
+/** Prima i diritti che valgono per tutti, in fondo i bonus del territorio */
+export const AREE: Area[] = ["Altro", "Lavoro", "Salute", "Fisco e auto", "Bonus regionali e comunali"];
 
 const INPS_104 = {
   label: "INPS · permessi per la Legge 104",
@@ -114,7 +115,7 @@ function daBonus(v: Verbale, b: Bonus): Diritto {
   const chiuso = b.stato === "chiuso";
   return {
     id: `bonus-${b.id}`,
-    area: "Servizi e bonus",
+    area: "Bonus regionali e comunali",
     titolo: b.titolo,
     esito: chiuso ? "verificare" : esito,
     cosa: [nota, b.quando ?? "", chiuso ? "La finestra per le domande risulta chiusa." : ""].filter(Boolean).join(" "),
@@ -278,7 +279,7 @@ export function calcola(v: Verbale): Diritto[] {
   [...locali, ...regionali].forEach((b) => out.push(daBonus(v, b)));
   out.push({
     id: "servizi-comune",
-    area: "Servizi e bonus",
+    area: "Altro",
     titolo: "Servizi sociali del Comune e dell'Ambito",
     esito: "verificare",
     cosa: "Assistenza a casa, trasporto, centri diurni e progetto personalizzato (PAI) dipendono dal Comune e dalla valutazione dell'équipe.",
