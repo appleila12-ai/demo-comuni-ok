@@ -40,6 +40,8 @@ export type Diritto = {
   fonte?: { label: string; url: string };
   /** se è una scheda di bonus, il suo id (si apre la pagina Bonus) */
   bonusId?: string;
+  /** id di una lettera pronta da compilare (pagina Lettere pronte) */
+  letteraId?: string;
 };
 
 export const AREE: Area[] = ["Altro", "Lavoro", "Salute", "Fisco e auto", "Servizi e bonus"];
@@ -191,8 +193,9 @@ export function calcola(v: Verbale): Diritto[] {
       titolo: "Permessi della Legge 104",
       esito: "probabile",
       cosa: "Se lavori, fino a 3 giorni al mese di permesso retribuito. Spettano anche al familiare che ti assiste, a certe condizioni. Per i minori ci sono regole specifiche per i genitori.",
-      comeSiChiede: "Domanda all'INPS e comunicazione al datore di lavoro. Il patronato aiuta.",
+      comeSiChiede: "Domanda all'INPS fatta da chi usa i permessi (la persona con disabilità o il familiare che lavora e assiste), poi comunicazione al datore di lavoro: la lettera è pronta qui sotto. Il patronato aiuta.",
       fonte: INPS_104,
+      letteraId: "permessi-104",
     });
     out.push({
       id: "congedo-straordinario",

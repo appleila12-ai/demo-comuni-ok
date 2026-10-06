@@ -28,7 +28,7 @@ const COLORI_ESITO: Record<Esito, string> = {
   "non-risulta": colors.surfaceTertiary,
 };
 
-function Scheda({ d, onBonus }: { d: Diritto; onBonus: () => void }) {
+function Scheda({ d, onBonus, onLettera }: { d: Diritto; onBonus: () => void; onLettera: (id: string) => void }) {
   return (
     <View style={paginaStili.card} testID={`verbale-${d.id}`}>
       <View
@@ -50,6 +50,17 @@ function Scheda({ d, onBonus }: { d: Diritto; onBonus: () => void }) {
       <Text style={styles.rigaTitolo}>Come si chiede</Text>
       <Text style={styles.testo}>{d.comeSiChiede}</Text>
       <View style={styles.piede}>
+        {d.letteraId ? (
+          <Pressable
+            onPress={() => onLettera(d.letteraId!)}
+            style={({ pressed }) => [styles.link, pressed && { opacity: 0.85 }]}
+            accessibilityRole="button"
+            accessibilityLabel="Prepara la lettera per il datore di lavoro"
+          >
+            <Ionicons name="mail-outline" size={16} color={colors.brandPrimaryDark} />
+            <Text style={styles.linkText}>Prepara la lettera per il datore di lavoro</Text>
+          </Pressable>
+        ) : null}
         {d.bonusId ? (
           <Pressable
             onPress={onBonus}
@@ -229,6 +240,7 @@ export default function VerbalePagina() {
   const pronto = caricato && completo(v);
   const diritti = useMemo(() => (pronto ? calcola(v) : []), [pronto, v]);
   const vaiBonus = () => router.push("/bonus" as any);
+  const vaiLettera = (id: string) => router.push(`/lettere?id=${id}` as any);
   const vaiScadenze = () => router.push("/scadenze" as any);
 
   return (
@@ -357,7 +369,7 @@ export default function VerbalePagina() {
                   {area}
                 </Text>
                 {lista.map((d) => (
-                  <Scheda key={d.id} d={d} onBonus={vaiBonus} />
+                  <Scheda key={d.id} d={d} onBonus={vaiBonus} onLettera={vaiLettera} />
                 ))}
               </View>
             );
