@@ -37,8 +37,8 @@ const MOMENTI: { id: Exclude<Momento, null>; label: string; sub: string; icon: a
   },
   {
     id: "diritti",
-    label: "Voglio capire i miei diritti",
-    sub: "Scopri aiuti, agevolazioni e permessi che ti spettano",
+    label: "Ho il verbale: cosa mi spetta?",
+    sub: "Copia i dati del verbale e scopri aiuti, agevolazioni e permessi",
     icon: "shield-checkmark-outline",
   },
 ];
@@ -89,7 +89,7 @@ const TAPPE: Tappa[] = [
     testo: "Aiuti economici, permessi, agevolazioni e le lettere per chiederli.",
     icon: "shield-checkmark-outline",
     color: topics.esenzioni,
-    principale: { label: "I tuoi diritti", route: "/diritti" },
+    principale: { label: "Il tuo verbale: cosa ti spetta", route: "/verbale" },
     altri: [
       { label: "Bonus e agevolazioni", route: "/agevolazioni" },
       { label: "Lettere pronte", route: "/lettere" },
@@ -113,6 +113,7 @@ const TAPPE: Tappa[] = [
     color: topics.patronato,
     principale: { label: "Aiuti e contatti", route: "/territorio" },
     altri: [
+      { label: "Bonus e contributi", route: "/bonus" },
       { label: "Salute vicino a te", route: "/salute" },
       { label: "Associazioni e sport", route: "/associazioni" },
     ],
@@ -162,9 +163,7 @@ export default function Hub() {
     registra("momento", m);
     if (m === "diagnosi") return router.push("/percorso");
     if (m === "iter") return router.push("/tracker");
-    const list = await listReports();
-    if (list.length > 0) router.push(`/risultati/${list[0].id}`);
-    else router.push("/valutazione");
+    router.push("/verbale" as any);
   };
 
   const partenza = momento ? PARTENZA[momento] : null;
