@@ -12,10 +12,14 @@ import { comune } from "@/src/config/comune";
 import { storage } from "@/src/utils/storage";
 import { useSezione } from "@/src/lib/statistiche";
 import { AREE, calcola, completo, ESITO, type Diritto, type Esito, type Verbale } from "@/src/lib/verbale";
-import { Avviso, Bottone, Intro, Pagina, paginaStili, Scelte } from "@/src/components/Pagina";
+import { Avviso, Bottone, Campo, Intro, Pagina, paginaStili, Scelte } from "@/src/components/Pagina";
+import { calcolaEventi, daTestoItaliano, giorniDaOggi, inItaliano, type Scadenza } from "@/src/lib/scadenze";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
 
 const KEY = "tutelapp:verbale";
+// Le date si salvano nello stesso posto di "Le mie scadenze", così compaiono anche lì e nel calendario.
+const KEY_SCAD = "tutelapp:scadenze";
+const isoInItaliano = (iso: string) => iso.split("-").reverse().join("/");
 const apri = (url: string) => Linking.openURL(url).catch(() => {});
 
 const COLORI_ESITO: Record<Esito, string> = {
@@ -78,6 +82,117 @@ function Scheda({ d, onBonus }: { d: Diritto; onBonus: () => void }) {
   );
 }
 
+/** Date del verbale: restano sul telefono e diventano scadenze con avviso. */
+function DateVerbale({ onScadenze }: { onScadenze: () => void }) {
+  const [lista, setLista] = useState<Scadenza[]>([]);
+  const [dataVerbale, setDataVerbale] = useState("");
+  const [dataRevisione, setDataRevisione] = useState("");
+  const [errore, setErrore] = useState("");
+  const [salvato, setSalvato] = useState(false);
+
+  useEffect(() => {
+    let vivo = true;
+    storage.getItem<string>(KEY_SCAD, "").then((raw) => {
+      if (!vivo || !raw) return;
+      try {
+        const l = JSON.parse(raw);
+        if (!Array.isArray(l)) return;
+        setLista(l);
+        const v = l.find((x: Scadenza) => x.tipo === "verbale");
+        const r = l.find((x: Scadenza) => x.tipo === "revisione");
+        if (v?.data) setDataVerbale(isoInItaliano(v.data));
+        if (r?.data) setDataRevisione(isoInItaliano(r.data));
+      } catch {
+        /* date non leggibili: si riparte da zero */
+      }
+    });
+    return () => {
+      vivo = false;
+    };
+  }, []);
+
+  const salvaDate = () => {
+    setErrore("");
+    setSalvato(false);
+    const v = dataVerbale.trim() ? daTestoItaliano(dataVerbale) : "";
+    const r = dataRevisione.trim() ? daTestoItaliano(dataRevisione) : "";
+    if (v === null || r === null) {
+      setErrore("Scrivi la data come giorno/mese/anno, per esempio 05/08/2026.");
+      return;
+    }
+    if (!v && !r) {
+      setErrore("Scrivi almeno una data.");
+      return;
+    }
+    let nuova = lista;
+    const ora = Date.now();
+    if (v) nuova = [...nuova.filter((x) => x.tipo !== "verbale"), { id: `verbale-${ora}`, tipo: "verbale", data: v }];
+    if (r) nuova = [...nuova.filter((x) => x.tipo !== "revisione"), { id: `revisione-${ora}`, tipo: "revisione", data: r }];
+    setLista(nuova);
+    storage.setItem(KEY_SCAD, JSON.stringify(nuova));
+    setSalvato(true);
+  };
+
+  const eventi = calcolaEventi(lista).filter((e) => /-(atp|rev)$/.test(e.id));
+
+  return (
+    <View style={paginaStili.card} testID="verbale-date">
+      <Text style={styles.titolo}>Date da ricordare</Text>
+      <Text style={styles.testo}>
+        Salviamo le date sul telefono e ti mostriamo le scadenze, anche in "Le mie scadenze" e nel calendario.
+      </Text>
+      <Campo
+        label="Data del verbale"
+        aiuto="Il giorno in cui ti è arrivato. Da qui contano i 6 mesi per un eventuale ricorso."
+        value={dataVerbale}
+        onChange={setDataVerbale}
+        placeholder="gg/mm/aaaa"
+        testID="verbale-data"
+      />
+      <Campo
+        label="Data di revisione (se scritta)"
+        aiuto="Se il verbale prevede una nuova visita, di solito c'è scritta la data."
+        value={dataRevisione}
+        onChange={setDataRevisione}
+        placeholder="gg/mm/aaaa"
+        testID="verbale-data-revisione"
+      />
+      {errore ? <Text style={[styles.testo, { fontWeight: "700" }]}>{errore}</Text> : null}
+      <Bottone label="Salva le date" icon="calendar-outline" onPress={salvaDate} testID="verbale-salva-date" />
+      {salvato ? <Text style={[styles.testo, { marginTop: spacing.sm }]}>Salvate. Le trovi anche nelle tue scadenze.</Text> : null}
+
+      {eventi.map((e) => {
+        const g = giorniDaOggi(e.data);
+        const vicina = g >= 0 && g <= e.anticipo;
+        return (
+          <View key={e.id} style={{ marginTop: spacing.md }}>
+            {vicina ? (
+              <Avviso>
+                {e.titolo}: {inItaliano(e.data)} ({g === 0 ? "oggi" : `tra ${g} giorni`}). {e.spiegazione}
+              </Avviso>
+            ) : (
+              <Text style={styles.testo}>
+                {e.titolo}: {inItaliano(e.data)} {g < 0 ? "(passata)" : `(tra ${g} giorni)`}
+              </Text>
+            )}
+          </View>
+        );
+      })}
+      {eventi.length > 0 ? (
+        <Pressable
+          onPress={onScadenze}
+          style={styles.link}
+          accessibilityRole="button"
+          accessibilityLabel="Apri Le mie scadenze"
+        >
+          <Ionicons name="calendar-outline" size={16} color={colors.brandPrimaryDark} />
+          <Text style={styles.linkText}>Apri Le mie scadenze</Text>
+        </Pressable>
+      ) : null}
+    </View>
+  );
+}
+
 export default function VerbalePagina() {
   useSezione("verbale-guida");
   const router = useRouter();
@@ -114,6 +229,7 @@ export default function VerbalePagina() {
   const pronto = caricato && completo(v);
   const diritti = useMemo(() => (pronto ? calcola(v) : []), [pronto, v]);
   const vaiBonus = () => router.push("/bonus" as any);
+  const vaiScadenze = () => router.push("/scadenze" as any);
 
   return (
     <Pagina titolo="Il tuo verbale" testID="verbale-screen" sottotitoloSalvato="Cosa potrebbe spettarti">
@@ -176,6 +292,8 @@ export default function VerbalePagina() {
           testID="verbale-esonero"
         />
       </View>
+
+      <DateVerbale onScadenze={vaiScadenze} />
 
       <Text style={paginaStili.titoloSezione} accessibilityRole="header">
         La tua situazione
