@@ -64,6 +64,7 @@ import { nepi } from "./nepi";
 import { olbia } from "./olbia";
 import { ortona } from "./ortona";
 import { osimo } from "./osimo";
+import { palermo } from "./palermo";
 import { parabiago } from "./parabiago";
 import { pavia } from "./pavia";
 import { piacenza } from "./piacenza";
@@ -155,6 +156,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   olbia,
   ortona,
   osimo,
+  palermo,
   parabiago,
   pavia,
   piacenza,
