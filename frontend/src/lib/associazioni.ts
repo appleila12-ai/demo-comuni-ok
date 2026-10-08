@@ -258,6 +258,29 @@ for (const g of GENITORI_TOSTI_LOCALI) {
   }
 }
 
+// Milano (MI): dati dai siti delle associazioni (ottobre 2026)
+PER_PROVINCIA.MI = PER_PROVINCIA.MI ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.MI.volontariato.unshift(
+  {
+    nome: "LEDHA – Lega per i diritti delle persone con disabilità APS",
+    cosa: "Tutela dei diritti delle persone con disabilità. Ha il Centro Antidiscriminazione Franco Bomprezzi e i Centri per la vita indipendente.",
+    dove: "Via Livigno 2, 20158 Milano",
+    telefono: "02 6570425",
+    email: "info@ledha.it",
+    sito: "https://www.ledha.it",
+    comuni: ["milano"],
+  },
+  {
+    nome: "Anffas Milano",
+    cosa: "Famiglie di persone con disabilità intellettiva e relazionale. Il SAI? è uno spazio di accoglienza, ascolto e accompagnamento per persone con disabilità e familiari.",
+    dove: "Via Ulisse Dini 7, Milano",
+    email: "anffas@anffasmilano.it",
+    sito: "https://www.anffasmilano.it",
+    comuni: ["milano"],
+    verificare: true,
+  },
+);
+
 // Ferentino (FR)
 PER_PROVINCIA.FR = PER_PROVINCIA.FR ?? { volontariato: [], sport: [] };
 PER_PROVINCIA.FR.volontariato.unshift({
