@@ -9,6 +9,7 @@
 //  - ricontrollare almeno ogni 3 mesi e sempre a gennaio
 //
 // Prima raccolta: 06/10/2026, solo Liguria e provincia della Spezia.
+// Seconda raccolta: 08/10/2026, Sicilia e Comune di Palermo.
 
 import { comune } from "@/src/config/comune";
 
@@ -132,6 +133,108 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "06/10/2026",
     nota: "La scheda sul sito è ferma al 03/07/2023.",
+  },
+
+  // ------------------------------------------------------------------ SICILIA
+  {
+    id: "sicilia-disabilita-gravissima",
+    regione: "Sicilia",
+    titolo: "Contributo economico per la disabilità gravissima (Fondo per la disabilità e la non autosufficienza)",
+    perChi:
+      "Persone con disabilità gravissima già riconosciute e censite dalle ASP. Secondo la Regione, a marzo 2026 erano oltre 15 mila.",
+    cosa:
+      "Contributo economico mensile. L'importo non è scritto nelle fonti che abbiamo letto: chiedilo al Distretto. Per il pagamento di marzo 2026 e degli arretrati la Regione ha impegnato 19.499.098 euro, ripartiti tra le ASP in base al numero di persone censite.",
+    stato: "attivo",
+    quando: "Pagamenti mensili: la Regione impegna i fondi ogni mese (notizia del 21/04/2026).",
+    comeSiChiede:
+      "La domanda si presenta al Punto Unico di Accesso (PUA) del territorio di residenza o al Distretto socio-sanitario del Comune. Chi è già stato riconosciuto disabile gravissimo non deve ripresentarla.",
+    fonte: {
+      label: "Regione Siciliana · impegno fondi disabilità gravissima",
+      url: "https://www.regione.sicilia.it/la-regione-informa/disabilita-gravissime-impegnati-19-milioni-contributi-economici-marzo",
+    },
+    verificatoIl: "08/10/2026",
+  },
+  {
+    id: "sicilia-bonus-caregiver-2026",
+    regione: "Sicilia",
+    titolo: "Bonus per il caregiver familiare (2026)",
+    perChi:
+      "Chi assiste in famiglia una persona con disabilità grave o gravissima.",
+    cosa:
+      "Contributo economico per il ruolo di cura. La Regione ha assegnato ai Distretti socio-sanitari 2.035.212,87 euro (65% per chi assiste persone con disabilità grave, 35% per la gravissima). L'importo per la singola persona non è scritto nella fonte.",
+    stato: "da-verificare",
+    quando: "Notizia del 16/07/2026. La fonte non indica scadenze.",
+    comeSiChiede:
+      "Il contributo è pagato dai Distretti socio-sanitari \"secondo le procedure previste\", che la fonte non descrive: chiedi al Distretto del tuo Comune se e come presentare domanda.",
+    fonte: {
+      label: "Regione Siciliana · fondi caregiver familiari",
+      url: "https://www.regione.sicilia.it/la-regione-informa/politiche-sociali-2-milioni-caregiver-familiari-albano-rafforziamo-sostegno",
+    },
+    verificatoIl: "08/10/2026",
+  },
+
+  // ----------------------------------------------------------------- PALERMO
+  {
+    id: "palermo-disabilita-gravissima-distretto42",
+    regione: "Sicilia",
+    comuni: ["palermo"],
+    titolo: "Disabilità gravissima: come fare domanda a Palermo (ASP, Distretto 42)",
+    perChi:
+      "Persone riconosciute con disabilità gravissima dalle Commissioni UVM, che hanno la certificazione della Legge 104/92 art. 3 comma 3 e il riconoscimento dell'indennità di accompagnamento. La domanda può farla la persona stessa, un familiare con delega o il rappresentante legale (amministratore di sostegno, tutore, procura notarile).",
+    cosa:
+      "Accesso al contributo regionale per la disabilità gravissima. L'importo non è scritto nel regolamento dell'ASP.",
+    stato: "attivo",
+    quando:
+      "Regolamento dell'ASP del 19/04/2023. Chi ha avuto una domanda respinta può ripresentarla solo con un certificato di aggravamento di una struttura pubblica, dopo almeno un semestre.",
+    comeSiChiede:
+      "Al PUA o al Distretto socio-sanitario. Distretto 42 di Palermo: via Lancia di Brolo 10/bis, Padiglione Gatto, 2° piano, tel. 091 7035490, disabiligravissimi.d42@asppalermo.org. Ricevimento: martedì 9–12 e 15–17, mercoledì 9–12.",
+    fonte: {
+      label: "ASP Palermo · regolamento disabilità gravissima",
+      url: "https://www.asppalermo.org/wp-content/uploads/2024/03/REGOLAMENTO-DISABILITA-GRAVISSIMA.pdf",
+    },
+    verificatoIl: "08/10/2026",
+    nota: "Documenti richiesti: documenti d'identità e codici fiscali di beneficiario e richiedente, copia con diagnosi della certificazione 104 art. 3 comma 3 e del provvedimento dell'indennità di accompagnamento, recapito telefonico o email.",
+  },
+  {
+    id: "palermo-amat-agevolazioni",
+    regione: "Sicilia",
+    comuni: ["palermo"],
+    titolo: "Abbonamento AMAT agevolato per persone con disabilità",
+    perChi:
+      "Persone con disabilità con ISEE fino a 10.440 euro. Le due notizie che abbiamo letto indicano soglie di invalidità diverse (65% e 67%).",
+    cosa:
+      "Abbonamento gratuito per chi rientra nei requisiti. Sopra la soglia ISEE si può comprare l'abbonamento annuale a 90 euro, valido su tutte le linee.",
+    stato: "da-verificare",
+    quando:
+      "Misura sperimentale iniziata il 1 aprile 2026 e prorogata fino al 31 dicembre 2026 (notizie del 1 e 2 ottobre 2026). Non è chiaro cosa succede da gennaio.",
+    comeSiChiede:
+      "Le notizie non dicono dove e come fare domanda: chiedi ad AMAT o ai Servizi Sociali del Comune (centralino 091 7401111).",
+    fonte: {
+      label: "Balarm · abbonamenti bus gratuiti per disabili (2 ottobre 2026)",
+      url: "https://www.balarm.it/news/abbonamenti-del-bus-gratuiti-per-disabili-ma-c-e-una-scadenza-e-polemica-a-palermo-170195",
+    },
+    verificatoIl: "08/10/2026",
+    nota: "Fonte: stampa locale. Non abbiamo trovato la pagina ufficiale di AMAT o del Comune: da confermare.",
+  },
+  {
+    id: "palermo-asacom",
+    regione: "Sicilia",
+    comuni: ["palermo"],
+    titolo: "ASACOM: assistenza all'autonomia e alla comunicazione a scuola",
+    perChi:
+      "Minori con disabilità che frequentano le scuole statali del primo ciclo del Comune di Palermo. I requisiti non sono scritti nella pagina che abbiamo letto.",
+    cosa:
+      "Servizio comunale di assistenza all'autonomia e alla comunicazione, con graduatorie per i profili A, B e C.",
+    stato: "attivo",
+    quando:
+      "Finestra straordinaria per nuovi inserimenti in coda alle graduatorie, aperta in modo permanente (avviso del 15/09/2026). Convocazioni anno scolastico 2026/27: profili A e B il 12/10/2026, profilo C il 13/10/2026.",
+    comeSiChiede:
+      "La pagina non spiega come presentare la domanda: leggi l'avviso sul sito del Comune o chiama il centralino 091 7401111 (U.O. Assistenza Specialistica).",
+    fonte: {
+      label: "Comune di Palermo · avviso ASACOM (7 ottobre 2026)",
+      url: "https://www.comune.palermo.it/novita/avviso-di-apertura-permanente-della-finestra-straordinaria-per-nuovi-inserimenti-in-coda-alle-graduatorie-triennali-vigenti-profilo-a-b-c-servizio-di-assistenza-allautonomia-e-alla-comunicazione-as-4/",
+    },
+    verificatoIl: "08/10/2026",
   },
 ];
 
