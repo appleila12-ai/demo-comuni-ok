@@ -58,6 +58,7 @@ import { magenta } from "./magenta";
 import { mantova } from "./mantova";
 import { marsala } from "./marsala";
 import { merate } from "./merate";
+import { milano } from "./milano";
 import { mira } from "./mira";
 import { monopoli } from "./monopoli";
 import { nepi } from "./nepi";
@@ -150,6 +151,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   mantova,
   marsala,
   merate,
+  milano,
   mira,
   monopoli,
   nepi,
