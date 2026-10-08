@@ -10,6 +10,7 @@
 //
 // Prima raccolta: 06/10/2026, solo Liguria e provincia della Spezia.
 // Seconda raccolta: 08/10/2026, Sicilia e Comune di Palermo.
+// Terza raccolta: 08/10/2026, Lombardia e Comune di Milano.
 
 import { comune } from "@/src/config/comune";
 
@@ -235,6 +236,108 @@ export const BONUS: Bonus[] = [
       url: "https://www.comune.palermo.it/novita/avviso-di-apertura-permanente-della-finestra-straordinaria-per-nuovi-inserimenti-in-coda-alle-graduatorie-triennali-vigenti-profilo-a-b-c-servizio-di-assistenza-allautonomia-e-alla-comunicazione-as-4/",
     },
     verificatoIl: "08/10/2026",
+  },
+
+  // ---------------------------------------------------------------- LOMBARDIA
+  {
+    id: "lombardia-misura-b1-sostegno",
+    regione: "Lombardia",
+    titolo: "Misura B1: sostegno per la disabilità gravissima e le persone molto non autosufficienti",
+    perChi:
+      "Persone con disabilità con necessità di sostegno intensivo molto elevato e anziani non autosufficienti con alto bisogno assistenziale, residenti in Lombardia e assistiti a casa. Servono l'indennità di accompagnamento (o la non autosufficienza riconosciuta) e un ISEE sociosanitario fino a 50.000 euro (ISEE ordinario fino a 65.000 euro per i minori). La condizione va attestata da un medico specialista.",
+    cosa:
+      "Misura Sostegno: contributo mensile da 565 a 1.300 euro, secondo la situazione (per esempio 565 euro con il solo caregiver familiare, 900 euro con un assistente regolarmente assunto da 10 ore a settimana, 1.200 euro a tempo pieno). Assegno di autonomia: fino a 800 euro al mese per chi ha un assistente personale e non ha un caregiver familiare. Misura Servizi: interventi sociali e voucher sociosanitari, senza importi scritti nella fonte.",
+    stato: "aperto",
+    quando:
+      "Nuove domande dal 22 giugno al 31 ottobre 2026. Chi è già in carico non deve ripresentare la domanda e prosegue fino al 31 dicembre 2026.",
+    comeSiChiede:
+      "Si presenta l'istanza di valutazione alla propria ASST, con le sue modalità. Per informazioni: ATS e ASST di competenza o lo Spazio Disabilità di Regione Lombardia (sportello informativo gratuito).",
+    fonte: {
+      label: "Regione Lombardia · Misura Sostegno (ex B1)",
+      url: "https://www.regione.lombardia.it/politiche-sociali-e-abitative/disabilita/politiche-e-misure-per-la-disabilita/sostegno-per-la-disabilit--gravissima-misura-sostegno",
+    },
+    verificatoIl: "08/10/2026",
+    nota: "Gli importi vengono dalla pagina di Lombardia Facile dedicata alla DGR 6320 del 15/06/2026; la pagina della Regione non scrive gli importi.",
+  },
+  {
+    id: "lombardia-misura-b2",
+    regione: "Lombardia",
+    titolo: "Misura B2 (oggi Misura Sostegno e Misure Servizi): persone con disabilità grave",
+    perChi:
+      "Persone con disabilità grave di qualsiasi età, residenti in Lombardia e assistite a casa, con indennità di accompagnamento o handicap grave (art. 3 comma 3, L. 104/92). Nella pagina della Regione: ISEE sociosanitario fino a 25.000 euro (ISEE ordinario fino a 40.000 euro per i minori).",
+    cosa:
+      "Buono sociale di 100 euro con un caregiver familiare, fino a 800 euro con un assistente regolarmente assunto. Assegno per l'autonomia fino a 800 euro per i progetti di vita indipendente senza caregiver familiare. Interventi integrativi come assistenza domiciliare e sollievo, dopo la valutazione e il Progetto Individuale.",
+    stato: "da-verificare",
+    quando:
+      "La pagina della Regione non indica scadenze: l'avviso lo apre ogni Comune o Ambito. La pagina cita ancora l'annualità 2024.",
+    comeSiChiede:
+      "Quando il tuo Comune o Ambito apre l'avviso, la domanda si presenta lì. Chiedi ai Servizi Sociali del tuo Comune quando apre.",
+    fonte: {
+      label: "Regione Lombardia · Lombardia Facile · Misura B2",
+      url: "https://www.lombardiafacile.regione.lombardia.it/wps/portal/site/Lombardia-Facile?urile=wcm%3Apath%3A%2Fminisiticontenuti_it%2Flombardiafacile%2Fredazionali%2Fnews%2Fmisurab2%2Fmisurab2",
+    },
+    verificatoIl: "08/10/2026",
+    nota: "Importi e soglie ISEE possono essere cambiati con la DGR 6320 del 15/06/2026: confermali con il tuo Comune o Ambito.",
+  },
+  {
+    id: "lombardia-fondo-caregiver",
+    regione: "Lombardia",
+    titolo: "Fondo regionale per il caregiver familiare",
+    perChi:
+      "Chi assiste coniuge, partner, convivente o un familiare fino al secondo grado non autosufficiente, che ha l'invalidità riconosciuta e un bisogno di assistenza continua di lunga durata, oppure l'indennità di accompagnamento (definizione della legge 205/2017 citata dalla Regione).",
+    cosa:
+      "La Regione parla di un fondo per sostenere il ruolo di cura del caregiver familiare e del lavoro di cura riconosciuto dal Fondo Non Autosufficienze. La pagina non scrive importi né quali contributi siano previsti.",
+    stato: "da-verificare",
+    comeSiChiede:
+      "La pagina non spiega come si accede. Chiedi ai Servizi Sociali del tuo Comune o all'ATS. Referente regionale per la tutela dei diritti delle persone con disabilità: angela_santolini@regione.lombardia.it.",
+    fonte: {
+      label: "Regione Lombardia · Caregiver familiare",
+      url: "https://www.regione.lombardia.it/politiche-sociali-e-abitative/famiglia/caregiver/red-caregiver-familiare",
+    },
+    verificatoIl: "08/10/2026",
+    nota: "La pagina avvisa che alcune informazioni non sono al momento disponibili.",
+  },
+
+  // ------------------------------------------------------------ COMUNE DI MILANO
+  {
+    id: "milano-misura-sostegno-servizi",
+    regione: "Lombardia",
+    comuni: ["milano"],
+    titolo: "Misura Sostegno e Misura Servizi 2026/2027 (ex Misura B2) del Comune di Milano",
+    perChi:
+      "Persone con disabilità con necessità di sostegno intensivo elevato (fino a 70 anni) e anziani non autosufficienti a basso bisogno assistenziale, residenti a Milano e assistiti a casa. Servono indennità di accompagnamento o handicap grave (art. 3 comma 3, L. 104/92) e un ISEE 2026: sociosanitario fino a 25.000 euro per i maggiorenni, ordinario fino a 40.000 euro per i minorenni.",
+    cosa:
+      "Con un caregiver familiare: 100 euro al mese e interventi di assistenza diretta fino a 3.600 euro l'anno, se previsti dal Progetto Individuale. Con un assistente personale regolarmente assunto: rimborso fino a 800 euro al mese. Assegno di autonomia: fino a 800 euro al mese per i progetti di vita indipendente senza caregiver.",
+    stato: "chiuso",
+    quando:
+      "Domande dal 1 al 31 luglio 2026. Erogazione dal 1 luglio 2026 al 31 dicembre 2027, ogni due mesi dopo la rendicontazione. Il contributo dipende dal parere dell'UVM e dal Progetto Individuale.",
+    comeSiChiede:
+      "La finestra del 2026 è chiusa. Per sapere se e quando riapre, chiama il Contact Center del Comune: 02 884 53399 o 02 884 66443 (lun-ven 8:30-16:00). Lo scorso avviso si compilava solo online con SPID o CIE, con aiuto presso gli Spazi WeMi.",
+    fonte: {
+      label: "Comune di Milano · Avviso pubblico Misura Sostegno e Misura Servizi 2026/2027",
+      url: "https://servizi.comune.milano.it/documents/20121/362217649/AVVISO+PUBBLICO+MISURA+SOSTEGNO+MISURA+SERVIZI_2026-2027_1.pdf/bd410ee3-b1ed-e464-12f4-eac9dcee14cc?t=1783001184027",
+    },
+    verificatoIl: "08/10/2026",
+    nota: "Il testo dell'avviso ha date diverse per il supporto agli Spazi WeMi: controlla con il Comune.",
+  },
+  {
+    id: "milano-atm-agevolazioni",
+    regione: "Lombardia",
+    comuni: ["milano"],
+    titolo: "Abbonamento ATM agevolato per persone con invalidità",
+    perChi:
+      "Residenti nel Comune di Milano con invalidità civile tra un terzo e due terzi, o lavoratori disabili. Per gli invalidi di guerra o di servizio c'è un abbonamento a parte.",
+    cosa:
+      "Abbonamento annuale urbano a 100 euro con reddito sotto 11.557,19 euro, a 150 euro con reddito tra 11.557,19 e 15.403,19 euro. Invalidi di guerra o di servizio (dalla sesta all'ottava categoria): 147 euro. La pagina cita anche l'agevolazione \"Io Viaggio Agevolata\" della Regione Lombardia.",
+    stato: "da-verificare",
+    comeSiChiede:
+      "Si richiede presso un ATM Point, su appuntamento dall'app ATM. Porta un documento d'identità e i documenti che attestano reddito e invalidità.",
+    fonte: {
+      label: "ATM Milano · Servizi speciali per persone con disabilità",
+      url: "https://www.atm.it/en/AltriServizi/Disabili/Pages/ServiziSpeciali.aspx",
+    },
+    verificatoIl: "08/10/2026",
+    nota: "La pagina non ha una data: importi e soglie di reddito vanno confermati con ATM.",
   },
 ];
 

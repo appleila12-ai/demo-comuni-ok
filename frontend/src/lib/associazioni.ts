@@ -189,6 +189,22 @@ const SPORT_REGIONE: Record<string, Associazione[]> = {
       sito: "https://sportabilityliguria.it",
     },
   ],
+  Lombardia: [
+    {
+      nome: "CIP – Comitato Paralimpico Lombardia",
+      cosa: "Coordina lo sport paralimpico in Lombardia: tutte le discipline riconosciute, per persone con disabilità fisica, sensoriale e intellettivo-relazionale. Ti indica la società sportiva più vicina.",
+      dove: "Via Piranesi 46-48, 20137 Milano",
+      telefono: "02 70120595",
+      email: "lombardia@comitatoparalimpico.it",
+      sito: "https://www.comitatoparalimpico.it/organizzazione/territorio/comitati-regionali/lombardia.html",
+    },
+    {
+      nome: "Special Olympics – Team Lombardia",
+      cosa: "Allenamenti e gare per persone con disabilità intellettiva, senza limiti di età. Per la provincia di Milano scrivi al Direttore Regionale, che indica il Team più vicino.",
+      email: "lombardia@specialolympics.it",
+      sito: "https://www.specialolympics.it",
+    },
+  ],
 };
 
 // ---------------------------------------------------------------- validi ovunque
