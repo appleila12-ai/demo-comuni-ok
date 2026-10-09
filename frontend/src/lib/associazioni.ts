@@ -189,6 +189,22 @@ const SPORT_REGIONE: Record<string, Associazione[]> = {
       sito: "https://sportabilityliguria.it",
     },
   ],
+  Lazio: [
+    {
+      nome: "CIP – Comitato Paralimpico Lazio",
+      cosa: "Coordina lo sport paralimpico nel Lazio, con delegati per Roma, Viterbo, Frosinone, Latina e Rieti, e ti indica la società sportiva più vicina.",
+      dove: "Piazzale degli Archivi 41, 00144 Roma",
+      telefono: "06 83559010",
+      email: "lazio@comitatoparalimpico.it",
+      sito: "https://www.comitatoparalimpico.it/organizzazione/territorio/comitati-regionali/lazio.html",
+    },
+    {
+      nome: "Special Olympics – Team Lazio",
+      cosa: "Allenamenti e gare per persone con disabilità intellettiva, senza limiti di età. Scrivi alla Direttrice Regionale: ti indica il Team più vicino a casa tua.",
+      email: "lazio@specialolympics.it",
+      sito: "https://www.specialolympics.it",
+    },
+  ],
   Lombardia: [
     {
       nome: "CIP – Comitato Paralimpico Lombardia",
@@ -296,6 +312,17 @@ PER_PROVINCIA.MI.volontariato.unshift(
     verificare: true,
   },
 );
+
+// Fiumicino (RM): tempo libero e mare. Dati da articoli e dal sito della Regione Lazio (ottobre 2026)
+PER_PROVINCIA.RM = PER_PROVINCIA.RM ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.RM.volontariato.unshift({
+  nome: "Spiaggia per tutti – Lungomare della Salute",
+  cosa: "Lido attrezzato, accessibile e senza barriere, aperto a tutti: bagni e docce adatti, pedane, sedie da mare speciali e assistenti specializzati. Nell'estate 2025 c'erano ombrelloni e lettini gratuiti. Gestito dalla cooperativa \"A Casa di Enzo\" e inserito dalla Regione Lazio tra le spiagge inclusive.",
+  dove: "Lungomare della Salute, altezza civico 55 (di fronte a via Giovanni Magro), Fiumicino",
+  sito: "https://www.regione.lazio.it/notizie/accessibility-seaside-spiagge-inclusive",
+  comuni: ["fiumicino"],
+  verificare: true,
+});
 
 // Ferentino (FR)
 PER_PROVINCIA.FR = PER_PROVINCIA.FR ?? { volontariato: [], sport: [] };

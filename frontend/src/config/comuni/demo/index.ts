@@ -41,6 +41,7 @@ import { faenza } from "./faenza";
 import { fano } from "./fano";
 import { ferentino } from "./ferentino";
 import { fiorenzuolaDArda } from "./fiorenzuola-d-arda";
+import { fiumicino } from "./fiumicino";
 import { frascati } from "./frascati";
 import { galbiate } from "./galbiate";
 import { giudicarie } from "./giudicarie";
@@ -134,6 +135,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   fano,
   ferentino,
   fiorenzuolaDArda,
+  fiumicino,
   frascati,
   galbiate,
   giudicarie,
