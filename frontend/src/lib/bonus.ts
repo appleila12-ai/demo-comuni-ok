@@ -11,6 +11,7 @@
 // Prima raccolta: 06/10/2026, solo Liguria e provincia della Spezia.
 // Seconda raccolta: 08/10/2026, Sicilia e Comune di Palermo.
 // Terza raccolta: 08/10/2026, Lombardia e Comune di Milano.
+// Quarta raccolta: 09/10/2026, Lazio e Comune di Fiumicino.
 
 import { comune } from "@/src/config/comune";
 
@@ -338,6 +339,130 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "08/10/2026",
     nota: "La pagina non ha una data: importi e soglie di reddito vanno confermati con ATM.",
+  },
+
+  // -------------------------------------------------------------------- LAZIO
+  {
+    id: "lazio-disabilita-gravissima",
+    regione: "Lazio",
+    titolo: "Disabilità gravissima: assistenza domiciliare, assegno di cura o contributo di cura",
+    perChi:
+      "Persone non autosufficienti che vogliono restare a casa con un sostegno intenso e continuo, in una delle condizioni previste dal decreto ministeriale del 26 settembre 2016. Servono l'indennità di accompagnamento oppure la non autosufficienza riconosciuta ai sensi dell'allegato 3 del DPCM 159/2013.",
+    cosa:
+      "Un servizio di assistenza domiciliare, oppure una misura economica: l'assegno di cura serve a pagare un operatore con regolare contratto scelto da te, il contributo di cura compensa l'assistenza data dal caregiver. La pagina della Regione non scrive gli importi.",
+    stato: "da-verificare",
+    comeSiChiede:
+      "La pagina non spiega come presentare la domanda. La Regione assegna ogni anno le risorse ai Distretti sociosanitari: chiedi al Segretariato Sociale del tuo Comune o al PUA. Informazioni: Numero Unico Regionale 06 99 500 (lun-ven 8:00-17:30).",
+    fonte: {
+      label: "Regione Lazio · Disabilità gravissima",
+      url: "https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/disabilita-gravissima",
+    },
+    verificatoIl: "09/10/2026",
+    nota: "Pagina della Regione aggiornata il 04/03/2026. Soglie ISEE e scadenze non sono scritte: confermale con il Distretto.",
+  },
+
+  // ----------------------------------------------------------- COMUNE DI FIUMICINO
+  {
+    id: "fiumicino-caregiver-2026",
+    regione: "Lazio",
+    comuni: ["fiumicino"],
+    titolo: "Sostegno ai caregiver familiari riconosciuti (2026)",
+    perChi:
+      "Caregiver familiari residenti a Fiumicino, già riconosciuti e con la Card del Caregiver, iscritti nel registro comunale dello Sportello Caregiver. Per i contributi in denaro l'ISEE ordinario del caregiver non deve superare 24.000 euro. Le risorse vanno prima ai caregiver di persone con disabilità gravissima.",
+    cosa:
+      "Budget personale una tantum fino a 1.000 euro, senza rendicontazione. Supporto psicologico: 50 euro a seduta, fino a 500 euro l'anno. Sollievo indiretto: rimborso di 500 euro l'anno (600 euro per disabilità complessa ad alta intensità). Poi sollievo a domicilio con personale del Comune, gruppi di mutuo aiuto e giornate informative, senza importi.",
+    stato: "chiuso",
+    quando:
+      "Domande entro l'8 giugno 2026. Spese ammesse dal 1 gennaio al 31 dicembre 2026. Controlla con il Comune se e quando riapre.",
+    comeSiChiede:
+      "Modulo \"Modello A\" al PUA (Via Coni Zugna 173, o Casa della Salute di Palidoro), al Segretariato Sociale (Piazza Dalla Chiesa 10) o sul sito del Comune. Si consegna all'Ufficio Protocollo (mar e gio 15:00-17:00) o per PEC a protocollo.generale@pec.comune.fiumicino.rm.it.",
+    fonte: {
+      label: "Comune di Fiumicino · Avviso caregiver familiari 2026",
+      url: "https://fiumicino-api.municipiumapp.it/s3/2808/allegati/caregiver.pdf",
+    },
+    verificatoIl: "09/10/2026",
+  },
+  {
+    id: "fiumicino-autismo-0-21-2026",
+    regione: "Lazio",
+    comuni: ["fiumicino"],
+    titolo: "Autismo 0-21 anni: contributo per la socializzazione (2026)",
+    perChi:
+      "Persone con diagnosi di disturbo dello spettro autistico, minori o fino a 21 anni, residenti a Fiumicino. Hanno la precedenza le famiglie con più di un figlio nello spettro e ISEE fino a 8.000 euro.",
+    cosa:
+      "Contributo da 500 a 700 euro al mese per 4 mesi, per percorsi di assistenza alla socializzazione. L'importo dipende dai servizi già attivi e dalla situazione economica della famiglia. Spese ammesse dal 1 giugno al 30 settembre 2026.",
+    stato: "chiuso",
+    quando:
+      "Domande entro il 3 agosto 2026. Rendicontazione delle spese entro il 31 ottobre 2026.",
+    comeSiChiede:
+      "Modulo \"Modello A\" con documento, diagnosi e ISEE: si ritira al PUA, al Segretariato Sociale o sul sito del Comune e si consegna all'Ufficio Protocollo (mar e gio 15:00-17:00) o per PEC. Segue la valutazione con ASL Roma 3 e UVMD.",
+    fonte: {
+      label: "Comune di Fiumicino · Avviso autismo 0-21 anni 2026",
+      url: "https://fiumicino-api.municipiumapp.it/s3/2808/allegati/avviso-pubblico-autismo-0-21_signed.pdf",
+    },
+    verificatoIl: "09/10/2026",
+  },
+  {
+    id: "fiumicino-autismo-famiglie-0-12",
+    regione: "Lazio",
+    comuni: ["fiumicino"],
+    titolo: "Autismo fino a 12 anni: rimborso degli interventi alle famiglie",
+    perChi:
+      "Famiglie residenti a Fiumicino con minori fino a 12 anni con diagnosi di disturbo dello spettro autistico. Precedenza ai nuclei con più di un figlio nello spettro e ISEE fino a 8.000 euro.",
+    cosa:
+      "Contributo alle spese per interventi come ABA, EIBI, ESDM e TEACCH, svolti da professionisti dell'Elenco regionale e concordati con l'Azienda Sanitaria. Cresce al calare dell'ISEE, fino a 5.000 euro l'anno per bambino. Spese del 2026.",
+    stato: "chiuso",
+    quando:
+      "Domande entro il 30 settembre 2026. Rendicontazione entro il 31 gennaio 2027, graduatoria definitiva entro il 31 marzo 2027.",
+    comeSiChiede:
+      "Modulo \"Modello A\" con documento, diagnosi e ISEE: si ritira al PUA, al Segretariato Sociale o sul sito del Comune e si consegna all'Ufficio Protocollo (mar e gio 15:00-17:00) o per PEC.",
+    fonte: {
+      label: "Comune di Fiumicino · Avviso famiglie autismo 0-12 anni 2026",
+      url: "https://fiumicino-api.municipiumapp.it/s3/2808/allegati/avviso-pubblico-sostegno-famiglie-0-12-2026_signed.pdf",
+    },
+    verificatoIl: "09/10/2026",
+    nota: "L'avviso scrive sia \"annualità 2025\" sia spese del 2026: conferma con il Comune.",
+  },
+  {
+    id: "fiumicino-vita-indipendente",
+    regione: "Lazio",
+    comuni: ["fiumicino"],
+    titolo: "Vita indipendente: progetto personalizzato con budget",
+    perChi:
+      "Persone con disabilità grave (art. 3 comma 3, L. 104/92) tra 18 e 64 anni, residenti a Fiumicino, in grado di decidere per sé direttamente o tramite un rappresentante. Serve l'ISEE ordinario. La domanda può essere fatta anche da un familiare.",
+    cosa:
+      "Un progetto personalizzato di circa 12 mesi per l'inclusione sociale e lavorativa, con un budget deciso dall'équipe di valutazione (UVMD). L'avviso non scrive gli importi. Si finanzia in ordine di graduatoria, nei limiti delle risorse.",
+    stato: "chiuso",
+    quando:
+      "L'ultimo avviso che abbiamo letto scadeva il 25 gennaio 2025 (fondi regionali 2024). Non sappiamo se ce n'è uno più recente.",
+    comeSiChiede:
+      "Chiedi al Segretariato Sociale se è aperto un nuovo avviso. Il modulo e la consegna funzionano come per gli altri avvisi del Comune (PUA, Segretariato, Ufficio Protocollo il mar e gio 15:00-17:00, o PEC).",
+    fonte: {
+      label: "Comune di Fiumicino · Avviso Vita Indipendente",
+      url: "https://fiumicino-api.municipiumapp.it/s3/2808/allegati/avviso_pubblico_vita_indipendente_signed-1.pdf",
+    },
+    verificatoIl: "09/10/2026",
+    nota: "Avviso del 2024-2025: serve verificare se è stato sostituito da uno nuovo.",
+  },
+  {
+    id: "fiumicino-centro-diurno-adulti",
+    regione: "Lazio",
+    comuni: ["fiumicino"],
+    titolo: "Centro diurno per adulti con disabilità grave",
+    perChi:
+      "Adulti con disabilità grave tra 18 e 64 anni, residenti a Fiumicino, con certificazione L. 104/92 (art. 3 commi 1 e 3) e ISEE in corso di validità. La domanda può essere fatta dalla persona, da un familiare o da chi la rappresenta.",
+    cosa:
+      "Raccolta delle domande per una graduatoria di accesso a un centro diurno semiresidenziale: attività creative, educative e aggregative, lavoro su autonomia e socializzazione, sollievo per la famiglia. L'avviso non scrive costi o importi.",
+    stato: "chiuso",
+    quando:
+      "Domande entro il 9 febbraio 2026. I progetti si concludono il 31 dicembre 2027. Chi è idoneo ma non trova posto resta in lista d'attesa.",
+    comeSiChiede:
+      "Valutazione dell'équipe UVMD e graduatoria di Distretto. Per chiedere se si riapre: Segretariato Sociale, tel. 06 65210245.",
+    fonte: {
+      label: "Comune di Fiumicino · Avviso centro diurno adulti con disabilità",
+      url: "https://fiumicino-api.municipiumapp.it/s3/2808/allegati/avviso_pubblico_centro_diurno_fiumicino_signed.pdf",
+    },
+    verificatoIl: "09/10/2026",
   },
 ];
 
