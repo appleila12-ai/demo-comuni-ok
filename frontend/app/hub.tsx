@@ -161,7 +161,7 @@ export default function Hub() {
     setMomento(m);
     storage.setItem(MOMENTO_KEY, m);
     registra("momento", m);
-    if (m === "diagnosi") return router.push("/percorso");
+    if (m === "diagnosi") return router.push("/primi-passi" as any);
     if (m === "iter") return router.push("/tracker");
     router.push("/verbale" as any);
   };

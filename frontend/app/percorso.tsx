@@ -24,11 +24,25 @@ import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import { HeaderComune } from "@/src/components/HeaderComune";
 
+// Per ogni passo di NEXT_STEPS (stesso ordine): dove andare per farlo davvero.
+const AZIONI: { label: string; route: string; icon: any }[] = [
+  { label: "Segna i passi nella mia pratica", route: "/tracker", icon: "footsteps-outline" },
+  { label: "Cosa cambia con la riforma", route: "/riforma", icon: "document-text-outline" },
+  { label: "Ho il verbale: cosa mi spetta", route: "/verbale", icon: "shield-checkmark-outline" },
+  { label: "Prepara la lettera per i Servizi Sociali", route: "/lettere?id=progetto-vita", icon: "create-outline" },
+  { label: "Prepara il mio Progetto di Vita", route: "/progetto", icon: "sparkles-outline" },
+];
+
 export default function PercorsoScreen() {
   useSezione("percorso");
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const [tutto, setTutto] = useState(false);
+  const [passo, setPasso] = useState(0);
+  const totale = NEXT_STEPS.length;
+  const ultimo = passo === totale - 1;
+  const step = NEXT_STEPS[passo];
+  const azione = AZIONI[passo];
   return (
     <SafeAreaView style={styles.safe} edges={["top"]} testID="percorso-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
@@ -65,27 +79,60 @@ export default function PercorsoScreen() {
           Regole per {comune.nome} · Regione {comune.regione}
         </Text>
 
-        {/* Subito la richiesta di riconoscimento */}
+        {/* Il percorso, un passo alla volta: Avanti / Indietro */}
         <View style={styles.richiesta} testID="percorso-richiesta">
-          <Text style={styles.richiestaLabel}>PRIMO PASSO</Text>
-          <Text style={styles.richiestaTitolo}>{NEXT_STEPS[0].title}</Text>
-          <Text style={styles.richiestaTesto}>{NEXT_STEPS[0].body}</Text>
+          <Text style={styles.richiestaLabel} accessibilityLiveRegion="polite" testID="percorso-contatore">
+            PASSO {passo + 1} DI {totale}
+          </Text>
+          <View style={styles.barre} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
+            {NEXT_STEPS.map((s, i) => (
+              <View key={s.title} style={[styles.barra, i <= passo && styles.barraOn]} />
+            ))}
+          </View>
+          <Text style={styles.richiestaTitolo} accessibilityRole="header" testID="percorso-passo-titolo">
+            {step.title}
+          </Text>
+          <Text style={styles.richiestaTesto}>{step.body}</Text>
+
+          {/* Come fare questo passo */}
           <Pressable
-            onPress={() => router.push("/tracker" as any)}
-            style={({ pressed }) => [styles.dirittiBtn, { marginTop: spacing.md }, pressed && { opacity: 0.85 }]}
+            onPress={() => router.push(azione.route as any)}
+            style={({ pressed }) => [styles.azioneBtn, pressed && { opacity: 0.85 }]}
             accessibilityRole="button"
-            testID="percorso-pratica"
+            testID="percorso-azione"
           >
-            <Ionicons name="footsteps-outline" size={22} color="#FFFFFF" />
-            <View style={styles.flex}>
-              <Text style={styles.dirittiTitolo}>Segui la mia pratica</Text>
-              <Text style={styles.dirittiSub}>Segna le tappe e le scadenze</Text>
-            </View>
-            <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
+            <Ionicons name={azione.icon} size={20} color={colors.brandPrimaryDark} />
+            <Text style={styles.azioneText}>{azione.label}</Text>
+            <Ionicons name="chevron-forward" size={16} color={colors.brandPrimaryDark} />
           </Pressable>
+
+          <View style={styles.navRiga}>
+            {passo > 0 ? (
+              <Pressable
+                onPress={() => setPasso((p) => Math.max(0, p - 1))}
+                style={({ pressed }) => [styles.navIndietro, pressed && { opacity: 0.85 }]}
+                accessibilityRole="button"
+                accessibilityLabel="Passo precedente"
+                testID="percorso-indietro"
+              >
+                <Ionicons name="arrow-back" size={18} color={colors.brandPrimaryDark} />
+                <Text style={styles.navIndietroText}>Indietro</Text>
+              </Pressable>
+            ) : null}
+            <Pressable
+              onPress={() => (ultimo ? router.push("/progetto" as any) : setPasso((p) => Math.min(totale - 1, p + 1)))}
+              style={({ pressed }) => [styles.navAvanti, pressed && { opacity: 0.85 }]}
+              accessibilityRole="button"
+              accessibilityLabel={ultimo ? "Vai al Progetto di Vita" : "Passo successivo"}
+              testID="percorso-avanti"
+            >
+              <Text style={styles.navAvantiText}>{ultimo ? "Vai al Progetto di Vita" : "Avanti"}</Text>
+              <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
+            </Pressable>
+          </View>
         </View>
 
-        {/* Tutta la parte informativa, fino ai livelli di sostegno, dietro un solo tasto */}
+        {/* Panoramica di tutti i passi e livelli di sostegno, dietro un solo tasto */}
         <Pressable
           onPress={() => setTutto((v) => !v)}
           style={({ pressed }) => [styles.toccaTutto, pressed && { opacity: 0.85 }]}
@@ -95,7 +142,7 @@ export default function PercorsoScreen() {
         >
           <Ionicons name="book-outline" size={20} color={colors.brandPrimaryDark} />
           <Text style={styles.toccaTuttoText}>
-            {tutto ? "Nascondi le informazioni" : "Voglio saperne di più, fino ai livelli di sostegno"}
+            {tutto ? "Nascondi i dettagli" : "Vedi tutti i passi e i livelli di sostegno"}
           </Text>
           <Ionicons name={tutto ? "chevron-up" : "chevron-down"} size={18} color={colors.brandPrimaryDark} />
         </Pressable>
@@ -246,6 +293,44 @@ const styles = StyleSheet.create({
   richiestaLabel: { fontSize: 12, fontWeight: "800", color: colors.brandPrimaryDark, letterSpacing: 1 },
   richiestaTitolo: { fontFamily: fonts.serif, fontSize: 18, lineHeight: 24, fontWeight: "700", color: colors.onSurface, marginTop: 4 },
   richiestaTesto: { fontSize: 15, lineHeight: 22, color: colors.onSurface, marginTop: spacing.sm },
+  barre: { flexDirection: "row", gap: 6, marginTop: spacing.sm },
+  barra: { flex: 1, height: 6, borderRadius: 3, backgroundColor: colors.surfaceTertiary },
+  barraOn: { backgroundColor: colors.brandPrimaryDark },
+  azioneBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.sm,
+    minHeight: 48,
+    paddingHorizontal: spacing.md,
+    marginTop: spacing.md,
+    borderRadius: radius.lg,
+    borderWidth: 1.5,
+    borderColor: colors.brandPrimaryDark,
+  },
+  azioneText: { flex: 1, fontSize: 15, fontWeight: "800", color: colors.brandPrimaryDark },
+  navRiga: { flexDirection: "row", gap: spacing.sm, marginTop: spacing.md },
+  navIndietro: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 6,
+    minHeight: 52,
+    paddingHorizontal: spacing.lg,
+    borderRadius: radius.lg,
+    backgroundColor: colors.surfaceSecondary,
+  },
+  navIndietroText: { fontSize: 15, fontWeight: "800", color: colors.brandPrimaryDark },
+  navAvanti: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+    minHeight: 52,
+    borderRadius: radius.lg,
+    backgroundColor: colors.brandPrimaryDark,
+  },
+  navAvantiText: { fontSize: 16, fontWeight: "800", color: "#FFFFFF" },
   toccaTutto: {
     flexDirection: "row",
     alignItems: "center",
