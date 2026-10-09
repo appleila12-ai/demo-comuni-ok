@@ -143,6 +143,19 @@ export default function PrimiPassiScreen() {
               </View>
             );
           })}
+          {/* Il passo dopo: dai primi passi al riconoscimento */}
+          <Pressable
+            onPress={() => router.push("/percorso" as any)}
+            style={({ pressed }) => [styles.avantiBtn, pressed && { opacity: 0.85 }]}
+            accessibilityRole="button"
+            testID="primi-passi-avanti"
+          >
+            <View style={styles.flex}>
+              <Text style={styles.avantiTitolo}>Avanti: come ottenere il riconoscimento</Text>
+              <Text style={styles.avantiSub}>Dal certificato del medico al verbale, un passo alla volta</Text>
+            </View>
+            <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
+          </Pressable>
           <Text style={styles.primiIntro} testID="home-primi-intro">
             Se in futuro la tua condizione dovesse comportare un&apos;invalidità
             riconosciuta, qui trovi tutto il percorso.
@@ -244,4 +257,16 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
   },
   orientarsiCard: { marginTop: spacing.md },
+  avantiBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.md,
+    minHeight: 56,
+    backgroundColor: colors.brandPrimaryDark,
+    borderRadius: radius.lg,
+    padding: spacing.md,
+    marginTop: spacing.md,
+  },
+  avantiTitolo: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
+  avantiSub: { color: "#FFFFFF", fontSize: 14, lineHeight: 19, marginTop: 2 },
 });

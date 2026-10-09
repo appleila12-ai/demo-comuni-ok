@@ -128,6 +128,17 @@ export default function RiformaScreen() {
             </Text>
           </Pressable>
 
+          {/* Il passo dopo: dalla spiegazione ai passi concreti */}
+          <Pressable
+            onPress={() => router.push("/percorso" as any)}
+            style={({ pressed }) => [styles.avantiBtn, pressed && { opacity: 0.85 }]}
+            accessibilityRole="button"
+            testID="riforma-avanti"
+          >
+            <Text style={styles.avantiTesto}>Come ottenere il riconoscimento, passo passo</Text>
+            <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
+          </Pressable>
+
           <SezioniBar />
         </ScrollView>
       )}
@@ -138,6 +149,18 @@ export default function RiformaScreen() {
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.background },
   flex: { flex: 1 },
+  avantiBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: spacing.md,
+    minHeight: 56,
+    backgroundColor: colors.brandPrimaryDark,
+    borderRadius: radius.lg,
+    padding: spacing.md,
+    marginTop: spacing.lg,
+  },
+  avantiTesto: { flex: 1, color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
   centered: {
     flex: 1,
     alignItems: "center",
