@@ -58,7 +58,7 @@ function Scheda({ d, onBonus, onLettera }: { d: Diritto; onBonus: () => void; on
             accessibilityRole="button"
             accessibilityLabel="Prepara la lettera per il datore di lavoro"
           >
-            <Ionicons name="mail-outline" size={16} color={colors.brandPrimaryDark} />
+            <Ionicons name="mail-outline" size={22} color={colors.brandPrimaryDark} />
             <Text style={styles.linkText}>Prepara la lettera per il datore di lavoro</Text>
           </Pressable>
         ) : null}
@@ -69,7 +69,7 @@ function Scheda({ d, onBonus, onLettera }: { d: Diritto; onBonus: () => void; on
             accessibilityRole="button"
             accessibilityLabel={`Vedi la scheda completa: ${d.titolo}`}
           >
-            <Ionicons name="document-text-outline" size={16} color={colors.brandPrimaryDark} />
+            <Ionicons name="document-text-outline" size={22} color={colors.brandPrimaryDark} />
             <Text style={styles.linkText}>Vedi la scheda completa</Text>
           </Pressable>
         ) : null}
@@ -80,7 +80,7 @@ function Scheda({ d, onBonus, onLettera }: { d: Diritto; onBonus: () => void; on
             accessibilityRole="link"
             accessibilityLabel={`Apri la fonte: ${d.fonte.label}`}
           >
-            <Ionicons name="open-outline" size={16} color={colors.brandPrimaryDark} />
+            <Ionicons name="open-outline" size={22} color={colors.brandPrimaryDark} />
             <Text style={styles.linkText}>Apri la fonte ufficiale</Text>
           </Pressable>
         ) : null}
@@ -197,7 +197,7 @@ function DateVerbale({ onScadenze }: { onScadenze: () => void }) {
           accessibilityRole="button"
           accessibilityLabel="Apri Le mie scadenze"
         >
-          <Ionicons name="calendar-outline" size={16} color={colors.brandPrimaryDark} />
+          <Ionicons name="calendar-outline" size={22} color={colors.brandPrimaryDark} />
           <Text style={styles.linkText}>Apri Le mie scadenze</Text>
         </Pressable>
       ) : null}
@@ -395,7 +395,7 @@ export default function VerbalePagina() {
                 accessibilityRole="button"
                 accessibilityLabel={`Chiama ${comune.ente}`}
               >
-                <Ionicons name="call-outline" size={16} color={colors.brandPrimaryDark} />
+                <Ionicons name="call-outline" size={22} color={colors.brandPrimaryDark} />
                 <Text style={styles.linkText}>Chiama {comune.telefono}</Text>
               </Pressable>
             )}
@@ -425,10 +425,10 @@ const styles = StyleSheet.create({
     borderRadius: radius.pill,
     marginBottom: spacing.sm,
   },
-  badgeText: { fontSize: 14, fontWeight: "800", color: colors.onSurface },
-  titolo: { fontSize: 18, lineHeight: 24, fontWeight: "700", color: colors.onSurface, marginBottom: spacing.sm },
-  rigaTitolo: { fontSize: 14, fontWeight: "800", color: colors.onSurface, marginTop: spacing.sm, marginBottom: 2 },
-  testo: { fontSize: 15, lineHeight: 22, color: colors.onSurface },
+  badgeText: { fontSize: 17, fontWeight: "800", color: colors.onSurface },
+  titolo: { fontSize: 20, lineHeight: 27, fontWeight: "700", color: colors.onSurface, marginBottom: spacing.sm },
+  rigaTitolo: { fontSize: 17, fontWeight: "800", color: colors.onSurface, marginTop: spacing.sm, marginBottom: 2 },
+  testo: { fontSize: 17, lineHeight: 25, color: colors.onSurface },
   piede: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: spacing.sm, marginTop: spacing.md },
   link: {
     flexDirection: "row",
@@ -442,6 +442,6 @@ const styles = StyleSheet.create({
     alignSelf: "flex-start",
     marginTop: spacing.sm,
   },
-  linkText: { fontSize: 14, fontWeight: "800", color: colors.brandPrimaryDark },
-  controllo: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary, marginTop: spacing.sm },
+  linkText: { fontSize: 17, fontWeight: "800", color: colors.brandPrimaryDark },
+  controllo: { fontSize: 17, lineHeight: 24, color: colors.onSurfaceSecondary, marginTop: spacing.sm },
 });

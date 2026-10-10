@@ -29,14 +29,14 @@ export default function Wizard() {
         behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
         <View style={styles.header}>
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => router.back()}
             style={styles.iconBtn}
             hitSlop={12}
             accessibilityLabel="Indietro"
             testID="wizard-back-btn"
           >
-            <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+            <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
           </Pressable>
           <Text style={styles.headerTitle}>Il percorso per il riconoscimento</Text>
           <HeaderComune />
@@ -67,8 +67,8 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   iconBtn: {
-    width: 40,
-    height: 40,
+    width: 48,
+    height: 48,
     borderRadius: radius.pill,
     backgroundColor: colors.surfaceSecondary,
     alignItems: "center",
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.serif,
     flex: 1,
     textAlign: "center",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },

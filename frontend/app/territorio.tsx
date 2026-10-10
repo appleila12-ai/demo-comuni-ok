@@ -102,14 +102,14 @@ export default function Territorio() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="territorio-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
           accessibilityLabel="Indietro"
           testID="territorio-back-btn"
         >
-          <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+          <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Aiuti e contatti</Text>
         <HeaderComune />
@@ -147,7 +147,7 @@ export default function Territorio() {
             <ComuneLogo size={comune.logo ? 56 : 40} />
             <View style={styles.flex}>
               <Text style={[styles.comuneEyebrow, { color: t.warmDark }]}>
-                IL PRIMO PASSO È {comune.soggetto.toUpperCase()}
+                Il primo passo è {comune.soggetto}
               </Text>
               <Text style={styles.comuneNome}>{comune.nome}</Text>
               <Text style={styles.comuneEnte}>{comune.ente}</Text>
@@ -159,12 +159,12 @@ export default function Territorio() {
           </Text>
           {!!comune.indirizzo && (
             <Text style={styles.comuneInfo}>
-              <Ionicons name="location-outline" size={13} /> {comune.indirizzo}
+              <Ionicons name="location-outline" size={19} /> {comune.indirizzo}
             </Text>
           )}
           {!!comune.orari && (
             <Text style={styles.comuneInfo}>
-              <Ionicons name="time-outline" size={13} /> {comune.orari}
+              <Ionicons name="time-outline" size={19} /> {comune.orari}
             </Text>
           )}
           <View style={styles.comuneActions}>
@@ -175,7 +175,7 @@ export default function Territorio() {
                 accessibilityRole="button"
                 testID="territorio-comune-tel"
               >
-                <Ionicons name="call-outline" size={16} color="#fff" />
+                <Ionicons name="call-outline" size={22} color="#fff" />
                 <Text style={styles.actionBtnText}>Chiama</Text>
               </Pressable>
             )}
@@ -186,7 +186,7 @@ export default function Territorio() {
                 accessibilityRole="button"
                 testID="territorio-comune-mail"
               >
-                <Ionicons name="mail-outline" size={16} color={t.warmDark} />
+                <Ionicons name="mail-outline" size={22} color={t.warmDark} />
                 <Text style={[styles.actionBtnGhostText, { color: t.warmDark }]}>Email</Text>
               </Pressable>
             )}
@@ -197,7 +197,7 @@ export default function Territorio() {
                 accessibilityRole="button"
                 testID="territorio-comune-web"
               >
-                <Ionicons name="globe-outline" size={16} color={t.warmDark} />
+                <Ionicons name="globe-outline" size={22} color={t.warmDark} />
                 <Text style={[styles.actionBtnGhostText, { color: t.warmDark }]}>Sito</Text>
               </Pressable>
             )}
@@ -215,13 +215,13 @@ export default function Territorio() {
           testID="territorio-salute"
         >
           <View style={[styles.puntoIcon, { backgroundColor: t.warmSoft }]}>
-            <Ionicons name="medkit-outline" size={18} color={t.warmDark} />
+            <Ionicons name="medkit-outline" size={22} color={t.warmDark} />
           </View>
           <View style={styles.flex}>
             <Text style={styles.puntoTitle}>Salute vicino a te</Text>
             <Text style={styles.puntoSub}>Prenota visite ed esami, farmacie di turno, guardia medica</Text>
           </View>
-          <Ionicons name="chevron-forward" size={18} color={t.warmDark} />
+          <Ionicons name="chevron-forward" size={22} color={t.warmDark} />
         </Pressable>
 
         {/* Associazioni: volontariato e sport */}
@@ -232,13 +232,13 @@ export default function Territorio() {
           testID="territorio-associazioni"
         >
           <View style={[styles.puntoIcon, { backgroundColor: t.warmSoft }]}>
-            <Ionicons name="heart-outline" size={18} color={t.warmDark} />
+            <Ionicons name="heart-outline" size={22} color={t.warmDark} />
           </View>
           <View style={styles.flex}>
             <Text style={styles.puntoTitle}>Associazioni e sport</Text>
             <Text style={styles.puntoSub}>Volontariato, famiglie e società sportive della zona</Text>
           </View>
-          <Ionicons name="chevron-forward" size={18} color={t.warmDark} />
+          <Ionicons name="chevron-forward" size={22} color={t.warmDark} />
         </Pressable>
 
         {/* Servizi del territorio indicati dal Comune */}
@@ -255,7 +255,7 @@ export default function Territorio() {
                 accessibilityRole="button"
               >
                 <View style={[styles.puntoIcon, { backgroundColor: t.warmSoft }]}>
-                  <Ionicons name={p.icon} size={18} color={t.warmDark} />
+                  <Ionicons name={p.icon} size={22} color={t.warmDark} />
                 </View>
                 <View style={styles.flex}>
                   <Text style={styles.puntoTitle}>{p.title}</Text>
@@ -294,7 +294,7 @@ export default function Territorio() {
             <View style={styles.cardBody}>
               <View style={styles.cardHeader}>
                 <View style={[styles.cardIcon, { backgroundColor: c.soft }]}>
-                  <Ionicons name={c.icon} size={22} color={c.color} />
+                  <Ionicons name={c.icon} size={24} color={c.color} />
                 </View>
                 <View style={styles.flex}>
                   <Text style={[styles.cardLabel, { color: c.color }]}>
@@ -331,7 +331,7 @@ export default function Territorio() {
               accessibilityRole="button"
             >
               <View style={[styles.puntoIcon, { backgroundColor: t.warmSoft }]}>
-                <Ionicons name={p.icon as any} size={18} color={t.warmDark} />
+                <Ionicons name={p.icon as any} size={22} color={t.warmDark} />
               </View>
               <View style={styles.flex}>
                 <Text style={styles.puntoTitle}>{p.title}</Text>
@@ -348,13 +348,13 @@ export default function Territorio() {
 
         {/* Portale regionale: informazione secondaria */}
         {portal && (
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => apri(portal.url)}
             style={styles.regionLine}
             hitSlop={6}
             testID="territorio-portal-link"
           >
-            <Ionicons name="information-circle-outline" size={16} color={colors.onSurfaceTertiary} />
+            <Ionicons name="information-circle-outline" size={22} color={colors.onSurfaceTertiary} />
             <Text style={styles.regionLineText}>
               Regole della Regione {regione}: <Text style={styles.regionLink}>{portal.label} ↗</Text>
             </Text>
@@ -401,8 +401,8 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   iconBtn: {
-    width: 40,
-    height: 40,
+    width: 48,
+    height: 48,
     borderRadius: radius.pill,
     backgroundColor: colors.surfaceSecondary,
     alignItems: "center",
@@ -412,7 +412,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.serif,
     flex: 1,
     textAlign: "center",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
@@ -434,15 +434,15 @@ const styles = StyleSheet.create({
   },
   heroTitle: {
     color: colors.onSurface,
-    fontSize: 19,
+    fontSize: 21,
     fontWeight: "800",
     letterSpacing: -0.3,
   },
   heroSub: {
     color: colors.onSurface,
-    fontSize: 12,
+    fontSize: 15,
     marginTop: 3,
-    lineHeight: 17,
+    lineHeight: 21,
   },
 
   comuneCard: {
@@ -452,23 +452,23 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   comuneTop: { flexDirection: "row", alignItems: "center", gap: spacing.md },
-  comuneEyebrow: { fontSize: 10, fontWeight: "800", letterSpacing: 1 },
+  comuneEyebrow: { fontSize: 15, fontWeight: "800", letterSpacing: 0.3 },
   comuneNome: {
     fontFamily: fonts.serif,
-    fontSize: 19,
+    fontSize: 21,
     fontWeight: "700",
     color: colors.onSurface,
     marginTop: 2,
   },
-  comuneEnte: { fontSize: 13, color: colors.onSurfaceSecondary, marginTop: 1 },
+  comuneEnte: { fontSize: 16, color: colors.onSurfaceSecondary, marginTop: 1 },
   comuneText: {
-    fontSize: 14,
-    lineHeight: 20,
+    fontSize: 17,
+    lineHeight: 24,
     color: colors.onSurface,
     marginTop: spacing.md,
     marginBottom: spacing.sm,
   },
-  comuneInfo: { fontSize: 12, lineHeight: 18, color: colors.onSurfaceSecondary },
+  comuneInfo: { fontSize: 15, lineHeight: 23, color: colors.onSurfaceSecondary },
   comuneActions: { flexDirection: "row", flexWrap: "wrap", gap: spacing.sm, marginTop: spacing.md },
   actionBtn: {
     flexDirection: "row",
@@ -478,7 +478,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.lg,
     borderRadius: radius.pill,
   },
-  actionBtnText: { color: "#fff", fontSize: 14, fontWeight: "800" },
+  actionBtnText: { color: "#fff", fontSize: 17, fontWeight: "800" },
   actionBtnGhost: {
     flexDirection: "row",
     alignItems: "center",
@@ -489,12 +489,12 @@ const styles = StyleSheet.create({
     borderWidth: 1.5,
     backgroundColor: colors.surface,
   },
-  actionBtnGhostText: { fontSize: 14, fontWeight: "800" },
+  actionBtnGhostText: { fontSize: 17, fontWeight: "800" },
 
   section: { marginBottom: spacing.md },
   sectionTitle: {
     fontFamily: fonts.serif,
-    fontSize: 17,
+    fontSize: 19,
     fontWeight: "700",
     color: colors.onSurface,
     marginBottom: spacing.sm,
@@ -518,8 +518,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  puntoTitle: { fontSize: 14, fontWeight: "800", color: colors.onSurface },
-  puntoSub: { fontSize: 12, lineHeight: 17, color: colors.onSurfaceSecondary, marginTop: 2 },
+  puntoTitle: { fontSize: 17, fontWeight: "800", color: colors.onSurface },
+  puntoSub: { fontSize: 15, lineHeight: 21, color: colors.onSurfaceSecondary, marginTop: 2 },
 
   regionLine: {
     flexDirection: "row",
@@ -527,7 +527,7 @@ const styles = StyleSheet.create({
     gap: 6,
     paddingVertical: spacing.sm,
   },
-  regionLineText: { flex: 1, fontSize: 12, lineHeight: 17, color: colors.onSurfaceTertiary },
+  regionLineText: { flex: 1, fontSize: 15, lineHeight: 21, color: colors.onSurfaceTertiary },
   regionLink: { fontWeight: "700", textDecorationLine: "underline" },
 
   card: {
@@ -556,20 +556,20 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   cardLabel: {
-    fontSize: 9,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
   },
   cardTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "800",
     color: colors.onSurface,
-    lineHeight: 20,
+    lineHeight: 23,
     marginTop: 2,
   },
   cardText: {
-    fontSize: 14,
-    lineHeight: 20,
+    fontSize: 17,
+    lineHeight: 24,
     color: colors.onSurfaceSecondary,
     marginBottom: spacing.md,
   },
@@ -582,13 +582,13 @@ const styles = StyleSheet.create({
     borderRadius: radius.pill,
   },
   rowBadgeText: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
     letterSpacing: 0.4,
   },
   rowText: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
   },
 
@@ -605,7 +605,7 @@ const styles = StyleSheet.create({
   },
   guideBtnText: {
     color: colors.onBrandPrimary,
-    fontSize: 13,
+    fontSize: 16,
     fontWeight: "800",
   },
 });

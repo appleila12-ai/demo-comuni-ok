@@ -56,26 +56,26 @@ const STAGES: Stage[] = [
     id: "richiesta",
     icon: "paper-plane-outline",
     title: "Richiesta inviata",
-    desc: "La tua domanda è partita: da qui inizia il tuo percorso, ci pensiamo noi.",
+    desc: "La richiesta è partita. Da qui comincia l'attesa: segna la data in cui l'hai inviata.",
     nextStep:
       "Conserva la ricevuta di invio: ci servirà come riferimento nei prossimi passaggi.",
     azione: {
       title: "Un piccolo passo per te",
       message:
-        "Quando hai inviato la richiesta (online sul portale INPS, servizio SISDA, oppure all'Ambito Territoriale Sociale – ATS), segna qui la data: così teniamo il conto dei tempi insieme.",
+        "Quando hai inviato la richiesta (sul sito INPS o con un patronato), segna qui la data: l'app ti aiuta a tenere il conto dei tempi.",
     },
   },
   {
     id: "presa_carico",
     icon: "heart-circle-outline",
     title: "Presa in carico dei Servizi Sociali",
-    desc: "Il Comune ha ricevuto la tua richiesta e ha aperto la tua cartella personale.",
+    desc: "Il Comune prende in carico la tua richiesta e apre la tua cartella personale.",
     nextStep:
       "Un operatore ti contatterà per una prima conoscenza: tieni il telefono a portata di mano.",
     attesa: "La presa in carico avviene di solito entro 15–30 giorni",
     attesaGiorni: 30,
     attesaReassure:
-      "Sei nei tempi: se non ricevi notizie entro {data}, chiamaci pure. È tutto sotto controllo.",
+      "Sei nei tempi. Se non ricevi notizie entro {data}, telefona ai Servizi Sociali del tuo Comune.",
   },
   {
     id: "uvm",
@@ -87,11 +87,11 @@ const STAGES: Stage[] = [
     attesa: "La Convocazione UVM arriva di solito entro 30–45 giorni",
     attesaGiorni: 45,
     attesaReassure:
-      "Sei nei tempi: se non ricevi notizie entro {data}, chiamaci pure. È tutto sotto controllo, ti avvisiamo noi appena c'è una data.",
+      "Sei nei tempi. Se non ricevi notizie entro {data}, telefona ai Servizi Sociali del tuo Comune.",
     azione: {
       title: "Un piccolo passo per te",
       message:
-        "Tieni pronta una fotocopia del verbale ASL e del documento d'identità: potrebbero servirti all'incontro UVM. Nessuna fretta, se manca qualcosa ci pensiamo insieme.",
+        "Tieni pronta una fotocopia del verbale ASL e del documento d'identità: potrebbero servirti all'incontro UVM. Nessuna fretta: se manca qualcosa, chiedi ai Servizi Sociali come procurarlo.",
     },
   },
   {
@@ -176,7 +176,7 @@ function buildNotifications(
         tone: "info",
         title: `${cur.title} in arrivo`,
         message: entro
-          ? `${cur.attesa}: indicativamente entro il ${entro}. Ti avvisiamo noi appena c'è una data.`
+          ? `${cur.attesa}: indicativamente entro il ${entro}. Quando ricevi la data, segnala qui la tappa.`
           : `${cur.attesa}. Segna la data della tappa precedente per stimare i tempi.`,
         when: "in attesa",
       });
@@ -244,7 +244,7 @@ function PulseNode({ icon }: { icon: IoniconsIconName }) {
     <View style={styles.nodeWrap}>
       <Animated.View style={[styles.nodeRing, ringStyle]} />
       <View style={[styles.node, styles.nodeCurrent]}>
-        <Ionicons name={icon} size={22} color={colors.onSurface} />
+        <Ionicons name={icon} size={24} color={colors.onSurface} />
       </View>
     </View>
   );
@@ -360,25 +360,25 @@ export default function Tracker() {
 
       {/* Header */}
       <View style={[styles.header, { backgroundColor: warm.cream }]}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
           accessibilityLabel="Indietro"
           testID="tracker-back-btn"
         >
-          <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+          <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>La tua pratica</Text>
         <HeaderComune />
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={openNotifs}
           style={styles.iconBtn}
           hitSlop={12}
           accessibilityLabel="Avvisi e promemoria"
           testID="tracker-bell-btn"
         >
-          <Ionicons name="notifications-outline" size={20} color={warm.warmDark} />
+          <Ionicons name="notifications-outline" size={24} color={warm.warmDark} />
           {!notifsRead && (
             <View style={styles.bellBadge} testID="tracker-bell-badge">
               <Text style={styles.bellBadgeText}>{notifications.length}</Text>
@@ -412,7 +412,7 @@ export default function Tracker() {
             <ComuneLogo size={comune.logo ? 56 : 36} />
             <View style={styles.flex}>
               <Text style={[styles.comuneEnte, { color: warm.warmDark }]}>
-                PRATICA SEGUITA DA
+                Per informazioni sulla tua pratica
               </Text>
               <Text style={styles.comuneNome} testID="tracker-comune-nome">
                 {comune.nome}
@@ -424,41 +424,41 @@ export default function Tracker() {
           <View style={styles.comuneDivider} />
 
           <View style={styles.comuneContacts}>
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={call}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
               testID="tracker-comune-call"
             >
-              <Ionicons name="call-outline" size={16} color={warm.warmDark} />
+              <Ionicons name="call-outline" size={22} color={warm.warmDark} />
               <Text style={[styles.contactChipText, { color: warm.warmDark }]}>
                 Chiama
               </Text>
             </Pressable>
             {!!comune.email && (
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={email}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
               testID="tracker-comune-email"
             >
-              <Ionicons name="mail-outline" size={16} color={warm.warmDark} />
+              <Ionicons name="mail-outline" size={22} color={warm.warmDark} />
               <Text style={[styles.contactChipText, { color: warm.warmDark }]}>
                 Email
               </Text>
             </Pressable>
             )}
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={map}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
               testID="tracker-comune-map"
             >
-              <Ionicons name="location-outline" size={16} color={warm.warmDark} />
+              <Ionicons name="location-outline" size={22} color={warm.warmDark} />
               <Text style={[styles.contactChipText, { color: warm.warmDark }]}>
                 Sede
               </Text>
             </Pressable>
           </View>
           <View style={styles.comuneInfoRow}>
-            <Ionicons name="time-outline" size={13} color={colors.muted} />
+            <Ionicons name="time-outline" size={19} color={colors.muted} />
             <Text style={styles.comuneInfoText}>{comune.orari}</Text>
           </View>
         </View>
@@ -469,9 +469,8 @@ export default function Tracker() {
           Ecco a che punto è il tuo percorso
         </Text>
         <Text style={styles.introBody}>
-          Segui la tua pratica come segui un pacco in arrivo. Segna le tappe
-          completate, aggiungi date e note: restano salvate sul tuo telefono e,
-          se hai fatto l&apos;accesso, nel tuo account.
+          Segna le tappe completate e aggiungi date e note. Restano salvate solo
+          su questo telefono: non servono account e non le inviamo a nessuno.
         </Text>
 
         {/* Timeline */}
@@ -497,13 +496,13 @@ export default function Tracker() {
                 <View style={styles.rail}>
                   {status === "done" && (
                     <View style={[styles.node, styles.nodeDone]}>
-                      <Ionicons name="checkmark" size={22} color={colors.onSurface} />
+                      <Ionicons name="checkmark" size={24} color={colors.onSurface} />
                     </View>
                   )}
                   {status === "current" && <PulseNode icon={stage.icon} />}
                   {status === "future" && (
                     <View style={[styles.node, styles.nodeFuture]}>
-                      <Ionicons name={stage.icon} size={20} color={colors.borderStrong} />
+                      <Ionicons name={stage.icon} size={24} color={colors.borderStrong} />
                     </View>
                   )}
                   {!isLast && (
@@ -553,7 +552,7 @@ export default function Tracker() {
                   {/* Data della tappa (se presente) */}
                   {entry.date ? (
                     <View style={styles.datePill}>
-                      <Ionicons name="calendar-outline" size={13} color={colors.muted} />
+                      <Ionicons name="calendar-outline" size={19} color={colors.muted} />
                       <Text style={styles.datePillText}>{entry.date}</Text>
                     </View>
                   ) : null}
@@ -565,7 +564,7 @@ export default function Tracker() {
                   {status === "current" && stage.attesa && (
                     <View style={styles.waitCard} testID="tracker-wait-card">
                       <View style={styles.waitHead}>
-                        <Ionicons name="hourglass-outline" size={18} color={colors.brandPrimary} />
+                        <Ionicons name="hourglass-outline" size={22} color={colors.brandPrimary} />
                         <Text style={styles.waitText}>{stage.attesa}</Text>
                       </View>
                       {stage.attesaReassure && (
@@ -587,7 +586,7 @@ export default function Tracker() {
                       style={[styles.nextStep, { backgroundColor: warm.warmSoft }]}
                       testID="tracker-next-step"
                     >
-                      <Ionicons name="arrow-forward-circle" size={18} color={warm.warm} />
+                      <Ionicons name="arrow-forward-circle" size={22} color={warm.warm} />
                       <View style={styles.flex}>
                         <Text style={[styles.nextStepLabel, { color: warm.warmDark }]}>
                           Prossimo passo consigliato
@@ -601,7 +600,7 @@ export default function Tracker() {
                   {status === "current" && stage.azione && (
                     <View style={styles.actionCard} testID="tracker-action-card">
                       <View style={styles.actionIcon}>
-                        <Ionicons name="reader-outline" size={18} color={colors.brandPrimary} />
+                        <Ionicons name="reader-outline" size={22} color={colors.brandPrimary} />
                       </View>
                       <View style={styles.flex}>
                         <Text style={styles.actionTitle}>{stage.azione.title}</Text>
@@ -611,7 +610,7 @@ export default function Tracker() {
                   )}
 
                   {/* Toggle editor */}
-                  <Pressable
+                  <Pressable accessibilityRole="button"
                     onPress={() => setOpenId(isOpen ? null : stage.id)}
                     style={styles.editToggle}
                     hitSlop={8}
@@ -680,7 +679,7 @@ export default function Tracker() {
                             </Text>
                           </Pressable>
                         )}
-                        <Pressable
+                        <Pressable accessibilityRole="button"
                           onPress={() => setOpenId(null)}
                           style={({ pressed }) => [
                             styles.saveBtn,
@@ -689,7 +688,7 @@ export default function Tracker() {
                           ]}
                           testID={`tracker-save-${stage.id}`}
                         >
-                          <Ionicons name="checkmark" size={18} color={colors.onSurface} />
+                          <Ionicons name="checkmark" size={22} color={colors.onSurface} />
                           <Text style={styles.saveBtnText}>Salva</Text>
                         </Pressable>
                       </View>
@@ -703,7 +702,7 @@ export default function Tracker() {
 
         {/* Nota rassicurante finale */}
         <View style={styles.reassure} testID="tracker-reassure">
-          <Ionicons name="shield-checkmark-outline" size={18} color={colors.success} />
+          <Ionicons name="shield-checkmark-outline" size={22} color={colors.success} />
           <Text style={styles.reassureText}>
             Non sei solo in questo percorso: a ogni tappa {comune.soggetto.toLowerCase()}{" "}
             {comune.tipo === "unione" ? "e i servizi del territorio sono" : `di ${comune.nomeBreve} è`} al tuo fianco.
@@ -719,7 +718,7 @@ export default function Tracker() {
           testID="tracker-progetto-link"
         >
           <View style={styles.progettoLinkIcon}>
-            <Ionicons name="sparkles-outline" size={20} color={colors.accentDark} />
+            <Ionicons name="sparkles-outline" size={24} color={colors.accentDark} />
           </View>
           <View style={styles.flex}>
             <Text style={styles.progettoLinkTitle}>Prepara il tuo Progetto di Vita</Text>
@@ -727,7 +726,7 @@ export default function Tracker() {
               Appunta i tuoi desideri prima dell&apos;incontro con l&apos;équipe che valuta (UVM)
             </Text>
           </View>
-          <Ionicons name="chevron-forward" size={18} color={colors.accentDark} />
+          <Ionicons name="chevron-forward" size={22} color={colors.accentDark} />
         </Pressable>
 
         {/* Le mie scadenze: ricorso, revisione, contrassegno, ISEE */}
@@ -749,25 +748,25 @@ export default function Tracker() {
         animationType="slide"
         onRequestClose={() => setNotifOpen(false)}
       >
-        <Pressable
+        <Pressable accessibilityRole="button"
           style={styles.modalOverlay}
           onPress={() => setNotifOpen(false)}
           testID="tracker-notif-overlay"
         >
-          <Pressable
+          <Pressable accessibilityRole="button"
             style={[styles.sheet, { paddingBottom: insets.bottom + spacing.lg }]}
             onPress={(e) => e.stopPropagation()}
           >
             <View style={styles.sheetHandle} />
             <View style={styles.sheetHead}>
-              <Ionicons name="notifications-outline" size={20} color={warm.warmDark} />
+              <Ionicons name="notifications-outline" size={24} color={warm.warmDark} />
               <Text style={styles.sheetTitle}>Avvisi e promemoria</Text>
-              <Pressable
+              <Pressable accessibilityRole="button"
                 onPress={() => setNotifOpen(false)}
                 hitSlop={10}
                 testID="tracker-notif-close"
               >
-                <Ionicons name="close" size={22} color={colors.onSurfaceTertiary} />
+                <Ionicons name="close" size={24} color={colors.onSurfaceTertiary} />
               </Pressable>
             </View>
             <Text style={styles.sheetSub}>
@@ -790,7 +789,7 @@ export default function Tracker() {
               return (
                 <View key={n.id} style={styles.notifRow} testID={`tracker-notif-${n.id}`}>
                   <View style={[styles.notifIcon, { backgroundColor: toneBg }]}>
-                    <Ionicons name={n.icon} size={18} color={toneColor} />
+                    <Ionicons name={n.icon} size={22} color={toneColor} />
                   </View>
                   <View style={styles.flex}>
                     <View style={styles.notifTop}>
@@ -826,8 +825,8 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   iconBtn: {
-    width: 40,
-    height: 40,
+    width: 48,
+    height: 48,
     borderRadius: radius.pill,
     backgroundColor: "#FFFFFF",
     alignItems: "center",
@@ -837,7 +836,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.serif,
     flex: 1,
     textAlign: "center",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
@@ -856,7 +855,7 @@ const styles = StyleSheet.create({
     borderColor: "#FFFBF5",
   },
   bellBadgeText: {
-    fontSize: 9,
+    fontSize: 15,
     fontWeight: "800",
     color: colors.onSurface,
   },
@@ -874,18 +873,18 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   comuneEnte: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1,
+    letterSpacing: 0.3,
   },
   comuneNome: {
-    fontSize: 17,
+    fontSize: 19,
     fontWeight: "800",
     color: colors.onSurface,
     marginTop: 2,
   },
   comuneSub: {
-    fontSize: 12.5,
+    fontSize: 15,
     color: colors.onSurfaceSecondary,
     marginTop: 1,
   },
@@ -910,7 +909,7 @@ const styles = StyleSheet.create({
     minHeight: 44,
   },
   contactChipText: {
-    fontSize: 13,
+    fontSize: 16,
     fontWeight: "700",
   },
   comuneInfoRow: {
@@ -920,27 +919,27 @@ const styles = StyleSheet.create({
     marginTop: spacing.md,
   },
   comuneInfoText: {
-    fontSize: 12,
+    fontSize: 15,
     color: colors.muted,
   },
 
   // Intro
   introLabel: {
-    fontSize: 11,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 0.8,
+    letterSpacing: 0.3,
     color: colors.muted,
-    textTransform: "uppercase",
+    textTransform: "none",
   },
   introTitle: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: "800",
     color: colors.onSurface,
     marginTop: 4,
   },
   introBody: {
-    fontSize: 14,
-    lineHeight: 21,
+    fontSize: 17,
+    lineHeight: 26,
     color: colors.onSurfaceTertiary,
     marginTop: spacing.sm,
     marginBottom: spacing.xl,
@@ -1006,7 +1005,7 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
   },
   stageTitle: {
-    fontSize: 15.5,
+    fontSize: 18,
     fontWeight: "800",
     color: colors.onSurface,
   },
@@ -1014,8 +1013,8 @@ const styles = StyleSheet.create({
     color: colors.borderStrong,
   },
   stageDesc: {
-    fontSize: 13.5,
-    lineHeight: 20,
+    fontSize: 16,
+    lineHeight: 24,
     color: colors.onSurfaceTertiary,
     marginTop: 4,
   },
@@ -1029,7 +1028,7 @@ const styles = StyleSheet.create({
     paddingVertical: 3,
   },
   doneBadgeText: {
-    fontSize: 10.5,
+    fontSize: 15,
     fontWeight: "800",
     color: colors.onSurface,
   },
@@ -1039,7 +1038,7 @@ const styles = StyleSheet.create({
     paddingVertical: 3,
   },
   currentBadgeText: {
-    fontSize: 10.5,
+    fontSize: 15,
     fontWeight: "800",
     color: colors.onSurface,
   },
@@ -1057,16 +1056,16 @@ const styles = StyleSheet.create({
     marginTop: spacing.sm,
   },
   datePillText: {
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "700",
     color: colors.onSurfaceSecondary,
   },
   noteShown: {
-    fontSize: 13,
+    fontSize: 16,
     fontStyle: "italic",
     color: colors.onSurfaceSecondary,
     marginTop: spacing.sm,
-    lineHeight: 19,
+    lineHeight: 23,
   },
   nextStep: {
     flexDirection: "row",
@@ -1076,14 +1075,14 @@ const styles = StyleSheet.create({
     marginTop: spacing.md,
   },
   nextStepLabel: {
-    fontSize: 11,
+    fontSize: 15,
     fontWeight: "800",
     letterSpacing: 0.4,
-    textTransform: "uppercase",
+    textTransform: "none",
   },
   nextStepText: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
     marginTop: 2,
   },
@@ -1100,14 +1099,14 @@ const styles = StyleSheet.create({
   },
   waitText: {
     flex: 1,
-    fontSize: 13.5,
+    fontSize: 16,
     fontWeight: "800",
     color: colors.onBrandSecondary,
-    lineHeight: 19,
+    lineHeight: 23,
   },
   waitReassure: {
-    fontSize: 12.5,
-    lineHeight: 18,
+    fontSize: 15,
+    lineHeight: 22,
     color: colors.onSurface,
     marginTop: 6,
   },
@@ -1130,13 +1129,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   actionTitle: {
-    fontSize: 13.5,
+    fontSize: 16,
     fontWeight: "800",
     color: colors.onSurface,
   },
   actionText: {
-    fontSize: 12.5,
-    lineHeight: 18,
+    fontSize: 15,
+    lineHeight: 22,
     color: colors.onSurfaceSecondary,
     marginTop: 2,
   },
@@ -1148,7 +1147,7 @@ const styles = StyleSheet.create({
     alignSelf: "flex-start",
   },
   editToggleText: {
-    fontSize: 13,
+    fontSize: 16,
     fontWeight: "700",
     color: colors.onSurface,
   },
@@ -1161,7 +1160,7 @@ const styles = StyleSheet.create({
     padding: spacing.md,
   },
   editorLabel: {
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "700",
     color: colors.onSurfaceTertiary,
     marginBottom: 6,
@@ -1174,7 +1173,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.md,
     paddingVertical: 10,
     minHeight: 44,
-    fontSize: 15,
+    fontSize: 17,
     color: colors.onSurface,
   },
   inputMulti: {
@@ -1193,7 +1192,7 @@ const styles = StyleSheet.create({
     minHeight: 44,
     backgroundColor: colors.successSoft,
   },
-  doneBtnText: { color: colors.onSurface, fontSize: 14, fontWeight: "800" },
+  doneBtnText: { color: colors.onSurface, fontSize: 17, fontWeight: "800" },
   saveBtn: {
     flex: 1,
     flexDirection: "row",
@@ -1206,7 +1205,7 @@ const styles = StyleSheet.create({
   },
   saveBtnText: {
     color: colors.onSurface,
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "800",
   },
 
@@ -1221,8 +1220,8 @@ const styles = StyleSheet.create({
   },
   reassureText: {
     flex: 1,
-    fontSize: 13.5,
-    lineHeight: 20,
+    fontSize: 16,
+    lineHeight: 24,
     color: colors.onSurface,
     fontWeight: "600",
   },
@@ -1246,13 +1245,13 @@ const styles = StyleSheet.create({
   },
   progettoLinkTitle: {
     fontFamily: fonts.serif,
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "700",
     color: colors.onAccent,
   },
   progettoLinkSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 21,
     color: colors.accentDark,
     marginTop: 2,
   },
@@ -1285,13 +1284,13 @@ const styles = StyleSheet.create({
   },
   sheetTitle: {
     flex: 1,
-    fontSize: 17,
+    fontSize: 19,
     fontWeight: "800",
     color: colors.onSurface,
   },
   sheetSub: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurfaceTertiary,
     marginTop: 4,
     marginBottom: spacing.lg,
@@ -1318,24 +1317,24 @@ const styles = StyleSheet.create({
   },
   notifTitle: {
     flex: 1,
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "800",
     color: colors.onSurface,
   },
   notifWhen: {
-    fontSize: 11,
+    fontSize: 15,
     fontWeight: "700",
     color: colors.muted,
   },
   notifMsg: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
     marginTop: 3,
   },
   sheetFoot: {
-    fontSize: 11.5,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 22,
     color: colors.muted,
     textAlign: "center",
     marginTop: spacing.lg,

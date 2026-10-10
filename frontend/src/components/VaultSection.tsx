@@ -118,7 +118,7 @@ export function VaultSection({ report }: { report?: Report }) {
     <View style={styles.card} testID="vault-card">
       <View style={styles.header}>
         <View style={styles.icon}>
-          <Ionicons name="lock-open-outline" size={22} color={topics.patronato.main} />
+          <Ionicons name="lock-open-outline" size={24} color={topics.patronato.main} />
         </View>
         <View style={styles.badge}>
           <Text style={styles.badgeText}>Inclusa</Text>
@@ -144,7 +144,7 @@ export function VaultSection({ report }: { report?: Report }) {
               accessibilityRole="button"
               testID="vault-save-report-btn"
             >
-              <Ionicons name="document-text-outline" size={15} color={colors.onSurface} />
+              <Ionicons name="document-text-outline" size={21} color={colors.onSurface} />
               <Text style={styles.actionBtnText}>Salva report PDF</Text>
             </Pressable>
             )}
@@ -178,7 +178,7 @@ export function VaultSection({ report }: { report?: Report }) {
                   size={16}
                   color={topics.patronato.main}
                 />
-                <Pressable style={styles.flex} onPress={() => openFile(f)}>
+                <Pressable accessibilityRole="button" style={styles.flex} onPress={() => openFile(f)}>
                   <Text style={styles.fileName} numberOfLines={1}>
                     {f.name}
                   </Text>
@@ -186,7 +186,7 @@ export function VaultSection({ report }: { report?: Report }) {
                     {new Date(f.date).toLocaleDateString("it-IT")}
                   </Text>
                 </Pressable>
-                <Pressable
+                <Pressable accessibilityRole="button"
                   onPress={() => removeFile(f)}
                   hitSlop={8}
                   accessibilityLabel={`Elimina ${f.name}`}
@@ -239,19 +239,19 @@ const styles = StyleSheet.create({
     borderRadius: radius.pill,
   },
   badgeText: {
-    fontSize: 11,
+    fontSize: 15,
     fontWeight: "800",
     color: colors.onSurface,
   },
   title: {
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "800",
     color: colors.onSurface,
     marginBottom: 4,
   },
   body: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
     marginBottom: spacing.md,
   },
@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
   },
   actionBtnText: {
     color: colors.onSurface,
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "800",
   },
   actionBtnAlt: {
@@ -293,11 +293,11 @@ const styles = StyleSheet.create({
   },
   actionBtnAltText: {
     color: colors.onSurface,
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "800",
   },
   emptyText: {
-    fontSize: 12,
+    fontSize: 15,
     color: colors.onSurfaceTertiary,
     fontStyle: "italic",
   },
@@ -311,12 +311,12 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
   },
   fileName: {
-    fontSize: 12,
+    fontSize: 15,
     color: colors.onSurface,
     fontWeight: "700",
   },
   fileDate: {
-    fontSize: 10,
+    fontSize: 15,
     color: colors.onSurfaceTertiary,
     marginTop: 1,
   },

@@ -326,17 +326,17 @@ export default function Cruscotto() {
         keyboardShouldPersistTaps="handled"
       >
         <View style={styles.header}>
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}
             hitSlop={12}
             style={styles.back}
             accessibilityLabel="Indietro"
           >
-            <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+            <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
           </Pressable>
           <ComuneLogo size={comune.logo ? 52 : 36} />
           <View style={styles.flex}>
-            <Text style={[styles.eyebrow, { color: t.warmDark }]}>CRUSCOTTO RISERVATO</Text>
+            <Text style={[styles.eyebrow, { color: t.warmDark }]}>Cruscotto riservato</Text>
             <Text style={styles.headerTitle}>{comune.nome}</Text>
           </View>
         </View>
@@ -398,7 +398,7 @@ export default function Cruscotto() {
           <>
             {esempio ? (
               <View style={[styles.banner, { backgroundColor: t.warmSoft }]} testID="cruscotto-banner-esempio">
-                <Ionicons name="information-circle-outline" size={18} color={t.warmDark} />
+                <Ionicons name="information-circle-outline" size={22} color={t.warmDark} />
                 <Text style={styles.bannerText}>
                   Dati di esempio, inventati per mostrare il cruscotto. Non sono dati reali.
                 </Text>
@@ -468,7 +468,7 @@ export default function Cruscotto() {
             />
 
             <View style={styles.privacy}>
-              <Ionicons name="shield-checkmark-outline" size={18} color={colors.success} />
+              <Ionicons name="shield-checkmark-outline" size={22} color={colors.success} />
               <Text style={styles.privacyText}>
                 Nessun dato personale: TutelApp conta solo categorie predefinite,
                 senza nomi, testi scritti o identificativi. I numeri da 1 a{" "}
@@ -499,7 +499,7 @@ export default function Cruscotto() {
           accessibilityRole="link"
           testID="cruscotto-sentinella"
         >
-          <Ionicons name="shield-checkmark-outline" size={14} color={colors.onSurfaceTertiary} />
+          <Ionicons name="shield-checkmark-outline" size={20} color={colors.onSurfaceTertiary} />
           <Text style={styles.adminLinkText}>Team TutelApp · Sentinella importi e riforma</Text>
         </Pressable>
         )}
@@ -514,11 +514,11 @@ const styles = StyleSheet.create({
   container: { paddingHorizontal: spacing.lg, paddingTop: spacing.md, maxWidth: 720, width: "100%", alignSelf: "center" },
   header: { flexDirection: "row", alignItems: "center", gap: spacing.md, marginBottom: spacing.xl },
   back: { width: 32, height: 40, alignItems: "center", justifyContent: "center" },
-  eyebrow: { fontSize: 9, fontWeight: "800", letterSpacing: 1, marginBottom: 2 },
-  headerTitle: { fontFamily: fonts.serif, fontSize: 18, lineHeight: 23, fontWeight: "700", color: colors.onSurface },
-  title: { fontFamily: fonts.serif, fontSize: 22, lineHeight: 28, fontWeight: "700", color: colors.onSurface },
-  lead: { fontSize: 14, lineHeight: 21, color: colors.onSurfaceSecondary, marginTop: spacing.sm, marginBottom: spacing.lg },
-  inputLabel: { fontSize: 12, fontWeight: "700", color: colors.onSurface, marginBottom: spacing.xs },
+  eyebrow: { fontSize: 15, fontWeight: "800", letterSpacing: 0.3, marginBottom: 2 },
+  headerTitle: { fontFamily: fonts.serif, fontSize: 20, lineHeight: 26, fontWeight: "700", color: colors.onSurface },
+  title: { fontFamily: fonts.serif, fontSize: 25, lineHeight: 33, fontWeight: "700", color: colors.onSurface },
+  lead: { fontSize: 17, lineHeight: 26, color: colors.onSurfaceSecondary, marginTop: spacing.sm, marginBottom: spacing.lg },
+  inputLabel: { fontSize: 15, fontWeight: "700", color: colors.onSurface, marginBottom: spacing.xs },
   input: {
     minHeight: 48,
     borderRadius: radius.md,
@@ -526,10 +526,10 @@ const styles = StyleSheet.create({
     borderColor: colors.borderStrong,
     backgroundColor: "#FFFFFF",
     paddingHorizontal: spacing.md,
-    fontSize: 16,
+    fontSize: 18,
     color: colors.onSurface,
   },
-  error: { fontSize: 13, color: "#8A3F1A", marginTop: spacing.sm },
+  error: { fontSize: 16, color: "#8A3F1A", marginTop: spacing.sm },
   primary: {
     minHeight: 52,
     borderRadius: radius.pill,
@@ -537,7 +537,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: spacing.md,
   },
-  primaryText: { fontSize: 15, fontWeight: "800", color: colors.onSurface },
+  primaryText: { fontSize: 17, fontWeight: "800", color: colors.onSurface },
   secondary: {
     minHeight: 48,
     borderRadius: radius.pill,
@@ -546,7 +546,7 @@ const styles = StyleSheet.create({
     marginTop: spacing.sm,
     backgroundColor: colors.surfaceSecondary,
   },
-  secondaryText: { fontSize: 14, fontWeight: "700", color: colors.onSurface },
+  secondaryText: { fontSize: 17, fontWeight: "700", color: colors.onSurface },
   pressed: { opacity: 0.8 },
   banner: {
     flexDirection: "row",
@@ -556,7 +556,7 @@ const styles = StyleSheet.create({
     padding: spacing.md,
     marginBottom: spacing.md,
   },
-  bannerText: { flex: 1, fontSize: 12, lineHeight: 17, color: colors.onSurface, fontWeight: "600" },
+  bannerText: { flex: 1, fontSize: 15, lineHeight: 21, color: colors.onSurface, fontWeight: "600" },
   tiles: { flexDirection: "row", flexWrap: "wrap", gap: spacing.sm, marginBottom: spacing.md },
   tile: {
     flexGrow: 1,
@@ -567,9 +567,9 @@ const styles = StyleSheet.create({
     borderRadius: radius.lg,
     padding: spacing.md,
   },
-  tileLabel: { fontSize: 11, fontWeight: "700", color: colors.onSurfaceTertiary },
-  tileValue: { fontFamily: fonts.serif, fontSize: 30, fontWeight: "700", color: colors.onSurface, marginTop: 4 },
-  tileSub: { fontSize: 11, color: colors.onSurfaceTertiary, marginTop: 2 },
+  tileLabel: { fontSize: 15, fontWeight: "700", color: colors.onSurfaceTertiary },
+  tileValue: { fontFamily: fonts.serif, fontSize: 33, fontWeight: "700", color: colors.onSurface, marginTop: 4 },
+  tileSub: { fontSize: 15, color: colors.onSurfaceTertiary, marginTop: 2 },
   card: {
     backgroundColor: colors.surface,
     borderWidth: 1,
@@ -578,22 +578,22 @@ const styles = StyleSheet.create({
     padding: spacing.lg,
     marginBottom: spacing.md,
   },
-  cardTitle: { fontFamily: fonts.serif, fontSize: 16, lineHeight: 21, fontWeight: "700", color: colors.onSurface },
-  cardHint: { fontSize: 11, lineHeight: 16, color: colors.onSurfaceTertiary, marginTop: 2 },
-  empty: { fontSize: 13, color: colors.onSurfaceTertiary, marginTop: spacing.md },
+  cardTitle: { fontFamily: fonts.serif, fontSize: 18, lineHeight: 24, fontWeight: "700", color: colors.onSurface },
+  cardHint: { fontSize: 15, lineHeight: 22, color: colors.onSurfaceTertiary, marginTop: 2 },
+  empty: { fontSize: 16, color: colors.onSurfaceTertiary, marginTop: spacing.md },
   barRow: { marginTop: spacing.md },
   barHead: { flexDirection: "row", alignItems: "flex-end", gap: spacing.sm, marginBottom: 5 },
-  barLabel: { flex: 1, fontSize: 13, lineHeight: 18, color: colors.onSurface },
-  barValue: { fontSize: 13, fontWeight: "800", color: colors.onSurface },
-  barValueMuted: { fontWeight: "600", color: colors.onSurfaceTertiary, fontSize: 11 },
+  barLabel: { flex: 1, fontSize: 16, lineHeight: 22, color: colors.onSurface },
+  barValue: { fontSize: 16, fontWeight: "800", color: colors.onSurface },
+  barValueMuted: { fontWeight: "600", color: colors.onSurfaceTertiary, fontSize: 15 },
   track: { height: 10, borderRadius: 4, backgroundColor: colors.surfaceTertiary, overflow: "hidden" },
   fill: { height: "100%", borderRadius: 4 },
   cols: { flexDirection: "row", alignItems: "flex-end", gap: spacing.sm, marginTop: spacing.lg, height: 170 },
   col: { flex: 1, alignItems: "center", height: "100%" },
-  colValue: { fontSize: 12, fontWeight: "800", color: colors.onSurface, marginBottom: 4 },
+  colValue: { fontSize: 15, fontWeight: "800", color: colors.onSurface, marginBottom: 4 },
   colTrack: { flex: 1, width: "70%", justifyContent: "flex-end" },
   colFill: { width: "100%", borderTopLeftRadius: 4, borderTopRightRadius: 4 },
-  colLabel: { fontSize: 11, color: colors.onSurfaceTertiary, marginTop: 6 },
+  colLabel: { fontSize: 15, color: colors.onSurfaceTertiary, marginTop: 6 },
   adminLink: {
     flexDirection: "row",
     alignItems: "center",
@@ -602,7 +602,7 @@ const styles = StyleSheet.create({
     marginTop: spacing.lg,
     paddingVertical: spacing.sm,
   },
-  adminLinkText: { fontSize: 11, color: colors.onSurfaceTertiary, textDecorationLine: "underline" },
+  adminLinkText: { fontSize: 15, color: colors.onSurfaceTertiary, textDecorationLine: "underline" },
   privacy: {
     flexDirection: "row",
     gap: spacing.sm,
@@ -612,5 +612,5 @@ const styles = StyleSheet.create({
     backgroundColor: colors.successSoft,
     marginBottom: spacing.sm,
   },
-  privacyText: { flex: 1, fontSize: 12, lineHeight: 18, color: colors.onSurface },
+  privacyText: { flex: 1, fontSize: 15, lineHeight: 23, color: colors.onSurface },
 });

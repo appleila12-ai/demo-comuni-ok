@@ -7,29 +7,104 @@ export interface GuideStep {
   body: string;
 }
 
-/** Percorso passo-passo secondo la Riforma della disabilità (D.Lgs. 62/2024) */
+/** Percorso passo-passo (testi generici, validi in tutta Italia). Usato nel PDF. */
 export const NEXT_STEPS: GuideStep[] = [
   {
     title: "Vai dal tuo medico con la diagnosi",
-    body: "Chiedi al medico curante (o a un medico certificatore) il Certificato Medico Introduttivo e fattelo inviare all'INPS. Con la riforma questo certificato avvia da solo la valutazione: non serve più una domanda separata.",
+    body: "Il medico compila il certificato medico introduttivo e lo invia all'INPS. Dove la riforma è già attiva la richiesta parte da qui; altrove serve anche la domanda all'INPS, entro 90 giorni dal certificato.",
   },
   {
-    title: "Un'unica valutazione di base",
-    body: "Una sola commissione riconosce insieme l'invalidità civile e la condizione di disabilità (handicap). Una sola visita e un solo verbale: niente più procedure doppie.",
+    title: "Vai alla visita dell'INPS",
+    body: "L'INPS ti scrive per dirti giorno e luogo. Dove la riforma è attiva è una sola visita per invalidità e disabilità.",
   },
   {
-    title: "Ricevi il verbale unico",
-    body: "Il verbale indica la condizione di disabilità e il suo livello (lieve, medio, grave, gravissimo). Da qui attivi esenzioni, agevolazioni fiscali e permessi.",
+    title: "Ricevi il verbale",
+    body: "Il verbale dice cosa ti è stato riconosciuto. Da lì chiedi aiuti, esenzioni e permessi.",
   },
   {
-    title: "Chiedi la valutazione multidimensionale",
-    body: "Se vuoi, i Servizi Sociali del Comune insieme all'UVM (Unità di Valutazione Multidimensionale) costruiscono con te il tuo Progetto di Vita personalizzato.",
+    title: "Chiedi il Progetto di Vita",
+    body: "Se vuoi, i Servizi Sociali del Comune lo costruiscono con te insieme a un gruppo di esperti (l'UVM).",
   },
   {
-    title: "Il tuo Progetto di Vita è attivo",
-    body: "Ricevi sostegni e servizi su misura per i tuoi obiettivi. Il Progetto si può rivedere e aggiornare nel tempo, quando qualcosa cambia.",
+    title: "Rivedilo quando serve",
+    body: "Il Progetto di Vita si può cambiare nel tempo, quando cambia la tua situazione.",
   },
 ];
+
+export interface PassoRiconoscimento {
+  /** Titolo breve, con un verbo */
+  titolo: string;
+  /** Cosa fare, in una o due frasi corte */
+  testo: string;
+  /** Pulsante "come lo faccio": etichetta e pagina */
+  azione: { label: string; route: string; icon: string };
+}
+
+/**
+ * I passi per ottenere il riconoscimento, scritti per essere letti da chiunque.
+ * Cambiano in base alla provincia: dove la riforma è già attiva basta il
+ * certificato del medico; altrove serve anche la domanda all'INPS entro 90 giorni.
+ */
+export function passiRiconoscimento(riformaAttiva: boolean): PassoRiconoscimento[] {
+  const medico: PassoRiconoscimento = {
+    titolo: "Vai dal tuo medico",
+    testo: riformaAttiva
+      ? "Porta la diagnosi e i referti. Il medico compila il certificato e lo invia all'INPS. Con questo la tua richiesta parte."
+      : "Porta la diagnosi e i referti. Il medico compila il certificato e lo invia all'INPS. Tieni la ricevuta: ti serve per il passo dopo.",
+    azione: { label: "Segna questo passo nella mia pratica", route: "/tracker", icon: "footsteps-outline" },
+  };
+  const visita: PassoRiconoscimento = {
+    titolo: "Vai alla visita",
+    testo: riformaAttiva
+      ? "L'INPS ti scrive per dirti giorno e luogo della visita. È una sola visita per tutto. Puoi farti accompagnare da una persona di fiducia."
+      : "L'INPS ti scrive per dirti giorno e luogo della visita. Porta documento, referti e ricevuta. Puoi farti accompagnare da una persona di fiducia.",
+    azione: { label: "Cosa cambia con la riforma", route: "/riforma", icon: "document-text-outline" },
+  };
+  const verbale: PassoRiconoscimento = {
+    titolo: "Ricevi il verbale",
+    testo:
+      "Il verbale ti dice cosa ti è stato riconosciuto. Conservalo con cura: ti serve per chiedere aiuti, esenzioni e permessi.",
+    azione: { label: "Scopri cosa ti spetta", route: "/verbale", icon: "shield-checkmark-outline" },
+  };
+
+  if (riformaAttiva) {
+    return [
+      medico,
+      visita,
+      verbale,
+      {
+        titolo: "Chiedi il Progetto di Vita",
+        testo:
+          "Se vuoi, chiedi ai Servizi Sociali del tuo Comune di costruirlo con te, insieme a un gruppo di esperti (l'UVM). Puoi scrivere una lettera di richiesta.",
+        azione: { label: "Prepara la lettera", route: "/lettere?id=progetto-vita", icon: "create-outline" },
+      },
+      {
+        titolo: "Prepara cosa dire",
+        testo:
+          "Scrivi con calma cosa è importante per te: casa, lavoro, amici, salute. Lo porti all'incontro con gli esperti.",
+        azione: { label: "Segui la mia pratica", route: "/tracker", icon: "footsteps-outline" },
+      },
+    ];
+  }
+
+  return [
+    medico,
+    {
+      titolo: "Fai la domanda all'INPS",
+      testo:
+        "Hai 90 giorni dal certificato. Si fa sul sito dell'INPS con lo SPID, oppure con un patronato: è gratuito e ti aiuta a farla.",
+      azione: { label: "Contatti INPS e patronati", route: "/territorio", icon: "call-outline" },
+    },
+    visita,
+    verbale,
+    {
+      titolo: "Dal 2027: il Progetto di Vita",
+      testo:
+        "Dal 1° gennaio 2027 la riforma è prevista in tutta Italia e potrai chiedere il Progetto di Vita. Intanto puoi cominciare a pensare a cosa è importante per te.",
+      azione: { label: "Prepara il mio Progetto di Vita", route: "/progetto", icon: "sparkles-outline" },
+    },
+  ];
+}
 
 /** Spiegazione del Certificato Medico Introduttivo (Riforma 2027) */
 export const CERT_EXPLAINER = {

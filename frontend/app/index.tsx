@@ -17,10 +17,41 @@ import { ComuneLogo } from "@/src/components/ComuneLogo";
 import { PaeseCard } from "@/src/components/PaeseCard";
 import { comune, comuneScelto } from "@/src/config/comune";
 import { colors, fonts, radius, spacing, topics } from "@/src/theme";
-import { useSezione } from "@/src/lib/statistiche";
+import { registra, useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
 import { CasellaRicerca } from "@/src/components/CasellaRicerca";
 import { useSalvati } from "@/src/lib/salvati";
+import { storage } from "@/src/utils/storage";
+
+const MOMENTO_KEY = "tutelapp:hub:momento";
+
+// Le tre situazioni più comuni: un tocco e si arriva al punto
+const INGRESSI = [
+  {
+    id: "diagnosi",
+    momento: "diagnosi",
+    icon: "leaf-outline" as const,
+    title: "Ho appena ricevuto una diagnosi",
+    sub: "Le prime cose da fare, poi come ottenere il riconoscimento",
+    href: "/primi-passi",
+  },
+  {
+    id: "pratica",
+    momento: "iter",
+    icon: "footsteps-outline" as const,
+    title: "Ho già fatto la domanda",
+    sub: "Segui la tua pratica e le scadenze",
+    href: "/tracker",
+  },
+  {
+    id: "verbale",
+    momento: "diritti",
+    icon: "shield-checkmark-outline" as const,
+    title: "Ho già il verbale",
+    sub: "Scopri aiuti, permessi e agevolazioni che ti spettano",
+    href: "/verbale",
+  },
+];
 
 const FEATURES = [
   {
@@ -170,10 +201,10 @@ function HomeDelComune() {
           <View style={styles.flex}>
             <Text style={[styles.institutionEyebrow, { color: t.warmDark }]}>
               {comune.dimostrativo
-                ? "VERSIONE DIMOSTRATIVA"
+                ? "Versione dimostrativa"
                 : comune.tipo === "unione"
-                  ? "SERVIZIO DEI COMUNI DELL'UNIONE"
-                  : "SERVIZIO DEL TERRITORIO"}
+                  ? "Servizio dei Comuni dell'Unione"
+                  : "Servizio del territorio"}
             </Text>
             <Text style={styles.institutionName} testID="comune-home-nome">
               {comune.nome}
@@ -188,7 +219,7 @@ function HomeDelComune() {
 
         {comune.dimostrativo && (
           <View style={styles.demoBanner} testID="comune-home-demo">
-            <Ionicons name="information-circle-outline" size={18} color="#6B4E16" />
+            <Ionicons name="information-circle-outline" size={22} color="#6B4E16" />
             <Text style={styles.demoBannerText}>
               <Text style={styles.demoBannerStrong}>Versione dimostrativa. </Text>
               {comune.tipo === "unione" ? "L'" : "Il "}
@@ -206,8 +237,8 @@ function HomeDelComune() {
           <Wordmark size="md" showLogo={true} logoVariant="soft" />
           <Text style={styles.kicker}>
             {comune.dimostrativo
-              ? `ESEMPIO PER ${comune.nome.toUpperCase()}`
-              : `IN COLLABORAZIONE CON ${comune.nome.toUpperCase()}`}
+              ? `Esempio per ${comune.nome}`
+              : `In collaborazione con ${comune.nome}`}
           </Text>
           <Text style={styles.title}>
             Non devi orientarti da solo.
@@ -218,8 +249,48 @@ function HomeDelComune() {
           </Text>
         </View>
 
-        {/* Scrivi cosa ti serve: la risposta arriva subito */}
-        <CasellaRicerca testID="home-ricerca" />
+        {/* Da dove parti? Tre ingressi diretti, senza passaggi intermedi */}
+        <Text style={styles.domandaIngresso} accessibilityRole="header">
+          Da dove parti?
+        </Text>
+        <View style={styles.ingressi}>
+          {INGRESSI.map((ing) => (
+            <Pressable
+              key={ing.id}
+              onPress={() => {
+                storage.setItem(MOMENTO_KEY, ing.momento);
+                registra("momento", ing.momento);
+                router.push(ing.href as any);
+              }}
+              style={({ pressed }) => [
+                styles.primaryCta,
+                styles.ingresso,
+                { backgroundColor: t.warm },
+                pressed && styles.pressed,
+              ]}
+              accessibilityRole="button"
+              accessibilityLabel={`${ing.title}. ${ing.sub}`}
+              testID={`comune-ingresso-${ing.id}`}
+            >
+              <View style={styles.ctaIcon}>
+                <Ionicons name={ing.icon} size={26} color={colors.onSurface} />
+              </View>
+              <View style={styles.flex}>
+                <Text style={styles.primaryCtaTitle}>{ing.title}</Text>
+                <Text style={styles.primaryCtaSub}>{ing.sub}</Text>
+              </View>
+              <Ionicons name="arrow-forward" size={24} color={colors.onSurface} />
+            </Pressable>
+          ))}
+        </View>
+        <Pressable
+          onPress={() => router.push("/hub")}
+          style={({ pressed }) => [styles.tutteSezioni, pressed && styles.pressed]}
+          accessibilityRole="button"
+          testID="comune-enter-app"
+        >
+          <Text style={styles.tutteSezioniText}>Vedi tutte le sezioni</Text>
+        </Pressable>
 
         {/* Scorciatoia ai salvati, solo se c'è qualcosa */}
         {salvati.length > 0 && (
@@ -229,13 +300,16 @@ function HomeDelComune() {
             accessibilityRole="button"
             testID="home-salvati"
           >
-            <Ionicons name="bookmark" size={18} color={colors.brandPrimaryDark} />
+            <Ionicons name="bookmark" size={22} color={colors.brandPrimaryDark} />
             <Text style={styles.salvatiTesto}>
               I miei salvati · {salvati.length}
             </Text>
-            <Ionicons name="chevron-forward" size={16} color={colors.brandPrimaryDark} />
+            <Ionicons name="chevron-forward" size={22} color={colors.brandPrimaryDark} />
           </Pressable>
         )}
+
+        {/* Scrivi cosa ti serve: la risposta arriva subito */}
+        <CasellaRicerca testID="home-ricerca" />
 
         {/* Immagine di accoglienza (prima era in una schermata a parte) */}
         <MonoImage
@@ -245,31 +319,8 @@ function HomeDelComune() {
           style={styles.heroImage}
         />
 
-        {/* CTA principale */}
-        <Pressable
-          onPress={() => router.push("/hub")}
-          style={({ pressed }) => [
-            styles.primaryCta,
-            { backgroundColor: t.warm },
-            pressed && styles.pressed,
-          ]}
-          accessibilityRole="button"
-          accessibilityLabel="Entra in TutelApp"
-          testID="comune-enter-app"
-        >
-          <View style={styles.ctaIcon}>
-            <Ionicons name="arrow-forward" size={20} color={colors.onSurface} />
-          </View>
-          <View style={styles.flex}>
-            <Text style={styles.primaryCtaTitle}>Entra in TutelApp</Text>
-            <Text style={styles.primaryCtaSub}>
-              Il percorso passo passo, dalla diagnosi al Progetto di Vita
-            </Text>
-          </View>
-        </Pressable>
-
         {/* Cosa trovi */}
-        <Text style={styles.sectionLabel}>COSA PUOI FARE</Text>
+        <Text style={styles.sectionLabel}>Cosa puoi fare</Text>
         <View style={styles.features}>
           {/* Ogni scheda porta alla sua sezione: niente riquadri "finti" */}
           {FEATURES.map((feature) => (
@@ -282,7 +333,7 @@ function HomeDelComune() {
               testID={`comune-feature-${feature.href.slice(1)}`}
             >
               <View style={[styles.featureIcon, { backgroundColor: feature.color.soft }]}>
-                <Ionicons name={feature.icon} size={22} color={feature.color.main} />
+                <Ionicons name={feature.icon} size={24} color={feature.color.main} />
               </View>
               <View style={styles.flex}>
                 <Text style={styles.featureTitle}>{feature.title}</Text>
@@ -299,7 +350,7 @@ function HomeDelComune() {
         </View>
 
         {/* Strumenti pratici: aiutano a fare le pratiche */}
-        <Text style={styles.sectionLabel}>STRUMENTI PRATICI</Text>
+        <Text style={styles.sectionLabel}>Strumenti pratici</Text>
         <View style={styles.infoLinks}>
           {STRUMENTI.map((l) => (
             <Pressable
@@ -311,19 +362,19 @@ function HomeDelComune() {
               testID={`comune-strumento-${l.id}`}
             >
               <View style={[styles.infoLinkIcon, { backgroundColor: l.color.soft }]}>
-                <Ionicons name={l.icon} size={20} color={l.color.main} />
+                <Ionicons name={l.icon} size={24} color={l.color.main} />
               </View>
               <View style={styles.flex}>
                 <Text style={styles.infoLinkTitle}>{l.title}</Text>
                 <Text style={styles.infoLinkSub}>{l.sub}</Text>
               </View>
-              <Ionicons name="chevron-forward" size={16} color={colors.onSurfaceTertiary} />
+              <Ionicons name="chevron-forward" size={22} color={colors.onSurfaceTertiary} />
             </Pressable>
           ))}
         </View>
 
         {/* Informazioni utili: sempre disponibili, anche offline */}
-        <Text style={styles.sectionLabel}>INFORMAZIONI UTILI</Text>
+        <Text style={styles.sectionLabel}>Informazioni utili</Text>
         <View style={styles.infoLinks}>
           {INFO_LINKS.map((l) => (
             <Pressable
@@ -335,13 +386,13 @@ function HomeDelComune() {
               testID={`comune-info-${l.id}`}
             >
               <View style={[styles.infoLinkIcon, { backgroundColor: l.color.soft }]}>
-                <Ionicons name={l.icon} size={20} color={l.color.main} />
+                <Ionicons name={l.icon} size={24} color={l.color.main} />
               </View>
               <View style={styles.flex}>
                 <Text style={styles.infoLinkTitle}>{l.title}</Text>
                 <Text style={styles.infoLinkSub}>{l.sub}</Text>
               </View>
-              <Ionicons name="chevron-forward" size={16} color={colors.onSurfaceTertiary} />
+              <Ionicons name="chevron-forward" size={22} color={colors.onSurfaceTertiary} />
             </Pressable>
           ))}
         </View>
@@ -349,7 +400,7 @@ function HomeDelComune() {
         {/* Messaggio istituzionale */}
         <View style={styles.infoCard}>
           <View style={[styles.infoIcon, { backgroundColor: t.warmSoft }]}>
-            <Ionicons name="heart-outline" size={20} color={t.warmDark} />
+            <Ionicons name="heart-outline" size={24} color={t.warmDark} />
           </View>
           <View style={styles.flex}>
             <Text style={styles.infoTitle}>
@@ -369,7 +420,7 @@ function HomeDelComune() {
 
         {/* Contatti */}
         <View style={styles.contactCard}>
-          <Text style={[styles.contactEyebrow, { color: t.warmDark }]}>HAI BISOGNO DI SUPPORTO?</Text>
+          <Text style={[styles.contactEyebrow, { color: t.warmDark }]}>Hai bisogno di supporto?</Text>
           <Text style={styles.contactTitle}>{comune.ente}</Text>
           <Text style={styles.contactText}>{comune.responsabile}</Text>
           <Text style={styles.contactText}>{comune.indirizzo}</Text>
@@ -383,7 +434,7 @@ function HomeDelComune() {
               accessibilityLabel={`Chiama ${comune.telefono}`}
               testID="comune-home-chiama"
             >
-              <Ionicons name="call-outline" size={16} color={t.warmDark} />
+              <Ionicons name="call-outline" size={22} color={t.warmDark} />
               <Text style={[styles.contactValue, styles.contactLink]}>{comune.telefono}</Text>
             </Pressable>
             {!!comune.email && (
@@ -394,7 +445,7 @@ function HomeDelComune() {
               accessibilityLabel={`Scrivi a ${comune.email}`}
               testID="comune-home-email"
             >
-              <Ionicons name="mail-outline" size={16} color={t.warmDark} />
+              <Ionicons name="mail-outline" size={22} color={t.warmDark} />
               <Text style={[styles.contactValue, styles.contactLink]}>{comune.email}</Text>
             </Pressable>
             )}
@@ -408,7 +459,7 @@ function HomeDelComune() {
             testID="comune-territorio"
           >
             <Text style={styles.contactButtonText}>Scopri i servizi del territorio</Text>
-            <Ionicons name="chevron-forward" size={16} color={colors.onSurface} />
+            <Ionicons name="chevron-forward" size={22} color={colors.onSurface} />
           </Pressable>
         </View>
 
@@ -426,7 +477,7 @@ function HomeDelComune() {
           accessibilityLabel="Scegli un altro Comune"
           testID="comune-switch"
         >
-          <Ionicons name="swap-horizontal-outline" size={14} color={colors.onSurfaceTertiary} />
+          <Ionicons name="swap-horizontal-outline" size={20} color={colors.onSurfaceTertiary} />
           <Text style={styles.switchText}>
             Non sei {comune.tipo === "unione" ? "di questo territorio" : `di ${comune.nomeBreve}`}? Scegli il tuo Comune
           </Text>
@@ -440,7 +491,7 @@ function HomeDelComune() {
           accessibilityLabel="Area riservata agli operatori del Comune"
           testID="comune-area-riservata"
         >
-          <Ionicons name="lock-closed-outline" size={13} color={colors.onSurfaceTertiary} />
+          <Ionicons name="lock-closed-outline" size={19} color={colors.onSurfaceTertiary} />
           <Text style={styles.switchText}>Area riservata agli operatori</Text>
         </Pressable>
       </ScrollView>
@@ -460,7 +511,7 @@ const styles = StyleSheet.create({
     padding: 12,
     marginTop: 12,
   },
-  demoBannerText: { flex: 1, fontSize: 13, lineHeight: 19, color: "#4A3A14" },
+  demoBannerText: { flex: 1, fontSize: 16, lineHeight: 23, color: "#4A3A14" },
   demoBannerStrong: { fontWeight: "800" },
   safe: { flex: 1 },
   flex: { flex: 1 },
@@ -474,21 +525,21 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   aderenti: {
-    fontSize: 10,
-    lineHeight: 15,
+    fontSize: 15,
+    lineHeight: 23,
     color: colors.onSurfaceTertiary,
     marginTop: spacing.sm,
   },
   institutionEyebrow: {
-    fontSize: 9,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1,
+    letterSpacing: 0.3,
     marginBottom: 2,
   },
   institutionName: {
     fontFamily: fonts.serif,
-    fontSize: 19,
-    lineHeight: 24,
+    fontSize: 21,
+    lineHeight: 27,
     fontWeight: "700",
     color: colors.onSurface,
   },
@@ -502,24 +553,24 @@ const styles = StyleSheet.create({
     marginBottom: spacing.xl,
   },
   kicker: {
-    fontSize: 9,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginTop: spacing.lg,
     marginBottom: spacing.sm,
   },
   title: {
     fontFamily: fonts.serif,
-    fontSize: 31,
-    lineHeight: 36,
+    fontSize: 34,
+    lineHeight: 44,
     fontWeight: "700",
     color: colors.onSurface,
     letterSpacing: -0.6,
   },
   lead: {
-    fontSize: 15,
-    lineHeight: 23,
+    fontSize: 17,
+    lineHeight: 26,
     color: colors.onSurfaceSecondary,
     marginTop: spacing.md,
     maxWidth: 560,
@@ -544,20 +595,44 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   primaryCtaTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "800",
     color: colors.onSurface,
   },
   primaryCtaSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 21,
     color: colors.onSurface,
     marginTop: 2,
   },
+  domandaIngresso: {
+    fontFamily: fonts.serif,
+    fontSize: 26,
+    lineHeight: 32,
+    fontWeight: "700",
+    color: colors.onSurface,
+    marginBottom: spacing.md,
+  },
+  ingressi: { gap: spacing.sm },
+  ingresso: { marginBottom: 0 },
+  tutteSezioni: {
+    alignSelf: "center",
+    minHeight: 52,
+    justifyContent: "center",
+    paddingHorizontal: spacing.lg,
+    marginTop: spacing.sm,
+    marginBottom: spacing.xl,
+  },
+  tutteSezioniText: {
+    fontSize: 17,
+    fontWeight: "700",
+    color: colors.onSurface,
+    textDecorationLine: "underline",
+  },
   sectionLabel: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginBottom: spacing.md,
   },
@@ -585,14 +660,14 @@ const styles = StyleSheet.create({
   featureChevron: { alignSelf: "center" },
   featureTitle: {
     fontFamily: fonts.serif,
-    fontSize: 15,
-    lineHeight: 20,
+    fontSize: 17,
+    lineHeight: 23,
     fontWeight: "700",
     color: colors.onSurface,
   },
   featureText: {
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: 15,
+    lineHeight: 23,
     color: colors.onSurfaceTertiary,
     marginTop: 2,
   },
@@ -620,13 +695,13 @@ const styles = StyleSheet.create({
   },
   infoLinkTitle: {
     fontFamily: fonts.serif,
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "700",
     color: colors.onSurface,
   },
   infoLinkSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 21,
     color: colors.onSurfaceTertiary,
     marginTop: 1,
   },
@@ -647,14 +722,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   infoTitle: {
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "800",
     color: colors.onSurface,
     marginBottom: 3,
   },
   infoText: {
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: 15,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
   },
   contactCard: {
@@ -666,20 +741,20 @@ const styles = StyleSheet.create({
     marginBottom: spacing.lg,
   },
   contactEyebrow: {
-    fontSize: 9,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1,
+    letterSpacing: 0.3,
     marginBottom: spacing.sm,
   },
   contactTitle: {
     fontFamily: fonts.serif,
-    fontSize: 17,
+    fontSize: 19,
     fontWeight: "700",
     color: colors.onSurface,
   },
   contactText: {
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: 15,
+    lineHeight: 23,
     color: colors.onSurfaceTertiary,
   },
   contactRows: {
@@ -697,7 +772,7 @@ const styles = StyleSheet.create({
     minHeight: 36,
   },
   contactValue: {
-    fontSize: 13,
+    fontSize: 16,
     color: colors.onSurface,
     flex: 1,
   },
@@ -712,13 +787,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   contactButtonText: {
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "800",
     color: colors.onSurface,
   },
   footer: {
-    fontSize: 10,
-    lineHeight: 15,
+    fontSize: 15,
+    lineHeight: 23,
     textAlign: "center",
     color: colors.onSurfaceTertiary,
     paddingHorizontal: spacing.md,
@@ -732,7 +807,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.sm,
   },
   switchText: {
-    fontSize: 11,
+    fontSize: 15,
     color: colors.onSurfaceTertiary,
     textDecorationLine: "underline",
   },
@@ -749,5 +824,5 @@ const styles = StyleSheet.create({
     marginTop: -spacing.sm,
     marginBottom: spacing.lg,
   },
-  salvatiTesto: { fontSize: 14, fontWeight: "800", color: colors.brandPrimaryDark },
+  salvatiTesto: { fontSize: 17, fontWeight: "800", color: colors.brandPrimaryDark },
 });

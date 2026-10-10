@@ -112,14 +112,14 @@ export default function ScegliComune() {
       >
         <View style={styles.header}>
           {!primoAccesso && (
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}
               style={styles.back}
               hitSlop={12}
               accessibilityLabel="Indietro"
               testID="comuni-back"
             >
-              <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+              <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
             </Pressable>
           )}
           <Wordmark size={primoAccesso ? "md" : "sm"} />
@@ -149,7 +149,7 @@ export default function ScegliComune() {
         {/* Ricerca (resta in alto mentre si scorre) */}
         <View style={styles.searchWrap}>
           <View style={styles.search}>
-            <Ionicons name="search" size={18} color={colors.onSurfaceTertiary} />
+            <Ionicons name="search" size={22} color={colors.onSurfaceTertiary} />
             <TextInput
               value={query}
               onChangeText={setQuery}
@@ -163,13 +163,13 @@ export default function ScegliComune() {
               testID="comuni-search"
             />
             {query ? (
-              <Pressable
+              <Pressable accessibilityRole="button"
                 onPress={() => setQuery("")}
                 hitSlop={10}
                 accessibilityLabel="Cancella la ricerca"
                 testID="comuni-search-clear"
               >
-                <Ionicons name="close-circle" size={18} color={colors.onSurfaceTertiary} />
+                <Ionicons name="close-circle" size={22} color={colors.onSurfaceTertiary} />
               </Pressable>
             ) : null}
           </View>
@@ -182,7 +182,7 @@ export default function ScegliComune() {
 
         {gruppi.map(([regione, voci]) => (
           <View key={regione} style={styles.group}>
-            <Text style={styles.groupLabel}>{regione.toUpperCase()}</Text>
+            <Text style={styles.groupLabel}>{regione}</Text>
             <View style={styles.list}>
               {voci.map((r) => {
                 const c = r.comune;
@@ -218,9 +218,9 @@ export default function ScegliComune() {
                       </Text>
                     </View>
                     {selected ? (
-                      <Ionicons name="checkmark-circle" size={22} color={c.theme.warmDark} />
+                      <Ionicons name="checkmark-circle" size={24} color={c.theme.warmDark} />
                     ) : (
-                      <Ionicons name="chevron-forward" size={18} color={colors.onSurfaceTertiary} />
+                      <Ionicons name="chevron-forward" size={22} color={colors.onSurfaceTertiary} />
                     )}
                   </Pressable>
                 );
@@ -231,7 +231,7 @@ export default function ScegliComune() {
 
         {query && risultati.length === 0 ? (
           <View style={styles.empty} testID="comuni-empty">
-            <Ionicons name="location-outline" size={22} color={colors.onSurfaceTertiary} />
+            <Ionicons name="location-outline" size={24} color={colors.onSurfaceTertiary} />
             <Text style={styles.emptyTitle}>
               «{query.trim()}» non aderisce ancora a TutelApp
             </Text>
@@ -270,14 +270,14 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: fonts.serif,
-    fontSize: 28,
-    lineHeight: 34,
+    fontSize: 31,
+    lineHeight: 40,
     fontWeight: "700",
     color: colors.onSurface,
   },
   lead: {
-    fontSize: 14,
-    lineHeight: 21,
+    fontSize: 17,
+    lineHeight: 26,
     color: colors.onSurfaceSecondary,
     marginTop: spacing.sm,
     marginBottom: spacing.lg,
@@ -298,13 +298,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
     paddingHorizontal: spacing.md,
   },
-  searchInput: { flex: 1, fontSize: 16, color: colors.onSurface, paddingVertical: 10 },
-  count: { fontSize: 11, color: colors.onSurfaceTertiary, marginTop: spacing.sm, marginLeft: 4 },
+  searchInput: { flex: 1, fontSize: 18, color: colors.onSurface, paddingVertical: 10 },
+  count: { fontSize: 15, color: colors.onSurfaceTertiary, marginTop: spacing.sm, marginLeft: 4 },
   group: { marginTop: spacing.md },
   groupLabel: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginBottom: spacing.sm,
   },
@@ -328,14 +328,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  dotText: { fontFamily: fonts.serif, fontSize: 18, fontWeight: "700" },
+  dotText: { fontFamily: fonts.serif, fontSize: 20, fontWeight: "700" },
   cardTitle: {
     fontFamily: fonts.serif,
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
-  cardSub: { fontSize: 12, color: colors.onSurfaceTertiary, marginTop: 2 },
+  cardSub: { fontSize: 15, color: colors.onSurfaceTertiary, marginTop: 2 },
   empty: {
     alignItems: "center",
     gap: spacing.sm,
@@ -348,20 +348,20 @@ const styles = StyleSheet.create({
   },
   emptyTitle: {
     fontFamily: fonts.serif,
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
     textAlign: "center",
   },
   emptyText: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
     textAlign: "center",
   },
   note: {
-    fontSize: 11,
-    lineHeight: 16,
+    fontSize: 15,
+    lineHeight: 22,
     color: colors.onSurfaceTertiary,
     textAlign: "center",
     marginTop: spacing.xl,

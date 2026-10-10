@@ -2,7 +2,7 @@
 // Step numerati dalla diagnosi al Progetto di Vita e avvio del
 // percorso guidato.
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   Pressable,
   ScrollView,
@@ -16,47 +16,42 @@ import Ionicons from "@react-native-vector-icons/ionicons";
 import { useRouter } from "expo-router";
 
 import { colors, fonts, radius, spacing } from "@/src/theme";
-import { GuideStepsCard } from "@/src/components/NextStepsSection";
 import { LivelliSection } from "@/src/components/LivelliSection";
-import { NEXT_STEPS } from "@/src/lib/content";
+import { passiRiconoscimento } from "@/src/lib/content";
+import { statoRiforma } from "@/src/lib/riformaTerritorio";
 import { SezioniBar } from "@/src/components/SezioniBar";
-import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import { HeaderComune } from "@/src/components/HeaderComune";
-
-// Per ogni passo di NEXT_STEPS (stesso ordine): dove andare per farlo davvero.
-const AZIONI: { label: string; route: string; icon: any }[] = [
-  { label: "Segna i passi nella mia pratica", route: "/tracker", icon: "footsteps-outline" },
-  { label: "Cosa cambia con la riforma", route: "/riforma", icon: "document-text-outline" },
-  { label: "Ho il verbale: cosa mi spetta", route: "/verbale", icon: "shield-checkmark-outline" },
-  { label: "Prepara la lettera per i Servizi Sociali", route: "/lettere?id=progetto-vita", icon: "create-outline" },
-  { label: "Prepara il mio Progetto di Vita", route: "/progetto", icon: "sparkles-outline" },
-];
 
 export default function PercorsoScreen() {
   useSezione("percorso");
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const [tutto, setTutto] = useState(false);
-  const [passo, setPasso] = useState(0);
-  const totale = NEXT_STEPS.length;
+  const stato = statoRiforma();
+  const passi = useMemo(() => passiRiconoscimento(stato.attiva), [stato.attiva]);
+  const [passoScelto, setPasso] = useState(0);
+  const totale = passi.length;
+  const passo = Math.min(passoScelto, totale - 1);
   const ultimo = passo === totale - 1;
-  const step = NEXT_STEPS[passo];
-  const azione = AZIONI[passo];
+  const step = passi[passo];
+  const azione = step.azione;
   return (
     <SafeAreaView style={styles.safe} edges={["top"]} testID="percorso-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <View style={styles.header}>
         <Pressable
-          onPress={() => router.back()}
+          onPress={() => (router.canGoBack() ? router.back() : router.replace("/hub" as any))}
           style={styles.iconBtn}
           hitSlop={12}
+          accessibilityRole="button"
           accessibilityLabel="Indietro"
           testID="percorso-back-btn"
         >
-          <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+          <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
         </Pressable>
-        <Text style={styles.headerTitle}>Il percorso per il riconoscimento</Text>
+        <Text style={styles.headerTitle} accessibilityRole="header">
+          Come ottenere il riconoscimento
+        </Text>
         <HeaderComune />
       </View>
 
@@ -65,19 +60,15 @@ export default function PercorsoScreen() {
         contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + spacing.xxl }]}
         showsVerticalScrollIndicator={false}
       >
-        <View style={styles.infoCard}>
-          <View style={styles.infoIcon}>
-            <Ionicons name="information-circle-outline" size={22} color={colors.brandPrimary} />
-          </View>
+        <View style={styles.infoCard} testID="percorso-intro">
           <Text style={styles.infoText}>
-            Non hai ancora il verbale? Il primo passo è la richiesta di riconoscimento: ecco cosa fare per
-            avviarla.
+            Per avere aiuti e permessi serve prima il riconoscimento, cioè il verbale. Ecco cosa fare, un passo
+            alla volta.
+          </Text>
+          <Text style={styles.infoRiforma} testID="percorso-riforma-stato">
+            {stato.frase}
           </Text>
         </View>
-
-        <Text style={styles.regioneNota} testID="percorso-regione">
-          Regole per {comune.nome} · Regione {comune.regione}
-        </Text>
 
         {/* Il percorso, un passo alla volta: Avanti / Indietro */}
         <View style={styles.richiesta} testID="percorso-richiesta">
@@ -85,14 +76,14 @@ export default function PercorsoScreen() {
             PASSO {passo + 1} DI {totale}
           </Text>
           <View style={styles.barre} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
-            {NEXT_STEPS.map((s, i) => (
-              <View key={s.title} style={[styles.barra, i <= passo && styles.barraOn]} />
+            {passi.map((s, i) => (
+              <View key={s.titolo} style={[styles.barra, i <= passo && styles.barraOn]} />
             ))}
           </View>
           <Text style={styles.richiestaTitolo} accessibilityRole="header" testID="percorso-passo-titolo">
-            {step.title}
+            {step.titolo}
           </Text>
-          <Text style={styles.richiestaTesto}>{step.body}</Text>
+          <Text style={styles.richiestaTesto}>{step.testo}</Text>
 
           {/* Come fare questo passo */}
           <Pressable
@@ -101,76 +92,59 @@ export default function PercorsoScreen() {
             accessibilityRole="button"
             testID="percorso-azione"
           >
-            <Ionicons name={azione.icon} size={20} color={colors.brandPrimaryDark} />
+            <Ionicons name={azione.icon as any} size={24} color={colors.brandPrimaryDark} />
             <Text style={styles.azioneText}>{azione.label}</Text>
-            <Ionicons name="chevron-forward" size={16} color={colors.brandPrimaryDark} />
+            <Ionicons name="chevron-forward" size={22} color={colors.brandPrimaryDark} />
           </Pressable>
 
           <View style={styles.navRiga}>
             {passo > 0 ? (
               <Pressable
-                onPress={() => setPasso((p) => Math.max(0, p - 1))}
+                onPress={() => setPasso(passo - 1)}
                 style={({ pressed }) => [styles.navIndietro, pressed && { opacity: 0.85 }]}
                 accessibilityRole="button"
                 accessibilityLabel="Passo precedente"
                 testID="percorso-indietro"
               >
-                <Ionicons name="arrow-back" size={18} color={colors.brandPrimaryDark} />
+                <Ionicons name="arrow-back" size={24} color={colors.brandPrimaryDark} />
                 <Text style={styles.navIndietroText}>Indietro</Text>
               </Pressable>
             ) : null}
             <Pressable
-              onPress={() => (ultimo ? router.push("/progetto" as any) : setPasso((p) => Math.min(totale - 1, p + 1)))}
+              onPress={() => (ultimo ? router.push("/progetto" as any) : setPasso(passo + 1))}
               style={({ pressed }) => [styles.navAvanti, pressed && { opacity: 0.85 }]}
               accessibilityRole="button"
               accessibilityLabel={ultimo ? "Vai al Progetto di Vita" : "Passo successivo"}
               testID="percorso-avanti"
             >
               <Text style={styles.navAvantiText}>{ultimo ? "Vai al Progetto di Vita" : "Avanti"}</Text>
-              <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
+              <Ionicons name="arrow-forward" size={24} color="#FFFFFF" />
             </Pressable>
           </View>
         </View>
 
-        {/* Panoramica di tutti i passi e livelli di sostegno, dietro un solo tasto */}
-        <Pressable
-          onPress={() => setTutto((v) => !v)}
-          style={({ pressed }) => [styles.toccaTutto, pressed && { opacity: 0.85 }]}
-          accessibilityRole="button"
-          accessibilityState={{ expanded: tutto }}
-          testID="percorso-tutto"
-        >
-          <Ionicons name="book-outline" size={20} color={colors.brandPrimaryDark} />
-          <Text style={styles.toccaTuttoText}>
-            {tutto ? "Nascondi i dettagli" : "Vedi tutti i passi e i livelli di sostegno"}
-          </Text>
-          <Ionicons name={tutto ? "chevron-up" : "chevron-down"} size={18} color={colors.brandPrimaryDark} />
-        </Pressable>
-        {tutto ? (
-          <View testID="percorso-informazioni">
-            <GuideStepsCard />
-            <LivelliSection />
-          </View>
-        ) : null}
-
-        {/* Chi ha già il verbale */}
+        {/* Chi ha già il verbale salta i passi */}
         <Pressable
           onPress={() => router.push("/verbale" as any)}
           style={({ pressed }) => [styles.dirittiBtn, pressed && { opacity: 0.85 }]}
           accessibilityRole="button"
           testID="percorso-diritti"
         >
-          <Ionicons name="shield-checkmark-outline" size={22} color="#FFFFFF" />
+          <Ionicons name="shield-checkmark-outline" size={26} color="#FFFFFF" />
           <View style={styles.flex}>
             <Text style={styles.dirittiTitolo}>Hai già il verbale?</Text>
             <Text style={styles.dirittiSub}>Copia i dati e scopri cosa ti spetta e il prossimo passo</Text>
           </View>
-          <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
+          <Ionicons name="arrow-forward" size={24} color="#FFFFFF" />
         </Pressable>
+
+        {/* I 4 livelli di sostegno: si aprono con il loro tasto */}
+        <View style={{ marginTop: spacing.lg }}>
+          <LivelliSection />
+        </View>
 
         <SezioniBar />
       </ScrollView>
-
     </SafeAreaView>
   );
 }
@@ -187,8 +161,8 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   iconBtn: {
-    width: 40,
-    height: 40,
+    width: 48,
+    height: 48,
     borderRadius: radius.pill,
     backgroundColor: colors.surfaceSecondary,
     alignItems: "center",
@@ -198,16 +172,14 @@ const styles = StyleSheet.create({
     fontFamily: fonts.serif,
     flex: 1,
     textAlign: "center",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
   scroll: { paddingHorizontal: spacing.lg, paddingTop: spacing.sm },
 
   infoCard: {
-    flexDirection: "row",
-    gap: spacing.md,
-    alignItems: "flex-start",
+    gap: spacing.sm,
     backgroundColor: colors.brandSecondary,
     borderRadius: radius.md,
     padding: spacing.md,
@@ -221,10 +193,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  infoRiforma: { fontSize: 18, lineHeight: 26, color: colors.onSurface, fontWeight: "800" },
   infoText: {
     flex: 1,
-    fontSize: 14,
-    lineHeight: 21,
+    fontSize: 17,
+    lineHeight: 26,
     color: colors.onSurface,
     fontWeight: "600",
   },
@@ -248,13 +221,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   regionCardLabel: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
     color: colors.onSurface,
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
   },
   regionCardValue: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "800",
     color: colors.onBrandSecondary,
     marginTop: 1,
@@ -269,7 +242,7 @@ const styles = StyleSheet.create({
     paddingVertical: 7,
     borderRadius: radius.pill,
   },
-  regionCardCtaText: { fontSize: 12, fontWeight: "800", color: colors.onSurface },
+  regionCardCtaText: { fontSize: 15, fontWeight: "800", color: colors.onSurface },
   questionario: { marginTop: spacing.xl },
   dirittiBtn: {
     flexDirection: "row",
@@ -280,8 +253,8 @@ const styles = StyleSheet.create({
     padding: spacing.md,
     marginTop: spacing.lg,
   },
-  dirittiTitolo: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
-  dirittiSub: { color: "#FFFFFF", fontSize: 12.5, lineHeight: 17, marginTop: 2 },
+  dirittiTitolo: { color: "#FFFFFF", fontSize: 18, fontWeight: "800" },
+  dirittiSub: { color: "#FFFFFF", fontSize: 15, lineHeight: 20, marginTop: 2 },
   richiesta: {
     backgroundColor: colors.surface,
     borderRadius: radius.lg,
@@ -290,9 +263,9 @@ const styles = StyleSheet.create({
     padding: spacing.lg,
     marginBottom: spacing.md,
   },
-  richiestaLabel: { fontSize: 12, fontWeight: "800", color: colors.brandPrimaryDark, letterSpacing: 1 },
-  richiestaTitolo: { fontFamily: fonts.serif, fontSize: 18, lineHeight: 24, fontWeight: "700", color: colors.onSurface, marginTop: 4 },
-  richiestaTesto: { fontSize: 15, lineHeight: 22, color: colors.onSurface, marginTop: spacing.sm },
+  richiestaLabel: { fontSize: 15, fontWeight: "800", color: colors.brandPrimaryDark, letterSpacing: 0.3 },
+  richiestaTitolo: { fontFamily: fonts.serif, fontSize: 20, lineHeight: 27, fontWeight: "700", color: colors.onSurface, marginTop: 4 },
+  richiestaTesto: { fontSize: 17, lineHeight: 25, color: colors.onSurface, marginTop: spacing.sm },
   barre: { flexDirection: "row", gap: 6, marginTop: spacing.sm },
   barra: { flex: 1, height: 6, borderRadius: 3, backgroundColor: colors.surfaceTertiary },
   barraOn: { backgroundColor: colors.brandPrimaryDark },
@@ -307,7 +280,7 @@ const styles = StyleSheet.create({
     borderWidth: 1.5,
     borderColor: colors.brandPrimaryDark,
   },
-  azioneText: { flex: 1, fontSize: 15, fontWeight: "800", color: colors.brandPrimaryDark },
+  azioneText: { flex: 1, fontSize: 17, fontWeight: "800", color: colors.brandPrimaryDark },
   navRiga: { flexDirection: "row", gap: spacing.sm, marginTop: spacing.md },
   navIndietro: {
     flexDirection: "row",
@@ -319,7 +292,7 @@ const styles = StyleSheet.create({
     borderRadius: radius.lg,
     backgroundColor: colors.surfaceSecondary,
   },
-  navIndietroText: { fontSize: 15, fontWeight: "800", color: colors.brandPrimaryDark },
+  navIndietroText: { fontSize: 17, fontWeight: "800", color: colors.brandPrimaryDark },
   navAvanti: {
     flex: 1,
     flexDirection: "row",
@@ -330,7 +303,7 @@ const styles = StyleSheet.create({
     borderRadius: radius.lg,
     backgroundColor: colors.brandPrimaryDark,
   },
-  navAvantiText: { fontSize: 16, fontWeight: "800", color: "#FFFFFF" },
+  navAvantiText: { fontSize: 18, fontWeight: "800", color: "#FFFFFF" },
   toccaTutto: {
     flexDirection: "row",
     alignItems: "center",
@@ -342,8 +315,8 @@ const styles = StyleSheet.create({
     borderColor: colors.brandPrimaryDark,
     marginBottom: spacing.md,
   },
-  toccaTuttoText: { flex: 1, fontSize: 15, fontWeight: "800", color: colors.brandPrimaryDark },
-  regioneNota: { fontSize: 12.5, color: colors.onSurfaceSecondary, marginBottom: spacing.md, fontWeight: "600" },
+  toccaTuttoText: { flex: 1, fontSize: 17, fontWeight: "800", color: colors.brandPrimaryDark },
+  regioneNota: { fontSize: 15, color: colors.onSurfaceSecondary, marginBottom: spacing.md, fontWeight: "600" },
 
   // Modal regione
   modalBackdrop: {
@@ -367,7 +340,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   sheetTitle: {
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "800",
     color: colors.onSurface,
     marginBottom: spacing.sm,
@@ -381,6 +354,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: colors.divider,
   },
-  sheetItemText: { fontSize: 15, color: colors.onSurfaceSecondary, fontWeight: "600" },
+  sheetItemText: { fontSize: 17, color: colors.onSurfaceSecondary, fontWeight: "600" },
   sheetItemTextSelected: { color: colors.onSurface, fontWeight: "800" },
 });

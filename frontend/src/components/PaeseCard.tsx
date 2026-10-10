@@ -34,10 +34,10 @@ export function PaeseCard({ testID = "paese-card" }: { testID?: string }) {
         <View style={[styles.card, { borderColor: t.warm }]} testID={testID}>
           <View style={styles.topRow}>
             <View style={[styles.icon, { backgroundColor: t.warmSoft }]}>
-              <Ionicons name="home-outline" size={20} color={t.warmDark} />
+              <Ionicons name="home-outline" size={24} color={t.warmDark} />
             </View>
             <View style={styles.flex}>
-              <Text style={[styles.eyebrow, { color: t.warmDark }]}>IL TUO COMUNE</Text>
+              <Text style={[styles.eyebrow, { color: t.warmDark }]}>Il tuo comune</Text>
               <Text style={styles.title} testID={`${testID}-nome`}>
                 Comune di {paese.nome}
               </Text>
@@ -65,7 +65,7 @@ export function PaeseCard({ testID = "paese-card" }: { testID?: string }) {
                 accessibilityLabel={`Chiama il Comune di ${paese.nome}`}
                 testID={`${testID}-chiama`}
               >
-                <Ionicons name="call-outline" size={15} color={t.warmDark} />
+                <Ionicons name="call-outline" size={21} color={t.warmDark} />
                 <Text style={[styles.chipText, { color: t.warmDark }]}>{paese.telefono}</Text>
               </Pressable>
             ) : null}
@@ -76,7 +76,7 @@ export function PaeseCard({ testID = "paese-card" }: { testID?: string }) {
                 accessibilityRole="button"
                 accessibilityLabel={`Scrivi al Comune di ${paese.nome}`}
               >
-                <Ionicons name="mail-outline" size={15} color={t.warmDark} />
+                <Ionicons name="mail-outline" size={21} color={t.warmDark} />
                 <Text style={[styles.chipText, { color: t.warmDark }]}>Email</Text>
               </Pressable>
             ) : null}
@@ -87,7 +87,7 @@ export function PaeseCard({ testID = "paese-card" }: { testID?: string }) {
                 accessibilityRole="link"
                 accessibilityLabel={`Sito del Comune di ${paese.nome}`}
               >
-                <Ionicons name="globe-outline" size={15} color={t.warmDark} />
+                <Ionicons name="globe-outline" size={21} color={t.warmDark} />
                 <Text style={[styles.chipText, { color: t.warmDark }]}>Sito</Text>
               </Pressable>
             ) : null}
@@ -105,7 +105,7 @@ export function PaeseCard({ testID = "paese-card" }: { testID?: string }) {
           testID={testID}
         >
           <View style={[styles.icon, { backgroundColor: t.warmSoft }]}>
-            <Ionicons name="location-outline" size={20} color={t.warmDark} />
+            <Ionicons name="location-outline" size={24} color={t.warmDark} />
           </View>
           <View style={styles.flex}>
             <Text style={styles.title}>In quale Comune abiti?</Text>
@@ -113,7 +113,7 @@ export function PaeseCard({ testID = "paese-card" }: { testID?: string }) {
               Scegli il tuo paese: avrai sempre a portata di mano i recapiti del municipio.
             </Text>
           </View>
-          <Ionicons name="chevron-forward" size={18} color={colors.onSurfaceTertiary} />
+          <Ionicons name="chevron-forward" size={22} color={colors.onSurfaceTertiary} />
         </Pressable>
       )}
 
@@ -123,7 +123,7 @@ export function PaeseCard({ testID = "paese-card" }: { testID?: string }) {
         transparent
         onRequestClose={() => setAperto(false)}
       >
-        <Pressable
+        <Pressable accessibilityRole="button"
           style={styles.backdrop}
           onPress={() => setAperto(false)}
           accessibilityLabel="Chiudi"
@@ -156,7 +156,7 @@ export function PaeseCard({ testID = "paese-card" }: { testID?: string }) {
                 >
                   <Text style={styles.optionText}>{p.nome}</Text>
                   {selected ? (
-                    <Ionicons name="checkmark" size={18} color={t.warmDark} />
+                    <Ionicons name="checkmark" size={22} color={t.warmDark} />
                   ) : null}
                 </Pressable>
               );
@@ -190,17 +190,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  eyebrow: { fontSize: 9, fontWeight: "800", letterSpacing: 1, marginBottom: 2 },
+  eyebrow: { fontSize: 15, fontWeight: "800", letterSpacing: 0.3, marginBottom: 2 },
   title: {
     fontFamily: fonts.serif,
-    fontSize: 16,
-    lineHeight: 21,
+    fontSize: 18,
+    lineHeight: 24,
     fontWeight: "700",
     color: colors.onSurface,
   },
-  text: { fontSize: 12, lineHeight: 18, color: colors.onSurfaceTertiary, marginTop: 2 },
+  text: { fontSize: 15, lineHeight: 23, color: colors.onSurfaceTertiary, marginTop: 2 },
   change: {
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "700",
     color: colors.onSurface,
     textDecorationLine: "underline",
@@ -220,8 +220,8 @@ const styles = StyleSheet.create({
     borderRadius: radius.pill,
     backgroundColor: colors.surfaceSecondary,
   },
-  chipText: { fontSize: 13, fontWeight: "700" },
-  hint: { fontSize: 11, lineHeight: 16, color: colors.onSurfaceTertiary, marginTop: spacing.md },
+  chipText: { fontSize: 16, fontWeight: "700" },
+  hint: { fontSize: 15, lineHeight: 22, color: colors.onSurfaceTertiary, marginTop: spacing.md },
   pressed: { opacity: 0.8 },
   backdrop: { flex: 1, backgroundColor: "rgba(51,47,38,0.35)" },
   sheet: {
@@ -242,11 +242,11 @@ const styles = StyleSheet.create({
   },
   sheetTitle: {
     fontFamily: fonts.serif,
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: "700",
     color: colors.onSurface,
   },
-  sheetSub: { fontSize: 12, color: colors.onSurfaceTertiary, marginTop: 2, marginBottom: spacing.md },
+  sheetSub: { fontSize: 15, color: colors.onSurfaceTertiary, marginTop: 2, marginBottom: spacing.md },
   sheetList: { flexGrow: 0 },
   option: {
     minHeight: 48,
@@ -256,5 +256,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.md,
     borderRadius: radius.md,
   },
-  optionText: { fontSize: 15, color: colors.onSurface },
+  optionText: { fontSize: 17, color: colors.onSurface },
 });

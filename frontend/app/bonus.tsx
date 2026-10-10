@@ -42,7 +42,7 @@ function Scheda({ b }: { b: Bonus }) {
       >
         <Ionicons
           name={b.stato === "chiuso" ? "lock-closed-outline" : b.stato === "da-verificare" ? "help-circle-outline" : "checkmark-circle-outline"}
-          size={16}
+          size={22}
           color={c.testo}
         />
         <Text style={[styles.badgeText, { color: c.testo }]}>{stato.etichetta}</Text>
@@ -65,7 +65,7 @@ function Scheda({ b }: { b: Bonus }) {
           accessibilityRole="link"
           accessibilityLabel={`Apri la fonte: ${b.fonte.label}`}
         >
-          <Ionicons name="open-outline" size={16} color={colors.brandPrimaryDark} />
+          <Ionicons name="open-outline" size={22} color={colors.brandPrimaryDark} />
           <Text style={styles.fonteText}>Apri la fonte ufficiale</Text>
         </Pressable>
         <BottoneSalva
@@ -110,7 +110,7 @@ export default function Bonus() {
               accessibilityRole="button"
               accessibilityLabel={`Chiama ${comune.ente}`}
             >
-              <Ionicons name="call-outline" size={16} color={colors.brandPrimaryDark} />
+              <Ionicons name="call-outline" size={22} color={colors.brandPrimaryDark} />
               <Text style={styles.fonteText}>Chiama {comune.telefono}</Text>
             </Pressable>
           )}
@@ -160,18 +160,18 @@ const styles = StyleSheet.create({
     borderRadius: radius.pill,
     marginBottom: spacing.sm,
   },
-  badgeText: { fontSize: 14, fontWeight: "800" },
+  badgeText: { fontSize: 17, fontWeight: "800" },
   titolo: {
     fontFamily: fonts.serif,
-    fontSize: 18,
-    lineHeight: 24,
+    fontSize: 20,
+    lineHeight: 27,
     fontWeight: "700",
     color: colors.onSurface,
     marginBottom: spacing.sm,
   },
   riga: { marginTop: spacing.sm },
-  rigaTitolo: { fontSize: 14, fontWeight: "800", color: colors.onSurface, marginBottom: 2 },
-  testo: { fontSize: 15, lineHeight: 22, color: colors.onSurface },
+  rigaTitolo: { fontSize: 17, fontWeight: "800", color: colors.onSurface, marginBottom: 2 },
+  testo: { fontSize: 17, lineHeight: 25, color: colors.onSurface },
   nota: { marginTop: spacing.md, fontWeight: "700" },
   piede: {
     flexDirection: "row",
@@ -192,6 +192,6 @@ const styles = StyleSheet.create({
     alignSelf: "flex-start",
     marginTop: spacing.sm,
   },
-  fonteText: { fontSize: 14, fontWeight: "800", color: colors.brandPrimaryDark },
-  controllo: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary, marginTop: spacing.sm },
+  fonteText: { fontSize: 17, fontWeight: "800", color: colors.brandPrimaryDark },
+  controllo: { fontSize: 17, lineHeight: 24, color: colors.onSurfaceSecondary, marginTop: spacing.sm },
 });

@@ -61,7 +61,7 @@ export function AssistantCard({ answers }: { answers?: Answers }) {
     <View style={styles.aiCard} testID="results-assistant">
       <View style={styles.aiHeader}>
         <View style={styles.aiHeaderIcon}>
-          <Ionicons name="chatbubbles-outline" size={22} color={colors.brandPrimary} />
+          <Ionicons name="chatbubbles-outline" size={24} color={colors.brandPrimary} />
         </View>
         <View style={styles.flex}>
           <Text style={styles.aiTitle}>Fai una domanda alla Legge 104</Text>
@@ -87,7 +87,7 @@ export function AssistantCard({ answers }: { answers?: Answers }) {
       <Text style={styles.aiSuggLabel}>Suggerimenti veloci</Text>
       <View style={styles.aiSuggs}>
         {suggestions.map((s, idx) => (
-          <Pressable
+          <Pressable accessibilityRole="button"
             key={s}
             onPress={() => {
               setQuestion(s);
@@ -122,7 +122,7 @@ export function AssistantCard({ answers }: { answers?: Answers }) {
           <ActivityIndicator color={colors.onBrandPrimary} size="small" />
         ) : (
           <>
-            <Ionicons name="send-outline" size={16} color={colors.onBrandPrimary} />
+            <Ionicons name="send-outline" size={22} color={colors.onBrandPrimary} />
             <Text style={styles.aiAskBtnText}>Chiedi</Text>
           </>
         )}
@@ -131,7 +131,7 @@ export function AssistantCard({ answers }: { answers?: Answers }) {
       {answer && (
         <View style={styles.aiAnswerCard} testID="assistant-answer">
           <View style={styles.aiAnswerHeader}>
-            <Ionicons name="sparkles-outline" size={14} color={colors.brandPrimary} />
+            <Ionicons name="sparkles-outline" size={20} color={colors.brandPrimary} />
             <Text style={styles.aiAnswerLabel}>Risposta</Text>
           </View>
           <Text style={styles.aiAnswerText} selectable>
@@ -166,12 +166,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   aiTitle: {
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "800",
     color: colors.onBrandSecondary,
     marginBottom: 2,
   },
-  aiSub: { fontSize: 13, color: colors.onSurfaceTertiary, lineHeight: 18 },
+  aiSub: { fontSize: 16, color: colors.onSurfaceTertiary, lineHeight: 22 },
   aiInputWrap: {
     backgroundColor: colors.surface,
     borderRadius: radius.md,
@@ -180,18 +180,18 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   aiInput: {
-    fontSize: 15,
+    fontSize: 17,
     color: colors.onSurface,
     padding: 0,
     minHeight: 48,
     ...Platform.select({ web: { outlineStyle: "none" } as any, default: {} }),
   },
   aiSuggLabel: {
-    fontSize: 11,
+    fontSize: 15,
     fontWeight: "800",
     color: colors.onSurfaceTertiary,
-    textTransform: "uppercase",
-    letterSpacing: 0.8,
+    textTransform: "none",
+    letterSpacing: 0.3,
     marginBottom: spacing.sm,
   },
   aiSuggs: {
@@ -210,10 +210,10 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
   },
   aiSuggText: {
-    fontSize: 12,
+    fontSize: 15,
     color: colors.onSurface,
     fontWeight: "600",
-    lineHeight: 16,
+    lineHeight: 20,
   },
   aiAskBtn: {
     flexDirection: "row",
@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
   aiAskBtnDisabled: { backgroundColor: colors.surfaceTertiary },
   aiAskBtnText: {
     color: colors.onBrandPrimary,
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "800",
   },
   aiAnswerCard: {
@@ -246,14 +246,14 @@ const styles = StyleSheet.create({
     marginBottom: spacing.xs,
   },
   aiAnswerLabel: {
-    fontSize: 11,
+    fontSize: 15,
     fontWeight: "800",
     color: colors.onSurface,
-    letterSpacing: 0.8,
+    letterSpacing: 0.3,
   },
   aiAnswerText: {
-    fontSize: 14,
-    lineHeight: 20,
+    fontSize: 17,
+    lineHeight: 24,
     color: colors.onSurfaceSecondary,
   },
 });

@@ -81,8 +81,8 @@ export default function Agevolazioni() {
     const aree = Array.from(new Set(elenco.map((a) => a.area)));
     return (
       <Pagina titolo="Bonus e agevolazioni" testID="agevolazioni-risultati">
-        <Pressable onPress={() => setRisultati(false)} hitSlop={8} style={styles.indietro}>
-          <Ionicons name="arrow-back" size={14} color={colors.onSurface} />
+        <Pressable accessibilityRole="button" onPress={() => setRisultati(false)} hitSlop={8} style={styles.indietro}>
+          <Ionicons name="arrow-back" size={20} color={colors.onSurface} />
           <Text style={styles.indietroText}>Cambia le risposte</Text>
         </Pressable>
         <Intro>
@@ -100,7 +100,7 @@ export default function Agevolazioni() {
                 <View key={a.id} style={paginaStili.card} testID={`agevolazione-${a.id}`}>
                   <View style={styles.cardTop}>
                     <View style={styles.icona}>
-                      <Ionicons name={ICONE[a.area] as any} size={18} color={colors.brandPrimaryDark} />
+                      <Ionicons name={ICONE[a.area] as any} size={22} color={colors.brandPrimaryDark} />
                     </View>
                     <View style={styles.flex}>
                       <Text style={styles.titolo}>{a.titolo}</Text>
@@ -114,7 +114,7 @@ export default function Agevolazioni() {
                   <Text style={styles.etichetta}>Cosa fare</Text>
                   <Text style={paginaStili.testo}>{a.come}</Text>
                   {a.link ? (
-                    <Pressable onPress={() => apri(a.link!.href)} hitSlop={6} style={styles.link}>
+                    <Pressable accessibilityRole="button" onPress={() => apri(a.link!.href)} hitSlop={6} style={styles.link}>
                       <Text style={styles.linkText}>{a.link.label}</Text>
                       <Ionicons
                         name={a.link.href.startsWith("http") ? "open-outline" : "arrow-forward"}
@@ -184,7 +184,7 @@ export default function Agevolazioni() {
 const styles = StyleSheet.create({
   flex: { flex: 1 },
   indietro: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: spacing.sm },
-  indietroText: { fontSize: 13, fontWeight: "700", color: colors.onSurface, textDecorationLine: "underline" },
+  indietroText: { fontSize: 16, fontWeight: "700", color: colors.onSurface, textDecorationLine: "underline" },
   cardTop: { flexDirection: "row", gap: spacing.md, alignItems: "flex-start", marginBottom: spacing.sm },
   icona: {
     width: 36,
@@ -194,18 +194,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  titolo: { fontSize: 16, fontWeight: "800", color: colors.onSurface, lineHeight: 21 },
-  forse: { fontSize: 12, fontWeight: "700", color: colors.brandPrimaryDark, marginTop: 2 },
+  titolo: { fontSize: 18, fontWeight: "800", color: colors.onSurface, lineHeight: 24 },
+  forse: { fontSize: 15, fontWeight: "700", color: colors.brandPrimaryDark, marginTop: 2 },
   etichetta: {
-    fontSize: 11,
+    fontSize: 15,
     fontWeight: "800",
     letterSpacing: 0.6,
-    textTransform: "uppercase",
+    textTransform: "none",
     color: colors.onSurfaceSecondary,
     marginTop: spacing.sm,
     marginBottom: 2,
   },
   link: { flexDirection: "row", alignItems: "center", gap: 4, marginTop: spacing.sm },
-  linkText: { fontSize: 14, fontWeight: "800", color: colors.brandPrimaryDark, textDecorationLine: "underline" },
-  progresso: { fontSize: 13, color: colors.onSurface, textAlign: "center", fontWeight: "600" },
+  linkText: { fontSize: 17, fontWeight: "800", color: colors.brandPrimaryDark, textDecorationLine: "underline" },
+  progresso: { fontSize: 16, color: colors.onSurface, textAlign: "center", fontWeight: "600" },
 });

@@ -28,8 +28,8 @@ export function SezioniBar() {
             accessibilityLabel={s.label}
             testID={`sezioni-bar-${s.route.slice(1)}`}
           >
-            <Ionicons name={s.icon} size={20} color={on ? colors.brandPrimary : colors.onSurface} />
-            <Text style={styles.label} numberOfLines={2}>{s.label}</Text>
+            <Ionicons name={s.icon} size={26} color={on ? colors.brandPrimary : colors.onSurface} />
+            <Text style={styles.label}>{s.label}</Text>
           </Pressable>
         );
       })}
@@ -38,23 +38,27 @@ export function SezioniBar() {
 }
 
 const styles = StyleSheet.create({
+  // Due colonne: le etichette restano grandi e leggibili
   bar: {
     flexDirection: "row",
+    flexWrap: "wrap",
     gap: spacing.sm,
     marginTop: spacing.xl,
   },
   item: {
-    flex: 1,
+    flexGrow: 1,
+    flexBasis: "46%",
+    flexDirection: "row",
     alignItems: "center",
-    gap: 4,
+    gap: spacing.sm,
     paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.md,
     borderRadius: radius.md,
     backgroundColor: colors.surface,
-    borderWidth: 0.5,
+    borderWidth: 1,
     borderColor: colors.border,
     minHeight: 56,
-    justifyContent: "center",
   },
-  itemOn: { backgroundColor: colors.brandSecondary },
-  label: { fontSize: 10.5, fontWeight: "700", color: colors.onSurface, textAlign: "center" },
+  itemOn: { backgroundColor: colors.brandSecondary, borderColor: colors.brandPrimaryDark },
+  label: { flex: 1, fontSize: 16, lineHeight: 21, fontWeight: "700", color: colors.onSurface },
 });

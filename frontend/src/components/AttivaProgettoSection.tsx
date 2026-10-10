@@ -13,11 +13,11 @@ const SISDA_URL =
 export function AttivaProgettoSection() {
   return (
     <View style={styles.wrap} testID="attiva-progetto-section">
-      <Text style={styles.sectionLabel}>COME ATTIVARE IL PROGETTO DI VITA</Text>
+      <Text style={styles.sectionLabel}>Come attivare il progetto di vita</Text>
 
       <View style={styles.okCard}>
         <View style={styles.okHead}>
-          <Ionicons name="checkmark-circle" size={22} color={colors.success} />
+          <Ionicons name="checkmark-circle" size={24} color={colors.success} />
           <Text style={styles.okTitle}>Puoi attivare il Progetto di Vita</Text>
         </View>
         <Text style={styles.okText}>
@@ -30,7 +30,7 @@ export function AttivaProgettoSection() {
       <Text style={styles.sezTitle}>Le due strade ufficiali</Text>
       <View style={styles.stradaCard}>
         <View style={styles.stradaIcon}>
-          <Ionicons name="laptop-outline" size={20} color={colors.brandPrimary} />
+          <Ionicons name="laptop-outline" size={24} color={colors.brandPrimary} />
         </View>
         <View style={styles.flex}>
           <Text style={styles.stradaTitle}>1 · Online, sul portale INPS (servizio SISDA)</Text>
@@ -44,7 +44,7 @@ export function AttivaProgettoSection() {
       </View>
       <View style={styles.stradaCard}>
         <View style={styles.stradaIcon}>
-          <Ionicons name="business-outline" size={20} color={colors.brandPrimary} />
+          <Ionicons name="business-outline" size={24} color={colors.brandPrimary} />
         </View>
         <View style={styles.flex}>
           <Text style={styles.stradaTitle}>2 · Di persona, in forma libera</Text>
@@ -63,7 +63,7 @@ export function AttivaProgettoSection() {
         accessibilityLabel="Vai al portale INPS, servizio SISDA"
         testID="hub-sisda-btn"
       >
-        <Ionicons name="open-outline" size={20} color={colors.onBrandPrimary} />
+        <Ionicons name="open-outline" size={24} color={colors.onBrandPrimary} />
         <Text style={styles.primaryBtnText}>Vai al portale INPS</Text>
       </Pressable>
     </View>
@@ -74,9 +74,9 @@ const styles = StyleSheet.create({
   wrap: { marginTop: spacing.xl },
   flex: { flex: 1 },
   sectionLabel: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginBottom: spacing.sm,
   },
@@ -94,15 +94,15 @@ const styles = StyleSheet.create({
   },
   okTitle: {
     fontFamily: fonts.serif,
-    fontSize: 17,
+    fontSize: 19,
     fontWeight: "700",
     color: colors.onSurface,
     flex: 1,
   },
-  okText: { fontSize: 14, lineHeight: 21, color: colors.onSurface, fontWeight: "500" },
+  okText: { fontSize: 17, lineHeight: 26, color: colors.onSurface, fontWeight: "500" },
   sezTitle: {
     fontFamily: fonts.serif,
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "700",
     color: colors.onSurface,
     marginBottom: spacing.md,
@@ -127,12 +127,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   stradaTitle: {
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "800",
     color: colors.onSurface,
     marginBottom: 4,
   },
-  stradaText: { fontSize: 13, lineHeight: 19, color: colors.onSurfaceSecondary },
+  stradaText: { fontSize: 16, lineHeight: 23, color: colors.onSurfaceSecondary },
   primaryBtn: {
     flexDirection: "row",
     alignItems: "center",
@@ -144,5 +144,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.xl,
     marginTop: spacing.lg,
   },
-  primaryBtnText: { color: colors.onBrandPrimary, fontSize: 16, fontWeight: "800" },
+  primaryBtnText: { color: colors.onBrandPrimary, fontSize: 18, fontWeight: "800" },
 });

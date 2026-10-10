@@ -26,7 +26,7 @@ const SECTION_META: Record<
     icon: "location-outline",
     color: topics.salute.main,
     soft: topics.salute.soft,
-    label: "SEDE E SMART WORKING",
+    label: "Sede e smart working",
   },
   fiscali: {
     icon: "cash-outline",
@@ -38,7 +38,7 @@ const SECTION_META: Record<
     icon: "wallet-outline",
     color: topics.invalidita.main,
     soft: topics.invalidita.soft,
-    label: "PRESTAZIONI ECONOMICHE",
+    label: "Prestazioni economiche",
   },
 };
 
@@ -51,7 +51,7 @@ export function RightsSectionCard({ section }: { section: RightSection }) {
     >
       <View style={styles.sectionHeader}>
         <View style={[styles.sectionIcon, { backgroundColor: meta.soft }]}>
-          <Ionicons name={meta.icon} size={22} color={meta.color} />
+          <Ionicons name={meta.icon} size={24} color={meta.color} />
         </View>
         <View style={styles.flex}>
           <Text style={[styles.sectionStep, { color: meta.color }]}>
@@ -101,20 +101,20 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   sectionStep: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
   },
   sectionTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "800",
     color: colors.onSurface,
     letterSpacing: -0.2,
     marginTop: 2,
   },
   sectionIntro: {
-    fontSize: 14,
-    lineHeight: 21,
+    fontSize: 17,
+    lineHeight: 26,
     color: colors.onSurfaceSecondary,
     marginBottom: spacing.md,
   },
@@ -132,12 +132,12 @@ const styles = StyleSheet.create({
   },
   bulletText: {
     flex: 1,
-    fontSize: 14,
-    lineHeight: 20,
+    fontSize: 17,
+    lineHeight: 24,
     color: colors.onSurfaceSecondary,
   },
   sectionFooter: {
-    fontSize: 12,
+    fontSize: 15,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
     marginTop: spacing.md,

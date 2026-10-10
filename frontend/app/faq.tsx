@@ -57,14 +57,14 @@ export default function Faq() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="faq-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
           accessibilityLabel="Indietro"
           testID="faq-back-btn"
         >
-          <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+          <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Domande e Glossario</Text>
         <HeaderComune />
@@ -79,7 +79,7 @@ export default function Faq() {
           <Text style={styles.errText}>
             Contenuti non disponibili. Controlla la connessione.
           </Text>
-          <Pressable onPress={load} style={styles.retryBtn} testID="faq-retry">
+          <Pressable accessibilityRole="button" onPress={load} style={styles.retryBtn} testID="faq-retry">
             <Text style={styles.retryText}>Riprova</Text>
           </Pressable>
         </View>
@@ -94,7 +94,7 @@ export default function Faq() {
           showsVerticalScrollIndicator={false}
         >
           <Text style={[styles.groupLabel, { color: topics.legge104.main }]}>
-            DOMANDE FREQUENTI
+            Domande frequenti
           </Text>
           {content.faq.map((f, i) => {
             const open = openIdx === i;
@@ -131,7 +131,7 @@ export default function Faq() {
             ]}
             testID="faq-glossario"
           >
-            GLOSSARIO SEMPLICE
+            Glossario semplice
           </Text>
           {content.glossario.map((g) => (
             <View key={g.t} style={styles.glossRow}>
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     gap: spacing.md,
     padding: spacing.xl,
   },
-  errText: { fontSize: 14, color: colors.onSurfaceSecondary, textAlign: "center" },
+  errText: { fontSize: 17, color: colors.onSurfaceSecondary, textAlign: "center" },
   retryBtn: {
     backgroundColor: colors.brandPrimary,
     borderRadius: radius.pill,
@@ -177,8 +177,8 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   iconBtn: {
-    width: 40,
-    height: 40,
+    width: 48,
+    height: 48,
     borderRadius: radius.pill,
     backgroundColor: colors.surfaceSecondary,
     alignItems: "center",
@@ -188,15 +188,15 @@ const styles = StyleSheet.create({
     fontFamily: fonts.serif,
     flex: 1,
     textAlign: "center",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
   scroll: { paddingHorizontal: spacing.lg, paddingTop: spacing.sm },
   groupLabel: {
-    fontSize: 11,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
     marginBottom: spacing.sm,
   },
   faqCard: {
@@ -215,15 +215,15 @@ const styles = StyleSheet.create({
   },
   faqQ: {
     flex: 1,
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "700",
     color: colors.onSurface,
-    lineHeight: 19,
+    lineHeight: 23,
   },
   faqA: {
     marginTop: spacing.sm,
-    fontSize: 14,
-    lineHeight: 20,
+    fontSize: 17,
+    lineHeight: 24,
     color: colors.onSurfaceSecondary,
     paddingTop: spacing.sm,
     borderTopWidth: 1,
@@ -236,22 +236,22 @@ const styles = StyleSheet.create({
     marginBottom: spacing.sm,
   },
   glossTerm: {
-    fontSize: 13,
+    fontSize: 16,
     fontWeight: "800",
     color: colors.onSurface,
   },
   glossDef: {
-    fontSize: 13,
-    lineHeight: 18,
+    fontSize: 16,
+    lineHeight: 22,
     color: colors.onSurfaceSecondary,
     marginTop: 2,
   },
   disclaimer: {
-    fontSize: 11,
+    fontSize: 15,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
     textAlign: "center",
     marginTop: spacing.md,
-    lineHeight: 16,
+    lineHeight: 22,
   },
 });

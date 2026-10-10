@@ -62,10 +62,10 @@ export function ProssimoPasso({ verbale }: { verbale?: VerbaleOption }) {
     <View style={[styles.card, { borderColor: p.color.main }]} testID="prossimo-passo">
       <View style={styles.row}>
         <View style={[styles.icon, { backgroundColor: p.color.soft }]}>
-          <Ionicons name={p.icon} size={22} color={p.color.main} />
+          <Ionicons name={p.icon} size={24} color={p.color.main} />
         </View>
         <View style={styles.flex}>
-          <Text style={styles.eyebrow}>IL TUO PROSSIMO PASSO</Text>
+          <Text style={styles.eyebrow}>Il tuo prossimo passo</Text>
           <Text style={styles.title}>{p.title}</Text>
         </View>
       </View>
@@ -77,7 +77,7 @@ export function ProssimoPasso({ verbale }: { verbale?: VerbaleOption }) {
         testID="prossimo-passo-cta"
       >
         <Text style={styles.ctaText}>{p.cta}</Text>
-        <Ionicons name="arrow-forward" size={16} color={colors.onBrandPrimary} />
+        <Ionicons name="arrow-forward" size={22} color={colors.onBrandPrimary} />
       </Pressable>
     </View>
   );
@@ -100,9 +100,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  eyebrow: { fontSize: 10, fontWeight: "800", letterSpacing: 1.1, color: colors.onSurfaceTertiary },
-  title: { fontFamily: fonts.serif, fontSize: 18, lineHeight: 23, fontWeight: "700", color: colors.onSurface },
-  body: { fontSize: 14, lineHeight: 21, color: colors.onSurfaceSecondary, marginTop: spacing.md },
+  eyebrow: { fontSize: 15, fontWeight: "800", letterSpacing: 0.3, color: colors.onSurfaceTertiary },
+  title: { fontFamily: fonts.serif, fontSize: 20, lineHeight: 26, fontWeight: "700", color: colors.onSurface },
+  body: { fontSize: 17, lineHeight: 26, color: colors.onSurfaceSecondary, marginTop: spacing.md },
   cta: {
     marginTop: spacing.md,
     minHeight: 48,
@@ -114,5 +114,5 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
     paddingHorizontal: spacing.lg,
   },
-  ctaText: { fontSize: 15, fontWeight: "700", color: colors.onBrandPrimary },
+  ctaText: { fontSize: 17, fontWeight: "700", color: colors.onBrandPrimary },
 });

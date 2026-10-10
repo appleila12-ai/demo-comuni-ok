@@ -178,14 +178,14 @@ export default function Hub() {
       >
         {/* Top bar: indietro + logo + stemma */}
         <View style={styles.topBar} testID="home-topbar">
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => router.back()}
             hitSlop={12}
             style={styles.hubBackBtn}
             accessibilityLabel="Indietro"
             testID="hub-back-btn"
           >
-            <Ionicons name="chevron-back" size={20} color={colors.onSurface} />
+            <Ionicons name="chevron-back" size={24} color={colors.onSurface} />
           </Pressable>
           <Wordmark size="sm" showLogo={true} logoVariant="soft" />
           <View style={styles.topRight}>
@@ -208,7 +208,7 @@ export default function Hub() {
         </View>
 
         {/* 1 — Da dove partire */}
-        <Text style={styles.sectionLabel}>DA DOVE VUOI PARTIRE?</Text>
+        <Text style={styles.sectionLabel}>Da dove vuoi partire?</Text>
         <View style={styles.momenti} testID="hub-filter-card">
           {MOMENTI.map((m) => {
             const on = momento === m.id;
@@ -226,20 +226,20 @@ export default function Hub() {
                 testID={`hub-momento-${m.id}`}
               >
                 <View style={[styles.momentoIcon, on && { backgroundColor: colors.surface }]}>
-                  <Ionicons name={m.icon} size={22} color={colors.brandPrimaryDark} />
+                  <Ionicons name={m.icon} size={24} color={colors.brandPrimaryDark} />
                 </View>
                 <View style={styles.flex}>
                   <Text style={styles.momentoTitle}>{m.label}</Text>
                   <Text style={styles.momentoSub}>{m.sub}</Text>
                 </View>
-                <Ionicons name="arrow-forward" size={18} color={colors.brandPrimaryDark} />
+                <Ionicons name="arrow-forward" size={22} color={colors.brandPrimaryDark} />
               </Pressable>
             );
           })}
         </View>
 
         {/* 2 — Tutto il percorso, in ordine */}
-        <Text style={styles.sectionLabel}>IL PERCORSO, TAPPA DOPO TAPPA</Text>
+        <Text style={styles.sectionLabel}>Il percorso, tappa dopo tappa</Text>
         <View style={styles.tappe} testID="hub-tappe">
           {TAPPE.map((t, i) => {
             const qui = partenza === t.id;
@@ -253,9 +253,9 @@ export default function Hub() {
                   {!ultima && <View style={styles.tappaLinea} />}
                 </View>
                 <View style={[styles.tappaCard, qui && styles.tappaCardQui]}>
-                  {qui && <Text style={styles.tappaQui}>SEI QUI</Text>}
+                  {qui && <Text style={styles.tappaQui}>Sei qui</Text>}
                   <View style={styles.tappaHead}>
-                    <Ionicons name={t.icon} size={18} color={t.color.main} />
+                    <Ionicons name={t.icon} size={22} color={t.color.main} />
                     <Text style={styles.tappaTitolo}>{t.titolo}</Text>
                   </View>
                   <Text style={styles.tappaTesto}>{t.testo}</Text>
@@ -266,7 +266,7 @@ export default function Hub() {
                     testID={`hub-card-${t.id}`}
                   >
                     <Text style={styles.tappaBtnText}>{t.principale.label}</Text>
-                    <Ionicons name="arrow-forward" size={15} color="#FFFFFF" />
+                    <Ionicons name="arrow-forward" size={21} color="#FFFFFF" />
                   </Pressable>
                   {t.altri.length > 0 && (
                     <View style={styles.tappaAltri}>
@@ -279,7 +279,7 @@ export default function Hub() {
                           style={styles.tappaLink}
                         >
                           <Text style={styles.tappaLinkText}>{l.label}</Text>
-                          <Ionicons name="chevron-forward" size={13} color={colors.brandPrimaryDark} />
+                          <Ionicons name="chevron-forward" size={19} color={colors.brandPrimaryDark} />
                         </Pressable>
                       ))}
                     </View>
@@ -293,7 +293,7 @@ export default function Hub() {
         {/* Valutazioni già fatte */}
         {history.length > 0 && (
           <View style={styles.historyBox} testID="home-history">
-            <Text style={styles.historyLabel}>LE TUE VALUTAZIONI</Text>
+            <Text style={styles.historyLabel}>Le tue valutazioni</Text>
             {history.map((r) => (
               <Pressable
                 key={r.id}
@@ -303,7 +303,7 @@ export default function Hub() {
                 testID={`home-history-item-${r.id}`}
               >
                 <View style={styles.historyIcon}>
-                  <Ionicons name="document-text-outline" size={16} color={colors.brandPrimary} />
+                  <Ionicons name="document-text-outline" size={22} color={colors.brandPrimary} />
                 </View>
                 <View style={styles.flex}>
                   <Text style={styles.historyTitle} numberOfLines={1}>
@@ -311,7 +311,7 @@ export default function Hub() {
                   </Text>
                   <Text style={styles.historyDate}>{formatDate(r.createdAt)}</Text>
                 </View>
-                <Ionicons name="chevron-forward" size={16} color={colors.borderStrong} />
+                <Ionicons name="chevron-forward" size={22} color={colors.borderStrong} />
               </Pressable>
             ))}
           </View>
@@ -325,7 +325,7 @@ export default function Hub() {
             accessibilityRole="button"
             testID="home-faq-link"
           >
-            <Ionicons name="help-circle-outline" size={22} color={colors.brandPrimary} />
+            <Ionicons name="help-circle-outline" size={24} color={colors.brandPrimary} />
             <Text style={styles.quickTitle}>Domande frequenti</Text>
             <Text style={styles.quickSub}>Risposte chiare</Text>
           </Pressable>
@@ -335,7 +335,7 @@ export default function Hub() {
             accessibilityRole="button"
             testID="home-glossario-link"
           >
-            <Ionicons name="book-outline" size={22} color={colors.brandPrimary} />
+            <Ionicons name="book-outline" size={24} color={colors.brandPrimary} />
             <Text style={styles.quickTitle}>Glossario</Text>
             <Text style={styles.quickSub}>Le parole difficili</Text>
           </Pressable>
@@ -350,7 +350,7 @@ export default function Hub() {
             accessibilityState={{ expanded: guidaOpen }}
             testID="hub-guida-toggle"
           >
-            <Ionicons name="help-circle-outline" size={20} color={colors.brandPrimary} />
+            <Ionicons name="help-circle-outline" size={24} color={colors.brandPrimary} />
             <Text style={styles.guidaTitle}>Questa guida fa per te?</Text>
             <Ionicons
               name={guidaOpen ? "chevron-up" : "chevron-down"}
@@ -372,7 +372,7 @@ export default function Hub() {
         </View>
 
         <View style={styles.datiRiga} testID="hub-dati-locali">
-          <Ionicons name="phone-portrait-outline" size={16} color={colors.onSurfaceSecondary} />
+          <Ionicons name="phone-portrait-outline" size={22} color={colors.onSurfaceSecondary} />
           <Text style={styles.datiText}>
             Nessun account: i tuoi dati restano salvati solo su questo dispositivo.
           </Text>
@@ -386,7 +386,7 @@ export default function Hub() {
 
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.background },
-  regioneNota: { fontSize: 12, color: colors.onSurfaceSecondary, marginTop: 6 },
+  regioneNota: { fontSize: 15, color: colors.onSurfaceSecondary, marginTop: 6 },
   momenti: { gap: spacing.sm, marginBottom: spacing.lg },
   momento: {
     flexDirection: "row",
@@ -407,13 +407,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  momentoTitle: { fontSize: 15.5, fontWeight: "800", color: colors.onSurface, lineHeight: 20 },
-  momentoSub: { fontSize: 12.5, lineHeight: 17, color: colors.onSurfaceSecondary, marginTop: 2 },
+  momentoTitle: { fontSize: 18, fontWeight: "800", color: colors.onSurface, lineHeight: 23 },
+  momentoSub: { fontSize: 15, lineHeight: 20, color: colors.onSurfaceSecondary, marginTop: 2 },
   tappe: { marginBottom: spacing.lg },
   tappaRiga: { flexDirection: "row", gap: spacing.md },
   tappaSx: { alignItems: "center", width: 30 },
   tappaNum: { width: 30, height: 30, borderRadius: 15, alignItems: "center", justifyContent: "center" },
-  tappaNumText: { fontSize: 14, fontWeight: "800", color: colors.onSurface },
+  tappaNumText: { fontSize: 17, fontWeight: "800", color: colors.onSurface },
   tappaLinea: { flex: 1, width: 2, backgroundColor: colors.border, marginVertical: 4 },
   tappaCard: {
     flex: 1,
@@ -425,10 +425,10 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   tappaCardQui: { borderColor: colors.brandPrimaryDark, borderWidth: 1.5 },
-  tappaQui: { fontSize: 10, fontWeight: "800", letterSpacing: 1, color: colors.brandPrimaryDark, marginBottom: 4 },
+  tappaQui: { fontSize: 15, fontWeight: "800", letterSpacing: 0.3, color: colors.brandPrimaryDark, marginBottom: 4 },
   tappaHead: { flexDirection: "row", alignItems: "center", gap: 8 },
-  tappaTitolo: { fontFamily: fonts.serif, fontSize: 17, fontWeight: "700", color: colors.onSurface, flex: 1 },
-  tappaTesto: { fontSize: 13.5, lineHeight: 19, color: colors.onSurfaceSecondary, marginTop: 4 },
+  tappaTitolo: { fontFamily: fonts.serif, fontSize: 19, fontWeight: "700", color: colors.onSurface, flex: 1 },
+  tappaTesto: { fontSize: 16, lineHeight: 23, color: colors.onSurfaceSecondary, marginTop: 4 },
   tappaBtn: {
     flexDirection: "row",
     alignItems: "center",
@@ -440,12 +440,12 @@ const styles = StyleSheet.create({
     paddingVertical: 9,
     marginTop: spacing.sm,
   },
-  tappaBtnText: { color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
+  tappaBtnText: { color: "#FFFFFF", fontSize: 17, fontWeight: "800" },
   tappaAltri: { flexDirection: "row", flexWrap: "wrap", gap: 14, marginTop: 10 },
   tappaLink: { flexDirection: "row", alignItems: "center", gap: 2 },
-  tappaLinkText: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark, textDecorationLine: "underline" },
+  tappaLinkText: { fontSize: 16, fontWeight: "700", color: colors.brandPrimaryDark, textDecorationLine: "underline" },
   datiRiga: { flexDirection: "row", alignItems: "center", gap: 8, marginTop: spacing.md, paddingHorizontal: 4 },
-  datiText: { flex: 1, fontSize: 12, lineHeight: 17, color: colors.onSurfaceSecondary },
+  datiText: { flex: 1, fontSize: 15, lineHeight: 21, color: colors.onSurfaceSecondary },
   flex: { flex: 1 },
   container: {
     flexGrow: 1,
@@ -480,15 +480,15 @@ const styles = StyleSheet.create({
   },
   pageTitle: {
     fontFamily: fonts.serif,
-    fontSize: 26,
-    lineHeight: 32,
+    fontSize: 29,
+    lineHeight: 38,
     fontWeight: "600",
     color: colors.onSurface,
     letterSpacing: -0.4,
   },
   pageSub: {
-    fontSize: 14,
-    lineHeight: 21,
+    fontSize: 17,
+    lineHeight: 26,
     color: colors.onSurfaceSecondary,
     marginTop: spacing.xs,
   },
@@ -504,8 +504,8 @@ const styles = StyleSheet.create({
   },
   filterQuestion: {
     fontFamily: fonts.serif,
-    fontSize: 17,
-    lineHeight: 24,
+    fontSize: 19,
+    lineHeight: 27,
     fontWeight: "700",
     color: colors.onSurface,
     marginBottom: spacing.md,
@@ -524,14 +524,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.md,
   },
   filterBtnOn: { backgroundColor: colors.brandPrimary },
-  filterBtnText: { fontSize: 14, fontWeight: "800", color: colors.brandPrimary },
+  filterBtnText: { fontSize: 17, fontWeight: "800", color: colors.brandPrimary },
   filterBtnTextOn: { color: colors.onBrandPrimary },
 
   // Sezioni principali (griglia 2x2)
   sectionLabel: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginBottom: spacing.sm,
   },
@@ -562,14 +562,14 @@ const styles = StyleSheet.create({
   },
   gridTitle: {
     fontFamily: fonts.serif,
-    fontSize: 16,
-    lineHeight: 21,
+    fontSize: 18,
+    lineHeight: 24,
     fontWeight: "700",
     color: colors.onSurface,
   },
   gridSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 21,
     color: colors.onSurfaceTertiary,
   },
 
@@ -595,13 +595,13 @@ const styles = StyleSheet.create({
   },
   navTitle: {
     fontFamily: fonts.serif,
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
   navSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 21,
     color: colors.onSurfaceTertiary,
     marginTop: 2,
   },
@@ -623,15 +623,15 @@ const styles = StyleSheet.create({
     minHeight: 88,
   },
   quickTitle: {
-    fontSize: 13,
+    fontSize: 16,
     fontWeight: "800",
     color: colors.onSurface,
     marginTop: 2,
   },
   quickSub: {
-    fontSize: 11,
+    fontSize: 15,
     color: colors.onSurfaceTertiary,
-    lineHeight: 15,
+    lineHeight: 20,
   },
 
   spacer: { flex: 1, minHeight: spacing.lg },
@@ -646,9 +646,9 @@ const styles = StyleSheet.create({
     marginTop: spacing.lg,
   },
   accountLabel: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginTop: spacing.xs,
     marginBottom: spacing.xs,
@@ -661,8 +661,8 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: colors.divider,
   },
-  accountRowTitle: { fontSize: 14, fontWeight: "700", color: colors.onSurface },
-  accountRowSub: { fontSize: 12, color: colors.onSurfaceTertiary, marginTop: 1 },
+  accountRowTitle: { fontSize: 17, fontWeight: "700", color: colors.onSurface },
+  accountRowSub: { fontSize: 15, color: colors.onSurfaceTertiary, marginTop: 1 },
 
   guidaBox: {
     backgroundColor: colors.surface,
@@ -681,13 +681,13 @@ const styles = StyleSheet.create({
   guidaTitle: {
     flex: 1,
     fontFamily: fonts.serif,
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "700",
     color: colors.onSurface,
   },
   guidaText: {
-    fontSize: 13,
-    lineHeight: 20,
+    fontSize: 16,
+    lineHeight: 25,
     color: colors.onSurfaceSecondary,
     paddingBottom: spacing.md,
   },
@@ -696,10 +696,10 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   historyLabel: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
     color: colors.onSurfaceTertiary,
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     marginBottom: spacing.sm,
   },
   historyRow: {
@@ -722,12 +722,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   historyTitle: {
-    fontSize: 13,
+    fontSize: 16,
     fontWeight: "700",
     color: colors.onSurface,
   },
   historyDate: {
-    fontSize: 11,
+    fontSize: 15,
     color: colors.onSurfaceTertiary,
     marginTop: 1,
   },
@@ -754,7 +754,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   sheetTitle: {
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "800",
     color: colors.onSurface,
     marginBottom: spacing.sm,
@@ -771,7 +771,7 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.divider,
   },
   sheetItemText: {
-    fontSize: 15,
+    fontSize: 17,
     color: colors.onSurfaceSecondary,
     fontWeight: "600",
   },

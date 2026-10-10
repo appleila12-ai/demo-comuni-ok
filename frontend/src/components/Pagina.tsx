@@ -51,16 +51,16 @@ export function Pagina({
     <SafeAreaView style={s.safe} edges={["top"]} testID={testID}>
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <View style={s.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}
           style={s.back}
           hitSlop={12}
           accessibilityLabel="Indietro"
           testID={`${testID}-back`}
         >
-          <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+          <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
         </Pressable>
-        <Text style={s.headerTitle} numberOfLines={1}>
+        <Text style={s.headerTitle} numberOfLines={2} accessibilityRole="header">
           {titolo}
         </Text>
         <View style={s.destra}>
@@ -100,7 +100,7 @@ export function Intro({ children }: { children: React.ReactNode }) {
 export function Avviso({ children, style }: { children: React.ReactNode; style?: ViewStyle }) {
   return (
     <View style={[s.avviso, style]}>
-      <Ionicons name="information-circle-outline" size={18} color={colors.onSurface} />
+      <Ionicons name="information-circle-outline" size={22} color={colors.onSurface} />
       <Text style={s.avvisoText}>{children}</Text>
     </View>
   );
@@ -136,7 +136,7 @@ export function Bottone({
       testID={testID}
     >
       {icon ? (
-        <Ionicons name={icon} size={18} color={pieno ? "#FFFFFF" : colors.brandPrimaryDark} />
+        <Ionicons name={icon} size={22} color={pieno ? "#FFFFFF" : colors.brandPrimaryDark} />
       ) : null}
       <Text style={[s.btnText, { color: pieno ? "#FFFFFF" : colors.brandPrimaryDark }]}>
         {label}
@@ -195,6 +195,8 @@ export function Scelte<T extends string>({
   onScegli: (v: T) => void;
   testID?: string;
 }) {
+  // Se anche una sola risposta è lunga, tutte vanno a tutta larghezza: si leggono meglio
+  const lunghe = opzioni.some((o) => o.label.length > 14);
   return (
     <View style={s.domanda} testID={testID}>
       <Text style={s.domandaText}>{domanda}</Text>
@@ -206,7 +208,7 @@ export function Scelte<T extends string>({
             <Pressable
               key={o.id}
               onPress={() => onScegli(o.id)}
-              style={[s.opzione, on && s.opzioneOn]}
+              style={[s.opzione, lunghe && { flexBasis: "100%" }, on && s.opzioneOn]}
               accessibilityRole="radio"
               accessibilityState={{ selected: on }}
             >
@@ -235,14 +237,14 @@ export const paginaStili = StyleSheet.create({
   },
   titoloSezione: {
     fontFamily: fonts.serif,
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "700",
     color: colors.onSurface,
     marginTop: spacing.md,
     marginBottom: spacing.sm,
   },
-  testo: { fontSize: 14, lineHeight: 21, color: colors.onSurface },
-  piccolo: { fontSize: 12, lineHeight: 18, color: colors.onSurfaceSecondary },
+  testo: { fontSize: 17, lineHeight: 26, color: colors.onSurface },
+  piccolo: { fontSize: 15, lineHeight: 23, color: colors.onSurfaceSecondary },
 });
 
 const s = StyleSheet.create({
@@ -257,8 +259,8 @@ const s = StyleSheet.create({
     gap: spacing.md,
   },
   back: {
-    width: 40,
-    height: 40,
+    width: 48,
+    height: 48,
     borderRadius: radius.pill,
     backgroundColor: colors.surfaceSecondary,
     alignItems: "center",
@@ -269,15 +271,15 @@ const s = StyleSheet.create({
     fontFamily: fonts.serif,
     flex: 1,
     textAlign: "center",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
   scroll: { paddingHorizontal: spacing.lg, paddingTop: spacing.sm },
   colonna: { width: "100%", maxWidth: 640, alignSelf: "center" },
   intro: {
-    fontSize: 15,
-    lineHeight: 22,
+    fontSize: 17,
+    lineHeight: 25,
     color: colors.onSurface,
     marginBottom: spacing.md,
   },
@@ -290,7 +292,7 @@ const s = StyleSheet.create({
     padding: spacing.md,
     marginBottom: spacing.md,
   },
-  avvisoText: { flex: 1, fontSize: 12.5, lineHeight: 18, color: colors.onSurface },
+  avvisoText: { flex: 1, fontSize: 15, lineHeight: 22, color: colors.onSurface },
   btn: {
     flexDirection: "row",
     alignItems: "center",
@@ -303,10 +305,10 @@ const s = StyleSheet.create({
   },
   btnPieno: { backgroundColor: colors.brandPrimaryDark },
   btnVuoto: { borderWidth: 1.5, borderColor: colors.brandPrimaryDark, backgroundColor: colors.surface },
-  btnText: { fontSize: 15, fontWeight: "800" },
+  btnText: { fontSize: 17, fontWeight: "800" },
   campo: { marginBottom: spacing.md },
-  campoLabel: { fontSize: 14, fontWeight: "800", color: colors.onSurface, marginBottom: 4 },
-  campoAiuto: { fontSize: 12, lineHeight: 17, color: colors.onSurfaceSecondary, marginBottom: 6 },
+  campoLabel: { fontSize: 17, fontWeight: "800", color: colors.onSurface, marginBottom: 4 },
+  campoAiuto: { fontSize: 15, lineHeight: 21, color: colors.onSurfaceSecondary, marginBottom: 6 },
   input: {
     backgroundColor: colors.surface,
     borderWidth: 1,
@@ -314,17 +316,17 @@ const s = StyleSheet.create({
     borderRadius: radius.md,
     paddingHorizontal: spacing.md,
     paddingVertical: 12,
-    fontSize: 15,
+    fontSize: 17,
     color: colors.onSurface,
   },
   domanda: { marginBottom: spacing.lg },
   domandaText: {
     fontFamily: fonts.serif,
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "700",
     color: colors.onSurface,
     marginBottom: 6,
-    lineHeight: 24,
+    lineHeight: 27,
   },
   opzioni: { flexDirection: "row", flexWrap: "wrap", gap: spacing.sm },
   opzione: {
@@ -341,7 +343,7 @@ const s = StyleSheet.create({
     paddingHorizontal: spacing.md,
   },
   opzioneOn: { borderColor: colors.brandPrimaryDark, borderWidth: 1.5, backgroundColor: colors.brandSecondary },
-  opzioneText: { flex: 1, fontSize: 14, color: colors.onSurface },
+  opzioneText: { flex: 1, fontSize: 17, color: colors.onSurface },
   piede: {
     position: "absolute",
     left: 0,
