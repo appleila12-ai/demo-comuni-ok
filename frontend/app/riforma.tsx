@@ -49,14 +49,14 @@ export default function RiformaScreen() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="riforma-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
           accessibilityLabel="Indietro"
           testID="riforma-back-btn"
         >
-          <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+          <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Cosa cambia con la riforma</Text>
         <HeaderComune />
@@ -84,7 +84,7 @@ export default function RiformaScreen() {
           {/* Intro */}
           <View style={styles.introCard}>
             <View style={styles.introIcon}>
-              <Ionicons name="megaphone-outline" size={22} color={colors.brandPrimary} />
+              <Ionicons name="megaphone-outline" size={24} color={colors.brandPrimary} />
             </View>
             <Text style={styles.introText}>{riforma.intro}</Text>
           </View>
@@ -110,19 +110,19 @@ export default function RiformaScreen() {
           {/* Salvaguardia */}
           <View style={styles.salvaCard} testID="riforma-salvaguardia">
             <View style={styles.salvaHead}>
-              <Ionicons name="shield-checkmark-outline" size={20} color={colors.success} />
+              <Ionicons name="shield-checkmark-outline" size={24} color={colors.success} />
               <Text style={styles.salvaTitle}>Hai già un verbale? Sei al sicuro</Text>
             </View>
             <Text style={styles.salvaText}>{riforma.salvaguardia}</Text>
           </View>
 
           {/* Fonte */}
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => Linking.openURL(riforma.fonteUrl).catch(() => {})}
             style={styles.fonteRow}
             hitSlop={6}
           >
-            <Ionicons name="open-outline" size={14} color={colors.brandPrimary} />
+            <Ionicons name="open-outline" size={20} color={colors.brandPrimary} />
             <Text style={styles.fonteText}>
               Fonte ufficiale: INPS — Riforma della disabilità
             </Text>
@@ -136,7 +136,7 @@ export default function RiformaScreen() {
             testID="riforma-avanti"
           >
             <Text style={styles.avantiTesto}>Come ottenere il riconoscimento, passo passo</Text>
-            <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
+            <Ionicons name="arrow-forward" size={22} color="#FFFFFF" />
           </Pressable>
 
           <SezioniBar />
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     padding: spacing.md,
     marginTop: spacing.lg,
   },
-  avantiTesto: { flex: 1, color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
+  avantiTesto: { flex: 1, color: "#FFFFFF", fontSize: 18, fontWeight: "800" },
   centered: {
     flex: 1,
     alignItems: "center",
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
     padding: spacing.xl,
   },
   erroreText: {
-    fontSize: 14,
+    fontSize: 17,
     color: colors.onSurfaceSecondary,
     textAlign: "center",
   },
@@ -181,8 +181,8 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   iconBtn: {
-    width: 40,
-    height: 40,
+    width: 48,
+    height: 48,
     borderRadius: radius.pill,
     backgroundColor: colors.surfaceSecondary,
     alignItems: "center",
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.serif,
     flex: 1,
     textAlign: "center",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
@@ -217,15 +217,15 @@ const styles = StyleSheet.create({
   },
   introText: {
     flex: 1,
-    fontSize: 14,
-    lineHeight: 21,
+    fontSize: 17,
+    lineHeight: 26,
     color: colors.onSurface,
     fontWeight: "600",
   },
 
 
   sezTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "800",
     color: colors.onSurface,
     marginBottom: spacing.md,
@@ -250,14 +250,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   cambioTitle: {
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "800",
     color: colors.onSurface,
     marginBottom: 2,
   },
   cambioText: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
   },
 
@@ -274,10 +274,10 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
     marginBottom: spacing.sm,
   },
-  salvaTitle: { fontSize: 15, fontWeight: "800", color: colors.onSurface },
+  salvaTitle: { fontSize: 17, fontWeight: "800", color: colors.onSurface },
   salvaText: {
-    fontSize: 13,
-    lineHeight: 20,
+    fontSize: 16,
+    lineHeight: 25,
     color: colors.onSurface,
     fontWeight: "500",
   },
@@ -290,7 +290,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.md,
   },
   fonteText: {
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "700",
     color: colors.onSurface,
     textDecorationLine: "underline",

@@ -27,7 +27,7 @@ export function AppealSection() {
         testID="appeal-toggle"
       >
         <View style={styles.appealIcon}>
-          <Ionicons name="alert-circle-outline" size={22} color={colors.warning} />
+          <Ionicons name="alert-circle-outline" size={24} color={colors.warning} />
         </View>
         <View style={styles.flex}>
           <Text style={styles.appealTitle}>
@@ -89,11 +89,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   appealTitle: {
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "800",
     color: colors.onSurface,
     letterSpacing: -0.2,
-    lineHeight: 19,
+    lineHeight: 23,
   },
   appealBody: {
     backgroundColor: "#FFFBEB",
@@ -102,8 +102,8 @@ const styles = StyleSheet.create({
     marginBottom: spacing.lg,
   },
   appealIntro: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurface,
     marginBottom: spacing.md,
   },
@@ -124,20 +124,20 @@ const styles = StyleSheet.create({
   },
   appealStepBadgeText: {
     color: colors.onSurface,
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "800",
   },
   appealStepText: {
     flex: 1,
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurface,
   },
   appealFooter: {
-    fontSize: 12,
+    fontSize: 15,
     fontStyle: "italic",
     color: colors.onSurface,
-    lineHeight: 17,
+    lineHeight: 21,
     paddingTop: spacing.sm,
     borderTopWidth: 1,
     borderTopColor: "#FDE68A",

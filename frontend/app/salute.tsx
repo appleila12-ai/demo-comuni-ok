@@ -29,7 +29,7 @@ function Blocco({
     <View style={paginaStili.card} testID={testID}>
       <View style={styles.head}>
         <View style={styles.icona}>
-          <Ionicons name={icon} size={20} color={colors.brandPrimaryDark} />
+          <Ionicons name={icon} size={24} color={colors.brandPrimaryDark} />
         </View>
         <Text style={styles.titolo}>{titolo}</Text>
       </View>
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  titolo: { fontSize: 16, fontWeight: "800", color: colors.onSurface, flex: 1 },
+  titolo: { fontSize: 18, fontWeight: "800", color: colors.onSurface, flex: 1 },
   bold: { fontWeight: "800" },
   emergenza: {
     flexDirection: "row",
@@ -180,6 +180,6 @@ const styles = StyleSheet.create({
     borderRadius: radius.lg,
     padding: spacing.md,
   },
-  emergenzaTitolo: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
-  emergenzaSub: { color: "#FFFFFF", fontSize: 12.5, marginTop: 2, lineHeight: 17 },
+  emergenzaTitolo: { color: "#FFFFFF", fontSize: 18, fontWeight: "800" },
+  emergenzaSub: { color: "#FFFFFF", fontSize: 15, marginTop: 2, lineHeight: 20 },
 });

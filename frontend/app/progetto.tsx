@@ -127,14 +127,14 @@ export default function ProgettoDiVita() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="progetto-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
           accessibilityLabel="Indietro"
           testID="progetto-back-btn"
         >
-          <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+          <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Il mio Progetto di Vita</Text>
         <HeaderComune />
@@ -155,7 +155,7 @@ export default function ProgettoDiVita() {
         >
           {/* Avviso: strumento di preparazione, non la domanda ufficiale */}
           <View style={styles.avviso} testID="progetto-avviso">
-            <Ionicons name="information-circle-outline" size={18} color={colors.accentDark} />
+            <Ionicons name="information-circle-outline" size={22} color={colors.accentDark} />
             <Text style={styles.avvisoText}>
               Questo strumento ti aiuta a preparare i tuoi pensieri prima di
               presentare la richiesta ufficiale: non sostituisce né la domanda
@@ -166,7 +166,7 @@ export default function ProgettoDiVita() {
           {/* Intro */}
           <View style={styles.introCard} testID="progetto-intro">
             <View style={styles.introIcon}>
-              <Ionicons name="sparkles-outline" size={20} color={colors.brandPrimary} />
+              <Ionicons name="sparkles-outline" size={24} color={colors.brandPrimary} />
             </View>
             <Text style={styles.introText}>
               Con la Riforma 2027 il Progetto di Vita parte da te: dai tuoi
@@ -178,7 +178,7 @@ export default function ProgettoDiVita() {
           {/* Riepilogo conteggio */}
           <View style={styles.counterRow} testID="progetto-counter">
             <View style={styles.counterPill}>
-              <Ionicons name="heart-outline" size={13} color={colors.accentDark} />
+              <Ionicons name="heart-outline" size={19} color={colors.accentDark} />
               <Text style={styles.counterText}>
                 {totals.desideri === 0
                   ? "Nessun desiderio ancora: inizia da un'area"
@@ -189,7 +189,7 @@ export default function ProgettoDiVita() {
 
           {/* Nome facoltativo */}
           <View style={styles.nameCard}>
-            <Text style={styles.nameLabel}>IL TUO NOME (FACOLTATIVO)</Text>
+            <Text style={styles.nameLabel}>Il tuo nome (facoltativo)</Text>
             <TextInput
               value={progetto.nome}
               onChangeText={(nome) => setProgetto((p) => ({ ...p, nome }))}
@@ -200,7 +200,7 @@ export default function ProgettoDiVita() {
             />
           </View>
 
-          <Text style={styles.sectionLabel}>LE AREE DELLA TUA VITA</Text>
+          <Text style={styles.sectionLabel}>Le aree della tua vita</Text>
 
           {AREE.map((a) => {
             const entry = progetto.aree[a.id];
@@ -213,7 +213,7 @@ export default function ProgettoDiVita() {
               >
                 <View style={styles.areaHead} testID={`progetto-area-head-${a.id}`}>
                   <View style={[styles.areaIcon, { backgroundColor: a.color.soft }]}>
-                    <Ionicons name={a.icon} size={22} color={a.color.main} />
+                    <Ionicons name={a.icon} size={24} color={a.color.main} />
                   </View>
                   <View style={styles.flex}>
                     <Text style={styles.areaTitle}>{a.title}</Text>
@@ -281,7 +281,7 @@ export default function ProgettoDiVita() {
           })}
 
           <View style={styles.reassure} testID="progetto-reassure">
-            <Ionicons name="shield-checkmark-outline" size={18} color={colors.success} />
+            <Ionicons name="shield-checkmark-outline" size={22} color={colors.success} />
             <Text style={styles.reassureText}>
               Quello che scrivi resta solo sul tuo telefono. Il PDF lo condividi
               tu, quando vuoi, con i Servizi Sociali {comune.delEnte}.
@@ -313,7 +313,7 @@ export default function ProgettoDiVita() {
             <ActivityIndicator color={colors.onAccent} />
           ) : (
             <>
-              <Ionicons name="document-text-outline" size={20} color={colors.onAccent} />
+              <Ionicons name="document-text-outline" size={24} color={colors.onAccent} />
               <Text style={styles.pdfBtnText}>Crea il riepilogo PDF</Text>
             </>
           )}
@@ -338,8 +338,8 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   iconBtn: {
-    width: 40,
-    height: 40,
+    width: 48,
+    height: 48,
     borderRadius: radius.pill,
     backgroundColor: colors.surfaceSecondary,
     alignItems: "center",
@@ -349,7 +349,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.serif,
     flex: 1,
     textAlign: "center",
-    fontSize: 17,
+    fontSize: 19,
     fontWeight: "700",
     color: colors.onSurface,
   },
@@ -366,8 +366,8 @@ const styles = StyleSheet.create({
   },
   avvisoText: {
     flex: 1,
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.accentDark,
     fontWeight: "600",
   },
@@ -390,8 +390,8 @@ const styles = StyleSheet.create({
   },
   introText: {
     flex: 1,
-    fontSize: 14,
-    lineHeight: 21,
+    fontSize: 17,
+    lineHeight: 26,
     color: colors.onBrandSecondary,
     fontWeight: "500",
   },
@@ -406,7 +406,7 @@ const styles = StyleSheet.create({
     paddingVertical: 7,
   },
   counterText: {
-    fontSize: 12.5,
+    fontSize: 15,
     fontWeight: "700",
     color: colors.accentDark,
   },
@@ -419,14 +419,14 @@ const styles = StyleSheet.create({
     marginTop: spacing.lg,
   },
   nameLabel: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginBottom: 6,
   },
   nameInput: {
-    fontSize: 16,
+    fontSize: 18,
     color: colors.onSurface,
     paddingVertical: 8,
     paddingHorizontal: spacing.md,
@@ -435,9 +435,9 @@ const styles = StyleSheet.create({
     minHeight: 44,
   },
   sectionLabel: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
     color: colors.onSurfaceTertiary,
     marginTop: spacing.xl,
     marginBottom: spacing.sm,
@@ -467,12 +467,12 @@ const styles = StyleSheet.create({
   },
   areaTitle: {
     fontFamily: fonts.serif,
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
   areaHint: {
-    fontSize: 12,
+    fontSize: 15,
     color: colors.onSurfaceTertiary,
     marginTop: 2,
   },
@@ -484,7 +484,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  areaBadgeText: { color: colors.onSurface, fontSize: 12, fontWeight: "800" },
+  areaBadgeText: { color: colors.onSurface, fontSize: 15, fontWeight: "800" },
   areaBody: {
     paddingHorizontal: spacing.md,
     paddingBottom: spacing.md,
@@ -492,7 +492,7 @@ const styles = StyleSheet.create({
     borderTopColor: colors.divider,
   },
   chipsLabel: {
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "700",
     color: colors.onSurfaceTertiary,
     marginTop: spacing.md,
@@ -513,13 +513,13 @@ const styles = StyleSheet.create({
   },
   chipText: {
     flex: 1,
-    fontSize: 14,
-    lineHeight: 19,
+    fontSize: 17,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
   },
   freeInput: {
-    fontSize: 14,
-    lineHeight: 20,
+    fontSize: 17,
+    lineHeight: 24,
     color: colors.onSurface,
     backgroundColor: colors.surfaceSecondary,
     borderRadius: radius.md,
@@ -540,8 +540,8 @@ const styles = StyleSheet.create({
   },
   reassureText: {
     flex: 1,
-    fontSize: 13.5,
-    lineHeight: 20,
+    fontSize: 16,
+    lineHeight: 24,
     color: colors.onSurface,
     fontWeight: "600",
   },
@@ -567,10 +567,10 @@ const styles = StyleSheet.create({
     minHeight: 54,
   },
   pdfBtnDisabled: { opacity: 0.45 },
-  pdfBtnText: { fontSize: 16, fontWeight: "800", color: colors.onAccent },
+  pdfBtnText: { fontSize: 18, fontWeight: "800", color: colors.onAccent },
   footerHint: {
     textAlign: "center",
-    fontSize: 11.5,
+    fontSize: 15,
     color: colors.muted,
     marginTop: 6,
   },

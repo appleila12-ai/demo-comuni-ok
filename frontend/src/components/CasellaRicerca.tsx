@@ -22,7 +22,7 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
     <View style={[styles.box, { borderColor: t.warm }]} testID={testID}>
       <Text style={styles.titolo}>Di cosa hai bisogno?</Text>
       <View style={styles.inputRiga}>
-        <Ionicons name="search" size={20} color={colors.onSurfaceSecondary} />
+        <Ionicons name="search" size={24} color={colors.onSurfaceSecondary} />
         <TextInput
           value={testo}
           onChangeText={setTesto}
@@ -34,8 +34,8 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
           testID={`${testID}-input`}
         />
         {testo ? (
-          <Pressable onPress={() => setTesto("")} hitSlop={10} accessibilityLabel="Cancella">
-            <Ionicons name="close-circle" size={20} color={colors.onSurfaceSecondary} />
+          <Pressable accessibilityRole="button" onPress={() => setTesto("")} hitSlop={10} accessibilityLabel="Cancella">
+            <Ionicons name="close-circle" size={24} color={colors.onSurfaceSecondary} />
           </Pressable>
         ) : null}
       </View>
@@ -72,7 +72,7 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
                 accessibilityRole="button"
               >
                 <Text style={styles.btnText}>{risultati[0].bottone}</Text>
-                <Ionicons name="arrow-forward" size={16} color="#FFFFFF" />
+                <Ionicons name="arrow-forward" size={22} color="#FFFFFF" />
               </Pressable>
               <BottoneSalva
                 conTesto
@@ -92,7 +92,7 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
                 <Text style={styles.altraTitolo}>{r.titolo}</Text>
                 <Text style={styles.altraTesto} numberOfLines={2}>{r.testo}</Text>
               </View>
-              <Ionicons name="chevron-forward" size={16} color={colors.onSurfaceTertiary} />
+              <Ionicons name="chevron-forward" size={22} color={colors.onSurfaceTertiary} />
             </Pressable>
           ))}
         </View>
@@ -111,7 +111,7 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
             accessibilityRole="button"
           >
             <Text style={styles.btnText}>Contatti del Comune</Text>
-            <Ionicons name="arrow-forward" size={16} color="#FFFFFF" />
+            <Ionicons name="arrow-forward" size={22} color="#FFFFFF" />
           </Pressable>
         </View>
       )}
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     padding: spacing.md,
     marginBottom: spacing.lg,
   },
-  titolo: { fontFamily: fonts.serif, fontSize: 20, fontWeight: "700", color: colors.onSurface, marginBottom: spacing.sm },
+  titolo: { fontFamily: fonts.serif, fontSize: 22, fontWeight: "700", color: colors.onSurface, marginBottom: spacing.sm },
   inputRiga: {
     flexDirection: "row",
     alignItems: "center",
@@ -141,9 +141,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.md,
     minHeight: 50,
   },
-  input: { flex: 1, fontSize: 16, color: colors.onSurface, paddingVertical: 10 },
+  input: { flex: 1, fontSize: 18, color: colors.onSurface, paddingVertical: 10 },
   esempi: { marginTop: spacing.sm },
-  esempiLabel: { fontSize: 12, color: colors.onSurfaceSecondary, marginBottom: 6 },
+  esempiLabel: { fontSize: 15, color: colors.onSurfaceSecondary, marginBottom: 6 },
   chips: { flexDirection: "row", flexWrap: "wrap", gap: 6 },
   chip: {
     backgroundColor: colors.surfaceSecondary,
@@ -151,11 +151,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 7,
   },
-  chipText: { fontSize: 13, color: colors.onSurface, fontWeight: "600" },
+  chipText: { fontSize: 16, color: colors.onSurface, fontWeight: "600" },
   risultati: { marginTop: spacing.md, gap: spacing.sm },
   risposta: { borderRadius: radius.md, padding: spacing.md },
-  rispostaTitolo: { fontSize: 16, fontWeight: "800", color: colors.onSurface, marginBottom: 4 },
-  rispostaTesto: { fontSize: 14, lineHeight: 20, color: colors.onSurface },
+  rispostaTitolo: { fontSize: 18, fontWeight: "800", color: colors.onSurface, marginBottom: 4 },
+  rispostaTesto: { fontSize: 17, lineHeight: 24, color: colors.onSurface },
   btn: {
     flexDirection: "row",
     alignItems: "center",
@@ -167,9 +167,9 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     marginTop: spacing.sm,
   },
-  btnText: { color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
+  btnText: { color: "#FFFFFF", fontSize: 17, fontWeight: "800" },
   rigaBottoni: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: 8, marginTop: spacing.sm },
-  anche: { fontSize: 11, fontWeight: "800", letterSpacing: 0.8, textTransform: "uppercase", color: colors.onSurfaceSecondary, marginTop: 4 },
+  anche: { fontSize: 15, fontWeight: "800", letterSpacing: 0.3, textTransform: "none", color: colors.onSurfaceSecondary, marginTop: 4 },
   altra: {
     flexDirection: "row",
     alignItems: "center",
@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
     padding: spacing.sm,
     backgroundColor: "#FFFFFF",
   },
-  altraTitolo: { fontSize: 14, fontWeight: "800", color: colors.onSurface },
-  altraTesto: { fontSize: 12.5, lineHeight: 17, color: colors.onSurfaceSecondary, marginTop: 2 },
-  privacy: { fontSize: 11.5, color: colors.onSurfaceSecondary, marginTop: spacing.sm },
+  altraTitolo: { fontSize: 17, fontWeight: "800", color: colors.onSurface },
+  altraTesto: { fontSize: 15, lineHeight: 20, color: colors.onSurfaceSecondary, marginTop: 2 },
+  privacy: { fontSize: 15, color: colors.onSurfaceSecondary, marginTop: spacing.sm },
 });

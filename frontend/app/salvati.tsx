@@ -16,8 +16,8 @@ const apri = (url: string) => Linking.openURL(url).catch(() => {});
 function Azione({ icon, label, onPress }: { icon: React.ComponentProps<typeof Ionicons>["name"]; label: string; onPress: () => void }) {
   return (
     <Pressable onPress={onPress} style={({ pressed }) => [styles.azione, pressed && { opacity: 0.85 }]} accessibilityRole="button">
-      <Ionicons name={icon} size={15} color={colors.brandPrimaryDark} />
-      <Text style={styles.azioneText} numberOfLines={1}>{label}</Text>
+      <Ionicons name={icon} size={21} color={colors.brandPrimaryDark} />
+      <Text style={styles.azioneText}>{label}</Text>
     </Pressable>
   );
 }
@@ -36,7 +36,7 @@ export default function Salvati() {
       {lista.length === 0 ? (
         <View style={paginaStili.card} testID="salvati-vuoto">
           <View style={styles.vuotoRiga}>
-            <Ionicons name="bookmark-outline" size={22} color={colors.brandPrimaryDark} />
+            <Ionicons name="bookmark-outline" size={24} color={colors.brandPrimaryDark} />
             <Text style={[paginaStili.testo, styles.flex]}>
               Non hai ancora salvato nulla. Quando trovi qualcosa che ti interessa, tocca il
               segnalibro in alto a destra o il tasto "Salva": lo ritrovi qui.
@@ -55,7 +55,7 @@ export default function Salvati() {
                 accessibilityRole="button"
                 accessibilityLabel={`Togli "${s.titolo}" dai salvati`}
               >
-                <Ionicons name="trash-outline" size={20} color={colors.onSurfaceSecondary} />
+                <Ionicons name="trash-outline" size={24} color={colors.onSurfaceSecondary} />
               </Pressable>
             </View>
             {s.sotto ? <Text style={paginaStili.piccolo} numberOfLines={3}>{s.sotto}</Text> : null}
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   flex: { flex: 1 },
   vuotoRiga: { flexDirection: "row", gap: spacing.sm, alignItems: "flex-start" },
   testa: { flexDirection: "row", alignItems: "flex-start", gap: spacing.sm, marginBottom: 4 },
-  titolo: { fontSize: 16, fontWeight: "800", color: colors.onSurface },
+  titolo: { fontSize: 18, fontWeight: "800", color: colors.onSurface },
   azioni: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginTop: spacing.sm },
   azione: {
     flexDirection: "row",
@@ -99,5 +99,5 @@ const styles = StyleSheet.create({
     paddingVertical: 7,
     maxWidth: "100%",
   },
-  azioneText: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark },
+  azioneText: { fontSize: 16, fontWeight: "700", color: colors.brandPrimaryDark },
 });

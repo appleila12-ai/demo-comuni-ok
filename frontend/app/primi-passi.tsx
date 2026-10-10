@@ -72,14 +72,14 @@ export default function PrimiPassiScreen() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="primi-passi-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
           accessibilityLabel="Indietro"
           testID="primi-passi-back-btn"
         >
-          <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+          <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Primi passi dopo una diagnosi</Text>
         <HeaderComune />
@@ -111,7 +111,7 @@ export default function PrimiPassiScreen() {
                   testID={`home-passo-toggle-${p.id}`}
                 >
                   <View style={[styles.passoIcon, { backgroundColor: p.color.soft }]}>
-                    <Ionicons name={p.icon} size={22} color={p.color.main} />
+                    <Ionicons name={p.icon} size={24} color={p.color.main} />
                   </View>
                   <Text style={styles.passoTitle}>{p.title}</Text>
                   <Ionicons
@@ -154,7 +154,7 @@ export default function PrimiPassiScreen() {
               <Text style={styles.avantiTitolo}>Avanti: come ottenere il riconoscimento</Text>
               <Text style={styles.avantiSub}>Dal certificato del medico al verbale, un passo alla volta</Text>
             </View>
-            <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
+            <Ionicons name="arrow-forward" size={22} color="#FFFFFF" />
           </Pressable>
           <Text style={styles.primiIntro} testID="home-primi-intro">
             Se in futuro la tua condizione dovesse comportare un&apos;invalidità
@@ -168,10 +168,10 @@ export default function PrimiPassiScreen() {
             testID="primi-passi-orientarsi-card"
           >
             <View style={[styles.passoIcon, { backgroundColor: topics.percorso.soft }]}>
-              <Ionicons name="compass-outline" size={22} color={topics.percorso.main} />
+              <Ionicons name="compass-outline" size={24} color={topics.percorso.main} />
             </View>
             <Text style={styles.passoTitle}>Orientarsi insieme</Text>
-            <Ionicons name="chevron-forward" size={18} color={colors.borderStrong} />
+            <Ionicons name="chevron-forward" size={22} color={colors.borderStrong} />
           </Pressable>
         </View>
 
@@ -193,8 +193,8 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   iconBtn: {
-    width: 40,
-    height: 40,
+    width: 48,
+    height: 48,
     borderRadius: radius.pill,
     backgroundColor: colors.surfaceSecondary,
     alignItems: "center",
@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.serif,
     flex: 1,
     textAlign: "center",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
   passoTitle: {
     flex: 1,
     fontFamily: fonts.serif,
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
@@ -246,12 +246,12 @@ const styles = StyleSheet.create({
     paddingTop: spacing.md,
     gap: spacing.sm,
   },
-  passoText: { fontSize: 14, lineHeight: 21, color: colors.onSurfaceSecondary },
+  passoText: { fontSize: 17, lineHeight: 26, color: colors.onSurfaceSecondary },
   passoLink: { flexDirection: "row", alignItems: "center", gap: 6, minHeight: 40 },
-  passoLinkText: { fontSize: 13, fontWeight: "800", textDecorationLine: "underline" },
+  passoLinkText: { fontSize: 16, fontWeight: "800", textDecorationLine: "underline" },
   primiIntro: {
-    fontSize: 14,
-    lineHeight: 21,
+    fontSize: 17,
+    lineHeight: 26,
     color: colors.onSurfaceSecondary,
     marginTop: spacing.md,
     fontStyle: "italic",
@@ -267,6 +267,6 @@ const styles = StyleSheet.create({
     padding: spacing.md,
     marginTop: spacing.md,
   },
-  avantiTitolo: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
-  avantiSub: { color: "#FFFFFF", fontSize: 14, lineHeight: 19, marginTop: 2 },
+  avantiTitolo: { color: "#FFFFFF", fontSize: 18, fontWeight: "800" },
+  avantiSub: { color: "#FFFFFF", fontSize: 17, lineHeight: 23, marginTop: 2 },
 });

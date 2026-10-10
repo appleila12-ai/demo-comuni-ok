@@ -111,7 +111,7 @@ export default function Risultati() {
       <SafeAreaView style={styles.safe}>
         <View style={styles.centered}>
           <Text style={styles.emptyText}>Report non trovato.</Text>
-          <Pressable onPress={() => router.replace("/")} style={styles.retryBtn}>
+          <Pressable accessibilityRole="button" onPress={() => router.replace("/")} style={styles.retryBtn}>
             <Text style={styles.retryBtnText}>Torna alla home</Text>
           </Pressable>
         </View>
@@ -129,14 +129,14 @@ export default function Risultati() {
         behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
         <View style={styles.header}>
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}
             style={styles.iconBtn}
             hitSlop={12}
             accessibilityLabel="Indietro"
             testID="results-back-btn"
           >
-            <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+            <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
           </Pressable>
           <Text style={styles.headerTitle}>I tuoi diritti</Text>
           <HeaderComune />
@@ -153,7 +153,7 @@ export default function Risultati() {
           {/* Empathic intro */}
           <View style={styles.introCard}>
             <View style={styles.introIcon}>
-              <Ionicons name="sparkles-outline" size={20} color={colors.brandPrimary} />
+              <Ionicons name="sparkles-outline" size={24} color={colors.brandPrimary} />
             </View>
             <Text style={styles.introText}>
               In base alla diagnosi (
@@ -174,12 +174,12 @@ export default function Risultati() {
             accessibilityRole="button"
             testID="results-agevolazioni"
           >
-            <Ionicons name="gift-outline" size={22} color="#FFFFFF" />
+            <Ionicons name="gift-outline" size={24} color="#FFFFFF" />
             <View style={{ flex: 1 }}>
               <Text style={styles.agevolazioniTitolo}>Bonus e agevolazioni per te</Text>
               <Text style={styles.agevolazioniSub}>Altre 4-6 domande: esenzioni, auto, bollette, Carta europea della disabilità</Text>
             </View>
-            <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
+            <Ionicons name="arrow-forward" size={22} color="#FFFFFF" />
           </Pressable>
 
           {/* Percorso passo-passo + certificato + possibilità 104/invalidità */}
@@ -197,7 +197,7 @@ export default function Risultati() {
             testID="rights-banner"
           >
             <View style={styles.sectionBannerOverlay} />
-            <Text style={styles.sectionBannerLabel}>I TUOI DIRITTI</Text>
+            <Text style={styles.sectionBannerLabel}>I tuoi diritti</Text>
             <Text style={styles.sectionBannerTitle}>
               Diritti e Permessi — Legge 104
             </Text>
@@ -230,7 +230,7 @@ export default function Risultati() {
             />
             <View style={styles.linkBannerBody}>
               <View style={styles.flex}>
-                <Text style={styles.linkBannerLabel}>SUL TERRITORIO</Text>
+                <Text style={styles.linkBannerLabel}>Sul territorio</Text>
                 <Text style={styles.linkBannerTitle}>
                   Aiuti Pratici sul Territorio
                 </Text>
@@ -241,7 +241,7 @@ export default function Risultati() {
               </View>
               <Ionicons
                 name="chevron-forward"
-                size={20}
+                size={24}
                 color={colors.brandPrimary}
               />
             </View>
@@ -338,8 +338,8 @@ const styles = StyleSheet.create({
     padding: 14,
     marginBottom: 16,
   },
-  agevolazioniTitolo: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
-  agevolazioniSub: { color: "#FFFFFF", fontSize: 12.5, lineHeight: 17, marginTop: 2 },
+  agevolazioniTitolo: { color: "#FFFFFF", fontSize: 18, fontWeight: "800" },
+  agevolazioniSub: { color: "#FFFFFF", fontSize: 15, lineHeight: 20, marginTop: 2 },
   safe: { flex: 1, backgroundColor: colors.background },
   flex: { flex: 1 },
   centered: {
@@ -349,7 +349,7 @@ const styles = StyleSheet.create({
     gap: spacing.lg,
     padding: spacing.xl,
   },
-  emptyText: { fontSize: 15, color: colors.onSurfaceSecondary },
+  emptyText: { fontSize: 17, color: colors.onSurfaceSecondary },
   retryBtn: {
     paddingHorizontal: spacing.xl,
     paddingVertical: spacing.md,
@@ -367,8 +367,8 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   iconBtn: {
-    width: 40,
-    height: 40,
+    width: 48,
+    height: 48,
     borderRadius: radius.pill,
     backgroundColor: colors.surfaceSecondary,
     alignItems: "center",
@@ -378,7 +378,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.serif,
     flex: 1,
     textAlign: "center",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
@@ -403,8 +403,8 @@ const styles = StyleSheet.create({
   },
   introText: {
     flex: 1,
-    fontSize: 14,
-    lineHeight: 20,
+    fontSize: 17,
+    lineHeight: 24,
     color: colors.onBrandSecondary,
   },
   introStrong: { fontWeight: "800", color: colors.brandPrimary },
@@ -430,13 +430,13 @@ const styles = StyleSheet.create({
   },
   sectionBannerLabel: {
     color: colors.onSurface,
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
   },
   sectionBannerTitle: {
     color: colors.onSurface,
-    fontSize: 17,
+    fontSize: 19,
     fontWeight: "800",
     letterSpacing: -0.3,
     marginTop: 2,
@@ -457,21 +457,21 @@ const styles = StyleSheet.create({
     padding: spacing.lg,
   },
   linkBannerLabel: {
-    fontSize: 9,
+    fontSize: 15,
     fontWeight: "800",
     color: colors.onSurface,
-    letterSpacing: 1.1,
+    letterSpacing: 0.3,
   },
   linkBannerTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "800",
     color: colors.onSurface,
     marginTop: 2,
     letterSpacing: -0.2,
   },
   linkBannerSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 21,
     color: colors.onSurfaceSecondary,
     marginTop: 3,
   },
@@ -497,13 +497,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   summaryTitle: {
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "800",
     color: colors.onBrandSecondary,
   },
   summarySub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 21,
     color: colors.onSurfaceTertiary,
     marginTop: 2,
   },
@@ -520,7 +520,7 @@ const styles = StyleSheet.create({
   },
   primaryBtnText: {
     color: colors.onBrandPrimary,
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "800",
   },
   secondaryBtn: {
@@ -538,14 +538,14 @@ const styles = StyleSheet.create({
   },
   secondaryBtnText: {
     color: colors.onSurface,
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "800",
   },
 
   disclaimer: {
-    fontSize: 12,
+    fontSize: 15,
     color: colors.onSurfaceTertiary,
-    lineHeight: 17,
+    lineHeight: 21,
     marginTop: spacing.md,
     textAlign: "center",
     fontStyle: "italic",

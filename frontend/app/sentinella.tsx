@@ -183,14 +183,14 @@ export default function Sentinella() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="sentinella-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
           accessibilityLabel="Indietro"
           testID="sentinella-back-btn"
         >
-          <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+          <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Sentinella AI</Text>
         <View style={{ width: 40, height: 40 }} />
@@ -212,7 +212,7 @@ export default function Sentinella() {
           {/* Intro admin */}
           <View style={styles.introCard}>
             <View style={styles.introIconWrap}>
-              <Ionicons name="eye-outline" size={20} color={colors.brandPrimary} />
+              <Ionicons name="eye-outline" size={24} color={colors.brandPrimary} />
             </View>
             <Text style={styles.introText}>
               {"Area riservata al gestore dell'app. L'AI cerca sul web le fonti ufficiali (INPS) e confronta gli importi e le regole della Riforma (D.Lgs. 62/2024) con quelli mostrati agli utenti. Tu decidi cosa applicare."}
@@ -250,7 +250,7 @@ export default function Sentinella() {
               </View>
             </View>
           ) : (
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={startCheck}
               disabled={starting}
               style={[styles.startBtn, starting && styles.btnDisabled]}
@@ -259,7 +259,7 @@ export default function Sentinella() {
               {starting ? (
                 <ActivityIndicator color={colors.onBrandPrimary} />
               ) : (
-                <Ionicons name="search" size={18} color={colors.onBrandPrimary} />
+                <Ionicons name="search" size={22} color={colors.onBrandPrimary} />
               )}
               <Text style={styles.startBtnText}>
                 {check ? "Avvia nuovo controllo" : "Avvia controllo AI"}
@@ -269,7 +269,7 @@ export default function Sentinella() {
 
           {check?.status === "errore" && (
             <View style={styles.errorCard}>
-              <Ionicons name="warning-outline" size={16} color={colors.error} />
+              <Ionicons name="warning-outline" size={22} color={colors.error} />
               <Text style={styles.errorText}>
                 Ultimo controllo non riuscito. Riprova tra qualche minuto.
               </Text>
@@ -281,7 +281,7 @@ export default function Sentinella() {
             <View style={styles.summaryRow} testID="sentinella-summary">
               <Ionicons
                 name={discrepancies > 0 ? "alert-circle" : "shield-checkmark"}
-                size={16}
+                size={22}
                 color={discrepancies > 0 ? colors.accentDark : colors.success}
               />
               <Text style={styles.summaryText}>
@@ -303,7 +303,7 @@ export default function Sentinella() {
                   <View style={styles.cardHead}>
                     <Text style={styles.cardName}>{r.nome}</Text>
                     <View style={[styles.badge, { backgroundColor: ui.soft }]}>
-                      <Ionicons name={ui.icon as never} size={13} color={ui.color} />
+                      <Ionicons name={ui.icon as never} size={19} color={ui.color} />
                       <Text style={[styles.badgeText, { color: ui.color }]}>
                         {ui.label}
                       </Text>
@@ -338,12 +338,12 @@ export default function Sentinella() {
                   {!!r.nota && <Text style={styles.nota}>{r.nota}</Text>}
 
                   {!!r.fonte && (
-                    <Pressable
+                    <Pressable accessibilityRole="button"
                       onPress={() => Linking.openURL(r.fonte!).catch(() => {})}
                       hitSlop={6}
                       style={styles.linkRow}
                     >
-                      <Ionicons name="open-outline" size={13} color={colors.brandPrimary} />
+                      <Ionicons name="open-outline" size={19} color={colors.brandPrimary} />
                       <Text style={styles.linkText} numberOfLines={1}>
                         Vedi la fonte
                       </Text>
@@ -353,7 +353,7 @@ export default function Sentinella() {
                   {pending &&
                     (r.tipo === "riforma" ? (
                       <View style={styles.actionsRow}>
-                        <Pressable
+                        <Pressable accessibilityRole="button"
                           onPress={() => resolve(r.nome, "ignora")}
                           disabled={resolving === r.nome}
                           style={[styles.applyBtn, resolving === r.nome && styles.btnDisabled]}
@@ -362,14 +362,14 @@ export default function Sentinella() {
                           {resolving === r.nome ? (
                             <ActivityIndicator size="small" color={colors.onBrandPrimary} />
                           ) : (
-                            <Ionicons name="checkmark" size={16} color={colors.onBrandPrimary} />
+                            <Ionicons name="checkmark" size={22} color={colors.onBrandPrimary} />
                           )}
                           <Text style={styles.applyText}>Ho preso nota</Text>
                         </Pressable>
                       </View>
                     ) : (
                     <View style={styles.actionsRow}>
-                      <Pressable
+                      <Pressable accessibilityRole="button"
                         onPress={() => resolve(r.nome, "applica")}
                         disabled={resolving === r.nome}
                         style={[styles.applyBtn, resolving === r.nome && styles.btnDisabled]}
@@ -378,11 +378,11 @@ export default function Sentinella() {
                         {resolving === r.nome ? (
                           <ActivityIndicator size="small" color={colors.onBrandPrimary} />
                         ) : (
-                          <Ionicons name="checkmark" size={16} color={colors.onBrandPrimary} />
+                          <Ionicons name="checkmark" size={22} color={colors.onBrandPrimary} />
                         )}
                         <Text style={styles.applyText}>Applica aggiornamento</Text>
                       </Pressable>
-                      <Pressable
+                      <Pressable accessibilityRole="button"
                         onPress={() => resolve(r.nome, "ignora")}
                         disabled={resolving === r.nome}
                         style={styles.ignoreBtn}
@@ -395,7 +395,7 @@ export default function Sentinella() {
 
                   {r.esito === "applicato" && (
                     <View style={styles.appliedRow}>
-                      <Ionicons name="checkmark-circle" size={15} color={colors.success} />
+                      <Ionicons name="checkmark-circle" size={21} color={colors.success} />
                       <Text style={styles.appliedText}>
                         Aggiornamento applicato: gli utenti vedono già il nuovo valore.
                       </Text>
@@ -403,7 +403,7 @@ export default function Sentinella() {
                   )}
                   {r.esito === "ignorato" && (
                     <View style={styles.appliedRow}>
-                      <Ionicons name="remove-circle" size={15} color={colors.muted} />
+                      <Ionicons name="remove-circle" size={21} color={colors.muted} />
                       <Text style={[styles.appliedText, { color: colors.muted }]}>
                         {r.tipo === "riforma"
                           ? "Segnalazione presa in carico."
@@ -438,8 +438,8 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   iconBtn: {
-    width: 40,
-    height: 40,
+    width: 48,
+    height: 48,
     borderRadius: radius.pill,
     backgroundColor: colors.surfaceSecondary,
     alignItems: "center",
@@ -449,7 +449,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.serif,
     flex: 1,
     textAlign: "center",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
@@ -474,14 +474,14 @@ const styles = StyleSheet.create({
   },
   introText: {
     flex: 1,
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onBrandSecondary,
     fontWeight: "600",
   },
 
   codeLabel: {
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "700",
     color: colors.onSurface,
     marginBottom: spacing.xs,
@@ -493,12 +493,12 @@ const styles = StyleSheet.create({
     borderColor: colors.borderStrong,
     backgroundColor: "#FFFFFF",
     paddingHorizontal: spacing.md,
-    fontSize: 15,
+    fontSize: 17,
     color: colors.onSurface,
     marginBottom: spacing.sm,
   },
   codeError: {
-    fontSize: 12,
+    fontSize: 15,
     color: colors.error,
     marginBottom: spacing.sm,
   },
@@ -513,7 +513,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
     minHeight: 48,
   },
-  startBtnText: { color: colors.onBrandPrimary, fontWeight: "800", fontSize: 15 },
+  startBtnText: { color: colors.onBrandPrimary, fontWeight: "800", fontSize: 17 },
   btnDisabled: { opacity: 0.6 },
 
   runningCard: {
@@ -525,10 +525,10 @@ const styles = StyleSheet.create({
     padding: spacing.lg,
     marginBottom: spacing.md,
   },
-  runningTitle: { fontSize: 14, fontWeight: "800", color: colors.onSurface },
+  runningTitle: { fontSize: 17, fontWeight: "800", color: colors.onSurface },
   runningSub: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 21,
     color: colors.onSurfaceSecondary,
     marginTop: 2,
   },
@@ -542,7 +542,7 @@ const styles = StyleSheet.create({
     padding: spacing.md,
     marginBottom: spacing.md,
   },
-  errorText: { flex: 1, fontSize: 12, color: colors.error, fontWeight: "600" },
+  errorText: { flex: 1, fontSize: 15, color: colors.error, fontWeight: "600" },
 
   summaryRow: {
     flexDirection: "row",
@@ -553,8 +553,8 @@ const styles = StyleSheet.create({
   },
   summaryText: {
     flex: 1,
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 21,
     color: colors.onSurfaceSecondary,
     fontWeight: "600",
   },
@@ -576,10 +576,10 @@ const styles = StyleSheet.create({
   },
   cardName: {
     flex: 1,
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "800",
     color: colors.onSurface,
-    lineHeight: 19,
+    lineHeight: 23,
   },
   badge: {
     flexDirection: "row",
@@ -589,7 +589,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.sm,
     paddingVertical: 4,
   },
-  badgeText: { fontSize: 11, fontWeight: "800" },
+  badgeText: { fontSize: 15, fontWeight: "800" },
 
   valueRow: {
     flexDirection: "row",
@@ -598,19 +598,19 @@ const styles = StyleSheet.create({
     marginBottom: 2,
   },
   valueLabel: {
-    width: 64,
-    fontSize: 11,
+    width: 104,
+    fontSize: 15,
     fontWeight: "700",
     color: colors.muted,
-    textTransform: "uppercase",
+    textTransform: "none",
   },
-  valueText: { flex: 1, fontSize: 14, fontWeight: "700", color: colors.onSurface },
+  valueText: { flex: 1, fontSize: 17, fontWeight: "700", color: colors.onSurface },
   foundLabel: { color: colors.accentDark },
   foundText: { color: colors.accentDark, fontWeight: "800" },
 
   nota: {
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: 15,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
     marginTop: spacing.sm,
   },
@@ -621,7 +621,7 @@ const styles = StyleSheet.create({
     marginTop: spacing.sm,
   },
   linkText: {
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "700",
     color: colors.onSurface,
     textDecorationLine: "underline",
@@ -644,7 +644,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.md,
     minHeight: 44,
   },
-  applyText: { color: colors.onBrandPrimary, fontWeight: "800", fontSize: 13 },
+  applyText: { color: colors.onBrandPrimary, fontWeight: "800", fontSize: 16 },
   ignoreBtn: {
     borderRadius: radius.pill,
     borderWidth: 1,
@@ -655,7 +655,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  ignoreText: { color: colors.onSurfaceSecondary, fontWeight: "700", fontSize: 13 },
+  ignoreText: { color: colors.onSurfaceSecondary, fontWeight: "700", fontSize: 16 },
 
   appliedRow: {
     flexDirection: "row",
@@ -665,18 +665,18 @@ const styles = StyleSheet.create({
   },
   appliedText: {
     flex: 1,
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "700",
     color: colors.onSurface,
-    lineHeight: 17,
+    lineHeight: 21,
   },
 
   disclaimer: {
-    fontSize: 11,
+    fontSize: 15,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
     textAlign: "center",
     marginTop: spacing.sm,
-    lineHeight: 16,
+    lineHeight: 22,
   },
 });

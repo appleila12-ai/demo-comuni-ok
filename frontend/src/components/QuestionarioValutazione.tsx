@@ -154,9 +154,9 @@ export function QuestionarioValutazione() {
       <View testID="step-1">
         <View style={styles.stepIconWrap}>
           <View style={[styles.stepIcon, { backgroundColor: topics.legge104.soft }]}>
-            <Ionicons name="heart-outline" size={22} color={topics.legge104.main} />
+            <Ionicons name="heart-outline" size={24} color={topics.legge104.main} />
           </View>
-          <Text style={[styles.stepBadge, { color: topics.legge104.main }]}>1 · LA DIAGNOSI</Text>
+          <Text style={[styles.stepBadge, { color: topics.legge104.main }]}>1 · la diagnosi</Text>
         </View>
         <Domanda campo="who" first>Chi ha ricevuto la diagnosi?</Domanda>
         <Text style={styles.helper}>
@@ -165,7 +165,7 @@ export function QuestionarioValutazione() {
         {opzioni(WHO_OPTIONS, who, setWho, "who")}
         {who === "Coniuge/Partner" && (
           <View style={styles.partnerNote} testID="wizard-partner-note">
-            <Ionicons name="information-circle-outline" size={16} color={colors.brandPrimaryDark} />
+            <Ionicons name="information-circle-outline" size={22} color={colors.brandPrimaryDark} />
             <Text style={styles.partnerNoteText}>{PARTNER_NOTE}</Text>
           </View>
         )}
@@ -179,9 +179,9 @@ export function QuestionarioValutazione() {
       <View style={styles.block} testID="step-2">
         <View style={styles.stepIconWrap}>
           <View style={[styles.stepIcon, { backgroundColor: topics.lavoro.soft }]}>
-            <Ionicons name="briefcase-outline" size={22} color={topics.lavoro.main} />
+            <Ionicons name="briefcase-outline" size={24} color={topics.lavoro.main} />
           </View>
-          <Text style={[styles.stepBadge, { color: topics.lavoro.main }]}>2 · IL LAVORO</Text>
+          <Text style={[styles.stepBadge, { color: topics.lavoro.main }]}>2 · il lavoro</Text>
         </View>
         <Domanda campo="work" first>Qual è la tua situazione lavorativa?</Domanda>
         <Text style={styles.helper}>
@@ -196,9 +196,9 @@ export function QuestionarioValutazione() {
       <View style={styles.block} testID="step-3">
         <View style={styles.stepIconWrap}>
           <View style={[styles.stepIcon, { backgroundColor: topics.documenti.soft }]}>
-            <Ionicons name="document-text-outline" size={22} color={topics.documenti.main} />
+            <Ionicons name="document-text-outline" size={24} color={topics.documenti.main} />
           </View>
-          <Text style={[styles.stepBadge, { color: topics.documenti.main }]}>3 · IL RICONOSCIMENTO</Text>
+          <Text style={[styles.stepBadge, { color: topics.documenti.main }]}>3 · il riconoscimento</Text>
         </View>
         <Domanda campo="verbale" first>
           {"C'è già un verbale di invalidità civile o di Legge 104?"}
@@ -221,7 +221,7 @@ export function QuestionarioValutazione() {
               </View>
             )}
             <View style={styles.certWarnBanner} testID="cert-inline-warning">
-              <Ionicons name="information-circle-outline" size={18} color={colors.accentDark} />
+              <Ionicons name="information-circle-outline" size={22} color={colors.accentDark} />
               <Text style={styles.certWarnText}>
                 <Text style={styles.certWarnStrong}>Buono a sapersi: </Text>
                 {"con la Riforma della disabilità il certificato del medico avvia da solo un'unica valutazione, che riconosce insieme invalidità civile e disabilità. Una sola visita, un solo verbale."}
@@ -254,7 +254,7 @@ export function QuestionarioValutazione() {
         <Text style={styles.primaryBtnText}>
           {saving ? "Elaborazione…" : "Vedi i tuoi diritti"}
         </Text>
-        {!saving && <Ionicons name="arrow-forward" size={18} color={colors.onBrandPrimary} />}
+        {!saving && <Ionicons name="arrow-forward" size={22} color={colors.onBrandPrimary} />}
       </Pressable>
       {mostraMancanti && mancanti.length > 0 ? (
         <Text style={styles.missingSummary} testID="wizard-missing">
@@ -289,7 +289,7 @@ function OptionCard({
       testID={testID}
     >
       <View style={[styles.radio, selected && styles.radioSelected]}>
-        {selected && <Ionicons name="checkmark" size={12} color={colors.onBrandPrimary} />}
+        {selected && <Ionicons name="checkmark" size={18} color={colors.onBrandPrimary} />}
       </View>
       <Text style={[styles.optionText, selected && styles.optionTextSelected]}>{label}</Text>
     </Pressable>
@@ -299,16 +299,16 @@ function OptionCard({
 const styles = StyleSheet.create({
   block: { marginTop: spacing.xxl },
   progress: {
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "700",
     color: colors.onSurfaceTertiary,
     textAlign: "center",
     marginTop: spacing.xl,
   },
-  missing: { fontSize: 12, fontWeight: "700", color: colors.brandPrimaryDark, marginBottom: spacing.sm },
+  missing: { fontSize: 15, fontWeight: "700", color: colors.brandPrimaryDark, marginBottom: spacing.sm },
   missingSummary: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.brandPrimaryDark,
     textAlign: "center",
     marginTop: spacing.sm,
@@ -322,8 +322,8 @@ const styles = StyleSheet.create({
     marginTop: spacing.md,
     gap: 6,
   },
-  explainTitle: { fontFamily: fonts.serif, fontSize: 15, fontWeight: "700", color: colors.onSurface },
-  explainText: { fontSize: 13, lineHeight: 19, color: colors.onSurfaceSecondary },
+  explainTitle: { fontFamily: fonts.serif, fontSize: 17, fontWeight: "700", color: colors.onSurface },
+  explainText: { fontSize: 16, lineHeight: 23, color: colors.onSurfaceSecondary },
   stepIconWrap: {
     flexDirection: "row",
     alignItems: "center",
@@ -339,23 +339,23 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   stepBadge: {
-    fontSize: 11,
+    fontSize: 15,
     fontWeight: "800",
     color: colors.onSurface,
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
   },
   question: {
     fontFamily: fonts.serif,
-    fontSize: 21,
-    lineHeight: 27,
+    fontSize: 24,
+    lineHeight: 31,
     fontWeight: "700",
     color: colors.onSurface,
     letterSpacing: -0.4,
     marginBottom: spacing.sm,
   },
   helper: {
-    fontSize: 15,
-    lineHeight: 22,
+    fontSize: 17,
+    lineHeight: 25,
     color: colors.onSurfaceTertiary,
     marginBottom: spacing.lg,
   },
@@ -372,8 +372,8 @@ const styles = StyleSheet.create({
   },
   partnerNoteText: {
     flex: 1,
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 21,
     color: colors.onSurface,
     fontWeight: "500",
   },
@@ -410,8 +410,8 @@ const styles = StyleSheet.create({
   },
   optionText: {
     flex: 1,
-    fontSize: 14,
-    lineHeight: 19,
+    fontSize: 17,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
     fontWeight: "500",
   },
@@ -434,7 +434,7 @@ const styles = StyleSheet.create({
   primaryBtnIncomplete: { opacity: 0.75 },
   primaryBtnText: {
     color: colors.onBrandPrimary,
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
   },
   certWarnBanner: {
@@ -450,8 +450,8 @@ const styles = StyleSheet.create({
   },
   certWarnText: {
     flex: 1,
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurface,
   },
   certWarnStrong: { fontWeight: "800" },

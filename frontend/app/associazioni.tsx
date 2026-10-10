@@ -24,8 +24,8 @@ function Azione({ icon, label, onPress }: { icon: React.ComponentProps<typeof Io
       style={({ pressed }) => [styles.azione, pressed && { opacity: 0.85 }]}
       accessibilityRole="button"
     >
-      <Ionicons name={icon} size={15} color={colors.brandPrimaryDark} />
-      <Text style={styles.azioneText} numberOfLines={1}>{label}</Text>
+      <Ionicons name={icon} size={21} color={colors.brandPrimaryDark} />
+      <Text style={styles.azioneText}>{label}</Text>
     </Pressable>
   );
 }
@@ -38,7 +38,7 @@ function Scheda({ a, vicina }: { a: Associazione; vicina: boolean }) {
       <Text style={paginaStili.testo}>{a.cosa}</Text>
       {a.dove ? (
         <View style={styles.dove}>
-          <Ionicons name="location-outline" size={14} color={colors.onSurfaceSecondary} />
+          <Ionicons name="location-outline" size={20} color={colors.onSurfaceSecondary} />
           <Text style={paginaStili.piccolo}>{a.dove}</Text>
         </View>
       ) : null}
@@ -87,7 +87,7 @@ export default function Associazioni() {
               accessibilityState={{ selected: on }}
               testID={`associazioni-tab-${t.id}`}
             >
-              <Ionicons name={t.icon} size={16} color={on ? "#FFFFFF" : colors.onSurface} />
+              <Ionicons name={t.icon} size={22} color={on ? "#FFFFFF" : colors.onSurface} />
               <Text style={[styles.tabText, on && { color: "#FFFFFF" }]}>{t.label}</Text>
             </Pressable>
           );
@@ -151,10 +151,10 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 8,
   },
-  tabText: { fontSize: 14, fontWeight: "800", color: colors.onSurface },
+  tabText: { fontSize: 17, fontWeight: "800", color: colors.onSurface },
   badge: {
     alignSelf: "flex-start",
-    fontSize: 11,
+    fontSize: 15,
     fontWeight: "800",
     borderRadius: radius.pill,
     paddingHorizontal: 8,
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     marginBottom: 6,
     overflow: "hidden",
   },
-  nome: { fontSize: 16, fontWeight: "800", color: colors.onSurface, marginBottom: 4 },
+  nome: { fontSize: 18, fontWeight: "800", color: colors.onSurface, marginBottom: 4 },
   dove: { flexDirection: "row", alignItems: "center", gap: 4, marginTop: 6 },
   azioni: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginTop: spacing.sm },
   azione: {
@@ -176,5 +176,5 @@ const styles = StyleSheet.create({
     paddingVertical: 7,
     maxWidth: "100%",
   },
-  azioneText: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark },
+  azioneText: { fontSize: 16, fontWeight: "700", color: colors.brandPrimaryDark },
 });

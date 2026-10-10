@@ -139,8 +139,8 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
                   </View>
                 </View>
                 <Text style={paginaStili.piccolo}>{e.spiegazione}</Text>
-                <Pressable onPress={() => togli(e.id)} hitSlop={8} style={styles.togli}>
-                  <Ionicons name="trash-outline" size={14} color={colors.onSurfaceSecondary} />
+                <Pressable accessibilityRole="button" onPress={() => togli(e.id)} hitSlop={8} style={styles.togli}>
+                  <Ionicons name="trash-outline" size={20} color={colors.onSurfaceSecondary} />
                   <Text style={styles.togliText}>Togli</Text>
                 </Pressable>
               </View>
@@ -171,10 +171,10 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
               testID={`scadenze-tipo-${t.tipo}`}
             >
               <View style={[styles.icona, { backgroundColor: topics.salute.soft }]}>
-                <Ionicons name={t.icon as any} size={20} color={colors.onSurface} />
+                <Ionicons name={t.icon as any} size={24} color={colors.onSurface} />
               </View>
               <Text style={styles.tipoTitolo}>{t.titolo}</Text>
-              <Ionicons name={on ? "chevron-up" : "add-circle-outline"} size={20} color={colors.brandPrimaryDark} />
+              <Ionicons name={on ? "chevron-up" : "add-circle-outline"} size={24} color={colors.brandPrimaryDark} />
             </Pressable>
             {on && (
               <View style={styles.form}>
@@ -227,12 +227,12 @@ const styles = StyleSheet.create({
   flex: { flex: 1 },
   evento: { padding: spacing.md, marginBottom: spacing.sm },
   eventoTop: { flexDirection: "row", alignItems: "flex-start", gap: spacing.sm, marginBottom: 6 },
-  eventoData: { fontSize: 12, fontWeight: "800", color: colors.brandPrimaryDark, textTransform: "uppercase", letterSpacing: 0.4 },
-  eventoTitolo: { fontSize: 15, fontWeight: "800", color: colors.onSurface, marginTop: 2 },
+  eventoData: { fontSize: 15, fontWeight: "800", color: colors.brandPrimaryDark, textTransform: "none", letterSpacing: 0.4 },
+  eventoTitolo: { fontSize: 17, fontWeight: "800", color: colors.onSurface, marginTop: 2 },
   badge: { backgroundColor: colors.surfaceSecondary, borderRadius: radius.pill, paddingHorizontal: 10, paddingVertical: 4 },
-  badgeText: { fontSize: 12, fontWeight: "800", color: colors.onSurface },
+  badgeText: { fontSize: 15, fontWeight: "800", color: colors.onSurface },
   togli: { flexDirection: "row", alignItems: "center", gap: 4, marginTop: 8, alignSelf: "flex-start" },
-  togliText: { fontSize: 12, color: colors.onSurfaceSecondary, textDecorationLine: "underline" },
+  togliText: { fontSize: 15, color: colors.onSurfaceSecondary, textDecorationLine: "underline" },
   tipo: {
     backgroundColor: colors.surface,
     borderRadius: radius.lg,
@@ -244,9 +244,9 @@ const styles = StyleSheet.create({
   tipoOn: { borderColor: colors.brandPrimaryDark },
   tipoRiga: { flexDirection: "row", alignItems: "center", gap: spacing.md, padding: spacing.md },
   icona: { width: 38, height: 38, borderRadius: radius.md, alignItems: "center", justifyContent: "center" },
-  tipoTitolo: { flex: 1, fontSize: 15, fontWeight: "700", color: colors.onSurface },
+  tipoTitolo: { flex: 1, fontSize: 17, fontWeight: "700", color: colors.onSurface },
   form: { paddingHorizontal: spacing.md, paddingBottom: spacing.md, gap: 6 },
-  domanda: { fontSize: 14, fontWeight: "800", color: colors.onSurface, marginTop: 6 },
+  domanda: { fontSize: 17, fontWeight: "800", color: colors.onSurface, marginTop: 6 },
   input: {
     backgroundColor: colors.background,
     borderWidth: 1,
@@ -254,9 +254,9 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
     paddingHorizontal: spacing.md,
     paddingVertical: 12,
-    fontSize: 16,
+    fontSize: 18,
     color: colors.onSurface,
   },
-  errore: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark },
-  messaggio: { fontSize: 13, lineHeight: 18, color: colors.onSurface, textAlign: "center", marginBottom: 4 },
+  errore: { fontSize: 16, fontWeight: "700", color: colors.brandPrimaryDark },
+  messaggio: { fontSize: 16, lineHeight: 22, color: colors.onSurface, textAlign: "center", marginBottom: 4 },
 });

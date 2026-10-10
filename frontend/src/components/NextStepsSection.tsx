@@ -31,11 +31,11 @@ export function GuideStepsCard() {
     >
       <View style={styles.cardHeader}>
         <View style={[styles.cardIcon, { backgroundColor: topics.percorso.soft }]}>
-          <Ionicons name="footsteps-outline" size={22} color={topics.percorso.main} />
+          <Ionicons name="footsteps-outline" size={24} color={topics.percorso.main} />
         </View>
         <View style={styles.flex}>
           <Text style={[styles.topicLabel, { color: topics.percorso.main }]}>
-            IL PERCORSO
+            Il percorso
           </Text>
           <Text style={styles.cardTitle}>Hai la diagnosi in mano: e adesso?</Text>
         </View>
@@ -135,7 +135,7 @@ export function NextStepsSection({ work, cert, who }: Props) {
       {/* Nota Partner / convivente di fatto */}
       {who === "Coniuge/Partner" && (
         <View style={styles.partnerNote} testID="partner-note">
-          <Ionicons name="people-outline" size={18} color={topics.legge104.dark} />
+          <Ionicons name="people-outline" size={22} color={topics.legge104.dark} />
           <Text style={styles.partnerNoteText}>{PARTNER_NOTE}</Text>
         </View>
       )}
@@ -147,7 +147,7 @@ export function NextStepsSection({ work, cert, who }: Props) {
       >
         <View style={styles.cardHeader}>
           <View style={[styles.cardIcon, { backgroundColor: topics.legge104.soft }]}>
-            <Ionicons name="ribbon-outline" size={22} color={topics.legge104.main} />
+            <Ionicons name="ribbon-outline" size={24} color={topics.legge104.main} />
           </View>
           <View style={styles.flex}>
             <Text style={[styles.topicLabel, { color: topics.legge104.main }]}>
@@ -179,11 +179,11 @@ export function NextStepsSection({ work, cert, who }: Props) {
           <View
             style={[styles.cardIcon, { backgroundColor: topics.invalidita.soft }]}
           >
-            <Ionicons name="pulse-outline" size={22} color={topics.invalidita.main} />
+            <Ionicons name="pulse-outline" size={24} color={topics.invalidita.main} />
           </View>
           <View style={styles.flex}>
             <Text style={[styles.topicLabel, { color: topics.invalidita.main }]}>
-              INVALIDITÀ CIVILE
+              Invalidità civile
             </Text>
             <Text style={styles.cardTitle}>
               Cosa spetta in base alla percentuale
@@ -250,12 +250,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   topicLabel: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
   },
   cardTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "800",
     color: colors.onSurface,
     letterSpacing: -0.2,
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
   },
   stepDotText: {
     color: colors.onSurface,
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "800",
   },
   timelineBar: {
@@ -295,29 +295,29 @@ const styles = StyleSheet.create({
     paddingBottom: spacing.lg,
   },
   stepTitle: {
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "800",
     color: colors.onSurface,
     marginBottom: 3,
-    lineHeight: 19,
+    lineHeight: 23,
   },
   stepBody: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
   },
 
   // Cert explainer
   certIntro: {
-    fontSize: 14,
-    lineHeight: 20,
+    fontSize: 17,
+    lineHeight: 24,
     fontWeight: "600",
     color: colors.onSurfaceSecondary,
     marginBottom: spacing.md,
   },
   certReform: {
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 21,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
     marginTop: spacing.md,
@@ -342,8 +342,8 @@ const styles = StyleSheet.create({
   },
   bulletText: {
     flex: 1,
-    fontSize: 14,
-    lineHeight: 20,
+    fontSize: 17,
+    lineHeight: 24,
     color: colors.onSurfaceSecondary,
   },
 
@@ -362,18 +362,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   bracketText: {
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "800",
   },
   footerNote: {
-    fontSize: 12,
+    fontSize: 15,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
     marginTop: spacing.md,
     paddingTop: spacing.sm,
     borderTopWidth: 1,
     borderTopColor: colors.divider,
-    lineHeight: 17,
+    lineHeight: 21,
   },
 
   // Partner note
@@ -388,8 +388,8 @@ const styles = StyleSheet.create({
   },
   partnerNoteText: {
     flex: 1,
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: topics.legge104.dark,
     fontWeight: "500",
   },

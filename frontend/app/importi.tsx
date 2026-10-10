@@ -46,14 +46,14 @@ export default function Importi() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="importi-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
           accessibilityLabel="Indietro"
           testID="importi-back-btn"
         >
-          <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
+          <Ionicons name="chevron-back" size={26} color={colors.onSurface} />
         </Pressable>
         <Text style={styles.headerTitle}>Importi e Prestazioni</Text>
         <HeaderComune />
@@ -68,7 +68,7 @@ export default function Importi() {
           <Text style={styles.errText}>
             Contenuti non disponibili. Controlla la connessione.
           </Text>
-          <Pressable onPress={load} style={styles.retryBtn} testID="importi-retry">
+          <Pressable accessibilityRole="button" onPress={load} style={styles.retryBtn} testID="importi-retry">
             <Text style={styles.retryText}>Riprova</Text>
           </Pressable>
         </View>
@@ -82,13 +82,13 @@ export default function Importi() {
           showsVerticalScrollIndicator={false}
         >
           {/* Badge trasparenza — tieni premuto per aprire la Sentinella AI (admin) */}
-          <Pressable
+          <Pressable accessibilityRole="button"
             style={styles.updateBadge}
             testID="importi-updated-badge"
             onLongPress={HA_BACKEND ? () => router.push("/sentinella") : undefined}
             delayLongPress={600}
           >
-            <Ionicons name="shield-checkmark-outline" size={16} color={colors.success} />
+            <Ionicons name="shield-checkmark-outline" size={22} color={colors.success} />
             <Text style={styles.updateText}>
               Dati aggiornati al{" "}
               <Text style={styles.updateStrong}>
@@ -125,12 +125,12 @@ export default function Importi() {
                 />
                 <Text style={styles.rowText}>{it.reddito}</Text>
               </View>
-              <Pressable
+              <Pressable accessibilityRole="button"
                 onPress={() => Linking.openURL(it.url).catch(() => {})}
                 hitSlop={6}
                 style={styles.linkRow}
               >
-                <Ionicons name="open-outline" size={13} color={colors.brandPrimary} />
+                <Ionicons name="open-outline" size={19} color={colors.brandPrimary} />
                 <Text style={styles.linkText}>Verifica sulla fonte ufficiale INPS</Text>
               </Pressable>
             </View>
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     gap: spacing.md,
     padding: spacing.xl,
   },
-  errText: { fontSize: 14, color: colors.onSurfaceSecondary, textAlign: "center" },
+  errText: { fontSize: 17, color: colors.onSurfaceSecondary, textAlign: "center" },
   retryBtn: {
     backgroundColor: colors.brandPrimary,
     borderRadius: radius.pill,
@@ -173,8 +173,8 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   iconBtn: {
-    width: 40,
-    height: 40,
+    width: 48,
+    height: 48,
     borderRadius: radius.pill,
     backgroundColor: colors.surfaceSecondary,
     alignItems: "center",
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.serif,
     flex: 1,
     textAlign: "center",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: colors.onSurface,
   },
@@ -201,8 +201,8 @@ const styles = StyleSheet.create({
   },
   updateText: {
     flex: 1,
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 21,
     color: colors.onSurface,
     fontWeight: "600",
   },
@@ -219,13 +219,13 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   cardName: {
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "800",
     color: colors.onSurface,
-    lineHeight: 19,
+    lineHeight: 23,
   },
   cardAmount: {
-    fontSize: 24,
+    fontSize: 27,
     fontWeight: "800",
     color: topics.invalidita.dark,
     marginVertical: spacing.sm,
@@ -240,8 +240,8 @@ const styles = StyleSheet.create({
   rowIcon: { marginTop: 3 },
   rowText: {
     flex: 1,
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
   },
   linkRow: {
@@ -251,17 +251,17 @@ const styles = StyleSheet.create({
     marginTop: spacing.sm,
   },
   linkText: {
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "700",
     color: colors.onSurface,
     textDecorationLine: "underline",
   },
   disclaimer: {
-    fontSize: 11,
+    fontSize: 15,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
     textAlign: "center",
     marginTop: spacing.sm,
-    lineHeight: 16,
+    lineHeight: 22,
   },
 });

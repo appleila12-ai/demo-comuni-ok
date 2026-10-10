@@ -36,7 +36,7 @@ export function LivelliSection() {
         testID="livelli-toggle"
       >
         <View style={styles.icon}>
-          <Ionicons name="stats-chart-outline" size={22} color={ACCENT} />
+          <Ionicons name="stats-chart-outline" size={24} color={ACCENT} />
         </View>
         <View style={styles.flex}>
           <Text style={[styles.label, { color: ACCENT }]}>RIFORMA 2027</Text>
@@ -85,7 +85,7 @@ export function LivelliSection() {
                     <Text style={styles.gruppoTitolo}>💶 Agevolazioni fiscali</Text>
                     {l.fisco.map((v) => (
                       <View key={v} style={styles.voceRow}>
-                        <Ionicons name="checkmark" size={14} color={l.colore} />
+                        <Ionicons name="checkmark" size={20} color={l.colore} />
                         <Text style={styles.voceText}>{v}</Text>
                       </View>
                     ))}
@@ -93,7 +93,7 @@ export function LivelliSection() {
                     <Text style={styles.gruppoTitolo}>💼 Tutele sul lavoro</Text>
                     {l.lavoro.map((v) => (
                       <View key={v} style={styles.voceRow}>
-                        <Ionicons name="checkmark" size={14} color={l.colore} />
+                        <Ionicons name="checkmark" size={20} color={l.colore} />
                         <Text style={styles.voceText}>{v}</Text>
                       </View>
                     ))}
@@ -114,11 +114,11 @@ export function LivelliSection() {
             accessibilityRole="button"
             testID="livelli-link-riforma"
           >
-            <Ionicons name="megaphone-outline" size={15} color={ACCENT} />
+            <Ionicons name="megaphone-outline" size={21} color={ACCENT} />
             <Text style={styles.linkRiformaText}>
               Scopri cosa cambia con la Riforma in &quot;Orientarsi insieme&quot;
             </Text>
-            <Ionicons name="chevron-forward" size={15} color={ACCENT} />
+            <Ionicons name="chevron-forward" size={21} color={ACCENT} />
           </Pressable>
         </View>
       )}
@@ -151,12 +151,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   label: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "800",
-    letterSpacing: 1.2,
+    letterSpacing: 0.3,
   },
   title: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "800",
     color: colors.onSurface,
     marginTop: 2,
@@ -164,8 +164,8 @@ const styles = StyleSheet.create({
   },
   body: { marginTop: spacing.md },
   intro: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
     marginBottom: spacing.md,
   },
@@ -184,19 +184,19 @@ const styles = StyleSheet.create({
     minHeight: 48,
   },
   pallino: { width: 12, height: 12, borderRadius: 6 },
-  livelloNome: { flex: 1, fontSize: 14, fontWeight: "800" },
+  livelloNome: { flex: 1, fontSize: 17, fontWeight: "800" },
   livelloBody: {
     paddingHorizontal: spacing.md,
     paddingBottom: spacing.md,
   },
   descrizione: {
-    fontSize: 13,
-    lineHeight: 19,
+    fontSize: 16,
+    lineHeight: 23,
     color: colors.onSurfaceSecondary,
     marginBottom: spacing.sm,
   },
   gruppoTitolo: {
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: "800",
     color: colors.onSurface,
     marginTop: spacing.sm,
@@ -211,15 +211,15 @@ const styles = StyleSheet.create({
   },
   voceText: {
     flex: 1,
-    fontSize: 12.5,
-    lineHeight: 18,
+    fontSize: 15,
+    lineHeight: 22,
     color: colors.onSurfaceSecondary,
   },
   nota: {
-    fontSize: 11,
+    fontSize: 15,
     fontStyle: "italic",
     color: colors.onSurfaceTertiary,
-    lineHeight: 16,
+    lineHeight: 22,
     marginTop: spacing.sm,
   },
   linkRiforma: {
@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
     minHeight: 44,
   },
   linkRiformaText: {
-    fontSize: 12.5,
+    fontSize: 15,
     fontWeight: "800",
     color: colors.onSurface,
   },
