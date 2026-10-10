@@ -195,6 +195,8 @@ export function Scelte<T extends string>({
   onScegli: (v: T) => void;
   testID?: string;
 }) {
+  // Se anche una sola risposta è lunga, tutte vanno a tutta larghezza: si leggono meglio
+  const lunghe = opzioni.some((o) => o.label.length > 14);
   return (
     <View style={s.domanda} testID={testID}>
       <Text style={s.domandaText}>{domanda}</Text>
@@ -206,7 +208,7 @@ export function Scelte<T extends string>({
             <Pressable
               key={o.id}
               onPress={() => onScegli(o.id)}
-              style={[s.opzione, on && s.opzioneOn]}
+              style={[s.opzione, lunghe && { flexBasis: "100%" }, on && s.opzioneOn]}
               accessibilityRole="radio"
               accessibilityState={{ selected: on }}
             >

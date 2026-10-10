@@ -156,10 +156,6 @@ export default function PrimiPassiScreen() {
             </View>
             <Ionicons name="arrow-forward" size={22} color="#FFFFFF" />
           </Pressable>
-          <Text style={styles.primiIntro} testID="home-primi-intro">
-            Se in futuro la tua condizione dovesse comportare un&apos;invalidità
-            riconosciuta, qui trovi tutto il percorso.
-          </Text>
           <Pressable
             onPress={() => router.push("/hub")}
             style={[styles.passoCard, styles.passoHead, styles.orientarsiCard]}

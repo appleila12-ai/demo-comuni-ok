@@ -412,7 +412,7 @@ export default function Tracker() {
             <ComuneLogo size={comune.logo ? 56 : 36} />
             <View style={styles.flex}>
               <Text style={[styles.comuneEnte, { color: warm.warmDark }]}>
-                Pratica seguita da
+                Per informazioni sulla tua pratica
               </Text>
               <Text style={styles.comuneNome} testID="tracker-comune-nome">
                 {comune.nome}
@@ -469,9 +469,8 @@ export default function Tracker() {
           Ecco a che punto è il tuo percorso
         </Text>
         <Text style={styles.introBody}>
-          Segui la tua pratica come segui un pacco in arrivo. Segna le tappe
-          completate, aggiungi date e note: restano salvate sul tuo telefono e,
-          se hai fatto l&apos;accesso, nel tuo account.
+          Segna le tappe completate e aggiungi date e note. Restano salvate solo
+          su questo telefono: non servono account e non le inviamo a nessuno.
         </Text>
 
         {/* Timeline */}

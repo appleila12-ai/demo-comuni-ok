@@ -75,7 +75,7 @@ export function statoRiformaProvincia(sigla: string | undefined): StatoRiforma {
   return {
     attiva: false,
     frase:
-      "Nella tua provincia la riforma non è ancora attiva: fino al 31 dicembre 2026 valgono le regole attuali. Dal 1° gennaio 2027 cambierà.",
+      "Nella tua provincia la riforma non è ancora attiva: fino al 31 dicembre 2026 valgono le regole attuali. Dal 1° gennaio 2027 è prevista in tutta Italia.",
   };
 }
 

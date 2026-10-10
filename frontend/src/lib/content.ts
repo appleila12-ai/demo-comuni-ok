@@ -100,7 +100,7 @@ export function passiRiconoscimento(riformaAttiva: boolean): PassoRiconoscimento
     {
       titolo: "Dal 2027: il Progetto di Vita",
       testo:
-        "Dal 1° gennaio 2027 la riforma vale ovunque e potrai chiedere il Progetto di Vita. Intanto puoi cominciare a pensare a cosa è importante per te.",
+        "Dal 1° gennaio 2027 la riforma è prevista in tutta Italia e potrai chiedere il Progetto di Vita. Intanto puoi cominciare a pensare a cosa è importante per te.",
       azione: { label: "Prepara il mio Progetto di Vita", route: "/progetto", icon: "sparkles-outline" },
     },
   ];
