@@ -32,7 +32,7 @@ const FEATURES = [
   },
   {
     icon: "footsteps-outline" as const,
-    title: "La tua pratica",
+    title: "La mia pratica",
     href: "/tracker",
     text: "Tieni a mente le tappe del percorso e gli appuntamenti importanti.",
     color: topics.salute,
