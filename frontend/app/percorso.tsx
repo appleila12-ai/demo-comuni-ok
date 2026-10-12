@@ -23,6 +23,7 @@ import { SezioniBar } from "@/src/components/SezioniBar";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import { HeaderComune } from "@/src/components/HeaderComune";
+import { AvantiTappa } from "@/src/components/AvantiTappa";
 
 // Per ogni passo di NEXT_STEPS (stesso ordine): dove andare per farlo davvero.
 const AZIONI: { label: string; route: string; icon: any }[] = [
@@ -168,6 +169,7 @@ export default function PercorsoScreen() {
           <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
         </Pressable>
 
+        <AvantiTappa corrente="riconoscimento" />
         <SezioniBar />
       </ScrollView>
 

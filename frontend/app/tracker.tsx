@@ -33,6 +33,7 @@ import { VaultSection } from "@/src/components/VaultSection";
 import { listReports, Report } from "@/src/lib/reports";
 import { storage } from "@/src/utils/storage";
 import { registra, useSezione } from "@/src/lib/statistiche";
+import { AvantiTappa } from "@/src/components/AvantiTappa";
 
 const STORE_KEY = "tutelapp:tracker";
 const NOTIF_READ_KEY = "tutelapp:tracker:notifsRead";
@@ -740,6 +741,7 @@ export default function Tracker() {
         {/* Raccolta documenti sul dispositivo (ex "cassaforte referti") */}
         <VaultSection report={ultimoReport} />
 
+        <AvantiTappa corrente="pratica" />
         <SezioniBar />
       </ScrollView>
       </KeyboardAvoidingView>

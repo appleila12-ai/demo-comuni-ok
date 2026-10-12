@@ -366,6 +366,18 @@ export default function Risultati() {
           {/* Ricorso / riesame */}
           <AppealSection />
 
+          {/* Se qualcosa è cambiato (per esempio è arrivato il verbale), si possono rifare le domande */}
+          <Pressable
+            onPress={() => router.push("/valutazione" as any)}
+            style={({ pressed }) => [styles.rifaiBtn, pressed && { opacity: 0.85 }]}
+            accessibilityRole="button"
+            accessibilityLabel="Rifai le domande: crea una nuova valutazione"
+            testID="results-rifai-btn"
+          >
+            <Ionicons name="refresh-outline" size={18} color={colors.onSurface} />
+            <Text style={styles.rifaiText}>Rifai le domande</Text>
+          </Pressable>
+
           <Text style={styles.disclaimer}>
             Questo report è orientativo, generato in base alle risposte fornite.
             Per la conferma nel tuo caso specifico rivolgiti ai Servizi Sociali
@@ -611,6 +623,19 @@ const styles = StyleSheet.create({
     fontWeight: "800",
   },
 
+  rifaiBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: spacing.sm,
+    minHeight: 48,
+    marginTop: spacing.lg,
+    borderRadius: radius.md,
+    borderWidth: 1,
+    borderColor: colors.borderStrong,
+    backgroundColor: colors.surface,
+  },
+  rifaiText: { fontSize: 15, fontWeight: "700", color: colors.onSurface },
   disclaimer: {
     fontSize: 12,
     color: colors.onSurfaceTertiary,

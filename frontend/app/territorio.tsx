@@ -35,6 +35,7 @@ import { addVaultFile } from "@/src/lib/vault";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import { HeaderComune } from "@/src/components/HeaderComune";
+import { AvantiTappa } from "@/src/components/AvantiTappa";
 
 const ALTRI_CONTATTI = [
   { icon: "call-outline", title: "INPS — 803 164", subtitle: "Gratuito da telefono fisso · Lun–Ven 8–20, Sab 8–14", type: "tel", value: "803164" },
@@ -384,6 +385,7 @@ export default function Territorio() {
               : `Scarica la guida ai servizi ${comune.delEnte}`}
           </Text>
         </Pressable>
+      <AvantiTappa corrente="territorio" />
       </ScrollView>
     </SafeAreaView>
   );
