@@ -39,7 +39,7 @@ export const TIPI: TipoInfo[] = [
     icon: "document-text-outline",
     titolo: "Ho ricevuto il verbale",
     domanda: "Quando ti è arrivato il verbale?",
-    aiuto: "Se non sei d'accordo con l'esito, hai 6 mesi da questa data per il ricorso in tribunale (ATP).",
+    aiuto: "Se non sei d'accordo con l'esito, in genere il ricorso in tribunale (ATP) va presentato entro 6 mesi dalla notifica del verbale. Qui trovi solo una data indicativa: verifica con un patronato o un avvocato.",
     chiedeData: true,
   },
   {
@@ -124,10 +124,10 @@ export function calcolaEventi(lista: Scadenza[], oggi = new Date()): Evento[] {
         if (d)
           eventi.push({
             id: `${s.id}-atp`,
-            titolo: "Ultimo giorno per il ricorso contro il verbale",
+            titolo: "Termine indicativo per il ricorso contro il verbale",
             data: piuMesi(d, 6),
             spiegazione:
-              "Se non sei d'accordo con l'esito, il ricorso (ATP) va depositato in tribunale entro 6 mesi dalla comunicazione del verbale. Rivolgiti per tempo a un patronato o a un avvocato.",
+              "Data orientativa, calcolata aggiungendo 6 mesi alla data che hai inserito. Il termine vero, in genere di 6 mesi dalla notifica del verbale, può essere diverso nel tuo caso e questa non è una scadenza legalmente certa: controlla il verbale e rivolgiti per tempo a un patronato o a un avvocato.",
             anticipo: 45,
             urgente: true,
           });

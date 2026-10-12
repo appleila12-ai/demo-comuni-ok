@@ -155,7 +155,7 @@ function DateVerbale({ onScadenze }: { onScadenze: () => void }) {
       </Text>
       <Campo
         label="Data del verbale"
-        aiuto="Il giorno in cui ti è arrivato. Da qui contano i 6 mesi per un eventuale ricorso."
+        aiuto="Il giorno in cui ti è arrivato. Serve a calcolare una data indicativa per un eventuale ricorso (in genere 6 mesi dalla notifica del verbale)."
         value={dataVerbale}
         onChange={setDataVerbale}
         placeholder="gg/mm/aaaa"

@@ -56,51 +56,51 @@ const STAGES: Stage[] = [
     id: "richiesta",
     icon: "paper-plane-outline",
     title: "Richiesta inviata",
-    desc: "La tua domanda è partita: da qui inizia il tuo percorso, ci pensiamo noi.",
+    desc: "Da qui inizia il percorso: segna tu quando hai inviato la richiesta.",
     nextStep:
-      "Conserva la ricevuta di invio: ci servirà come riferimento nei prossimi passaggi.",
+      "Conserva la ricevuta di invio: ti servirà come riferimento nei prossimi passaggi.",
     azione: {
       title: "Un piccolo passo per te",
       message:
-        "Quando hai inviato la richiesta (online sul portale INPS, servizio SISDA, oppure all'Ambito Territoriale Sociale – ATS), segna qui la data: così teniamo il conto dei tempi insieme.",
+        "Quando hai inviato la richiesta (online sul portale INPS, servizio SISDA, oppure all'Ambito Territoriale Sociale – ATS), segna qui la data: potrai tenere il conto dei tempi.",
     },
   },
   {
     id: "presa_carico",
     icon: "heart-circle-outline",
     title: "Presa in carico dei Servizi Sociali",
-    desc: "Il Comune ha ricevuto la tua richiesta e ha aperto la tua cartella personale.",
+    desc: "Dopo la richiesta, i Servizi Sociali possono contattarti per una prima conoscenza. Segna qui quando succede.",
     nextStep:
-      "Un operatore ti contatterà per una prima conoscenza: tieni il telefono a portata di mano.",
+      "Un operatore potrebbe contattarti per una prima conoscenza: tieni il telefono a portata di mano.",
     attesa: "La presa in carico avviene di solito entro 15–30 giorni",
     attesaGiorni: 30,
     attesaReassure:
-      "Sei nei tempi: se non ricevi notizie entro {data}, chiamaci pure. È tutto sotto controllo.",
+      "Se non ricevi notizie entro {data}, puoi contattare il servizio ai recapiti in alto. Le date sono indicative: i tempi reali dipendono dal servizio.",
   },
   {
     id: "uvm",
     icon: "people-circle-outline",
     title: "Convocazione UVM",
-    desc: "Un'équipe di esperti ti incontrerà per capire insieme i tuoi bisogni.",
+    desc: "Di solito un'équipe di esperti incontra la persona per capire insieme i suoi bisogni. Segna qui quando ricevi la convocazione.",
     nextStep:
-      "Prepara documento d'identità e verbale: potrebbero chiamarti a breve per fissare l'incontro. Puoi farti accompagnare da una persona di fiducia.",
+      "Prepara documento d'identità e verbale: potrebbero contattarti per fissare l'incontro. Puoi farti accompagnare da una persona di fiducia.",
     attesa: "La Convocazione UVM arriva di solito entro 30–45 giorni",
     attesaGiorni: 45,
     attesaReassure:
-      "Sei nei tempi: se non ricevi notizie entro {data}, chiamaci pure. È tutto sotto controllo, ti avvisiamo noi appena c'è una data.",
+      "Se non ricevi notizie entro {data}, puoi contattare il servizio ai recapiti in alto. Le date sono indicative: la data dell'incontro la comunica il servizio.",
     azione: {
       title: "Un piccolo passo per te",
       message:
-        "Tieni pronta una fotocopia del verbale ASL e del documento d'identità: potrebbero servirti all'incontro UVM. Nessuna fretta, se manca qualcosa ci pensiamo insieme.",
+        "Tieni pronta una fotocopia del verbale ASL e del documento d'identità: potrebbero servirti all'incontro UVM. Se manca qualcosa, chiedi al servizio che ti contatta.",
     },
   },
   {
     id: "progetto",
     icon: "sparkles-outline",
     title: "Progetto di Vita attivo",
-    desc: "Il tuo Progetto di Vita personalizzato è pronto e comincia a sostenerti ogni giorno.",
+    desc: "Il Progetto di Vita viene definito insieme ai servizi competenti. Segna qui quando è stato avviato.",
     nextStep:
-      "Da qui potrai rivedere e aggiornare il tuo Progetto di Vita quando qualcosa cambia.",
+      "Quando qualcosa cambia, puoi chiedere ai servizi di rivedere il Progetto di Vita.",
   },
 ];
 
@@ -176,7 +176,7 @@ function buildNotifications(
         tone: "info",
         title: `${cur.title} in arrivo`,
         message: entro
-          ? `${cur.attesa}: indicativamente entro il ${entro}. Ti avvisiamo noi appena c'è una data.`
+          ? `${cur.attesa}: indicativamente entro il ${entro}. Segna la data quando la ricevi.`
           : `${cur.attesa}. Segna la data della tappa precedente per stimare i tempi.`,
         when: "in attesa",
       });
@@ -412,7 +412,7 @@ export default function Tracker() {
             <ComuneLogo size={comune.logo ? 56 : 36} />
             <View style={styles.flex}>
               <Text style={[styles.comuneEnte, { color: warm.warmDark }]}>
-                PRATICA SEGUITA DA
+                PER INFORMAZIONI SULLA PRATICA
               </Text>
               <Text style={styles.comuneNome} testID="tracker-comune-nome">
                 {comune.nome}
@@ -469,9 +469,11 @@ export default function Tracker() {
           Ecco a che punto è il tuo percorso
         </Text>
         <Text style={styles.introBody}>
-          Segui la tua pratica come segui un pacco in arrivo. Segna le tappe
-          completate, aggiungi date e note: restano salvate sul tuo telefono e,
-          se hai fatto l&apos;accesso, nel tuo account.
+          Questo è un promemoria personale: segna tu le tappe completate e
+          aggiungi date e note. Restano salvate solo su questo dispositivo: non
+          vengono inviate al Comune né ad altri, non c&apos;è un account e
+          TutelApp non ti manda notifiche. Per sapere a che punto è davvero la
+          tua pratica, rivolgiti al servizio indicato qui sopra.
         </Text>
 
         {/* Timeline */}
@@ -705,8 +707,8 @@ export default function Tracker() {
         <View style={styles.reassure} testID="tracker-reassure">
           <Ionicons name="shield-checkmark-outline" size={18} color={colors.success} />
           <Text style={styles.reassureText}>
-            Non sei solo in questo percorso: a ogni tappa {comune.soggetto.toLowerCase()}{" "}
-            {comune.tipo === "unione" ? "e i servizi del territorio sono" : `di ${comune.nomeBreve} è`} al tuo fianco.
+            Se hai dubbi su una tappa, puoi chiedere informazioni al servizio
+            indicato in alto: TutelApp non ha accesso alla tua pratica.
           </Text>
         </View>
 
@@ -735,7 +737,7 @@ export default function Tracker() {
           <ScadenzeSezione />
         </View>
 
-        {/* Cassaforte referti — documenti della pratica */}
+        {/* Raccolta documenti sul dispositivo (ex "cassaforte referti") */}
         <VaultSection report={ultimoReport} />
 
         <SezioniBar />
@@ -771,7 +773,7 @@ export default function Tracker() {
               </Pressable>
             </View>
             <Text style={styles.sheetSub}>
-              Ti teniamo aggiornato passo dopo passo. Con calma, senza pensieri.
+              Promemoria costruiti sulle tappe e sulle date che hai segnato tu.
             </Text>
 
             {notifications.map((n) => {

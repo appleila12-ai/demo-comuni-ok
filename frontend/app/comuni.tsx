@@ -138,9 +138,10 @@ export default function ScegliComune() {
             <>
               <Text style={styles.title}>Scegli il tuo Comune</Text>
               <Text style={styles.lead}>
-                TutelApp è offerta dal tuo Comune: scegliendolo trovi i contatti, gli
-                sportelli e i servizi del tuo territorio. I tuoi dati restano separati
-                per ogni Comune.
+                Scegli il tuo Comune per trovare i contatti, gli sportelli e i
+                servizi del tuo territorio. Alcuni Comuni sono presenti solo in
+                versione dimostrativa. I tuoi dati restano separati per ogni
+                Comune.
               </Text>
             </>
           )}
@@ -176,7 +177,7 @@ export default function ScegliComune() {
           <Text style={styles.count} testID="comuni-count">
             {query
               ? `${risultati.length} ${risultati.length === 1 ? "risultato" : "risultati"}`
-              : `${COMUNI.length} enti aderenti`}
+              : "Elenco degli enti"}
           </Text>
         </View>
 

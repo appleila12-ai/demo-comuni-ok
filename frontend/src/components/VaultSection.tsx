@@ -1,5 +1,6 @@
-// Cassaforte Referti — gratuita per tutti i cittadini.
-// Salvataggio del PDF del report e caricamento documenti, tutto persistito.
+// Elenco documenti sul dispositivo (ex "Cassaforte Referti").
+// Salvataggio del PDF del report e caricamento documenti: tutto resta sul
+// dispositivo, senza account né copia online.
 
 import { useCallback, useEffect, useState } from "react";
 import {
@@ -60,7 +61,7 @@ export function VaultSection({ report }: { report?: Report }) {
       const dest = `${FileSystem.documentDirectory}${Date.now()}_report.pdf`;
       await FileSystem.copyAsync({ from: uri, to: dest });
       await addVaultFile(name, dest);
-      toast("PDF salvato in cassaforte");
+      toast("PDF aggiunto all'elenco sul dispositivo");
     } catch (e) {
       console.warn("save pdf failed", e);
       toast("Impossibile salvare il PDF");
@@ -121,15 +122,18 @@ export function VaultSection({ report }: { report?: Report }) {
           <Ionicons name="lock-open-outline" size={22} color={topics.patronato.main} />
         </View>
         <View style={styles.badge}>
-          <Text style={styles.badgeText}>Inclusa</Text>
+          <Text style={styles.badgeText}>Sul dispositivo</Text>
         </View>
       </View>
       <Text style={styles.title}>
-        Conserva tutti i referti in un unico posto
+        I tuoi documenti, in un elenco personale
       </Text>
       <Text style={styles.body}>
-        Salva il PDF del report, carica foto e documenti di analisi, TAC e
-        verbali INPS: sempre pronti da mostrare alla Commissione Medica.
+        Un elenco per tenere a portata di mano referti, verbali e altri
+        documenti. Resta solo su questo dispositivo: non viene inviato a
+        nessuno, non c&apos;è un account e non ne esiste una copia online. Nel
+        browser i file caricati o stampati potrebbero non restare disponibili
+        al prossimo accesso: conserva sempre gli originali.
       </Text>
 
       <View style={styles.unlockedBox} testID="vault-unlocked">
@@ -167,8 +171,8 @@ export function VaultSection({ report }: { report?: Report }) {
           </View>
           {files.length === 0 ? (
             <Text style={styles.emptyText}>
-              La cassaforte è vuota: salva il report o carica il primo
-              documento.
+              Nessun documento nell&apos;elenco: salva il report o carica il
+              primo documento.
             </Text>
           ) : (
             files.map((f, i) => (

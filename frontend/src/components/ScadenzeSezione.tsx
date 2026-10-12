@@ -106,8 +106,8 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
     <View testID="scadenze-sezione">
       {mostraTitolo && <Text style={paginaStili.titoloSezione}>Le mie scadenze</Text>}
       <Text style={[paginaStili.piccolo, { marginBottom: spacing.sm }]}>
-        Inserisci le date che conosci: TutelApp calcola le scadenze importanti e ti ricorda
-        in tempo cosa fare.
+        Inserisci le date che conosci: TutelApp calcola date indicative e puoi aggiungerle
+        al calendario del telefono. TutelApp non invia avvisi da sola.
       </Text>
 
       {/* Scadenze calcolate */}
