@@ -334,6 +334,47 @@ PER_PROVINCIA.FR.volontariato.unshift({
   comuni: ["ferentino"],
 });
 
+// L'Aquila (AQ): dati dai siti delle associazioni e del CSV Abruzzo (ottobre 2026)
+PER_PROVINCIA.AQ = PER_PROVINCIA.AQ ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.AQ.volontariato.unshift(
+  {
+    nome: "Autismo Abruzzo Onlus",
+    cosa: "Sostiene le persone con autismo e le loro famiglie, senza costi per le famiglie. I volontari ascoltano chi incontra ostacoli burocratici e culturali.",
+    dove: "Via Gaetano Belisari 2, L'Aquila (sede operativa)",
+    telefono: "347 677 5119",
+    sito: "https://autismoabruzzo.it",
+    province: ["AQ"],
+  },
+  {
+    nome: "AISM – Sezione provinciale dell'Aquila",
+    cosa: "Associazione Italiana Sclerosi Multipla: informazioni e sostegno alle persone con sclerosi multipla e ai loro familiari.",
+    dove: "Via Fontamara 12, Cavalletto d'Ocre, 67040 Ocre (AQ)",
+    telefono: "0862 313632",
+    email: "aismaquila@aism.it",
+    sito: "https://www.aism.it/struttura/sezione-provinciale-aism-laquila/contattaci",
+    province: ["AQ"],
+    comuni: ["ocre"],
+  },
+  {
+    nome: "180 Amici L'Aquila ONLUS",
+    cosa: "Tutela i diritti delle persone con disagio mentale e delle loro famiglie, promuove la salute mentale e organizza iniziative sociali e culturali.",
+    dove: "c/o Casa del Volontariato e dell'Associazionismo, via Saragat snc, località Campo di Pile, L'Aquila",
+    telefono: "327 4181827",
+    email: "l.aquila180amici@gmail.com",
+    sito: "https://180amiciaq.wordpress.com",
+    province: ["AQ"],
+  },
+  {
+    nome: "CSV Abruzzo – sede dell'Aquila",
+    cosa: "Centro di Servizio per il Volontariato: conosce le associazioni del territorio e può indicarti quella giusta per il tuo bisogno.",
+    dove: "Via del Gatto 6, L'Aquila (lun-ven 9:00-14:00 e 15:00-18:30)",
+    telefono: "0862 318637",
+    email: "segreterialaquila@csvabruzzo.it",
+    sito: "https://www.csvabruzzo.it/laquila/dove-siamo/",
+    province: ["AQ"],
+  },
+);
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",

@@ -117,7 +117,7 @@ function main() {
       tagMeta({
         title: "TutelApp · Non devi orientarti da solo",
         description:
-          "La tua guida semplice ai diritti, alla Legge 104 e alla Riforma della disabilità. Offerta dal tuo Comune.",
+          "La tua guida semplice ai diritti, alla Legge 104 e alla Riforma della disabilità.",
         image: "/og/tutelapp.png",
         url: "/",
       }),

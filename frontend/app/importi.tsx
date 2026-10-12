@@ -1,4 +1,5 @@
-// Importi e Prestazioni — cifre aggiornate dal server con data e fonte INPS.
+// Importi e Prestazioni — cifre incluse nell'app (o scaricate dal server, se
+// configurato) con data e fonte INPS. Non si aggiornano da sole.
 
 import { useEffect, useState } from "react";
 import {
@@ -90,7 +91,7 @@ export default function Importi() {
           >
             <Ionicons name="shield-checkmark-outline" size={16} color={colors.success} />
             <Text style={styles.updateText}>
-              Dati aggiornati al{" "}
+              Dati inclusi nell&apos;app, aggiornati al{" "}
               <Text style={styles.updateStrong}>
                 {formatUpdatedAt(content.updatedAt)}
               </Text>
@@ -137,8 +138,11 @@ export default function Importi() {
           ))}
 
           <Text style={styles.disclaimer}>
-            Gli importi vengono rivalutati ogni anno dall&apos;INPS: questa pagina si
-            aggiorna automaticamente senza bisogno di aggiornare l&apos;app.
+            Gli importi vengono rivalutati ogni anno dall&apos;INPS. I valori
+            mostrati sono quelli inclusi in questa versione dell&apos;app, con la
+            data indicata sopra: questa pagina non si aggiorna da sola e i
+            valori potrebbero non essere aggiornati. Controlla sempre l&apos;importo
+            sulla fonte ufficiale INPS.
           </Text>
         </ScrollView>
       )}

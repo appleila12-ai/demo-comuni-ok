@@ -12,6 +12,7 @@
 // Seconda raccolta: 08/10/2026, Sicilia e Comune di Palermo.
 // Terza raccolta: 08/10/2026, Lombardia e Comune di Milano.
 // Quarta raccolta: 09/10/2026, Lazio e Comune di Fiumicino.
+// Quinta raccolta: 12/10/2026, Abruzzo, Comune dell'Aquila e Comune di Ocre (ambito sociale n. 5).
 
 import { comune } from "@/src/config/comune";
 
@@ -463,6 +464,71 @@ export const BONUS: Bonus[] = [
       url: "https://fiumicino-api.municipiumapp.it/s3/2808/allegati/avviso_pubblico_centro_diurno_fiumicino_signed.pdf",
     },
     verificatoIl: "09/10/2026",
+  },
+
+  // ------------------------------------------------------------------ ABRUZZO
+  {
+    id: "abruzzo-vita-indipendente-fse",
+    regione: "Abruzzo",
+    titolo: "Vita indipendente: nuovo avviso regionale con fondi FSE+",
+    perChi:
+      "Persone con disabilità grave (art. 3, comma 3, Legge 104/1992), maggiorenni, residenti in Abruzzo. Per chi ha disabilità psico-relazionali possono agire i rappresentanti legali.",
+    cosa:
+      "Progetti di vita indipendente che possono comprendere un contributo per le spese legate alla dignità personale, l'assunzione diretta di un assistente personale o l'acquisto di servizi di assistenza personale da soggetti accreditati (per esempio cooperative). Chi sceglie da sé l'assistente deve regolarizzare il rapporto di lavoro. L'articolo che abbiamo letto parla di circa 36 milioni di euro di fondi, ma non scrive gli importi per persona.",
+    stato: "da-verificare",
+    quando: "L'articolo del 20/11/2025 non indica le scadenze. Le domande si presentano nell'ambito sociale di residenza e le date cambiano da ambito a ambito.",
+    comeSiChiede:
+      "Chiedi all'ufficio dell'Ambito sociale (ECAD) del tuo Comune se è aperto un avviso: ogni ambito pubblica il suo.",
+    fonte: {
+      label: "Rete8 · Vita indipendente Abruzzo: nuovo avviso e più fondi dalla Regione (20/11/2025)",
+      url: "https://www.rete8.it/cronaca/123vita-indipendente-abruzzo-nuovo-avviso-e-piu-fondi-dalla-regione/",
+    },
+    verificatoIl: "12/10/2026",
+    nota: "Fonte giornalistica: l'atto ufficiale della Regione non è stato letto. Conferma sempre con l'ambito sociale.",
+  },
+
+  // ----------------------------------------------------------- L'AQUILA (AQ)
+  {
+    id: "laquila-caregiver-2026",
+    regione: "Abruzzo",
+    comuni: ["laquila"],
+    titolo: "Fondo per il sostegno del caregiver familiare (2026)",
+    perChi:
+      "Caregiver familiari residenti all'Aquila che assistono un parente convivente (anagraficamente) in condizione di disabilità gravissima. ISEE ordinario familiare del caregiver non superiore a 36.000 euro.",
+    cosa:
+      "Contributo di sollievo per l'assistenza continuativa e, quando serve, per interventi di sostituzione nella cura o ricoveri temporanei di sollievo. L'importo non è indicato nelle fonti che abbiamo letto: dipende dall'intensità del bisogno, dalla rete di aiuto disponibile e dall'ISEE.",
+    stato: "aperto",
+    quando: "Domande entro le ore 23:59 del 2 novembre 2026.",
+    comeSiChiede:
+      "Solo online sulla piattaforma bandisocialescuola.comune.laquila.it. Per chi ha difficoltà c'è il Punto Digitale del Servizio Politiche Sociali (via Filomusi Guelfi 6/c, Villa Gioia), lo Sportello Unificato e il Servizio Sociale – Ufficio Disabilità, non autosufficienza e integrazione socio-sanitaria.",
+    fonte: {
+      label: "ReteAbruzzo · Comune dell'Aquila, avviso caregiver familiari (10/10/2026)",
+      url: "https://www.reteabruzzo.com/2026/10/10/comune-dellaquila-avviso-per-sostegno-ai-caregiver-familiari-domande-fino-al-2-novembre/",
+    },
+    verificatoIl: "12/10/2026",
+    nota: "La scadenza è vicina. L'elenco dei documenti non è nella fonte: leggi l'avviso sul sito del Comune.",
+  },
+
+  // ------------------------------------------------------------- OCRE (AQ)
+  {
+    id: "ocre-vita-indipendente-2026",
+    regione: "Abruzzo",
+    comuni: ["ocre"],
+    titolo: "Vita indipendente 2026: avviso dell'Ambito distrettuale n. 5 \"Montagne Aquilane\"",
+    perChi:
+      "Persone con disabilità che hanno bisogno di sostegno elevato o molto elevato, nei Comuni dell'Ambito n. 5 (secondo la fonte che abbiamo letto, Ocre è incluso). Il progetto lo presenta la persona direttamente, con il modulo regionale e tutti i documenti richiesti.",
+    cosa:
+      "Progetti per rafforzare o mantenere l'autonomia, sostenere le attività quotidiane e permettere di restare a casa propria, evitando l'istituzionalizzazione. L'articolo non scrive gli importi.",
+    stato: "chiuso",
+    quando: "Domande entro il 31 gennaio 2026 (annualità 2026). Non sappiamo se è stato aperto un nuovo avviso.",
+    comeSiChiede:
+      "In busta chiusa con la dicitura \"Progetto Vita Indipendente. Annualità 2026\" all'Ufficio Protocollo dell'Ambito, via Cavour 43/a, Barisciano (AQ), oppure per PEC a unionecomunimontagnaaquilana@pec.it.",
+    fonte: {
+      label: "L'Aquila Blog · Vita indipendente 2026, avviso Montagna Aquilana (10/01/2026)",
+      url: "https://www.laquilablog.it/vita-indipendente-2026-montagna-aquilana/",
+    },
+    verificatoIl: "12/10/2026",
+    nota: "Fonte giornalistica: chiedi al Comune di Ocre o all'Unione Montana se è previsto un nuovo avviso.",
   },
 ];
 

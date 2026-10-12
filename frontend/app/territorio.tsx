@@ -72,14 +72,14 @@ export default function Territorio() {
       if (Platform.OS === "web") {
         await Print.printAsync({ html });
         await addVaultFile(guideName);
-        toast("Guida salvata anche in cassaforte");
+        toast("Guida aggiunta all'elenco documenti sul dispositivo");
         return;
       }
       const { uri } = await Print.printToFileAsync({ html });
       const dest = `${FileSystem.documentDirectory}${Date.now()}_guida.pdf`;
       await FileSystem.copyAsync({ from: uri, to: dest });
       await addVaultFile(guideName, dest);
-      toast("Guida salvata anche in cassaforte");
+      toast("Guida aggiunta all'elenco documenti sul dispositivo");
       const canShare = await Sharing.isAvailableAsync();
       if (canShare) {
         await Sharing.shareAsync(uri, {
