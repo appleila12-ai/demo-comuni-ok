@@ -287,14 +287,26 @@ export async function saveReport(answers: Answers): Promise<Report> {
   const list = await readLocal();
   list.unshift(localReport);
   await writeLocal(list);
-  // Fire-and-forget sync so we can also share
-  const synced = await syncToBackend(localReport);
-  if (synced.shareToken && synced.shareToken !== localReport.shareToken) {
-    const updated = list.map((r) => (r.id === localReport.id ? synced : r));
-    await writeLocal(updated);
-    return synced;
-  }
+  // Nessun invio al server qui: la valutazione resta sul dispositivo.
+  // Una copia parte solo se la persona sceglie "Condividi" (vedi condividiReport).
   return localReport;
+}
+
+/**
+ * Invia al server una copia della valutazione per creare il link di condivisione.
+ * Da chiamare SOLO dopo la conferma esplicita della persona. Senza backend, o se
+ * l'invio non riesce, restituisce null e la valutazione resta solo sul dispositivo.
+ */
+export async function condividiReport(id: string): Promise<Report | null> {
+  if (!BACKEND_URL) return null;
+  const list = await readLocal();
+  const report = list.find((r) => r.id === id);
+  if (!report) return null;
+  if (report.shareToken) return report;
+  const synced = await syncToBackend(report);
+  if (!synced.shareToken) return null;
+  await writeLocal(list.map((r) => (r.id === id ? synced : r)));
+  return synced;
 }
 
 export async function getReport(id: string): Promise<Report | null> {

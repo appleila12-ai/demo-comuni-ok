@@ -519,7 +519,7 @@ export default function Hub() {
           <Ionicons name="phone-portrait-outline" size={16} color={colors.onSurfaceSecondary} />
           <Text style={styles.datiText}>
             {HA_BACKEND
-              ? "Nessun account. Date, note, verbale e Progetto di Vita restano su questo dispositivo. Quando salvi una valutazione dei tuoi diritti, una copia viene inviata al server del servizio per poterla condividere con un link."
+              ? "Nessun account. Date, note, verbale e Progetto di Vita restano su questo dispositivo. Solo se scegli «Condividi Famiglia» su una valutazione, ne viene inviata una copia al server del servizio per creare il link."
               : "Nessun account: i tuoi dati restano salvati solo su questo dispositivo."}
           </Text>
         </View>
