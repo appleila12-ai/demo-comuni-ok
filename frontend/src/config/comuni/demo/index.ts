@@ -49,6 +49,7 @@ import { guidoniaMontecelio } from "./guidonia-montecelio";
 import { imola } from "./imola";
 import { jesolo } from "./jesolo";
 import { laSpezia } from "./la-spezia";
+import { laquila } from "./laquila";
 import { lecco } from "./lecco";
 import { legnago } from "./legnago";
 import { legnano } from "./legnano";
@@ -63,6 +64,7 @@ import { milano } from "./milano";
 import { mira } from "./mira";
 import { monopoli } from "./monopoli";
 import { nepi } from "./nepi";
+import { ocre } from "./ocre";
 import { olbia } from "./olbia";
 import { ortona } from "./ortona";
 import { osimo } from "./osimo";
@@ -143,6 +145,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   imola,
   jesolo,
   laSpezia,
+  laquila,
   lecco,
   legnago,
   legnano,
@@ -157,6 +160,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   mira,
   monopoli,
   nepi,
+  ocre,
   olbia,
   ortona,
   osimo,
