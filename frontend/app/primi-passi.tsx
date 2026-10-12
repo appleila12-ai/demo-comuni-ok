@@ -18,6 +18,7 @@ import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import { HeaderComune } from "@/src/components/HeaderComune";
+import { AvantiTappa } from "@/src/components/AvantiTappa";
 
 function buildPrimiPassi() {
   return [
@@ -175,6 +176,7 @@ export default function PrimiPassiScreen() {
           </Pressable>
         </View>
 
+        <AvantiTappa corrente="diagnosi" />
         <SezioniBar />
       </ScrollView>
     </SafeAreaView>

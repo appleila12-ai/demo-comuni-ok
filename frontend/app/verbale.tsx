@@ -15,6 +15,7 @@ import { AREE, calcola, completo, ESITO, type Diritto, type Esito, type Verbale 
 import { Avviso, Bottone, Campo, Intro, Pagina, paginaStili, Scelte } from "@/src/components/Pagina";
 import { calcolaEventi, daTestoItaliano, giorniDaOggi, inItaliano, type Scadenza } from "@/src/lib/scadenze";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
+import { AvantiTappa } from "@/src/components/AvantiTappa";
 
 const KEY = "tutelapp:verbale";
 const AREA_BONUS = "Bonus regionali e comunali";
@@ -410,6 +411,7 @@ export default function VerbalePagina() {
           <Bottone label="Cancella le mie risposte" icon="trash-outline" variante="vuoto" onPress={cancella} testID="verbale-cancella" />
         </>
       )}
+    <AvantiTappa corrente="diritti" />
     </Pagina>
   );
 }

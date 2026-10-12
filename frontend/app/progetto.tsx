@@ -36,6 +36,7 @@ import {
 } from "@/src/lib/progetto";
 import { registra, useSezione } from "@/src/lib/statistiche";
 import { HeaderComune } from "@/src/components/HeaderComune";
+import { AvantiTappa } from "@/src/components/AvantiTappa";
 
 function toast(msg: string) {
   if (Platform.OS === "android") ToastAndroid.show(msg, ToastAndroid.SHORT);
@@ -291,6 +292,7 @@ export default function ProgettoDiVita() {
           {/* Come attivare il Progetto di Vita — dentro questa pagina */}
           <AttivaProgettoSection />
 
+          <AvantiTappa corrente="progetto" />
           <SezioniBar />
         </ScrollView>
       </KeyboardAvoidingView>
