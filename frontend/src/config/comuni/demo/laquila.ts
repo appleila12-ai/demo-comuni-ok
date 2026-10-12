@@ -21,8 +21,8 @@ export const laquila: ComuneConfig = {
   provincia: "AQ",
   regione: "Abruzzo",
 
-  ente: "Servizio Sociale Professionale",
-  responsabile: "Politiche sociali – Comune dell'Aquila",
+  ente: "Servizi Sociali",
+  responsabile: "Servizio Sociale Professionale – Politiche sociali, Comune dell'Aquila",
   indirizzo: "Via Francesco Filomusi Guelfi 6/C, località Villa Gioia, L'Aquila (AQ)",
   telefono: "0862 645529",
   email: "politichesociali.cultura@comune.laquila.postecert.it",
