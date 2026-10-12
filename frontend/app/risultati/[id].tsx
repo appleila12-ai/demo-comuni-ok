@@ -31,6 +31,7 @@ import { VerbaleSection } from "@/src/components/VerbaleSection";
 import { LivelliSection } from "@/src/components/LivelliSection";
 import {
   buildReportHtml,
+  condividiReport,
   getQrUrl,
   getReport,
   getShareUrl,
@@ -54,6 +55,10 @@ export default function Risultati() {
   const [report, setReport] = useState<Report | null>(null);
   const [loading, setLoading] = useState(true);
   const [shareOpen, setShareOpen] = useState(false);
+  // Conferma esplicita prima di inviare una copia al server (solo se c'è un backend)
+  const [confermaOpen, setConfermaOpen] = useState(false);
+  const [condivido, setCondivido] = useState(false);
+  const [erroreShare, setErroreShare] = useState("");
 
   useEffect(() => {
     let mounted = true;
@@ -71,6 +76,27 @@ export default function Risultati() {
 
   const shareUrl = useMemo(() => (report ? getShareUrl(report) : null), [report]);
   const qrUrl = useMemo(() => (shareUrl ? getQrUrl(shareUrl) : null), [shareUrl]);
+
+  const handleShare = () => {
+    setErroreShare("");
+    if (shareUrl) setShareOpen(true);
+    else setConfermaOpen((v) => !v);
+  };
+
+  const handleConfermaShare = async () => {
+    if (!report || condivido) return;
+    setCondivido(true);
+    setErroreShare("");
+    const r = await condividiReport(report.id);
+    setCondivido(false);
+    if (r?.shareToken) {
+      setReport(r);
+      setConfermaOpen(false);
+      setShareOpen(true);
+    } else {
+      setErroreShare("Non è stato possibile creare il link. La valutazione è rimasta solo su questo dispositivo.");
+    }
+  };
 
   const handleDownloadPdf = useCallback(async () => {
     if (!report) return;
@@ -282,14 +308,15 @@ export default function Risultati() {
                 />
                 <Text style={styles.primaryBtnText}>Scarica PDF</Text>
               </Pressable>
-              {shareUrl ? (
+              {shareUrl || HA_BACKEND ? (
               <Pressable
-                onPress={() => setShareOpen(true)}
+                onPress={handleShare}
                 style={({ pressed }) => [
                   styles.secondaryBtn,
                   pressed && { opacity: 0.85 },
                 ]}
                 accessibilityRole="button"
+                accessibilityState={{ expanded: confermaOpen }}
                 testID="results-share-btn"
               >
                 <Ionicons
@@ -301,6 +328,36 @@ export default function Risultati() {
               </Pressable>
               ) : null}
             </View>
+            {confermaOpen && !shareUrl && (
+              <View style={styles.confermaBox} testID="results-share-conferma">
+                <Text style={styles.confermaText}>
+                  Per creare il link, una copia di questa valutazione (chi ha ricevuto la
+                  diagnosi, quando, la situazione lavorativa, se c&apos;è un verbale) viene inviata
+                  al server del servizio. Non serve un account. Se non vuoi, non premere
+                  «Crea il link»: la valutazione resta solo su questo dispositivo.
+                </Text>
+                {erroreShare ? <Text style={styles.confermaErrore}>{erroreShare}</Text> : null}
+                <View style={styles.confermaRiga}>
+                  <Pressable
+                    onPress={handleConfermaShare}
+                    disabled={condivido}
+                    style={({ pressed }) => [styles.primaryBtn, pressed && { opacity: 0.85 }]}
+                    accessibilityRole="button"
+                    testID="results-share-conferma-ok"
+                  >
+                    <Text style={styles.primaryBtnText}>{condivido ? "Un momento…" : "Crea il link"}</Text>
+                  </Pressable>
+                  <Pressable
+                    onPress={() => setConfermaOpen(false)}
+                    style={({ pressed }) => [styles.secondaryBtn, pressed && { opacity: 0.85 }]}
+                    accessibilityRole="button"
+                    testID="results-share-conferma-no"
+                  >
+                    <Text style={styles.secondaryBtnText}>Annulla</Text>
+                  </Pressable>
+                </View>
+              </View>
+            )}
           </View>
 
           {/* AI Assistant — solo se c'è il backend */}
@@ -523,6 +580,18 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "800",
   },
+  confermaBox: {
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: radius.lg,
+    padding: spacing.md,
+    marginTop: spacing.sm,
+    gap: spacing.sm,
+  },
+  confermaText: { fontSize: 13, lineHeight: 19, color: colors.onSurfaceSecondary },
+  confermaErrore: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark },
+  confermaRiga: { flexDirection: "row", gap: spacing.sm },
   secondaryBtn: {
     flex: 1,
     flexDirection: "row",

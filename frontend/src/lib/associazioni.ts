@@ -343,7 +343,7 @@ PER_PROVINCIA.AQ.volontariato.unshift(
     dove: "Via Gaetano Belisari 2, L'Aquila (sede operativa)",
     telefono: "347 677 5119",
     sito: "https://autismoabruzzo.it",
-    province: ["AQ"],
+    comuni: ["laquila", "ocre"],
   },
   {
     nome: "AISM – Sezione provinciale dell'Aquila",
@@ -352,8 +352,7 @@ PER_PROVINCIA.AQ.volontariato.unshift(
     telefono: "0862 313632",
     email: "aismaquila@aism.it",
     sito: "https://www.aism.it/struttura/sezione-provinciale-aism-laquila/contattaci",
-    province: ["AQ"],
-    comuni: ["ocre"],
+    comuni: ["laquila", "ocre"],
   },
   {
     nome: "180 Amici L'Aquila ONLUS",
@@ -362,7 +361,7 @@ PER_PROVINCIA.AQ.volontariato.unshift(
     telefono: "327 4181827",
     email: "l.aquila180amici@gmail.com",
     sito: "https://180amiciaq.wordpress.com",
-    province: ["AQ"],
+    comuni: ["laquila", "ocre"],
   },
   {
     nome: "CSV Abruzzo – sede dell'Aquila",
@@ -371,7 +370,7 @@ PER_PROVINCIA.AQ.volontariato.unshift(
     telefono: "0862 318637",
     email: "segreterialaquila@csvabruzzo.it",
     sito: "https://www.csvabruzzo.it/laquila/dove-siamo/",
-    province: ["AQ"],
+    comuni: ["laquila", "ocre"],
   },
 );
 

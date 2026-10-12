@@ -17,8 +17,15 @@ import { EtichettaComune, HeaderComune } from "@/src/components/HeaderComune";
 import { formatDate, listReports, Report } from "@/src/lib/reports";
 import { comune } from "@/src/config/comune";
 import { registra, useSezione } from "@/src/lib/statistiche";
+import { HA_BACKEND } from "@/src/config/servizi";
+import { prossimoPasso, type Suggerimento } from "@/src/lib/prossimoPasso";
+import { PROGETTO_KEY } from "@/src/lib/progetto";
 
 const MOMENTO_KEY = "tutelapp:hub:momento";
+// Chiavi già usate da La mia pratica e Il tuo verbale (qui si leggono soltanto, mai si scrivono).
+// `storage` aggiunge da solo il suffisso del Comune attivo (@slug): i dati restano separati.
+const TRACKER_KEY = "tutelapp:tracker";
+const VERBALE_KEY = "tutelapp:verbale";
 
 type Momento = "diagnosi" | "iter" | "diritti" | null;
 
@@ -134,6 +141,11 @@ export default function Hub() {
   const [history, setHistory] = useState<Report[]>([]);
   const [momento, setMomento] = useState<Momento>(null);
   const [guidaOpen, setGuidaOpen] = useState(false);
+  const [suggerimento, setSuggerimento] = useState<Suggerimento | null>(null);
+  // Solo in memoria: non viene salvato nulla di nuovo
+  const [ignorato, setIgnorato] = useState(false);
+  const [nonSo, setNonSo] = useState(false);
+  const [tappaAperta, setTappaAperta] = useState<string | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -141,6 +153,25 @@ export default function Hub() {
       if (m === "diagnosi" || m === "iter" || m === "diritti") setMomento(m);
     })();
   }, []);
+
+  // Prossimo passo utile: solo da dati già salvati su questo dispositivo, per questo Comune.
+  // Si ricalcola ogni volta che si torna qui, così segue le modifiche fatte nelle altre pagine.
+  useFocusEffect(
+    useCallback(() => {
+      let active = true;
+      (async () => {
+        const [tracker, verbale, progetto] = await Promise.all([
+          storage.getItem<string>(TRACKER_KEY, ""),
+          storage.getItem<string>(VERBALE_KEY, ""),
+          storage.getItem<string>(PROGETTO_KEY, ""),
+        ]);
+        if (active) setSuggerimento(prossimoPasso({ tracker, verbale, progetto }));
+      })();
+      return () => {
+        active = false;
+      };
+    }, []),
+  );
 
   // Storico valutazioni: si aggiorna ogni volta che si torna qui
   useFocusEffect(
@@ -158,12 +189,26 @@ export default function Hub() {
 
   // La risposta porta direttamente alla pagina giusta
   const pickMomento = async (m: Exclude<Momento, null>) => {
+    setNonSo(false);
     setMomento(m);
     storage.setItem(MOMENTO_KEY, m);
     registra("momento", m);
     if (m === "diagnosi") return router.push("/primi-passi" as any);
     if (m === "iter") return router.push("/tracker");
     router.push("/verbale" as any);
+  };
+
+  // Toglie la tappa evidenziata ("SEI QUI"): non cancella nient'altro
+  const togliScelta = () => {
+    setMomento(null);
+    storage.removeItem(MOMENTO_KEY);
+  };
+
+  // "Non so da dove cominciare": nessuna pagina si apre da sola, resta il suggerimento
+  const nonSoDaDove = () => {
+    togliScelta();
+    setIgnorato(false);
+    setNonSo(true);
   };
 
   const partenza = momento ? PARTENZA[momento] : null;
@@ -207,8 +252,50 @@ export default function Hub() {
           </Text>
         </View>
 
-        {/* 1 — Da dove partire */}
-        <Text style={styles.sectionLabel}>DA DOVE VUOI PARTIRE?</Text>
+        {/* 1 — Il prossimo passo utile (uno solo, mai obbligatorio) */}
+        {suggerimento && !ignorato && (
+          <View
+            style={[styles.passoBox, suggerimento.tipo === "neutro" && styles.passoBoxNeutro]}
+            testID="hub-prossimo-passo"
+          >
+            <Text style={styles.passoEtichetta}>
+              {suggerimento.predefinito
+                ? "UN PUNTO DI PARTENZA"
+                : suggerimento.tipo === "neutro"
+                  ? "A TE LA SCELTA"
+                  : "IL PROSSIMO PASSO UTILE"}
+            </Text>
+            <Text style={styles.passoTitolo} accessibilityRole="header" testID="hub-prossimo-passo-titolo">
+              {suggerimento.titolo}
+            </Text>
+            <Text style={styles.passoMotivo}>{suggerimento.motivo}</Text>
+            {suggerimento.route && (
+              <Pressable
+                onPress={() => vai(suggerimento.route!)}
+                style={({ pressed }) => [styles.passoVai, pressed && { opacity: 0.85 }]}
+                accessibilityRole="button"
+                accessibilityLabel={suggerimento.bottone}
+                testID="hub-prossimo-passo-vai"
+              >
+                <Text style={styles.passoVaiText}>{suggerimento.bottone}</Text>
+                <Ionicons name="arrow-forward" size={16} color="#FFFFFF" />
+              </Pressable>
+            )}
+            <Pressable
+              onPress={() => setIgnorato(true)}
+              hitSlop={8}
+              style={styles.passoIgnora}
+              accessibilityRole="button"
+              accessibilityLabel="Nascondi il suggerimento e scegli tu"
+              testID="hub-prossimo-passo-ignora"
+            >
+              <Text style={styles.passoIgnoraText}>Non adesso, scelgo io</Text>
+            </Pressable>
+          </View>
+        )}
+
+        {/* 2 — Se preferisci, scegli tu da dove partire (facoltativo) */}
+        <Text style={styles.sectionLabel}>SE PREFERISCI, SCEGLI TU DA DOVE PARTIRE</Text>
         <View style={styles.momenti} testID="hub-filter-card">
           {MOMENTI.map((m) => {
             const on = momento === m.id;
@@ -226,7 +313,7 @@ export default function Hub() {
                 testID={`hub-momento-${m.id}`}
               >
                 <View style={[styles.momentoIcon, on && { backgroundColor: colors.surface }]}>
-                  <Ionicons name={m.icon} size={22} color={colors.brandPrimaryDark} />
+                  <Ionicons name={m.icon} size={20} color={colors.brandPrimaryDark} />
                 </View>
                 <View style={styles.flex}>
                   <Text style={styles.momentoTitle}>{m.label}</Text>
@@ -236,14 +323,48 @@ export default function Hub() {
               </Pressable>
             );
           })}
+          <Pressable
+            onPress={nonSoDaDove}
+            style={({ pressed }) => [styles.momento, styles.momentoNonSo, pressed && { opacity: 0.9 }]}
+            accessibilityRole="button"
+            testID="hub-momento-nonso"
+          >
+            <View style={styles.momentoIcon}>
+              <Ionicons name="help-outline" size={20} color={colors.brandPrimaryDark} />
+            </View>
+            <View style={styles.flex}>
+              <Text style={styles.momentoTitle}>Non so da dove cominciare</Text>
+              <Text style={styles.momentoSub}>Va bene: non devi scegliere subito</Text>
+            </View>
+          </Pressable>
+          {nonSo && (
+            <Text style={styles.nonSoNota} accessibilityLiveRegion="polite" testID="hub-nonso-nota">
+              Nessun problema. Puoi partire dal punto qui sopra, oppure aprire una qualsiasi delle sei
+              tappe qui sotto, nell&apos;ordine che preferisci.
+            </Text>
+          )}
+          {momento && (
+            <Pressable
+              onPress={togliScelta}
+              hitSlop={8}
+              style={styles.togliScelta}
+              accessibilityRole="button"
+              accessibilityLabel="Togli la scelta evidenziata"
+              testID="hub-momento-rimuovi"
+            >
+              <Ionicons name="close-circle-outline" size={16} color={colors.brandPrimaryDark} />
+              <Text style={styles.togliSceltaText}>Togli la scelta evidenziata</Text>
+            </Pressable>
+          )}
         </View>
 
-        {/* 2 — Tutto il percorso, in ordine */}
-        <Text style={styles.sectionLabel}>IL PERCORSO, TAPPA DOPO TAPPA</Text>
+        {/* 3 — Le sei tappe: la mappa, sempre visibile e libera */}
+        <Text style={styles.sectionLabel}>LE SEI TAPPE, IN QUALSIASI ORDINE</Text>
         <View style={styles.tappe} testID="hub-tappe">
           {TAPPE.map((t, i) => {
             const qui = partenza === t.id;
             const ultima = i === TAPPE.length - 1;
+            const aperta = tappaAperta === t.id;
             return (
               <View key={t.id} style={styles.tappaRiga} testID={`hub-tappa-${t.id}`}>
                 <View style={styles.tappaSx}>
@@ -253,36 +374,59 @@ export default function Hub() {
                   {!ultima && <View style={styles.tappaLinea} />}
                 </View>
                 <View style={[styles.tappaCard, qui && styles.tappaCardQui]}>
-                  {qui && <Text style={styles.tappaQui}>SEI QUI</Text>}
-                  <View style={styles.tappaHead}>
-                    <Ionicons name={t.icon} size={18} color={t.color.main} />
-                    <Text style={styles.tappaTitolo}>{t.titolo}</Text>
-                  </View>
-                  <Text style={styles.tappaTesto}>{t.testo}</Text>
                   <Pressable
                     onPress={() => vai(t.principale.route)}
-                    style={({ pressed }) => [styles.tappaBtn, pressed && { opacity: 0.85 }]}
+                    style={({ pressed }) => pressed && { opacity: 0.85 }}
                     accessibilityRole="button"
+                    accessibilityLabel={`Tappa ${i + 1}: ${t.titolo}. ${t.principale.label}`}
                     testID={`hub-card-${t.id}`}
                   >
-                    <Text style={styles.tappaBtnText}>{t.principale.label}</Text>
-                    <Ionicons name="arrow-forward" size={15} color="#FFFFFF" />
+                    {qui && <Text style={styles.tappaQui}>SEI QUI</Text>}
+                    <View style={styles.tappaHead}>
+                      <Ionicons name={t.icon} size={18} color={t.color.main} />
+                      <Text style={styles.tappaTitolo}>{t.titolo}</Text>
+                      <Ionicons name="arrow-forward" size={16} color={colors.brandPrimaryDark} />
+                    </View>
+                    <Text style={styles.tappaTesto}>{t.testo}</Text>
+                    <Text style={styles.tappaPrincipale}>{t.principale.label}</Text>
                   </Pressable>
                   {t.altri.length > 0 && (
-                    <View style={styles.tappaAltri}>
-                      {t.altri.map((l) => (
-                        <Pressable
-                          key={l.route}
-                          onPress={() => vai(l.route)}
-                          hitSlop={6}
-                          accessibilityRole="link"
-                          style={styles.tappaLink}
-                        >
-                          <Text style={styles.tappaLinkText}>{l.label}</Text>
-                          <Ionicons name="chevron-forward" size={13} color={colors.brandPrimaryDark} />
-                        </Pressable>
-                      ))}
-                    </View>
+                    <>
+                      <Pressable
+                        onPress={() => setTappaAperta(aperta ? null : t.id)}
+                        hitSlop={6}
+                        style={styles.tappaAltriToggle}
+                        accessibilityRole="button"
+                        accessibilityState={{ expanded: aperta }}
+                        accessibilityLabel={`Altre pagine di ${t.titolo}`}
+                        testID={`hub-tappa-altri-${t.id}`}
+                      >
+                        <Text style={styles.tappaLinkText}>
+                          {aperta ? "Meno pagine" : `Altre pagine (${t.altri.length})`}
+                        </Text>
+                        <Ionicons
+                          name={aperta ? "chevron-up" : "chevron-down"}
+                          size={13}
+                          color={colors.brandPrimaryDark}
+                        />
+                      </Pressable>
+                      {aperta && (
+                        <View style={styles.tappaAltri}>
+                          {t.altri.map((l) => (
+                            <Pressable
+                              key={l.route}
+                              onPress={() => vai(l.route)}
+                              hitSlop={6}
+                              accessibilityRole="link"
+                              style={styles.tappaLink}
+                            >
+                              <Text style={styles.tappaLinkText}>{l.label}</Text>
+                              <Ionicons name="chevron-forward" size={13} color={colors.brandPrimaryDark} />
+                            </Pressable>
+                          ))}
+                        </View>
+                      )}
+                    </>
                   )}
                 </View>
               </View>
@@ -374,7 +518,9 @@ export default function Hub() {
         <View style={styles.datiRiga} testID="hub-dati-locali">
           <Ionicons name="phone-portrait-outline" size={16} color={colors.onSurfaceSecondary} />
           <Text style={styles.datiText}>
-            Nessun account: i tuoi dati restano salvati solo su questo dispositivo.
+            {HA_BACKEND
+              ? "Nessun account. Date, note, verbale e Progetto di Vita restano su questo dispositivo. Solo se scegli «Condividi Famiglia» su una valutazione, ne viene inviata una copia al server del servizio per creare il link."
+              : "Nessun account: i tuoi dati restano salvati solo su questo dispositivo."}
           </Text>
         </View>
 
@@ -396,8 +542,42 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.border,
     borderRadius: radius.lg,
-    padding: spacing.md,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    minHeight: 56,
   },
+  momentoNonSo: { borderStyle: "dashed" },
+  nonSoNota: { fontSize: 13, lineHeight: 19, color: colors.onSurfaceSecondary, paddingHorizontal: 4 },
+  togliScelta: { flexDirection: "row", alignItems: "center", gap: 6, alignSelf: "flex-start", minHeight: 36, paddingHorizontal: 4 },
+  togliSceltaText: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark, textDecorationLine: "underline" },
+
+  // Prossimo passo utile
+  passoBox: {
+    backgroundColor: colors.brandSecondary,
+    borderWidth: 1.5,
+    borderColor: colors.brandPrimaryDark,
+    borderRadius: radius.lg,
+    padding: spacing.lg,
+    marginBottom: spacing.lg,
+  },
+  passoBoxNeutro: { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: 1 },
+  passoEtichetta: { fontSize: 10, fontWeight: "800", letterSpacing: 1.1, color: colors.brandPrimaryDark, marginBottom: 6 },
+  passoTitolo: { fontFamily: fonts.serif, fontSize: 19, lineHeight: 25, fontWeight: "700", color: colors.onSurface },
+  passoMotivo: { fontSize: 13.5, lineHeight: 20, color: colors.onSurfaceSecondary, marginTop: 6 },
+  passoVai: {
+    flexDirection: "row",
+    alignItems: "center",
+    alignSelf: "flex-start",
+    gap: 8,
+    backgroundColor: colors.brandPrimaryDark,
+    borderRadius: radius.pill,
+    paddingHorizontal: 18,
+    minHeight: 48,
+    marginTop: spacing.md,
+  },
+  passoVaiText: { color: "#FFFFFF", fontSize: 15, fontWeight: "800" },
+  passoIgnora: { alignSelf: "flex-start", minHeight: 40, justifyContent: "center", marginTop: spacing.xs },
+  passoIgnoraText: { fontSize: 13, fontWeight: "700", color: colors.onSurfaceSecondary, textDecorationLine: "underline" },
   momentoOn: { borderColor: colors.brandPrimaryDark, borderWidth: 1.5, backgroundColor: colors.brandSecondary },
   momentoIcon: {
     width: 44,
@@ -422,13 +602,15 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
     borderRadius: radius.lg,
     padding: spacing.md,
-    marginBottom: spacing.md,
+    marginBottom: spacing.sm,
   },
   tappaCardQui: { borderColor: colors.brandPrimaryDark, borderWidth: 1.5 },
   tappaQui: { fontSize: 10, fontWeight: "800", letterSpacing: 1, color: colors.brandPrimaryDark, marginBottom: 4 },
   tappaHead: { flexDirection: "row", alignItems: "center", gap: 8 },
   tappaTitolo: { fontFamily: fonts.serif, fontSize: 17, fontWeight: "700", color: colors.onSurface, flex: 1 },
   tappaTesto: { fontSize: 13.5, lineHeight: 19, color: colors.onSurfaceSecondary, marginTop: 4 },
+  tappaPrincipale: { fontSize: 13, fontWeight: "800", color: colors.brandPrimaryDark, marginTop: 6 },
+  tappaAltriToggle: { flexDirection: "row", alignItems: "center", gap: 4, alignSelf: "flex-start", minHeight: 36, marginTop: 4 },
   tappaBtn: {
     flexDirection: "row",
     alignItems: "center",
@@ -441,7 +623,7 @@ const styles = StyleSheet.create({
     marginTop: spacing.sm,
   },
   tappaBtnText: { color: "#FFFFFF", fontSize: 14, fontWeight: "800" },
-  tappaAltri: { flexDirection: "row", flexWrap: "wrap", gap: 14, marginTop: 10 },
+  tappaAltri: { flexDirection: "row", flexWrap: "wrap", gap: 14, marginTop: 4, marginBottom: 4 },
   tappaLink: { flexDirection: "row", alignItems: "center", gap: 2 },
   tappaLinkText: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark, textDecorationLine: "underline" },
   datiRiga: { flexDirection: "row", alignItems: "center", gap: 8, marginTop: spacing.md, paddingHorizontal: 4 },
