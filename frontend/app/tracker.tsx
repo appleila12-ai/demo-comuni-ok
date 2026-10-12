@@ -369,7 +369,7 @@ export default function Tracker() {
         >
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
-        <Text style={styles.headerTitle}>La tua pratica</Text>
+        <Text style={styles.headerTitle}>La mia pratica</Text>
         <HeaderComune />
         <Pressable
           onPress={openNotifs}

@@ -92,11 +92,11 @@ const TAPPE: Tappa[] = [
   },
   {
     id: "diritti",
-    titolo: "I tuoi diritti",
+    titolo: "Cosa ti spetta",
     testo: "Aiuti economici, permessi, agevolazioni e le lettere per chiederli.",
     icon: "shield-checkmark-outline",
     color: topics.esenzioni,
-    principale: { label: "Il tuo verbale: cosa ti spetta", route: "/verbale" },
+    principale: { label: "Il tuo verbale", route: "/verbale" },
     altri: [
       { label: "Bonus e agevolazioni", route: "/agevolazioni" },
       { label: "Lettere pronte", route: "/lettere" },

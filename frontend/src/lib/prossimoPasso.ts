@@ -61,11 +61,11 @@ const NEUTRO: Suggerimento = {
 
 const PRIME_COSE: Suggerimento = {
   tipo: "primi-passi",
-  titolo: "Le prime cose da sapere",
+  titolo: "Primi passi dopo una diagnosi",
   motivo:
     "Esenzione dal ticket, malattia al lavoro, sportello sociale. Non è un passaggio obbligato: puoi anche scegliere un'altra tappa.",
   route: "/primi-passi",
-  bottone: "Leggi le prime cose da sapere",
+  bottone: "Apri i primi passi",
   predefinito: true,
 };
 
