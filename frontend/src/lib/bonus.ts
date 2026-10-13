@@ -365,22 +365,24 @@ export const BONUS: Bonus[] = [
 
   // ----------------------------------------------------------------- PIEMONTE
   {
-    id: "piemonte-assegni-di-cura",
+    id: "piemonte-contributo-caregiver-2024",
     regione: "Piemonte",
-    titolo: "Assegni di cura per persone non autosufficienti (disabili gravissimi e gravi)",
+    titolo: "Contributo ai caregiver familiari di persone non autosufficienti (Fondo caregiver 2024)",
     perChi:
-      "Persone non autosufficienti, in particolare con disabilità gravissima o grave. Il limite ISEE è di 50.000 euro, 65.000 per i minorenni con disabilità. La notizia non elenca altri requisiti.",
+      "Caregiver familiari (coniuge, partner, parente o affine fino al secondo grado, in certi casi al terzo) di una persona non autosufficiente riconosciuta disabile con bisogno di assistenza continua, o che riceve l'indennità di accompagnamento. Il caregiver vive nello stesso Comune della persona assistita o entro 20 km. Esclusi i casi in cui la persona assistita ha già Vita Indipendente, il sostegno per la SLA o il fondo regionale per la non autosufficienza, o è in una struttura residenziale non convenzionata in attesa di un posto convenzionato.",
     cosa:
-      "Un assegno mensile: per i disabili gravissimi non può essere inferiore a 400 euro per 12 mensilità. Nel 2019 la media era di 566 euro per i gravissimi e 488 euro per i gravi.",
+      "Un contributo mensile per 12 mesi, in base all'ISEE sociosanitario. Persona adulta assistita: fino a 10.000 euro di ISEE 600 euro, da 10.001 a 30.000 euro 500 euro, da 30.001 a 50.000 euro 400 euro, sopra 50.000 euro niente. Persona minorenne assistita: stessi importi, con ultima fascia fino a 65.000 euro. È in aggiunta agli altri sostegni sanitari.",
     stato: "da-verificare",
+    quando:
+      "Il contributo dura fino a esaurimento dei fondi statali e il pagamento dipende dall'approvazione del Ministero e dall'adeguamento di bilancio.",
     comeSiChiede:
-      "La notizia non spiega la procedura. Chiedi al servizio sociale del tuo territorio (a Torino quello della tua Circoscrizione).",
+      "La domanda va con l'ISEE al Punto Unico di Accesso dell'Ambito Territoriale Sociale (ATS) dove vive la persona assistita. L'ATS fa la graduatoria sulle liste d'attesa che ha già e decide l'importo. Il pagamento è con bonifico.",
     fonte: {
-      label: "Regione Piemonte · Regole omogenee per gli assegni di cura (13/11/2020)",
-      url: "https://www.regione.piemonte.it/web/pinforma/notizie/regole-omogenee-per-gli-assegni-cura",
+      label: "Regione Piemonte · DGR 9-1266 del 23/06/2025 (Bollettino Ufficiale del 26/06/2025)",
+      url: "https://www.regione.piemonte.it/governo/bollettino/abbonati/2025/26/attach/dgr_01266_1050_23062025.pdf",
     },
     verificatoIl: "13/10/2026",
-    nota: "Notizia del 2020 sul triennio 2019-2021: importi e regole possono essere cambiati. Non abbiamo trovato la scheda 2026 della Regione.",
+    nota: "La delibera riguarda i fondi statali per i caregiver per il 2024. Non sappiamo se e quando l'ATS ha aperto o riaperto le domande: chiedilo al servizio sociale del tuo territorio.",
   },
 
   // ---------------------------------------------------------- COMUNE DI TORINO
@@ -408,20 +410,20 @@ export const BONUS: Bonus[] = [
   {
     id: "campania-assegni-di-cura",
     regione: "Campania",
-    titolo: "Assegni di cura per anziani non autosufficienti e persone con disabilità",
+    titolo: "Assegni di cura per persone con disabilità gravissima o grave (programma regionale)",
     perChi:
-      "Anziani non autosufficienti o persone con disabilità, o i loro familiari, che assumono in autonomia uno o più assistenti familiari per l'assistenza a casa. Non spetta con ISEE sociosanitario sopra 50.000 euro (65.000 per i minori). L'intervento deve essere previsto nel PAI, il Piano Assistenziale Individualizzato.",
+      "Persone non autosufficienti con disabilità gravissima (decreto ministeriale del 26 settembre 2016) o grave (allegato del DPCM 159/2013) che vogliono restare a casa. Le persone con disabilità gravissima hanno la precedenza, quelle con disabilità grave entrano se restano fondi. Serve l'indennità di accompagnamento, la certificazione della Legge 104/92 e l'ISEE sociosanitario valido. Restano esclusi l'ISEE sociosanitario sopra 50.000 euro (65.000 per i minori) e chi vive in una struttura residenziale (requisiti letti in un avviso dell'Ambito N12 del 2025: ogni Ambito può avere regole sue).",
     cosa:
-      "Assegno mensile di 1.200 euro per alto carico assistenziale o disabilità gravissima, 600 euro per basso carico o disabilità grave. Con ISEE sociosanitario sopra 20.000 euro (35.000 per i minori) o con altre prestazioni attive, l'importo si riduce del 40%. Almeno il 70% va giustificato con spese, fino al 30% va al caregiver familiare.",
+      "Un assegno mensile pagato dall'Ambito Territoriale per assistenza a casa: fino a 1.200 euro per la disabilità gravissima e fino a 600 euro per quella grave (importi dell'avviso dell'Ambito N12). Si può spendere per assistenti familiari, educatori o operatori professionali. Almeno il 70% va documentato con ricevute, fatture, contratti o bonifici. L'assegno dura 12 mesi e si può rinnovare se ci sono fondi.",
     stato: "da-verificare",
     comeSiChiede:
-      "Le domande sono gestite dagli Ambiti territoriali, con il Comune capofila come riferimento. La pagina non spiega la procedura: chiedi al Segretariato Sociale del tuo Comune o all'Ambito.",
+      "L'Ambito pubblica un avviso una volta l'anno. Si presenta la domanda ai Servizi Sociali del Comune di residenza, sul modulo ufficiale e con i documenti richiesti: le domande fatte in altro modo vengono respinte. L'assistente sociale valuta la richiesta, anche con una visita a casa, e prepara il piano personalizzato entro 30 giorni.",
     fonte: {
-      label: "AISLA · Campania, Fondi Non Autosufficienza (delibera regionale del 14/03/2023)",
-      url: "https://www.aisla.it/campania-fondi-non-autosufficienza/",
+      label: "Ambito Sociale N12 (capofila Pozzuoli) · avviso del 17/07/2025, programma regionale (DGR 70/2024)",
+      url: "https://cr.campania.it/garante-disabili/images/Articoli_2025/17_Luglio_Nuovi_assegni_di_cura_per_disabili_gravi.pdf",
     },
     verificatoIl: "13/10/2026",
-    nota: "Fonte di un'associazione, datata 3 aprile 2023: importi e regole possono essere cambiati. Non abbiamo trovato la scheda 2026 della Regione: confermala con l'Ambito.",
+    nota: "L'avviso citato aveva scadenza il 03/10/2025 e vale per Pozzuoli, Bacoli e Monte di Procida: per il tuo Comune chiedi all'Ambito se c'è un nuovo avviso. Non abbiamo trovato una pagina della Regione con gli importi aggiornati.",
   },
 
   // ------------------------------------------------------------ COMUNE DI ROMA

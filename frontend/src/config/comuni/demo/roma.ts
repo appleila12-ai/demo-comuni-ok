@@ -3,7 +3,7 @@ import type { ComuneConfig } from "../types";
 // Comune di Roma (RM) — VERSIONE DIMOSTRATIVA (completata il 13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Il sito del Comune non è leggibile in automatico (robots). Fonti: pagina PUA di ASL Roma 1 (Distretti 1, 2, 3, 13, 14, 15),
-// sito dell'Agenzia per la Vita Indipendente di Roma Capitale, sito di Anffas Roma.
+// sito dell'Agenzia per la Vita Indipendente di Roma Capitale.
 // Roma ha 15 Municipi e più ASL: qui c'è solo il PUA di ASL Roma 1. Gli altri Distretti (ASL Roma 2-6) vanno aggiunti.
 // Da fare: recapiti dei Servizi Sociali di ogni Municipio (pua.mun02@comune.roma.it e pua.mun15@comune.roma.it sono citati nella pagina ASL), PUA delle altre ASL.
 export const roma: ComuneConfig = {

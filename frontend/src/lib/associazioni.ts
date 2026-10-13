@@ -329,16 +329,6 @@ PER_PROVINCIA.TO.volontariato.unshift({
 PER_PROVINCIA.RM = PER_PROVINCIA.RM ?? { volontariato: [], sport: [] };
 PER_PROVINCIA.RM.volontariato.unshift(
   {
-    nome: "Anffas Roma ETS",
-    cosa: "Famiglie e persone con disabilità intellettive e disturbi del neurosviluppo, dal 1958. Gestisce centri diurni, un ambulatorio riabilitativo per bambini e comunità residenziali. Lo sportello SAI ascolta e orienta le famiglie.",
-    dove: "Via Aurelia Antica 289, Roma (sportello SAI: via Vitellia 74)",
-    telefono: "06 535597",
-    email: "sai@anffasroma.it",
-    sito: "https://www.anffasroma.eu",
-    comuni: ["roma"],
-    verificare: true,
-  },
-  {
     nome: "Agenzia per la Vita Indipendente di Roma Capitale",
     cosa: "Informazioni e consulenze su assistenza, casa, fisco, invalidità, lavoro, mobilità, salute e scuola, con sedi Roma 1, 2 e 3. Roma 1 (via Prospero Santacroce 5): tel. 06 98261600, int. 202, per prenotare un colloquio.",
     dove: "Roma 1: via Prospero Santacroce 5; Roma 2: via degli Anemoni 19 e via Cerbara 38; Roma 3: via Mentana 2b, via Magliani 22/28, via Pedretti 16",
