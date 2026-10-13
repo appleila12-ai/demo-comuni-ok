@@ -313,6 +313,31 @@ PER_PROVINCIA.MI.volontariato.unshift(
   },
 );
 
+// Torino (TO): dati dal sito dell'associazione (ottobre 2026)
+PER_PROVINCIA.TO = PER_PROVINCIA.TO ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.TO.volontariato.unshift({
+  nome: "Anffas Torino",
+  cosa: "Attiva dal 1959 con le famiglie di persone con disabilità fisica e intellettiva: servizi alla persona, progetti, Comunicazione Aumentativa Alternativa, formazione. Lo sportello SAI accoglie e informa.",
+  dove: "Via Bossi 24, 10144 Torino (lun-gio 9:00-13:00 e 14:00-17:00, ven 9:00-13:00)",
+  telefono: "011 3810723",
+  email: "sai@anffas.torino.it",
+  sito: "https://www.anffastorino.it",
+  comuni: ["torino"],
+});
+
+// Roma (RM): dati dai siti delle associazioni e di Roma Capitale (ottobre 2026)
+PER_PROVINCIA.RM = PER_PROVINCIA.RM ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.RM.volontariato.unshift(
+  {
+    nome: "Agenzia per la Vita Indipendente di Roma Capitale",
+    cosa: "Informazioni e consulenze su assistenza, casa, fisco, invalidità, lavoro, mobilità, salute e scuola, con sedi Roma 1, 2 e 3. Roma 1 (via Prospero Santacroce 5): tel. 06 98261600, int. 202, per prenotare un colloquio.",
+    dove: "Roma 1: via Prospero Santacroce 5; Roma 2: via degli Anemoni 19 e via Cerbara 38; Roma 3: via Mentana 2b, via Magliani 22/28, via Pedretti 16",
+    telefono: "06 98261600",
+    sito: "https://www.vitaindipendenteroma.it/contatti/",
+    comuni: ["roma"],
+  },
+);
+
 // Fiumicino (RM): tempo libero e mare. Dati da articoli e dal sito della Regione Lazio (ottobre 2026)
 PER_PROVINCIA.RM = PER_PROVINCIA.RM ?? { volontariato: [], sport: [] };
 PER_PROVINCIA.RM.volontariato.unshift({

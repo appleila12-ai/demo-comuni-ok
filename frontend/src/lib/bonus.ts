@@ -13,6 +13,7 @@
 // Terza raccolta: 08/10/2026, Lombardia e Comune di Milano.
 // Quarta raccolta: 09/10/2026, Lazio e Comune di Fiumicino.
 // Quinta raccolta: 12/10/2026, Abruzzo, Comune dell'Aquila e Comune di Ocre (ambito sociale n. 5).
+// Sesta raccolta: 13/10/2026, Roma Capitale, Campania (da confermare), Piemonte e Comune di Torino.
 
 import { comune } from "@/src/config/comune";
 
@@ -360,6 +361,92 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "09/10/2026",
     nota: "Pagina della Regione aggiornata il 04/03/2026. Soglie ISEE e scadenze non sono scritte: confermale con il Distretto.",
+  },
+
+  // ----------------------------------------------------------------- PIEMONTE
+  {
+    id: "piemonte-contributo-caregiver-2024",
+    regione: "Piemonte",
+    titolo: "Contributo ai caregiver familiari di persone non autosufficienti (Fondo caregiver 2024)",
+    perChi:
+      "Caregiver familiari (coniuge, partner, parente o affine fino al secondo grado, in certi casi al terzo) di una persona non autosufficiente riconosciuta disabile con bisogno di assistenza continua, o che riceve l'indennità di accompagnamento. Il caregiver vive nello stesso Comune della persona assistita o entro 20 km. Esclusi i casi in cui la persona assistita ha già Vita Indipendente, il sostegno per la SLA o il fondo regionale per la non autosufficienza, o è in una struttura residenziale non convenzionata in attesa di un posto convenzionato.",
+    cosa:
+      "Un contributo mensile per 12 mesi, in base all'ISEE sociosanitario. Persona adulta assistita: fino a 10.000 euro di ISEE 600 euro, da 10.001 a 30.000 euro 500 euro, da 30.001 a 50.000 euro 400 euro, sopra 50.000 euro niente. Persona minorenne assistita: stessi importi, con ultima fascia fino a 65.000 euro. È in aggiunta agli altri sostegni sanitari.",
+    stato: "da-verificare",
+    quando:
+      "Il contributo dura fino a esaurimento dei fondi statali e il pagamento dipende dall'approvazione del Ministero e dall'adeguamento di bilancio.",
+    comeSiChiede:
+      "La domanda va con l'ISEE al Punto Unico di Accesso dell'Ambito Territoriale Sociale (ATS) dove vive la persona assistita. L'ATS fa la graduatoria sulle liste d'attesa che ha già e decide l'importo. Il pagamento è con bonifico.",
+    fonte: {
+      label: "Regione Piemonte · DGR 9-1266 del 23/06/2025 (Bollettino Ufficiale del 26/06/2025)",
+      url: "https://www.regione.piemonte.it/governo/bollettino/abbonati/2025/26/attach/dgr_01266_1050_23062025.pdf",
+    },
+    verificatoIl: "13/10/2026",
+    nota: "La delibera riguarda i fondi statali per i caregiver per il 2024. Non sappiamo se e quando l'ATS ha aperto o riaperto le domande: chiedilo al servizio sociale del tuo territorio.",
+  },
+
+  // ---------------------------------------------------------- COMUNE DI TORINO
+  {
+    id: "torino-assistenza-domiciliare",
+    regione: "Piemonte",
+    comuni: ["torino"],
+    titolo: "Torino: assistenza a casa per persone con disabilità (assegni di cura e rimborsi)",
+    perChi:
+      "Persone con disabilità, minori e adulte, che vogliono restare nella propria casa. Serve la valutazione dell'Unità Multidisciplinare di Valutazione delle Disabilità (U.M.V.D.), l'ISEE e un appuntamento con i servizi sociosanitari per il Progetto di Assistenza Individuale.",
+    cosa:
+      "Cura della persona e della casa, aiuto per le commissioni, pasti a domicilio, OSS con Buoni Servizio, telesoccorso e teleassistenza. Ci sono anche erogazioni economiche, come assegni di cura o rimborsi spese per chi svolge lavoro di cura. La pagina non scrive gli importi e può essere prevista una quota in base all'ISEE.",
+    stato: "attivo",
+    comeSiChiede:
+      "Rivolgiti al servizio sociale della tua Circoscrizione, per appuntamento dal lunedì al venerdì dalle 9:00 alle 13:00 (vedi Punti di supporto).",
+    fonte: {
+      label: "Città di Torino · Interventi di assistenza domiciliare",
+      url: "https://www.comune.torino.it/servizi/interventi-assistenza-alle-persone-anziane-disabilita-che-vivono-al-domicilio",
+    },
+    verificatoIl: "13/10/2026",
+    nota: "I progetti si possono rinnovare ogni anno. Importi e soglie ISEE vanno chiesti al servizio sociale.",
+  },
+
+  // ----------------------------------------------------------------- CAMPANIA
+  {
+    id: "campania-assegni-di-cura",
+    regione: "Campania",
+    titolo: "Assegni di cura per persone con disabilità gravissima o grave (programma regionale)",
+    perChi:
+      "Persone non autosufficienti con disabilità gravissima (decreto ministeriale del 26 settembre 2016) o grave (allegato del DPCM 159/2013) che vogliono restare a casa. Le persone con disabilità gravissima hanno la precedenza, quelle con disabilità grave entrano se restano fondi. Serve l'indennità di accompagnamento, la certificazione della Legge 104/92 e l'ISEE sociosanitario valido. Restano esclusi l'ISEE sociosanitario sopra 50.000 euro (65.000 per i minori) e chi vive in una struttura residenziale (requisiti letti in un avviso dell'Ambito N12 del 2025: ogni Ambito può avere regole sue).",
+    cosa:
+      "Un assegno mensile pagato dall'Ambito Territoriale per assistenza a casa: fino a 1.200 euro per la disabilità gravissima e fino a 600 euro per quella grave (importi dell'avviso dell'Ambito N12). Si può spendere per assistenti familiari, educatori o operatori professionali. Almeno il 70% va documentato con ricevute, fatture, contratti o bonifici. L'assegno dura 12 mesi e si può rinnovare se ci sono fondi.",
+    stato: "da-verificare",
+    comeSiChiede:
+      "L'Ambito pubblica un avviso una volta l'anno. Si presenta la domanda ai Servizi Sociali del Comune di residenza, sul modulo ufficiale e con i documenti richiesti: le domande fatte in altro modo vengono respinte. L'assistente sociale valuta la richiesta, anche con una visita a casa, e prepara il piano personalizzato entro 30 giorni.",
+    fonte: {
+      label: "Ambito Sociale N12 (capofila Pozzuoli) · avviso del 17/07/2025, programma regionale (DGR 70/2024)",
+      url: "https://cr.campania.it/garante-disabili/images/Articoli_2025/17_Luglio_Nuovi_assegni_di_cura_per_disabili_gravi.pdf",
+    },
+    verificatoIl: "13/10/2026",
+    nota: "L'avviso citato aveva scadenza il 03/10/2025 e vale per Pozzuoli, Bacoli e Monte di Procida: per il tuo Comune chiedi all'Ambito se c'è un nuovo avviso. Non abbiamo trovato una pagina della Regione con gli importi aggiornati.",
+  },
+
+  // ------------------------------------------------------------ COMUNE DI ROMA
+  {
+    id: "roma-assegno-contributo-cura",
+    regione: "Lazio",
+    comuni: ["roma"],
+    titolo: "Roma Capitale: assegno di cura e contributo di cura (disabilità gravissima)",
+    perChi:
+      "Persone con disabilità gravissima (fisica, psichica o sensoriale), minorenni, adulte e anziane, che vogliono restare in famiglia. Servono l'indennità di accompagnamento oppure la non autosufficienza ai sensi dell'allegato 3 del DPCM 159/2013, e almeno una delle condizioni dell'art. 3 del decreto ministeriale 26 settembre 2016. Non basta il verbale con accompagnamento: la disabilità gravissima deve essere riconosciuta dalle UVM.",
+    cosa:
+      "Assegno di cura: da 500 a 800 euro al mese per pagare personale qualificato (con regolare contratto, oppure tramite Organismi accreditati). Contributo di cura: da 400 a 700 euro al mese per chi è assistito da un caregiver familiare. L'importo dipende dall'ISEE socio-sanitario e dagli altri servizi attivi.",
+    stato: "attivo",
+    quando:
+      "Dal 1° luglio 2022 la domanda si può presentare in qualunque momento dell'anno. L'erogazione mensile dipende dalle risorse della Regione Lazio e del bilancio.",
+    comeSiChiede:
+      "La scheda rimanda al sito di Roma Capitale (scheda INF117423) per contatti e moduli. Puoi anche chiedere informazioni al PUA o all'Agenzia per la Vita Indipendente.",
+    fonte: {
+      label: "Agenzia per la Vita Indipendente di Roma Capitale · Assegno di cura e contributo di cura",
+      url: "https://www.vitaindipendenteroma.it/schede/assegno-di-cura-e-contributo-di-cura-caregiver/",
+    },
+    verificatoIl: "13/10/2026",
+    nota: "La scheda non riporta la data di aggiornamento. L'assegno è sospeso con ricoveri di sollievo a carico del Fondo Sanitario Regionale, residenzialità continuativa o cambio di regione. Conferma importi e moduli con il Comune.",
   },
 
   // ----------------------------------------------------------- COMUNE DI FIUMICINO
