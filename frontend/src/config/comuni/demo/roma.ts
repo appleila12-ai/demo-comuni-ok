@@ -1,9 +1,11 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Roma (RM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
+// Comune di Roma (RM) — VERSIONE DIMOSTRATIVA (completata il 13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Il sito del Comune non è leggibile in automatico (robots): la pagina dei servizi sociali va cercata e confermata.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Il sito del Comune non è leggibile in automatico (robots). Fonti: pagina PUA di ASL Roma 1 (Distretti 1, 2, 3, 13, 14, 15),
+// sito dell'Agenzia per la Vita Indipendente di Roma Capitale, sito di Anffas Roma.
+// Roma ha 15 Municipi e più ASL: qui c'è solo il PUA di ASL Roma 1. Gli altri Distretti (ASL Roma 2-6) vanno aggiunti.
+// Da fare: recapiti dei Servizi Sociali di ogni Municipio (pua.mun02@comune.roma.it e pua.mun15@comune.roma.it sono citati nella pagina ASL), PUA delle altre ASL.
 export const roma: ComuneConfig = {
   slug: "roma",
   tipo: "comune",
@@ -20,7 +22,7 @@ export const roma: ComuneConfig = {
   telefono: "",
   email: "",
   pec: "",
-  orari: "",
+  orari: "Sedi e orari cambiano per Municipio e Distretto: guarda la pagina del PUA",
   sitoWeb: "https://www.comune.roma.it",
 
   logo: null,
@@ -35,9 +37,15 @@ export const roma: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.roma.it" },
+      title: "Punto Unico di Accesso (PUA), ASL Roma 1",
+      subtitle: "Accoglienza e orientamento ai servizi sociali e sanitari, creato da Distretto e Municipio. Ci si va di persona, con una persona di fiducia, o per telefono e email. Sul sito trovi le sedi dei Distretti 1, 2, 3, 13, 14 e 15 con telefoni e orari",
+      action: { type: "web", value: "https://www.aslroma1.it/punto-unico-accesso" },
+    },
+    {
+      icon: "home-outline",
+      title: "Agenzia per la Vita Indipendente di Roma Capitale",
+      subtitle: "Informazioni e consulenze su assistenza, casa, fisco, invalidità, lavoro, mobilità e scuola, con sedi Roma 1, 2 e 3. Roma 1: via Prospero Santacroce 5, tel. 06 98261600 (int. 202) per prenotare un colloquio",
+      action: { type: "tel", value: "0698261600" },
     },
     {
       icon: "medkit-outline",

@@ -2,8 +2,9 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Napoli (NA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Il sito del Comune non è stato leggibile in automatico: la pagina dei servizi sociali va cercata e confermata.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Il sito del Comune e del CIP Campania non si aprono in automatico: non ho potuto leggere recapiti. Il link agli indirizzi dei Centri Servizi
+// Sociali Territoriali (uno per Municipalità) è la pagina ufficiale trovata con la ricerca web il 13 ottobre 2026, da confermare.
+// Da fare: telefoni, email e orari dei Centri Servizi Sociali Territoriali; bonus del Comune, associazioni, sport e tempo libero.
 export const napoli: ComuneConfig = {
   slug: "napoli",
   tipo: "comune",
@@ -35,9 +36,9 @@ export const napoli: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.napoli.it" },
+      title: "Centri Servizi Sociali Territoriali",
+      subtitle: "Primo ascolto sociale: ce n'è uno per ogni Municipalità. Gli indirizzi sono sul sito del Comune",
+      action: { type: "web", value: "https://www.comune.napoli.it/articolo_tematico/welfare-e-pari-opportunita/segretariato-sociale-e-servizio-sociale/indirizzi-centri-servizi-sociali-territoriali/" },
     },
     {
       icon: "medkit-outline",

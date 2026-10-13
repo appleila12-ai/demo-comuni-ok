@@ -13,6 +13,7 @@
 // Terza raccolta: 08/10/2026, Lombardia e Comune di Milano.
 // Quarta raccolta: 09/10/2026, Lazio e Comune di Fiumicino.
 // Quinta raccolta: 12/10/2026, Abruzzo, Comune dell'Aquila e Comune di Ocre (ambito sociale n. 5).
+// Sesta raccolta: 13/10/2026, Roma Capitale, Campania (da confermare), Piemonte e Comune di Torino.
 
 import { comune } from "@/src/config/comune";
 
@@ -360,6 +361,90 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "09/10/2026",
     nota: "Pagina della Regione aggiornata il 04/03/2026. Soglie ISEE e scadenze non sono scritte: confermale con il Distretto.",
+  },
+
+  // ----------------------------------------------------------------- PIEMONTE
+  {
+    id: "piemonte-assegni-di-cura",
+    regione: "Piemonte",
+    titolo: "Assegni di cura per persone non autosufficienti (disabili gravissimi e gravi)",
+    perChi:
+      "Persone non autosufficienti, in particolare con disabilità gravissima o grave. Il limite ISEE è di 50.000 euro, 65.000 per i minorenni con disabilità. La notizia non elenca altri requisiti.",
+    cosa:
+      "Un assegno mensile: per i disabili gravissimi non può essere inferiore a 400 euro per 12 mensilità. Nel 2019 la media era di 566 euro per i gravissimi e 488 euro per i gravi.",
+    stato: "da-verificare",
+    comeSiChiede:
+      "La notizia non spiega la procedura. Chiedi al servizio sociale del tuo territorio (a Torino quello della tua Circoscrizione).",
+    fonte: {
+      label: "Regione Piemonte · Regole omogenee per gli assegni di cura (13/11/2020)",
+      url: "https://www.regione.piemonte.it/web/pinforma/notizie/regole-omogenee-per-gli-assegni-cura",
+    },
+    verificatoIl: "13/10/2026",
+    nota: "Notizia del 2020 sul triennio 2019-2021: importi e regole possono essere cambiati. Non abbiamo trovato la scheda 2026 della Regione.",
+  },
+
+  // ---------------------------------------------------------- COMUNE DI TORINO
+  {
+    id: "torino-assistenza-domiciliare",
+    regione: "Piemonte",
+    comuni: ["torino"],
+    titolo: "Torino: assistenza a casa per persone con disabilità (assegni di cura e rimborsi)",
+    perChi:
+      "Persone con disabilità, minori e adulte, che vogliono restare nella propria casa. Serve la valutazione dell'Unità Multidisciplinare di Valutazione delle Disabilità (U.M.V.D.), l'ISEE e un appuntamento con i servizi sociosanitari per il Progetto di Assistenza Individuale.",
+    cosa:
+      "Cura della persona e della casa, aiuto per le commissioni, pasti a domicilio, OSS con Buoni Servizio, telesoccorso e teleassistenza. Ci sono anche erogazioni economiche, come assegni di cura o rimborsi spese per chi svolge lavoro di cura. La pagina non scrive gli importi e può essere prevista una quota in base all'ISEE.",
+    stato: "attivo",
+    comeSiChiede:
+      "Rivolgiti al servizio sociale della tua Circoscrizione, per appuntamento dal lunedì al venerdì dalle 9:00 alle 13:00 (vedi Punti di supporto).",
+    fonte: {
+      label: "Città di Torino · Interventi di assistenza domiciliare",
+      url: "https://www.comune.torino.it/servizi/interventi-assistenza-alle-persone-anziane-disabilita-che-vivono-al-domicilio",
+    },
+    verificatoIl: "13/10/2026",
+    nota: "I progetti si possono rinnovare ogni anno. Importi e soglie ISEE vanno chiesti al servizio sociale.",
+  },
+
+  // ----------------------------------------------------------------- CAMPANIA
+  {
+    id: "campania-assegni-di-cura",
+    regione: "Campania",
+    titolo: "Assegni di cura per anziani non autosufficienti e persone con disabilità",
+    perChi:
+      "Anziani non autosufficienti o persone con disabilità, o i loro familiari, che assumono in autonomia uno o più assistenti familiari per l'assistenza a casa. Non spetta con ISEE sociosanitario sopra 50.000 euro (65.000 per i minori). L'intervento deve essere previsto nel PAI, il Piano Assistenziale Individualizzato.",
+    cosa:
+      "Assegno mensile di 1.200 euro per alto carico assistenziale o disabilità gravissima, 600 euro per basso carico o disabilità grave. Con ISEE sociosanitario sopra 20.000 euro (35.000 per i minori) o con altre prestazioni attive, l'importo si riduce del 40%. Almeno il 70% va giustificato con spese, fino al 30% va al caregiver familiare.",
+    stato: "da-verificare",
+    comeSiChiede:
+      "Le domande sono gestite dagli Ambiti territoriali, con il Comune capofila come riferimento. La pagina non spiega la procedura: chiedi al Segretariato Sociale del tuo Comune o all'Ambito.",
+    fonte: {
+      label: "AISLA · Campania, Fondi Non Autosufficienza (delibera regionale del 14/03/2023)",
+      url: "https://www.aisla.it/campania-fondi-non-autosufficienza/",
+    },
+    verificatoIl: "13/10/2026",
+    nota: "Fonte di un'associazione, datata 3 aprile 2023: importi e regole possono essere cambiati. Non abbiamo trovato la scheda 2026 della Regione: confermala con l'Ambito.",
+  },
+
+  // ------------------------------------------------------------ COMUNE DI ROMA
+  {
+    id: "roma-assegno-contributo-cura",
+    regione: "Lazio",
+    comuni: ["roma"],
+    titolo: "Roma Capitale: assegno di cura e contributo di cura (disabilità gravissima)",
+    perChi:
+      "Persone con disabilità gravissima (fisica, psichica o sensoriale), minorenni, adulte e anziane, che vogliono restare in famiglia. Servono l'indennità di accompagnamento oppure la non autosufficienza ai sensi dell'allegato 3 del DPCM 159/2013, e almeno una delle condizioni dell'art. 3 del decreto ministeriale 26 settembre 2016. Non basta il verbale con accompagnamento: la disabilità gravissima deve essere riconosciuta dalle UVM.",
+    cosa:
+      "Assegno di cura: da 500 a 800 euro al mese per pagare personale qualificato (con regolare contratto, oppure tramite Organismi accreditati). Contributo di cura: da 400 a 700 euro al mese per chi è assistito da un caregiver familiare. L'importo dipende dall'ISEE socio-sanitario e dagli altri servizi attivi.",
+    stato: "attivo",
+    quando:
+      "Dal 1° luglio 2022 la domanda si può presentare in qualunque momento dell'anno. L'erogazione mensile dipende dalle risorse della Regione Lazio e del bilancio.",
+    comeSiChiede:
+      "La scheda rimanda al sito di Roma Capitale (scheda INF117423) per contatti e moduli. Puoi anche chiedere informazioni al PUA o all'Agenzia per la Vita Indipendente.",
+    fonte: {
+      label: "Agenzia per la Vita Indipendente di Roma Capitale · Assegno di cura e contributo di cura",
+      url: "https://www.vitaindipendenteroma.it/schede/assegno-di-cura-e-contributo-di-cura-caregiver/",
+    },
+    verificatoIl: "13/10/2026",
+    nota: "La scheda non riporta la data di aggiornamento. L'assegno è sospeso con ricoveri di sollievo a carico del Fondo Sanitario Regionale, residenzialità continuativa o cambio di regione. Conferma importi e moduli con il Comune.",
   },
 
   // ----------------------------------------------------------- COMUNE DI FIUMICINO
