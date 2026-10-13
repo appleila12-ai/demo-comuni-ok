@@ -425,6 +425,7 @@ export default function Tracker() {
           <View style={styles.comuneDivider} />
 
           <View style={styles.comuneContacts}>
+            {!!comune.telefono && (
             <Pressable
               onPress={call}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
@@ -435,6 +436,7 @@ export default function Tracker() {
                 Chiama
               </Text>
             </Pressable>
+            )}
             {!!comune.email && (
             <Pressable
               onPress={email}
@@ -447,6 +449,7 @@ export default function Tracker() {
               </Text>
             </Pressable>
             )}
+            {!!comune.indirizzo && (
             <Pressable
               onPress={map}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
@@ -457,11 +460,14 @@ export default function Tracker() {
                 Sede
               </Text>
             </Pressable>
+            )}
           </View>
+          {!!comune.orari && (
           <View style={styles.comuneInfoRow}>
             <Ionicons name="time-outline" size={13} color={colors.muted} />
             <Text style={styles.comuneInfoText}>{comune.orari}</Text>
           </View>
+          )}
         </View>
 
         {/* Intro */}
