@@ -39,9 +39,9 @@ export const arcola: ComuneConfig = {
     },
     {
       icon: "business-outline",
-      title: "Ambito Territoriale Sociale 19 – Val di Magra",
+      title: "Servizi Sociali del Comune di Sarzana (capofila dell'ambito)",
       subtitle: "Arcola fa parte dell'ambito con Sarzana (capofila), Ameglia, Castelnuovo Magra, Luni, Santo Stefano di Magra e Vezzano Ligure",
-      action: { type: "web", value: "https://www.ambitosociale19.it" },
+      action: { type: "web", value: "https://www.comune.sarzana.sp.it/servizi-sociali.html" },
     },
     {
       icon: "medkit-outline",

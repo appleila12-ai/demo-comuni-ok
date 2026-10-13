@@ -119,6 +119,31 @@ import { vetralla } from "./vetralla";
 import { viareggio } from "./viareggio";
 import { vimercate } from "./vimercate";
 import { viterbo } from "./viterbo";
+import { reggioCalabria } from "./reggio-calabria";
+import { livorno } from "./livorno";
+import { rimini } from "./rimini";
+import { salerno } from "./salerno";
+import { ferrara } from "./ferrara";
+import { sassari } from "./sassari";
+import { latina } from "./latina";
+import { monza } from "./monza";
+import { siracusa } from "./siracusa";
+import { pescara } from "./pescara";
+import { foggia } from "./foggia";
+import { bolzano } from "./bolzano";
+import { vicenza } from "./vicenza";
+import { terni } from "./terni";
+import { trento } from "./trento";
+import { novara } from "./novara";
+import { forli } from "./forli";
+import { lecce } from "./lecce";
+import { udine } from "./udine";
+import { giuglianoInCampania } from "./giugliano-in-campania";
+import { ameglia } from "./ameglia";
+import { luni } from "./luni";
+import { castelnuovoMagra } from "./castelnuovo-magra";
+import { santoStefanoDiMagra } from "./santo-stefano-di-magra";
+import { vezzanoLigure } from "./vezzano-ligure";
 
 export const COMUNI_DEMO: ComuneConfig[] = [
   alba,
@@ -235,4 +260,29 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   viareggio,
   vimercate,
   viterbo,
+  reggioCalabria,
+  livorno,
+  rimini,
+  salerno,
+  ferrara,
+  sassari,
+  latina,
+  monza,
+  siracusa,
+  pescara,
+  foggia,
+  bolzano,
+  vicenza,
+  terni,
+  trento,
+  novara,
+  forli,
+  lecce,
+  udine,
+  giuglianoInCampania,
+  ameglia,
+  luni,
+  castelnuovoMagra,
+  santoStefanoDiMagra,
+  vezzanoLigure,
 ];
