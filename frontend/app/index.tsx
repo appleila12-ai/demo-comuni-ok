@@ -371,11 +371,12 @@ function HomeDelComune() {
         <View style={styles.contactCard}>
           <Text style={[styles.contactEyebrow, { color: t.warmDark }]}>HAI BISOGNO DI SUPPORTO?</Text>
           <Text style={styles.contactTitle}>{comune.ente}</Text>
-          <Text style={styles.contactText}>{comune.responsabile}</Text>
-          <Text style={styles.contactText}>{comune.indirizzo}</Text>
+          {!!comune.responsabile && <Text style={styles.contactText}>{comune.responsabile}</Text>}
+          {!!comune.indirizzo && <Text style={styles.contactText}>{comune.indirizzo}</Text>}
 
           <View style={styles.contactRows}>
             {/* Telefono ed email funzionano: toccandoli si chiama o si scrive */}
+            {!!comune.telefono && (
             <Pressable
               onPress={() => Linking.openURL(`tel:${comune.telefono.replace(/\s+/g, "")}`).catch(() => {})}
               style={({ pressed }) => [styles.contactRow, pressed && styles.pressed]}
@@ -386,6 +387,7 @@ function HomeDelComune() {
               <Ionicons name="call-outline" size={16} color={t.warmDark} />
               <Text style={[styles.contactValue, styles.contactLink]}>{comune.telefono}</Text>
             </Pressable>
+            )}
             {!!comune.email && (
             <Pressable
               onPress={() => Linking.openURL(`mailto:${comune.email}`).catch(() => {})}
