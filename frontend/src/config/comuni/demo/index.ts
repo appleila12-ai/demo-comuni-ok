@@ -38,6 +38,7 @@ import { calolziocorte } from "./calolziocorte";
 import { caltanissetta } from "./caltanissetta";
 import { campobasso } from "./campobasso";
 import { caprarola } from "./caprarola";
+import { carbonia } from "./carbonia";
 import { carpi } from "./carpi";
 import { carrara } from "./carrara";
 import { casatenovo } from "./casatenovo";
@@ -65,9 +66,11 @@ import { crotone } from "./crotone";
 import { cuneo } from "./cuneo";
 import { desio } from "./desio";
 import { empoli } from "./empoli";
+import { enna } from "./enna";
 import { faenza } from "./faenza";
 import { fano } from "./fano";
 import { ferentino } from "./ferentino";
+import { fermo } from "./fermo";
 import { ferrara } from "./ferrara";
 import { fiorenzuolaDArda } from "./fiorenzuola-d-arda";
 import { firenze } from "./firenze";
@@ -75,6 +78,7 @@ import { fiumicino } from "./fiumicino";
 import { foggia } from "./foggia";
 import { forli } from "./forli";
 import { frascati } from "./frascati";
+import { frosinone } from "./frosinone";
 import { galbiate } from "./galbiate";
 import { gela } from "./gela";
 import { genova } from "./genova";
@@ -85,6 +89,7 @@ import { grosseto } from "./grosseto";
 import { guidoniaMontecelio } from "./guidonia-montecelio";
 import { imola } from "./imola";
 import { imperia } from "./imperia";
+import { isernia } from "./isernia";
 import { jesolo } from "./jesolo";
 import { laSpezia } from "./la-spezia";
 import { lameziaTerme } from "./lamezia-terme";
@@ -100,9 +105,11 @@ import { livorno } from "./livorno";
 import { lodi } from "./lodi";
 import { lucca } from "./lucca";
 import { luni } from "./luni";
+import { macerata } from "./macerata";
 import { magenta } from "./magenta";
 import { mantova } from "./mantova";
 import { marsala } from "./marsala";
+import { massa } from "./massa";
 import { matera } from "./matera";
 import { merate } from "./merate";
 import { messina } from "./messina";
@@ -114,8 +121,10 @@ import { monza } from "./monza";
 import { napoli } from "./napoli";
 import { nepi } from "./nepi";
 import { novara } from "./novara";
+import { nuoro } from "./nuoro";
 import { ocre } from "./ocre";
 import { olbia } from "./olbia";
+import { oristano } from "./oristano";
 import { ortona } from "./ortona";
 import { osimo } from "./osimo";
 import { padova } from "./padova";
@@ -123,6 +132,7 @@ import { palermo } from "./palermo";
 import { parabiago } from "./parabiago";
 import { pavia } from "./pavia";
 import { perugia } from "./perugia";
+import { pesaro } from "./pesaro";
 import { pescara } from "./pescara";
 import { piacenza } from "./piacenza";
 import { pinerolo } from "./pinerolo";
@@ -142,6 +152,7 @@ import { ravenna } from "./ravenna";
 import { reggioCalabria } from "./reggio-calabria";
 import { reggioEmilia } from "./reggio-emilia";
 import { riccoDelGolfo } from "./ricco-del-golfo";
+import { rieti } from "./rieti";
 import { rimini } from "./rimini";
 import { roma } from "./roma";
 import { rottofreno } from "./rottofreno";
@@ -168,6 +179,7 @@ import { teramo } from "./teramo";
 import { terni } from "./terni";
 import { torino } from "./torino";
 import { torreDelGreco } from "./torre-del-greco";
+import { trani } from "./trani";
 import { trapani } from "./trapani";
 import { trento } from "./trento";
 import { treviso } from "./treviso";
@@ -176,11 +188,13 @@ import { udine } from "./udine";
 import { valmadrera } from "./valmadrera";
 import { varese } from "./varese";
 import { venezia } from "./venezia";
+import { verbania } from "./verbania";
 import { vercelli } from "./vercelli";
 import { verona } from "./verona";
 import { vetralla } from "./vetralla";
 import { vezzanoLigure } from "./vezzano-ligure";
 import { viareggio } from "./viareggio";
+import { viboValentia } from "./vibo-valentia";
 import { vicenza } from "./vicenza";
 import { vimercate } from "./vimercate";
 import { viterbo } from "./viterbo";
@@ -219,6 +233,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   caltanissetta,
   campobasso,
   caprarola,
+  carbonia,
   carpi,
   carrara,
   casatenovo,
@@ -246,9 +261,11 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   cuneo,
   desio,
   empoli,
+  enna,
   faenza,
   fano,
   ferentino,
+  fermo,
   ferrara,
   fiorenzuolaDArda,
   firenze,
@@ -256,6 +273,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   foggia,
   forli,
   frascati,
+  frosinone,
   galbiate,
   gela,
   genova,
@@ -266,6 +284,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   guidoniaMontecelio,
   imola,
   imperia,
+  isernia,
   jesolo,
   laSpezia,
   lameziaTerme,
@@ -281,9 +300,11 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   lodi,
   lucca,
   luni,
+  macerata,
   magenta,
   mantova,
   marsala,
+  massa,
   matera,
   merate,
   messina,
@@ -295,8 +316,10 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   napoli,
   nepi,
   novara,
+  nuoro,
   ocre,
   olbia,
+  oristano,
   ortona,
   osimo,
   padova,
@@ -304,6 +327,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   parabiago,
   pavia,
   perugia,
+  pesaro,
   pescara,
   piacenza,
   pinerolo,
@@ -323,6 +347,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   reggioCalabria,
   reggioEmilia,
   riccoDelGolfo,
+  rieti,
   rimini,
   roma,
   rottofreno,
@@ -349,6 +374,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   terni,
   torino,
   torreDelGreco,
+  trani,
   trapani,
   trento,
   treviso,
@@ -357,11 +383,13 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   valmadrera,
   varese,
   venezia,
+  verbania,
   vercelli,
   verona,
   vetralla,
   vezzanoLigure,
   viareggio,
+  viboValentia,
   vicenza,
   vimercate,
   viterbo,
