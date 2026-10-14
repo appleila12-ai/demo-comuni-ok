@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Fermo (FM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagina del Settore V (Front office Servizi Sociali) del Comune letta il 14 ottobre 2026: telefoni ed email. Sede del Comune: via Mazzini 4; Ambito XIX: piazzale Azzolino 3 (non si sa quale ospiti il front office). Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const fermo: ComuneConfig = {
   slug: "fermo",
   tipo: "comune",
@@ -17,11 +17,11 @@ export const fermo: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
-  email: "",
+  telefono: "0734 284236",
+  email: "frontoffice.servizisociali@comune.fermo.it",
   pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.fermo.it",
+  orari: "Secondo numero del front office: 0734 284279. Orari non pubblicati sulla pagina",
+  sitoWeb: "https://www.comune.fermo.it/Amministrazione/Aree-amministrative/Settore-V-Politiche-per-il-benessere-della-persona-e-Ambito-Territoriale-XIX/%28related_offices%29/4",
 
   logo: null,
 
@@ -36,8 +36,8 @@ export const fermo: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.fermo.it" },
+      subtitle: "Primo ascolto sociale: recapiti e orari in questa scheda e sul sito del Comune",
+      action: { type: "tel", value: "0734284236" },
     },
     {
       icon: "medkit-outline",

@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Vibo Valentia (VV) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagina Servizi Sociali del Comune letta il 14 ottobre 2026 (il sito è comune.vibovalentia.vv.it, senza trattino). La pagina non riporta recapiti: da cercare. Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const viboValentia: ComuneConfig = {
   slug: "vibo-valentia",
   tipo: "comune",
@@ -21,7 +21,7 @@ export const viboValentia: ComuneConfig = {
   email: "",
   pec: "",
   orari: "",
-  sitoWeb: "https://www.comune.vibo-valentia.vv.it",
+  sitoWeb: "https://www.comune.vibovalentia.vv.it/servizi/salute-benessere-e-assistenza/servizi-sociali",
 
   logo: null,
 
@@ -37,7 +37,7 @@ export const viboValentia: ComuneConfig = {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
       subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.vibo-valentia.vv.it" },
+      action: { type: "web", value: "https://www.comune.vibovalentia.vv.it/servizi/salute-benessere-e-assistenza/servizi-sociali" },
     },
     {
       icon: "medkit-outline",

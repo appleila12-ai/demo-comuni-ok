@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Enna (EN) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagina Area 5 del Comune letta il 14 ottobre 2026: non riporta recapiti dei servizi sociali. Centralino del Comune: 0935 40111, piazza Coppola 1. Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const enna: ComuneConfig = {
   slug: "enna",
   tipo: "comune",
@@ -21,7 +21,7 @@ export const enna: ComuneConfig = {
   email: "",
   pec: "",
   orari: "",
-  sitoWeb: "https://www.comune.enna.it",
+  sitoWeb: "https://www.comune.enna.it/amministrazione/unita-organizzativa/5/AREA-5",
 
   logo: null,
 
@@ -37,7 +37,7 @@ export const enna: ComuneConfig = {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
       subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.enna.it" },
+      action: { type: "web", value: "https://www.comune.enna.it/amministrazione/unita-organizzativa/5/AREA-5" },
     },
     {
       icon: "medkit-outline",
