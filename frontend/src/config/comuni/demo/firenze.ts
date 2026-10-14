@@ -1,9 +1,10 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Firenze (FI) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
+// Comune di Firenze (FI) — VERSIONE DIMOSTRATIVA (completata il 14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Pagina "Salute, benessere e assistenza" del sito del Comune, controllata il 13 ottobre 2026. Il numero 055 055 è il contact center generale del Comune, non dei servizi sociali.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Fonte: pagina del Comune "Segretariato sociale" (aggiornata l'08/07/2025, controllata il 14/10/2026): numero verde, email e orari.
+// La pagina non indica un indirizzo dello sportello. Non verificati: Azienda USL Toscana Centro (solo il sito).
+// Da fare: sedi dei servizi sociali per Quartiere, bonus del Comune, associazioni, sport e tempo libero.
 export const firenze: ComuneConfig = {
   slug: "firenze",
   tipo: "comune",
@@ -17,11 +18,11 @@ export const firenze: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "055 055",
-  email: "",
+  telefono: "800 50 82 86",
+  email: "segretariato.sociale@comune.fi.it",
   pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.firenze.it/servizi/salute-benessere-e-assistenza",
+  orari: "Lunedì, martedì, mercoledì e venerdì 9:00–13:00, solo tramite numero verde",
+  sitoWeb: "https://www.comune.firenze.it/amministrazione/uffici/segretariato-sociale",
 
   logo: null,
 
@@ -35,9 +36,9 @@ export const firenze: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.firenze.it/servizi/salute-benessere-e-assistenza" },
+      title: "Segretariato sociale del Comune di Firenze",
+      subtitle: "Primo ascolto e orientamento ai servizi sociali e sociosanitari. Si accede solo con il numero verde 800 50 82 86 (lun, mar, mer, ven 9:00–13:00). Email: segretariato.sociale@comune.fi.it. Contact center del Comune: 055 055",
+      action: { type: "tel", value: "800508286" },
     },
     {
       icon: "medkit-outline",

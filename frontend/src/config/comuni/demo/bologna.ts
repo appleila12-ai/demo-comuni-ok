@@ -1,9 +1,11 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Bologna (BO) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
+// Comune di Bologna (BO) — VERSIONE DIMOSTRATIVA (aggiornata il 14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Home del sito del Comune, controllata il 13 ottobre 2026; gli sportelli sociali sono per quartiere e vanno confermati.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Il sito del Comune di Bologna non si apre in automatico e la tabella degli sportelli sociali nei dati aperti non si è caricata:
+// indirizzi, telefoni e orari degli sportelli NON sono verificati. È confermato solo (dalla descrizione del dataset del Comune) che gli Sportelli Sociali
+// sono la porta di accesso ai servizi sociali e si trovano nei sei Quartieri della città.
+// Da fare: elenco degli Sportelli Sociali per Quartiere (indirizzo, telefono, orari), bonus del Comune, associazioni, sport e tempo libero.
 export const bologna: ComuneConfig = {
   slug: "bologna",
   tipo: "comune",
@@ -35,9 +37,9 @@ export const bologna: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.bologna.it" },
+      title: "Sportelli Sociali del Comune di Bologna",
+      subtitle: "Sono la porta di accesso ai servizi sociali e si trovano nei sei Quartieri della città. Indirizzi e orari sono nell'elenco dei dati aperti del Comune",
+      action: { type: "web", value: "https://opendata.comune.bologna.it/explore/dataset/sportelli-sociali/table/" },
     },
     {
       icon: "medkit-outline",

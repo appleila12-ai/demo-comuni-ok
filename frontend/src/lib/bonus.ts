@@ -14,6 +14,7 @@
 // Quarta raccolta: 09/10/2026, Lazio e Comune di Fiumicino.
 // Quinta raccolta: 12/10/2026, Abruzzo, Comune dell'Aquila e Comune di Ocre (ambito sociale n. 5).
 // Sesta raccolta: 13/10/2026, Roma Capitale, Campania (da confermare), Piemonte e Comune di Torino.
+// Settima raccolta: 14/10/2026, Toscana.
 
 import { comune } from "@/src/config/comune";
 
@@ -361,6 +362,28 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "09/10/2026",
     nota: "Pagina della Regione aggiornata il 04/03/2026. Soglie ISEE e scadenze non sono scritte: confermale con il Distretto.",
+  },
+
+  // ------------------------------------------------------------------ TOSCANA
+  {
+    id: "toscana-vita-indipendente-fse",
+    regione: "Toscana",
+    titolo: "Progetti di vita indipendente e inclusione per adulti con disabilità grave (FSE+ 2021-2027)",
+    perChi:
+      "Persone adulte con disabilità e certificazione di gravità (Legge 104/1992), residenti nella Zona distretto del progetto, in grado di esprimere la propria volontà, anche con supporto, e di gestire le proprie scelte. I requisiti vanno posseduti alla data della domanda.",
+    cosa:
+      "Finanziamento di progetti individuali di vita indipendente. La pagina non scrive quanto spetta a ogni persona: indica 46 milioni di euro per il triennio 2024-2026 per i progetti ammessi e, per il 2026-2027, quasi 6,25 milioni assegnati dalla Giunta il 27/04/2026 per ridurre le liste d'attesa e avviare nuovi progetti dal 1° luglio 2026.",
+    stato: "da-verificare",
+    quando:
+      "Il bando per gli enti era aperto dall'1 al 16 agosto 2024. Nuovi progetti dal 1° luglio 2026 con i fondi assegnati ad aprile 2026.",
+    comeSiChiede:
+      "Le domande alla Regione sono presentate dalle Società della Salute o, dove non ci sono, dal soggetto indicato dalla Conferenza zonale dei sindaci: un progetto per Zona distretto. La pagina non spiega come accede il cittadino: chiedi al servizio sociale del tuo Comune o alla Società della Salute della tua zona.",
+    fonte: {
+      label: "Regione Toscana · Disabilità e grave limitazione dell'autonomia: finanziamenti per vita indipendente e inclusione",
+      url: "https://www.regione.toscana.it/it/-/disabilit%C3%A0-e-grave-limitazione-dell-autonomia-finanziamenti-per-sostenere-vita-indipendente-e-inclusione",
+    },
+    verificatoIl: "14/10/2026",
+    nota: "Pagina della Regione aggiornata il 22/06/2026. Importo per persona, requisiti ISEE e tempi vanno chiesti alla Società della Salute.",
   },
 
   // ----------------------------------------------------------------- PIEMONTE
