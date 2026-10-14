@@ -14,6 +14,7 @@
 // Quarta raccolta: 09/10/2026, Lazio e Comune di Fiumicino.
 // Quinta raccolta: 12/10/2026, Abruzzo, Comune dell'Aquila e Comune di Ocre (ambito sociale n. 5).
 // Sesta raccolta: 13/10/2026, Roma Capitale, Campania (da confermare), Piemonte e Comune di Torino.
+// Settima raccolta: 14/10/2026, schede regionali in app: Piemonte (Buono domiciliarità 2026-2027, misure disabilità) ed Emilia-Romagna.
 
 import { comune } from "@/src/config/comune";
 
@@ -385,6 +386,45 @@ export const BONUS: Bonus[] = [
     nota: "La delibera riguarda i fondi statali per i caregiver per il 2024. Non sappiamo se e quando l'ATS ha aperto o riaperto le domande: chiedilo al servizio sociale del tuo territorio.",
   },
 
+  {
+    id: "piemonte-buono-domiciliarita-2026",
+    regione: "Piemonte",
+    titolo: "Buono domiciliarità 2026-2027: 700 euro al mese per l'assistenza familiare",
+    perChi:
+      "Persone con disabilità non autosufficienti (o over 65 non autosufficienti) residenti in Piemonte, già valutate dall'UMVD o dall'UVG con punteggio sociale non inferiore a 7. ISEE ordinario o sociosanitario in corso di validità non superiore a 40.000 euro; non è ammesso l'ISEE corrente o con anomalie.",
+    cosa:
+      "Contributo di 700 euro al mese per 12 mesi, che può arrivare a 24 in base alle domande ammissibili, da spendere per un servizio di assistenza familiare: contratto di lavoro domestico (almeno livello CS), contratto con cooperativa o agenzia, o incarico a un assistente libero professionista. Servono almeno 30 giorni di servizio e 16 ore a settimana documentate. Erogazione trimestrale.",
+    stato: "aperto",
+    quando:
+      "Domande dalle 0:00 del 14 settembre 2026 alle 23:59 del 2 novembre 2026. Assegnato fino a esaurimento delle risorse: prima il punteggio sociale più alto, poi l'ISEE più basso, poi l'ordine di presentazione.",
+    comeSiChiede:
+      "Online su piemontetu.it o sceltasociale.it con SPID, CIE o CNS. La domanda la presenta un delegato (genitore, tutore, coniuge, parente di primo grado, amministratore di sostegno) che non può essere l'assistente. Allegati obbligatori: verbale di valutazione UVG/UMVD (o lettera con il punteggio) e contratto o incarico: senza, la domanda non è ammessa.",
+    fonte: {
+      label: "Regione Piemonte · Scelta sociale, Buono domiciliarità 2026-2027",
+      url: "https://www.regione.piemonte.it/web/temi/diritti-politiche-sociali/politiche-sociali/scelta-sociale-buono-per-domiciliarita-2026-2027",
+    },
+    verificatoIl: "14/10/2026",
+    nota: "Non è compatibile con alcune misure, tra cui gli assegni di cura e l'accoglienza definitiva in strutture residenziali: leggi l'avviso. La pagina non dice quanti Buoni ci sono. Scade fra pochi giorni.",
+  },
+  {
+    id: "piemonte-misure-disabilita",
+    regione: "Piemonte",
+    titolo: "Misure per le persone con disabilità: assistenza domiciliare, vita indipendente, lungo assistenza",
+    perChi:
+      "Persone con disabilità del Piemonte. Per la vita indipendente serve una disabilità grave (art. 3 comma 3 della Legge 104/92); i centri diurni sono per chi ha più di 14 anni; il Dopo di noi (L. 112/2016) è per chi ha una disabilità grave e non ha sostegno familiare.",
+    cosa:
+      "Finanziate dalla Regione tramite gli Enti gestori: assistenza domiciliare e sostegno socio-educativo, centro diurno o struttura residenziale, affidamento, progetti di vita indipendente. La \"Domiciliarità in lungo assistenza\" prevede un contributo economico per assistenti regolarmente assunti, familiari o volontari, oppure servizi come telesoccorso e pasti a domicilio. La pagina non scrive gli importi.",
+    stato: "attivo",
+    comeSiChiede:
+      "Rivolgiti all'Ente gestore del tuo territorio o allo Sportello unico del Distretto sanitario della tua ASL. L'Unità multidisciplinare di valutazione della disabilità (UMVD) valuta i bisogni e prepara con te un progetto personalizzato. Call center regionale: 800 333 444 da fisso, 011 08 24 222 da cellulare, lun-ven 8:00-18:00.",
+    fonte: {
+      label: "Regione Piemonte · Assistenza alle persone con disabilità",
+      url: "https://www.regione.piemonte.it/web/temi/diritti-politiche-sociali/disabilita/salute-interventi-socio-sanitari/assistenza-alle-persone-disabilita",
+    },
+    verificatoIl: "14/10/2026",
+    nota: "Pagina aggiornata l'8 ottobre 2026. Gli importi dipendono dal progetto: chiedili all'Ente gestore.",
+  },
+
   // ---------------------------------------------------------- COMUNE DI TORINO
   {
     id: "torino-assistenza-domiciliare",
@@ -404,6 +444,28 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "13/10/2026",
     nota: "I progetti si possono rinnovare ogni anno. Importi e soglie ISEE vanno chiesti al servizio sociale.",
+  },
+
+  // -------------------------------------------------------------- EMILIA-ROMAGNA
+  {
+    id: "emilia-romagna-assegno-di-cura",
+    regione: "Emilia-Romagna",
+    titolo: "Assegno di cura per adulti con disabilità grave o gravissima",
+    perChi:
+      "Adulti con disabilità grave o gravissime disabilità acquisite che vivono a casa. Può essere dato alla persona, all'amministratore di sostegno o al caregiver. È alternativo all'inserimento in una struttura residenziale. L'accesso dipende dalla valutazione dell'UVM. ISEE: soglia di 34.000 euro; nessuna soglia per chi è in totale non autosufficienza e dipendenza vitale con assistenza continua nelle 24 ore; 65.000 euro per i minori con gravissima disabilità acquisita.",
+    cosa:
+      "Quattro livelli giornalieri: 10,33, 15,49, 23 e 45 euro. I primi due dipendono da disabilità, carico assistenziale e altri servizi; 23 e 45 euro sono per le situazioni di gravissima disabilità. Con un contratto regolare con un assistente familiare di almeno 20 ore settimanali ci sono 160 euro in più al mese.",
+    stato: "attivo",
+    quando:
+      "Di norma l'assegno è semestrale e può arrivare a 12 mesi nelle situazioni stabili. Per rinnovarlo serve una nuova valutazione UVM.",
+    comeSiChiede:
+      "Rivolgiti ai servizi sociali o sanitari per adulti con disabilità del tuo Comune o dell'Azienda Usl. L'assistente sociale o il referente sanitario fa una prima valutazione; poi l'UVM valuta il bisogno e prepara con te e il caregiver il piano assistenziale personalizzato (PAI).",
+    fonte: {
+      label: "Regione Emilia-Romagna · Assegno di cura (persone con disabilità)",
+      url: "https://sociale.regione.emilia-romagna.it/persone-con-disabilita/assistenza/assegno-di-cura",
+    },
+    verificatoIl: "14/10/2026",
+    nota: "Pagina aggiornata il 17/04/2025. Esistono anche contributi per i caregiver: chiedi al servizio sociale del tuo Comune.",
   },
 
   // ----------------------------------------------------------------- CAMPANIA
