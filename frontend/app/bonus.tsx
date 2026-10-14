@@ -11,6 +11,7 @@ import { useSezione } from "@/src/lib/statistiche";
 import { bonusDelComune, STATO_BONUS, type Bonus, type StatoBonus } from "@/src/lib/bonus";
 import { Avviso, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
+import { DOVE_CERCARE, PAROLE_GENERALI, PORTALE_NAZIONALE } from "@/src/lib/doveCercare";
 
 const apri = (url: string) => Linking.openURL(url).catch(() => {});
 
@@ -84,6 +85,50 @@ function Scheda({ b }: { b: Bonus }) {
   );
 }
 
+function DoveCercareRiquadro({ regione, nessuna }: { regione: string; nessuna: boolean }) {
+  const d = DOVE_CERCARE[regione];
+  return (
+    <View style={paginaStili.card} testID="bonus-dove-cercare">
+      <Text style={styles.titolo} accessibilityRole="header">
+        {nessuna ? "Dove cercare" : "Altri bonus: dove cercare"}
+      </Text>
+      <Text style={styles.testo}>
+        Questo è un punto di partenza, non l'elenco dei bandi aperti: non sappiamo quali siano aperti, in
+        scadenza o chiusi. Alcuni contributi si chiedono al Comune, all'ambito sociale o all'ASL, altri dopo
+        una valutazione sociale o sanitaria.
+      </Text>
+      {d ? (
+        <>
+          {d.link.map((l) => (
+            <Pressable
+              key={l.url}
+              onPress={() => apri(l.url)}
+              style={({ pressed }) => [styles.fonte, pressed && { opacity: 0.85 }]}
+              accessibilityRole="link"
+              accessibilityLabel={`Apri il sito ufficiale: ${l.label}`}
+            >
+              <Ionicons name="open-outline" size={16} color={colors.brandPrimaryDark} />
+              <Text style={styles.fonteText}>{l.label}</Text>
+            </Pressable>
+          ))}
+          <Riga titolo={`Parole da cercare (${regione})`} testo={d.cerca} />
+        </>
+      ) : null}
+      <Riga titolo="Parole da cercare in ogni Regione" testo={PAROLE_GENERALI} />
+      <Pressable
+        onPress={() => apri(PORTALE_NAZIONALE.url)}
+        style={({ pressed }) => [styles.fonte, pressed && { opacity: 0.85 }]}
+        accessibilityRole="link"
+        accessibilityLabel={`Apri il sito ufficiale: ${PORTALE_NAZIONALE.label}`}
+      >
+        <Ionicons name="open-outline" size={16} color={colors.brandPrimaryDark} />
+        <Text style={styles.fonteText}>Avvisi nazionali del Dipartimento per la disabilità</Text>
+      </Pressable>
+      <Text style={styles.controllo}>Pagine ufficiali raccolte il 13/10/2026: possono essere spostate dagli enti.</Text>
+    </View>
+  );
+}
+
 export default function Bonus() {
   useSezione("bonus");
   const { locali, regionali, regione } = bonusDelComune();
@@ -138,6 +183,8 @@ export default function Bonus() {
           ))}
         </>
       ) : null}
+
+      <DoveCercareRiquadro regione={regione} nessuna={nessuna} />
 
       {!nessuna ? (
         <Avviso>
