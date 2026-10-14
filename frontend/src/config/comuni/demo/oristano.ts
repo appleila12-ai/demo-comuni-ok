@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Oristano (OR) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagina dell'Ufficio sociale professionale del Comune letta il 14 ottobre 2026: indirizzo, telefoni (0783 791208 e 331 6327046), email. Gli orari sono riferiti ad agosto 2026. Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const oristano: ComuneConfig = {
   slug: "oristano",
   tipo: "comune",
@@ -16,12 +16,12 @@ export const oristano: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
+  indirizzo: "Palazzo degli Scolopi, piazza Eleonora 44, 09170 Oristano",
+  telefono: "0783 791208",
+  email: "milena.deligia@comune.oristano.it",
   pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.oristano.it",
+  orari: "Orari da confermare con l'ufficio (la pagina del Comune li riporta per agosto 2026)",
+  sitoWeb: "https://comune.oristano.it/it/amministrazione/unita-organizzativa/Ufficio-sociale-professionale/",
 
   logo: null,
 
@@ -36,8 +36,8 @@ export const oristano: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.oristano.it" },
+      subtitle: "Primo ascolto sociale: recapiti e orari in questa scheda e sul sito del Comune",
+      action: { type: "tel", value: "0783791208" },
     },
     {
       icon: "medkit-outline",

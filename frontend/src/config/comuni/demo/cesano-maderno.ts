@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Cesano Maderno (MB) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Il sito del Comune non è leggibile in automatico (robots): indirizzo e pagina dei servizi sociali vanno verificati. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagina Servizi Sociali del Comune letta il 14 ottobre 2026: indirizzo, telefono, email, PEC e orari. Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const cesanoMaderno: ComuneConfig = {
   slug: "cesano-maderno",
   tipo: "comune",
@@ -16,12 +16,12 @@ export const cesanoMaderno: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.cesanomaderno.mb.it",
+  indirizzo: "Municipio, via Cozzi snc, 20811 Cesano Maderno (MB)",
+  telefono: "0362 513490",
+  email: "servizisociali@comune.cesano-maderno.mb.it",
+  pec: "servizio.sociale@pec.comune.cesano-maderno.mb.it",
+  orari: "Ufficio amministrativo: lun, mer e ven 8:30-12:45; mar e gio 14:45-17:45. Servizio sociale professionale solo su appuntamento: lun, mer e ven 8:30-13:00; mar e gio 16:30-18:15",
+  sitoWeb: "https://www.comune.cesano-maderno.mb.it/amministrazione/unita-organizzative/servizi-sociali/",
 
   logo: null,
 
@@ -36,8 +36,8 @@ export const cesanoMaderno: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.cesanomaderno.mb.it" },
+      subtitle: "Primo ascolto sociale: recapiti e orari in questa scheda e sul sito del Comune",
+      action: { type: "tel", value: "0362513490" },
     },
     {
       icon: "medkit-outline",

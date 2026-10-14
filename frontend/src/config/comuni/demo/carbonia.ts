@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Carbonia (SU) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagina Servizi Sociali del Comune letta il 14 ottobre 2026: sede, telefono e orari del Segretariato sociale. Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const carbonia: ComuneConfig = {
   slug: "carbonia",
   tipo: "comune",
@@ -16,12 +16,12 @@ export const carbonia: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
+  indirizzo: "Via XVIII Dicembre (ex Tribunale), Carbonia",
+  telefono: "335 7433557",
   email: "",
   pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.carbonia.su.it",
+  orari: "Segretariato sociale: dal lunedì al venerdì dalle 9:00 alle 12:00. Per fissare un appuntamento con le assistenti sociali: portineria 0781 694420",
+  sitoWeb: "https://www.comune.carbonia.su.it/amministrazione/unita_organizzativa/servizi-sociali/",
 
   logo: null,
 
@@ -36,8 +36,8 @@ export const carbonia: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.carbonia.su.it" },
+      subtitle: "Primo ascolto sociale: recapiti e orari in questa scheda e sul sito del Comune",
+      action: { type: "tel", value: "3357433557" },
     },
     {
       icon: "medkit-outline",
