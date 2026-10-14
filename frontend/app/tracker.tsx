@@ -105,6 +105,14 @@ const STAGES: Stage[] = [
   },
 ];
 
+// Colori diversi per le tappe non ancora raggiunte, così si riconoscono una dall'altra.
+const FUTURE_TONES = [
+  { main: "#7FAAA0", soft: "#E4EFEB", text: "#2F5F55" },
+  { main: "#C297AC", soft: "#F4E6EC", text: "#7A3F5C" },
+  { main: "#D2AE6C", soft: "#F6EBD3", text: "#7A5A12" },
+  { main: "#8AA982", soft: "#EAF0E3", text: "#3F6338" },
+];
+
 type Entry = { date: string; note: string; done: boolean };
 
 // Stato iniziale: nessuna tappa completata, la pratica parte da zero.
@@ -499,6 +507,7 @@ export default function Tracker() {
 
             const lineColor =
               idx < currentIndex ? colors.success : "#EAD9C3";
+            const tone = FUTURE_TONES[idx % FUTURE_TONES.length];
 
             return (
               <View key={stage.id} style={styles.row} testID={`tracker-stage-${stage.id}`}>
@@ -511,8 +520,14 @@ export default function Tracker() {
                   )}
                   {status === "current" && <PulseNode icon={stage.icon} />}
                   {status === "future" && (
-                    <View style={[styles.node, styles.nodeFuture]}>
-                      <Ionicons name={stage.icon} size={20} color={colors.borderStrong} />
+                    <View
+                      style={[
+                        styles.node,
+                        styles.nodeFuture,
+                        { backgroundColor: tone.soft, borderColor: tone.main },
+                      ]}
+                    >
+                      <Ionicons name={stage.icon} size={20} color={tone.text} />
                     </View>
                   )}
                   {!isLast && (
@@ -532,6 +547,7 @@ export default function Tracker() {
                       style={[
                         styles.stageTitle,
                         status === "future" && styles.stageTitleFuture,
+                        status === "future" && { color: tone.text },
                         status === "current" && { color: warm.warmDark },
                       ]}
                       testID={`tracker-stage-title-${stage.id}`}
@@ -554,6 +570,7 @@ export default function Tracker() {
                     style={[
                       styles.stageDesc,
                       status === "future" && styles.stageDescFuture,
+                      status === "future" && { color: colors.onSurfaceSecondary },
                     ]}
                   >
                     {stage.desc}
@@ -621,7 +638,11 @@ export default function Tracker() {
 
                   {/* Toggle editor */}
                   <Pressable
-                    onPress={() => setOpenId(isOpen ? null : stage.id)}
+                    onPress={() => {
+                      // Aprendo l'editor, se manca la data propone quella di oggi (modificabile).
+                      if (!isOpen && !entry.date) setField(stage.id, "date", formatItDate(new Date()));
+                      setOpenId(isOpen ? null : stage.id);
+                    }}
                     style={styles.editToggle}
                     hitSlop={8}
                     testID={`tracker-edit-toggle-${stage.id}`}
