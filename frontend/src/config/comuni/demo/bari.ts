@@ -1,9 +1,11 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Bari (BA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
+// Comune di Bari (BA) — VERSIONE DIMOSTRATIVA (aggiornata il 14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Pagina "Servizi sociali e welfare" del sito del Comune, controllata il 13 ottobre 2026 (il Comune ha anche il portale Smart Welfare).
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Il sito del Comune di Bari non si apre in automatico: recapiti e orari dei Servizi Sociali del Comune NON sono verificati.
+// Fonte dei dati inseriti: pagina informativa della Porta Unica di Accesso (PUA) dell'ASL Bari su sanita.puglia.it, senza data di aggiornamento,
+// che indica due sedi per l'area di Bari ma non dice a quale Municipio o Distretto corrispondono: DA CONFERMARE.
+// Da fare: recapiti dei Servizi Sociali e del Segretariato Sociale per Municipio dal sito del Comune, bonus del Comune, associazioni, sport e tempo libero.
 export const bari: ComuneConfig = {
   slug: "bari",
   tipo: "comune",
@@ -38,6 +40,12 @@ export const bari: ComuneConfig = {
       title: "Servizi Sociali del Comune",
       subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
       action: { type: "web", value: "https://www.comune.bari.it/argomenti/servizi-sociali-e-welfare" },
+    },
+    {
+      icon: "business-outline",
+      title: "Porta Unica di Accesso (PUA), ASL Bari",
+      subtitle: "Ingresso unico per chiedere servizi sanitari e sociosanitari del distretto (assistenza domiciliare, centri diurni e residenziali, trasporto verso centri riabilitativi) a chi ne ha diritto. Sedi indicate per l'area di Bari: via Caduti di Via Fani 25 (lun, mer, gio 9:00–12:00; mar 15:00–17:00) e via Giulio Petroni 47 (mar, mer, ven 9:00–12:00; gio 15:00–17:00). Telefono dal lunedì al venerdì: 080 5842798 (12:00–13:00). Email: pua.bari@asl.bari.it. Orari da confermare",
+      action: { type: "tel", value: "0805842798" },
     },
     {
       icon: "medkit-outline",
