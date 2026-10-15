@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Paderno Dugnano (MI) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagine del Comune lette il 15 ottobre 2026: recapiti generali del Comune (email URP, centralino); due uffici Servizi Sociali senza recapiti propri. Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const padernoDugnano: ComuneConfig = {
   slug: "paderno-dugnano",
   tipo: "comune",
@@ -16,12 +16,12 @@ export const padernoDugnano: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.paderno-dugnano.mi.it",
+  indirizzo: "Via Grandi 15, 20037 Paderno Dugnano (MI)",
+  telefono: "02 910041",
+  email: "urp@comune.paderno-dugnano.mi.it",
+  pec: "comune.paderno-dugnano@pec.regione.lombardia.it",
+  orari: "Chiedi dei Servizi Sociali al centralino del Comune: orari dell'ufficio non pubblicati sulla pagina. Numero verde del Comune: 800 140558",
+  sitoWeb: "https://www.comune.paderno-dugnano.mi.it/servizi/salute-benessere-e-assistenza/",
 
   logo: null,
 
@@ -36,8 +36,8 @@ export const padernoDugnano: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.paderno-dugnano.mi.it" },
+      subtitle: "Primo ascolto sociale: recapiti e orari in questa scheda e sul sito del Comune",
+      action: { type: "tel", value: "02910041" },
     },
     {
       icon: "medkit-outline",
