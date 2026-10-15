@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Saronno (VA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagina Salute, benessere e assistenza del Comune letta il 15 ottobre 2026: recapiti generali del Comune. Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const saronno: ComuneConfig = {
   slug: "saronno",
   tipo: "comune",
@@ -16,12 +16,12 @@ export const saronno: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.saronno.va.it",
+  indirizzo: "Piazza della Repubblica 7, 21047 Saronno (VA)",
+  telefono: "02 967101",
+  email: "protocollo@comune.saronno.va.it",
+  pec: "comunesaronno@secmail.it",
+  orari: "Chiedi dei Servizi Sociali al centralino del Comune: orari dell'ufficio non pubblicati sulla pagina",
+  sitoWeb: "https://comune.saronno.va.it/servizi/categoria-servizi/2557731",
 
   logo: null,
 
@@ -36,8 +36,8 @@ export const saronno: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.saronno.va.it" },
+      subtitle: "Primo ascolto sociale: recapiti e orari in questa scheda e sul sito del Comune",
+      action: { type: "tel", value: "02967101" },
     },
     {
       icon: "medkit-outline",

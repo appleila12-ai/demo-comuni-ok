@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Cernusco sul Naviglio (MI) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagine del Comune lette il 15 ottobre 2026: centralino e indirizzo generali; Settore Servizi Sociali con Ufficio Area adulti e Ufficio Area anziani, senza recapiti propri. Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const cernuscoSulNaviglio: ComuneConfig = {
   slug: "cernusco-sul-naviglio",
   tipo: "comune",
@@ -16,12 +16,12 @@ export const cernuscoSulNaviglio: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
+  indirizzo: "Via Tizzoni 2, 20063 Cernusco sul Naviglio (MI)",
+  telefono: "02 92781",
   email: "",
   pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.cernuscosulnaviglio.mi.it",
+  orari: "Chiedi dei Servizi Sociali al centralino del Comune: orari dell'ufficio non pubblicati sulla pagina",
+  sitoWeb: "https://comune.cernuscosulnaviglio.mi.it/argomento/assistenza-sociale/",
 
   logo: null,
 
@@ -36,8 +36,8 @@ export const cernuscoSulNaviglio: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.cernuscosulnaviglio.mi.it" },
+      subtitle: "Primo ascolto sociale: recapiti e orari in questa scheda e sul sito del Comune",
+      action: { type: "tel", value: "0292781" },
     },
     {
       icon: "medkit-outline",

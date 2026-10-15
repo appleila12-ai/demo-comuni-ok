@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Velletri (RM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagina Salute, benessere e assistenza del Comune letta il 15 ottobre 2026: recapiti generali del Comune. Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const velletri: ComuneConfig = {
   slug: "velletri",
   tipo: "comune",
@@ -16,12 +16,12 @@ export const velletri: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
+  indirizzo: "Piazza Cesare Ottaviano Augusto 1, 00049 Velletri (RM)",
+  telefono: "06 961581",
   email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.velletri.rm.it",
+  pec: "protocollo@pec.comune.velletri.rm.it",
+  orari: "Chiedi dei Servizi Sociali al centralino del Comune: orari dell'ufficio non pubblicati sulla pagina",
+  sitoWeb: "https://www.comune.velletri.rm.it/area_letturaServizio/pagsistema.html?type=28",
 
   logo: null,
 
@@ -36,8 +36,8 @@ export const velletri: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.velletri.rm.it" },
+      subtitle: "Primo ascolto sociale: recapiti e orari in questa scheda e sul sito del Comune",
+      action: { type: "tel", value: "06961581" },
     },
     {
       icon: "medkit-outline",

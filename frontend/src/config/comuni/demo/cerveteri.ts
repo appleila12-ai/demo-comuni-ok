@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Cerveteri (RM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagina Servizi Sociali del Comune letta il 15 ottobre 2026: sede, telefoni, email e orari (la PEC è quella generale del Comune). Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const cerveteri: ComuneConfig = {
   slug: "cerveteri",
   tipo: "comune",
@@ -16,12 +16,12 @@ export const cerveteri: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.cerveteri.rm.it",
+  indirizzo: "Via Antonio Ricci 4 (Parco della Legnara), 00052 Cerveteri",
+  telefono: "06 89630220",
+  email: "servizi-sociali@comune.cerveteri.rm.it",
+  pec: "comunecerveteri@pec.it",
+  orari: "Martedì 9:00-12:00 e 15:00-17:00. Telefoni per area: Minori 334 6159951, Adulti e anziani 334 6161259, Disabilità 366 6118626",
+  sitoWeb: "https://www.comune.cerveteri.rm.it/unita-organizzativa/servizi-sociali",
 
   logo: null,
 
@@ -36,8 +36,8 @@ export const cerveteri: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.cerveteri.rm.it" },
+      subtitle: "Primo ascolto sociale: recapiti e orari in questa scheda e sul sito del Comune",
+      action: { type: "tel", value: "0689630220" },
     },
     {
       icon: "medkit-outline",

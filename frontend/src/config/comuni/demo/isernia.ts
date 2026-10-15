@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Isernia (IS) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagina Assistenza sociale del Comune letta il 15 ottobre 2026: centralino, indirizzo e PEC generali; esiste un Ufficio politiche sociali senza recapiti sulla pagina e l'Ambito sociale territoriale (atsisernia.com). Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const isernia: ComuneConfig = {
   slug: "isernia",
   tipo: "comune",
@@ -16,12 +16,12 @@ export const isernia: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
+  indirizzo: "Piazza Marconi 3, 86170 Isernia",
+  telefono: "0865 4491",
   email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.isernia.it",
+  pec: "comuneisernia@pec.it",
+  orari: "Chiedi dei Servizi Sociali al centralino del Comune: orari dell'ufficio non pubblicati sulla pagina",
+  sitoWeb: "https://comune.isernia.it/argomento/assistenza-sociale/",
 
   logo: null,
 
@@ -36,8 +36,8 @@ export const isernia: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.isernia.it" },
+      subtitle: "Primo ascolto sociale: recapiti e orari in questa scheda e sul sito del Comune",
+      action: { type: "tel", value: "08654491" },
     },
     {
       icon: "medkit-outline",

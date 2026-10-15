@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Tivoli (RM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagina del Settore 4 - Welfare del Comune letta il 15 ottobre 2026: indirizzo, centralino e PEC generali, un telefono del referente Piano di Zona. Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const tivoli: ComuneConfig = {
   slug: "tivoli",
   tipo: "comune",
@@ -16,12 +16,12 @@ export const tivoli: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
+  indirizzo: "Settore 4 - Welfare, Piazza del Governo 1, 00019 Tivoli (RM)",
+  telefono: "0774 4531",
   email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.tivoli.rm.it",
+  pec: "info@pec.comune.tivoli.rm.it",
+  orari: "Chiedi dei Servizi Sociali al centralino del Comune: orari dell'ufficio non pubblicati sulla pagina. Referente Piano di Zona: 0774 453293",
+  sitoWeb: "https://www.comune.tivoli.rm.it/unita_organizzativa/settore-4-welfare/",
 
   logo: null,
 
@@ -36,8 +36,8 @@ export const tivoli: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.tivoli.rm.it" },
+      subtitle: "Primo ascolto sociale: recapiti e orari in questa scheda e sul sito del Comune",
+      action: { type: "tel", value: "07744531" },
     },
     {
       icon: "medkit-outline",

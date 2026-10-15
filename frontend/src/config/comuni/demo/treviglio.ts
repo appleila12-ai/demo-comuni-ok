@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Treviglio (BG) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagina Assistenza sociale del Comune letta il 15 ottobre 2026: centralino, indirizzo e PEC generali; la pagina cita la Misura B2 FNA 2026/2027. Il link dell'azienda sanitaria è da verificare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const treviglio: ComuneConfig = {
   slug: "treviglio",
   tipo: "comune",
@@ -16,12 +16,12 @@ export const treviglio: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
+  indirizzo: "Piazza Manara 1, 24047 Treviglio (BG)",
+  telefono: "0363 3171",
   email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.treviglio.bg.it",
+  pec: "comune.treviglio@legalmail.it",
+  orari: "Chiedi dei Servizi Sociali al centralino del Comune: orari dell'ufficio non pubblicati sulla pagina",
+  sitoWeb: "https://www.comune.treviglio.bg.it/it/topics/7",
 
   logo: null,
 
@@ -36,8 +36,8 @@ export const treviglio: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.treviglio.bg.it" },
+      subtitle: "Primo ascolto sociale: recapiti e orari in questa scheda e sul sito del Comune",
+      action: { type: "tel", value: "03633171" },
     },
     {
       icon: "medkit-outline",
