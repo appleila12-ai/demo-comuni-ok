@@ -1,10 +1,11 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Bari (BA) — VERSIONE DIMOSTRATIVA (aggiornata il 14 ottobre 2026).
+// Comune di Bari (BA) — VERSIONE DIMOSTRATIVA (aggiornata il 15 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Il sito del Comune di Bari non si apre in automatico: recapiti e orari dei Servizi Sociali del Comune NON sono verificati.
-// Fonte dei dati inseriti: pagina informativa della Porta Unica di Accesso (PUA) dell'ASL Bari su sanita.puglia.it, senza data di aggiornamento,
-// che indica due sedi per l'area di Bari ma non dice a quale Municipio o Distretto corrispondono: DA CONFERMARE.
+// Il sito del Comune di Bari non si apre in automatico: recapiti e orari dei Servizi Sociali e del Segretariato Sociale del Comune NON sono verificati.
+// Fonte 1: pagina "Porta Unica di Accesso (P.U.A.)" di ASL Bari su sanita.puglia.it, incollata da Ilaria il 15/10/2026: indirizzi, telefoni, email e orari confermati.
+// Sulla pagina i moduli e le informative sono datati tra marzo e settembre 2025 (dai nomi dei file). La pagina non collega le due sedi a un Municipio o Distretto.
+// Fonte 2: piè di pagina del sito del Comune di Bari (file allegato da Ilaria il 15/10/2026): Palazzo di Città, centralino e URP. Sono contatti generali, non lo sportello sociale.
 // Da fare: recapiti dei Servizi Sociali e del Segretariato Sociale per Municipio dal sito del Comune, bonus del Comune, associazioni, sport e tempo libero.
 export const bari: ComuneConfig = {
   slug: "bari",
@@ -42,9 +43,15 @@ export const bari: ComuneConfig = {
       action: { type: "web", value: "https://www.comune.bari.it/argomenti/servizi-sociali-e-welfare" },
     },
     {
+      icon: "call-outline",
+      title: "Comune di Bari · URP (Ufficio Relazioni con il Pubblico)",
+      subtitle: "Informazioni generali sul Comune, non è lo sportello sociale. Palazzo di Città, Corso Vittorio Emanuele II 84 · URP 080 5772390 (800 018291 solo da telefono fisso) · Centralino 080 577 1111",
+      action: { type: "tel", value: "0805772390" },
+    },
+    {
       icon: "business-outline",
       title: "Porta Unica di Accesso (PUA), ASL Bari",
-      subtitle: "Ingresso unico per chiedere servizi sanitari e sociosanitari del distretto (assistenza domiciliare, centri diurni e residenziali, trasporto verso centri riabilitativi) a chi ne ha diritto. Sedi indicate per l'area di Bari: via Caduti di Via Fani 25 (lun, mer, gio 9:00–12:00; mar 15:00–17:00) e via Giulio Petroni 47 (mar, mer, ven 9:00–12:00; gio 15:00–17:00). Telefono dal lunedì al venerdì: 080 5842798 (12:00–13:00). Email: pua.bari@asl.bari.it. Orari da confermare",
+      subtitle: "Ingresso unico per chiedere servizi sanitari e sociosanitari del distretto (assistenza domiciliare, centri diurni e residenziali, trasporto verso centri riabilitativi) a chi ne ha diritto. Telefono dal lunedì al venerdì: 080 5842798 (12:00–13:00). Sedi per le domande cartacee: via Caduti di Via Fani 25 (lun, mer, gio 9:00–12:00; mar 15:00–17:00) e via Giulio Petroni 47 (mar, mer, ven 9:00–12:00; gio 15:00–17:00). Email: pua.bari@asl.bari.it. Dati dalla pagina ufficiale dell'ASL Bari",
       action: { type: "tel", value: "0805842798" },
     },
     {
