@@ -16,6 +16,7 @@
 // Sesta raccolta: 13/10/2026, Roma Capitale, Campania (da confermare), Piemonte e Comune di Torino.
 // Settima raccolta: 14/10/2026, schede regionali in app: Piemonte (Buono domiciliarità 2026-2027, misure disabilità) ed Emilia-Romagna.
 // Ottava raccolta: 15/10/2026, Toscana.
+// Nona raccolta: 15/10/2026, Puglia (Patto di cura).
 
 import { comune } from "@/src/config/comune";
 
@@ -385,6 +386,28 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "14/10/2026",
     nota: "Pagina della Regione aggiornata il 22/06/2026. Importo per persona, requisiti ISEE e tempi vanno chiesti alla Società della Salute.",
+  },
+
+  // ------------------------------------------------------------------- PUGLIA
+  {
+    id: "puglia-patto-di-cura-2025-2026",
+    regione: "Puglia",
+    titolo: "Patto di cura 2025-2026 per la disabilità gravissima",
+    perChi:
+      "Persone con disabilità gravissima non autosufficienti, residenti in Puglia, con almeno una delle condizioni cliniche gravi previste dal Decreto FNA 2016. ISEE valido non superiore a 60.000 euro per gli adulti e a 80.000 euro per i minorenni.",
+    cosa:
+      "Un contributo mensile per 16 mesi, da settembre 2025 a dicembre 2026: 1.200 euro al mese se si assume direttamente l'assistente familiare, 1.250 euro al mese se si assume tramite agenzie di lavoro autorizzate e iscritte all'albo nazionale. Vale solo con un'assunzione regolare di personale di assistenza. Non è cumulabile con Sostegno Familiare né con il precedente Patto di Cura 2023-24.",
+    stato: "chiuso",
+    quando:
+      "Domande dalle ore 12:00 del 4 agosto 2025 alle ore 12:00 del 19 settembre 2025. Il contributo copre i mesi fino a dicembre 2026.",
+    comeSiChiede:
+      "La domanda si presentava solo online sulla piattaforma regionale Puglia Sociale (accesso con SPID): https://pugliasociale-spid.regione.puglia.it. Documenti e criteri di selezione sono nell'Avviso completo, non nel comunicato.",
+    fonte: {
+      label: "Regione Puglia · Al via il Patto di cura 2025-2026 (comunicato del 28/07/2025)",
+      url: "https://press.regione.puglia.it/-/al-via-il-patto-di-cura-2025-2026.-stanziati-20-milioni-di-euro-per-le-persone-con-disabilit%C3%80-gravissima",
+    },
+    verificatoIl: "15/10/2026",
+    nota: "La finestra per le domande è finita. Se hai già presentato domanda, chiedi al tuo Ambito sociale a che punto è. Per nuovi avvisi controlla la piattaforma Puglia Sociale.",
   },
 
   // ----------------------------------------------------------------- PIEMONTE
