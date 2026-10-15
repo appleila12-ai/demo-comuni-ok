@@ -3,7 +3,7 @@ import type { ComuneConfig } from "../types";
 // Comune di Bologna (BO) — VERSIONE DIMOSTRATIVA (completata il 15 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Fonte: tabella "Sportelli Sociali" dei dati aperti del Comune di Bologna (opendata.comune.bologna.it), incollata da Ilaria il 15/10/2026
-// perché il sito non si apre in automatico. La tabella non mostra la data di aggiornamento. Le colonne "Telefono centralino" e "Fax" sono lette come nella tabella.
+// perché il sito non si apre in automatico. Ultima modifica dei dati indicata dal Comune: 25/01/2024 (metadati elaborati il 18/04/2025): DATI DI QUASI DUE ANNI FA, da confermare con il Comune. Le colonne "Telefono centralino" e "Fax" sono lette come nella tabella.
 // Non verificati: AUSL Bologna (solo il sito).
 // Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const bologna: ComuneConfig = {
@@ -38,7 +38,7 @@ export const bologna: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Punto unico sportelli sociali",
-      subtitle: "Informazioni per i cittadini non ancora seguiti dai servizi sociali. Piazza Liber Paradisus 6 (Navile) · Tel. 051 2197878 · sportellosocialebologna@comune.bologna.it · lun e ven 9:00–13:00 e 13:30–16:00, mar e gio 9:00–13:00 e 13:30–17:30, mer 9:00–13:00",
+      subtitle: "Dati aperti del Comune aggiornati al 25/01/2024: conferma orari e telefoni prima di andare. Informazioni per i cittadini non ancora seguiti dai servizi sociali. Piazza Liber Paradisus 6 (Navile) · Tel. 051 2197878 · sportellosocialebologna@comune.bologna.it · lun e ven 9:00–13:00 e 13:30–16:00, mar e gio 9:00–13:00 e 13:30–17:30, mer 9:00–13:00",
       action: { type: "tel", value: "0512197878" },
     },
     {
