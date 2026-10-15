@@ -16,6 +16,7 @@
 // Sesta raccolta: 13/10/2026, Roma Capitale, Campania (da confermare), Piemonte e Comune di Torino.
 // Settima raccolta: 14/10/2026, schede regionali in app: Piemonte (Buono domiciliarità 2026-2027, misure disabilità) ed Emilia-Romagna.
 // Ottava raccolta: 15/10/2026, Toscana.
+// Nona raccolta: 15/10/2026, Puglia (Patto di cura), Veneto (ICD).
 
 import { comune } from "@/src/config/comune";
 
@@ -385,6 +386,50 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "14/10/2026",
     nota: "Pagina della Regione aggiornata il 22/06/2026. Importo per persona, requisiti ISEE e tempi vanno chiesti alla Società della Salute.",
+  },
+
+  // ------------------------------------------------------------------- PUGLIA
+  {
+    id: "puglia-patto-di-cura-2025-2026",
+    regione: "Puglia",
+    titolo: "Patto di cura 2025-2026 per la disabilità gravissima",
+    perChi:
+      "Persone con disabilità gravissima non autosufficienti, residenti in Puglia, con almeno una delle condizioni cliniche gravi previste dal Decreto FNA 2016. ISEE valido non superiore a 60.000 euro per gli adulti e a 80.000 euro per i minorenni.",
+    cosa:
+      "Un contributo mensile per 16 mesi, da settembre 2025 a dicembre 2026: 1.200 euro al mese se si assume direttamente l'assistente familiare, 1.250 euro al mese se si assume tramite agenzie di lavoro autorizzate e iscritte all'albo nazionale. Vale solo con un'assunzione regolare di personale di assistenza. Non è cumulabile con Sostegno Familiare né con il precedente Patto di Cura 2023-24.",
+    stato: "chiuso",
+    quando:
+      "Domande dalle ore 12:00 del 4 agosto 2025 alle ore 12:00 del 19 settembre 2025. Il contributo copre i mesi fino a dicembre 2026.",
+    comeSiChiede:
+      "La domanda si presentava solo online sulla piattaforma regionale Puglia Sociale (accesso con SPID): https://pugliasociale-spid.regione.puglia.it. Documenti e criteri di selezione sono nell'Avviso completo, non nel comunicato.",
+    fonte: {
+      label: "Regione Puglia · Al via il Patto di cura 2025-2026 (comunicato del 28/07/2025)",
+      url: "https://press.regione.puglia.it/-/al-via-il-patto-di-cura-2025-2026.-stanziati-20-milioni-di-euro-per-le-persone-con-disabilit%C3%80-gravissima",
+    },
+    verificatoIl: "15/10/2026",
+    nota: "La finestra per le domande è finita. Se hai già presentato domanda, chiedi al tuo Ambito sociale a che punto è. Per nuovi avvisi controlla la piattaforma Puglia Sociale.",
+  },
+
+  // ------------------------------------------------------------------ VENETO
+  {
+    id: "veneto-impegnative-cura-domiciliare",
+    regione: "Veneto",
+    titolo: "Impegnative di cura domiciliare (ICD)",
+    perChi:
+      "Persone con disabilità o non autosufficienza assistite a casa, residenti in Veneto. ICDa: dipendenza vitale e/o ventilazione assistita, con bisogno di assistenza continua nelle 24 ore. ICDp: da 3 a 64 anni con grave disabilità psichica e intellettiva. ICDf: da 18 a 64 anni con grave disabilità fisico-motoria e capacità di autodeterminazione. ICDsla: persone con Sclerosi Laterale Amiotrofica.",
+    cosa:
+      "Un contributo mensile per sostenere l'assistenza a casa. ICDa: 800,00 euro fissi (ISEE sotto 60.000 euro per i maggiorenni, sotto 65.000 per i minorenni). ICDp: da 400,00 a 706,00 euro in base al progetto personalizzato, senza soglia ISEE. ICDf: da 400,00 a 1.000,00 euro in base al progetto personalizzato, senza soglia ISEE, con rendicontazione. ICDsla: da 400,00 a 2.000,00 euro in base alla condizione economica (ISEE sotto 60.000 euro), con rendicontazione.",
+    stato: "attivo",
+    quando:
+      "La domanda si può presentare in qualsiasi momento. L'erogazione segue una graduatoria gestita dall'ULSS: si può risultare idonei senza ottenere subito il contributo. Con i requisiti, l'intervento viene rinnovato ogni anno.",
+    comeSiChiede:
+      "La domanda la presenta la persona o il suo legale rappresentante, un familiare, oppure una persona (preferibilmente convivente) che garantisce l'assistenza. Si consegna agli sportelli dei Servizi Sociali del Comune/ATS o del Distretto Socio Sanitario di residenza. Segue una valutazione socio-sanitaria dell'Unità di valutazione multidimensionale distrettuale (UVMD), che assegna un punteggio.",
+    fonte: {
+      label: "Regione del Veneto · Domiciliarità (ICD) - Impegnative di Cura Domiciliari",
+      url: "https://salute.regione.veneto.it/assistenza-sociosanitaria-/persone-con-disabilit%C3%A0/domiciliarit%C3%A0-(icd)---impegnative-di-cura-domiciliari",
+    },
+    verificatoIl: "15/10/2026",
+    nota: "La pagina regionale non indica la data di aggiornamento degli importi: confermali con il tuo Distretto o con l'ULSS prima di fare conto sul contributo. Esistono altre tipologie (ad esempio ICDb e ICDm) non descritte nella pagina letta.",
   },
 
   // ----------------------------------------------------------------- PIEMONTE
