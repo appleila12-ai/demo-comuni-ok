@@ -2,8 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Nuoro (NU) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Pagina della Segreteria area anziani e disabili (Settore Politiche Sociali) letta il 15 ottobre 2026: sede, due telefoni e PEC. Il link dell'azienda sanitaria è da verificare.
+// Da fare: orari, bonus del Comune, associazioni, sport e tempo libero; controllare l'azienda sanitaria.
 export const nuoro: ComuneConfig = {
   slug: "nuoro",
   tipo: "comune",
@@ -16,12 +16,12 @@ export const nuoro: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
+  indirizzo: "Centro Polifunzionale, via Brigata Sassari 20/21, 08100 Nuoro",
+  telefono: "0784 216985",
   email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.nuoro.it",
+  pec: "servizi.sociali@pec.comune.nuoro.it",
+  orari: "Segreteria area anziani e disabili. Secondo numero: 0784 216984. Orari non pubblicati sulla pagina",
+  sitoWeb: "https://www.comune.nuoro.it/it/struttura/segreteria-area-anziani-e-disabili",
 
   logo: null,
 
@@ -36,8 +36,8 @@ export const nuoro: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.nuoro.it" },
+      subtitle: "Segreteria area anziani e disabili: recapiti in questa scheda e sul sito del Comune",
+      action: { type: "tel", value: "0784216985" },
     },
     {
       icon: "medkit-outline",
