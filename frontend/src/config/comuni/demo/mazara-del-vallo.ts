@@ -17,7 +17,7 @@ export const mazaraDelVallo: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0923 671111",
   email: "",
   pec: "",
   orari: "",

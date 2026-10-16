@@ -17,7 +17,7 @@ export const ravenna: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0544 482111",
   email: "",
   pec: "",
   orari: "",

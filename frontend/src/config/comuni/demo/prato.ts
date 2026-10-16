@@ -17,7 +17,7 @@ export const prato: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0574 18361",
   email: "",
   pec: "",
   orari: "",

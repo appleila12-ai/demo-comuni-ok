@@ -17,7 +17,7 @@ export const corato: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "080 9592111",
   email: "",
   pec: "",
   orari: "",

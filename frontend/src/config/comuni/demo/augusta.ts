@@ -17,7 +17,7 @@ export const augusta: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0931 980111",
   email: "",
   pec: "",
   orari: "",

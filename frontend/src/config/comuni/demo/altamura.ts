@@ -17,7 +17,7 @@ export const altamura: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "080 3107111",
   email: "",
   pec: "",
   orari: "",

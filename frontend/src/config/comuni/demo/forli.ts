@@ -17,7 +17,7 @@ export const forli: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0543 712111",
   email: "",
   pec: "",
   orari: "",

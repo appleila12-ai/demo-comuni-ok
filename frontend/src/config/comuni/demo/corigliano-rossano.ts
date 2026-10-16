@@ -17,7 +17,7 @@ export const coriglianoRossano: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0983 83851",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const scafati: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 8571111",
   email: "",
   pec: "",
   orari: "",

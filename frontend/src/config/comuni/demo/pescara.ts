@@ -17,7 +17,7 @@ export const pescara: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "085 42831",
   email: "",
   pec: "",
   orari: "",

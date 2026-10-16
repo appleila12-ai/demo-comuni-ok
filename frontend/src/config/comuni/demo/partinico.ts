@@ -17,7 +17,7 @@ export const partinico: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "091 8913200",
   email: "",
   pec: "",
   orari: "",

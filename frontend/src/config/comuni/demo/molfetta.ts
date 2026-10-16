@@ -17,7 +17,7 @@ export const molfetta: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "080 3359201",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const enna: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0935 40446",
   email: "",
   pec: "",
   orari: "",

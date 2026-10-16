@@ -17,7 +17,7 @@ export const lanciano: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0872 7071",
   email: "",
   pec: "",
   orari: "",

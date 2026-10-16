@@ -17,7 +17,7 @@ export const gallarate: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0331 75411",
   email: "",
   pec: "",
   orari: "",

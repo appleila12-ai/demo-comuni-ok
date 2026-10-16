@@ -18,7 +18,7 @@ export const genova: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "010 557111",
   email: "",
   pec: "",
   orari: "Ascolto per telefono: martedì 9:00–12:30 e giovedì 14:00–16:30 (si prenota al telefono). Sportelli senza prenotazione: orari diversi per ogni sede",

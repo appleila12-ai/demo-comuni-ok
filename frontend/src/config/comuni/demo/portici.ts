@@ -17,7 +17,7 @@ export const portici: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 7862111",
   email: "",
   pec: "",
   orari: "",

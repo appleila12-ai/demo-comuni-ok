@@ -17,7 +17,7 @@ export const cantu: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "031 7171",
   email: "",
   pec: "",
   orari: "",

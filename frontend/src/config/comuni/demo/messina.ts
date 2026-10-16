@@ -17,7 +17,7 @@ export const messina: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "090 7721",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const terni: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0744 5491",
   email: "",
   pec: "",
   orari: "",

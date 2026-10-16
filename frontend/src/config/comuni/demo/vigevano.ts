@@ -17,7 +17,7 @@ export const vigevano: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0381 2991",
   email: "",
   pec: "",
   orari: "",

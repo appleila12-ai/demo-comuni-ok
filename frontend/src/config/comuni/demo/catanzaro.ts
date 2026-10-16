@@ -17,7 +17,7 @@ export const catanzaro: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0961 8811",
   email: "",
   pec: "",
   orari: "",

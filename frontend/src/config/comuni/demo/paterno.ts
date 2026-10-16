@@ -17,7 +17,7 @@ export const paterno: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "095 7970111",
   email: "",
   pec: "",
   orari: "",

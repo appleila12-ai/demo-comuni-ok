@@ -17,7 +17,7 @@ export const castellammareDiStabia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 3900111",
   email: "",
   pec: "",
   orari: "",

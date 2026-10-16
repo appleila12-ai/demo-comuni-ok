@@ -17,7 +17,7 @@ export const bitonto: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "080 3716111",
   email: "",
   pec: "",
   orari: "",

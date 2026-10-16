@@ -17,7 +17,7 @@ export const reggioEmilia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0522 4561",
   email: "",
   pec: "",
   orari: "",

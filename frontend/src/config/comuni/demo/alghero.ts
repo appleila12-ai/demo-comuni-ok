@@ -17,7 +17,7 @@ export const alghero: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "079 997800",
   email: "",
   pec: "",
   orari: "",

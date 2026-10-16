@@ -17,7 +17,7 @@ export const campobasso: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0874 4051",
   email: "",
   pec: "",
   orari: "",

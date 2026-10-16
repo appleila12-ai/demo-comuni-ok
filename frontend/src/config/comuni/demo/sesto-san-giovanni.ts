@@ -17,7 +17,7 @@ export const sestoSanGiovanni: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "02 24961",
   email: "",
   pec: "",
   orari: "",

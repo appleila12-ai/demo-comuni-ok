@@ -17,7 +17,7 @@ export const catania: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "095 7421111",
   email: "",
   pec: "",
   orari: "",

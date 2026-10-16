@@ -17,7 +17,7 @@ export const grosseto: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0564 488111",
   email: "",
   pec: "",
   orari: "",

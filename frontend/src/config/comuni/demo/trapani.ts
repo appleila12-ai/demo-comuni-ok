@@ -17,7 +17,7 @@ export const trapani: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0923 590111",
   email: "",
   pec: "",
   orari: "",

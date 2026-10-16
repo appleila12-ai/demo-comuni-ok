@@ -17,7 +17,7 @@ export const caltagirone: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0933 41111",
   email: "",
   pec: "",
   orari: "",

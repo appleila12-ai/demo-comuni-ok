@@ -17,7 +17,7 @@ export const imperia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0183 7011",
   email: "",
   pec: "",
   orari: "",

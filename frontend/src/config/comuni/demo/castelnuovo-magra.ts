@@ -17,7 +17,7 @@ export const castelnuovoMagra: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0187 693813",
   email: "",
   pec: "",
   orari: "",

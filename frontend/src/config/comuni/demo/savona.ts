@@ -17,7 +17,7 @@ export const savona: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "019 83101",
   email: "",
   pec: "",
   orari: "",

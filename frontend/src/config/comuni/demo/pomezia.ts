@@ -17,7 +17,7 @@ export const pomezia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "06 911461",
   email: "",
   pec: "",
   orari: "",

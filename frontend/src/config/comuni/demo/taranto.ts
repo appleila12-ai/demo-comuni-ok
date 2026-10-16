@@ -17,7 +17,7 @@ export const taranto: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "099 4581111",
   email: "",
   pec: "",
   orari: "",

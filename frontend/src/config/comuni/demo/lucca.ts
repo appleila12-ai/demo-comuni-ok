@@ -17,7 +17,7 @@ export const lucca: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0583 4422",
   email: "",
   pec: "",
   orari: "",

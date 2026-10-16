@@ -17,7 +17,7 @@ export const frattamaggiore: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 8890206",
   email: "",
   pec: "",
   orari: "",

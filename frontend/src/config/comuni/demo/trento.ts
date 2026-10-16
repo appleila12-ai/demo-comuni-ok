@@ -17,7 +17,7 @@ export const trento: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0461 884111",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const padova: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "049 8205111",
   email: "",
   pec: "",
   orari: "",

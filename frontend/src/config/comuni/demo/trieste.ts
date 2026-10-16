@@ -17,7 +17,7 @@ export const trieste: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "040 6751",
   email: "",
   pec: "",
   orari: "",

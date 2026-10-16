@@ -17,7 +17,7 @@ export const avellino: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0825 2009",
   email: "",
   pec: "",
   orari: "",

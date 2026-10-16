@@ -17,7 +17,7 @@ export const barcellonaPozzoDiGotto: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "090 9790246",
   email: "",
   pec: "",
   orari: "",

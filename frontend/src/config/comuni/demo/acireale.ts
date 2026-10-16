@@ -17,7 +17,7 @@ export const acireale: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "095 895111",
   email: "",
   pec: "",
   orari: "",

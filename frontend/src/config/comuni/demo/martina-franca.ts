@@ -17,7 +17,7 @@ export const martinaFranca: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "080 4836111",
   email: "",
   pec: "",
   orari: "",

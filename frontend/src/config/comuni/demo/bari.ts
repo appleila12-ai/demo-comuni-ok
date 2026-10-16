@@ -19,7 +19,7 @@ export const bari: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "080 5771111",
   email: "",
   pec: "",
   orari: "",

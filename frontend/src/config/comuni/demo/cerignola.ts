@@ -17,7 +17,7 @@ export const cerignola: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0885 410111",
   email: "",
   pec: "",
   orari: "",

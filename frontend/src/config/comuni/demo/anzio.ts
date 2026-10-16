@@ -17,7 +17,7 @@ export const anzio: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "06 984991",
   email: "",
   pec: "",
   orari: "",

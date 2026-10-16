@@ -17,7 +17,7 @@ export const novara: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0321 3701",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const lameziaTerme: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0968 2071",
   email: "",
   pec: "",
   orari: "",

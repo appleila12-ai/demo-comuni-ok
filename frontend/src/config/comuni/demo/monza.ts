@@ -17,7 +17,7 @@ export const monza: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "039 23721",
   email: "",
   pec: "",
   orari: "",

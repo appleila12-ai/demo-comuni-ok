@@ -17,7 +17,7 @@ export const gorizia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0481 383111",
   email: "",
   pec: "",
   orari: "",

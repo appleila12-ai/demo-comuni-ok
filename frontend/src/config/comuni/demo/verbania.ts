@@ -17,7 +17,7 @@ export const verbania: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0323 5421",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const varese: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0332 255111",
   email: "",
   pec: "",
   orari: "",

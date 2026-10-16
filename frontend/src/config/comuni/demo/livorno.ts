@@ -17,7 +17,7 @@ export const livorno: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0586 820204",
   email: "",
   pec: "",
   orari: "",

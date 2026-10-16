@@ -17,7 +17,7 @@ export const macerata: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0733 2561",
   email: "",
   pec: "",
   orari: "",

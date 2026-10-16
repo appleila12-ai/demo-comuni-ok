@@ -17,7 +17,7 @@ export const gravinaInPuglia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "080 3259111",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const ragusa: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0932 676111",
   email: "",
   pec: "",
   orari: "",

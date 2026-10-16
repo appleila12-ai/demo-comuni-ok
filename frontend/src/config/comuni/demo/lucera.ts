@@ -17,7 +17,7 @@ export const lucera: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0881 541111",
   email: "",
   pec: "",
   orari: "",

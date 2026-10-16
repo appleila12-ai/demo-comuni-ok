@@ -17,7 +17,7 @@ export const pisa: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "050 910111",
   email: "",
   pec: "",
   orari: "",

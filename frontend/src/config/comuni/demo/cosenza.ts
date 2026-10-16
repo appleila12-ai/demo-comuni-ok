@@ -17,7 +17,7 @@ export const cosenza: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0984 8131",
   email: "",
   pec: "",
   orari: "",

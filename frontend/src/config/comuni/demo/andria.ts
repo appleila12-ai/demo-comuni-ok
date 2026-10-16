@@ -17,7 +17,7 @@ export const andria: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0883 290111",
   email: "",
   pec: "",
   orari: "",

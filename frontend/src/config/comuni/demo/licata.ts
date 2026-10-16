@@ -17,7 +17,7 @@ export const licata: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0922 868111",
   email: "",
   pec: "",
   orari: "",

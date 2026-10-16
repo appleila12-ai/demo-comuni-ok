@@ -17,7 +17,7 @@ export const aprilia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "06 928641",
   email: "",
   pec: "",
   orari: "",

@@ -18,7 +18,7 @@ export const vezzanoLigure: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0187 993128",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const caltanissetta: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0934 74111",
   email: "",
   pec: "",
   orari: "",

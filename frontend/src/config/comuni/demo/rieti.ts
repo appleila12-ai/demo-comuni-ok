@@ -17,7 +17,7 @@ export const rieti: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0746 2871",
   email: "",
   pec: "",
   orari: "",
