@@ -72,6 +72,14 @@ const STRUMENTI = [
     color: topics.salute,
   },
   {
+    id: "cassetto",
+    icon: "folder-outline" as const,
+    title: "Il mio cassetto",
+    sub: "Documenti, pratiche, scadenze e appunti in un'unica vista",
+    href: "/cassetto",
+    color: topics.documenti,
+  },
+  {
     id: "salute",
     icon: "medkit-outline" as const,
     title: "Salute vicino a te",

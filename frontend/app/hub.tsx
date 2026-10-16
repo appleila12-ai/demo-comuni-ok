@@ -88,7 +88,10 @@ const TAPPE: Tappa[] = [
     icon: "footsteps-outline",
     color: topics.salute,
     principale: { label: "La mia pratica", route: "/tracker" },
-    altri: [{ label: "Le mie scadenze", route: "/scadenze" }],
+    altri: [
+      { label: "Le mie scadenze", route: "/scadenze" },
+      { label: "Il mio cassetto", route: "/cassetto" },
+    ],
   },
   {
     id: "diritti",
