@@ -188,7 +188,7 @@ export default function Territorio() {
                 testID="territorio-comune-mail"
               >
                 <Ionicons name="mail-outline" size={16} color={t.warmDark} />
-                <Text style={[styles.actionBtnGhostText, { color: t.warmDark }]}>Email</Text>
+                <Text style={[styles.actionBtnGhostText, { color: t.warmDark }]}>Scrivi a {comune.ente}</Text>
               </Pressable>
             )}
             {!!comune.sitoWeb && (
@@ -199,7 +199,7 @@ export default function Territorio() {
                 testID="territorio-comune-web"
               >
                 <Ionicons name="globe-outline" size={16} color={t.warmDark} />
-                <Text style={[styles.actionBtnGhostText, { color: t.warmDark }]}>Sito</Text>
+                <Text style={[styles.actionBtnGhostText, { color: t.warmDark }]}>Sito {comune.nomeBreve}</Text>
               </Pressable>
             )}
           </View>
