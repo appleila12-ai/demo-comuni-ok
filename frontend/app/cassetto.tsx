@@ -1,12 +1,14 @@
 // Il mio cassetto — vista unificata di documenti, pratiche, scadenze, appunti e salvati.
-// Tutto è in sola lettura: nessuna nuova chiave storage, nessun invio di dati.
+// I documenti si caricano e gestiscono direttamente qui.
 // I dati restano esclusivamente sul dispositivo dell'utente.
 
 import { useCallback, useEffect, useState } from "react";
-import { Platform, Pressable, StyleSheet, Text, View } from "react-native";
+import { Platform, Pressable, StyleSheet, Text, ToastAndroid, View } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
 import { useFocusEffect, useRouter } from "expo-router";
 import * as Sharing from "expo-sharing";
+import * as DocumentPicker from "expo-document-picker";
+import * as FileSystem from "expo-file-system/legacy";
 
 import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
@@ -17,6 +19,10 @@ import {
   type CassettoData,
   type VaultFile,
 } from "@/src/lib/cassetto";
+import {
+  addVaultFile,
+  removeVaultFileEntry,
+} from "@/src/lib/vault";
 import { Avviso, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
 
 // ---- Costanti ----
@@ -29,6 +35,11 @@ const CAMPI_RICORDATI_LABEL: Record<string, string> = {
 };
 
 const IS_WEB = Platform.OS === "web";
+
+function toast(msg: string) {
+  if (Platform.OS === "android") ToastAndroid.show(msg, ToastAndroid.SHORT);
+  else console.log(msg);
+}
 
 // ---- Componente principale ----
 
@@ -72,6 +83,30 @@ export default function Cassetto() {
     ([k, v]) => CAMPI_RICORDATI_LABEL[k] && v,
   );
 
+  const pickDocument = async () => {
+    try {
+      const res = await DocumentPicker.getDocumentAsync({
+        copyToCacheDirectory: true,
+        multiple: false,
+      });
+      if (res.canceled || !res.assets?.length) return;
+      const asset = res.assets[0];
+      let uri = asset.uri;
+      if (!IS_WEB) {
+        const ext = asset.name?.split(".").pop() || "bin";
+        const dest = `${FileSystem.documentDirectory}${Date.now()}_doc.${ext}`;
+        await FileSystem.copyAsync({ from: asset.uri, to: dest });
+        uri = dest;
+      }
+      await addVaultFile(asset.name || "Documento", uri);
+      toast("Documento aggiunto");
+      carica();
+    } catch (e) {
+      console.warn("pick failed", e);
+      toast("Impossibile caricare il documento");
+    }
+  };
+
   return (
     <Pagina titolo="Il mio cassetto" testID="cassetto-screen">
       <Intro>
@@ -97,20 +132,25 @@ export default function Cassetto() {
       <View style={paginaStili.card} testID="cassetto-documenti">
         {documenti.length === 0 ? (
           <Text style={paginaStili.piccolo}>
-            Nessun documento nell&apos;elenco. Puoi caricare documenti dalla
-            sezione &quot;La mia pratica&quot;.
+            Nessun documento nell&apos;elenco. Carica il primo documento
+            con il bottone qui sotto.
           </Text>
         ) : (
           documenti.map((f, i) => (
-            <DocumentoRiga key={f.id} file={f} indice={i} />
+            <DocumentoRiga key={f.id} file={f} indice={i} onRemove={carica} />
           ))
         )}
-        <LinkSezione
-          label="Carica o gestisci documenti"
-          route="/tracker"
-          icon="folder-open-outline"
-          testID="cassetto-vai-documenti"
-        />
+        <View style={styles.docActions}>
+          <Pressable
+            onPress={pickDocument}
+            style={({ pressed }) => [styles.caricaBtn, pressed && { opacity: 0.85 }]}
+            accessibilityRole="button"
+            testID="cassetto-carica-doc"
+          >
+            <Ionicons name="cloud-upload-outline" size={15} color={colors.onSurface} />
+            <Text style={styles.caricaBtnText}>Carica documento</Text>
+          </Pressable>
+        </View>
       </View>
 
       {IS_WEB && documenti.length > 0 && (
@@ -280,7 +320,7 @@ export default function Cassetto() {
 
 // ---- Componenti interni ----
 
-function DocumentoRiga({ file, indice }: { file: VaultFile; indice: number }) {
+function DocumentoRiga({ file, indice, onRemove }: { file: VaultFile; indice: number; onRemove?: () => void }) {
   const haFile = !!file.uri;
 
   const apri = async () => {
@@ -294,6 +334,14 @@ function DocumentoRiga({ file, indice }: { file: VaultFile; indice: number }) {
     } catch {
       /* ignora */
     }
+  };
+
+  const rimuovi = async () => {
+    if (file.uri && !IS_WEB) {
+      FileSystem.deleteAsync(file.uri, { idempotent: true }).catch(() => {});
+    }
+    await removeVaultFileEntry(file.id);
+    onRemove?.();
   };
 
   return (
@@ -312,6 +360,14 @@ function DocumentoRiga({ file, indice }: { file: VaultFile; indice: number }) {
           {!haFile ? " · Solo riferimento, file originale non conservato" : ""}
         </Text>
       </View>
+      <Pressable
+        onPress={rimuovi}
+        hitSlop={8}
+        accessibilityLabel={`Elimina ${file.name}`}
+        testID={`cassetto-doc-delete-${indice}`}
+      >
+        <Ionicons name="trash-outline" size={17} color={colors.onSurfaceTertiary} />
+      </Pressable>
     </View>
   );
 }
@@ -381,6 +437,25 @@ const styles = StyleSheet.create({
   docNome: {
     fontSize: 13,
     fontWeight: "700",
+    color: colors.onSurface,
+  },
+  docActions: {
+    marginTop: spacing.sm,
+  },
+  caricaBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 6,
+    backgroundColor: topics.patronato.soft,
+    minHeight: 46,
+    borderRadius: radius.pill,
+    paddingHorizontal: spacing.md,
+    alignSelf: "flex-start",
+  },
+  caricaBtnText: {
+    fontSize: 13,
+    fontWeight: "800",
     color: colors.onSurface,
   },
 
