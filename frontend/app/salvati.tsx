@@ -63,7 +63,7 @@ export default function Salvati() {
               {s.route && !s.tel && !s.url && !s.email && !s.whatsapp ? (
                 <Azione icon="arrow-forward" label="Apri" onPress={() => router.push(s.route as any)} />
               ) : null}
-              {s.tel ? <Azione icon="call-outline" label={s.tel} onPress={() => apri(`tel:${s.tel!.replace(/[^\d+]/g, "")}`)} /> : null}
+              {s.tel ? <Azione icon="call-outline" label={`${s.titolo} · ${s.tel}`} onPress={() => apri(`tel:${s.tel!.replace(/[^\d+]/g, "")}`)} /> : null}
               {s.email ? <Azione icon="mail-outline" label="Email" onPress={() => apri(`mailto:${s.email}`)} /> : null}
               {s.whatsapp ? <Azione icon="logo-whatsapp" label={s.whatsapp} onPress={() => apri(`https://wa.me/${s.whatsapp!.replace(/[^\d]/g, "")}`)} /> : null}
               {s.url ? <Azione icon="globe-outline" label="Sito" onPress={() => apri(s.url!)} /> : null}

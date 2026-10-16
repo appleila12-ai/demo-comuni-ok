@@ -156,7 +156,7 @@ export default function Bonus() {
               accessibilityLabel={`Chiama ${comune.ente}`}
             >
               <Ionicons name="call-outline" size={16} color={colors.brandPrimaryDark} />
-              <Text style={styles.fonteText}>Chiama {comune.telefono}</Text>
+              <Text style={styles.fonteText}>Chiama {comune.ente} · {comune.telefono}</Text>
             </Pressable>
           )}
         </View>

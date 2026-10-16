@@ -397,7 +397,7 @@ export default function VerbalePagina() {
                 accessibilityLabel={`Chiama ${comune.ente}`}
               >
                 <Ionicons name="call-outline" size={16} color={colors.brandPrimaryDark} />
-                <Text style={styles.linkText}>Chiama {comune.telefono}</Text>
+                <Text style={styles.linkText}>Chiama {comune.ente} · {comune.telefono}</Text>
               </Pressable>
             )}
           </View>

@@ -381,7 +381,8 @@ export default function Risultati() {
           <Text style={styles.disclaimer}>
             Questo report è orientativo, generato in base alle risposte fornite.
             Per la conferma nel tuo caso specifico rivolgiti ai Servizi Sociali
-            del Comune, all'INPS o al tuo ufficio HR/Personale.
+            del Comune, all'INPS o al tuo ufficio HR/Personale. Trovi i recapiti
+            nella sezione "Aiuti e contatti".
           </Text>
         </ScrollView>
       </KeyboardAvoidingView>

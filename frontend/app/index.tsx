@@ -389,11 +389,11 @@ function HomeDelComune() {
               onPress={() => Linking.openURL(`tel:${comune.telefono.replace(/\s+/g, "")}`).catch(() => {})}
               style={({ pressed }) => [styles.contactRow, pressed && styles.pressed]}
               accessibilityRole="button"
-              accessibilityLabel={`Chiama ${comune.telefono}`}
+              accessibilityLabel={`Chiama ${comune.ente} ${comune.telefono}`}
               testID="comune-home-chiama"
             >
               <Ionicons name="call-outline" size={16} color={t.warmDark} />
-              <Text style={[styles.contactValue, styles.contactLink]}>{comune.telefono}</Text>
+              <Text style={[styles.contactValue, styles.contactLink]}>{comune.ente} · {comune.telefono}</Text>
             </Pressable>
             )}
             {!!comune.email && (

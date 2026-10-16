@@ -441,7 +441,7 @@ export default function Tracker() {
             >
               <Ionicons name="call-outline" size={16} color={warm.warmDark} />
               <Text style={[styles.contactChipText, { color: warm.warmDark }]}>
-                Chiama
+                Chiama {comune.ente}
               </Text>
             </Pressable>
             )}

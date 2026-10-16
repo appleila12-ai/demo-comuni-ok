@@ -177,7 +177,7 @@ export default function Territorio() {
                 testID="territorio-comune-tel"
               >
                 <Ionicons name="call-outline" size={16} color="#fff" />
-                <Text style={styles.actionBtnText}>Chiama</Text>
+                <Text style={styles.actionBtnText}>Chiama {comune.ente}</Text>
               </Pressable>
             )}
             {!!comune.email && (
