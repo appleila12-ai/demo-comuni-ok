@@ -17,7 +17,7 @@ export const formia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0771 7781",
   email: "",
   pec: "",
   orari: "",

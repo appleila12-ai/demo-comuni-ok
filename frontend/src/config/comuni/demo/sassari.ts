@@ -17,7 +17,7 @@ export const sassari: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "079 279111",
   email: "",
   pec: "",
   orari: "",

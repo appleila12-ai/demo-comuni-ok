@@ -17,7 +17,7 @@ export const montesilvano: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "085 44811",
   email: "",
   pec: "",
   orari: "",

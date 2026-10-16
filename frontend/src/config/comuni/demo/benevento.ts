@@ -17,7 +17,7 @@ export const benevento: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0824 772111",
   email: "",
   pec: "",
   orari: "",

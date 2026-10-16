@@ -17,7 +17,7 @@ export const casoria: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 7053111",
   email: "",
   pec: "",
   orari: "",

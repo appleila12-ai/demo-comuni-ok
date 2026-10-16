@@ -18,7 +18,7 @@ export const lecce: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0832 682111",
   email: "",
   pec: "",
   orari: "",

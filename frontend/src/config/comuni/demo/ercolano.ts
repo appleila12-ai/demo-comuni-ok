@@ -17,7 +17,7 @@ export const ercolano: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 7881111",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const milazzo: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "090 9231218",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const cagliari: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "070 6771",
   email: "",
   pec: "",
   orari: "",

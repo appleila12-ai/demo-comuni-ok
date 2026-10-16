@@ -17,7 +17,7 @@ export const moncalieri: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "011 6401411",
   email: "",
   pec: "",
   orari: "",

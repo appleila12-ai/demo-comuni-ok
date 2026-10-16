@@ -17,7 +17,7 @@ export const chieti: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0871 3411",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const aversa: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 5049111",
   email: "",
   pec: "",
   orari: "",

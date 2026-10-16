@@ -17,7 +17,7 @@ export const aosta: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0165 3001",
   email: "",
   pec: "",
   orari: "",

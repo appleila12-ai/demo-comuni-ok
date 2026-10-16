@@ -17,7 +17,7 @@ export const pozzuoli: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 8551111",
   email: "",
   pec: "",
   orari: "",

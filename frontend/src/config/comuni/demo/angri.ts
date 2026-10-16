@@ -17,7 +17,7 @@ export const angri: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 5168111",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const ardea: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "06 913800",
   email: "",
   pec: "",
   orari: "",

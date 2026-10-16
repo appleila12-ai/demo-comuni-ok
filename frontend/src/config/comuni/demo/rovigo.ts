@@ -17,7 +17,7 @@ export const rovigo: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0425 2061",
   email: "",
   pec: "",
   orari: "",

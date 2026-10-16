@@ -17,7 +17,7 @@ export const eboli: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0828 328111",
   email: "",
   pec: "",
   orari: "",

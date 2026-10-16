@@ -17,7 +17,7 @@ export const gela: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0933 906211",
   email: "",
   pec: "",
   orari: "",

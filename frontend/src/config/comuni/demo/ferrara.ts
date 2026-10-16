@@ -17,7 +17,7 @@ export const ferrara: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0532 419111",
   email: "",
   pec: "",
   orari: "",

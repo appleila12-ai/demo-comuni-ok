@@ -18,7 +18,7 @@ export const siracusa: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0931 451111",
   email: "",
   pec: "",
   orari: "",

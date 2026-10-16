@@ -17,7 +17,7 @@ export const noceraInferiore: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 3235111",
   email: "",
   pec: "",
   orari: "",

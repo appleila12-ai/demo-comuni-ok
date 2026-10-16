@@ -17,7 +17,7 @@ export const bagheria: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "091 943111",
   email: "",
   pec: "",
   orari: "",

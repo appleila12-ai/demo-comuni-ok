@@ -17,7 +17,7 @@ export const rimini: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0541 704111",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const vittoria: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0932 514111",
   email: "",
   pec: "",
   orari: "",

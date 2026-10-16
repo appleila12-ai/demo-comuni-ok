@@ -19,7 +19,7 @@ export const napoli: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 7951111",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const favara: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0922 448111",
   email: "",
   pec: "",
   orari: "",

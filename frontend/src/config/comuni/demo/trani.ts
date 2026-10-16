@@ -17,7 +17,7 @@ export const trani: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0883 581111",
   email: "",
   pec: "",
   orari: "",

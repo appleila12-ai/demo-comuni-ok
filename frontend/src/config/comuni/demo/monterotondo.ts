@@ -17,7 +17,7 @@ export const monterotondo: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "06 909641",
   email: "",
   pec: "",
   orari: "",

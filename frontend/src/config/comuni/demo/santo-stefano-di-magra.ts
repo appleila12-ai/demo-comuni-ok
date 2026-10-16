@@ -18,7 +18,7 @@ export const santoStefanoDiMagra: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0187 697111",
   email: "",
   pec: "",
   orari: "",

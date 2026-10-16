@@ -18,7 +18,7 @@ export const bolzano: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0471 997111",
   email: "",
   pec: "",
   orari: "",

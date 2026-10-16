@@ -17,7 +17,7 @@ export const ladispoli: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "06 992311",
   email: "",
   pec: "",
   orari: "",

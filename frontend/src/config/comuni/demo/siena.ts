@@ -17,7 +17,7 @@ export const siena: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0577 292111",
   email: "",
   pec: "",
   orari: "",

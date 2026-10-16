@@ -17,7 +17,7 @@ export const modena: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "059 20311",
   email: "",
   pec: "",
   orari: "",

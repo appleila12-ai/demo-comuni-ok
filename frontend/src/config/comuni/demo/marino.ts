@@ -17,7 +17,7 @@ export const marino: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "06 936621",
   email: "",
   pec: "",
   orari: "",

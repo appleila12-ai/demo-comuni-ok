@@ -17,7 +17,7 @@ export const perugia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "075 5771",
   email: "",
   pec: "",
   orari: "",

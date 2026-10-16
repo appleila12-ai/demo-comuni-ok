@@ -17,7 +17,7 @@ export const casalnuovoDiNapoli: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 5214111",
   email: "",
   pec: "",
   orari: "",

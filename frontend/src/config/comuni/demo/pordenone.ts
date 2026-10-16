@@ -17,7 +17,7 @@ export const pordenone: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0434 392111",
   email: "",
   pec: "",
   orari: "",

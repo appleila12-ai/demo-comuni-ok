@@ -17,7 +17,7 @@ export const vicenza: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0444 221111",
   email: "",
   pec: "",
   orari: "",

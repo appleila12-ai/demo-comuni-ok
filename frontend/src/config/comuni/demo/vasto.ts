@@ -17,7 +17,7 @@ export const vasto: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0873 3091",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const quartuSantElena: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "070 86011",
   email: "",
   pec: "",
   orari: "",

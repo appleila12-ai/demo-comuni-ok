@@ -17,7 +17,7 @@ export const termoli: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0875 7121",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const francavillaFontana: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0831 820111",
   email: "",
   pec: "",
   orari: "",

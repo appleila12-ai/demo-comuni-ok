@@ -18,7 +18,7 @@ export const ameglia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0187 609277",
   email: "",
   pec: "",
   orari: "",

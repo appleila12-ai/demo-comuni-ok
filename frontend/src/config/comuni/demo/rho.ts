@@ -17,7 +17,7 @@ export const rho: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "02 933321",
   email: "",
   pec: "",
   orari: "",

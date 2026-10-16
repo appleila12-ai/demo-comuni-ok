@@ -17,7 +17,7 @@ export const manfredonia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0884 519200",
   email: "",
   pec: "",
   orari: "",

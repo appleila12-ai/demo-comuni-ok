@@ -49,7 +49,7 @@ function buildPrimiPassi() {
     title: `Sportello sociale ${comune.delEnte}`,
     body: `${[comune.ente, comune.indirizzo].filter(Boolean).join(" · ")}.${comune.orari ? ` Orari: ${comune.orari}.` : ""} Un primo ascolto gratuito per capire di cosa hai bisogno e quali servizi puoi attivare subito, anche senza verbale.${comune.telefono ? "" : " I recapiti li trovi sul sito del Comune."}`,
     link: comune.telefono
-      ? { label: `Chiama ${comune.telefono}`, url: `tel:${comune.telefono.replace(/\s+/g, "")}` }
+      ? { label: `Chiama ${comune.ente} · ${comune.telefono}`, url: `tel:${comune.telefono.replace(/\s+/g, "")}` }
       : { label: "Sito dei servizi sociali", url: comune.sitoWeb },
     color: topics.patronato,
   },

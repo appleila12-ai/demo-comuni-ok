@@ -17,7 +17,7 @@ export const modica: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0932 759111",
   email: "",
   pec: "",
   orari: "",

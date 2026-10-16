@@ -17,7 +17,7 @@ export const biella: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "015 35071",
   email: "",
   pec: "",
   orari: "",

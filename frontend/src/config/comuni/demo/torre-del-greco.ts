@@ -17,7 +17,7 @@ export const torreDelGreco: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 8491655",
   email: "",
   pec: "",
   orari: "",

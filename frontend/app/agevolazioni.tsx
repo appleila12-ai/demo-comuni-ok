@@ -133,6 +133,30 @@ export default function Agevolazioni() {
           rivolgiti ai {comune.ente} {comune.delEnte}, a un patronato o a un CAF: sono
           gratuiti.
         </Avviso>
+        {!!comune.telefono && (
+          <Bottone
+            label={`Chiama ${comune.ente} · ${comune.telefono}`}
+            icon="call-outline"
+            variante="vuoto"
+            onPress={() => Linking.openURL(`tel:${comune.telefono.replace(/\s/g, "")}`).catch(() => {})}
+          />
+        )}
+        {!comune.telefono && !!comune.email && (
+          <Bottone
+            label={`Scrivi a ${comune.ente} · ${comune.email}`}
+            icon="mail-outline"
+            variante="vuoto"
+            onPress={() => Linking.openURL(`mailto:${comune.email}`).catch(() => {})}
+          />
+        )}
+        {!comune.telefono && !comune.email && !!comune.sitoWeb && (
+          <Bottone
+            label={`Sito ${comune.ente}`}
+            icon="globe-outline"
+            variante="vuoto"
+            onPress={() => Linking.openURL(comune.sitoWeb).catch(() => {})}
+          />
+        )}
         <Bottone
           label="Chiedi un colloquio ai Servizi Sociali"
           icon="chatbubbles-outline"

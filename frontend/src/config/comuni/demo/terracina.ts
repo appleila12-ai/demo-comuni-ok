@@ -17,7 +17,7 @@ export const terracina: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0773 7071",
   email: "",
   pec: "",
   orari: "",

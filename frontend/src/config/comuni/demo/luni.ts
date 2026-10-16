@@ -17,7 +17,7 @@ export const luni: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0187 690147",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const barletta: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0883 578111",
   email: "",
   pec: "",
   orari: "",

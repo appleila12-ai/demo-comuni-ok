@@ -17,7 +17,7 @@ export const nettuno: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "06 988891",
   email: "",
   pec: "",
   orari: "",

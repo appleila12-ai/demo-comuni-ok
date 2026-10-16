@@ -19,7 +19,7 @@ export const bologna: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "051 203111",
   email: "",
   pec: "",
   orari: "",

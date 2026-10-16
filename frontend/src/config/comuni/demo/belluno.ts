@@ -17,7 +17,7 @@ export const belluno: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0437 913111",
   email: "",
   pec: "",
   orari: "",

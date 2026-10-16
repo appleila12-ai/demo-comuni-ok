@@ -18,7 +18,7 @@ export const torino: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "Un servizio sociale per distretto: le sedi sono qui sotto",
-  telefono: "",
+  telefono: "011 4421111",
   email: "",
   pec: "servizi.sociali@cert.comune.torino.it",
   orari: "Per appuntamento, dal lunedì al venerdì dalle 9:00 alle 13:00",

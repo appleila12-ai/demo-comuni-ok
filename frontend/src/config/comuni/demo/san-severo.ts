@@ -17,7 +17,7 @@ export const sanSevero: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0882 339111",
   email: "",
   pec: "",
   orari: "",

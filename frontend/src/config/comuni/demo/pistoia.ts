@@ -17,7 +17,7 @@ export const pistoia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0573 3711",
   email: "",
   pec: "",
   orari: "",

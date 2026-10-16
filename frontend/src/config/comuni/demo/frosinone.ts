@@ -17,7 +17,7 @@ export const frosinone: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0775 2651",
   email: "",
   pec: "",
   orari: "",

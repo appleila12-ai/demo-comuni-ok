@@ -20,7 +20,7 @@ export const bassanoDelGrappa: ComuneConfig = {
   email: "protocollo.comune.bassanodelgrappa@pecveneto.it",
   pec: "protocollo.comune.bassanodelgrappa@pecveneto.it",
   orari: "Mar 9:00–13:00 · Gio 9:00–13:00 e 16:00–18:15",
-  sitoWeb: "http://www.comune.bassano.vi.it/Comune/Struttura-Organizzativa/Uffici/Segretariato-Sociale",
+  sitoWeb: "https://www.comune.bassano.vi.it/Comune/Struttura-Organizzativa/Uffici/Segretariato-Sociale",
 
   logo: null,
 

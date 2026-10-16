@@ -17,7 +17,7 @@ export const cavaDeTirreni: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "089 682111",
   email: "",
   pec: "",
   orari: "",

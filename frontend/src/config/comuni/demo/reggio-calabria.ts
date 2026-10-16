@@ -17,7 +17,7 @@ export const reggioCalabria: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0965 362111",
   email: "",
   pec: "",
   orari: "",

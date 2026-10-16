@@ -17,7 +17,7 @@ export const foggia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0881 792111",
   email: "",
   pec: "",
   orari: "",

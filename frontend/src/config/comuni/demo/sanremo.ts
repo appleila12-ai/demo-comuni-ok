@@ -17,7 +17,7 @@ export const sanremo: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0184 5801",
   email: "",
   pec: "",
   orari: "",

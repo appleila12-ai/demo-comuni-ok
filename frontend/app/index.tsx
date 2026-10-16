@@ -389,11 +389,11 @@ function HomeDelComune() {
               onPress={() => Linking.openURL(`tel:${comune.telefono.replace(/\s+/g, "")}`).catch(() => {})}
               style={({ pressed }) => [styles.contactRow, pressed && styles.pressed]}
               accessibilityRole="button"
-              accessibilityLabel={`Chiama ${comune.telefono}`}
+              accessibilityLabel={`Chiama ${comune.ente} ${comune.telefono}`}
               testID="comune-home-chiama"
             >
               <Ionicons name="call-outline" size={16} color={t.warmDark} />
-              <Text style={[styles.contactValue, styles.contactLink]}>{comune.telefono}</Text>
+              <Text style={[styles.contactValue, styles.contactLink]}>{comune.ente} · {comune.telefono}</Text>
             </Pressable>
             )}
             {!!comune.email && (
@@ -401,11 +401,23 @@ function HomeDelComune() {
               onPress={() => Linking.openURL(`mailto:${comune.email}`).catch(() => {})}
               style={({ pressed }) => [styles.contactRow, pressed && styles.pressed]}
               accessibilityRole="button"
-              accessibilityLabel={`Scrivi a ${comune.email}`}
+              accessibilityLabel={`Scrivi a ${comune.ente} ${comune.email}`}
               testID="comune-home-email"
             >
               <Ionicons name="mail-outline" size={16} color={t.warmDark} />
-              <Text style={[styles.contactValue, styles.contactLink]}>{comune.email}</Text>
+              <Text style={[styles.contactValue, styles.contactLink]}>{comune.ente} · {comune.email}</Text>
+            </Pressable>
+            )}
+            {!comune.telefono && !comune.email && !!comune.sitoWeb && (
+            <Pressable
+              onPress={() => Linking.openURL(comune.sitoWeb).catch(() => {})}
+              style={({ pressed }) => [styles.contactRow, pressed && styles.pressed]}
+              accessibilityRole="button"
+              accessibilityLabel={`Sito ${comune.ente}`}
+              testID="comune-home-sito"
+            >
+              <Ionicons name="globe-outline" size={16} color={t.warmDark} />
+              <Text style={[styles.contactValue, styles.contactLink]}>{comune.ente} · Sito web</Text>
             </Pressable>
             )}
           </View>

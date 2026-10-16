@@ -17,7 +17,7 @@ export const afragola: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 8529111",
   email: "",
   pec: "",
   orari: "",

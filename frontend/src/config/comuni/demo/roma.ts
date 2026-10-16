@@ -19,7 +19,7 @@ export const roma: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "06 0606",
   email: "",
   pec: "",
   orari: "Sedi e orari cambiano per Municipio e Distretto: guarda la pagina del PUA",

@@ -17,7 +17,7 @@ export const bustoArsizio: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0331 390111",
   email: "",
   pec: "",
   orari: "",

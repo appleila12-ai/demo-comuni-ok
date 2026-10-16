@@ -17,7 +17,7 @@ export const nardo: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0833 838311",
   email: "",
   pec: "",
   orari: "",

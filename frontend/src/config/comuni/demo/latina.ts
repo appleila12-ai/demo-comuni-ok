@@ -17,7 +17,7 @@ export const latina: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0773 6521",
   email: "",
   pec: "",
   orari: "",

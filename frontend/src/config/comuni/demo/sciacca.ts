@@ -17,7 +17,7 @@ export const sciacca: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0925 20111",
   email: "",
   pec: "",
   orari: "",

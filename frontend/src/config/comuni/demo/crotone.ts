@@ -17,7 +17,7 @@ export const crotone: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0962 921111",
   email: "",
   pec: "",
   orari: "",

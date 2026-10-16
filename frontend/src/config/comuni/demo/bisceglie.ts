@@ -17,7 +17,7 @@ export const bisceglie: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "080 3950111",
   email: "",
   pec: "",
   orari: "",

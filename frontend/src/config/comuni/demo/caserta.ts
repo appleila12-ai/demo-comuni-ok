@@ -17,7 +17,7 @@ export const caserta: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0823 273001",
   email: "",
   pec: "",
   orari: "",

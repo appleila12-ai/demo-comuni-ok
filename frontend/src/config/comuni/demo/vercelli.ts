@@ -17,7 +17,7 @@ export const vercelli: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0161 5961",
   email: "",
   pec: "",
   orari: "",

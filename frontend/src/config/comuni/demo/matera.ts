@@ -17,7 +17,7 @@ export const matera: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0835 2411",
   email: "",
   pec: "",
   orari: "",

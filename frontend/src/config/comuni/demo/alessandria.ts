@@ -17,7 +17,7 @@ export const alessandria: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0131 515111",
   email: "",
   pec: "",
   orari: "",

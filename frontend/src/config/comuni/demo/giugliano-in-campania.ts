@@ -18,7 +18,7 @@ export const giuglianoInCampania: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 8956001",
   email: "",
   pec: "",
   orari: "",

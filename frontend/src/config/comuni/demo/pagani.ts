@@ -17,7 +17,7 @@ export const pagani: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 3240111",
   email: "",
   pec: "",
   orari: "",

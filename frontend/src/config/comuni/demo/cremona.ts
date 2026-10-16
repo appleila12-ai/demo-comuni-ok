@@ -17,7 +17,7 @@ export const cremona: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0372 4071",
   email: "",
   pec: "",
   orari: "",

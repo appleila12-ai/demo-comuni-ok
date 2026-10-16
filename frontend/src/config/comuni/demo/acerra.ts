@@ -17,7 +17,7 @@ export const acerra: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 5219111",
   email: "",
   pec: "",
   orari: "",

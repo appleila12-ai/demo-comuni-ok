@@ -17,7 +17,7 @@ export const viboValentia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0963 599111",
   email: "",
   pec: "",
   orari: "",

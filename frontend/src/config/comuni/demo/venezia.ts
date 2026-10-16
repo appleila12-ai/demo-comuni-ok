@@ -17,7 +17,7 @@ export const venezia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "041 2748111",
   email: "",
   pec: "",
   orari: "",

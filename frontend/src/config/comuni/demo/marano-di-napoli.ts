@@ -17,7 +17,7 @@ export const maranoDiNapoli: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "081 5769111",
   email: "",
   pec: "",
   orari: "",

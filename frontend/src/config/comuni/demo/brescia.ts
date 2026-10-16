@@ -17,7 +17,7 @@ export const brescia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "030 29771",
   email: "",
   pec: "",
   orari: "",

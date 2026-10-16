@@ -17,7 +17,7 @@ export const alcamo: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0924 590111",
   email: "",
   pec: "",
   orari: "",

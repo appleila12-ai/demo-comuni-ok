@@ -397,7 +397,29 @@ export default function VerbalePagina() {
                 accessibilityLabel={`Chiama ${comune.ente}`}
               >
                 <Ionicons name="call-outline" size={16} color={colors.brandPrimaryDark} />
-                <Text style={styles.linkText}>Chiama {comune.telefono}</Text>
+                <Text style={styles.linkText}>Chiama {comune.ente} · {comune.telefono}</Text>
+              </Pressable>
+            )}
+            {!comune.telefono && !!comune.email && (
+              <Pressable
+                onPress={() => apri(`mailto:${comune.email}`)}
+                style={styles.link}
+                accessibilityRole="button"
+                accessibilityLabel={`Scrivi a ${comune.ente}`}
+              >
+                <Ionicons name="mail-outline" size={16} color={colors.brandPrimaryDark} />
+                <Text style={styles.linkText}>Scrivi a {comune.ente} · {comune.email}</Text>
+              </Pressable>
+            )}
+            {!comune.telefono && !comune.email && !!comune.sitoWeb && (
+              <Pressable
+                onPress={() => apri(comune.sitoWeb)}
+                style={styles.link}
+                accessibilityRole="button"
+                accessibilityLabel={`Sito ${comune.ente}`}
+              >
+                <Ionicons name="globe-outline" size={16} color={colors.brandPrimaryDark} />
+                <Text style={styles.linkText}>Sito {comune.ente}</Text>
               </Pressable>
             )}
           </View>

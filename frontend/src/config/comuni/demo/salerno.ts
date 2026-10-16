@@ -17,7 +17,7 @@ export const salerno: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "089 661111",
   email: "",
   pec: "",
   orari: "",

@@ -17,7 +17,7 @@ export const udine: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0432 1271111",
   email: "",
   pec: "",
   orari: "",
