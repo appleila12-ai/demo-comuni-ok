@@ -3,7 +3,7 @@
 // I dati restano esclusivamente sul dispositivo dell'utente.
 
 import { useCallback, useEffect, useState } from "react";
-import { Platform, Pressable, StyleSheet, Text, ToastAndroid, View } from "react-native";
+import { Platform, Pressable, ScrollView, StyleSheet, Text, ToastAndroid, View } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
 import { useFocusEffect, useRouter } from "expo-router";
 import * as Sharing from "expo-sharing";
@@ -22,7 +22,13 @@ import {
 import {
   addVaultFile,
   removeVaultFileEntry,
+  updateVaultFileData,
 } from "@/src/lib/vault";
+import {
+  estraiDatiDocumento,
+  type CampoEstratto,
+  type RisultatoEstrazione,
+} from "@/src/lib/doc-extract";
 import { Avviso, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
 
 // ---- Costanti ----
@@ -322,6 +328,11 @@ export default function Cassetto() {
 
 function DocumentoRiga({ file, indice, onRemove }: { file: VaultFile; indice: number; onRemove?: () => void }) {
   const haFile = !!file.uri;
+  const [espanso, setEspanso] = useState(false);
+  const [estraendo, setEstraendo] = useState(false);
+  const [erroreEstrazione, setErroreEstrazione] = useState("");
+  const [campiLocali, setCampiLocali] = useState<CampoEstratto[]>(file.campiEstratti || []);
+  const haEstrazione = campiLocali.length > 0 || !!file.testoEstratto;
 
   const apri = async () => {
     if (!file.uri) return;
@@ -344,30 +355,122 @@ function DocumentoRiga({ file, indice, onRemove }: { file: VaultFile; indice: nu
     onRemove?.();
   };
 
+  const leggiDocumento = async () => {
+    if (!file.uri) return;
+    setEstraendo(true);
+    setErroreEstrazione("");
+    try {
+      const res = await estraiDatiDocumento(file.uri, file.name);
+      if ("errore" in res) {
+        setErroreEstrazione(res.errore);
+      } else {
+        setCampiLocali(res.campi);
+        await updateVaultFileData(file.id, res.campi, res.testoGrezzo);
+        setEspanso(true);
+        toast(
+          res.campi.length > 0
+            ? `Trovati ${res.campi.length} campi (${res.tempoMs}ms)`
+            : "Nessun campo riconosciuto",
+        );
+      }
+    } catch (e) {
+      setErroreEstrazione(String(e));
+    } finally {
+      setEstraendo(false);
+    }
+  };
+
   return (
-    <View style={styles.docRiga} testID={`cassetto-doc-${indice}`}>
-      <Ionicons
-        name={haFile ? "document-attach" : "document-outline"}
-        size={16}
-        color={haFile ? topics.patronato.main : colors.borderStrong}
-      />
-      <View style={styles.flex}>
-        <Pressable onPress={apri} disabled={!haFile}>
-          <Text style={styles.docNome} numberOfLines={1}>{file.name}</Text>
+    <View testID={`cassetto-doc-${indice}`}>
+      <View style={styles.docRiga}>
+        <Ionicons
+          name={haFile ? "document-attach" : "document-outline"}
+          size={16}
+          color={haFile ? topics.patronato.main : colors.borderStrong}
+        />
+        <View style={styles.flex}>
+          <Pressable onPress={apri} disabled={!haFile}>
+            <Text style={styles.docNome} numberOfLines={1}>{file.name}</Text>
+          </Pressable>
+          <Text style={paginaStili.piccolo}>
+            {new Date(file.date).toLocaleDateString("it-IT")}
+            {!haFile ? " · Solo riferimento, file originale non conservato" : ""}
+            {haEstrazione ? " · Dati estratti ✓" : ""}
+          </Text>
+        </View>
+
+        {/* Bottone leggi documento */}
+        {haFile && (
+          <Pressable
+            onPress={haEstrazione ? () => setEspanso(!espanso) : leggiDocumento}
+            hitSlop={8}
+            disabled={estraendo}
+            accessibilityLabel={haEstrazione ? "Mostra dati estratti" : `Leggi ${file.name}`}
+            testID={`cassetto-doc-leggi-${indice}`}
+          >
+            <Ionicons
+              name={estraendo ? "hourglass-outline" : haEstrazione ? (espanso ? "chevron-up" : "chevron-down") : "scan-outline"}
+              size={17}
+              color={estraendo ? colors.borderStrong : colors.brandPrimaryDark}
+            />
+          </Pressable>
+        )}
+
+        <Pressable
+          onPress={rimuovi}
+          hitSlop={8}
+          accessibilityLabel={`Elimina ${file.name}`}
+          testID={`cassetto-doc-delete-${indice}`}
+        >
+          <Ionicons name="trash-outline" size={17} color={colors.onSurfaceTertiary} />
         </Pressable>
-        <Text style={paginaStili.piccolo}>
-          {new Date(file.date).toLocaleDateString("it-IT")}
-          {!haFile ? " · Solo riferimento, file originale non conservato" : ""}
-        </Text>
       </View>
-      <Pressable
-        onPress={rimuovi}
-        hitSlop={8}
-        accessibilityLabel={`Elimina ${file.name}`}
-        testID={`cassetto-doc-delete-${indice}`}
-      >
-        <Ionicons name="trash-outline" size={17} color={colors.onSurfaceTertiary} />
-      </Pressable>
+
+      {/* Errore estrazione */}
+      {erroreEstrazione ? (
+        <View style={styles.estrazioneErrore}>
+          <Ionicons name="warning-outline" size={14} color={colors.error} />
+          <Text style={[paginaStili.piccolo, { color: colors.error, flex: 1 }]}>
+            {erroreEstrazione}
+          </Text>
+        </View>
+      ) : null}
+
+      {/* Campi estratti */}
+      {espanso && haEstrazione && (
+        <View style={styles.estrazioneBox}>
+          <Text style={styles.estrazioneTitle}>Dati estratti dal documento</Text>
+          <Text style={[paginaStili.piccolo, { marginBottom: spacing.sm }]}>
+            I dati sono suggerimenti automatici, da verificare. Nessun dato è stato inviato a servizi esterni.
+          </Text>
+          {campiLocali.length > 0 ? (
+            campiLocali.map((campo, ci) => (
+              <View key={ci} style={styles.campoRiga}>
+                <Text style={styles.campoLabel}>{campo.label}</Text>
+                <Text style={styles.campoValore} selectable>{campo.valore}</Text>
+                {campo.confidenza < 0.7 && (
+                  <Text style={styles.campoAvviso}>⚠ da verificare</Text>
+                )}
+              </View>
+            ))
+          ) : (
+            <Text style={paginaStili.piccolo}>
+              Nessun campo strutturato riconosciuto. Il testo del documento è stato comunque salvato.
+            </Text>
+          )}
+
+          {/* Riesegui estrazione */}
+          <Pressable
+            onPress={leggiDocumento}
+            disabled={estraendo}
+            style={({ pressed }) => [styles.rieseguiBtn, pressed && { opacity: 0.85 }]}
+            testID={`cassetto-doc-riesegui-${indice}`}
+          >
+            <Ionicons name="refresh-outline" size={13} color={colors.brandPrimaryDark} />
+            <Text style={[styles.caricaBtnText, { fontSize: 11 }]}>Rileggi documento</Text>
+          </Pressable>
+        </View>
+      )}
     </View>
   );
 }
@@ -457,6 +560,63 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: "800",
     color: colors.onSurface,
+  },
+
+  // Estrazione dati
+  estrazioneBox: {
+    backgroundColor: colors.surfaceSecondary,
+    borderRadius: radius.md,
+    padding: spacing.md,
+    marginBottom: spacing.sm,
+    marginTop: -spacing.xs,
+  },
+  estrazioneTitle: {
+    fontSize: 12,
+    fontWeight: "800",
+    color: colors.brandPrimaryDark,
+    textTransform: "uppercase" as const,
+    letterSpacing: 0.5,
+    marginBottom: 4,
+  },
+  estrazioneErrore: {
+    flexDirection: "row" as const,
+    alignItems: "center" as const,
+    gap: 4,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.xs,
+    marginBottom: spacing.xs,
+  },
+  campoRiga: {
+    flexDirection: "row" as const,
+    alignItems: "baseline" as const,
+    gap: spacing.sm,
+    paddingVertical: 3,
+    flexWrap: "wrap" as const,
+  },
+  campoLabel: {
+    fontSize: 11,
+    fontWeight: "800" as const,
+    color: colors.onSurfaceSecondary,
+    minWidth: 110,
+  },
+  campoValore: {
+    fontSize: 13,
+    fontWeight: "700" as const,
+    color: colors.onSurface,
+    flex: 1,
+  },
+  campoAvviso: {
+    fontSize: 10,
+    color: colors.warning,
+    fontWeight: "700" as const,
+  },
+  rieseguiBtn: {
+    flexDirection: "row" as const,
+    alignItems: "center" as const,
+    gap: 4,
+    marginTop: spacing.sm,
+    alignSelf: "flex-start" as const,
+    paddingVertical: 4,
   },
 
   // Pratica

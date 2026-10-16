@@ -18,6 +18,7 @@
     "@react-native-community/datetimepicker": "9.1.0",
     "@react-native-vector-icons/ionicons": "13.1.3",
     "date-fns": "4.1.0",
+    "pdfjs-dist": "4.9.155",
     "dayjs": "1.11.13",
     "expo": "~57.0.23",
     "expo-blur": "~57.0.2",

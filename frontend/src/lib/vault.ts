@@ -5,11 +5,24 @@ import { storage } from "@/src/utils/storage";
 
 const VAULT_FILES_KEY = "salutenav:vaultFiles";
 
+export interface VaultFileCampo {
+  label: string;
+  valore: string;
+  confidenza: number;
+  chiave: string;
+}
+
 export interface VaultFile {
   id: string;
   name: string;
   uri?: string;
   date: string;
+  /** Campi estratti dal documento (on-device) */
+  campiEstratti?: VaultFileCampo[];
+  /** Testo completo estratto (troncato a 5000 char) */
+  testoEstratto?: string;
+  /** Quando è stata fatta l'estrazione */
+  dataEstrazione?: string;
 }
 
 type Listener = (files: VaultFile[]) => void;
@@ -56,6 +69,25 @@ export async function addVaultFile(
   const next = [entry, ...list];
   await persist(next);
   return next;
+}
+
+export async function updateVaultFileData(
+  id: string,
+  campi: VaultFileCampo[],
+  testo: string,
+): Promise<VaultFile[]> {
+  const list = await loadVaultFiles();
+  const idx = list.findIndex((f) => f.id === id);
+  if (idx >= 0) {
+    list[idx] = {
+      ...list[idx],
+      campiEstratti: campi,
+      testoEstratto: testo.slice(0, 5000),
+      dataEstrazione: new Date().toISOString(),
+    };
+    await persist(list);
+  }
+  return list;
 }
 
 export async function removeVaultFileEntry(id: string): Promise<VaultFile[]> {
