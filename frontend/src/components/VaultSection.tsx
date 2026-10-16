@@ -12,6 +12,7 @@ import {
   View,
 } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
+import { useRouter } from "expo-router";
 import * as Print from "expo-print";
 import * as Sharing from "expo-sharing";
 import * as DocumentPicker from "expo-document-picker";
@@ -205,8 +206,37 @@ export function VaultSection({ report }: { report?: Report }) {
               </View>
             ))
         )}
+
+        {/* Link al Cassetto personale */}
+        <CassettoLink />
       </View>
     </View>
+  );
+}
+
+function CassettoLink() {
+  const router = useRouter();
+  return (
+    <Pressable
+      onPress={() => router.push("/cassetto" as any)}
+      style={({ pressed }) => ({
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 6,
+        alignSelf: "flex-start",
+        marginTop: spacing.sm,
+        minHeight: 36,
+        opacity: pressed ? 0.85 : 1,
+      })}
+      accessibilityRole="link"
+      testID="vault-vai-cassetto"
+    >
+      <Ionicons name="folder-outline" size={15} color={colors.brandPrimaryDark} />
+      <Text style={{ fontSize: 13, fontWeight: "800", color: colors.brandPrimaryDark }}>
+        Vedi tutto → Il mio cassetto
+      </Text>
+      <Ionicons name="chevron-forward" size={14} color={colors.brandPrimaryDark} />
+    </Pressable>
   );
 }
 

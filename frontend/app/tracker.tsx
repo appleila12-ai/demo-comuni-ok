@@ -768,6 +768,29 @@ export default function Tracker() {
         {/* Raccolta documenti sul dispositivo (ex "cassaforte referti") */}
         <VaultSection report={ultimoReport} />
 
+        {/* Link al cassetto personale */}
+        <Pressable
+          onPress={() => router.push("/cassetto" as any)}
+          style={({ pressed }) => ({
+            flexDirection: "row",
+            alignItems: "center",
+            gap: 6,
+            alignSelf: "flex-start",
+            marginTop: spacing.sm,
+            marginBottom: spacing.md,
+            minHeight: 36,
+            opacity: pressed ? 0.85 : 1,
+          })}
+          accessibilityRole="link"
+          testID="tracker-vai-cassetto"
+        >
+          <Ionicons name="folder-outline" size={15} color={colors.brandPrimaryDark} />
+          <Text style={{ fontSize: 13, fontWeight: "800", color: colors.brandPrimaryDark }}>
+            Vedi tutto nel tuo Cassetto
+          </Text>
+          <Ionicons name="chevron-forward" size={14} color={colors.brandPrimaryDark} />
+        </Pressable>
+
         <AvantiTappa corrente="pratica" />
         <SezioniBar />
       </ScrollView>
