@@ -141,6 +141,22 @@ export default function Agevolazioni() {
             onPress={() => Linking.openURL(`tel:${comune.telefono.replace(/\s/g, "")}`).catch(() => {})}
           />
         )}
+        {!comune.telefono && !!comune.email && (
+          <Bottone
+            label={`Scrivi a ${comune.ente} · ${comune.email}`}
+            icon="mail-outline"
+            variante="vuoto"
+            onPress={() => Linking.openURL(`mailto:${comune.email}`).catch(() => {})}
+          />
+        )}
+        {!comune.telefono && !comune.email && !!comune.sitoWeb && (
+          <Bottone
+            label={`Sito ${comune.ente}`}
+            icon="globe-outline"
+            variante="vuoto"
+            onPress={() => Linking.openURL(comune.sitoWeb).catch(() => {})}
+          />
+        )}
         <Bottone
           label="Chiedi un colloquio ai Servizi Sociali"
           icon="chatbubbles-outline"

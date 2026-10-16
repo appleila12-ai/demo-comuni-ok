@@ -453,7 +453,19 @@ export default function Tracker() {
             >
               <Ionicons name="mail-outline" size={16} color={warm.warmDark} />
               <Text style={[styles.contactChipText, { color: warm.warmDark }]}>
-                Email
+                Scrivi a {comune.ente}
+              </Text>
+            </Pressable>
+            )}
+            {!comune.telefono && !comune.email && !!comune.sitoWeb && (
+            <Pressable
+              onPress={() => Linking.openURL(comune.sitoWeb).catch(() => {})}
+              style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
+              testID="tracker-comune-sito"
+            >
+              <Ionicons name="globe-outline" size={16} color={warm.warmDark} />
+              <Text style={[styles.contactChipText, { color: warm.warmDark }]}>
+                Sito {comune.ente}
               </Text>
             </Pressable>
             )}
@@ -465,7 +477,7 @@ export default function Tracker() {
             >
               <Ionicons name="location-outline" size={16} color={warm.warmDark} />
               <Text style={[styles.contactChipText, { color: warm.warmDark }]}>
-                Sede
+                Sede {comune.ente}
               </Text>
             </Pressable>
             )}
