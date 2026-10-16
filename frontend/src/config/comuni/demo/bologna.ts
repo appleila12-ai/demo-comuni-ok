@@ -5,6 +5,7 @@ import type { ComuneConfig } from "../types";
 // Il sito del Comune di Bologna non si apre in automatico e la tabella degli sportelli sociali nei dati aperti non si è caricata:
 // indirizzi, telefoni e orari degli sportelli NON sono verificati. È confermato solo (dalla descrizione del dataset del Comune) che gli Sportelli Sociali
 // sono la porta di accesso ai servizi sociali e si trovano nei sei Quartieri della città.
+// 16 ottobre 2026: numero unico e email unica degli Sportelli sociali, letti nella notizia del Comune del 06/03/2019 (testo incollato dalla dott.ssa Baudone). La notizia è del 2019 e non risulta aggiornata: da riconfermare con il Comune prima di un uso reale.
 // Da fare: elenco degli Sportelli Sociali per Quartiere (indirizzo, telefono, orari), bonus del Comune, associazioni, sport e tempo libero.
 export const bologna: ComuneConfig = {
   slug: "bologna",
@@ -18,11 +19,11 @@ export const bologna: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
+  indirizzo: "Piazza Maggiore 6, 40124 Bologna (sede del Comune)",
+  telefono: "051 219 7878",
+  email: "sportellosocialebologna@comune.bologna.it",
   pec: "",
-  orari: "",
+  orari: "Numero unico Sportelli sociali: lunedì-venerdì 9-13; lunedì e venerdì anche 13.30-16; martedì e giovedì anche 13.30-17.30 (dato del 2019)",
   sitoWeb: "https://www.comune.bologna.it",
 
   logo: null,
@@ -37,8 +38,14 @@ export const bologna: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Sportelli Sociali del Comune di Bologna",
-      subtitle: "Sono la porta di accesso ai servizi sociali e si trovano nei sei Quartieri della città. Indirizzi e orari sono nell'elenco dei dati aperti del Comune",
+      title: "Numero unico Sportelli sociali",
+      subtitle: "051 219 7878 · per disabili, anziani, famiglie con minori, adulti in difficoltà (dato del 2019, da riconfermare)",
+      action: { type: "tel", value: "0512197878" },
+    },
+    {
+      icon: "list-outline",
+      title: "Sportelli Sociali per Quartiere",
+      subtitle: "Indirizzi e orari nell'elenco dei dati aperti del Comune",
       action: { type: "web", value: "https://opendata.comune.bologna.it/explore/dataset/sportelli-sociali/table/" },
     },
     {
