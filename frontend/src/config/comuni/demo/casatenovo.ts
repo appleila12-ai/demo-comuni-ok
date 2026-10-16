@@ -19,7 +19,7 @@ export const casatenovo: ComuneConfig = {
   telefono: "039 9235282",
   email: "servizio.sociale@comune.casatenovo.lc.it",
   orari: "Lun 9:00–12:30 e 16:00–18:00; Mar, Gio, Ven 9:00–13:00",
-  sitoWeb: "https://comune.casatenovo.lc.it/unità-organizzative/2198744/ufficio-servizi-sociali",
+  sitoWeb: "https://comune.casatenovo.lc.it/unit%C3%A0-organizzative/2198744/ufficio-servizi-sociali",
 
   logo: null,
 
