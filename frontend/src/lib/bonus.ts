@@ -17,6 +17,7 @@
 // Settima raccolta: 14/10/2026, schede regionali in app: Piemonte (Buono domiciliarità 2026-2027, misure disabilità) ed Emilia-Romagna.
 // Ottava raccolta: 15/10/2026, Toscana.
 // Nona raccolta: 15/10/2026, Puglia (Patto di cura), Veneto (ICD).
+// Decima raccolta: 18/10/2026, Unione dei Comuni del Distretto Ceramico (Sassuolo).
 
 import { comune } from "@/src/config/comune";
 
@@ -534,6 +535,29 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "14/10/2026",
     nota: "Pagina aggiornata il 17/04/2025. Esistono anche contributi per i caregiver: chiedi al servizio sociale del tuo Comune.",
+  },
+
+  // --------------------------------------------- DISTRETTO CERAMICO (SASSUOLO)
+  {
+    id: "distretto-ceramico-mobilita-casa-lavoro",
+    regione: "Emilia-Romagna",
+    comuni: ["sassuolo"],
+    titolo: "Contributi per il trasporto casa-lavoro dei lavoratori con disabilità",
+    perChi:
+      "Persone con disabilità residenti in uno degli otto Comuni dell'Unione del Distretto Ceramico (Sassuolo, Fiorano Modenese, Formigine, Frassinoro, Maranello, Montefiorino, Palagano, Prignano sulla Secchia), già al lavoro tramite il collocamento mirato, con contratto a tempo indeterminato o determinato, che hanno bisogno di un trasporto personalizzato. Sono equiparati ai dipendenti i soci lavoratori di cooperative.",
+    cosa:
+      "Rimborso delle spese per andare e tornare dal lavoro, quando i mezzi pubblici non sono adeguati o non vanno bene con gli orari di lavoro. Il contributo massimo è di 3.000 euro e non può superare le spese documentate. Si rimborsano i servizi di trasporto di Comuni, associazioni o cooperative, il taxi, oppure l'accompagnamento da parte di colleghi o familiari. Non si rimborsano il trasporto pubblico di linea e i giorni di lavoro da casa.",
+    stato: "da-verificare",
+    quando:
+      "L'ultimo avviso che abbiamo trovato è quello dell'anno 2024, con domande entro le ore 13:00 del 27 giugno 2025. Non sappiamo se è stato riaperto per il 2026.",
+    comeSiChiede:
+      "Con il Modello B dell'avviso, allegando i documenti che attestano la necessità del trasporto personalizzato. Si consegna a mano agli sportelli sociali dei Comuni, si invia per raccomandata, oppure via PEC a sociali@cert.distrettoceramico.mo.it. Informazioni all'Ufficio di Piano, Settore Politiche Sociali: tel. 0536 880598.",
+    fonte: {
+      label: "Unione dei Comuni del Distretto Ceramico · Avviso contributi mobilità casa-lavoro",
+      url: "https://www.distrettoceramico.mo.it/novita/avvisi/contributi-a-sostegno-della-mobilita-casa-lavoro-per-persone-che-lavoro-con-disabilita-anno-2024",
+    },
+    verificatoIl: "18/10/2026",
+    nota: "A Sassuolo i servizi sociali sono gestiti in forma associata dall'Unione dei Comuni del Distretto Ceramico. È una misura annuale: chiedi all'Ufficio di Piano se c'è l'avviso per il 2026.",
   },
 
   // ----------------------------------------------------------------- CAMPANIA

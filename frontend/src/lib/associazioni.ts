@@ -3,6 +3,8 @@
 // quelle del Comune stesso. Dati raccolti a settembre 2026 da siti delle associazioni,
 // del Comune della Spezia (Distretto 18), del CIP, di SportAbility Liguria e da
 // articoli locali recenti. "verificare: true" = recapito da confermare.
+// Aggiornamento 18/10/2026: sport per Toscana, Emilia-Romagna, Veneto e Abruzzo
+// (recapiti dal sito del CIP); associazioni per Firenze, Sassuolo e Avezzano.
 
 import { comune } from "@/src/config/comune";
 
@@ -221,6 +223,71 @@ const SPORT_REGIONE: Record<string, Associazione[]> = {
       sito: "https://www.specialolympics.it",
     },
   ],
+  // Toscana, Emilia-Romagna, Veneto e Abruzzo: recapiti dei Comitati regionali
+  // presi dal sito del Comitato Italiano Paralimpico il 18/10/2026.
+  Toscana: [
+    {
+      nome: "CIP – Comitato Paralimpico Toscana",
+      cosa: "Coordina lo sport paralimpico in Toscana: tutte le discipline riconosciute, per persone con disabilità fisica, sensoriale e intellettivo-relazionale. Ti indica la società sportiva più vicina.",
+      dove: "Via di Ripoli 207/V, 50126 Firenze",
+      telefono: "055 661576",
+      email: "toscana@comitatoparalimpico.it",
+      sito: "https://www.comitatoparalimpico.it/organizzazione/territorio/comitati-regionali/toscana.html",
+    },
+    {
+      nome: "Special Olympics – Team Toscana",
+      cosa: "Allenamenti e gare per persone con disabilità intellettiva, senza limiti di età. Scrivi al referente regionale: ti indica il Team più vicino a casa tua.",
+      email: "toscana@specialolympics.it",
+      sito: "https://specialolympics.it/la-rete/",
+    },
+  ],
+  "Emilia-Romagna": [
+    {
+      nome: "CIP – Comitato Paralimpico Emilia-Romagna",
+      cosa: "Coordina lo sport paralimpico in Emilia-Romagna, con delegati in ogni provincia, e ti indica la società sportiva più vicina.",
+      dove: "Via Trattati Comunitari Europei 7, 40127 Bologna",
+      telefono: "051 9913160",
+      email: "emiliaromagna@comitatoparalimpico.it",
+      sito: "https://www.comitatoparalimpico.it/organizzazione/territorio/comitati-regionali/emilia-romagna.html",
+    },
+    {
+      nome: "Special Olympics – Team Emilia-Romagna",
+      cosa: "Allenamenti e gare per persone con disabilità intellettiva, senza limiti di età. Scrivi al referente regionale: ti indica il Team più vicino a casa tua.",
+      email: "emiliaromagna@specialolympics.it",
+      sito: "https://specialolympics.it/la-rete/",
+    },
+  ],
+  Veneto: [
+    {
+      nome: "CIP – Comitato Paralimpico Veneto",
+      cosa: "Coordina lo sport paralimpico in Veneto: tutte le discipline riconosciute, per persone con disabilità fisica, sensoriale e intellettivo-relazionale. Ti indica la società sportiva più vicina.",
+      dove: "Via Nereo Rocco, presso lo Stadio Euganeo, 35136 Padova",
+      telefono: "049 8658485",
+      email: "veneto@comitatoparalimpico.it",
+      sito: "https://www.comitatoparalimpico.it/organizzazione/territorio/comitati-regionali/veneto.html",
+    },
+    {
+      nome: "Special Olympics – Team Veneto",
+      cosa: "Allenamenti e gare per persone con disabilità intellettiva, senza limiti di età. Scrivi al referente regionale: ti indica il Team più vicino a casa tua.",
+      email: "veneto@specialolympics.it",
+      sito: "https://specialolympics.it/la-rete/",
+    },
+  ],
+  Abruzzo: [
+    {
+      nome: "CIP – Comitato Paralimpico Abruzzo",
+      cosa: "Coordina lo sport paralimpico in Abruzzo e ti indica la società sportiva più vicina a casa tua.",
+      dove: "Via Botticelli 28, 65124 Pescara",
+      email: "abruzzo@comitatoparalimpico.it",
+      sito: "https://www.comitatoparalimpico.it/organizzazione/territorio/comitati-regionali/abruzzo.html",
+    },
+    {
+      nome: "Special Olympics – Team Abruzzo",
+      cosa: "Allenamenti e gare per persone con disabilità intellettiva, senza limiti di età. Scrivi al referente regionale: ti indica il Team più vicino a casa tua.",
+      email: "abruzzo@specialolympics.it",
+      sito: "https://specialolympics.it/la-rete/",
+    },
+  ],
 };
 
 // ---------------------------------------------------------------- validi ovunque
@@ -398,6 +465,41 @@ PER_PROVINCIA.AQ.volontariato.unshift(
     comuni: ["laquila", "ocre"],
   },
 );
+
+// Firenze (FI): dati dal sito dell'associazione (18/10/2026).
+// Vale per tutti i Comuni della provincia, Sesto Fiorentino compreso.
+PER_PROVINCIA.FI = PER_PROVINCIA.FI ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.FI.volontariato.unshift({
+  nome: "Anffas Firenze",
+  cosa: "Attiva dal 1959 con le persone con disabilità intellettiva e disturbi del neurosviluppo e le loro famiglie: centro di riabilitazione semiresidenziale, case della comunità familiare, percorsi per l'autonomia.",
+  dove: "Via Bolognese 232, 50139 Firenze",
+  telefono: "055 400151",
+  email: "info@anffasfirenze.it",
+  sito: "https://www.anffasfirenze.it",
+  province: ["FI"],
+});
+
+// Sassuolo (MO): associazione segnalata dai progetti finanziati della Regione
+// Emilia-Romagna (18/10/2026). Recapiti da confermare con l'associazione.
+PER_PROVINCIA.MO = PER_PROVINCIA.MO ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.MO.volontariato.unshift({
+  nome: "Anffas APS Sassuolo",
+  cosa: "Famiglie di persone con disabilità intellettiva e relazionale. Porta avanti il progetto \"Sul Serio\", una rivista scritta da una redazione di giovani con e senza disabilità, e mette a disposizione la propria sede per le attività.",
+  dove: "Sassuolo (MO)",
+  comuni: ["sassuolo"],
+  verificare: true,
+});
+
+// Avezzano (AQ): fondazione riconosciuta dalla Regione Abruzzo (18/10/2026).
+// Recapiti da confermare con l'ente.
+PER_PROVINCIA.AQ = PER_PROVINCIA.AQ ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.AQ.volontariato.unshift({
+  nome: "Fondazione Anffas Avezzano \"Giovannino di Pangrazio\"",
+  cosa: "Si occupa di persone con disabilità intellettiva e relazionale e delle loro famiglie. Ha aperto ad Avezzano lo spazio \"Anffas 22 Revolution\" per l'integrazione e il benessere.",
+  dove: "Avezzano (AQ)",
+  comuni: ["avezzano"],
+  verificare: true,
+});
 
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
