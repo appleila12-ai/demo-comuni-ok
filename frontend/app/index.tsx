@@ -20,7 +20,7 @@ import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
 import { CasellaRicerca } from "@/src/components/CasellaRicerca";
-import { ScriviAlComune } from "@/src/components/ScriviAlComune";
+import { RichiestaComuneFinestra, ScriviAlComune } from "@/src/components/ScriviAlComune";
 import { useSalvati } from "@/src/lib/salvati";
 
 const FEATURES = [
@@ -210,6 +210,17 @@ function HomeDelComune() {
 
         {/* In apertura: mail già pronta da mandare al proprio Comune */}
         <ScriviAlComune />
+        <Pressable
+          onPress={() => router.push("/per-i-comuni")}
+          style={({ pressed }) => [styles.enteBottone, pressed && styles.pressed]}
+          accessibilityRole="button"
+          accessibilityLabel="Sei un Comune o un ente? Contatta TutelApp"
+          testID="comune-per-i-comuni"
+        >
+          <Ionicons name="business-outline" size={22} color={colors.brandPrimaryDark} />
+          <Text style={styles.enteBottoneTesto}>Sei un Comune o un ente? Contattaci</Text>
+        </Pressable>
+        <RichiestaComuneFinestra />
 
         <View style={styles.divider} />
 
@@ -456,17 +467,6 @@ function HomeDelComune() {
           <Text style={styles.switchText}>
             Non sei {comune.tipo === "unione" ? "di questo territorio" : `di ${comune.nomeBreve}`}? Scegli il tuo Comune
           </Text>
-        </Pressable>
-
-        <Pressable
-          onPress={() => router.push("/per-i-comuni")}
-          style={({ pressed }) => [styles.enteBottone, pressed && styles.pressed]}
-          accessibilityRole="button"
-          accessibilityLabel="Sei un Comune o un ente? Contatta TutelApp"
-          testID="comune-per-i-comuni"
-        >
-          <Ionicons name="business-outline" size={22} color={colors.brandPrimaryDark} />
-          <Text style={styles.enteBottoneTesto}>Sei un Comune o un ente? Contattaci</Text>
         </Pressable>
 
         {/* Accesso discreto al cruscotto (protetto da codice) per gli operatori */}
@@ -774,7 +774,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: spacing.sm,
     minHeight: 52,
-    marginTop: spacing.md,
+    marginTop: 0,
+    marginBottom: spacing.sm,
     paddingHorizontal: spacing.lg,
     borderRadius: radius.lg,
     borderWidth: 1.5,
