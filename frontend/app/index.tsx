@@ -20,7 +20,7 @@ import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
 import { CasellaRicerca } from "@/src/components/CasellaRicerca";
-import { RichiestaComuneFinestra, ScriviAlComune } from "@/src/components/ScriviAlComune";
+import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
 import { useSalvati } from "@/src/lib/salvati";
 
 const FEATURES = [
@@ -208,8 +208,7 @@ function HomeDelComune() {
           </View>
         )}
 
-        {/* In apertura: mail già pronta da mandare al proprio Comune */}
-        <ScriviAlComune />
+        {/* Per gli enti: contatto con TutelApp. La richiesta ai Comuni è la finestra che si apre al ritorno nella Home */}
         <Pressable
           onPress={() => router.push("/per-i-comuni")}
           style={({ pressed }) => [styles.enteBottone, pressed && styles.pressed]}
@@ -774,7 +773,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: spacing.sm,
     minHeight: 52,
-    marginTop: 0,
+    marginTop: spacing.md,
     marginBottom: spacing.sm,
     paddingHorizontal: spacing.lg,
     borderRadius: radius.lg,
