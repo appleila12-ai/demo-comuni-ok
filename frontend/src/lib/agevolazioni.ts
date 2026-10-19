@@ -160,6 +160,16 @@ export function calcola(r: Risposte): Agevolazione[] {
       come: "Si chiede online sul sito INPS (con SPID o CIE), caricando una foto. È gratuita e dà accesso ad agevolazioni per musei, trasporti ed eventi. C'è anche in versione digitale nell'app IO.",
       link: { label: "Come funziona la Carta", href: "https://www.disabilita.governo.it/it/carta-europea-disabilita-ced/come-funziona-la-carta/" },
     });
+  } else if (riconosciuto(r)) {
+    out.push({
+      id: "carta-ue",
+      area: "Servizi del Comune",
+      titolo: "Carta europea della disabilità",
+      perche: "Spetta anche ai minori con invalidità civile, ai ciechi e ai sordi civili e ad altre categorie: controlla se rientri.",
+      come: "Se rientri, si chiede online sul sito INPS (con SPID, CIE o CNS), caricando una foto. È gratuita e c'è anche in versione digitale nell'app IO.",
+      link: { label: "Chi può chiederla", href: "https://www.disabilita.governo.it/it/carta-europea-disabilita-ced/come-funziona-la-carta/" },
+      forse: true,
+    });
   }
 
   if (r.invalidita === "74-99") {
