@@ -4,6 +4,7 @@
 // Nessun dato del cittadino passa da TutelApp: si apre il suo programma di posta.
 
 import type { ComuneConfig } from "@/src/config/comune";
+import { DESTINATARI } from "@/src/config/comuni/destinatari";
 
 export const CONTATTO_TUTELAPP = "info@tutelapp.it";
 export const SITO_TUTELAPP = "www.tutelapp.it";
@@ -24,7 +25,9 @@ export type RichiestaComune = {
 export function costruisciRichiesta(c: ComuneConfig): RichiestaComune {
   const unione = c.tipo === "unione";
   const ilNostroEnte = unione ? "la nostra Unione" : "il nostro Comune";
-  const a = (c.email || c.pec || "").trim();
+  // Prima la mail dei Servizi Sociali in scheda, poi l'elenco dei destinatari, infine la PEC
+  const elenco = DESTINATARI[c.slug];
+  const a = (c.email || elenco?.email || c.pec || "").trim();
 
   const oggetto = unione
     ? "Chiediamo di mantenere e far crescere TutelApp nel nostro territorio"
@@ -56,7 +59,7 @@ export function costruisciRichiesta(c: ComuneConfig): RichiestaComune {
     cc: CONTATTO_TUTELAPP,
     oggetto,
     testo,
-    daControllare: !a || !!c.daVerificare,
+    daControllare: !a || !!c.daVerificare || (!c.email && !!elenco),
   };
 }
 
