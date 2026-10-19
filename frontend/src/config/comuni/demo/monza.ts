@@ -1,9 +1,10 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Monza (MB) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
+// Comune di Monza (MB) — VERSIONE DIMOSTRATIVA, SCHEDA COMPLETATA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // È verificato solo l'indirizzo web indicato in sitoWeb.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
+// Completata il 19 ottobre 2026: Misura B2 2025-2026 (chiusa) in bonus.ts, un'associazione sportiva in associazioni.ts, Segretariato Sociale con numero letto sul sito del Comune.
+// Da confermare con l'ente: orari e indirizzo dei Servizi Sociali, nuova edizione della Misura B2, altre società sportive (elenco molto lungo, non letto tutto); manca il sito dell'azienda sanitaria.
 export const monza: ComuneConfig = {
   slug: "monza",
   tipo: "comune",
@@ -38,6 +39,12 @@ export const monza: ComuneConfig = {
       title: "Servizi Sociali del Comune",
       subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
       action: { type: "web", value: "https://www.comune.monza.it" },
+    },
+    {
+      icon: "call-outline",
+      title: "Segretariato Sociale",
+      subtitle: "Primo ascolto sociale · Tel. 334 6311270",
+      action: { type: "tel", value: "3346311270" },
     },
   ],
 

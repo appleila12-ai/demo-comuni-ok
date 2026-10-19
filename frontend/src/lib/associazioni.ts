@@ -5,6 +5,8 @@
 // articoli locali recenti. "verificare: true" = recapito da confermare.
 // Aggiornamento 18/10/2026: sport per Toscana, Emilia-Romagna, Veneto e Abruzzo
 // (recapiti dal sito del CIP); associazioni per Firenze, Sassuolo e Avezzano.
+// Aggiornamento 19/10/2026: associazioni e sport per Brescia, Modena e Monza
+// (elenco sedi di Anffas e elenchi dei siti dei Comuni).
 
 import { comune } from "@/src/config/comune";
 
@@ -498,6 +500,101 @@ PER_PROVINCIA.AQ.volontariato.unshift({
   cosa: "Si occupa di persone con disabilità intellettiva e relazionale e delle loro famiglie. Ha aperto ad Avezzano lo spazio \"Anffas 22 Revolution\" per l'integrazione e il benessere.",
   dove: "Avezzano (AQ)",
   comuni: ["avezzano"],
+  verificare: true,
+});
+
+// Brescia (BS): recapiti dall'elenco "Dove siamo" del sito nazionale di Anffas (19/10/2026).
+PER_PROVINCIA.BS = PER_PROVINCIA.BS ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.BS.volontariato.unshift({
+  nome: "Anffas Brescia",
+  cosa: "Associazione di famiglie di persone con disabilità intellettiva e relazionale.",
+  dove: "Via Michelangelo 405, 25124 Brescia",
+  telefono: "030 2319071",
+  email: "info@anffasbrescia.it",
+  sito: "https://www.anffasbrescia.it",
+  comuni: ["brescia"],
+});
+
+// Modena (MO): dall'elenco "Sport per persone con disabilità" del Comune di Modena
+// (pagina aggiornata l'11/05/2023, letta il 19/10/2026). Recapiti da confermare.
+PER_PROVINCIA.MO = PER_PROVINCIA.MO ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.MO.volontariato.unshift({
+  nome: "Anffas Modena",
+  cosa: "Associazione di famiglie di persone con disabilità intellettiva e relazionale. Sede e centro diurno in via Luosi; altra sede in via Due Canali Nord 235 (tel. 059 454335). Propone attività con i cavalli.",
+  dove: "Via Luosi 14, Modena",
+  telefono: "059 216977",
+  sito: "https://www.anffasmodena.it",
+  comuni: ["modena"],
+  verificare: true,
+});
+PER_PROVINCIA.MO.sport.unshift(
+  {
+    nome: "Asham – Associazione Sportiva Handicap Modena",
+    cosa: "Atletica, podismo, nuoto, tennis tavolo, tiro con l'arco, equitazione e mantenimento fisico.",
+    dove: "Via Santa Caterina 120/3, Modena",
+    email: "info.asham@tiscalinet.it",
+    sito: "https://www.asham-modena.it",
+    comuni: ["modena"],
+    verificare: true,
+  },
+  {
+    nome: "UISP – Comitato Provinciale di Modena",
+    cosa: "Nuoto e acquaticità, calcio a 5 e pallavolo, eventi sul territorio, attività con il servizio di neuropsichiatria dell'AUSL e formazione per istruttori.",
+    dove: "Via IV Novembre 40/h, Modena",
+    telefono: "059 348811",
+    email: "modena@uisp.it",
+    sito: "https://www.uisp.it/modena",
+    province: ["MO"],
+    verificare: true,
+  },
+  {
+    nome: "ASD Sci Club Paralimpico Fanano",
+    cosa: "Sci alpino e nordico, snowboard, pattinaggio su ghiaccio, escursioni con le ciaspole e slittino su ghiaccio.",
+    dove: "Via Pegli 25, Modena",
+    telefono: "333 986992",
+    email: "info@sciclubparalimpicofanano.it",
+    comuni: ["modena"],
+    verificare: true,
+  },
+  {
+    nome: "ASD Canottieri Mutina 1930",
+    cosa: "Kayak agonistico e amatoriale ai Laghi Curiel di Campogalliano.",
+    dove: "Via Albone 31, Campogalliano (MO)",
+    telefono: "335 494164",
+    email: "segreteria@canottierimutina.it",
+    sito: "https://asdcanottierimutina.wordpress.com",
+    comuni: ["modena"],
+    verificare: true,
+  },
+  {
+    nome: "ASD Gruppo Sportivo Sordi Modena",
+    cosa: "Sport per persone sorde: calcio a 5 e a 11, basket, pallavolo, beach volley, biliardo, pesca e tennis.",
+    dove: "Strada Contrada 127, Modena",
+    email: "gssordimodena@fssi.it",
+    sito: "https://www.fssi.it",
+    comuni: ["modena"],
+    verificare: true,
+  },
+  {
+    nome: "Sporting Club Deaf Modena",
+    cosa: "Sport per persone sorde: sci giovanile, nuoto femminile, equitazione e minigolf.",
+    dove: "Via Perù 9, Modena",
+    email: "sportingclubmo@fssi.it",
+    comuni: ["modena"],
+    verificare: true,
+  },
+);
+
+// Monza (MB): dall'elenco delle associazioni sportive del Comune di Monza (letto il 19/10/2026).
+// La pagina è molto lunga e non è stata letta tutta: possono esserci altre società. Recapiti da confermare.
+PER_PROVINCIA.MB = PER_PROVINCIA.MB ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.MB.sport.unshift({
+  nome: "ASD Silvia Tremolada APS",
+  cosa: "Nell'elenco del Comune di Monza porta la dicitura Comitato Italiano Paralimpico. Attività elencate: atletica, bocce, calcio e calcetto.",
+  dove: "Via Ramazzotti 19, Monza",
+  telefono: "349 8328244",
+  sito: "http://www.silviatremolada.it/",
+  comuni: ["monza"],
   verificare: true,
 });
 

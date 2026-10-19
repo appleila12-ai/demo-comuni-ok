@@ -1,9 +1,10 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Modena (MO) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
+// Comune di Modena (MO) — VERSIONE DIMOSTRATIVA, SCHEDA COMPLETATA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Pagina "Salute, benessere e assistenza" del sito del Comune, controllata il 13 ottobre 2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Completata il 19 ottobre 2026: 2 misure del Comune in bonus.ts (assegno di cura per disabili, Disability Card), Anffas Modena e 6 realtà sportive in associazioni.ts, da pagine del sito del Comune.
+// Da confermare con l'ente: importi dell'assegno di cura (pagina del 2015), recapiti delle associazioni sportive (elenco del 2023); email, indirizzo e orari dei Servizi Sociali (non verificati).
 export const modena: ComuneConfig = {
   slug: "modena",
   tipo: "comune",
