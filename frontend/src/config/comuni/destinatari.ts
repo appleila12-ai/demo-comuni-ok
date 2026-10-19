@@ -10,7 +10,6 @@
 // Fonti: elenco Excel dei Comuni e file "contatti servizi sociali" forniti il 19/10/2026.
 // Verificati solo nella forma (indirizzo generico, dominio del Comune): nessuna prova di consegna.
 // Gli indirizzi di tipo "pec" sono PEC di protocollo: possono rifiutare mail da caselle non certificate.
-// Mancano ancora Reggio Calabria e Reggio Emilia.
 
 export type Destinatario = {
   email: string;
@@ -385,4 +384,8 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "vibo-valentia": { email: "protocollocomunevibo@pec.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Vittoria (RG)
   "vittoria": { email: "protocollogenerale@pec.comunevittoria-rg.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  // Reggio Calabria (RC)
+  "reggio-calabria": { email: "urp@reggiocal.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Reggio Emilia (RE)
+  "reggio-emilia": { email: "comune.informa@comune.re.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
 };
