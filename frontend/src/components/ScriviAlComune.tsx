@@ -3,7 +3,7 @@
 // Il cittadino può modificare il testo prima di inviare, o copiarlo.
 
 import { useMemo, useState } from "react";
-import { Linking, StyleSheet, Text, View } from "react-native";
+import { Linking, Pressable, StyleSheet, Text, View } from "react-native";
 import * as Clipboard from "expo-clipboard";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
@@ -46,16 +46,20 @@ export function ScriviAlComune() {
       </View>
       <Text style={styles.testo}>
         Vuoi più argomenti, più agevolazioni e più informazioni sulla disabilità? Scrivi{" "}
-        {comune.tipo === "unione" ? "alla tua Unione" : `al Comune di ${comune.nomeBreve}`}: ti
-        apriamo la mail già pronta, la puoi modificare prima di inviarla.
+        {comune.tipo === "unione" ? "alla tua Unione" : `al Comune di ${comune.nomeBreve}`}: la
+        mail è già pronta, la puoi modificare prima di inviarla.
       </Text>
       <View style={styles.bottoni}>
-        <Bottone
-          label="Scrivi al tuo Comune"
-          icon="mail-outline"
+        <Pressable
           onPress={apriMail}
+          style={({ pressed }) => [styles.bottoneGrande, pressed && { opacity: 0.85 }]}
+          accessibilityRole="button"
+          accessibilityLabel="Scrivi al tuo Comune: apre la mail già compilata"
           testID="scrivi-al-comune-invia"
-        />
+        >
+          <Ionicons name="mail" size={26} color="#FFFFFF" />
+          <Text style={styles.bottoneGrandeTesto}>Scrivi al tuo Comune</Text>
+        </Pressable>
         <Bottone
           label={copiato ? "Testo copiato" : "Copia il testo"}
           icon={copiato ? "checkmark-circle-outline" : "copy-outline"}
@@ -83,10 +87,11 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.surface,
     borderRadius: radius.lg,
-    borderWidth: 1,
-    borderColor: colors.border,
+    borderColor: colors.brandPrimary,
+    borderWidth: 1.5,
     padding: spacing.lg,
-    marginTop: spacing.lg,
+    marginTop: spacing.md,
+    marginBottom: spacing.md,
     gap: spacing.md,
   },
   titolo: { flexDirection: "row", alignItems: "center", gap: spacing.md },
@@ -108,5 +113,16 @@ const styles = StyleSheet.create({
   },
   testo: { fontSize: 15, lineHeight: 22, color: colors.onSurface },
   bottoni: { gap: spacing.sm },
+  bottoneGrande: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: spacing.md,
+    minHeight: 64,
+    paddingHorizontal: spacing.lg,
+    borderRadius: radius.lg,
+    backgroundColor: colors.brandPrimary,
+  },
+  bottoneGrandeTesto: { fontSize: 20, fontWeight: "800", color: "#FFFFFF" },
   nota: { fontSize: 14, lineHeight: 20, color: colors.onSurface },
 });

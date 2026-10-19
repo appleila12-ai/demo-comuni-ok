@@ -208,6 +208,9 @@ function HomeDelComune() {
           </View>
         )}
 
+        {/* In apertura: mail già pronta da mandare al proprio Comune */}
+        <ScriviAlComune />
+
         <View style={styles.divider} />
 
         {/* Brand + accoglienza */}
@@ -435,8 +438,6 @@ function HomeDelComune() {
           </Pressable>
         </View>
 
-        <ScriviAlComune />
-
         <Text style={styles.footer}>
           Informazioni di orientamento · Verifica sempre le procedure sui canali ufficiali degli enti competenti.
           {HA_BACKEND
@@ -459,13 +460,13 @@ function HomeDelComune() {
 
         <Pressable
           onPress={() => router.push("/per-i-comuni")}
-          style={({ pressed }) => [styles.switchLink, pressed && styles.pressed]}
-          accessibilityRole="link"
+          style={({ pressed }) => [styles.enteBottone, pressed && styles.pressed]}
+          accessibilityRole="button"
           accessibilityLabel="Sei un Comune o un ente? Contatta TutelApp"
           testID="comune-per-i-comuni"
         >
-          <Ionicons name="business-outline" size={14} color={colors.onSurfaceTertiary} />
-          <Text style={styles.switchText}>Sei un Comune o un ente? Contattaci</Text>
+          <Ionicons name="business-outline" size={22} color={colors.brandPrimaryDark} />
+          <Text style={styles.enteBottoneTesto}>Sei un Comune o un ente? Contattaci</Text>
         </Pressable>
 
         {/* Accesso discreto al cruscotto (protetto da codice) per gli operatori */}
@@ -767,6 +768,19 @@ const styles = StyleSheet.create({
     marginTop: spacing.lg,
     paddingVertical: spacing.sm,
   },
+  enteBottone: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: spacing.sm,
+    minHeight: 52,
+    marginTop: spacing.md,
+    paddingHorizontal: spacing.lg,
+    borderRadius: radius.lg,
+    borderWidth: 1.5,
+    borderColor: colors.brandPrimaryDark,
+  },
+  enteBottoneTesto: { fontSize: 16, fontWeight: "800", color: colors.brandPrimaryDark },
   switchText: {
     fontSize: 11,
     color: colors.onSurfaceTertiary,
