@@ -20,6 +20,7 @@ import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
 import { CasellaRicerca } from "@/src/components/CasellaRicerca";
+import { ScriviAlComune } from "@/src/components/ScriviAlComune";
 import { useSalvati } from "@/src/lib/salvati";
 
 const FEATURES = [
@@ -434,6 +435,8 @@ function HomeDelComune() {
           </Pressable>
         </View>
 
+        <ScriviAlComune />
+
         <Text style={styles.footer}>
           Informazioni di orientamento · Verifica sempre le procedure sui canali ufficiali degli enti competenti.
           {HA_BACKEND
@@ -452,6 +455,17 @@ function HomeDelComune() {
           <Text style={styles.switchText}>
             Non sei {comune.tipo === "unione" ? "di questo territorio" : `di ${comune.nomeBreve}`}? Scegli il tuo Comune
           </Text>
+        </Pressable>
+
+        <Pressable
+          onPress={() => router.push("/per-i-comuni")}
+          style={({ pressed }) => [styles.switchLink, pressed && styles.pressed]}
+          accessibilityRole="link"
+          accessibilityLabel="Sei un Comune o un ente? Contatta TutelApp"
+          testID="comune-per-i-comuni"
+        >
+          <Ionicons name="business-outline" size={14} color={colors.onSurfaceTertiary} />
+          <Text style={styles.switchText}>Sei un Comune o un ente? Contattaci</Text>
         </Pressable>
 
         {/* Accesso discreto al cruscotto (protetto da codice) per gli operatori */}
