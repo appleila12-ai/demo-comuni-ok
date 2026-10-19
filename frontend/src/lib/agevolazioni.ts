@@ -245,6 +245,28 @@ export function calcola(r: Risposte): Agevolazione[] {
       forse: true,
     });
   }
+  if (grave && r.lavoro === "dipendente" && r.per === "familiare" && r.minore === "si") {
+    out.push({
+      id: "prolungamento-congedo",
+      area: "Lavoro",
+      titolo: "Prolungamento del congedo parentale per un figlio con disabilità grave",
+      perche: "Per i genitori lavoratori dipendenti di un figlio con la 104 grave. Si può usare fino agli 8 anni del bambino, per un massimo di 3 anni in tutto, compresi i congedi parentali ordinari, ed è a turno tra i genitori.",
+      come: "Si chiede all'INPS (nel privato) o alla propria amministrazione. Per lo stesso figlio non si somma, nello stesso mese, ai permessi di 3 giorni. L'importo dell'indennità conviene verificarlo sulla pagina INPS.",
+      link: { label: "Regole INPS (circolare 32/2012)", href: "https://servizi2.inps.it/servizi/Bussola/VisualizzaDoc.aspx?sVirtualURL=%2FCircolari%2FCircolare+numero+32+del+06-03-2012.htm" },
+      forse: true,
+    });
+  }
+  if (riconosciuto(r) && r.lavoro === "dipendente" && r.per === "familiare") {
+    out.push({
+      id: "permesso-infermita",
+      area: "Lavoro",
+      titolo: "Permesso di 3 giorni l'anno per grave infermità di un familiare",
+      perche: "Per chi lavora e ha un coniuge, un parente fino al secondo grado o un convivente con una grave infermità documentata. Sono 3 giorni di lavoro all'anno, retribuiti.",
+      come: "Chiedilo al datore di lavoro con la documentazione medica. Per il convivente serve il certificato di stato di famiglia. In alternativa si può concordare con il datore di lavoro un'altra organizzazione del lavoro. Se il bisogno è più lungo, esiste anche un congedo fino a 2 anni per gravi motivi familiari, ma non è retribuito.",
+      link: { label: "Legge 53/2000, art. 4", href: "https://www.lavoro.gov.it/sites/default/files/archivio-doc-pregressi/ConsiglieraNazionale/Normativa/LEGGE8marzo2000n53.pdf" },
+      forse: true,
+    });
+  }
   if (almeno(r, 46) && r.lavoro === "dipendente" && r.per === "me") {
     out.push({
       id: "congedo-cure",
