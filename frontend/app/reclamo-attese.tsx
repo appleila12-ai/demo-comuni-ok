@@ -36,7 +36,7 @@ import { Avviso, Bottone, Campo, Intro, Pagina, Scelte, paginaStili } from "@/sr
 const DATI_KEY = "tutelapp:reclamo:dati";
 /** Dati personali che l'app ricorda su questo dispositivo (non quelli della prestazione) */
 const RICORDATI = ["nome", "cognome", "luogoN", "provN", "nascita", "comune", "prov", "cap", "via", "civ", "cf", "cell", "tel", "email"];
-const PASSI = ["Come funziona", "I tuoi dati", "La prestazione", "A chi inviare", "Controlla e invia"];
+const PASSI = ["Come funziona", "I miei dati", "La prestazione", "A chi inviare", "Controlla e invia"];
 const LOGO = require("../assets/images/aps-gazebo-logo.png");
 
 function BloccoAps() {
@@ -219,7 +219,7 @@ export default function ReclamoAttese() {
 
       {passo === 1 ? (
         <View>
-          <Text style={st.titolo}>I tuoi dati</Text>
+          <Text style={st.titolo}>I miei dati</Text>
           <Text style={[paginaStili.piccolo, { marginBottom: spacing.md }]}>
             Sono i campi «Io sottoscritto/a» del modulo. I campi con * sono necessari.
           </Text>

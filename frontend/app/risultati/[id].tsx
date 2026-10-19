@@ -164,7 +164,7 @@ export default function Risultati() {
           >
             <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
           </Pressable>
-          <Text style={styles.headerTitle}>I tuoi diritti</Text>
+          <Text style={styles.headerTitle}>I miei diritti</Text>
           <HeaderComune />
         </View>
 

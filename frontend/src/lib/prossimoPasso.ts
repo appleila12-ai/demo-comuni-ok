@@ -128,7 +128,7 @@ export function prossimoPasso(dati: DatiSalvati): Suggerimento {
       titolo: "Riguarda cosa potrebbe spettarti",
       motivo: "Hai già inserito alcuni dati del verbale. Le indicazioni sono da confermare con l'ente.",
       route: "/verbale",
-      bottone: "Apri «Il tuo verbale»",
+      bottone: "Apri «Il mio verbale»",
     };
   }
 

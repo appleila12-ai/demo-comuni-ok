@@ -1,4 +1,4 @@
-// "I tuoi diritti": un solo ingresso. Se la persona ha già risposto al
+// "I miei diritti": un solo ingresso. Se la persona ha già risposto al
 // questionario apre i suoi risultati, altrimenti le fa le domande.
 
 import { useEffect } from "react";
