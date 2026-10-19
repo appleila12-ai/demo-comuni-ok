@@ -429,7 +429,7 @@ export function buildReportHtml(r: Report): string {
   <div class="section-title">E adesso cosa faccio? Il percorso passo dopo passo</div>
   <ol class="steps">${stepsHtml}</ol>
 
-  <div class="section-title">I tuoi diritti</div>
+  <div class="section-title">I miei diritti</div>
   ${sectionsHtml}
 
   <div class="section-title">Dove chiedere aiuto</div>

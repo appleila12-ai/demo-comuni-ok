@@ -1,4 +1,4 @@
-// "Il tuo verbale": dai dati scritti sul verbale a ciò che POTREBBE spettare.
+// "Il mio verbale": dai dati scritti sul verbale a ciò che POTREBBE spettare.
 //
 // REGOLE
 //  - mai "hai diritto": solo "potresti rientrare" / "da verificare" / "non risulta"

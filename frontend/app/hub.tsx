@@ -22,7 +22,7 @@ import { prossimoPasso, type Suggerimento } from "@/src/lib/prossimoPasso";
 import { PROGETTO_KEY } from "@/src/lib/progetto";
 
 const MOMENTO_KEY = "tutelapp:hub:momento";
-// Chiavi già usate da La mia pratica e Il tuo verbale (qui si leggono soltanto, mai si scrivono).
+// Chiavi già usate da La mia pratica e Il mio verbale (qui si leggono soltanto, mai si scrivono).
 // `storage` aggiunge da solo il suffisso del Comune attivo (@slug): i dati restano separati.
 const TRACKER_KEY = "tutelapp:tracker";
 const VERBALE_KEY = "tutelapp:verbale";
@@ -99,7 +99,7 @@ const TAPPE: Tappa[] = [
     testo: "Aiuti economici, permessi, agevolazioni e le lettere per chiederli.",
     icon: "shield-checkmark-outline",
     color: topics.esenzioni,
-    principale: { label: "Il tuo verbale", route: "/verbale" },
+    principale: { label: "Il mio verbale", route: "/verbale" },
     altri: [
       { label: "Bonus e agevolazioni", route: "/agevolazioni" },
       { label: "Lettere pronte", route: "/lettere" },

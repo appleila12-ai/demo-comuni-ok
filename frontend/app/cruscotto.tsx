@@ -52,7 +52,7 @@ const ETICHETTE: Record<string, Record<string, string>> = {
     home: "Pagina iniziale",
     orientarsi: "Orientarsi insieme",
     percorso: "Percorso per il riconoscimento",
-    diritti: "I tuoi diritti",
+    diritti: "I miei diritti",
     progetto: "Il mio Progetto di Vita",
     pratica: "La mia pratica",
     supporto: "Punti di supporto",

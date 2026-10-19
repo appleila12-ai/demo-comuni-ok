@@ -51,7 +51,7 @@ const STRUMENTI = [
   {
     id: "diritti",
     icon: "shield-checkmark-outline" as const,
-    title: "I tuoi diritti",
+    title: "I miei diritti",
     sub: "Poche domande: aiuti, permessi, bonus e agevolazioni",
     href: "/diritti",
     color: topics.esenzioni,
