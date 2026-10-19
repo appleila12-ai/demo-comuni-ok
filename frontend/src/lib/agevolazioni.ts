@@ -229,8 +229,8 @@ export function calcola(r: Risposte): Agevolazione[] {
       id: "permessi",
       area: "Lavoro",
       titolo: "Permessi Legge 104: 3 giorni al mese retribuiti",
-      perche: "Con la 104 grave, per chi lavora come dipendente (anche per assistere un familiare).",
-      come: "Nel privato si fa domanda online all'INPS e la si comunica al datore di lavoro; nel pubblico si chiede alla propria amministrazione. Più familiari possono dividerseli, ma restano 3 giorni in tutto.",
+      perche: "Con la 104 grave: per il lavoratore con disabilità grave e per chi lavora come dipendente e assiste un familiare. Possono chiederli coniuge, parte di unione civile, convivente di fatto, genitori, parenti e affini fino al terzo grado.",
+      come: "Nel privato si fa domanda online all'INPS e la si comunica al datore di lavoro; nel pubblico si chiede alla propria amministrazione. Dal 2022 non c'è più un solo referente: più familiari possono chiederli per la stessa persona e usarli a turno, ma restano 3 giorni al mese in tutto per ogni persona con disabilità. Chi assiste allega la dichiarazione della persona assistita. Il lavoratore con disabilità grave può avere, in alternativa ai 3 giorni, permessi orari (2 ore al giorno, 1 ora se l'orario è sotto le 6 ore). Nello stesso mese per la stessa persona non si sommano al prolungamento del congedo parentale.",
       link: { label: "Prepara la lettera al datore di lavoro", href: "/lettere?id=permessi-104" },
     });
   }
@@ -239,9 +239,43 @@ export function calcola(r: Risposte): Agevolazione[] {
       id: "congedo",
       area: "Lavoro",
       titolo: "Congedo straordinario retribuito (fino a 2 anni)",
-      perche: "Per assistere un familiare convivente con la 104 grave.",
-      come: "Si chiede all'INPS (nel privato) o alla propria amministrazione. Vale al massimo 2 anni in tutta la vita lavorativa.",
+      perche: "Per assistere un familiare con la 104 grave. Dura fino a 2 anni ed è retribuito.",
+      come: "Si chiede all'INPS (nel privato) o alla propria amministrazione. L'ordine di chi può chiederlo: coniuge, parte di unione civile o convivente di fatto; poi i genitori (se il coniuge manca, è deceduto o è gravemente malato); poi i figli conviventi; poi fratelli e sorelle conviventi; poi parenti e affini conviventi fino al terzo grado. La convivenza deve iniziare entro l'inizio del congedo e durare per tutto il periodo. Il congedo di 2 anni per gravi motivi familiari (legge 53/2000) invece non è retribuito.",
+      link: { label: "Regole INPS (circolare 39/2023)", href: "https://www.inps.it/content/dam/inps-site/it/scorporati/circolari-e-messaggi/2023/04/Circolare_14125/Allegati/14124_Circolare-numero-39-del-04-04-2023.pdf" },
       forse: true,
+    });
+  }
+  if (grave && r.lavoro === "dipendente" && r.per === "familiare" && r.minore === "si") {
+    out.push({
+      id: "prolungamento-congedo",
+      area: "Lavoro",
+      titolo: "Prolungamento del congedo parentale per un figlio con disabilità grave",
+      perche: "Per i genitori lavoratori dipendenti di un figlio con la 104 grave. Si può usare fino agli 8 anni del bambino, per un massimo di 3 anni in tutto, compresi i congedi parentali ordinari, ed è a turno tra i genitori.",
+      come: "Si chiede all'INPS (nel privato) o alla propria amministrazione. Per lo stesso figlio non si somma, nello stesso mese, ai permessi di 3 giorni. L'importo dell'indennità conviene verificarlo sulla pagina INPS.",
+      link: { label: "Regole INPS (circolare 32/2012)", href: "https://servizi2.inps.it/servizi/Bussola/VisualizzaDoc.aspx?sVirtualURL=%2FCircolari%2FCircolare+numero+32+del+06-03-2012.htm" },
+      forse: true,
+    });
+  }
+  if (riconosciuto(r) && r.lavoro === "dipendente" && r.per === "familiare") {
+    out.push({
+      id: "permesso-infermita",
+      area: "Lavoro",
+      titolo: "Permesso di 3 giorni l'anno per grave infermità di un familiare",
+      perche: "Per chi lavora e ha un coniuge, un parente fino al secondo grado o un convivente con una grave infermità documentata. Sono 3 giorni di lavoro all'anno, retribuiti.",
+      come: "Chiedilo al datore di lavoro con la documentazione medica. Per il convivente serve il certificato di stato di famiglia. In alternativa si può concordare con il datore di lavoro un'altra organizzazione del lavoro. Se il bisogno è più lungo, esiste anche un congedo fino a 2 anni per gravi motivi familiari, ma non è retribuito.",
+      link: { label: "Legge 53/2000, art. 4", href: "https://www.lavoro.gov.it/sites/default/files/archivio-doc-pregressi/ConsiglieraNazionale/Normativa/LEGGE8marzo2000n53.pdf" },
+      forse: true,
+    });
+  }
+  if (almeno(r, 46) && r.lavoro === "dipendente" && r.per === "me") {
+    out.push({
+      id: "congedo-cure",
+      area: "Lavoro",
+      titolo: "Congedo per cure: fino a 30 giorni l'anno",
+      perche: "Per i lavoratori con invalidità civile superiore al 50%.",
+      come: "Spettano fino a 30 giorni all'anno, anche non di seguito, a carico del datore di lavoro. Serve la documentazione che attesta l'invalidità e le cure: chiedi al datore di lavoro o a un patronato come presentarla.",
+      link: { label: "Diritti e tutele (guida INPS)", href: "https://www.inps.it/content/dam/inps-site/pdf/allegatinews/2025/diritti_tutele_malattie_oncologiche.pdf" },
+      forse: !almeno(r, 67),
     });
   }
   if (almeno(r, 46) && r.lavoro === "cerca") {
