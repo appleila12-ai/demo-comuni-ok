@@ -20,6 +20,7 @@ import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
 import { CasellaRicerca } from "@/src/components/CasellaRicerca";
+import { RichiestaComuneFinestra, ScriviAlComune } from "@/src/components/ScriviAlComune";
 import { useSalvati } from "@/src/lib/salvati";
 
 const FEATURES = [
@@ -206,6 +207,20 @@ function HomeDelComune() {
             </Text>
           </View>
         )}
+
+        {/* In apertura: mail già pronta da mandare al proprio Comune */}
+        <ScriviAlComune />
+        <Pressable
+          onPress={() => router.push("/per-i-comuni")}
+          style={({ pressed }) => [styles.enteBottone, pressed && styles.pressed]}
+          accessibilityRole="button"
+          accessibilityLabel="Sei un Comune o un ente? Contatta TutelApp"
+          testID="comune-per-i-comuni"
+        >
+          <Ionicons name="business-outline" size={22} color={colors.brandPrimaryDark} />
+          <Text style={styles.enteBottoneTesto}>Sei un Comune o un ente? Contattaci</Text>
+        </Pressable>
+        <RichiestaComuneFinestra />
 
         <View style={styles.divider} />
 
@@ -753,6 +768,20 @@ const styles = StyleSheet.create({
     marginTop: spacing.lg,
     paddingVertical: spacing.sm,
   },
+  enteBottone: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: spacing.sm,
+    minHeight: 52,
+    marginTop: 0,
+    marginBottom: spacing.sm,
+    paddingHorizontal: spacing.lg,
+    borderRadius: radius.lg,
+    borderWidth: 1.5,
+    borderColor: colors.brandPrimaryDark,
+  },
+  enteBottoneTesto: { fontSize: 16, fontWeight: "800", color: colors.brandPrimaryDark },
   switchText: {
     fontSize: 11,
     color: colors.onSurfaceTertiary,
