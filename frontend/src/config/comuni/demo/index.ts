@@ -7,6 +7,7 @@
 import type { ComuneConfig } from "../types";
 import { acerra } from "./acerra";
 import { acireale } from "./acireale";
+import { adrano } from "./adrano";
 import { afragola } from "./afragola";
 import { agrigento } from "./agrigento";
 import { alba } from "./alba";
@@ -51,15 +52,18 @@ import { brindisi } from "./brindisi";
 import { brugherio } from "./brugherio";
 import { bustoArsizio } from "./busto-arsizio";
 import { cagliari } from "./cagliari";
+import { caivano } from "./caivano";
 import { calolziocorte } from "./calolziocorte";
 import { caltagirone } from "./caltagirone";
 import { caltanissetta } from "./caltanissetta";
 import { campiBisenzio } from "./campi-bisenzio";
 import { campobasso } from "./campobasso";
+import { canicatti } from "./canicatti";
 import { cantu } from "./cantu";
 import { capannori } from "./capannori";
 import { caprarola } from "./caprarola";
 import { carbonia } from "./carbonia";
+import { carini } from "./carini";
 import { carpi } from "./carpi";
 import { carrara } from "./carrara";
 import { casalnuovoDiNapoli } from "./casalnuovo-di-napoli";
@@ -68,12 +72,14 @@ import { cascina } from "./cascina";
 import { caserta } from "./caserta";
 import { casoria } from "./casoria";
 import { castelSanGiovanni } from "./castel-san-giovanni";
+import { castelfrancoEmilia } from "./castelfranco-emilia";
 import { castelfrancoVeneto } from "./castelfranco-veneto";
 import { castellammareDiStabia } from "./castellammare-di-stabia";
 import { castelnuovoMagra } from "./castelnuovo-magra";
 import { catania } from "./catania";
 import { catanzaro } from "./catanzaro";
 import { cavaDeTirreni } from "./cava-de-tirreni";
+import { cento } from "./cento";
 import { cerignola } from "./cerignola";
 import { cernuscoSulNaviglio } from "./cernusco-sul-naviglio";
 import { cerveteri } from "./cerveteri";
@@ -94,6 +100,7 @@ import { como } from "./como";
 import { conegliano } from "./conegliano";
 import { corato } from "./corato";
 import { coriglianoRossano } from "./corigliano-rossano";
+import { corsico } from "./corsico";
 import { cortemaggiore } from "./cortemaggiore";
 import { cosenza } from "./cosenza";
 import { cremona } from "./cremona";
@@ -106,6 +113,7 @@ import { enna } from "./enna";
 import { ercolano } from "./ercolano";
 import { faenza } from "./faenza";
 import { fano } from "./fano";
+import { fasano } from "./fasano";
 import { favara } from "./favara";
 import { ferentino } from "./ferentino";
 import { fermo } from "./fermo";
@@ -118,6 +126,7 @@ import { foligno } from "./foligno";
 import { fondi } from "./fondi";
 import { forli } from "./forli";
 import { formia } from "./formia";
+import { formigine } from "./formigine";
 import { francavillaFontana } from "./francavilla-fontana";
 import { frascati } from "./frascati";
 import { frattamaggiore } from "./frattamaggiore";
@@ -148,6 +157,7 @@ import { legnago } from "./legnago";
 import { legnano } from "./legnano";
 import { lerici } from "./lerici";
 import { licata } from "./licata";
+import { limbiate } from "./limbiate";
 import { lissone } from "./lissone";
 import { livorno } from "./livorno";
 import { lodi } from "./lodi";
@@ -166,6 +176,7 @@ import { martinaFranca } from "./martina-franca";
 import { massa } from "./massa";
 import { matera } from "./matera";
 import { mazaraDelVallo } from "./mazara-del-vallo";
+import { melitoDiNapoli } from "./melito-di-napoli";
 import { merano } from "./merano";
 import { merate } from "./merate";
 import { messina } from "./messina";
@@ -178,15 +189,18 @@ import { modica } from "./modica";
 import { molfetta } from "./molfetta";
 import { moncalieri } from "./moncalieri";
 import { monopoli } from "./monopoli";
+import { monreale } from "./monreale";
 import { monterotondo } from "./monterotondo";
 import { montesilvano } from "./montesilvano";
 import { monza } from "./monza";
+import { mugnanoDiNapoli } from "./mugnano-di-napoli";
 import { napoli } from "./napoli";
 import { nardo } from "./nardo";
 import { nepi } from "./nepi";
 import { nettuno } from "./nettuno";
 import { nichelino } from "./nichelino";
 import { noceraInferiore } from "./nocera-inferiore";
+import { nola } from "./nola";
 import { novara } from "./novara";
 import { nuoro } from "./nuoro";
 import { ocre } from "./ocre";
@@ -212,6 +226,7 @@ import { pisa } from "./pisa";
 import { pistoia } from "./pistoia";
 import { podenzano } from "./podenzano";
 import { pomezia } from "./pomezia";
+import { pomiglianoDArco } from "./pomigliano-d-arco";
 import { pontedera } from "./pontedera";
 import { pordenone } from "./pordenone";
 import { portici } from "./portici";
@@ -227,6 +242,7 @@ import { reggioCalabria } from "./reggio-calabria";
 import { reggioEmilia } from "./reggio-emilia";
 import { rende } from "./rende";
 import { rho } from "./rho";
+import { riccione } from "./riccione";
 import { riccoDelGolfo } from "./ricco-del-golfo";
 import { rieti } from "./rieti";
 import { rimini } from "./rimini";
@@ -242,6 +258,7 @@ import { sanBonifacio } from "./san-bonifacio";
 import { sanDonaDiPiave } from "./san-dona-di-piave";
 import { sanDonatoMilanese } from "./san-donato-milanese";
 import { sanGiorgioACremano } from "./san-giorgio-a-cremano";
+import { sanLazzaroDiSavena } from "./san-lazzaro-di-savena";
 import { sanSevero } from "./san-severo";
 import { sanremo } from "./sanremo";
 import { santoStefanoDiMagra } from "./santo-stefano-di-magra";
@@ -251,6 +268,7 @@ import { sassuolo } from "./sassuolo";
 import { savona } from "./savona";
 import { scafati } from "./scafati";
 import { scandicci } from "./scandicci";
+import { schio } from "./schio";
 import { sciacca } from "./sciacca";
 import { segrate } from "./segrate";
 import { senigallia } from "./senigallia";
@@ -261,6 +279,7 @@ import { sestriLevante } from "./sestri-levante";
 import { settimoTorinese } from "./settimo-torinese";
 import { siena } from "./siena";
 import { siracusa } from "./siracusa";
+import { sommaVesuviana } from "./somma-vesuviana";
 import { sondrio } from "./sondrio";
 import { spinea } from "./spinea";
 import { taranto } from "./taranto";
@@ -297,10 +316,12 @@ import { vigevano } from "./vigevano";
 import { vimercate } from "./vimercate";
 import { viterbo } from "./viterbo";
 import { vittoria } from "./vittoria";
+import { voghera } from "./voghera";
 
 export const COMUNI_DEMO: ComuneConfig[] = [
   acerra,
   acireale,
+  adrano,
   afragola,
   agrigento,
   alba,
@@ -345,15 +366,18 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   brugherio,
   bustoArsizio,
   cagliari,
+  caivano,
   calolziocorte,
   caltagirone,
   caltanissetta,
   campiBisenzio,
   campobasso,
+  canicatti,
   cantu,
   capannori,
   caprarola,
   carbonia,
+  carini,
   carpi,
   carrara,
   casalnuovoDiNapoli,
@@ -362,12 +386,14 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   caserta,
   casoria,
   castelSanGiovanni,
+  castelfrancoEmilia,
   castelfrancoVeneto,
   castellammareDiStabia,
   castelnuovoMagra,
   catania,
   catanzaro,
   cavaDeTirreni,
+  cento,
   cerignola,
   cernuscoSulNaviglio,
   cerveteri,
@@ -388,6 +414,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   conegliano,
   corato,
   coriglianoRossano,
+  corsico,
   cortemaggiore,
   cosenza,
   cremona,
@@ -400,6 +427,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   ercolano,
   faenza,
   fano,
+  fasano,
   favara,
   ferentino,
   fermo,
@@ -412,6 +440,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   fondi,
   forli,
   formia,
+  formigine,
   francavillaFontana,
   frascati,
   frattamaggiore,
@@ -442,6 +471,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   legnano,
   lerici,
   licata,
+  limbiate,
   lissone,
   livorno,
   lodi,
@@ -460,6 +490,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   massa,
   matera,
   mazaraDelVallo,
+  melitoDiNapoli,
   merano,
   merate,
   messina,
@@ -472,15 +503,18 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   molfetta,
   moncalieri,
   monopoli,
+  monreale,
   monterotondo,
   montesilvano,
   monza,
+  mugnanoDiNapoli,
   napoli,
   nardo,
   nepi,
   nettuno,
   nichelino,
   noceraInferiore,
+  nola,
   novara,
   nuoro,
   ocre,
@@ -506,6 +540,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   pistoia,
   podenzano,
   pomezia,
+  pomiglianoDArco,
   pontedera,
   pordenone,
   portici,
@@ -521,6 +556,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   reggioEmilia,
   rende,
   rho,
+  riccione,
   riccoDelGolfo,
   rieti,
   rimini,
@@ -536,6 +572,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   sanDonaDiPiave,
   sanDonatoMilanese,
   sanGiorgioACremano,
+  sanLazzaroDiSavena,
   sanSevero,
   sanremo,
   santoStefanoDiMagra,
@@ -545,6 +582,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   savona,
   scafati,
   scandicci,
+  schio,
   sciacca,
   segrate,
   senigallia,
@@ -555,6 +593,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   settimoTorinese,
   siena,
   siracusa,
+  sommaVesuviana,
   sondrio,
   spinea,
   taranto,
@@ -591,4 +630,5 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   vimercate,
   viterbo,
   vittoria,
+  voghera,
 ];

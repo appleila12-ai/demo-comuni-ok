@@ -5,6 +5,8 @@
 // articoli locali recenti. "verificare: true" = recapito da confermare.
 // Aggiornamento 18/10/2026: sport per Toscana, Emilia-Romagna, Veneto e Abruzzo
 // (recapiti dal sito del CIP); associazioni per Firenze, Sassuolo e Avezzano.
+// Aggiornamento 19/10/2026: sport per la Sicilia; associazioni per Catania e provincia di Reggio Emilia
+// (elenco sezioni locali del sito nazionale Anffas, email del programma Special Olympics dalla rete ufficiale).
 
 import { comune } from "@/src/config/comune";
 
@@ -238,6 +240,20 @@ const SPORT_REGIONE: Record<string, Associazione[]> = {
       nome: "Special Olympics – Team Toscana",
       cosa: "Allenamenti e gare per persone con disabilità intellettiva, senza limiti di età. Scrivi al referente regionale: ti indica il Team più vicino a casa tua.",
       email: "toscana@specialolympics.it",
+      sito: "https://specialolympics.it/la-rete/",
+    },
+  ],
+  Sicilia: [
+    {
+      nome: "CIP – Comitato Paralimpico Sicilia",
+      cosa: "Coordina lo sport paralimpico in Sicilia e ti indica la società sportiva più vicina. Telefono ed email sono sulla pagina dei contatti del Comitato.",
+      sito: "https://www.comitatoparalimpico.it/sicilia_accessibile/contatti.html",
+      verificare: true,
+    },
+    {
+      nome: "Special Olympics – Team Sicilia",
+      cosa: "Allenamenti e gare per persone con disabilità intellettiva, senza limiti di età. Scrivi al referente regionale: ti indica il Team più vicino a casa tua.",
+      email: "sicilia@specialolympics.it",
       sito: "https://specialolympics.it/la-rete/",
     },
   ],
@@ -498,6 +514,30 @@ PER_PROVINCIA.AQ.volontariato.unshift({
   cosa: "Si occupa di persone con disabilità intellettiva e relazionale e delle loro famiglie. Ha aperto ad Avezzano lo spazio \"Anffas 22 Revolution\" per l'integrazione e il benessere.",
   dove: "Avezzano (AQ)",
   comuni: ["avezzano"],
+  verificare: true,
+});
+
+// Catania: sezione locale Anffas dall'elenco del sito nazionale (19/10/2026).
+// Provincia di Reggio Emilia: sezione di Correggio (stessa fonte). Recapiti da confermare.
+PER_PROVINCIA.CT = PER_PROVINCIA.CT ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.CT.volontariato.unshift({
+  nome: "Anffas Catania APS",
+  cosa: "Associazione di famiglie di persone con disabilità intellettiva e relazionale.",
+  dove: "Via Policastro 76, 95126 Catania",
+  telefono: "095 382001",
+  email: "info@anffascatania.net",
+  sito: "https://www.anffas.net/it/chi-siamo/dove-siamo/",
+  comuni: ["catania"],
+  verificare: true,
+});
+PER_PROVINCIA.RE = PER_PROVINCIA.RE ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.RE.volontariato.unshift({
+  nome: "Anffas Correggio APS",
+  cosa: "Associazione di famiglie di persone con disabilità intellettiva e relazionale, nella provincia di Reggio Emilia.",
+  dove: "Viale Vittorio Veneto 34/D, 42015 Correggio (RE)",
+  telefono: "353 4337321",
+  email: "anffas.correggio@gmail.com",
+  sito: "https://www.anffascorreggio.it",
   verificare: true,
 });
 

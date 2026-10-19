@@ -18,6 +18,7 @@
 // Ottava raccolta: 15/10/2026, Toscana.
 // Nona raccolta: 15/10/2026, Puglia (Patto di cura), Veneto (ICD).
 // Decima raccolta: 18/10/2026, Unione dei Comuni del Distretto Ceramico (Sassuolo).
+// Undicesima raccolta: 19/10/2026, Comuni di Catania, Messina, Verona e Reggio Emilia.
 
 import { comune } from "@/src/config/comune";
 
@@ -770,6 +771,170 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "12/10/2026",
     nota: "Fonte giornalistica: chiedi al Comune di Ocre o all'Unione Montana se è previsto un nuovo avviso.",
+  },
+
+  // ------------------------------------------------------------------ CATANIA
+  {
+    id: "catania-caregiver-una-tantum",
+    regione: "Sicilia",
+    comuni: ["catania"],
+    titolo: "Caregiver familiare: contributo economico una tantum",
+    perChi:
+      "Caregiver familiari di persone con disabilità. Non abbiamo potuto leggere il testo dell'avviso: requisiti e soglie non sono confermati.",
+    cosa:
+      "Il Comune di Catania ha pubblicato un avviso per un contributo economico una tantum ai caregiver familiari. Importo non confermato.",
+    stato: "da-verificare",
+    quando: "Date e scadenze non lette: l'avviso va controllato sul sito del Comune.",
+    comeSiChiede:
+      "Leggi l'avviso sul sito del Comune di Catania o chiedi ai Servizi Sociali (Direzione Famiglia e Politiche Sociali).",
+    fonte: {
+      label: "Comune di Catania · avviso Caregiver familiare, contributo una tantum",
+      url: "https://www.comune.catania.it/novita/avvisi/caregiver-familiare-contributo-economico-una-tantum.aspx",
+    },
+    verificatoIl: "19/10/2026",
+    nota: "Del titolo abbiamo letto solo l'elenco dei risultati di ricerca del sito ufficiale (la pagina non si apre ai nostri strumenti): da confermare con l'ente.",
+  },
+  {
+    id: "catania-disabili-gravi-patto-servizio",
+    regione: "Sicilia",
+    comuni: ["catania"],
+    titolo: "Assistenza ai disabili gravi: patto di servizio",
+    perChi:
+      "Persone con disabilità grave. Requisiti non letti: da confermare con l'ente.",
+    cosa:
+      "Il Comune di Catania pubblica avvisi per il Patto di servizio per l'assistenza a favore dei disabili gravi (assistenza domiciliare). Contenuti e importi non confermati.",
+    stato: "da-verificare",
+    quando: "Gli avvisi che abbiamo trovato sono del 2024: non sappiamo se è aperto un avviso nuovo.",
+    comeSiChiede:
+      "Chiedi alla Direzione Famiglia e Politiche Sociali del Comune di Catania se è aperto un avviso.",
+    fonte: {
+      label: "Comune di Catania · Patto di servizio per l'assistenza ai disabili gravi",
+      url: "https://www.comune.catania.it/informazioni/news/politiche-sociali/default.aspx?news=91989",
+    },
+    verificatoIl: "19/10/2026",
+    nota: "Pagina non apribile ai nostri strumenti: abbiamo letto solo il titolo nei risultati di ricerca del sito ufficiale.",
+  },
+
+  // ------------------------------------------------------------------ MESSINA
+  {
+    id: "messina-d26-bonus-caregiver-2026",
+    regione: "Sicilia",
+    comuni: ["messina"],
+    titolo: "Bonus caregiver del Distretto socio-sanitario D26 (Messina capofila)",
+    perChi:
+      "Caregiver familiari che assistono una persona con disabilità grave o gravissima: coniuge, parte di unione civile, convivente di fatto, familiare o affine entro il secondo grado (terzo grado nei casi previsti dalla Legge 104/1992). La persona assistita deve risiedere in un Comune del Distretto D26.",
+    cosa:
+      "Contributo una tantum. Fondi complessivi di 108.447,99 euro (70.491,19 per la disabilità grave, 37.956,80 per la gravissima). L'importo per ciascuno si decide dopo l'istruttoria, in base alle domande ammesse e alle risorse.",
+    stato: "chiuso",
+    quando:
+      "Avviso pubblicato il 3 settembre 2026. Piattaforma attiva dal 7 settembre, scadenza alle 23:59 del 15 ottobre 2026.",
+    comeSiChiede:
+      "Solo online, con le proprie credenziali, dallo Sportello Telematico del Comune di Messina. Domande presentate in altro modo non sono considerate.",
+    fonte: {
+      label: "Comune di Messina · Distretto D26, avviso Bonus caregiver",
+      url: "https://www.comune.messina.it/it/news/distretto-socio-sanitario-d26-pubblicato-lavviso-per-il-bonus-caregiver-a-sostegno-delle-famiglie",
+    },
+    verificatoIl: "19/10/2026",
+    nota: "Scadenza passata: chiedi al Servizio Politiche Sociali se è prevista una riapertura.",
+  },
+  {
+    id: "messina-tessere-ast-disabilita-2026-27",
+    regione: "Sicilia",
+    comuni: ["messina"],
+    titolo: "Tessere AST per il trasporto extraurbano gratuito (anno 2026-2027)",
+    perChi:
+      "Persone con disabilità. La pagina non indica requisiti né documenti.",
+    cosa: "Tessere A.S.T. (Azienda Siciliana Trasporti) per il trasporto extraurbano gratuito, relative all'anno 2026-2027.",
+    stato: "attivo",
+    quando: "Tessere disponibili per il ritiro dal 25 marzo 2026 (avviso del 24 marzo 2026).",
+    comeSiChiede:
+      "Si ritirano al front-office del Servizio Politiche Sociali, Piazza della Repubblica 40 (Palazzo Satellite). Orari: lunedì–venerdì 9–12, martedì e giovedì anche 15–16:30.",
+    fonte: {
+      label: "Comune di Messina · avviso ritiro tessere A.S.T. 2026-2027",
+      url: "https://comune.messina.it/it/news/avviso-per-il-ritiro-delle-tessere-a-s-t-per-soggetti-con-disabilita-anno-2026-2027",
+    },
+    verificatoIl: "19/10/2026",
+  },
+
+  // ------------------------------------------------------------------ VERONA
+  {
+    id: "verona-barriere-architettoniche",
+    regione: "Veneto",
+    comuni: ["verona"],
+    titolo: "Contributi per eliminare le barriere architettoniche (L. 13/1989 e L.R. 16/2007)",
+    perChi:
+      "Persone con ridotta o impedita capacità motoria o sensoriale, condomìni in cui vivono, enti privati e imprese. Non ci sono requisiti di reddito. La domanda può farla l'interessato o chi lo rappresenta.",
+    cosa:
+      "Contributi per interventi come ascensori, rampe, piattaforme elevatrici, adeguamento dei bagni, allargamento delle porte. La L. 13/1989 vale per edifici residenziali costruiti prima dell'11/08/1989; la L.R. 16/2007 per edifici e spazi aperti al pubblico, edifici privati e mezzi di locomozione privati. I due contributi sono cumulabili fino alla spesa. Importi non scritti nella pagina.",
+    stato: "attivo",
+    quando:
+      "Il Comune raccoglie le domande una volta all'anno e non ci sono termini per l'invio. I tempi li decide la Regione.",
+    comeSiChiede:
+      "All'Ufficio CEBA (Direzione Servizi Sociali), Vicolo San Domenico 13/B, su appuntamento (tel. 045 8078361, lun–ven 9–13), prima di iniziare i lavori, con carta da bollo, certificato medico e documenti tecnici. Il servizio online non era disponibile.",
+    fonte: {
+      label: "Comune di Verona · Contributi per l'eliminazione delle barriere architettoniche",
+      url: "https://www.comune.verona.it/Servizi/Contributi-per-l-eliminazione-delle-barriere-architettoniche",
+    },
+    verificatoIl: "19/10/2026",
+    nota: "Pagina aggiornata il 02/07/2025: conferma orari e modalità con l'ufficio.",
+  },
+
+  // ------------------------------------------------------------- REGGIO EMILIA
+  {
+    id: "reggio-emilia-mobilita-casa-lavoro-2026",
+    regione: "Emilia-Romagna",
+    comuni: ["reggio-emilia"],
+    titolo: "Contributo per la mobilità casa-lavoro di lavoratori con disabilità (anno 2025)",
+    perChi:
+      "Persone con disabilità (L. 68/99) residenti nel Distretto di Reggio Emilia, che nel 2025 hanno lavorato (lo smartworking non vale) e hanno bisogno di un trasporto personalizzato per andare al lavoro.",
+    cosa:
+      "Contributo forfetario sulle spese di trasporto casa-lavoro. Non valgono trasporto pubblico di linea, assicurazione, manutenzione e adattamenti del proprio mezzo. Una sola domanda a persona. Importo non scritto nella pagina.",
+    stato: "chiuso",
+    quando:
+      "Domande online dal 24 marzo 2026 fino al 30 aprile 2026, ore 13:00. Erogazione in unica soluzione prevista entro settembre 2026.",
+    comeSiChiede:
+      "Online con SPID (il Comune offre LepidaID gratuita), caricando certificato di disabilità, attestazione del datore di lavoro e ricevute delle spese.",
+    fonte: {
+      label: "Comune di Reggio Emilia · avviso mobilità casa-lavoro lavoratori con disabilità",
+      url: "https://www.comune.reggioemilia.it/amministrazione/documenti-e-dati/avvisi-e-bandi/altri-bandi/avviso-pubblico-mobilita-casa-lavoro-per-lavoratori-disabili",
+    },
+    verificatoIl: "19/10/2026",
+    nota: "Bando scaduto: chiedi al Comune se verrà riproposto.",
+  },
+  {
+    id: "reggio-emilia-assegno-cura-disabili-adulti",
+    regione: "Emilia-Romagna",
+    comuni: ["reggio-emilia"],
+    titolo: "Assegno di cura per disabili adulti",
+    perChi:
+      "Cittadini adulti con disabilità che hanno bisogno di un sostegno elevato o molto elevato, per restare nel proprio ambiente di vita.",
+    cosa: "Contributo per l'assistenza a casa. Importo, requisiti ISEE e durata non scritti nella pagina.",
+    stato: "da-verificare",
+    comeSiChiede:
+      "La pagina non spiega come fare domanda: chiedi ai Servizi Sociali del Comune di Reggio Emilia.",
+    fonte: {
+      label: "Comune di Reggio Emilia · Assegno di cura per disabili adulti",
+      url: "https://www.comune.reggioemilia.it/servizi/salute-benessere-e-assistenza/assegno-di-cura-per-disabili-adulti",
+    },
+    verificatoIl: "19/10/2026",
+    nota: "Pagina con descrizione breve: tutti i dettagli sono da confermare con l'ente.",
+  },
+  {
+    id: "reggio-emilia-mobilita-privata-art9",
+    regione: "Emilia-Romagna",
+    comuni: ["reggio-emilia"],
+    titolo: "Contributi per la mobilità privata (art. 9 L.R. 29/97)",
+    perChi: "Persone con disabilità. Requisiti non scritti nella pagina.",
+    cosa: "Contributo per l'acquisto o l'adattamento di autoveicoli privati. Percentuali e importi non scritti nella pagina.",
+    stato: "da-verificare",
+    comeSiChiede:
+      "La pagina non spiega come fare domanda: chiedi ai Servizi Sociali del Comune di Reggio Emilia.",
+    fonte: {
+      label: "Comune di Reggio Emilia · Contributi per la mobilità privata (art. 9 LR 29/97)",
+      url: "https://www.comune.reggioemilia.it/servizi/salute-benessere-e-assistenza/contributi-e-agevolazioni-per-la-mobilita-privata-art-9-lr-29-97",
+    },
+    verificatoIl: "19/10/2026",
+    nota: "Da confermare con l'ente: scadenze e requisiti.",
   },
 ];
 
