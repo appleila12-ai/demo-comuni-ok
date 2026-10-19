@@ -14,7 +14,9 @@ import { CANALE_YOUTUBE, CONTATTO_TUTELAPP, SITO_TUTELAPP } from "@/src/lib/rich
 import { colors, radius, spacing } from "@/src/theme";
 
 const NOME_FORM = "contatto-comune";
-const INDIRIZZO_INVIO = Platform.OS === "web" ? "/" : "https://www.tutelapp.it/";
+const BASE_INVIO = Platform.OS === "web" ? "" : "https://www.tutelapp.it";
+// Si prova prima la pagina principale, poi la pagina del modulo nascosto di Netlify
+const INDIRIZZI_INVIO = [`${BASE_INVIO}/`, `${BASE_INVIO}/form-contatto.html`];
 
 type Motivo = "demo" | "info" | "altro";
 const MOTIVI: { id: Motivo; label: string }[] = [
@@ -65,21 +67,31 @@ export default function PerIComuni() {
     if (e.length) return;
     setStato("invio");
     try {
-      const risposta = await fetch(INDIRIZZO_INVIO, {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: codifica({
-          "form-name": NOME_FORM,
-          ente: ente.trim(),
-          nome: nome.trim(),
-          ruolo: ruolo.trim(),
-          email: email.trim(),
-          telefono: telefono.trim(),
-          motivo: motivo ? ETICHETTA_MOTIVO[motivo] : "",
-          messaggio: messaggio.trim(),
-          consenso: "sì",
-        }),
+      const corpo = codifica({
+        "form-name": NOME_FORM,
+        ente: ente.trim(),
+        nome: nome.trim(),
+        ruolo: ruolo.trim(),
+        email: email.trim(),
+        telefono: telefono.trim(),
+        motivo: motivo ? ETICHETTA_MOTIVO[motivo] : "",
+        messaggio: messaggio.trim(),
+        consenso: "sì",
       });
+      let risposta: Response | undefined;
+      for (const indirizzo of INDIRIZZI_INVIO) {
+        try {
+          risposta = await fetch(indirizzo, {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: corpo,
+          });
+          if (risposta.ok) break;
+        } catch {
+          /* prova l'indirizzo successivo */
+        }
+      }
+      if (!risposta) throw new Error("invio non riuscito");
       setStato(risposta.ok ? "inviato" : "errore");
     } catch {
       setStato("errore");
