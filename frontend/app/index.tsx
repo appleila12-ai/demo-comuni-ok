@@ -65,6 +65,14 @@ const STRUMENTI = [
     color: topics.documenti,
   },
   {
+    id: "reclamo",
+    icon: "hourglass-outline" as const,
+    title: "Reclamo liste d'attesa",
+    sub: "Modulo pronto per l'invio: visita o esame oltre i tempi del medico",
+    href: "/reclamo-attese",
+    color: topics.salute,
+  },
+  {
     id: "scadenze",
     icon: "alarm-outline" as const,
     title: "Le mie scadenze",
