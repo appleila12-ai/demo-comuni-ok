@@ -203,7 +203,7 @@ export default function Risultati() {
             <Ionicons name="gift-outline" size={22} color="#FFFFFF" />
             <View style={{ flex: 1 }}>
               <Text style={styles.agevolazioniTitolo}>Bonus e agevolazioni per te</Text>
-              <Text style={styles.agevolazioniSub}>Altre 4-6 domande: esenzioni, auto, bollette, Carta europea della disabilità</Text>
+              <Text style={styles.agevolazioniSub}>Altre 6-8 domande: esenzioni, auto, bollette, assegni, detrazioni, Carta europea della disabilità</Text>
             </View>
             <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
           </Pressable>

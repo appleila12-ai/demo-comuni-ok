@@ -4,10 +4,12 @@
 
 export type Risposte = {
   per?: "me" | "familiare";
+  minore?: "si" | "no";
   invalidita?: "no" | "meno46" | "46-66" | "67-73" | "74-99" | "100" | "nonso";
   l104?: "no" | "si" | "grave" | "nonso";
   accompagnamento?: "si" | "no";
   movimento?: "si" | "no" | "nonso";
+  spesaAssistenza?: "si" | "no";
   lavoro?: "dipendente" | "cerca" | "altro";
   isee?: "basso" | "alto" | "nonso";
   salvavita?: "si" | "no";
@@ -27,6 +29,14 @@ export const DOMANDE: Domanda[] = [
     opzioni: [
       { id: "me", label: "Per me" },
       { id: "familiare", label: "Per un familiare che assisto" },
+    ],
+  },
+  {
+    id: "minore",
+    testo: "La persona con disabilità ha meno di 18 anni?",
+    opzioni: [
+      { id: "si", label: "Sì, è minorenne" },
+      { id: "no", label: "No, è maggiorenne" },
     ],
   },
   {
@@ -69,6 +79,15 @@ export const DOMANDE: Domanda[] = [
       { id: "si", label: "Sì" },
       { id: "no", label: "No" },
       { id: "nonso", label: "Non so" },
+    ],
+  },
+  {
+    id: "spesaAssistenza",
+    testo: "Si paga una persona che assiste (per esempio una badante o un'assistente personale)?",
+    aiuto: "Conta anche chi paga per assistere un familiare.",
+    opzioni: [
+      { id: "si", label: "Sì" },
+      { id: "no", label: "No" },
     ],
   },
   {
@@ -263,6 +282,54 @@ export function calcola(r: Risposte): Agevolazione[] {
       titolo: "IVA al 4% e detrazione su ausili e sussidi",
       perche: "Per ausili, protesi, montascale, computer e sussidi collegati alla disabilità.",
       come: "Chiedi l'IVA al 4% al momento dell'acquisto e conserva le fatture: il 19% si detrae nella dichiarazione dei redditi. Per i sussidi informatici serve un certificato del medico.",
+    });
+  }
+
+  if (r.spesaAssistenza === "si") {
+    out.push({
+      id: "detrazione-assistenza",
+      area: "Soldi",
+      titolo: "Detrazione fiscale per chi paga l'assistenza (badante)",
+      perche: "Si detrae il 19% delle spese per l'assistenza personale, su un massimo di 2.100 € per contribuente, se il reddito complessivo non supera 40.000 €. La persona assistita deve essere certificata come non autosufficiente nelle attività quotidiane.",
+      come: "Conserva fatture o ricevute e paga con mezzi tracciabili (bonifico o pagamento postale). Si indica nella dichiarazione dei redditi; puoi detrarre anche per un familiare che non è fiscalmente a tuo carico. Si somma alla deduzione dei contributi versati per la badante, fino a 1.549,37 €.",
+      link: { label: "Guida dell'Agenzia delle Entrate", href: "https://www1.agenziaentrate.gov.it/web_app_entrate/agevolazioni_disabilita.html/guide-gallery.html" },
+      forse: true,
+    });
+  }
+
+  if (r.minore === "si" && riconosciuto(r)) {
+    out.push({
+      id: "assegno-unico",
+      area: "Soldi",
+      titolo: "Assegno unico: maggiorazione per figli con disabilità",
+      perche: "L'Assegno unico e universale prevede maggiorazioni per i figli con disabilità, e per i figli con disabilità non c'è un limite di età.",
+      come: "Si chiede e si gestisce sul sito INPS o con un patronato. Comunica la disabilità del figlio e tieni aggiornato l'ISEE: senza ISEE si ricevono gli importi minimi. Importi e condizioni aggiornati sono sulla pagina INPS.",
+      link: { label: "Assegno unico sul sito INPS", href: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.assegno-unico-e-universale-per-i-figli-a-carico-55984.assegno-unico-e-universale-per-i-figli-a-carico.html" },
+      forse: true,
+    });
+  }
+
+  if (riconosciuto(r) && r.isee !== "alto") {
+    out.push({
+      id: "adi",
+      area: "Soldi",
+      titolo: "Assegno di inclusione (ADI)",
+      perche: "Spetta ai nuclei con almeno una persona con disabilità, con ISEE basso (il Ministero del Lavoro indica un tetto di 10.140 €) e con limiti di reddito e patrimonio.",
+      come: "Servono anche cittadinanza europea o permesso UE di lungo periodo e residenza in Italia da almeno 5 anni, gli ultimi 2 continuativi. Si chiede sul sito INPS (con SPID, CIE o CNS) o con un patronato o un CAF, con l'ISEE aggiornato. L'importo dipende dalla composizione del nucleo.",
+      link: { label: "Guida del Ministero del Lavoro", href: "https://www.lavoro.gov.it/stampa-e-media/piccola-guida-ai-beneficiari-dellassegno-di-inclusione" },
+      forse: true,
+    });
+  }
+
+  if (riconosciuto(r)) {
+    out.push({
+      id: "barriere",
+      area: "Casa e bollette",
+      titolo: "Detrazione fiscale per eliminare le barriere architettoniche",
+      perche: "Per lavori in casa che eliminano le barriere architettoniche (per esempio una rampa o un ascensore) esistono detrazioni fiscali. Percentuali e limiti cambiano negli anni.",
+      come: "Prima di iniziare i lavori chiedi a un CAF o a un tecnico quali percentuali e limiti valgono nell'anno in cui paghi. Nella guida dell'Agenzia delle Entrate trovi le regole.",
+      link: { label: "Guida dell'Agenzia delle Entrate", href: "https://www1.agenziaentrate.gov.it/web_app_entrate/agevolazioni_disabilita.html/guide-gallery.html" },
+      forse: true,
     });
   }
 
