@@ -44,6 +44,10 @@ export function costruisciRichiesta(c: ComuneConfig): RichiestaComune {
     "",
     `Vi chiedo di valutare l'attivazione ufficiale di TutelApp per ${ilNostroEnte}, così da farla crescere insieme ai cittadini e non perdere l'accesso a questo servizio.`,
     "",
+    unione
+      ? "Chiedo cortesemente all'ufficio protocollo di inoltrare questa richiesta al Presidente e all'Assessore ai Servizi Sociali."
+      : "Chiedo cortesemente all'ufficio protocollo di inoltrare questa richiesta al Sindaco e all'Assessore ai Servizi Sociali.",
+    "",
     `Potete conoscere il progetto dai video sul canale YouTube: ${CANALE_YOUTUBE}`,
     "",
     `Per informazioni o per attivare il servizio, TutelApp si può contattare a ${CONTATTO_TUTELAPP} oppure dal modulo su ${PAGINA_COMUNI}`,

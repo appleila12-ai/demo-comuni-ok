@@ -62,6 +62,9 @@ function Note({ richiesta }: { richiesta: Corpo["richiesta"] }) {
         </Text>
       ) : null}
       <Text style={styles.nota}>
+        Nel testo chiediamo al Comune di inoltrare la richiesta a Sindaco e Assessore ai Servizi Sociali.
+      </Text>
+      <Text style={styles.nota}>
         Mettiamo TutelApp in copia, così il Comune può rispondere a tutti. Se non vuoi, togli
         l'indirizzo dalla mail prima di inviarla.
       </Text>
