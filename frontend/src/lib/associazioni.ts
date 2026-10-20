@@ -7,6 +7,7 @@
 // (recapiti dal sito del CIP); associazioni per Firenze, Sassuolo e Avezzano.
 // Aggiornamento 19/10/2026: sport per la Sicilia; associazioni per Catania e provincia di Reggio Emilia
 // (elenco sezioni locali del sito nazionale Anffas, email del programma Special Olympics dalla rete ufficiale).
+// Aggiornamento 20/10/2026: Anffas Sardegna (Cagliari) dall'elenco del sito nazionale; CIP Friuli-Venezia Giulia (solo pagina del Comitato).
 
 import { comune } from "@/src/config/comune";
 
@@ -540,6 +541,30 @@ PER_PROVINCIA.RE.volontariato.unshift({
   sito: "https://www.anffascorreggio.it",
   verificare: true,
 });
+
+// Cagliari: sede dall'elenco "Dove siamo" del sito nazionale Anffas (20/10/2026). Recapiti da confermare.
+PER_PROVINCIA.CA = PER_PROVINCIA.CA ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.CA.volontariato.unshift({
+  nome: "Anffas Sardegna ETS-APS",
+  cosa: "Associazione di famiglie di persone con disabilità intellettiva e relazionale.",
+  dove: "Via Stanislao Caboni 3, 09125 Cagliari",
+  telefono: "070 669083",
+  email: "aps@anffassardegna.it",
+  sito: "https://www.anffas.net/it/chi-siamo/dove-siamo/",
+  comuni: ["cagliari"],
+  verificare: true,
+});
+
+// Friuli-Venezia Giulia: solo la pagina del Comitato regionale sul sito del CIP (20/10/2026);
+// indirizzo, telefono ed email non letti, da cercare.
+SPORT_REGIONE["Friuli-Venezia Giulia"] = [
+  {
+    nome: "CIP – Comitato Paralimpico Friuli-Venezia Giulia",
+    cosa: "Coordina lo sport paralimpico in Friuli-Venezia Giulia e ti indica la società sportiva più vicina.",
+    sito: "https://www.comitatoparalimpico.it/organizzazione/territorio/comitati-regionali/item/comitato-regionale-friulivg.html",
+    verificare: true,
+  },
+];
 
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {

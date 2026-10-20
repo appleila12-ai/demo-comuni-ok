@@ -19,6 +19,9 @@
 // Nona raccolta: 15/10/2026, Puglia (Patto di cura), Veneto (ICD).
 // Decima raccolta: 18/10/2026, Unione dei Comuni del Distretto Ceramico (Sassuolo).
 // Undicesima raccolta: 19/10/2026, Comuni di Catania, Messina, Verona e Reggio Emilia.
+// Dodicesima raccolta: 20/10/2026, Friuli-Venezia Giulia (misure regionali per Trieste), Comune di Cagliari e Comune di Prato.
+// Tredicesima raccolta: 20/10/2026, misure regionali di Umbria, Sardegna, Marche e Calabria.
+// Quattordicesima raccolta: 20/10/2026, misure dei Comuni di Firenze, Bari, Venezia e Padova.
 
 import { comune } from "@/src/config/comune";
 
@@ -935,6 +938,309 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "19/10/2026",
     nota: "Da confermare con l'ente: scadenze e requisiti.",
+  },
+
+  // ------------------------------------------------------- FRIULI-VENEZIA GIULIA
+  {
+    id: "fvg-fap-autonomia-possibile",
+    regione: "Friuli-Venezia Giulia",
+    titolo: "Fondo per l'Autonomia Possibile (FAP): assegni per vivere a casa",
+    perChi:
+      "Persone non autosufficienti che vivono a casa: anziani o persone con disabilità, adulti o minori. Vi rientrano anche progetti di salute mentale e dipendenze e minori con patologie oncologiche certificate.",
+    cosa:
+      "Contributi disposti dagli Ambiti sociali, nei limiti del budget. Secondo la pagina della Regione: Assegno per l'autonomia (ISEE fino a 30.000 €, da 1.620 a 6.204 €); Contributo per l'aiuto familiare (ISEE fino a 30.000 €, da 2.892 a 12.000 €, con contratto regolare di almeno 20 ore settimanali); Sostegno alla vita indipendente (18-64 anni con grave disabilità, ISEE fino a 60.000 €, da 3.000 a 24.000 €); Progetti per minori (ISEE fino a 40.000 €, da 3.852 a 12.000 €); Assegno per gravissima disabilità, compresa SLA e grave demenza (ISEE fino a 60.000 €, 65.000 € per i minori, da 6.575 a 24.000 €). Il contributo \"disabili gravissimi\" è stato assorbito dal FAP dal 1° gennaio 2024.",
+    stato: "attivo",
+    comeSiChiede:
+      "Non c'è una domanda formale: ti rivolgi al Servizio sociale del tuo Comune, al distretto sanitario o al punto unico di accesso. I servizi valutano il bisogno e preparano un progetto personalizzato, di cui il contributo può far parte.",
+    fonte: {
+      label: "Regione FVG · Non autosufficienti (Fondo per l'Autonomia Possibile)",
+      url: "https://www.regione.fvg.it/rafvg/cms/RAFVG/salute-sociale/interventi-socio-sanitari/FOGLIA30/",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina della Regione aggiornata il 16/06/2026. Gli importi dipendono dalla valutazione e dal budget dell'Ambito: conferma con il Servizio sociale.",
+  },
+  {
+    id: "fvg-barriere-architettoniche",
+    regione: "Friuli-Venezia Giulia",
+    titolo: "Contributo regionale per abbattere le barriere architettoniche in casa",
+    perChi:
+      "Persone con disabilità permanente (fisica, mentale, intellettiva o sensoriale) che trovano ostacoli nell'edificio privato in cui hanno o vogliono avere la residenza. ISEE non superiore a 60.000 €. Anche chi aspetta il riconoscimento, con la ricevuta della domanda di accertamento.",
+    cosa:
+      "Contributo per eliminare barriere in abitazioni private e parti comuni (edifici esistenti all'11 agosto 1989; per i più recenti solo adattabilità). Spesa ammessa fino a 50.000 €; contributo massimo 10.000 € l'anno per persona. Copre tutta la spesa fino a 5.000 €, poi il 30% tra 5.000 e 10.000 €, il 20% tra 10.000 e 20.000 €, il 5% tra 20.000 e 50.000 €. Cumulabile con la Legge 13/1989 entro la spesa sostenuta.",
+    stato: "attivo",
+    quando: "La domanda si può presentare tutto l'anno, a lavori finiti, con spese degli ultimi 12 mesi.",
+    comeSiChiede:
+      "Al Comune dove si trova l'immobile, con il modello B e la marca da bollo, allegando relazione (allegato C), certificazione di invalidità e fatture quietanzate. Se sei in affitto o in condominio servono le autorizzazioni.",
+    fonte: {
+      label: "Regione FVG · Barriere architettoniche, contributo regionale",
+      url: "https://www.regione.fvg.it/rafvg/cms/RAFVG/salute-sociale/interventi-socio-sanitari/FOGLIA13/",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina della Regione aggiornata il 24/03/2026. Chiedi al Comune i tempi di istruttoria e il modulo aggiornato.",
+  },
+
+  // ------------------------------------------------------------------ SARDEGNA
+  {
+    id: "cagliari-legge-162-98-piani-2026",
+    regione: "Sardegna",
+    comuni: ["cagliari"],
+    titolo: "Piani personalizzati di sostegno (Legge 162/98), anno 2026",
+    perChi:
+      "Persone con disabilità grave riconosciuta ai sensi dell'art. 3, comma 3, della Legge 104/1992 (nuove domande). Chi ha già un piano deve aggiornare l'ISEE socio-sanitario ristretto 2026 o chiedere modifiche delle condizioni sanitarie e sociali.",
+    cosa:
+      "Piano personalizzato di sostegno con un finanziamento. Il Comune non scrive gli importi nell'avviso. Durata minima del piano: un mese. Chi non aggiorna l'ISEE ha il contributo ridotto dell'80%.",
+    stato: "aperto",
+    quando:
+      "Nuove domande dalle 12:00 del 10 febbraio alle 12:00 del 30 novembre 2026; rinnovo con modifica fino al 31 marzo 2026; aggiornamento ISEE entro il 31 marzo 2026. Le domande presentate entro il 10 aprile 2026 possono partire dal 1° maggio, nei limiti delle risorse.",
+    comeSiChiede:
+      "Solo online sulla piattaforma Icare, con SPID o CIE, dalla persona o da un delegato (amministratore di sostegno o caregiver). Per le nuove richieste servono il verbale della 104 art. 3 comma 3 (anche provvisorio) e la scheda salute compilata dal medico di famiglia. Informazioni: uffici territoriali del Servizio sociale; numero verde URP 800 016 058.",
+    fonte: {
+      label: "Comune di Cagliari · Avviso piani personalizzati di sostegno (L. 162/98) anno 2026",
+      url: "https://www.comune.cagliari.it/portale/page/it/avviso_piani_personalizzati_di_sostegno__legge_n_16298__anno_2026?contentId=DOC250616",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina del Comune aggiornata il 06/03/2026. Il bando ufficiale è l'unica fonte vincolante: controlla requisiti e termini lì.",
+  },
+  {
+    id: "cagliari-sussidio-disturbo-psichico-2026",
+    regione: "Sardegna",
+    comuni: ["cagliari"],
+    titolo: "Sussidio economico per persone con disturbo psichico (L.R. 20/1997), anno 2026",
+    perChi: "Persone con disturbo psichico in condizione di bisogno economico. La domanda può essere fatta dalla persona o da chi la rappresenta. Requisiti e ISEE sono nell'avviso, non nella pagina.",
+    cosa: "Sussidio economico ai sensi della Legge Regionale 20/1997. Importi non scritti nella pagina.",
+    stato: "chiuso",
+    quando: "Domande dal 26 febbraio 2026 al 30 giugno 2026.",
+    comeSiChiede:
+      "Solo sulla piattaforma online del Comune, con SPID o CIE. Aiuto per attivare SPID presso il Servizio Politiche Sociali e della Casa (via Sauro 19), su prenotazione scrivendo a spid.sociale@comune.cagliari.it.",
+    fonte: {
+      label: "Comune di Cagliari · Avviso sussidio per il sostegno alle persone con disturbo psichico, anno 2026",
+      url: "https://www.comune.cagliari.it/portale/page/it/avviso_per_la_concessione_di_un_sussidio_economico_per_il_sostegno_alle_persone_con_disturbo_psichico__lr_201997__anno_2026?contentId=DOC251985",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina aggiornata il 29/06/2026. Chiedi al Comune se l'avviso 2027 verrà riaperto e quando.",
+  },
+
+  // ------------------------------------------------------------------- PRATO
+  {
+    id: "prato-attivita-estive-disabilita-grave-2026",
+    regione: "Toscana",
+    comuni: ["prato"],
+    titolo: "Contributo per attività estive di minori e giovani con disabilità grave (2026)",
+    perChi: "Minori e giovani fino a 21 anni non compiuti con disabilità grave. Il bando non elenca requisiti specifici; le graduatorie sono divise per ISEE (soglia 29.999 €) e per età.",
+    cosa:
+      "Contributo economico per partecipare a iniziative estive di socializzazione scelte dalle famiglie. Importi non scritti nell'avviso. Contributi fino a esaurimento delle risorse, con priorità alla graduatoria 1.",
+    stato: "chiuso",
+    quando:
+      "Domande dal 15 giugno al 15 luglio 2026. Graduatorie pubblicate il 28/09/2026; rendicontazione delle spese entro il 30 settembre.",
+    comeSiChiede:
+      "Domanda consegnata a mano al Protocollo generale, via PEC o con raccomandata A/R. Informazioni: numero verde PUA 800 922 912.",
+    fonte: {
+      label: "Comune di Prato · Contributi a minori e giovani con grave disabilità per iniziative estive 2026",
+      url: "https://www2.comune.prato.it/avvisi/2026/archivio17_21_910.html",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Avviso del 15/06/2026, aggiornato il 28/09/2026. Chiedi al Comune quando uscirà quello del 2027.",
+  },
+
+  // ------------------------------------------------------------------- UMBRIA
+  {
+    id: "umbria-per-tutti-grave-disabilita",
+    regione: "Umbria",
+    titolo: "Umbria per tutti: contributo per l'assistenza alle persone con grave disabilità",
+    perChi:
+      "Persone residenti in Umbria, minorenni, adulte e anziane, con grave disabilità riconosciuta (Legge 104/1992, art. 3, comma 3). ISEE sociosanitario ristretto fino a 50.000 € per adulti e anziani; ISEE per minorenni fino a 65.000 €.",
+    cosa:
+      "Sostegno di 300 € al mese, fino a 1.200 € per il 2025, da usare per assistenti personali, servizi di assistenza domiciliare, canone di locazione per progetti di vita autonoma o ausili tecnologici.",
+    stato: "chiuso",
+    quando: "Il termine per presentare domanda è stato prorogato al 31 marzo 2026.",
+    comeSiChiede:
+      "Solo per PEC, agli indirizzi indicati negli avvisi pubblici delle USL Umbria 1 e Umbria 2, dove trovi anche moduli e criteri.",
+    fonte: {
+      label: "Regione Umbria · Umbria per tutti: prorogato al 31 marzo 2026 il termine per il contributo",
+      url: "https://insalute.regione.umbria.it/novita/umbria-per-tutti-prorogato-al-31-marzo-2026-il-termine-per-presentare-domanda-di-contributo-per-lassistenza-alle-persone-con-grave-disabilita/",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina del 30/12/2025 (delibera regionale 1024/2025). Chiedi alla tua USL se il contributo sarà riproposto per il 2026.",
+  },
+
+  // ----------------------------------------------------------------- SARDEGNA
+  {
+    id: "sardegna-dopo-di-noi-ritornare-a-casa-plus",
+    regione: "Sardegna",
+    titolo: "Dopo di Noi e Ritornare a casa Plus",
+    perChi:
+      "Dopo di Noi: persone con disabilità grave non dovuta all'invecchiamento o a patologie della senilità. Ritornare a casa Plus: persone anziane non autosufficienti con disabilità grave e le loro famiglie.",
+    cosa:
+      "Dopo di Noi: piano personalizzato per la vita autonoma, dopo la valutazione della ASL e con gli ambiti PLUS, anche con soluzioni abitative che coinvolgono la famiglia d'origine. Ritornare a casa Plus: sostegno e assistenza domiciliare, anche tramite il caregiver familiare, e aiuto nel passaggio dall'ospedale a casa. La notizia non scrive importi.",
+    stato: "da-verificare",
+    comeSiChiede:
+      "La notizia non spiega come fare domanda: rivolgiti ai Servizi Sociali del tuo Comune, all'ambito PLUS o alla ASL.",
+    fonte: {
+      label: "Regione Sardegna · Programmi \"Dopo di Noi\" e \"Ritornare a casa Plus\"",
+      url: "https://www.regione.sardegna.it/notizie/programmi-dopo-di-noi-e-ritorniamo-a-casa-plus-l-assessore-bartolazzi-mettiamo-la-persona-al-centro-delle-politiche-sociali-e-socio-assistenziali",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Notizia del 31/01/2025 sulla delibera della Giunta. Requisiti, ISEE, importi e scadenze vanno chiesti al Comune o all'ambito PLUS.",
+  },
+
+  // ------------------------------------------------------------------- MARCHE
+  {
+    id: "marche-vita-indipendente-regionale",
+    regione: "Marche",
+    titolo: "Vita indipendente regionale (L.R. 21/2018)",
+    perChi:
+      "Persone con disabilità. La pagina non descrive i criteri di accesso. Riguarda la prosecuzione dei progetti personalizzati avviati con le Linee guida DGR 1696/2018.",
+    cosa:
+      "Progetti personalizzati di vita indipendente. La pagina non scrive gli importi.",
+    stato: "da-verificare",
+    quando:
+      "Rendicontazione 2025: dal 07/01/2026 al 28/02/2026. Conferma di prosecuzione per il 2026: finestra dall'01/10 al 31/10/2025, già chiusa.",
+    comeSiChiede:
+      "Online, con SPID, CIE-ID o CNS: la domanda può essere fatta dalla persona, dal tutore, dall'amministratore di sostegno o da un delegato con modello di delega. Prima di compilare va letto il manuale indicato nella pagina. Assistenza tecnica: 071 9257814, procedimarche@regione.marche.it (lun-ven 9-12).",
+    fonte: {
+      label: "Regione Marche · Vita indipendente regionale",
+      url: "https://www.regione.marche.it/Regione-Utile/Sociale/Disabilit%C3%A0/Vita-Indipendente-Regionale",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "La pagina non ha data di aggiornamento. Per entrare in un nuovo progetto chiedi all'Ambito territoriale sociale del tuo Comune.",
+  },
+
+  // ----------------------------------------------------------------- CALABRIA
+  {
+    id: "calabria-dopo-di-noi",
+    regione: "Calabria",
+    titolo: "Fondo Dopo di Noi (annualità 2016-2018)",
+    perChi:
+      "Persone con disabilità grave prive del sostegno familiare e le loro famiglie. Requisiti e ISEE non sono scritti nella notizia.",
+    cosa:
+      "Progetti individuali di vita e autonomia, assistenza domiciliare, inclusione, soluzioni abitative leggere, tecnologie assistive. Gli interventi sono gestiti dagli Ambiti territoriali sociali; la Regione ha chiesto di usare le somme non spese (circa 3 milioni di euro) concludendo l'iter entro il 31/05/2026.",
+    stato: "da-verificare",
+    comeSiChiede:
+      "La notizia non spiega come fare domanda: rivolgiti ai Servizi Sociali del tuo Comune o all'Ambito territoriale sociale. Informazioni: Ufficio Relazioni con il Pubblico della Regione, Cittadella regionale di Catanzaro.",
+    fonte: {
+      label: "Regione Calabria · Risorse fondo Dopo di noi: la Regione riunisce gli Ambiti sociali",
+      url: "https://www.regione.calabria.it/risorse-fondo-dopo-di-noi-straface-riunisce-gli-ambiti-sociali-ogni-euro-fermo-deve-diventare-un-intervento-per-persone-con-disabilita-grave-rendicontare-entro-il-31-maggio/",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Notizia del 05/05/2026. Non è un bando con scadenza per il cittadino: chiedi all'Ambito quali interventi sono attivi nel tuo territorio.",
+  },
+
+  // ------------------------------------------------------------ COMUNI (20/10/2026)
+  {
+    id: "firenze-soggiorni-vacanza-disabilita-2026",
+    regione: "Toscana",
+    comuni: ["firenze"],
+    titolo: "Contributi per soggiorni vacanza di persone con disabilità (2026)",
+    perChi: "Persone con disabilità. Requisiti e ISEE non sono scritti nella pagina: sono nell'avviso pubblico.",
+    cosa:
+      "Contributo, totale o parziale, a rimborso delle spese di un soggiorno vacanza di massimo 15 giorni (14 notti) fatto tra giugno e settembre 2026, pagato in un'unica soluzione. Importi non scritti nella pagina.",
+    stato: "chiuso",
+    quando: "Servizio online aperto per 15 giorni dal 5 ottobre 2026.",
+    comeSiChiede: "Online, con il servizio dedicato, allegando i giustificativi delle spese sostenute.",
+    fonte: {
+      label: "Comune di Firenze · Contributi soggiorni vacanza persone con disabilità 2026",
+      url: "https://sociale.comune.fi.it/dalle-redazioni/contributi-soggiorni-vacanza-persone-con-disabilita-2026-pubblicazione-avviso",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina del 13/08/2026. Chiedi al Comune quando uscirà l'avviso 2027.",
+  },
+  {
+    id: "bari-contributo-mobilita-disabili",
+    regione: "Puglia",
+    comuni: ["bari"],
+    titolo: "Contributo per la mobilità di persone con disabilità",
+    perChi:
+      "Residenti a Bari con disabilità psichica, fisica o non vedenti, con invalidità totale al 100% e difficoltà motorie, oppure invalidità totale con indennità di accompagnamento, oppure cecità o ipovedenza grave (Legge 138/2001). Anche anziani con ridotta capacità motoria in particolare necessità.",
+    cosa:
+      "Contributo su carta prepagata personale per spostamenti verso lavoro, scuola, università, terapie e attività ricreative previste da un progetto personalizzato; per altre esigenze fino a 120 € al mese. Il trasporto scolastico dell'obbligo è escluso. Una quota, calcolata sull'ISEE, viene detratta dall'importo.",
+    stato: "chiuso",
+    quando:
+      "Si chiede con avviso pubblico, pubblicato circa ogni tre anni. L'ultimo è scaduto alle 12:00 del 26 maggio 2025; la graduatoria vale tre anni.",
+    comeSiChiede:
+      "Con l'avviso pubblico, online (SPID o CIE) o allo sportello di segretariato sociale in Largo Ignazio Chiurlia 27, con documento, verbale di invalidità e ISEE/DSU.",
+    fonte: {
+      label: "Comune di Bari · Contributo per la mobilità per diversamente abili",
+      url: "https://www.comune.bari.it/-/presentare-domanda-contributo-mobilita-diversamente-abili",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina aggiornata il 01/02/2026. Chiedi al Comune la data del prossimo avviso e se sei già in graduatoria.",
+  },
+  {
+    id: "bari-casa-dopo-di-noi",
+    regione: "Puglia",
+    comuni: ["bari"],
+    titolo: "Casa Dopo di Noi (Legge 112/2016): contributi per residenzialità e autonomia",
+    perChi:
+      "Residenti a Bari, 18-64 anni, con disabilità grave certificata (Legge 104/1992, art. 3, comma 3). Altri requisiti sono nell'art. 2 dell'avviso. Priorità, tra l'altro, a ISEE sociosanitario sotto i 3.000 €, età dai 50 anni, assenza dei genitori o genitori non più in grado di assistere.",
+    cosa:
+      "Supporto alla residenzialità: copertura della retta in gruppi appartamento o cohousing (pagata all'ente del Terzo Settore, entro la tariffa della DGR 3032/2010, per un anno). Accompagnamento all'autonomia: fino a 4.800 € l'anno, più 600 € per consulenza e sostegno alle relazioni familiari.",
+    stato: "da-verificare",
+    quando: "Avviso del 20 febbraio 2025 con scadenza il 20 marzo (anno non scritto nella notizia). Pagina aggiornata il 09/12/2025.",
+    comeSiChiede:
+      "Per PEC a serviziallapersona.comunebari@pec.rupar.puglia.it con i moduli dell'avviso, indicando nell'oggetto \"Manifestazione di interesse per l'erogazione di contributi Casa Dopo di Noi - CUP J99G23000440002\".",
+    fonte: {
+      label: "Comune di Bari · Avviso Casa Dopo di Noi",
+      url: "https://www.comune.bari.it/-/in-pubblicazione-l-avviso-di-manifestazione-di-interesse-per-l-erogazione-di-contributi-casa-dopo-di-noi",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Da confermare con l'ente: se l'avviso è ancora aperto o sarà riproposto.",
+  },
+  {
+    id: "venezia-contributo-residenzialita",
+    regione: "Veneto",
+    comuni: ["venezia"],
+    titolo: "Contributo economico per la residenzialità",
+    perChi:
+      "Persone con disabilità certificata di 18-64 anni che hanno bisogno di una struttura residenziale accreditata, con autorizzazione dell'UVMD o del servizio competente; persone con problemi di salute mentale in carico al Dipartimento di Salute Mentale dell'ULSS 3 Serenissima. Ultima residenza nel Comune di Venezia; ISEE entro i limiti del regolamento comunale (soglie non scritte nella pagina).",
+    cosa:
+      "Contributo che integra le risorse personali per pagare la retta alberghiera in strutture socio-sanitarie residenziali. Importi non scritti nella pagina.",
+    stato: "attivo",
+    comeSiChiede:
+      "Con la modulistica degli Sportelli Agenzia Coesione Sociale, indirizzata al Servizio Disabili: consegna a mano al Protocollo del Comune, raccomandata o PEC a coesionesociale.settoreservizisociali@pec.comune.venezia.it.",
+    fonte: {
+      label: "Comune di Venezia · Contributo residenzialità",
+      url: "https://www.comune.venezia.it/it/content/contributo-economico-residenzialit-disabili",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina aggiornata il 24/10/2025. Scadenze e soglie ISEE vanno chieste al Servizio Disabili.",
+  },
+  {
+    id: "venezia-eu-disability-card-actv",
+    regione: "Veneto",
+    comuni: ["venezia"],
+    titolo: "Tariffa agevolata ACTV con la EU Disability Card",
+    perChi:
+      "Persone con disabilità riconosciuta dall'INPS che hanno diritto alla EU Disability Card (ad esempio invalidi civili dal 67%, titolari di accompagnamento, persone con 104 art. 3 comma 3, ciechi e sordi civili).",
+    cosa:
+      "La tariffa agevolata \"disabili\" sulla rete di navigazione ACTV, prima riservata a chi è in carrozzina, vale ora per tutte le disabilità aventi diritto alla Card, in via sperimentale. Corsa a 1,50 € per 75 minuti; accompagnatore gratuito se previsto.",
+    stato: "attivo",
+    comeSiChiede:
+      "L'articolo non spiega la procedura di acquisto: chiedi al Comune o ad ACTV. In futuro la Card potrà essere integrata nei canali di vendita dei titoli.",
+    fonte: {
+      label: "Comune di Venezia · EU Disability Card, estesa la tariffa agevolata Actv a tutte le disabilità",
+      url: "https://live.comune.venezia.it/it/2026/07/eu-disability-card-estesa-la-tariffa-agevolata-actv-tutte-le-disabilita",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Notizia del 09/07/2026. Misura sperimentale: conferma con il Comune.",
+  },
+  {
+    id: "padova-sostegno-caregiver-familiare",
+    regione: "Veneto",
+    comuni: ["padova"],
+    titolo: "Sostegno economico al caregiver familiare di persone con disabilità",
+    perChi:
+      "Caregiver familiari che assistono coniuge, partner di unione civile o convivente di fatto, un familiare o un affine fino al secondo grado non autosufficiente. Serve l'ISEE sociosanitario della persona assistita.",
+    cosa:
+      "Interventi di sollievo e sostegno al caregiver (contributo \"CG\"), cumulabili con l'impegnativa di cura domiciliare dopo valutazione dell'UVMD. Importi non scritti nella pagina. Assegnazione per graduatoria di gravità, entro le risorse.",
+    stato: "attivo",
+    comeSiChiede:
+      "Il caregiver presenta domanda con l'ISEE sociosanitario al Distretto sociosanitario o al Comune di residenza. Punti Unici di Padova: Bacchiglione 049 5494975, Terme Colli 049 5496169, Piovese 049 5497212.",
+    fonte: {
+      label: "Comune di Padova · Sostegno economico al caregiver familiare di persone con disabilità",
+      url: "https://padovaper.comune.padova.it/servizi/supporto-economico-e-agevolazioni/sostegno-economico-al-caregiver-familiare-di-persone-con-disabilita",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina aggiornata il 28/07/2026; misura della Regione Veneto gestita dal Distretto. La pagina non indica scadenze: confermale con il Distretto.",
   },
 ];
 

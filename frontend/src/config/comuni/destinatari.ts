@@ -388,4 +388,86 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "reggio-calabria": { email: "urp@reggiocal.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
   // Reggio Emilia (RE)
   "reggio-emilia": { email: "comune.informa@comune.re.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+
+  // ---- Aggiunti il 20/10/2026 dall'elenco dei domicili digitali degli enti (IPA, Indice dei domicili digitali delle PA)
+  // Venaria Reale (TO)
+  "venaria-reale": { email: "protocollovenariareale@pec.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Monfalcone (GO)
+  "monfalcone": { email: "comune.monfalcone@certgov.fvg.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Piombino (LI)
+  "piombino": { email: "comunepiombino@postacert.toscana.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Casale Monferrato (AL)
+  "casale-monferrato": { email: "protocollo@pec.comune.casale-monferrato.al.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Mascalucia (CT)
+  "mascalucia": { email: "ced@pec.comunemascalucia.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Mirano (VE)
+  "mirano": { email: "protocollo.comune.mirano.ve@pecveneto.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Montebelluna (TV)
+  "montebelluna": { email: "protocollo.comune.montebelluna.tv@pecveneto.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Santa Maria Capua Vetere (CE)
+  "santa-maria-capua-vetere": { email: "protocollo@santamariacv.postecert.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Gubbio (PG)
+  "gubbio": { email: "comune.gubbio@postacert.umbria.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Massafra (TA)
+  "massafra": { email: "protocollo@pec.comunedimassafra.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Vittorio Veneto (TV)
+  "vittorio-veneto": { email: "pec.comune.vittorioveneto.tv@pecveneto.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Avola (SR)
+  "avola": { email: "servizisociali@pec.comune.avola.sr.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Ostuni (BR)
+  "ostuni": { email: "protocollo@cert.comune.ostuni.br.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Rosignano Marittimo (LI)
+  "rosignano-marittimo": { email: "comune.rosignanomarittimo@postacert.toscana.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Grottaglie (TA)
+  "grottaglie": { email: "comunegrottaglie@pec.rupar.puglia.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Bra (CN)
+  "bra": { email: "comunebra@postecert.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Arzano (NA)
+  "arzano": { email: "protocollo@pec.comune.arzano.na.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Sant'Antimo (NA)
+  "sant-antimo": { email: "protocollo@pec.comune.santantimo.na.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Manduria (TA)
+  "manduria": { email: "protocollo.manduria@pec.rupar.puglia.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Castelvetrano (TP)
+  "castelvetrano": { email: "protocollo@pec.comune.castelvetrano.tp.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // San Lazzaro di Savena (BO)
+  "san-lazzaro-di-savena": { email: "comune.sanlazzaro@cert.provincia.bo.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Corsico (MI)
+  "corsico": { email: "ufficioprotocollo@cert.comune.corsico.mi.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Fasano (BR)
+  "fasano": { email: "comunefasano@pec.rupar.puglia.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Nola (NA)
+  "nola": { email: "comunenola@pec.comune.nola.na.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Riccione (RN)
+  "riccione": { email: "comune.riccione@legalmail.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Adrano (CT)
+  "adrano": { email: "protocollo@pec.comune.adrano.ct.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Pomigliano d'Arco (NA)
+  "pomigliano-d-arco": { email: "comune.pomiglianodarco@legalmail.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Mugnano di Napoli (NA)
+  "mugnano-di-napoli": { email: "protocollomugnano@pec.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Schio (VI)
+  "schio": { email: "schio.vi@cert.ip-veneto.net", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Voghera (PV)
+  "voghera": { email: "protocollo@cert.comune.voghera.pv.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Monreale (PA)
+  "monreale": { email: "comune.monreale@pec.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Somma Vesuviana (NA)
+  "somma-vesuviana": { email: "protocollo.generale@pec.sommavesuviana.info", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Cento (FE)
+  "cento": { email: "comune.cento@cert.comune.cento.fe.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Melito di Napoli (NA)
+  "melito-di-napoli": { email: "protocollogenerale@pec.comune.melito.na.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Castelfranco Emilia (MO)
+  "castelfranco-emilia": { email: "comunecastelfrancoemilia@cert.comune.castelfranco-emilia.mo.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Canicattì (AG)
+  "canicatti": { email: "protocollo@pec.comune.canicatti.ag.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Caivano (NA)
+  "caivano": { email: "protocollo.caivano@asmepec.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Carini (PA)
+  "carini": { email: "protocollo@pec.comune.carini.pa.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Limbiate (MB)
+  "limbiate": { email: "comune.limbiate@pec.regione.lombardia.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // Formigine (MO)
+  "formigine": { email: "comune.formigine@cert.comune.formigine.mo.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
 };

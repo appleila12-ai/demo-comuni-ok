@@ -1,9 +1,10 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Cagliari (CA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
+// Comune di Cagliari (CA) — VERSIONE DIMOSTRATIVA, SCHEDA COMPLETATA (20 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Pagina "Salute, benessere e assistenza" del sito del Comune, controllata il 13 ottobre 2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Completata il 20 ottobre 2026: 2 avvisi del Comune in bonus.ts (piani personalizzati L. 162/98 con nuove domande fino al 30/11/2026; sussidio per disturbo psichico, chiuso) e Anffas Sardegna in associazioni.ts, da pagine del sito del Comune e dell'elenco Anffas.
+// Da confermare con l'ente: requisiti e termini dei bandi (la pagina rimanda all'avviso ufficiale); Ritornare a casa PLUS della Regione (pagine non lette); sport: avviso del Comune per progetti sportivi riservato agli enti del terzo settore, non è una misura per i cittadini.
 export const cagliari: ComuneConfig = {
   slug: "cagliari",
   tipo: "comune",
@@ -44,6 +45,12 @@ export const cagliari: ComuneConfig = {
       title: "ASL Cagliari",
       subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
       action: { type: "web", value: "https://www.asl8cagliari.it" },
+    },
+    {
+      icon: "call-outline",
+      title: "Ufficio Relazioni con il Pubblico",
+      subtitle: "Numero verde del Comune · Tel. 800 016 058",
+      action: { type: "tel", value: "800016058" },
     },
   ],
 
