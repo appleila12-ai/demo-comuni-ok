@@ -9,8 +9,8 @@
 //
 // Regione "Italia" = vale in tutta Italia (si vede in ogni Comune).
 //
-// Prima raccolta: 20/10/2026, collocamento mirato (Italia), Friuli-Venezia Giulia, Lombardia,
-// Sardegna, Liguria e borse lavoro del Comune di Sarzana.
+// Prima raccolta: 20/10/2026, collocamento mirato (Italia), Friuli-Venezia Giulia.
+// Non inserire misure di cui non si è letta la fonte ufficiale (regola del 20/10/2026).
 
 import { comune } from "@/src/config/comune";
 import type { Bonus } from "@/src/lib/bonus";
@@ -55,88 +55,6 @@ export const LAVORO: Bonus[] = [
       url: "https://www.regione.fvg.it/rafvg/cms/RAFVG/formazione-lavoro/servizi-lavoratori/FOGLIA16/",
     },
     verificatoIl: "20/10/2026",
-  },
-
-  // --- Lombardia -----------------------------------------------------------
-  {
-    id: "lavoro-lombardia-frod",
-    regione: "Lombardia",
-    titolo: "Inserimento socio-lavorativo: Fondo regionale per l'occupazione dei disabili 2025/2026",
-    perChi: "Persone con disabilità. La pagina della Regione non indica requisiti precisi.",
-    cosa:
-      "La Regione ha pubblicato le linee di indirizzo per gli interventi finanziati dal Fondo regionale per l'occupazione dei disabili (legge regionale 13/2003) per il biennio 2025/2026. Dalla pagina non si capisce quali interventi concreti ci siano nel tuo territorio.",
-    stato: "da-verificare",
-    quando: "Biennio 2025/2026. Nessuna scadenza indicata sulla pagina.",
-    comeSiChiede:
-      "Chiedi al centro per l'impiego (collocamento mirato) o ai Servizi Sociali del tuo Comune quali interventi sono attivi vicino a te.",
-    fonte: {
-      label: "Regione Lombardia · Inserimento lavorativo persone con disabilità",
-      url: "https://www.regione.lombardia.it/istruzione-formazione-e-lavoro/lavoro-e-occupazione/inserimento-lavorativo-persone-con-disabilita",
-    },
-    verificatoIl: "20/10/2026",
-    nota: "La stessa pagina elenca anche “Dote impresa”, contributi per l'assunzione: riguarda i datori di lavoro, non chi cerca lavoro.",
-  },
-
-  // --- Sardegna ------------------------------------------------------------
-  {
-    id: "lavoro-sardegna-includis",
-    regione: "Sardegna",
-    titolo: "INCLUDIS: tirocini e accompagnamento al lavoro",
-    perChi:
-      "Persone non occupate che hanno almeno una di queste condizioni: disturbo mentale o dello spettro autistico, in carico ai Dipartimenti di Salute Mentale o ai servizi di neuropsichiatria infantile (UONPIA); disabilità mentale, intellettiva o psichica, in carico ai servizi sociali o sociosanitari; disabilità riconosciuta ai sensi dell'art. 3 della Legge 104/1992.",
-    cosa:
-      "Percorsi di tirocinio presso soggetti ospitanti individuati insieme al centro per l'impiego, con figure di sostegno che accompagnano la persona, monitoraggio del percorso e aiuto per l'inserimento al lavoro dopo il tirocinio. L'indennità per chi fa il tirocinio non è scritta nella fonte che abbiamo letto.",
-    stato: "da-verificare",
-    quando:
-      "L'avviso che abbiamo trovato è INCLUDIS 2024, approvato il 1° agosto 2024. Gli ambiti sociali dovevano candidarsi entro il 14 ottobre 2024 e le attività devono concludersi entro il 31 luglio 2027. Non sappiamo se nel tuo territorio ci siano ancora posti.",
-    comeSiChiede:
-      "Si passa dall'ambito sociale (PLUS) e dal centro per l'impiego: chiedi ai Servizi Sociali del tuo Comune se nel tuo ambito c'è un progetto INCLUDIS attivo.",
-    fonte: {
-      label: "Comune di Sassari · Avviso INCLUDIS 2024 (ambito PLUS Sassari)",
-      url: "https://comune.sassari.it/.galleries/doc-documenti/includis_2024_avviso.pdf",
-    },
-    verificatoIl: "20/10/2026",
-    nota: "La fonte è l'avviso di un ambito sociale che ha attuato il programma regionale. Il testo della Regione Sardegna non è stato letto: conferma con l'ente.",
-  },
-
-  // --- Liguria -------------------------------------------------------------
-  {
-    id: "lavoro-liguria-collocamento-mirato",
-    regione: "Liguria",
-    titolo: "Collocamento mirato in Liguria (Regione Liguria)",
-    perChi: "Persone con disabilità e categorie protette (Legge 68/1999).",
-    cosa:
-      "Il servizio è gestito dalla Regione Liguria. Sul suo sito ci sono le pagine con sedi e orari degli uffici, compreso quello della Spezia, e le chiamate per persone con disabilità e categorie protette. Il contenuto delle pagine non ha potuto essere letto da qui, quindi non riportiamo recapiti.",
-    stato: "da-verificare",
-    comeSiChiede: "Apri la pagina della Regione per trovare l'ufficio e gli orari, oppure chiedi ai Servizi Sociali del Comune.",
-    fonte: {
-      label: "Regione Liguria · Collocamento mirato per i cittadini e i datori di lavoro",
-      url: "https://www.regione.liguria.it/homepage-lavoro/cpi/operatori-liguri-cpi/collocamento-mirato.html",
-    },
-    verificatoIl: "20/10/2026",
-    nota: "Pagina trovata con la ricerca ma non letta da noi: i dati vanno controllati.",
-  },
-
-  // --- Comuni ----------------------------------------------------------------
-  {
-    id: "lavoro-sarzana-borse-lavoro",
-    regione: "Liguria",
-    comuni: ["sarzana"],
-    titolo: "Sarzana: borse lavoro del Comune (percorsi di attivazione sociale)",
-    perChi:
-      "Non lo sappiamo con certezza. Il Comune ha pubblicato un bando per percorsi di attivazione sociale; non sappiamo se sia riservato alle persone con disabilità o aperto a più persone in difficoltà.",
-    cosa: "Il comunicato del Comune parla di 20 percorsi di attivazione sociale (borse lavoro). Requisiti, durata e compenso non sono stati letti.",
-    stato: "da-verificare",
-    quando:
-      "Nel comunicato che abbiamo trovato le domande si chiudevano il 15 giugno. Non sappiamo di quale anno né se ci sarà un nuovo bando.",
-    comeSiChiede:
-      "Chiedi ai Servizi Sociali del Comune di Sarzana se c'è un bando aperto per lavorare in Comune per persone con disabilità, quali sono i requisiti e come si presenta la domanda.",
-    fonte: {
-      label: "Comune di Sarzana · Borse lavoro: bando comunale per 20 percorsi di attivazione sociale",
-      url: "https://www.comune.sarzana.sp.it/comunicati-stampa/2526-borse-lavoro-attivato-il-bando-comunale-per-20-percorsi-di-attivazione-sociale-le-domande-entro-il-15-giugno.html",
-    },
-    verificatoIl: "20/10/2026",
-    nota: "Del comunicato conosciamo solo il titolo: la pagina non si apriva da qui.",
   },
 ];
 
