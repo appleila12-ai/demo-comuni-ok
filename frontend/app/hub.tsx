@@ -126,6 +126,7 @@ const TAPPE: Tappa[] = [
       { label: "Bonus e contributi", route: "/bonus" },
       { label: "Salute vicino a te", route: "/salute" },
       { label: "Associazioni e sport", route: "/associazioni" },
+      { label: "Lavoro", route: "/lavoro" },
     ],
   },
 ];
