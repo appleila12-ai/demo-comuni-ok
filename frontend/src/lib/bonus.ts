@@ -19,6 +19,7 @@
 // Nona raccolta: 15/10/2026, Puglia (Patto di cura), Veneto (ICD).
 // Decima raccolta: 18/10/2026, Unione dei Comuni del Distretto Ceramico (Sassuolo).
 // Undicesima raccolta: 19/10/2026, Comuni di Catania, Messina, Verona e Reggio Emilia.
+// Dodicesima raccolta: 20/10/2026, Friuli-Venezia Giulia (misure regionali per Trieste), Comune di Cagliari e Comune di Prato.
 
 import { comune } from "@/src/config/comune";
 
@@ -935,6 +936,108 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "19/10/2026",
     nota: "Da confermare con l'ente: scadenze e requisiti.",
+  },
+
+  // ------------------------------------------------------- FRIULI-VENEZIA GIULIA
+  {
+    id: "fvg-fap-autonomia-possibile",
+    regione: "Friuli-Venezia Giulia",
+    titolo: "Fondo per l'Autonomia Possibile (FAP): assegni per vivere a casa",
+    perChi:
+      "Persone non autosufficienti che vivono a casa: anziani o persone con disabilità, adulti o minori. Vi rientrano anche progetti di salute mentale e dipendenze e minori con patologie oncologiche certificate.",
+    cosa:
+      "Contributi disposti dagli Ambiti sociali, nei limiti del budget. Secondo la pagina della Regione: Assegno per l'autonomia (ISEE fino a 30.000 €, da 1.620 a 6.204 €); Contributo per l'aiuto familiare (ISEE fino a 30.000 €, da 2.892 a 12.000 €, con contratto regolare di almeno 20 ore settimanali); Sostegno alla vita indipendente (18-64 anni con grave disabilità, ISEE fino a 60.000 €, da 3.000 a 24.000 €); Progetti per minori (ISEE fino a 40.000 €, da 3.852 a 12.000 €); Assegno per gravissima disabilità, compresa SLA e grave demenza (ISEE fino a 60.000 €, 65.000 € per i minori, da 6.575 a 24.000 €). Il contributo \"disabili gravissimi\" è stato assorbito dal FAP dal 1° gennaio 2024.",
+    stato: "attivo",
+    comeSiChiede:
+      "Non c'è una domanda formale: ti rivolgi al Servizio sociale del tuo Comune, al distretto sanitario o al punto unico di accesso. I servizi valutano il bisogno e preparano un progetto personalizzato, di cui il contributo può far parte.",
+    fonte: {
+      label: "Regione FVG · Non autosufficienti (Fondo per l'Autonomia Possibile)",
+      url: "https://www.regione.fvg.it/rafvg/cms/RAFVG/salute-sociale/interventi-socio-sanitari/FOGLIA30/",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina della Regione aggiornata il 16/06/2026. Gli importi dipendono dalla valutazione e dal budget dell'Ambito: conferma con il Servizio sociale.",
+  },
+  {
+    id: "fvg-barriere-architettoniche",
+    regione: "Friuli-Venezia Giulia",
+    titolo: "Contributo regionale per abbattere le barriere architettoniche in casa",
+    perChi:
+      "Persone con disabilità permanente (fisica, mentale, intellettiva o sensoriale) che trovano ostacoli nell'edificio privato in cui hanno o vogliono avere la residenza. ISEE non superiore a 60.000 €. Anche chi aspetta il riconoscimento, con la ricevuta della domanda di accertamento.",
+    cosa:
+      "Contributo per eliminare barriere in abitazioni private e parti comuni (edifici esistenti all'11 agosto 1989; per i più recenti solo adattabilità). Spesa ammessa fino a 50.000 €; contributo massimo 10.000 € l'anno per persona. Copre tutta la spesa fino a 5.000 €, poi il 30% tra 5.000 e 10.000 €, il 20% tra 10.000 e 20.000 €, il 5% tra 20.000 e 50.000 €. Cumulabile con la Legge 13/1989 entro la spesa sostenuta.",
+    stato: "attivo",
+    quando: "La domanda si può presentare tutto l'anno, a lavori finiti, con spese degli ultimi 12 mesi.",
+    comeSiChiede:
+      "Al Comune dove si trova l'immobile, con il modello B e la marca da bollo, allegando relazione (allegato C), certificazione di invalidità e fatture quietanzate. Se sei in affitto o in condominio servono le autorizzazioni.",
+    fonte: {
+      label: "Regione FVG · Barriere architettoniche, contributo regionale",
+      url: "https://www.regione.fvg.it/rafvg/cms/RAFVG/salute-sociale/interventi-socio-sanitari/FOGLIA13/",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina della Regione aggiornata il 24/03/2026. Chiedi al Comune i tempi di istruttoria e il modulo aggiornato.",
+  },
+
+  // ------------------------------------------------------------------ SARDEGNA
+  {
+    id: "cagliari-legge-162-98-piani-2026",
+    regione: "Sardegna",
+    comuni: ["cagliari"],
+    titolo: "Piani personalizzati di sostegno (Legge 162/98), anno 2026",
+    perChi:
+      "Persone con disabilità grave riconosciuta ai sensi dell'art. 3, comma 3, della Legge 104/1992 (nuove domande). Chi ha già un piano deve aggiornare l'ISEE socio-sanitario ristretto 2026 o chiedere modifiche delle condizioni sanitarie e sociali.",
+    cosa:
+      "Piano personalizzato di sostegno con un finanziamento. Il Comune non scrive gli importi nell'avviso. Durata minima del piano: un mese. Chi non aggiorna l'ISEE ha il contributo ridotto dell'80%.",
+    stato: "aperto",
+    quando:
+      "Nuove domande dalle 12:00 del 10 febbraio alle 12:00 del 30 novembre 2026; rinnovo con modifica fino al 31 marzo 2026; aggiornamento ISEE entro il 31 marzo 2026. Le domande presentate entro il 10 aprile 2026 possono partire dal 1° maggio, nei limiti delle risorse.",
+    comeSiChiede:
+      "Solo online sulla piattaforma Icare, con SPID o CIE, dalla persona o da un delegato (amministratore di sostegno o caregiver). Per le nuove richieste servono il verbale della 104 art. 3 comma 3 (anche provvisorio) e la scheda salute compilata dal medico di famiglia. Informazioni: uffici territoriali del Servizio sociale; numero verde URP 800 016 058.",
+    fonte: {
+      label: "Comune di Cagliari · Avviso piani personalizzati di sostegno (L. 162/98) anno 2026",
+      url: "https://www.comune.cagliari.it/portale/page/it/avviso_piani_personalizzati_di_sostegno__legge_n_16298__anno_2026?contentId=DOC250616",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina del Comune aggiornata il 06/03/2026. Il bando ufficiale è l'unica fonte vincolante: controlla requisiti e termini lì.",
+  },
+  {
+    id: "cagliari-sussidio-disturbo-psichico-2026",
+    regione: "Sardegna",
+    comuni: ["cagliari"],
+    titolo: "Sussidio economico per persone con disturbo psichico (L.R. 20/1997), anno 2026",
+    perChi: "Persone con disturbo psichico in condizione di bisogno economico. La domanda può essere fatta dalla persona o da chi la rappresenta. Requisiti e ISEE sono nell'avviso, non nella pagina.",
+    cosa: "Sussidio economico ai sensi della Legge Regionale 20/1997. Importi non scritti nella pagina.",
+    stato: "chiuso",
+    quando: "Domande dal 26 febbraio 2026 al 30 giugno 2026.",
+    comeSiChiede:
+      "Solo sulla piattaforma online del Comune, con SPID o CIE. Aiuto per attivare SPID presso il Servizio Politiche Sociali e della Casa (via Sauro 19), su prenotazione scrivendo a spid.sociale@comune.cagliari.it.",
+    fonte: {
+      label: "Comune di Cagliari · Avviso sussidio per il sostegno alle persone con disturbo psichico, anno 2026",
+      url: "https://www.comune.cagliari.it/portale/page/it/avviso_per_la_concessione_di_un_sussidio_economico_per_il_sostegno_alle_persone_con_disturbo_psichico__lr_201997__anno_2026?contentId=DOC251985",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina aggiornata il 29/06/2026. Chiedi al Comune se l'avviso 2027 verrà riaperto e quando.",
+  },
+
+  // ------------------------------------------------------------------- PRATO
+  {
+    id: "prato-attivita-estive-disabilita-grave-2026",
+    regione: "Toscana",
+    comuni: ["prato"],
+    titolo: "Contributo per attività estive di minori e giovani con disabilità grave (2026)",
+    perChi: "Minori e giovani fino a 21 anni non compiuti con disabilità grave. Il bando non elenca requisiti specifici; le graduatorie sono divise per ISEE (soglia 29.999 €) e per età.",
+    cosa:
+      "Contributo economico per partecipare a iniziative estive di socializzazione scelte dalle famiglie. Importi non scritti nell'avviso. Contributi fino a esaurimento delle risorse, con priorità alla graduatoria 1.",
+    stato: "chiuso",
+    quando:
+      "Domande dal 15 giugno al 15 luglio 2026. Graduatorie pubblicate il 28/09/2026; rendicontazione delle spese entro il 30 settembre.",
+    comeSiChiede:
+      "Domanda consegnata a mano al Protocollo generale, via PEC o con raccomandata A/R. Informazioni: numero verde PUA 800 922 912.",
+    fonte: {
+      label: "Comune di Prato · Contributi a minori e giovani con grave disabilità per iniziative estive 2026",
+      url: "https://www2.comune.prato.it/avvisi/2026/archivio17_21_910.html",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Avviso del 15/06/2026, aggiornato il 28/09/2026. Chiedi al Comune quando uscirà quello del 2027.",
   },
 ];
 
