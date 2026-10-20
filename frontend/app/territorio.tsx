@@ -242,23 +242,6 @@ export default function Territorio() {
           <Ionicons name="chevron-forward" size={18} color={t.warmDark} />
         </Pressable>
 
-        {/* Lavoro e disabilità */}
-        <Pressable
-          onPress={() => router.push("/lavoro" as any)}
-          style={({ pressed }) => [styles.punto, { borderColor: t.warm }, pressed && { opacity: 0.85 }]}
-          accessibilityRole="button"
-          testID="territorio-lavoro"
-        >
-          <View style={[styles.puntoIcon, { backgroundColor: t.warmSoft }]}>
-            <Ionicons name="briefcase-outline" size={18} color={t.warmDark} />
-          </View>
-          <View style={styles.flex}>
-            <Text style={styles.puntoTitle}>Lavoro</Text>
-            <Text style={styles.puntoSub}>Collocamento mirato, tirocini e bandi per lavorare</Text>
-          </View>
-          <Ionicons name="chevron-forward" size={18} color={t.warmDark} />
-        </Pressable>
-
         {/* Servizi del territorio indicati dal Comune */}
         {comune.puntiSupporto.length > 0 && (
           <View style={styles.section} testID="territorio-punti">
