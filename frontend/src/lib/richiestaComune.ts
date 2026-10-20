@@ -20,6 +20,8 @@ export type RichiestaComune = {
   testo: string;
   /** Indirizzo non ancora verificato o mancante: il cittadino deve controllarlo */
   daControllare: boolean;
+  /** L'indirizzo è una PEC: molte PEC rifiutano la posta normale */
+  isPec: boolean;
 };
 
 export function costruisciRichiesta(c: ComuneConfig): RichiestaComune {
@@ -64,6 +66,7 @@ export function costruisciRichiesta(c: ComuneConfig): RichiestaComune {
     oggetto,
     testo,
     daControllare: !a || !!c.daVerificare || (!c.email && !!elenco),
+    isPec: !!a && ((!c.email && elenco?.tipo === "pec") || (!c.email && !elenco && !!c.pec)),
   };
 }
 
