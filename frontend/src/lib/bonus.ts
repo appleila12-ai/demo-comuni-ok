@@ -21,6 +21,7 @@
 // Undicesima raccolta: 19/10/2026, Comuni di Catania, Messina, Verona e Reggio Emilia.
 // Dodicesima raccolta: 20/10/2026, Friuli-Venezia Giulia (misure regionali per Trieste), Comune di Cagliari e Comune di Prato.
 // Tredicesima raccolta: 20/10/2026, misure regionali di Umbria, Sardegna, Marche e Calabria.
+// Quattordicesima raccolta: 20/10/2026, misure dei Comuni di Firenze, Bari, Venezia e Padova.
 
 import { comune } from "@/src/config/comune";
 
@@ -1122,6 +1123,124 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "20/10/2026",
     nota: "Notizia del 05/05/2026. Non è un bando con scadenza per il cittadino: chiedi all'Ambito quali interventi sono attivi nel tuo territorio.",
+  },
+
+  // ------------------------------------------------------------ COMUNI (20/10/2026)
+  {
+    id: "firenze-soggiorni-vacanza-disabilita-2026",
+    regione: "Toscana",
+    comuni: ["firenze"],
+    titolo: "Contributi per soggiorni vacanza di persone con disabilità (2026)",
+    perChi: "Persone con disabilità. Requisiti e ISEE non sono scritti nella pagina: sono nell'avviso pubblico.",
+    cosa:
+      "Contributo, totale o parziale, a rimborso delle spese di un soggiorno vacanza di massimo 15 giorni (14 notti) fatto tra giugno e settembre 2026, pagato in un'unica soluzione. Importi non scritti nella pagina.",
+    stato: "chiuso",
+    quando: "Servizio online aperto per 15 giorni dal 5 ottobre 2026.",
+    comeSiChiede: "Online, con il servizio dedicato, allegando i giustificativi delle spese sostenute.",
+    fonte: {
+      label: "Comune di Firenze · Contributi soggiorni vacanza persone con disabilità 2026",
+      url: "https://sociale.comune.fi.it/dalle-redazioni/contributi-soggiorni-vacanza-persone-con-disabilita-2026-pubblicazione-avviso",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina del 13/08/2026. Chiedi al Comune quando uscirà l'avviso 2027.",
+  },
+  {
+    id: "bari-contributo-mobilita-disabili",
+    regione: "Puglia",
+    comuni: ["bari"],
+    titolo: "Contributo per la mobilità di persone con disabilità",
+    perChi:
+      "Residenti a Bari con disabilità psichica, fisica o non vedenti, con invalidità totale al 100% e difficoltà motorie, oppure invalidità totale con indennità di accompagnamento, oppure cecità o ipovedenza grave (Legge 138/2001). Anche anziani con ridotta capacità motoria in particolare necessità.",
+    cosa:
+      "Contributo su carta prepagata personale per spostamenti verso lavoro, scuola, università, terapie e attività ricreative previste da un progetto personalizzato; per altre esigenze fino a 120 € al mese. Il trasporto scolastico dell'obbligo è escluso. Una quota, calcolata sull'ISEE, viene detratta dall'importo.",
+    stato: "chiuso",
+    quando:
+      "Si chiede con avviso pubblico, pubblicato circa ogni tre anni. L'ultimo è scaduto alle 12:00 del 26 maggio 2025; la graduatoria vale tre anni.",
+    comeSiChiede:
+      "Con l'avviso pubblico, online (SPID o CIE) o allo sportello di segretariato sociale in Largo Ignazio Chiurlia 27, con documento, verbale di invalidità e ISEE/DSU.",
+    fonte: {
+      label: "Comune di Bari · Contributo per la mobilità per diversamente abili",
+      url: "https://www.comune.bari.it/-/presentare-domanda-contributo-mobilita-diversamente-abili",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina aggiornata il 01/02/2026. Chiedi al Comune la data del prossimo avviso e se sei già in graduatoria.",
+  },
+  {
+    id: "bari-casa-dopo-di-noi",
+    regione: "Puglia",
+    comuni: ["bari"],
+    titolo: "Casa Dopo di Noi (Legge 112/2016): contributi per residenzialità e autonomia",
+    perChi:
+      "Residenti a Bari, 18-64 anni, con disabilità grave certificata (Legge 104/1992, art. 3, comma 3). Altri requisiti sono nell'art. 2 dell'avviso. Priorità, tra l'altro, a ISEE sociosanitario sotto i 3.000 €, età dai 50 anni, assenza dei genitori o genitori non più in grado di assistere.",
+    cosa:
+      "Supporto alla residenzialità: copertura della retta in gruppi appartamento o cohousing (pagata all'ente del Terzo Settore, entro la tariffa della DGR 3032/2010, per un anno). Accompagnamento all'autonomia: fino a 4.800 € l'anno, più 600 € per consulenza e sostegno alle relazioni familiari.",
+    stato: "da-verificare",
+    quando: "Avviso del 20 febbraio 2025 con scadenza il 20 marzo (anno non scritto nella notizia). Pagina aggiornata il 09/12/2025.",
+    comeSiChiede:
+      "Per PEC a serviziallapersona.comunebari@pec.rupar.puglia.it con i moduli dell'avviso, indicando nell'oggetto \"Manifestazione di interesse per l'erogazione di contributi Casa Dopo di Noi - CUP J99G23000440002\".",
+    fonte: {
+      label: "Comune di Bari · Avviso Casa Dopo di Noi",
+      url: "https://www.comune.bari.it/-/in-pubblicazione-l-avviso-di-manifestazione-di-interesse-per-l-erogazione-di-contributi-casa-dopo-di-noi",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Da confermare con l'ente: se l'avviso è ancora aperto o sarà riproposto.",
+  },
+  {
+    id: "venezia-contributo-residenzialita",
+    regione: "Veneto",
+    comuni: ["venezia"],
+    titolo: "Contributo economico per la residenzialità",
+    perChi:
+      "Persone con disabilità certificata di 18-64 anni che hanno bisogno di una struttura residenziale accreditata, con autorizzazione dell'UVMD o del servizio competente; persone con problemi di salute mentale in carico al Dipartimento di Salute Mentale dell'ULSS 3 Serenissima. Ultima residenza nel Comune di Venezia; ISEE entro i limiti del regolamento comunale (soglie non scritte nella pagina).",
+    cosa:
+      "Contributo che integra le risorse personali per pagare la retta alberghiera in strutture socio-sanitarie residenziali. Importi non scritti nella pagina.",
+    stato: "attivo",
+    comeSiChiede:
+      "Con la modulistica degli Sportelli Agenzia Coesione Sociale, indirizzata al Servizio Disabili: consegna a mano al Protocollo del Comune, raccomandata o PEC a coesionesociale.settoreservizisociali@pec.comune.venezia.it.",
+    fonte: {
+      label: "Comune di Venezia · Contributo residenzialità",
+      url: "https://www.comune.venezia.it/it/content/contributo-economico-residenzialit-disabili",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina aggiornata il 24/10/2025. Scadenze e soglie ISEE vanno chieste al Servizio Disabili.",
+  },
+  {
+    id: "venezia-eu-disability-card-actv",
+    regione: "Veneto",
+    comuni: ["venezia"],
+    titolo: "Tariffa agevolata ACTV con la EU Disability Card",
+    perChi:
+      "Persone con disabilità riconosciuta dall'INPS che hanno diritto alla EU Disability Card (ad esempio invalidi civili dal 67%, titolari di accompagnamento, persone con 104 art. 3 comma 3, ciechi e sordi civili).",
+    cosa:
+      "La tariffa agevolata \"disabili\" sulla rete di navigazione ACTV, prima riservata a chi è in carrozzina, vale ora per tutte le disabilità aventi diritto alla Card, in via sperimentale. Corsa a 1,50 € per 75 minuti; accompagnatore gratuito se previsto.",
+    stato: "attivo",
+    comeSiChiede:
+      "L'articolo non spiega la procedura di acquisto: chiedi al Comune o ad ACTV. In futuro la Card potrà essere integrata nei canali di vendita dei titoli.",
+    fonte: {
+      label: "Comune di Venezia · EU Disability Card, estesa la tariffa agevolata Actv a tutte le disabilità",
+      url: "https://live.comune.venezia.it/it/2026/07/eu-disability-card-estesa-la-tariffa-agevolata-actv-tutte-le-disabilita",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Notizia del 09/07/2026. Misura sperimentale: conferma con il Comune.",
+  },
+  {
+    id: "padova-sostegno-caregiver-familiare",
+    regione: "Veneto",
+    comuni: ["padova"],
+    titolo: "Sostegno economico al caregiver familiare di persone con disabilità",
+    perChi:
+      "Caregiver familiari che assistono coniuge, partner di unione civile o convivente di fatto, un familiare o un affine fino al secondo grado non autosufficiente. Serve l'ISEE sociosanitario della persona assistita.",
+    cosa:
+      "Interventi di sollievo e sostegno al caregiver (contributo \"CG\"), cumulabili con l'impegnativa di cura domiciliare dopo valutazione dell'UVMD. Importi non scritti nella pagina. Assegnazione per graduatoria di gravità, entro le risorse.",
+    stato: "attivo",
+    comeSiChiede:
+      "Il caregiver presenta domanda con l'ISEE sociosanitario al Distretto sociosanitario o al Comune di residenza. Punti Unici di Padova: Bacchiglione 049 5494975, Terme Colli 049 5496169, Piovese 049 5497212.",
+    fonte: {
+      label: "Comune di Padova · Sostegno economico al caregiver familiare di persone con disabilità",
+      url: "https://padovaper.comune.padova.it/servizi/supporto-economico-e-agevolazioni/sostegno-economico-al-caregiver-familiare-di-persone-con-disabilita",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina aggiornata il 28/07/2026; misura della Regione Veneto gestita dal Distretto. La pagina non indica scadenze: confermale con il Distretto.",
   },
 ];
 
