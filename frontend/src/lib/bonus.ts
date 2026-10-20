@@ -20,6 +20,7 @@
 // Decima raccolta: 18/10/2026, Unione dei Comuni del Distretto Ceramico (Sassuolo).
 // Undicesima raccolta: 19/10/2026, Comuni di Catania, Messina, Verona e Reggio Emilia.
 // Dodicesima raccolta: 20/10/2026, Friuli-Venezia Giulia (misure regionali per Trieste), Comune di Cagliari e Comune di Prato.
+// Tredicesima raccolta: 20/10/2026, misure regionali di Umbria, Sardegna, Marche e Calabria.
 
 import { comune } from "@/src/config/comune";
 
@@ -1038,6 +1039,89 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "20/10/2026",
     nota: "Avviso del 15/06/2026, aggiornato il 28/09/2026. Chiedi al Comune quando uscirà quello del 2027.",
+  },
+
+  // ------------------------------------------------------------------- UMBRIA
+  {
+    id: "umbria-per-tutti-grave-disabilita",
+    regione: "Umbria",
+    titolo: "Umbria per tutti: contributo per l'assistenza alle persone con grave disabilità",
+    perChi:
+      "Persone residenti in Umbria, minorenni, adulte e anziane, con grave disabilità riconosciuta (Legge 104/1992, art. 3, comma 3). ISEE sociosanitario ristretto fino a 50.000 € per adulti e anziani; ISEE per minorenni fino a 65.000 €.",
+    cosa:
+      "Sostegno di 300 € al mese, fino a 1.200 € per il 2025, da usare per assistenti personali, servizi di assistenza domiciliare, canone di locazione per progetti di vita autonoma o ausili tecnologici.",
+    stato: "chiuso",
+    quando: "Il termine per presentare domanda è stato prorogato al 31 marzo 2026.",
+    comeSiChiede:
+      "Solo per PEC, agli indirizzi indicati negli avvisi pubblici delle USL Umbria 1 e Umbria 2, dove trovi anche moduli e criteri.",
+    fonte: {
+      label: "Regione Umbria · Umbria per tutti: prorogato al 31 marzo 2026 il termine per il contributo",
+      url: "https://insalute.regione.umbria.it/novita/umbria-per-tutti-prorogato-al-31-marzo-2026-il-termine-per-presentare-domanda-di-contributo-per-lassistenza-alle-persone-con-grave-disabilita/",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina del 30/12/2025 (delibera regionale 1024/2025). Chiedi alla tua USL se il contributo sarà riproposto per il 2026.",
+  },
+
+  // ----------------------------------------------------------------- SARDEGNA
+  {
+    id: "sardegna-dopo-di-noi-ritornare-a-casa-plus",
+    regione: "Sardegna",
+    titolo: "Dopo di Noi e Ritornare a casa Plus",
+    perChi:
+      "Dopo di Noi: persone con disabilità grave non dovuta all'invecchiamento o a patologie della senilità. Ritornare a casa Plus: persone anziane non autosufficienti con disabilità grave e le loro famiglie.",
+    cosa:
+      "Dopo di Noi: piano personalizzato per la vita autonoma, dopo la valutazione della ASL e con gli ambiti PLUS, anche con soluzioni abitative che coinvolgono la famiglia d'origine. Ritornare a casa Plus: sostegno e assistenza domiciliare, anche tramite il caregiver familiare, e aiuto nel passaggio dall'ospedale a casa. La notizia non scrive importi.",
+    stato: "da-verificare",
+    comeSiChiede:
+      "La notizia non spiega come fare domanda: rivolgiti ai Servizi Sociali del tuo Comune, all'ambito PLUS o alla ASL.",
+    fonte: {
+      label: "Regione Sardegna · Programmi \"Dopo di Noi\" e \"Ritornare a casa Plus\"",
+      url: "https://www.regione.sardegna.it/notizie/programmi-dopo-di-noi-e-ritorniamo-a-casa-plus-l-assessore-bartolazzi-mettiamo-la-persona-al-centro-delle-politiche-sociali-e-socio-assistenziali",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Notizia del 31/01/2025 sulla delibera della Giunta. Requisiti, ISEE, importi e scadenze vanno chiesti al Comune o all'ambito PLUS.",
+  },
+
+  // ------------------------------------------------------------------- MARCHE
+  {
+    id: "marche-vita-indipendente-regionale",
+    regione: "Marche",
+    titolo: "Vita indipendente regionale (L.R. 21/2018)",
+    perChi:
+      "Persone con disabilità. La pagina non descrive i criteri di accesso. Riguarda la prosecuzione dei progetti personalizzati avviati con le Linee guida DGR 1696/2018.",
+    cosa:
+      "Progetti personalizzati di vita indipendente. La pagina non scrive gli importi.",
+    stato: "da-verificare",
+    quando:
+      "Rendicontazione 2025: dal 07/01/2026 al 28/02/2026. Conferma di prosecuzione per il 2026: finestra dall'01/10 al 31/10/2025, già chiusa.",
+    comeSiChiede:
+      "Online, con SPID, CIE-ID o CNS: la domanda può essere fatta dalla persona, dal tutore, dall'amministratore di sostegno o da un delegato con modello di delega. Prima di compilare va letto il manuale indicato nella pagina. Assistenza tecnica: 071 9257814, procedimarche@regione.marche.it (lun-ven 9-12).",
+    fonte: {
+      label: "Regione Marche · Vita indipendente regionale",
+      url: "https://www.regione.marche.it/Regione-Utile/Sociale/Disabilit%C3%A0/Vita-Indipendente-Regionale",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "La pagina non ha data di aggiornamento. Per entrare in un nuovo progetto chiedi all'Ambito territoriale sociale del tuo Comune.",
+  },
+
+  // ----------------------------------------------------------------- CALABRIA
+  {
+    id: "calabria-dopo-di-noi",
+    regione: "Calabria",
+    titolo: "Fondo Dopo di Noi (annualità 2016-2018)",
+    perChi:
+      "Persone con disabilità grave prive del sostegno familiare e le loro famiglie. Requisiti e ISEE non sono scritti nella notizia.",
+    cosa:
+      "Progetti individuali di vita e autonomia, assistenza domiciliare, inclusione, soluzioni abitative leggere, tecnologie assistive. Gli interventi sono gestiti dagli Ambiti territoriali sociali; la Regione ha chiesto di usare le somme non spese (circa 3 milioni di euro) concludendo l'iter entro il 31/05/2026.",
+    stato: "da-verificare",
+    comeSiChiede:
+      "La notizia non spiega come fare domanda: rivolgiti ai Servizi Sociali del tuo Comune o all'Ambito territoriale sociale. Informazioni: Ufficio Relazioni con il Pubblico della Regione, Cittadella regionale di Catanzaro.",
+    fonte: {
+      label: "Regione Calabria · Risorse fondo Dopo di noi: la Regione riunisce gli Ambiti sociali",
+      url: "https://www.regione.calabria.it/risorse-fondo-dopo-di-noi-straface-riunisce-gli-ambiti-sociali-ogni-euro-fermo-deve-diventare-un-intervento-per-persone-con-disabilita-grave-rendicontare-entro-il-31-maggio/",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Notizia del 05/05/2026. Non è un bando con scadenza per il cittadino: chiedi all'Ambito quali interventi sono attivi nel tuo territorio.",
   },
 ];
 
