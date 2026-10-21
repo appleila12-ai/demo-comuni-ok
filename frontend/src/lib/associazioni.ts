@@ -5,6 +5,8 @@
 // articoli locali recenti. "verificare: true" = recapito da confermare.
 // Aggiornamento 18/10/2026: sport per Toscana, Emilia-Romagna, Veneto e Abruzzo
 // (recapiti dal sito del CIP); associazioni per Firenze, Sassuolo e Avezzano.
+// Aggiornamento 19/10/2026: associazioni e sport per Brescia, Modena e Monza
+// (elenco sedi di Anffas e elenchi dei siti dei Comuni).
 // Aggiornamento 19/10/2026: sport per la Sicilia; associazioni per Catania e provincia di Reggio Emilia
 // (elenco sezioni locali del sito nazionale Anffas, email del programma Special Olympics dalla rete ufficiale).
 // Aggiornamento 20/10/2026: Anffas Sardegna (Cagliari) dall'elenco del sito nazionale; CIP Friuli-Venezia Giulia (solo pagina del Comitato).
@@ -516,6 +518,18 @@ PER_PROVINCIA.AQ.volontariato.unshift({
   dove: "Avezzano (AQ)",
   comuni: ["avezzano"],
   verificare: true,
+});
+
+// Brescia (BS): recapiti dall'elenco "Dove siamo" del sito nazionale di Anffas (19/10/2026).
+PER_PROVINCIA.BS = PER_PROVINCIA.BS ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.BS.volontariato.unshift({
+  nome: "Anffas Brescia",
+  cosa: "Associazione di famiglie di persone con disabilità intellettiva e relazionale.",
+  dove: "Via Michelangelo 405, 25124 Brescia",
+  telefono: "030 2319071",
+  email: "info@anffasbrescia.it",
+  sito: "https://www.anffasbrescia.it",
+  comuni: ["brescia"],
 });
 
 // Catania: sezione locale Anffas dall'elenco del sito nazionale (19/10/2026).

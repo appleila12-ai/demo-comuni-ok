@@ -1,9 +1,10 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Brescia (BS) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
+// Comune di Brescia (BS) — VERSIONE DIMOSTRATIVA, SCHEDA COMPLETATA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Pagina "Salute, benessere e assistenza" del sito del Comune, controllata il 13 ottobre 2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Completata il 19 ottobre 2026: 3 misure del Comune in bonus.ts (Dopo di Noi, vacanze adulti con disabilità, Vita indipendente) e Anffas Brescia in associazioni.ts, da pagine e PDF del sito del Comune.
+// Da confermare con l'ente: importi e scadenze delle misure; email, indirizzo e orari dei Servizi Sociali (non verificati); associazioni sportive.
 export const brescia: ComuneConfig = {
   slug: "brescia",
   tipo: "comune",

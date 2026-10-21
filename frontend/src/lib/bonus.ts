@@ -18,6 +18,7 @@
 // Ottava raccolta: 15/10/2026, Toscana.
 // Nona raccolta: 15/10/2026, Puglia (Patto di cura), Veneto (ICD).
 // Decima raccolta: 18/10/2026, Unione dei Comuni del Distretto Ceramico (Sassuolo).
+// Undicesima-bis raccolta: 19/10/2026, Comuni di Brescia, Modena e Monza.
 // Undicesima raccolta: 19/10/2026, Comuni di Catania, Messina, Verona e Reggio Emilia.
 // Dodicesima raccolta: 20/10/2026, Friuli-Venezia Giulia (misure regionali per Trieste), Comune di Cagliari e Comune di Prato.
 // Tredicesima raccolta: 20/10/2026, misure regionali di Umbria, Sardegna, Marche e Calabria.
@@ -777,6 +778,89 @@ export const BONUS: Bonus[] = [
     nota: "Fonte giornalistica: chiedi al Comune di Ocre o all'Unione Montana se è previsto un nuovo avviso.",
   },
 
+  // ------------------------------------------------------------- BRESCIA
+  {
+    id: "brescia-vacanze-adulti-disabilita",
+    regione: "Lombardia",
+    comuni: ["brescia"],
+    titolo: "Contributo una tantum per le vacanze di persone adulte con disabilità",
+    perChi:
+      "Persone adulte con disabilità che hanno i requisiti dell'avviso pubblico. La pagina del servizio non elenca i requisiti: si leggono nell'avviso.",
+    cosa: "Rimborso parziale, una sola volta, delle spese sostenute per le vacanze. La pagina non scrive gli importi.",
+    stato: "attivo",
+    quando: "La pagina scrive che le domande si inseriscono dal 15 novembre al 15 gennaio dell'anno successivo (senza indicare l'anno).",
+    comeSiChiede:
+      "Online, compilando il modulo sul canale digitale del servizio. I documenti da allegare sono nell'avviso pubblico.",
+    fonte: {
+      label: "Comune di Brescia · Contributi una tantum per le vacanze di persone adulte con disabilità",
+      url: "https://comune.brescia.it/it/servizi/sociali-erogazione-di-contributi-una-tantum-a-parziale-rimborso-delle-spese-sostenute-per-le-vacanze-di-persone-adulte-con-disabilita",
+    },
+    verificatoIl: "19/10/2026",
+    nota: "Pagina del Comune aggiornata il 14/04/2026. Leggi l'avviso per requisiti, importi e documenti prima di spendere.",
+  },
+  {
+    id: "brescia-vita-indipendente",
+    regione: "Lombardia",
+    comuni: ["brescia"],
+    titolo: "Contributi per progetti di vita indipendente (Ambito 1: Brescia e Collebeato)",
+    perChi:
+      "Persone con disabilità tra 18 e 64 anni residenti nell'Ambito Territoriale Sociale 1 di Brescia (Comuni di Brescia e Collebeato), con ISEE socio-sanitario inferiore a 30.000 euro e verbale di invalidità.",
+    cosa:
+      "Contributi economici per sostenere progetti di vita indipendente personalizzati. La pagina non scrive gli importi: i costi sono quelli previsti dal progetto.",
+    stato: "attivo",
+    quando: "La pagina dice solo che i finanziamenti sono annuali e non indica una scadenza.",
+    comeSiChiede: "Presentando un'istanza al Servizio Sociale Territoriale di riferimento.",
+    fonte: {
+      label: "Comune di Brescia · Contributi per progetti di vita indipendente",
+      url: "https://comune.brescia.it/it/servizi/contributi-per-progetti-di-vita-indipendente",
+    },
+    verificatoIl: "19/10/2026",
+    nota: "Pagina del Comune aggiornata il 12/08/2026. Chiedi al Servizio Sociale se ci sono fondi disponibili per l'anno in corso.",
+  },
+
+  // ------------------------------------------------------------- MODENA
+  {
+    id: "modena-disability-card",
+    regione: "Emilia-Romagna",
+    comuni: ["modena"],
+    titolo: "Disability Card: ingressi gratuiti o a tariffa ridotta a Modena",
+    perChi:
+      "Titolari della Carta europea della disabilità (Disability Card dell'INPS), per le categorie dell'allegato 3 del DPCM 159/2013.",
+    cosa:
+      "Ingresso gratuito per il titolare e l'accompagnatore all'Acetaia Comunale, alla Torre Ghirlandina e Duomo, alle Sale Storiche del Palazzo Comunale, al Museo Civico, Gipsoteca e Lapidario Romano e al parco della Terramare di Montale. Museo Enzo Ferrari: ingresso gratuito per il titolare e tariffa ridotta per l'accompagnatore. Teatri Storchi e delle Passioni (ERT): tariffa ridotta per il titolare e ingresso gratuito per l'accompagnatore. Teatro Comunale Pavarotti-Freni: tariffa ridotta per titolare e accompagnatore. Per i teatri si prenota in anticipo, nei limiti dei posti.",
+    stato: "attivo",
+    comeSiChiede:
+      "La card si chiede all'INPS online, oppure tramite ANMIC, UICI, ENS o ANFFAS, e arriva per posta con Poste Italiane. Poi si mostra negli enti convenzionati.",
+    fonte: {
+      label: "Comune di Modena · Carta europea della disabilità - Disability Card",
+      url: "https://www.comune.modena.it/argomenti/agevolazioni-economiche/contributi-e-agevolazioni-di-altri-enti/carta-europea-della-disabilita-disability-card",
+    },
+    verificatoIl: "19/10/2026",
+    nota: "Pagina del Comune aggiornata il 24/02/2025: controlla le convenzioni prima di andare. La card non dà in automatico il contrassegno europeo per la sosta (CUDE), che richiede una pratica a parte.",
+  },
+
+  // ------------------------------------------------------------- MONZA
+  {
+    id: "monza-misura-b2-2025-2026",
+    regione: "Lombardia",
+    comuni: ["monza"],
+    titolo: "Misura B2 per la disabilità grave e la non autosufficienza (Ambito di Monza)",
+    perChi:
+      "Persone in condizione di disabilità grave o di non autosufficienza (Misura B2 della Regione Lombardia, delibera XII/3719 del 30/12/2024).",
+    cosa:
+      "Interventi di sostegno alla persona e alla famiglia per restare al proprio domicilio, dopo una valutazione multidimensionale e con un progetto individuale. La pagina non scrive gli importi.",
+    stato: "chiuso",
+    quando:
+      "Domande dal 1 aprile 2025, fino a esaurimento delle risorse e comunque non oltre il 31 marzo 2026.",
+    comeSiChiede:
+      "Si compila il modello scaricabile dal sito dell'Ambito Territoriale di Monza con i documenti richiesti, e lo si invia a misurab2@comune.monza.it oppure lo si consegna agli Uffici Territoriali su appuntamento. Per l'appuntamento, chi accede ai servizi sociali per la prima volta chiama il Segretariato Sociale: 334 6311270.",
+    fonte: {
+      label: "Comune di Monza · Misure in favore di persone con disabilità grave",
+      url: "https://www.comune.monza.it/it/servizi/misure-in-favore-di-persone-con-disabilita-grave",
+    },
+    verificatoIl: "19/10/2026",
+    nota: "Pagina del Comune aggiornata il 09/04/2025. La finestra è scaduta il 31/03/2026: chiedi al Segretariato Sociale se è prevista una nuova edizione. Vedi anche la scheda regionale della Misura B2.",
+  },
   // ------------------------------------------------------------------ CATANIA
   {
     id: "catania-caregiver-una-tantum",
