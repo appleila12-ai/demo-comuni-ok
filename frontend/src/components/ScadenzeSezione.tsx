@@ -10,10 +10,12 @@ import { storage } from "@/src/utils/storage";
 import { comune } from "@/src/config/comune";
 import { scaricaFile } from "@/src/lib/documenti";
 import {
+  SCADENZE_KEY,
   TIPI,
   calcolaEventi,
   creaIcs,
   daTestoItaliano,
+  daTestoOra,
   giorniDaOggi,
   inItaliano,
   tipoInfo,
@@ -21,14 +23,18 @@ import {
   type TipoScadenza,
 } from "@/src/lib/scadenze";
 import { Avviso, Bottone, paginaStili } from "@/src/components/Pagina";
+import { PromemoriaSezione } from "@/src/components/PromemoriaSezione";
+import { aggiornaPromemoria } from "@/src/lib/promemoriaApp";
 
-const KEY = "tutelapp:scadenze";
+const KEY = SCADENZE_KEY;
 
 export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolean }) {
   const [lista, setLista] = useState<Scadenza[]>([]);
   const [aperto, setAperto] = useState<TipoScadenza | null>(null);
   const [testoData, setTestoData] = useState("");
   const [titolo, setTitolo] = useState("");
+  const [testoOra, setTestoOra] = useState("");
+  const [nota, setNota] = useState("");
   const [errore, setErrore] = useState("");
   const [messaggio, setMessaggio] = useState("");
 
@@ -47,7 +53,8 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
 
   const salva = (nuova: Scadenza[]) => {
     setLista(nuova);
-    storage.setItem(KEY, JSON.stringify(nuova));
+    // dopo il salvataggio gli avvisi sul telefono si riallineano alle nuove date
+    storage.setItem(KEY, JSON.stringify(nuova)).then(() => aggiornaPromemoria());
   };
 
   const eventi = useMemo(() => calcolaEventi(lista), [lista]);
@@ -56,6 +63,8 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
     setAperto(aperto === t ? null : t);
     setTestoData("");
     setTitolo("");
+    setTestoOra("");
+    setNota("");
     setErrore("");
     setMessaggio("");
   };
@@ -76,11 +85,22 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
       setAperto(null);
       return;
     }
+    let ora: string | undefined;
+    if (aperto === "altro" && testoOra.trim()) {
+      const o = daTestoOra(testoOra);
+      if (!o) {
+        setErrore("Scrivi l'ora così: 9:30 (oppure lascia vuoto).");
+        return;
+      }
+      ora = o;
+    }
     const nuova: Scadenza = {
       id: `${aperto}-${Date.now()}`,
       tipo: aperto,
       data,
       titolo: aperto === "altro" ? titolo : undefined,
+      ora,
+      nota: aperto === "altro" && nota.trim() ? nota.trim().slice(0, 200) : undefined,
     };
     salva([...lista.filter((s) => aperto === "altro" || s.tipo !== aperto), nuova]);
     setAperto(null);
@@ -106,8 +126,9 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
     <View testID="scadenze-sezione">
       {mostraTitolo && <Text style={paginaStili.titoloSezione}>Le mie scadenze</Text>}
       <Text style={[paginaStili.piccolo, { marginBottom: spacing.sm }]}>
-        Inserisci le date che conosci: TutelApp calcola date indicative e puoi aggiungerle
-        al calendario del telefono. TutelApp non invia avvisi da sola.
+        Inserisci le date che conosci e i tuoi appuntamenti: TutelApp calcola date indicative e
+        puoi aggiungerle al calendario del telefono. Se vuoi, nell'app installata ti ricorda anche
+        con avvisi gentili (vedi in fondo).
       </Text>
 
       {/* Scadenze calcolate */}
@@ -129,7 +150,10 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
               >
                 <View style={styles.eventoTop}>
                   <View style={styles.flex}>
-                    <Text style={styles.eventoData}>{inItaliano(e.data)}</Text>
+                    <Text style={styles.eventoData}>
+                      {inItaliano(e.data)}
+                      {e.ora ? ` · ore ${e.ora}` : ""}
+                    </Text>
                     <Text style={styles.eventoTitolo}>{e.titolo}</Text>
                   </View>
                   <View style={[styles.badge, vicina && { backgroundColor: colors.brandPrimaryDark }]}>
@@ -186,6 +210,8 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
                     placeholder="Cosa devi ricordare (es. visita INPS)"
                     placeholderTextColor="#9A9284"
                     style={styles.input}
+                    accessibilityLabel="Cosa devi ricordare"
+                    testID="scadenze-titolo"
                   />
                 )}
                 {t.chiedeData && (
@@ -206,6 +232,35 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
                     />
                   </>
                 )}
+                {t.tipo === "altro" && (
+                  <>
+                    <Text style={styles.domanda}>A che ora? (facoltativo)</Text>
+                    <TextInput
+                      value={testoOra}
+                      onChangeText={(v) => {
+                        setTestoOra(v);
+                        setErrore("");
+                      }}
+                      placeholder="es. 9:30"
+                      placeholderTextColor="#9A9284"
+                      keyboardType="numbers-and-punctuation"
+                      style={styles.input}
+                      accessibilityLabel="Ora dell'appuntamento, facoltativa"
+                      testID="scadenze-ora"
+                    />
+                    <Text style={styles.domanda}>Una nota (facoltativa)</Text>
+                    <TextInput
+                      value={nota}
+                      onChangeText={setNota}
+                      placeholder="es. portare gli esami e la tessera sanitaria"
+                      placeholderTextColor="#9A9284"
+                      style={styles.input}
+                      maxLength={200}
+                      accessibilityLabel="Nota dell'appuntamento, facoltativa"
+                      testID="scadenze-nota"
+                    />
+                  </>
+                )}
                 {errore ? <Text style={styles.errore}>{errore}</Text> : null}
                 <Bottone label="Aggiungi" icon="checkmark" onPress={aggiungi} testID="scadenze-aggiungi" />
               </View>
@@ -213,6 +268,8 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
           </View>
         );
       })}
+
+      <PromemoriaSezione />
 
       <Avviso style={{ marginTop: spacing.md }}>
         Le date restano solo su questo dispositivo. I calcoli sono un promemoria: per

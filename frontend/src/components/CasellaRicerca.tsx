@@ -1,7 +1,7 @@
 // Casella "Scrivi cosa ti serve": la risposta compare subito, con il bottone
 // per la pagina giusta. Quello che si scrive non esce dal telefono.
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
 import { useRouter } from "expo-router";
@@ -10,11 +10,24 @@ import { colors, fonts, radius, spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
 import { ESEMPI, cerca } from "@/src/lib/ricerca";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
+import { dimenticaRicerca, leggiRicerca, salvaRicerca } from "@/src/lib/riprendi";
 
 export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string }) {
   const router = useRouter();
   const [testo, setTesto] = useState("");
   const risultati = useMemo(() => (testo.trim().length >= 3 ? cerca(testo) : []), [testo]);
+  // L'ultima ricerca resta solo su questo telefono, per poterla riprendere
+  const [ultima, setUltima] = useState<string | null>(null);
+
+  useEffect(() => {
+    leggiRicerca().then((r) => setUltima(r?.testo ?? null));
+  }, []);
+
+  useEffect(() => {
+    if (testo.trim().length < 3) return;
+    const t = setTimeout(() => salvaRicerca(testo), 1500);
+    return () => clearTimeout(t);
+  }, [testo]);
   const t = comune.theme;
   const vai = (route: string) => router.push(route as any);
 
@@ -39,6 +52,34 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
           </Pressable>
         ) : null}
       </View>
+
+      {/* Riprendi l'ultima ricerca */}
+      {testo.trim().length < 3 && ultima && (
+        <View style={styles.riprendi} testID={`${testID}-riprendi`}>
+          <Pressable
+            onPress={() => setTesto(ultima)}
+            style={({ pressed }) => [styles.riprendiBtn, pressed && { opacity: 0.8 }]}
+            accessibilityRole="button"
+            accessibilityLabel={`Riprendi la ricerca: ${ultima}`}
+          >
+            <Ionicons name="arrow-undo-outline" size={16} color={colors.brandPrimaryDark} />
+            <Text style={styles.riprendiText} numberOfLines={1}>
+              Riprendi: «{ultima}»
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={() => {
+              dimenticaRicerca();
+              setUltima(null);
+            }}
+            hitSlop={10}
+            accessibilityRole="button"
+            accessibilityLabel="Dimentica l'ultima ricerca"
+          >
+            <Ionicons name="close" size={16} color={colors.onSurfaceSecondary} />
+          </Pressable>
+        </View>
+      )}
 
       {/* Esempi da toccare */}
       {testo.trim().length < 3 && (
@@ -142,6 +183,18 @@ const styles = StyleSheet.create({
     minHeight: 50,
   },
   input: { flex: 1, fontSize: 16, color: colors.onSurface, paddingVertical: 10 },
+  riprendi: { flexDirection: "row", alignItems: "center", gap: spacing.sm, marginTop: spacing.sm },
+  riprendiBtn: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    borderRadius: radius.pill,
+    backgroundColor: colors.surfaceSecondary,
+  },
+  riprendiText: { flex: 1, fontSize: 14, fontWeight: "700", color: colors.brandPrimaryDark },
   esempi: { marginTop: spacing.sm },
   esempiLabel: { fontSize: 12, color: colors.onSurfaceSecondary, marginBottom: 6 },
   chips: { flexDirection: "row", flexWrap: "wrap", gap: 6 },

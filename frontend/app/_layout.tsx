@@ -1,9 +1,11 @@
-import { Stack } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect, useState } from "react";
 import { LogBox, Platform } from "react-native";
 
 import { useIconFonts } from "@/src/hooks/use-icon-fonts";
+import { ascoltaTocchi } from "@/src/lib/notifiche";
+import { aggiornaPromemoria, segnaAttivita } from "@/src/lib/promemoriaApp";
 import {
   caricaComuneSalvato,
   getComuneAttivo,
@@ -19,6 +21,7 @@ export default function RootLayout() {
   const [loaded, error] = useIconFonts();
   const [comuneReady, setComuneReady] = useState(false);
   const [comuneSlug, setComuneSlug] = useState(getComuneAttivo().slug);
+  const router = useRouter();
 
   useEffect(() => {
     caricaComuneSalvato().finally(() => {
@@ -35,6 +38,28 @@ export default function RootLayout() {
       document.documentElement.lang = "it";
     }
   }, [comuneSlug]);
+
+  // Avvisi gentili (solo app installata): a ogni apertura, e a ogni cambio di Comune,
+  // si ricorda l'ultima visita e si riallineano gli avvisi ai dati salvati sul telefono
+  useEffect(() => {
+    if (!comuneReady || Platform.OS === "web") return;
+    segnaAttivita().then(() => aggiornaPromemoria());
+  }, [comuneReady, comuneSlug]);
+
+  // Toccando un avviso si apre la pagina giusta
+  useEffect(() => {
+    if (!comuneReady) return;
+    return ascoltaTocchi((route) => {
+      // piccola attesa: all'avvio da un avviso la navigazione deve essere pronta
+      setTimeout(() => {
+        try {
+          router.push(route as any);
+        } catch {
+          /* se non è pronta, l'app resta sulla Home */
+        }
+      }, 400);
+    });
+  }, [comuneReady, router]);
 
   useEffect(() => {
     if ((loaded || error) && comuneReady) {

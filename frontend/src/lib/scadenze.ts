@@ -2,6 +2,9 @@
 // importanti e crea un calendario (.ics) da aggiungere al telefono.
 // Regole verificate a settembre 2026 (fonti in MULTI-COMUNE.md).
 
+/** Dove si salvano le scadenze e gli appuntamenti (solo sul dispositivo) */
+export const SCADENZE_KEY = "tutelapp:scadenze";
+
 export type TipoScadenza = "verbale" | "revisione" | "cude" | "isee" | "altro";
 
 export type Scadenza = {
@@ -11,6 +14,10 @@ export type Scadenza = {
   data: string;
   /** Solo per "altro" */
   titolo?: string;
+  /** Solo per "altro": orario facoltativo, formato HH:MM */
+  ora?: string;
+  /** Solo per "altro": nota facoltativa (es. cosa portare) */
+  nota?: string;
 };
 
 export type Evento = {
@@ -21,6 +28,12 @@ export type Evento = {
   /** Giorni di anticipo per il promemoria */
   anticipo: number;
   urgente?: boolean;
+  /** Orario dell'appuntamento (HH:MM), se la persona l'ha scritto */
+  ora?: string;
+  /** Nota della persona, se l'ha scritta */
+  nota?: string;
+  /** true = appuntamento in agenda (inserito dalla persona), false = scadenza calcolata */
+  appuntamento?: boolean;
 };
 
 export type TipoInfo = {
@@ -69,9 +82,9 @@ export const TIPI: TipoInfo[] = [
   {
     tipo: "altro",
     icon: "calendar-outline",
-    titolo: "Altro appuntamento",
+    titolo: "Appuntamento in agenda",
     domanda: "Quando?",
-    aiuto: "Una visita, un colloquio, la convocazione dell'équipe…",
+    aiuto: "Una visita, una terapia, un colloquio, la convocazione dell'équipe… Se vuoi, scrivi anche l'ora e una nota (per esempio cosa portare).",
     chiedeData: true,
   },
 ];
@@ -97,6 +110,16 @@ export function daTestoItaliano(t: string): string | null {
   const d = new Date(a, mm - 1, g);
   if (d.getFullYear() !== a || d.getMonth() !== mm - 1 || d.getDate() !== g) return null;
   return `${a}-${String(mm).padStart(2, "0")}-${String(g).padStart(2, "0")}`;
+}
+
+/** Accetta 9, 9:30, 09.30, 9,30 → "09:30" (null se non valida) */
+export function daTestoOra(t: string): string | null {
+  const m = /^\s*(\d{1,2})(?:[:.,hH ](\d{2}))?\s*$/.exec(t);
+  if (!m) return null;
+  const h = Number(m[1]);
+  const min = m[2] === undefined ? 0 : Number(m[2]);
+  if (h > 23 || min > 59) return null;
+  return `${String(h).padStart(2, "0")}:${String(min).padStart(2, "0")}`;
 }
 
 export const inItaliano = (d: Date) =>
@@ -179,8 +202,11 @@ export function calcolaEventi(lista: Scadenza[], oggi = new Date()): Evento[] {
             id: `${s.id}-altro`,
             titolo: s.titolo?.trim() || "Appuntamento",
             data: d,
-            spiegazione: "Appuntamento inserito da te.",
+            spiegazione: s.nota?.trim() || "Appuntamento inserito da te.",
             anticipo: 2,
+            ora: s.ora && daTestoOra(s.ora) ? s.ora : undefined,
+            nota: s.nota?.trim() || undefined,
+            appuntamento: true,
           });
         break;
     }
@@ -206,12 +232,22 @@ export function creaIcs(eventi: Evento[], nomeComune: string): string {
   ];
   for (const e of eventi) {
     const fine = new Date(e.data.getFullYear(), e.data.getMonth(), e.data.getDate() + 1);
+    const conOra = e.appuntamento === true && !!e.ora;
+    const [h, m] = conOra ? e.ora!.split(":").map(Number) : [0, 0];
+    // Con l'orario: ora "fluttuante" (quella locale del telefono), durata di un'ora
+    const inizioOra = conOra ? `${icsData(e.data)}T${String(h).padStart(2, "0")}${String(m).padStart(2, "0")}00` : "";
+    const fineOra = conOra
+      ? (() => {
+          const f = new Date(e.data.getFullYear(), e.data.getMonth(), e.data.getDate(), h + 1, m);
+          return `${icsData(f)}T${String(f.getHours()).padStart(2, "0")}${String(f.getMinutes()).padStart(2, "0")}00`;
+        })()
+      : "";
     righe.push(
       "BEGIN:VEVENT",
       `UID:${e.id}@tutelapp`,
       `DTSTAMP:${adesso}`,
-      `DTSTART;VALUE=DATE:${icsData(e.data)}`,
-      `DTEND;VALUE=DATE:${icsData(fine)}`,
+      conOra ? `DTSTART:${inizioOra}` : `DTSTART;VALUE=DATE:${icsData(e.data)}`,
+      conOra ? `DTEND:${fineOra}` : `DTEND;VALUE=DATE:${icsData(fine)}`,
       `SUMMARY:${icsTesto(e.titolo)}`,
       `DESCRIPTION:${icsTesto(e.spiegazione)}`,
       "BEGIN:VALARM",
@@ -219,8 +255,12 @@ export function creaIcs(eventi: Evento[], nomeComune: string): string {
       `DESCRIPTION:${icsTesto(e.titolo)}`,
       `TRIGGER:-P${e.anticipo}D`,
       "END:VALARM",
-      "END:VEVENT",
     );
+    if (conOra) {
+      // Secondo avviso un'ora prima
+      righe.push("BEGIN:VALARM", "ACTION:DISPLAY", `DESCRIPTION:${icsTesto(e.titolo)}`, "TRIGGER:-PT1H", "END:VALARM");
+    }
+    righe.push("END:VEVENT");
   }
   righe.push("END:VCALENDAR");
   return righe.join("\r\n");
