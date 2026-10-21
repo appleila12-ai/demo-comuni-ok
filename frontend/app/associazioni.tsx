@@ -1,4 +1,4 @@
-// Associazioni del territorio: volontariato e famiglie, e (sezione a parte) sport.
+// Associazioni del territorio: volontariato e famiglie, e (sezione a parte) sport e tempo libero.
 // Si vede l'elenco della provincia del Comune attivo, prima quelle del Comune.
 
 import React, { useState } from "react";
@@ -65,14 +65,14 @@ export default function Associazioni() {
 
   const TAB: { id: Tab; label: string; icon: React.ComponentProps<typeof Ionicons>["name"] }[] = [
     { id: "volontariato", label: "Volontariato e famiglie", icon: "people-outline" },
-    { id: "sport", label: "Sport", icon: "football-outline" },
+    { id: "sport", label: "Sport e tempo libero", icon: "football-outline" },
   ];
 
   return (
     <Pagina titolo="Associazioni del territorio" testID="associazioni-screen">
       <Intro>
         Associazioni che si occupano di disabilità nella zona di {comune.nomeBreve}: per avere
-        sostegno, conoscere altre famiglie, fare sport.
+        sostegno, conoscere altre famiglie, fare sport o stare insieme.
       </Intro>
 
       <View style={styles.tabs} accessibilityRole="tablist">
@@ -109,8 +109,8 @@ export default function Associazioni() {
       ) : (
         <View testID="associazioni-sport">
           <Text style={[paginaStili.testo, { marginBottom: spacing.md }]}>
-            Lo sport fa bene al corpo e aiuta a fare amicizia. Molte società accolgono atleti con
-            disabilità di ogni età e livello: chiama per una prova.
+            Lo sport e le attività da fare insieme, come il canto, fanno bene e aiutano a fare amicizia.
+            Molte associazioni e società accolgono persone con disabilità di ogni età e livello: chiama per una prova.
           </Text>
           {d.sport.map((a) => <Scheda key={a.nome} a={a} vicina={d.vicina(a)} />)}
           {d.sportRegione.length ? (
