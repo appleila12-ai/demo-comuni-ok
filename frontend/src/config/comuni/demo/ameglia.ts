@@ -2,7 +2,7 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Ameglia (SP) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// È verificato solo l'indirizzo web indicato in sitoWeb.
+// Recapiti: solo quelli letti sul sito del Comune il 21/10/2026; il resto è stato tolto perché non verificato.
 // Indirizzo del sito non confermato in automatico.
 // Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
 export const ameglia: ComuneConfig = {
@@ -18,7 +18,7 @@ export const ameglia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0187 609277",
+  telefono: "",
   email: "",
   pec: "",
   orari: "",
@@ -39,6 +39,12 @@ export const ameglia: ComuneConfig = {
       title: "Servizi Sociali del Comune",
       subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
       action: { type: "web", value: "https://www.comune.ameglia.sp.it" },
+    },
+    {
+      icon: "call-outline",
+      title: "Distretto Sociosanitario 19 \"Val di Magra\"",
+      subtitle: "Distretto di Sarzana, Ameglia, Arcola, Castelnuovo Magra, Luni, Santo Stefano di Magra e Vezzano Ligure · Tel. 0187 614507 / 0187 604933",
+      action: { type: "tel", value: "0187614507" },
     },
     {
       icon: "medkit-outline",

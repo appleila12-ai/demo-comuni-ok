@@ -2,7 +2,7 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Luni (SP) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// È verificato solo l'indirizzo web indicato in sitoWeb.
+// Recapiti: solo quelli letti sul sito del Comune il 21/10/2026; il resto è stato tolto perché non verificato.
 // Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
 export const luni: ComuneConfig = {
   slug: "luni",
@@ -16,8 +16,8 @@ export const luni: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0187 690147",
+  indirizzo: "Via Castagno 61, 19034 Luni (SP) (sede del Comune)",
+  telefono: "0187 690111",
   email: "",
   pec: "",
   orari: "",
@@ -36,8 +36,14 @@ export const luni: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
+      subtitle: "Centralino del Comune: 0187 690111 · URP: urp@comune.luni.sp.it",
       action: { type: "web", value: "https://www.comune.luni.sp.it/it-it/argomenti/assistenza-sociale" },
+    },
+    {
+      icon: "call-outline",
+      title: "Distretto Sociosanitario 19 \"Val di Magra\"",
+      subtitle: "Distretto di Sarzana, Ameglia, Arcola, Castelnuovo Magra, Luni, Santo Stefano di Magra e Vezzano Ligure · Tel. 0187 614507 / 0187 604933",
+      action: { type: "tel", value: "0187614507" },
     },
     {
       icon: "medkit-outline",

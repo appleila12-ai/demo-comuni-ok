@@ -194,6 +194,7 @@ import { marsala } from "./marsala";
 import { martinaFranca } from "./martina-franca";
 import { mascalucia } from "./mascalucia";
 import { massa } from "./massa";
+import { aulla } from "./aulla";
 import { massafra } from "./massafra";
 import { matera } from "./matera";
 import { mazaraDelVallo } from "./mazara-del-vallo";
@@ -548,6 +549,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   martinaFranca,
   mascalucia,
   massa,
+  aulla,
   massafra,
   matera,
   mazaraDelVallo,

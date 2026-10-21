@@ -18,6 +18,10 @@ export type Destinatario = {
 };
 
 export const DESTINATARI: Record<string, Destinatario> = {
+  // Aulla (MS)
+  "aulla": { email: "sociale@comune.aulla.ms.it", tipo: "ordinaria", fonte: "sito del Comune di Aulla, Ufficio Servizi Sociali, Sanità e Sport (21/10/2026)" },
+  // Riccò del Golfo di Spezia (SP)
+  "ricco-del-golfo": { email: "protocollo@comune.riccodelgolfo.sp.it", tipo: "ordinaria", fonte: "Prefettura della Spezia (elenco del 30/11/2023) e IndicePA, concordi; da riconfermare sul sito del Comune" },
   // Sarzana (SP)
   "sarzana": { email: "urp@comune.sarzana.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Sarzana, Ufficio Relazioni con il Pubblico (21/10/2026)" },
   // Ascoli Piceno (AP)
@@ -27,7 +31,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Capannori (LU)
   "capannori": { email: "rtd@comune.capannori.lu.it", tipo: "ordinaria", fonte: "elenco Excel dei Comuni" },
   // Castelnuovo Magra (SP)
-  "castelnuovo-magra": { email: "segretariocomunale@comune.castelnuovomagra.sp.it", tipo: "ordinaria", fonte: "elenco Excel dei Comuni" },
+  "castelnuovo-magra": { email: "servizisociali@comune.castelnuovomagra.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Castelnuovo Magra, avviso Servizi Sociali (11/09/2026)" },
   // Favara (AG)
   "favara": { email: "rtd@comune.favara.ag.it", tipo: "ordinaria", fonte: "elenco Excel dei Comuni" },
   // Manfredonia (FG)
@@ -73,7 +77,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Altamura (BA)
   "altamura": { email: "protocollo.generale@pec.comune.altamura.ba.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Ameglia (SP)
-  "ameglia": { email: "protocollo@pec.comune.ameglia.sp.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  "ameglia": { email: "protocollo@comune.ameglia.sp.it", tipo: "ordinaria", fonte: "Prefettura della Spezia (elenco del 30/11/2023) e IndicePA, concordi; da riconfermare sul sito del Comune" },
   // Andria (BT)
   "andria": { email: "protocollo@cert.comune.andria.bt.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Angri (SA)
@@ -231,7 +235,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Lucera (FG)
   "lucera": { email: "comune.lucera@anutelpec.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Luni (SP)
-  "luni": { email: "segreteria@pec.comune.luni.sp.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  "luni": { email: "urp@comune.luni.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Luni, Ufficio Relazioni con il Pubblico (21/10/2026)" },
   // Macerata (MC)
   "macerata": { email: "comune.macerata@legalmail.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Marano di Napoli (NA)
