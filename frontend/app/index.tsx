@@ -132,6 +132,14 @@ const INFO_LINKS = [
     color: topics.documenti,
   },
   {
+    id: "lavoro",
+    icon: "briefcase-outline" as const,
+    title: "Lavoro e disabilità",
+    sub: "Solo se cerchi lavoro: collocamento mirato e percorsi di inserimento",
+    href: "/lavoro",
+    color: topics.lavoro,
+  },
+  {
     id: "importi",
     icon: "cash-outline" as const,
     title: "Importi aggiornati",

@@ -1364,6 +1364,102 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "20/10/2026",
     nota: "La pagina non ha data né scadenze: conferma con l'Area integrazione socio-sanitaria che la misura sia aperta e per quale annualità.",
+  // --- Sedicesima raccolta (20/10/2026, sera): Trentino-Alto Adige, Puglia, Valle d'Aosta ---
+  {
+    id: "trento-assegno-di-cura",
+    regione: "Trentino-Alto Adige",
+    comuni: ["trento", "rovereto", "giudicarie"],
+    titolo: "Assegno di cura (Provincia autonoma di Trento)",
+    perChi:
+      "Persone non autosufficienti che hanno tutte queste condizioni: almeno due anni di residenza continuativa in provincia di Trento (per i minori vale anche la residenza di un genitore); ricevono già l'assegno di accompagnamento (L.P. 7/1998) o una prestazione simile, oppure lo chiedono nello stesso momento; hanno una condizione economica ICEF pari o inferiore a 0,32; la non autosufficienza è accertata dall'Unità di valutazione multidisciplinare (UVM) del distretto sanitario. La domanda la può fare la persona, un genitore (per i minori), il tutore o curatore, oppure l'amministratore di sostegno.",
+    cosa:
+      "Contributo mensile che dipende dal livello di bisogno. Livello 1: 100 euro. Livello 2: da 150 a 300 euro. Livello 3: da 300 a 600 euro. Livello 4: da 500 a 1.100 euro (l'importo più basso si applica in base all'ICEF). Serve a pagare l'assistenza a casa, in ambulatorio o in strutture semiresidenziali, tramite assistenti, organizzazioni autorizzate, alcuni familiari o come quota per i servizi domiciliari pubblici. L'assegno si sospende dal 31° giorno di ricovero in ospedale o in struttura.",
+    stato: "attivo",
+    quando:
+      "Ogni anno, tra il 1° ottobre e il 28 febbraio, va presentata la verifica della situazione economica: se manca, l'assegno viene revocato dal 1° gennaio successivo.",
+    comeSiChiede:
+      "Tramite un patronato o uno sportello provinciale, con il modulo di domanda dell'assegno di cura. Il servizio è gratuito e i tempi indicati sono di 60 giorni. Sulla pagina della Provincia il servizio online risulta al momento non disponibile.",
+    fonte: {
+      label: "Provincia autonoma di Trento · Domanda per l'assegno di cura",
+      url: "https://www.provincia.tn.it/en/Services/Application-for-the-care-allowance",
+    },
+    verificatoIl: "20/10/2026",
+  },
+  {
+    id: "bolzano-assegno-di-cura",
+    regione: "Trentino-Alto Adige",
+    comuni: ["bolzano", "merano"],
+    titolo: "Assegno di cura (Provincia autonoma di Bolzano)",
+    perChi:
+      "Persone non autosufficienti. Non dipende dal reddito né dall'età: conta il bisogno di cura e assistenza, accertato con una valutazione che colloca la persona in uno dei quattro livelli di non autosufficienza. Non serve il riconoscimento di invalidità civile, ma alla domanda va allegato un certificato medico.",
+    cosa:
+      "Un sostegno economico mensile, che può essere dato anche come buoni di servizio per l'assistenza a domicilio. Il pagamento parte dal mese successivo alla domanda. Per le malattie in stadio avanzato e per la demenza il livello viene assegnato d'ufficio sulla base dei documenti medici. Gli importi dei quattro livelli non sono indicati nella notizia che abbiamo letto: li trovi sul portale della Provincia.",
+    stato: "attivo",
+    quando:
+      "L'assegno è di norma a tempo indeterminato. Se la situazione peggiora si può fare una nuova domanda quando sono passati almeno sei mesi dall'ultima valutazione. Contro l'esito della valutazione si può fare ricorso entro 45 giorni.",
+    comeSiChiede:
+      "Si presenta la domanda con il certificato medico. Per informazioni ci sono gli sportelli unici per l'assistenza e la cura nei Distretti sociali e il numero verde Pronto Assistenza 848 800 277, dal lunedì al mercoledì dalle 9 alle 12. Il punto preciso dove consegnare la domanda va confermato con la Provincia.",
+    fonte: {
+      label: "Provincia autonoma di Bolzano · Tutte le informazioni utili sull'assegno di cura (24/06/2026)",
+      url: "https://news.provincia.bz.it/it/news/tutte-le-informazioni-utili-sull-assegno-di-cura",
+    },
+    verificatoIl: "20/10/2026",
+  },
+  {
+    id: "puglia-provi-2026",
+    regione: "Puglia",
+    titolo: "Comunità Pro.V.I.: progetti di vita indipendente (finestra 2026)",
+    perChi:
+      "Persone con disabilità grave (art. 3, comma 3, Legge 104/1992) tra 16 e 66 anni, residenti in Puglia da almeno un anno, che vivono al proprio domicilio e sanno esprimere la propria volontà, anche con un supporto. ISEE socio-sanitario ristretto (o ordinario, se più favorevole) fino a 50.000 euro, 65.000 per i minorenni. Non si può ricevere insieme al Patto di cura o al Sostegno familiare, né avere già un progetto di vita indipendente in corso (salvo quelli in scadenza entro il 31 ottobre 2026).",
+    cosa:
+      "Contributo fino a 15.000 euro per progetto, per un massimo di 12 mesi. Due linee: la linea A per persone con disabilità non legata all'invecchiamento e la linea C per il sostegno alla genitorialità di giovani donne con disabilità che hanno figli minori.",
+    stato: "chiuso",
+    quando:
+      "Le domande della prima finestra erano aperte dal 24 marzo al 24 giugno 2026. La Regione ha approvato la graduatoria il 26 agosto 2026, che resta valida fino all'apertura della prossima finestra, di cui non abbiamo la data.",
+    comeSiChiede:
+      "Domanda online sulla piattaforma regionale con SPID. Contatto: provi@regione.puglia.it.",
+    fonte: {
+      label: "Regione Puglia · Comunità Pro.V.I. – Autonomia, socialità, sport",
+      url: "https://www.regione.puglia.it/web/welfare-diritti-e-cittadinanza/-/comunit%C3%A0-pro.v.i.-autonomia-socialit%C3%A0-sport-nuovo-avviso-pubblico.-domande-a-partire-dal-24-marzo-2026",
+    },
+    verificatoIl: "20/10/2026",
+  },
+  {
+    id: "vda-fondo-inclusione-autismo-2026",
+    regione: "Valle d'Aosta",
+    titolo: "Interventi per persone con autismo e disturbi del neurosviluppo (Fondo per l'inclusione 2025)",
+    perChi:
+      "Persone con disturbi del neurosviluppo e dello spettro autistico, e le loro famiglie e caregiver.",
+    cosa:
+      "La Regione ha programmato 159.609 euro dal Fondo unico per l'inclusione delle persone con disabilità. Gli interventi previsti sono cinque: socializzazione e tempo libero, alfabetizzazione digitale, inclusione lavorativa (orientamento, tirocini, tutoraggio), abitare in autonomia e sostegno alle famiglie (parent training e colloqui). Sono previsti, per esempio, 9 percorsi di socializzazione e 5 tirocini di inclusione.",
+    stato: "attivo",
+    quando: "Dal 1° settembre 2026 al 31 agosto 2027.",
+    comeSiChiede:
+      "Il documento non descrive una domanda diretta dei cittadini: gli interventi rientrano nei progetti di vita redatti dall'Unità di valutazione multidimensionale (UVM), su richiesta della persona. Per i dettagli chiedi al Dipartimento politiche sociali della Regione.",
+    fonte: {
+      label: "Regione Valle d'Aosta · Deliberazione della Giunta n. 293 del 20/03/2026",
+      url: "https://www.regione.vda.it/allegato.aspx?pk=126463",
+    },
+    verificatoIl: "20/10/2026",
+  },
+  {
+    id: "calabria-assegno-cura-gravissima-2026",
+    regione: "Calabria",
+    titolo: "Assegno di cura per la disabilità gravissima (avvisi degli Ambiti sociali)",
+    perChi:
+      "Persone con disabilità gravissima, con invalidità civile al 100% e indennità di accompagnamento (per esempio SLA, gravi forme di demenza, dipendenza vitale con assistenza continua nelle 24 ore). ISEE sociosanitario fino a 50.000 euro, 65.000 per i minorenni: l'ISEE non esclude, serve solo a graduare l'importo.",
+    cosa:
+      "Contributo mensile per dodici mensilità: fino a 1.000 euro al mese per la dipendenza vitale con assistenza continua nelle 24 ore (per esempio ventilazione assistita, nutrizione artificiale, stato vegetativo), 600 euro al mese per le altre condizioni di disabilità gravissima. Per l'assistenza acquistata (assistenti con contratto, servizi accreditati, strutture semiresidenziali) c'è il rimborso della spesa documentata; per il familiare che assiste a casa basta un'autocertificazione. Le risorse sono 14,78 milioni di euro dal Fondo nazionale per le non autosufficienze.",
+    stato: "attivo",
+    quando:
+      "Notizia dell'8 ottobre 2026. La Regione non indica una scadenza: i termini sono nei singoli avvisi degli Ambiti territoriali sociali, che erano in fase di completamento.",
+    comeSiChiede:
+      "La domanda si presenta all'Ambito territoriale sociale di residenza, di norma via PEC, secondo l'avviso dell'Ambito. La valutazione e la graduatoria sono fatte dall'Unità di valutazione multidimensionale con l'Azienda sanitaria provinciale. Moduli e avvisi si chiedono all'Ufficio di Piano del tuo Ambito.",
+    fonte: {
+      label: "Regione Calabria · Disabilità gravissima: al via avvisi pubblici per assegni di cura in tutti gli Ambiti sociali (08/10/2026)",
+      url: "https://www.regione.calabria.it/disabilita-gravissima-al-via-avvisi-pubblici-per-assegni-di-cura-in-tutti-gli-ambiti-sociali-straface-sostegno-concreto-e-rendicontazione-semplificata-per-famiglie-e-caregiver-i-beneficia/",
+    },
+    verificatoIl: "20/10/2026",
   },
 ];
 

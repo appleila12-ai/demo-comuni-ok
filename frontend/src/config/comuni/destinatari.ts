@@ -79,7 +79,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Anzio (RM)
   "anzio": { email: "protocollo.comuneanzio@pec.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Aosta (AO)
-  "aosta": { email: "protocollo@pec.comune.aosta.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  "aosta": { email: "protocollo@comune.aosta.it", tipo: "ordinaria", fonte: "sito del Comune di Aosta, Ufficio protocollo (20/10/2026)" },
   // Aprilia (LT)
   "aprilia": { email: "protocollogenerale@pec.comune.aprilia.lt.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Ardea (RM)
