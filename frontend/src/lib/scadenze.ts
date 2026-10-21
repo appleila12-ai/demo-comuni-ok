@@ -122,6 +122,29 @@ export function daTestoOra(t: string): string | null {
   return `${String(h).padStart(2, "0")}:${String(min).padStart(2, "0")}`;
 }
 
+/** "2026-03-12" → "12/03/2026" (il formato che la persona vede e scrive) */
+export function aTestoItaliano(iso: string): string {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  return m ? `${m[3]}/${m[2]}/${m[1]}` : "";
+}
+
+/** Un oggetto Data → "2026-03-12" */
+export const aIso = (d: Date) =>
+  `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+
+/** "giovedì 23 ottobre 2026": serve a far vedere come è stata capita la data */
+export const inItalianoLungo = (d: Date) =>
+  d.toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+
+/** Mentre si scrive solo numeri (es. 12032026) mette da sola le barre: 12/03/2026 */
+export function formattaMentreScrivi(t: string): string {
+  if (!/^\d+$/.test(t)) return t;
+  const a = t.slice(0, 2);
+  const b = t.slice(2, 4);
+  const c = t.slice(4, 8);
+  return [a, b, c].filter((x, i) => x !== "" || i === 0).join("/");
+}
+
 export const inItaliano = (d: Date) =>
   d.toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" });
 

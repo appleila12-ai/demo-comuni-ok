@@ -14,6 +14,7 @@ import {
   TIPI,
   calcolaEventi,
   creaIcs,
+  daIso,
   daTestoItaliano,
   daTestoOra,
   giorniDaOggi,
@@ -23,6 +24,7 @@ import {
   type TipoScadenza,
 } from "@/src/lib/scadenze";
 import { Avviso, Bottone, paginaStili } from "@/src/components/Pagina";
+import { CampoData } from "@/src/components/CampoData";
 import { ContattiUtili } from "@/src/components/ContattiUtili";
 import { PromemoriaSezione } from "@/src/components/PromemoriaSezione";
 import { aggiornaPromemoria } from "@/src/lib/promemoriaApp";
@@ -38,6 +40,7 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
   const [nota, setNota] = useState("");
   const [errore, setErrore] = useState("");
   const [messaggio, setMessaggio] = useState("");
+  const [conferma, setConferma] = useState("");
 
   useEffect(() => {
     (async () => {
@@ -68,6 +71,7 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
     setNota("");
     setErrore("");
     setMessaggio("");
+    setConferma("");
   };
 
   const aggiungi = () => {
@@ -77,7 +81,7 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
     if (info.chiedeData) {
       const iso = daTestoItaliano(testoData);
       if (!iso) {
-        setErrore("Scrivi la data come giorno/mese/anno, per esempio 15/03/2026.");
+        setErrore("Scegli o scrivi la data: giorno/mese/anno, per esempio 15/03/2026.");
         return;
       }
       data = iso;
@@ -104,6 +108,8 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
       nota: aperto === "altro" && nota.trim() ? nota.trim().slice(0, 200) : undefined,
     };
     salva([...lista.filter((s) => aperto === "altro" || s.tipo !== aperto), nuova]);
+    const nome = aperto === "altro" ? titolo.trim() || "Appuntamento" : info.titolo;
+    setConferma(`Aggiunto: «${nome}»${data ? `, ${inItaliano(daIso(data)!)}` : ""}. Lo trovi nell'elenco qui sopra, in ordine di data.`);
     setAperto(null);
   };
 
@@ -181,6 +187,11 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
         </View>
       )}
 
+      {conferma ? (
+        <Text style={styles.conferma} accessibilityLiveRegion="polite" testID="scadenze-conferma">
+          {conferma}
+        </Text>
+      ) : null}
       <Text style={paginaStili.titoloSezione}>
         {eventi.length > 0 ? "Aggiungi un'altra data" : "Cosa vuoi ricordare?"}
       </Text>
@@ -218,17 +229,14 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
                 {t.chiedeData && (
                   <>
                     <Text style={styles.domanda}>{t.domanda}</Text>
-                    <TextInput
-                      value={testoData}
-                      onChangeText={(v) => {
+                    <CampoData
+                      valore={testoData}
+                      onChange={(v) => {
                         setTestoData(v);
                         setErrore("");
                       }}
-                      placeholder="gg/mm/aaaa"
-                      placeholderTextColor="#9A9284"
-                      keyboardType="numbers-and-punctuation"
-                      style={styles.input}
-                      accessibilityLabel={t.domanda}
+                      label={t.domanda}
+                      scorciatoie={t.tipo === "altro"}
                       testID="scadenze-data"
                     />
                   </>
@@ -318,5 +326,6 @@ const styles = StyleSheet.create({
     color: colors.onSurface,
   },
   errore: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark },
+  conferma: { fontSize: 14, fontWeight: "700", lineHeight: 20, color: colors.brandPrimaryDark, marginBottom: spacing.sm },
   messaggio: { fontSize: 13, lineHeight: 18, color: colors.onSurface, textAlign: "center", marginBottom: 4 },
 });

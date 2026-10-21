@@ -12,7 +12,8 @@ import { comune } from "@/src/config/comune";
 import { storage } from "@/src/utils/storage";
 import { useSezione } from "@/src/lib/statistiche";
 import { AREE, calcola, completo, ESITO, type Diritto, type Esito, type Verbale } from "@/src/lib/verbale";
-import { Avviso, Bottone, Campo, Intro, Pagina, paginaStili, Scelte } from "@/src/components/Pagina";
+import { Avviso, Bottone, Intro, Pagina, paginaStili, Scelte } from "@/src/components/Pagina";
+import { CampoData } from "@/src/components/CampoData";
 import { calcolaEventi, daTestoItaliano, giorniDaOggi, inItaliano, type Scadenza } from "@/src/lib/scadenze";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
 import { AvantiTappa } from "@/src/components/AvantiTappa";
@@ -154,22 +155,16 @@ function DateVerbale({ onScadenze }: { onScadenze: () => void }) {
       <Text style={styles.testo}>
         Salviamo le date sul telefono e ti mostriamo le scadenze, anche in "Le mie scadenze" e nel calendario.
       </Text>
-      <Campo
-        label="Data del verbale"
-        aiuto="Il giorno in cui ti è arrivato. Serve a calcolare una data indicativa per un eventuale ricorso (in genere 6 mesi dalla notifica del verbale)."
-        value={dataVerbale}
-        onChange={setDataVerbale}
-        placeholder="gg/mm/aaaa"
-        testID="verbale-data"
-      />
-      <Campo
-        label="Data di revisione (se scritta)"
-        aiuto="Se il verbale prevede una nuova visita, di solito c'è scritta la data."
-        value={dataRevisione}
-        onChange={setDataRevisione}
-        placeholder="gg/mm/aaaa"
-        testID="verbale-data-revisione"
-      />
+      <View style={{ marginBottom: spacing.sm }}>
+        <Text style={[styles.testo, { fontWeight: "800" }]}>Data del verbale</Text>
+        <Text style={styles.testo}>Il giorno in cui ti è arrivato. Serve a calcolare una data indicativa per un eventuale ricorso (in genere 6 mesi dalla notifica del verbale).</Text>
+        <CampoData valore={dataVerbale} onChange={setDataVerbale} label="Data del verbale" testID="verbale-data" />
+      </View>
+      <View style={{ marginBottom: spacing.sm }}>
+        <Text style={[styles.testo, { fontWeight: "800" }]}>Data di revisione (se scritta)</Text>
+        <Text style={styles.testo}>Se il verbale prevede una nuova visita, di solito c'è scritta la data.</Text>
+        <CampoData valore={dataRevisione} onChange={setDataRevisione} label="Data di revisione (se scritta)" testID="verbale-data-revisione" />
+      </View>
       {errore ? <Text style={[styles.testo, { fontWeight: "700" }]}>{errore}</Text> : null}
       <Bottone label="Salva le date" icon="calendar-outline" onPress={salvaDate} testID="verbale-salva-date" />
       {salvato ? <Text style={[styles.testo, { marginTop: spacing.sm }]}>Salvate. Le trovi anche nelle tue scadenze.</Text> : null}
