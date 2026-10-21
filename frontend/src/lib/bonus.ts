@@ -157,6 +157,81 @@ export const BONUS: Bonus[] = [
     verificatoIl: "21/10/2026",
     nota: "Pagina aggiornata dal Comune l'08/06/2026. Altre informazioni sul sito ARERA, pagina Bonus Sociale.",
   },
+  {
+    id: "lerici-bonus-acqua-luce-gas",
+    regione: "Liguria",
+    comuni: ["lerici"],
+    titolo: "Bonus sociali acqua, energia elettrica e gas (disagio economico)",
+    perChi:
+      "Famiglie in disagio economico con un contratto di fornitura di luce o gas intestato a un componente del nucleo, anche tramite impianto condominiale. Le soglie ISEE sono quelle nazionali: controllale sul sito ARERA.",
+    cosa:
+      "Uno sconto sulle bollette dell'acqua, dell'energia elettrica e del gas. Il bonus dura 12 mesi dall'ammissione; poi serve presentare di nuovo la domanda.",
+    stato: "attivo",
+    comeSiChiede:
+      "Per i bonus per disagio economico la pagina del Comune dice che dal 1° gennaio 2021 sono erogati in automatico dal sistema SGATE; presentare ogni anno l'ISEE garantisce la continuità. Se serve fare domanda, il modulo si ritira presso l'Ufficio Politiche Sociali, previo appuntamento (0187 960277 / 0187 960287). Il Comune comunica la graduatoria provvisoria entro 30 giorni dalla scadenza delle domande. La presentazione è gratuita.",
+    fonte: {
+      label: "Comune di Lerici · Bonus acqua, energia elettrica e gas",
+      url: "https://www.comune.lerici.sp.it/servizi/salute_benessere_e_assistenza/servizio_7.html",
+    },
+    verificatoIl: "21/10/2026",
+    nota: "Pagina aggiornata dal Comune l'08/06/2026. Non riportiamo le soglie ISEE scritte sulla pagina perché sono quelle nazionali e cambiano: verificale su ARERA.",
+  },
+  {
+    id: "lerici-assegno-maternita",
+    regione: "Liguria",
+    comuni: ["lerici"],
+    titolo: "Assegno di maternità",
+    perChi:
+      "La madre, o il padre se la madre ha abbandonato il bambino, se il bambino è affidato solo al padre o se la madre è morta. Il bambino deve avere meno di 6 mesi. Chi chiede deve essere residente a Lerici, avere cittadinanza italiana, UE o extracomunitaria con permesso di soggiorno valido, non ricevere altri contributi per maternità o paternità (o riceverne di importo inferiore) e rientrare in una fascia ISEE.",
+    cosa:
+      "L'assegno di maternità dello Stato per lavori atipici e discontinui, che è una prestazione previdenziale a carico dello Stato, concessa ed erogata dall'INPS. La pagina non scrive l'importo né la soglia ISEE.",
+    stato: "attivo",
+    comeSiChiede:
+      "Si compila il modulo \"Assegno Maternità\" (sul sito del Comune) e lo si consegna all'Ufficio Politiche Sociali, previo appuntamento (0187 960277 / 0187 960287). Servono: ISEE e DSU relativi all'anno della nascita, documento di identità, per gli extracomunitari titolo di soggiorno valido, permesso di soggiorno del neonato, IBAN stampato ed eventuale documento di separazione o divorzio. Il Comune comunica l'esito entro 30 giorni. La presentazione è gratuita.",
+    fonte: {
+      label: "Comune di Lerici · Assegno di maternità",
+      url: "https://www.comune.lerici.sp.it/servizi/salute_benessere_e_assistenza/servizio_20.html",
+    },
+    verificatoIl: "21/10/2026",
+    nota: "Pagina aggiornata dal Comune l'08/06/2026.",
+  },
+  {
+    id: "lerici-assegnazione-provvisoria-alloggi",
+    regione: "Liguria",
+    comuni: ["lerici"],
+    titolo: "Assegnazione provvisoria di alloggi",
+    perChi:
+      "Nuclei familiari residenti a Lerici in condizione di disagio abitativo, con ISEE inferiore a 15.000 euro.",
+    cosa: "Se la domanda è accolta, un nuovo alloggio provvisorio.",
+    stato: "attivo",
+    comeSiChiede:
+      "Si compila il modulo \"Comunicazione disagio abitativo\" (sul sito del Comune) e lo si consegna all'Ufficio Politiche Sociali, previo appuntamento (0187 960277 / 0187 960287). Servono: documento di identità ed eventuale permesso di soggiorno in corso di validità, ISEE in corso di validità, eventuale certificazione L. 104/92, eventuale documentazione sulla procedura di sfratto ed eventuale documentazione ASL sulle condizioni dell'alloggio. Il Comune comunica l'esito entro 30 giorni. La presentazione è gratuita.",
+    fonte: {
+      label: "Comune di Lerici · Assegnazione provvisoria di alloggi",
+      url: "https://www.comune.lerici.sp.it/servizi/salute_benessere_e_assistenza/servizio_65.html",
+    },
+    verificatoIl: "21/10/2026",
+    nota: "Pagina aggiornata dal Comune l'08/06/2026.",
+  },
+
+  {
+    id: "luni-fondo-affitti-2026",
+    regione: "Liguria",
+    comuni: ["luni"],
+    titolo: "Contributi per l'affitto (Fondo sociale affitti 2026)",
+    perChi: "Residenti a Luni che pagano un affitto, secondo il bando del Comune (Legge 431/1998, art. 11).",
+    cosa: "Un contributo per le spese di affitto. Importi e requisiti sono nel bando e nel modulo di domanda sul sito del Comune.",
+    stato: "aperto",
+    quando: "Domande dal 12/10/2026 alle ore 12:00 del 12/11/2026.",
+    comeSiChiede:
+      "Si presenta il modulo di domanda allegato al bando, pubblicato sul sito del Comune insieme alla scheda di monitoraggio. Per informazioni: Servizio 6 – Servizi socio-educativi, tel. 0187 690111.",
+    fonte: {
+      label: "Comune di Luni · Bando contributi a sostegno delle abitazioni in locazione",
+      url: "https://www.comune.luni.sp.it/it-it/novita/avvisi/2026/bandi/bando-per-l-erogazione-di-contributi-a-sostegno-delle-abitazioni-in-locazione-404204-1-3604a8a0dd4e4cc60fd583a7f34e0d11",
+    },
+    verificatoIl: "21/10/2026",
+    nota: "Pagina aggiornata dal Comune il 12/10/2026.",
+  },
 
   // ------------------------------------------- DISTRETTO SOCIOSANITARIO 18
 

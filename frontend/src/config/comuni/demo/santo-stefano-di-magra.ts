@@ -2,9 +2,8 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Santo Stefano di Magra (SP) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Recapiti: solo quelli letti sul sito del Comune il 21/10/2026; il resto è stato tolto perché non verificato.
-// Il sito blocca la lettura automatica: indirizzo da elenco pubblico, da confermare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti: pagine "Ufficio Servizi Sociali" (aggiornata il 05/11/2025) e "Servizio sociale professionale" del sito del Comune, lette il 21/10/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const santoStefanoDiMagra: ComuneConfig = {
   slug: "santo-stefano-di-magra",
   tipo: "comune",
@@ -18,10 +17,10 @@ export const santoStefanoDiMagra: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "Via Filippo Turati 8, 19037 Santo Stefano di Magra (SP)",
-  telefono: "",
+  telefono: "0187 697179",
   email: "servizisociali@comune.santostefanodimagra.sp.it",
   pec: "",
-  orari: "Lunedì e giovedì 9:30–12:00",
+  orari: "Lunedì e giovedì 9:30–12:00, accesso libero (dal 01/09/2025)",
   sitoWeb: "https://www.comune.santostefanodimagra.sp.it/",
 
   logo: null,
@@ -37,8 +36,8 @@ export const santoStefanoDiMagra: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Ufficio Servizi Sociali · Via Filippo Turati 8 · lunedì e giovedì 9:30–12:00 · servizisociali@comune.santostefanodimagra.sp.it",
-      action: { type: "web", value: "https://www.comune.santostefanodimagra.sp.it/" },
+      subtitle: "Ufficio Servizi Sociali · Via Filippo Turati 8 · lunedì e giovedì 9:30–12:00 (accesso libero) · Assistenti sociali 0187 697179 / 0187 697172 · Ufficio amministrativo 0187 697175",
+      action: { type: "tel", value: "0187697179" },
     },
     {
       icon: "call-outline",
