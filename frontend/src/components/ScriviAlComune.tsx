@@ -61,6 +61,13 @@ function Note({ richiesta }: { richiesta: Corpo["richiesta"] }) {
             : "Non abbiamo ancora un indirizzo verificato per questo ente: cerca la mail dei Servizi Sociali sul sito del Comune e inseriscila come destinatario."}
         </Text>
       ) : null}
+      {richiesta.isPec ? (
+        <Text style={styles.nota}>
+          Questo indirizzo è una PEC (posta certificata): molte PEC rifiutano le mail normali e il messaggio
+          torna indietro. Se succede, usa "Copia il testo" e invialo dal sito del Comune (protocollo online)
+          oppure da una tua PEC.
+        </Text>
+      ) : null}
       <Text style={styles.nota}>
         Nel testo chiediamo al Comune di inoltrare la richiesta a Sindaco e Assessore ai Servizi Sociali.
       </Text>
