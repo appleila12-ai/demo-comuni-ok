@@ -350,6 +350,18 @@ for (const g of GENITORI_TOSTI_LOCALI) {
 }
 
 // Milano (MI): dati dai siti delle associazioni (ottobre 2026)
+// Massa-Carrara — Anffas: recapiti dal sito dell'associazione (anffasms.it), letti il 21/10/2026.
+PER_PROVINCIA.MS = PER_PROVINCIA.MS ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.MS.volontariato.unshift({
+  nome: "Anffas Massa Carrara",
+  cosa: "Famiglie e persone con disabilità intellettiva e relazionale: servizi per la persona e per le famiglie.",
+  dove: "Via Castellaro 1, Anderlino, Carrara",
+  telefono: "0585 841444",
+  email: "info@anffasms.it",
+  sito: "https://www.anffasms.it",
+  comuni: ["carrara"],
+});
+
 PER_PROVINCIA.MI = PER_PROVINCIA.MI ?? { volontariato: [], sport: [] };
 PER_PROVINCIA.MI.volontariato.unshift(
   {
