@@ -55,7 +55,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Vigevano (PV)
   "vigevano": { email: "rtd@comune.vigevano.pv.it", tipo: "ordinaria", fonte: "elenco Excel dei Comuni" },
   // Acerra (NA)
-  "acerra": { email: "protocollo@pec.comuneacerra.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  "acerra": { email: "protocollo@pec.comune.acerra.na.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale), confermato da IPA (19/10/2026)" },
   // Acireale (CT)
   "acireale": { email: "protocollo.comune.acireale@pec.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Afragola (NA)
@@ -165,7 +165,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Corigliano-Rossano (CS)
   "corigliano-rossano": { email: "protocollo.coriglianorossano@asmepec.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Cosenza (CS)
-  "cosenza": { email: "comunedicosenza@superpec.eu", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  "cosenza": { email: "protocollo@pec.comune.cosenza.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale), confermato da IPA (19/10/2026)" },
   // Cremona (CR)
   "cremona": { email: "protocollo@comunedicremona.legalmail.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Crotone (KR)
@@ -383,7 +383,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Vibo Valentia (VV)
   "vibo-valentia": { email: "protocollocomunevibo@pec.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Vittoria (RG)
-  "vittoria": { email: "protocollogenerale@pec.comunevittoria-rg.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  "vittoria": { email: "protocollogenerale@pec.comune.vittoria.rg.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale), confermato da IPA (19/10/2026)" },
   // Reggio Calabria (RC)
   "reggio-calabria": { email: "urp@reggiocal.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
   // Reggio Emilia (RE)

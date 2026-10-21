@@ -3,7 +3,8 @@ import type { ComuneConfig } from "../types";
 // Comune di Padova (PD) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Home del sito del Comune, controllata il 13 ottobre 2026; la pagina dei servizi sociali va cercata e confermata.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// 16 ottobre 2026: indirizzo e telefono del Settore Servizi Sociali letti sulla scheda del Comune (aggiornata il 13/02/2026). Email non leggibile, PEC e orari del Settore non indicati.
+// Da fare: email, PEC e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
 export const padova: ComuneConfig = {
   slug: "padova",
   tipo: "comune",
@@ -16,12 +17,12 @@ export const padova: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "049 8205111",
+  indirizzo: "Via del Carmine 13, Padova",
+  telefono: "049 8205933",
   email: "",
   pec: "",
   orari: "",
-  sitoWeb: "https://www.comune.padova.it",
+  sitoWeb: "https://padovaper.comune.padova.it/strutture/ente-pubblico/comune-di-padova-settore-servizi-sociali",
 
   logo: null,
 
@@ -36,8 +37,8 @@ export const padova: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.padova.it" },
+      subtitle: "Ufficio informazioni: 049 8205933 · Via del Carmine 13",
+      action: { type: "tel", value: "0498205933" },
     },
     {
       icon: "medkit-outline",
