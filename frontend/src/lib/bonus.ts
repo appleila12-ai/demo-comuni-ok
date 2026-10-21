@@ -780,27 +780,6 @@ export const BONUS: Bonus[] = [
 
   // ------------------------------------------------------------- BRESCIA
   {
-    id: "brescia-dopo-di-noi-2025",
-    regione: "Lombardia",
-    comuni: ["brescia"],
-    titolo: "Dopo di Noi (Legge 112/2016): interventi e contributi dell'Ambito 1 di Brescia",
-    perChi:
-      "Persone con bisogno di sostegno intensivo, non dovuto al naturale invecchiamento né a malattie della vecchiaia, con accertamento ai sensi dell'art. 3, comma 3, della Legge 104/1992. Di norma maggiorenni. Devono essere senza sostegno familiare: manca uno o entrambi i genitori, i genitori non riescono a dare un sostegno adeguato, oppure il sostegno potrebbe venire meno. Possono chiedere anche persone con risorse economiche o con genitori ancora in grado di aiutarle, e persone che vivono già in una struttura e hanno bisogno di rivalutare la soluzione abitativa.",
-    cosa:
-      "Voucher \"Durante Noi\": 600 euro all'anno, una sola volta. Voucher per l'accompagnamento all'autonomia in tre fasi: la prima fino a 3.500 euro più 600 euro di \"Durante Noi\" (massimo due anni), la seconda fino a 3.500 euro (massimo un anno), la terza fino a 4.800 euro all'anno (massimo un anno). Sostegno alla residenzialità: fino a 14.400 euro all'anno (1.200 al mese). Ricoveri di pronto intervento o sollievo: fino a 100 euro al giorno per al massimo 60 giorni, non oltre l'80% del costo. Affitto e utenze: fino a 500 euro al mese, non oltre l'80% delle spese. Spese condominiali: fino a 2.000 euro all'anno, non oltre l'80%. Adeguamenti della casa: fino a 50.000 euro per abitazione, non oltre il 70% del costo.",
-    stato: "da-verificare",
-    quando:
-      "L'avviso che abbiamo letto è del 2025: domande online dal 3 marzo 2025 fino a esaurimento delle risorse (nello stesso documento un'altra tabella indica il 1 marzo). Non abbiamo trovato un avviso per il 2026.",
-    comeSiChiede:
-      "Solo online, con i moduli del portale \"Servizi alla Persona e Famiglie\" del Comune di Brescia e con i documenti richiesti. Per aiuto con la domanda: Servizio Sociale Territoriale di riferimento (per Brescia, dal lunedì al venerdì, 9–12 e 14–16, come scritto nell'avviso).",
-    fonte: {
-      label: "Comune di Brescia · Avviso pubblico Dopo di Noi (marzo 2025)",
-      url: "https://www.comune.brescia.it/sites/default/files/2025-03/Avviso%20Dopo%20di%20Noi_Def.pdf",
-    },
-    verificatoIl: "19/10/2026",
-    nota: "Il Comune di Brescia gestisce la misura come capofila dell'Ambito Territoriale Sociale 1. Chiedi al Servizio Sociale se c'è una nuova edizione.",
-  },
-  {
     id: "brescia-vacanze-adulti-disabilita",
     regione: "Lombardia",
     comuni: ["brescia"],
@@ -840,26 +819,6 @@ export const BONUS: Bonus[] = [
   },
 
   // ------------------------------------------------------------- MODENA
-  {
-    id: "modena-assegno-di-cura-disabili",
-    regione: "Emilia-Romagna",
-    comuni: ["modena"],
-    titolo: "Assegno di cura per persone con disabilità adulte (Comune di Modena)",
-    perChi:
-      "Persone adulte con disabilità che hanno bisogno di assistenza permanente, continuativa e globale e vogliono restare nel proprio ambiente di vita. ISEE inferiore a 34.000 euro all'anno, se il Progetto Individuale prevede obiettivi raggiungibili con questa misura. Per l'integrazione di 160 euro l'ISEE deve essere inferiore a 15.000 euro.",
-    cosa:
-      "Un contributo economico che non sostituisce gli altri servizi della rete, a due livelli: livello A 15,49 euro al giorno, livello B 10,33 euro al giorno. In più, 160 euro al mese per la regolarizzazione dell'assistente, se c'è un contratto di lavoro regolare di almeno 20 ore alla settimana.",
-    stato: "da-verificare",
-    quando: "La pagina non indica scadenze.",
-    comeSiChiede:
-      "Allo Sportello Sociale del polo di appartenenza, in base alla residenza. La misura parte se serve per gli obiettivi concordati con il servizio nel progetto personalizzato.",
-    fonte: {
-      label: "Comune di Modena · Assegno di cura per persone con disabilità",
-      url: "https://www.comune.modena.it/welfare/persone-con-disabilita/sostegno-alla-domiciliarita-e-interventi-per-lautonomia/assegno-di-cura-per-persone-con-disabilita",
-    },
-    verificatoIl: "19/10/2026",
-    nota: "La pagina del Comune porta la data del 17/11/2015: importi e soglie vanno confermati con lo Sportello Sociale. In Emilia-Romagna esiste anche l'assegno di cura regionale (vedi la scheda della Regione).",
-  },
   {
     id: "modena-disability-card",
     regione: "Emilia-Romagna",
