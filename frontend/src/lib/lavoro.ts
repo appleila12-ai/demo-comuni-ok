@@ -56,6 +56,26 @@ export const LAVORO: Bonus[] = [
     },
     verificatoIl: "20/10/2026",
   },
+
+  // --- Puglia --------------------------------------------------------------
+  {
+    id: "lavoro-puglia-incentivo-assunzioni",
+    regione: "Puglia",
+    titolo: "Incentivo alle aziende che assumono persone iscritte al collocamento mirato",
+    perChi:
+      "Il contributo va ai datori di lavoro privati con sedi in Puglia, soggetti o non soggetti all'obbligo di assunzione della Legge 68/1999, che assumono persone iscritte al collocamento mirato. Non lo chiede la persona: ma essere iscritti al collocamento mirato ti rende più \"conveniente\" da assumere.",
+    cosa:
+      "Alle aziende: fino a 15.000 euro per ogni assunzione a tempo indeterminato, con maggiorazioni in casi specifici. Ci sono contributi anche per alcune assunzioni a tempo determinato, di cui la pagina non indica gli importi. La dotazione è di 4,5 milioni di euro.",
+    stato: "aperto",
+    quando: "Le domande delle aziende si presentano fino a esaurimento delle risorse e comunque non oltre le ore 12:00 del 31 dicembre 2026.",
+    comeSiChiede:
+      "Per te: iscriviti al collocamento mirato al centro per l'impiego. Le aziende fanno domanda online sulla piattaforma Sistema Puglia.",
+    fonte: {
+      label: "ARPAL Puglia · Avviso pubblico Incentivo assunzioni persone con disabilità (BURP n. 61 del 03/08/2026)",
+      url: "https://arpal.regione.puglia.it/-/avviso-pubblico-incentivo-assunzioni-persone-con-disabilit%C3%A0",
+    },
+    verificatoIl: "20/10/2026",
+  },
 ];
 
 /** Pagine ufficiali da cui partire quando la tua Regione non ha ancora schede. */
