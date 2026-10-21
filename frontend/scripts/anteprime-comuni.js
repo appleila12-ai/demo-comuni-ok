@@ -66,6 +66,12 @@ function tagMeta({ title, description, image, url }) {
     `<title>${esc(title)}</title>`,
     `<meta name="description" content="${esc(description)}" />`,
     `<meta name="theme-color" content="#F7F3EA" />`,
+    // Icona e nome breve quando si aggiunge il sito alla schermata Home
+    // (iPhone/Android). Senza questi tag compare una "T" grigia e il titolo
+    // intero della pagina, che il telefono taglia.
+    `<meta name="apple-mobile-web-app-title" content="TutelApp" />`,
+    `<link rel="apple-touch-icon" href="/apple-touch-icon.png" />`,
+    `<link rel="manifest" href="/manifest.webmanifest" />`,
     `<meta property="og:type" content="website" />`,
     `<meta property="og:locale" content="it_IT" />`,
     `<meta property="og:site_name" content="TutelApp" />`,
@@ -85,7 +91,8 @@ function tagMeta({ title, description, image, url }) {
 function conMeta(html, meta) {
   let out = html
     .replace(/<title>[\s\S]*?<\/title>/i, "")
-    .replace(/<meta\s+(name|property)="(description|theme-color|og:[^"]+|twitter:[^"]+)"[^>]*>/gi, "")
+    .replace(/<meta\s+(name|property)="(description|theme-color|apple-mobile-web-app-title|og:[^"]+|twitter:[^"]+)"[^>]*>/gi, "")
+    .replace(/<link\s+rel="(manifest|apple-touch-icon)"[^>]*>/gi, "")
     .replace(/<html([^>]*)\blang="[^"]*"/i, "<html$1lang=\"it\"");
   if (!/<html[^>]*\blang=/i.test(out)) out = out.replace(/<html/i, '<html lang="it"');
   return out.replace(/<\/head>/i, `    ${meta}\n  </head>`);
@@ -108,6 +115,18 @@ function main() {
     }
   }
   const haImmagine = (slug) => fs.existsSync(path.join(distOg, `${slug}.png`));
+
+  // Icone per "Aggiungi alla schermata Home" e manifest: public/ → dist/
+  for (const f of [
+    "apple-touch-icon.png",
+    "icon-192.png",
+    "icon-512.png",
+    "icon-maskable-512.png",
+    "manifest.webmanifest",
+  ]) {
+    const origine = path.join(ROOT, "public", f);
+    if (fs.existsSync(origine)) fs.copyFileSync(origine, path.join(DIST, f));
+  }
 
   // Pagina generica
   fs.writeFileSync(
