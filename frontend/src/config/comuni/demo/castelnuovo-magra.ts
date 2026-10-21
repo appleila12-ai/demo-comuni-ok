@@ -3,7 +3,8 @@ import type { ComuneConfig } from "../types";
 // Comune di Castelnuovo Magra (SP) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Recapiti: solo quelli letti sul sito del Comune il 21/10/2026; il resto è stato tolto perché non verificato.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti e orari: pagina "Servizi alla Persona" del sito del Comune (aggiornata il 17/02/2025) e avviso dell'11/09/2026, letti il 21/10/2026.
+// Da fare: associazioni, sport e tempo libero.
 export const castelnuovoMagra: ComuneConfig = {
   slug: "castelnuovo-magra",
   tipo: "comune",
@@ -20,7 +21,7 @@ export const castelnuovoMagra: ComuneConfig = {
   telefono: "0187 693826",
   email: "servizisociali@comune.castelnuovomagra.sp.it",
   pec: "",
-  orari: "Lunedì e giovedì 9:00–12:00 (dall'avviso del Comune dell'11/09/2026)",
+  orari: "In presenza solo su appuntamento lunedì e giovedì 9:00–12:00; ricevimento telefonico martedì e venerdì 8:30–10:30",
   sitoWeb: "https://www.comune.castelnuovomagra.sp.it/it-it/argomenti/assistenza-sociale",
 
   logo: null,
@@ -36,7 +37,7 @@ export const castelnuovoMagra: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Servizi Sociali · Tel. 0187 693826 · lunedì e giovedì 9:00–12:00 (dall'avviso dell'11/09/2026)",
+      subtitle: "Servizi Sociali · Tel. 0187 693826 · in presenza lunedì e giovedì 9:00–12:00 solo su appuntamento; telefono martedì e venerdì 8:30–10:30",
       action: { type: "web", value: "https://www.comune.castelnuovomagra.sp.it/it-it/argomenti/assistenza-sociale" },
     },
     {
