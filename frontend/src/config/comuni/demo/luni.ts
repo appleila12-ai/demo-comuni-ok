@@ -3,7 +3,8 @@ import type { ComuneConfig } from "../types";
 // Comune di Luni (SP) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Recapiti: solo quelli letti sul sito del Comune il 21/10/2026; il resto è stato tolto perché non verificato.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
+// Orari: pagina "Servizio 6: Servizi Socio-educativi" del sito del Comune (aggiornata il 12/06/2026), letta il 21/10/2026.
+// Da fare: associazioni, sport e tempo libero.
 export const luni: ComuneConfig = {
   slug: "luni",
   tipo: "comune",
@@ -20,7 +21,7 @@ export const luni: ComuneConfig = {
   telefono: "0187 690111",
   email: "",
   pec: "",
-  orari: "",
+  orari: "Ricevimento su appuntamento (Servizio 6 – Servizi socio-educativi)",
   sitoWeb: "https://www.comune.luni.sp.it/it-it/argomenti/assistenza-sociale",
 
   logo: null,

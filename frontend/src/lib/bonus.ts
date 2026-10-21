@@ -214,6 +214,25 @@ export const BONUS: Bonus[] = [
     nota: "Pagina aggiornata dal Comune l'08/06/2026.",
   },
 
+  {
+    id: "luni-fondo-affitti-2026",
+    regione: "Liguria",
+    comuni: ["luni"],
+    titolo: "Contributi per l'affitto (Fondo sociale affitti 2026)",
+    perChi: "Residenti a Luni che pagano un affitto, secondo il bando del Comune (Legge 431/1998, art. 11).",
+    cosa: "Un contributo per le spese di affitto. Importi e requisiti sono nel bando e nel modulo di domanda sul sito del Comune.",
+    stato: "aperto",
+    quando: "Domande dal 12/10/2026 alle ore 12:00 del 12/11/2026.",
+    comeSiChiede:
+      "Si presenta il modulo di domanda allegato al bando, pubblicato sul sito del Comune insieme alla scheda di monitoraggio. Per informazioni: Servizio 6 – Servizi socio-educativi, tel. 0187 690111.",
+    fonte: {
+      label: "Comune di Luni · Bando contributi a sostegno delle abitazioni in locazione",
+      url: "https://www.comune.luni.sp.it/it-it/novita/avvisi/2026/bandi/bando-per-l-erogazione-di-contributi-a-sostegno-delle-abitazioni-in-locazione-404204-1-3604a8a0dd4e4cc60fd583a7f34e0d11",
+    },
+    verificatoIl: "21/10/2026",
+    nota: "Pagina aggiornata dal Comune il 12/10/2026.",
+  },
+
   // ------------------------------------------- DISTRETTO SOCIOSANITARIO 18
 
   // ------------------------------------------------------------------ SICILIA
