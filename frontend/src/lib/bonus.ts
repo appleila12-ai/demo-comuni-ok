@@ -120,6 +120,44 @@ export const BONUS: Bonus[] = [
     nota: "La pagina elenca anche i motivi di esclusione, per esempio il possesso di più immobili. La pagina non riporta la data di aggiornamento.",
   },
 
+  {
+    id: "lerici-servizi-sociali",
+    regione: "Liguria",
+    comuni: ["lerici"],
+    titolo: "Servizi sociali del Comune (contributi, assistenza a casa, pasti, telesoccorso)",
+    perChi: "Persone e nuclei familiari residenti a Lerici.",
+    cosa:
+      "Si può chiedere: contributo economico, assistenza domiciliare, pasti caldi a domicilio, telesoccorso, pronto intervento domiciliare e interventi educativi per minori. La pagina non scrive importi né soglie ISEE.",
+    stato: "attivo",
+    comeSiChiede:
+      "Si compila il modulo \"Istanza Unica Servizi Sociali\" (sul sito del Comune) e lo si consegna all'Ufficio Politiche Sociali, previo appuntamento. Servono: ISEE, verbale di invalidità civile, iscrizione al Centro per l'impiego (se disoccupati), permesso o carta di soggiorno (se cittadini extracomunitari), bollette o preventivo (per il contributo economico) e documento di identità. Il Comune comunica l'esito entro 30 giorni dall'invio. La presentazione è gratuita. Telefono: 0187 960277 / 0187 960287.",
+    fonte: {
+      label: "Comune di Lerici · Servizi sociali",
+      url: "https://www.comune.lerici.sp.it/servizi/salute_benessere_e_assistenza/servizio_63.html",
+    },
+    verificatoIl: "21/10/2026",
+    nota: "Pagina aggiornata dal Comune l'08/06/2026.",
+  },
+  {
+    id: "lerici-bonus-elettrico-disagio-fisico",
+    regione: "Liguria",
+    comuni: ["lerici"],
+    titolo: "Bonus sociale elettrico per disagio fisico",
+    perChi:
+      "Nuclei familiari in cui un componente deve usare apparecchiature elettromedicali necessarie per il mantenimento in vita. La richiesta può essere fatta da un componente del nucleo.",
+    cosa:
+      "Uno sconto sulle bollette dell'energia elettrica. Non dipende dall'ISEE: l'importo dipende dal consumo annuo dei macchinari salvavita. Si può cumulare con il bonus per disagio economico, se hai i requisiti di entrambi.",
+    stato: "attivo",
+    comeSiChiede:
+      "La richiesta la presenta il titolare della fornitura elettrica (anche se è una persona diversa dal malato) al Comune di residenza o a un CAF abilitato. Il modulo si ritira presso l'Ufficio Politiche Sociali, previo appuntamento (0187 960277 / 0187 960287). Il Comune comunica l'esito entro 30 giorni. La presentazione è gratuita. L'elenco delle apparecchiature che danno diritto al bonus è stabilito da un decreto del Ministero della Salute.",
+    fonte: {
+      label: "Comune di Lerici · Bonus sociale elettrico per disagio fisico",
+      url: "https://www.comune.lerici.sp.it/servizi/salute_benessere_e_assistenza/servizio_64.html",
+    },
+    verificatoIl: "21/10/2026",
+    nota: "Pagina aggiornata dal Comune l'08/06/2026. Altre informazioni sul sito ARERA, pagina Bonus Sociale.",
+  },
+
   // ------------------------------------------- DISTRETTO SOCIOSANITARIO 18
 
   // ------------------------------------------------------------------ SICILIA

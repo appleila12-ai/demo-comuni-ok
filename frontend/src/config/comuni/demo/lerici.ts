@@ -2,7 +2,7 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Lerici (SP) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Dati presi dal sito ufficiale del Comune/ente (settembre 2026), da verificare.
+// Recapiti: pagina "Ufficio Politiche Sociali" del sito del Comune (aggiornata l'08/06/2026), testo copiato da Ilaria il 21/10/2026.
 export const lerici: ComuneConfig = {
   slug: "lerici",
   tipo: "comune",
@@ -14,12 +14,12 @@ export const lerici: ComuneConfig = {
   regione: "Liguria",
 
   ente: "Servizi Sociali",
-  responsabile: "Servizio Politiche Sociali e Istruzione",
-  indirizzo: "Via Gerini 18, 19032 Lerici (SP)",
+  responsabile: "Ufficio Politiche Sociali",
+  indirizzo: "Piazza Bacigalupi, 19032 Lerici (SP)",
   telefono: "0187 960277",
-  email: "sportello@comune.lerici.sp.it",
+  email: "",
   pec: "comunedilerici@postecert.it",
-  orari: "Mar e Ven 9:00–12:00",
+  orari: "Lun 15:00–17:00 (accesso libero), 14:00–15:00 su prenotazione; mar 9:00–12:00; gio 9:00–10:00 su prenotazione, 10:00–12:00 libero; ven 9:00–12:00 (dal 09/07/2025)",
   sitoWeb: "https://www.comune.lerici.sp.it/amministrazione/uffici/ufficio_22.html",
 
   logo: null,
@@ -35,14 +35,14 @@ export const lerici: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali – Lerici",
-      subtitle: "Servizio Politiche Sociali e Istruzione · Via Gerini 18, 19032 Lerici (SP) · Tel. 0187 960277",
+      subtitle: "Ufficio Politiche Sociali · Piazza Bacigalupi · Tel. 0187 960277 / 0187 960287",
       action: { type: "tel", value: "0187960277" },
     },
     {
-      icon: "business-outline",
-      title: "Sportello di Cittadinanza – Distretto Sociosanitario 18",
-      subtitle: "Punto di accesso sociale: informazioni e orientamento sui servizi socio-sanitari · Mar, Gio, Sab 10–12",
-      action: { type: "tel", value: "0187960237" },
+      icon: "document-text-outline",
+      title: "Istanza Unica Servizi Sociali",
+      subtitle: "Modulo unico per contributi, assistenza a casa, pasti caldi, telesoccorso. Si consegna all'ufficio previo appuntamento.",
+      action: { type: "web", value: "https://www.comune.lerici.sp.it/servizi/salute_benessere_e_assistenza/servizio_63.html" },
     },
     {
       icon: "medkit-outline",
