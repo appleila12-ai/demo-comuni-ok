@@ -10,6 +10,7 @@
 // Aggiornamento 19/10/2026: sport per la Sicilia; associazioni per Catania e provincia di Reggio Emilia
 // (elenco sezioni locali del sito nazionale Anffas, email del programma Special Olympics dalla rete ufficiale).
 // Aggiornamento 20/10/2026: Anffas Sardegna (Cagliari) dall'elenco del sito nazionale.
+// Aggiornamento 21/10/2026: Ca.Te.Ri.Na (Sarzana), recapiti forniti il 21/10/2026.
 
 import { comune } from "@/src/config/comune";
 
@@ -96,6 +97,14 @@ const PER_PROVINCIA: Record<string, Elenco> = {
         dove: "Via Forlì 13, La Spezia",
         telefono: "0187 734671",
         email: "anffasspezia@libero.it",
+      },
+      {
+        nome: "Ca.Te.Ri.Na",
+        cosa: "Laboratori corali aperti a tutti, con il metodo Canto Naturale® (marchio registrato): inclusivi per tutti. Referente: Jenny Fumanti. Recapiti forniti il 21/10/2026.",
+        dove: "Sarzana",
+        telefono: "334 1582665",
+        email: "associazionecaterina.sp@gmail.com",
+        comuni: ["sarzana"],
       },
       {
         nome: "UISP Val di Magra – \"Nessuno Escluso\"",
