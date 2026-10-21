@@ -55,7 +55,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Verbania (VB)
   "verbania": { email: "rtd@comune.verbania.it", tipo: "ordinaria", fonte: "elenco Excel dei Comuni" },
   // Vezzano Ligure (SP)
-  "vezzano-ligure": { email: "segretario@comune.vezzanoligure.sp.it", tipo: "ordinaria", fonte: "elenco Excel dei Comuni" },
+  "vezzano-ligure": { email: "servizisociali@comune.vezzanoligure.sp.it", tipo: "ordinaria", fonte: "Ufficio Servizi Sociali del Comune: indirizzo concorde in più letture della pagina ufficiale (21/10/2026)" },
   // Vicenza (VI)
   "vicenza": { email: "segreteriadirezioneservizisociali@comune.vicenza.it", tipo: "ordinaria", fonte: "contatti servizi sociali" },
   // Vigevano (PV)
@@ -77,7 +77,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Altamura (BA)
   "altamura": { email: "protocollo.generale@pec.comune.altamura.ba.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Ameglia (SP)
-  "ameglia": { email: "protocollo@comune.ameglia.sp.it", tipo: "ordinaria", fonte: "Prefettura della Spezia (elenco del 30/11/2023) e IndicePA, concordi; da riconfermare sul sito del Comune" },
+  "ameglia": { email: "servizisociali@comune.ameglia.sp.it", tipo: "ordinaria", fonte: "Ufficio Servizi Sociali del Comune: indirizzo concorde in più letture della pagina ufficiale (21/10/2026)" },
   // Andria (BT)
   "andria": { email: "protocollo@cert.comune.andria.bt.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Angri (SA)
@@ -339,7 +339,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Sanremo (IM)
   "sanremo": { email: "comune.sanremo@legalmail.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Santo Stefano di Magra (SP)
-  "santo-stefano-di-magra": { email: "protocollo@pec.comune.santostefanodimagra.sp.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  "santo-stefano-di-magra": { email: "servizisociali@comune.santostefanodimagra.sp.it", tipo: "ordinaria", fonte: "Ufficio Servizi Sociali del Comune: indirizzo concorde in più letture della pagina ufficiale (21/10/2026)" },
   // Sassari (SS)
   "sassari": { email: "urp@comune.sassari.it", tipo: "ordinaria", fonte: "sito del Comune" },
   // Sassuolo (MO)

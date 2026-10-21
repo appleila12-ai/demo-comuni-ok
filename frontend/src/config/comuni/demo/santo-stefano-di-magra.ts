@@ -17,11 +17,11 @@ export const santoStefanoDiMagra: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
+  indirizzo: "Via Filippo Turati 8, 19037 Santo Stefano di Magra (SP)",
   telefono: "",
-  email: "",
+  email: "servizisociali@comune.santostefanodimagra.sp.it",
   pec: "",
-  orari: "",
+  orari: "Lunedì e giovedì 9:30–12:00",
   sitoWeb: "https://www.comune.santostefanodimagra.sp.it/",
 
   logo: null,
@@ -37,7 +37,7 @@ export const santoStefanoDiMagra: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
+      subtitle: "Ufficio Servizi Sociali · Via Filippo Turati 8 · lunedì e giovedì 9:30–12:00 · servizisociali@comune.santostefanodimagra.sp.it",
       action: { type: "web", value: "https://www.comune.santostefanodimagra.sp.it/" },
     },
     {

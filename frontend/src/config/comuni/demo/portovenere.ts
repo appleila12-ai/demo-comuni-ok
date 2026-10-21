@@ -17,7 +17,7 @@ export const portovenere: ComuneConfig = {
   responsabile: "Ufficio Servizi Sociali e Scuola – Sportello di Cittadinanza",
   indirizzo: "Via Garibaldi 9, 19025 Porto Venere (SP)",
   telefono: "0187 794844",
-  email: "giuliana.coglio@comune.portovenere.sp.it",
+  email: "",
   orari: "Mar e Gio 9:00–12:00; Sab su appuntamento",
   sitoWeb: "https://www.comune.portovenere.sp.it/amministrazione/uffici/ufficio_16.html",
 

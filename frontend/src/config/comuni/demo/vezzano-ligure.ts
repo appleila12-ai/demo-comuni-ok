@@ -17,11 +17,11 @@ export const vezzanoLigure: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
+  indirizzo: "Via Goito 2, Vezzano Ligure (SP)",
+  telefono: "0187 982520",
+  email: "servizisociali@comune.vezzanoligure.sp.it",
   pec: "",
-  orari: "",
+  orari: "Lunedì, mercoledì e giovedì 8:30–12:30, su prenotazione",
   sitoWeb: "https://www.comune.vezzanoligure.sp.it/",
 
   logo: null,
@@ -37,7 +37,7 @@ export const vezzanoLigure: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
+      subtitle: "Ufficio Servizi Sociali · Via Goito 2 · Tel. 0187 982520 · lunedì, mercoledì e giovedì 8:30–12:30 su prenotazione",
       action: { type: "web", value: "https://www.comune.vezzanoligure.sp.it/" },
     },
     {
