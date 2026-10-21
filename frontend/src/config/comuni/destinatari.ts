@@ -18,6 +18,8 @@ export type Destinatario = {
 };
 
 export const DESTINATARI: Record<string, Destinatario> = {
+  // Riccò del Golfo di Spezia (SP)
+  "ricco-del-golfo": { email: "protocollo@comune.riccodelgolfo.sp.it", tipo: "ordinaria", fonte: "Prefettura della Spezia (elenco del 30/11/2023) e IndicePA, concordi; da riconfermare sul sito del Comune" },
   // Sarzana (SP)
   "sarzana": { email: "urp@comune.sarzana.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Sarzana, Ufficio Relazioni con il Pubblico (21/10/2026)" },
   // Ascoli Piceno (AP)
@@ -73,7 +75,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Altamura (BA)
   "altamura": { email: "protocollo.generale@pec.comune.altamura.ba.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Ameglia (SP)
-  "ameglia": { email: "protocollo@pec.comune.ameglia.sp.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  "ameglia": { email: "protocollo@comune.ameglia.sp.it", tipo: "ordinaria", fonte: "Prefettura della Spezia (elenco del 30/11/2023) e IndicePA, concordi; da riconfermare sul sito del Comune" },
   // Andria (BT)
   "andria": { email: "protocollo@cert.comune.andria.bt.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Angri (SA)

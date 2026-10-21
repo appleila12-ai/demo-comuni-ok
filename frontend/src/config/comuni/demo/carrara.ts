@@ -17,10 +17,10 @@ export const carrara: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "Settore 8 – Supporto organi istituzionali / Servizi sociali e politiche abitative",
   indirizzo: "Piazza 2 Giugno 1, 54033 Carrara (MS)",
-  telefono: "0585 641731",
-  email: "giulia.dazzi@comune.carrara.ms.it",
+  telefono: "0585 641732",
+  email: "",
   pec: "comune.carrara@postecert.it",
-  orari: "Lun–Ven 9:00–13:00; Mar e Gio 15:30–17:00",
+  orari: "",
   sitoWeb: "https://www.comune.carrara.ms.it/it/unita_organizzative/settore-8-supporto-organi-istituzionali-servizi-sociali-e-politiche-abitative",
 
   logo: null,
@@ -36,7 +36,7 @@ export const carrara: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali – Carrara",
-      subtitle: "Settore 8 – Supporto organi istituzionali / Servizi sociali e politiche abitative · Piazza 2 Giugno 1, 54033 Carrara (MS) · Tel. 0585 641731",
+      subtitle: "Settore 8 – Supporto organi istituzionali / Servizi sociali e politiche abitative · Piazza 2 Giugno 1, 54033 Carrara (MS) · Tel. 0585 641732",
       action: { type: "tel", value: "0585641731" },
     },
     {

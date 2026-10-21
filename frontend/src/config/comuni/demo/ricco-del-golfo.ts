@@ -17,7 +17,7 @@ export const riccoDelGolfo: ComuneConfig = {
   responsabile: "Ufficio Servizi Sociali e alla Persona",
   indirizzo: "Via Aurelia 150, 19020 Riccò del Golfo di Spezia (SP)",
   telefono: "0187 925106",
-  email: "riccodelgolfo@pec.comune.riccodelgolfo.sp.it",
+  email: "",
   pec: "riccodelgolfo@pec.comune.riccodelgolfo.sp.it",
   orari: "Chiama il centralino per orari e appuntamenti",
   sitoWeb: "https://www.comune.riccodelgolfo.sp.it/amministrazione/uffici/ufficio_41.html",
