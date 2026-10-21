@@ -27,7 +27,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Capannori (LU)
   "capannori": { email: "rtd@comune.capannori.lu.it", tipo: "ordinaria", fonte: "elenco Excel dei Comuni" },
   // Castelnuovo Magra (SP)
-  "castelnuovo-magra": { email: "segretariocomunale@comune.castelnuovomagra.sp.it", tipo: "ordinaria", fonte: "elenco Excel dei Comuni" },
+  "castelnuovo-magra": { email: "servizisociali@comune.castelnuovomagra.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Castelnuovo Magra, avviso Servizi Sociali (11/09/2026)" },
   // Favara (AG)
   "favara": { email: "rtd@comune.favara.ag.it", tipo: "ordinaria", fonte: "elenco Excel dei Comuni" },
   // Manfredonia (FG)
@@ -231,7 +231,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Lucera (FG)
   "lucera": { email: "comune.lucera@anutelpec.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Luni (SP)
-  "luni": { email: "segreteria@pec.comune.luni.sp.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  "luni": { email: "urp@comune.luni.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Luni, Ufficio Relazioni con il Pubblico (21/10/2026)" },
   // Macerata (MC)
   "macerata": { email: "comune.macerata@legalmail.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Marano di Napoli (NA)

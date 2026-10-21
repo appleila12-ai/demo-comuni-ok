@@ -15,10 +15,10 @@ export const arcola: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "Ufficio Servizi Sociali e Ambito",
-  indirizzo: "Via Valentini 89/A, 19021 Arcola (SP)",
-  telefono: "0187 1745812",
-  email: "servizi.sociali@comune.arcola.sp.it",
-  orari: "Lun–Ven 9:00–12:00",
+  indirizzo: "",
+  telefono: "",
+  email: "",
+  orari: "",
   sitoWeb: "https://comune.arcola.sp.it/amministrazione/uffici/ufficio_39.html",
 
   logo: null,
@@ -32,16 +32,10 @@ export const arcola: ComuneConfig = {
 
   puntiSupporto: [
     {
-      icon: "people-outline",
-      title: "Servizi Sociali – Arcola",
-      subtitle: "Ufficio Servizi Sociali e Ambito · Via Valentini 89/A, 19021 Arcola (SP) · Tel. 0187 1745812",
-      action: { type: "tel", value: "01871745812" },
-    },
-    {
-      icon: "business-outline",
-      title: "Servizi Sociali del Comune di Sarzana (capofila dell'ambito)",
-      subtitle: "Arcola fa parte dell'ambito con Sarzana (capofila), Ameglia, Castelnuovo Magra, Luni, Santo Stefano di Magra e Vezzano Ligure",
-      action: { type: "web", value: "https://www.comune.sarzana.sp.it/servizi-sociali.html" },
+      icon: "call-outline",
+      title: "Distretto Sociosanitario 19 \"Val di Magra\"",
+      subtitle: "Distretto di Sarzana, Ameglia, Arcola, Castelnuovo Magra, Luni, Santo Stefano di Magra e Vezzano Ligure · Tel. 0187 614507 / 0187 604933",
+      action: { type: "tel", value: "0187614507" },
     },
     {
       icon: "medkit-outline",
@@ -51,7 +45,7 @@ export const arcola: ComuneConfig = {
     },
   ],
 
-  trasporto: "Chiedi ai Servizi Sociali di Arcola (0187 1745812) quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie).",
+  trasporto: "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie).",
 
   esenzioneTicket: {
     label: "ASL5 Spezzino · Esenzioni ticket",
