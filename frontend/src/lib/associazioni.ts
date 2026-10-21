@@ -2,14 +2,14 @@
 // e (a parte) sport. Si mostrano quelle della provincia del Comune attivo, prima
 // quelle del Comune stesso. Dati raccolti a settembre 2026 da siti delle associazioni,
 // del Comune della Spezia (Distretto 18), del CIP, di SportAbility Liguria e da
-// articoli locali recenti. "verificare: true" = recapito da confermare.
+// articoli locali recenti.
 // Aggiornamento 18/10/2026: sport per Toscana, Emilia-Romagna, Veneto e Abruzzo
 // (recapiti dal sito del CIP); associazioni per Firenze, Sassuolo e Avezzano.
 // Aggiornamento 19/10/2026: associazioni e sport per Brescia, Modena e Monza
 // (elenco sedi di Anffas e elenchi dei siti dei Comuni).
 // Aggiornamento 19/10/2026: sport per la Sicilia; associazioni per Catania e provincia di Reggio Emilia
 // (elenco sezioni locali del sito nazionale Anffas, email del programma Special Olympics dalla rete ufficiale).
-// Aggiornamento 20/10/2026: Anffas Sardegna (Cagliari) dall'elenco del sito nazionale; CIP Friuli-Venezia Giulia (solo pagina del Comitato).
+// Aggiornamento 20/10/2026: Anffas Sardegna (Cagliari) dall'elenco del sito nazionale.
 
 import { comune } from "@/src/config/comune";
 
@@ -81,28 +81,12 @@ const PER_PROVINCIA: Record<string, Elenco> = {
         sito: "https://www.uiciechi.it/liguria/sp/spezia.html",
       },
       {
-        nome: "ENS – Ente Nazionale Sordi",
-        cosa: "Tutela e inclusione a scuola, al lavoro e nella vita sociale delle persone sorde.",
-        dove: "Via dei Pioppi 6, La Spezia",
-        telefono: "0187 711399",
-        email: "laspezia@ens.it",
-        sito: "https://laspezia.ens.it",
-        verificare: true,
-      },
-      {
         nome: "AISM – Sclerosi multipla",
         cosa: "Sostegno alle persone con sclerosi multipla e alle famiglie, con colloqui con l'assistente sociale su appuntamento.",
         dove: "Via Anita Garibaldi 12, La Spezia",
         telefono: "338 6660842",
         email: "aismlaspezia@aism.it",
         sito: "https://www.aism.it/struttura/sezione_provinciale_aism_la_spezia",
-      },
-      {
-        nome: "ANMIC – Invalidi civili",
-        cosa: "Tutela e assistenza per le persone con invalidità civile: diritti, pratiche, informazioni.",
-        dove: "La Spezia",
-        sito: "https://www.anmicliguria.it/sedi_sp.asp",
-        verificare: true,
       },
     ],
     sport: [
@@ -142,32 +126,6 @@ const PER_PROVINCIA: Record<string, Elenco> = {
         cosa: "Club che promuove i valori dello sport. Ha un accordo con il Comune della Spezia per l'inclusione sportiva delle persone con disabilità e affianca Special Olympics e Polisportiva Spezzina. Non è una società dove allenarsi, ma può orientarti.",
         dove: "La Spezia",
         sito: "https://www.panathlon-international.org/index.php/es/panathlon/i-clubs/85-coordinate-mappa/759-la-spezia",
-      },
-      {
-        nome: "Arcieri Sarzana",
-        cosa: "Tiro con l'arco, società nell'elenco CIP: chiedi le attività per arcieri con disabilità.",
-        dove: "Via Alfieri 56, Sarzana",
-        telefono: "339 8927985",
-        email: "segreteria@arcierisarzana.it",
-        comuni: ["sarzana", "arcola"],
-        verificare: true,
-      },
-      {
-        nome: "Arcieri del Golfo",
-        cosa: "Tiro con l'arco, società nell'elenco CIP.",
-        dove: "Via Buonviaggio 47, La Spezia",
-        telefono: "347 0447492",
-        email: "arcieridelgolfo@libero.it",
-        comuni: ["la-spezia"],
-        verificare: true,
-      },
-      {
-        nome: "Circolo Ippico 3 Emme",
-        cosa: "Equitazione, società nell'elenco CIP per gli sport equestri paralimpici.",
-        dove: "Via del Pioppo 3, Vezzano Ligure",
-        telefono: "340 2879644",
-        comuni: ["ricco-del-golfo", "arcola"],
-        verificare: true,
       },
     ],
   },
@@ -247,12 +205,6 @@ const SPORT_REGIONE: Record<string, Associazione[]> = {
     },
   ],
   Sicilia: [
-    {
-      nome: "CIP – Comitato Paralimpico Sicilia",
-      cosa: "Coordina lo sport paralimpico in Sicilia e ti indica la società sportiva più vicina. Telefono ed email sono sulla pagina dei contatti del Comitato.",
-      sito: "https://www.comitatoparalimpico.it/sicilia_accessibile/contatti.html",
-      verificare: true,
-    },
     {
       nome: "Special Olympics – Team Sicilia",
       cosa: "Allenamenti e gare per persone con disabilità intellettiva, senza limiti di età. Scrivi al referente regionale: ti indica il Team più vicino a casa tua.",
@@ -388,15 +340,6 @@ PER_PROVINCIA.MI.volontariato.unshift(
     sito: "https://www.ledha.it",
     comuni: ["milano"],
   },
-  {
-    nome: "Anffas Milano",
-    cosa: "Famiglie di persone con disabilità intellettiva e relazionale. Il SAI? è uno spazio di accoglienza, ascolto e accompagnamento per persone con disabilità e familiari.",
-    dove: "Via Ulisse Dini 7, Milano",
-    email: "anffas@anffasmilano.it",
-    sito: "https://www.anffasmilano.it",
-    comuni: ["milano"],
-    verificare: true,
-  },
 );
 
 // Torino (TO): dati dal sito dell'associazione (ottobre 2026)
@@ -424,16 +367,6 @@ PER_PROVINCIA.RM.volontariato.unshift(
   },
 );
 
-// Fiumicino (RM): tempo libero e mare. Dati da articoli e dal sito della Regione Lazio (ottobre 2026)
-PER_PROVINCIA.RM = PER_PROVINCIA.RM ?? { volontariato: [], sport: [] };
-PER_PROVINCIA.RM.volontariato.unshift({
-  nome: "Spiaggia per tutti – Lungomare della Salute",
-  cosa: "Lido attrezzato, accessibile e senza barriere, aperto a tutti: bagni e docce adatti, pedane, sedie da mare speciali e assistenti specializzati. Nell'estate 2025 c'erano ombrelloni e lettini gratuiti. Gestito dalla cooperativa \"A Casa di Enzo\" e inserito dalla Regione Lazio tra le spiagge inclusive.",
-  dove: "Lungomare della Salute, altezza civico 55 (di fronte a via Giovanni Magro), Fiumicino",
-  sito: "https://www.regione.lazio.it/notizie/accessibility-seaside-spiagge-inclusive",
-  comuni: ["fiumicino"],
-  verificare: true,
-});
 
 // Ferentino (FR)
 PER_PROVINCIA.FR = PER_PROVINCIA.FR ?? { volontariato: [], sport: [] };
@@ -498,27 +431,7 @@ PER_PROVINCIA.FI.volontariato.unshift({
   province: ["FI"],
 });
 
-// Sassuolo (MO): associazione segnalata dai progetti finanziati della Regione
-// Emilia-Romagna (18/10/2026). Recapiti da confermare con l'associazione.
-PER_PROVINCIA.MO = PER_PROVINCIA.MO ?? { volontariato: [], sport: [] };
-PER_PROVINCIA.MO.volontariato.unshift({
-  nome: "Anffas APS Sassuolo",
-  cosa: "Famiglie di persone con disabilità intellettiva e relazionale. Porta avanti il progetto \"Sul Serio\", una rivista scritta da una redazione di giovani con e senza disabilità, e mette a disposizione la propria sede per le attività.",
-  dove: "Sassuolo (MO)",
-  comuni: ["sassuolo"],
-  verificare: true,
-});
 
-// Avezzano (AQ): fondazione riconosciuta dalla Regione Abruzzo (18/10/2026).
-// Recapiti da confermare con l'ente.
-PER_PROVINCIA.AQ = PER_PROVINCIA.AQ ?? { volontariato: [], sport: [] };
-PER_PROVINCIA.AQ.volontariato.unshift({
-  nome: "Fondazione Anffas Avezzano \"Giovannino di Pangrazio\"",
-  cosa: "Si occupa di persone con disabilità intellettiva e relazionale e delle loro famiglie. Ha aperto ad Avezzano lo spazio \"Anffas 22 Revolution\" per l'integrazione e il benessere.",
-  dove: "Avezzano (AQ)",
-  comuni: ["avezzano"],
-  verificare: true,
-});
 
 // Brescia (BS): recapiti dall'elenco "Dove siamo" del sito nazionale di Anffas (19/10/2026).
 PER_PROVINCIA.BS = PER_PROVINCIA.BS ?? { volontariato: [], sport: [] };
@@ -532,53 +445,8 @@ PER_PROVINCIA.BS.volontariato.unshift({
   comuni: ["brescia"],
 });
 
-// Catania: sezione locale Anffas dall'elenco del sito nazionale (19/10/2026).
-// Provincia di Reggio Emilia: sezione di Correggio (stessa fonte). Recapiti da confermare.
-PER_PROVINCIA.CT = PER_PROVINCIA.CT ?? { volontariato: [], sport: [] };
-PER_PROVINCIA.CT.volontariato.unshift({
-  nome: "Anffas Catania APS",
-  cosa: "Associazione di famiglie di persone con disabilità intellettiva e relazionale.",
-  dove: "Via Policastro 76, 95126 Catania",
-  telefono: "095 382001",
-  email: "info@anffascatania.net",
-  sito: "https://www.anffas.net/it/chi-siamo/dove-siamo/",
-  comuni: ["catania"],
-  verificare: true,
-});
-PER_PROVINCIA.RE = PER_PROVINCIA.RE ?? { volontariato: [], sport: [] };
-PER_PROVINCIA.RE.volontariato.unshift({
-  nome: "Anffas Correggio APS",
-  cosa: "Associazione di famiglie di persone con disabilità intellettiva e relazionale, nella provincia di Reggio Emilia.",
-  dove: "Viale Vittorio Veneto 34/D, 42015 Correggio (RE)",
-  telefono: "353 4337321",
-  email: "anffas.correggio@gmail.com",
-  sito: "https://www.anffascorreggio.it",
-  verificare: true,
-});
 
-// Cagliari: sede dall'elenco "Dove siamo" del sito nazionale Anffas (20/10/2026). Recapiti da confermare.
-PER_PROVINCIA.CA = PER_PROVINCIA.CA ?? { volontariato: [], sport: [] };
-PER_PROVINCIA.CA.volontariato.unshift({
-  nome: "Anffas Sardegna ETS-APS",
-  cosa: "Associazione di famiglie di persone con disabilità intellettiva e relazionale.",
-  dove: "Via Stanislao Caboni 3, 09125 Cagliari",
-  telefono: "070 669083",
-  email: "aps@anffassardegna.it",
-  sito: "https://www.anffas.net/it/chi-siamo/dove-siamo/",
-  comuni: ["cagliari"],
-  verificare: true,
-});
 
-// Friuli-Venezia Giulia: solo la pagina del Comitato regionale sul sito del CIP (20/10/2026);
-// indirizzo, telefono ed email non letti, da cercare.
-SPORT_REGIONE["Friuli-Venezia Giulia"] = [
-  {
-    nome: "CIP – Comitato Paralimpico Friuli-Venezia Giulia",
-    cosa: "Coordina lo sport paralimpico in Friuli-Venezia Giulia e ti indica la società sportiva più vicina.",
-    sito: "https://www.comitatoparalimpico.it/organizzazione/territorio/comitati-regionali/item/comitato-regionale-friulivg.html",
-    verificare: true,
-  },
-];
 
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
@@ -612,3 +480,5 @@ export function associazioniDelComune() {
     vicina: eVicina,
   };
 }
+
+// 21/10/2026: tolte le associazioni con recapito non confermato (regola: nessuna informazione dubbia in app).
