@@ -39,6 +39,12 @@ export const lerici: ComuneConfig = {
       action: { type: "tel", value: "0187960277" },
     },
     {
+      icon: "business-outline",
+      title: "Sportello di Cittadinanza – Lerici",
+      subtitle: "Via Gerini 18 · Tel. 0187 960237 · sportello@comune.lerici.sp.it · Fonte: pagina del Comune della Spezia (Distretto 18), aggiornata il 10/08/2023",
+      action: { type: "tel", value: "0187960237" },
+    },
+    {
       icon: "document-text-outline",
       title: "Istanza Unica Servizi Sociali",
       subtitle: "Modulo unico per contributi, assistenza a casa, pasti caldi, telesoccorso. Si consegna all'ufficio previo appuntamento.",

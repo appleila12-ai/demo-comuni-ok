@@ -46,6 +46,15 @@ const PER_PROVINCIA: Record<string, Elenco> = {
         sito: "https://www.facebook.com/anffasonluslaspezia/",
       },
       {
+        nome: "Pubblica Assistenza Lerici",
+        cosa: "Soccorso sanitario e trasporti assistiti; servizi sociali per anziani e persone con disabilità.",
+        dove: "Via Matteotti 9, Lerici",
+        telefono: "0187 967136",
+        email: "info@palerici.it",
+        sito: "https://www.palerici.it",
+        comuni: ["lerici"],
+      },
+      {
         nome: "ANGSA La Spezia",
         cosa: "Genitori di persone con autismo: tutela dei diritti, sostegno alle famiglie e attività.",
         dove: "Via Anita Garibaldi 2, La Spezia",
