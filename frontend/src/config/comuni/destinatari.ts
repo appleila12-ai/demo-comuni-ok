@@ -18,6 +18,8 @@ export type Destinatario = {
 };
 
 export const DESTINATARI: Record<string, Destinatario> = {
+  // Aulla (MS)
+  "aulla": { email: "sociale@comune.aulla.ms.it", tipo: "ordinaria", fonte: "sito del Comune di Aulla, Ufficio Servizi Sociali, Sanità e Sport (21/10/2026)" },
   // Riccò del Golfo di Spezia (SP)
   "ricco-del-golfo": { email: "protocollo@comune.riccodelgolfo.sp.it", tipo: "ordinaria", fonte: "Prefettura della Spezia (elenco del 30/11/2023) e IndicePA, concordi; da riconfermare sul sito del Comune" },
   // Sarzana (SP)
