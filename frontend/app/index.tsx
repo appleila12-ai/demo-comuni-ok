@@ -20,6 +20,7 @@ import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
 import { CasellaRicerca } from "@/src/components/CasellaRicerca";
+import { RiprendiHome } from "@/src/components/RiprendiHome";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
 import { useSalvati } from "@/src/lib/salvati";
 
@@ -213,18 +214,17 @@ function HomeDelComune() {
 
         {comune.dimostrativo && (
           <View style={styles.demoBanner} testID="comune-home-demo">
-            <Ionicons name="information-circle-outline" size={18} color="#6B4E16" />
+            <Ionicons name="information-circle-outline" size={16} color="#6B4E16" />
             <Text style={styles.demoBannerText}>
-              <Text style={styles.demoBannerStrong}>Versione dimostrativa. </Text>
-              {comune.tipo === "unione" ? "L'" : "Il "}
-              {comune.nome} non ha aderito a TutelApp: questa pagina mostra come
-              potrebbe funzionare. I recapiti sono quelli pubblicati sul sito
-              ufficiale del Comune e potrebbero non essere aggiornati.
+              <Text style={styles.demoBannerStrong}>Versione dimostrativa: </Text>
+              {comune.tipo === "unione" ? "l'" : "il "}
+              {comune.nome} non ha aderito a TutelApp. I recapiti vengono dal sito
+              ufficiale e potrebbero non essere aggiornati.
             </Text>
           </View>
         )}
 
-        {/* Per gli enti: contatto con TutelApp. La richiesta ai Comuni è la finestra che si apre al ritorno nella Home */}
+        {/* Per gli enti: contatto con TutelApp, in forma compatta. La richiesta ai Comuni è la finestra che si apre al ritorno nella Home */}
         <Pressable
           onPress={() => router.push("/per-i-comuni")}
           style={({ pressed }) => [styles.enteBottone, pressed && styles.pressed]}
@@ -232,7 +232,7 @@ function HomeDelComune() {
           accessibilityLabel="Sei un Comune o un ente? Contatta TutelApp"
           testID="comune-per-i-comuni"
         >
-          <Ionicons name="business-outline" size={22} color={colors.brandPrimaryDark} />
+          <Ionicons name="business-outline" size={16} color={colors.brandPrimaryDark} />
           <Text style={styles.enteBottoneTesto}>Sei un Comune o un ente? Contattaci</Text>
         </Pressable>
         <RichiestaComuneFinestra />
@@ -255,6 +255,9 @@ function HomeDelComune() {
             o quando devi orientarti nel percorso della disabilità.
           </Text>
         </View>
+
+        {/* Chi è già a metà strada riparte da qui (compare solo se ci sono dati salvati) */}
+        <RiprendiHome />
 
         {/* Scrivi cosa ti serve: la risposta arriva subito */}
         <CasellaRicerca testID="home-ricerca" />
@@ -508,11 +511,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#FBF1DC",
     borderColor: "#E8C98A",
     borderWidth: 1,
-    borderRadius: 12,
-    padding: 12,
-    marginTop: 12,
+    borderRadius: 10,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    marginTop: 8,
   },
-  demoBannerText: { flex: 1, fontSize: 13, lineHeight: 19, color: "#4A3A14" },
+  demoBannerText: { flex: 1, fontSize: 12, lineHeight: 17, color: "#4A3A14" },
   demoBannerStrong: { fontWeight: "800" },
   safe: { flex: 1 },
   flex: { flex: 1 },
@@ -547,8 +551,8 @@ const styles = StyleSheet.create({
   divider: {
     height: 1,
     backgroundColor: colors.border,
-    marginTop: spacing.md,
-    marginBottom: spacing.xxl,
+    marginTop: spacing.xs,
+    marginBottom: spacing.xl,
   },
   brandBlock: {
     marginBottom: spacing.xl,
@@ -786,17 +790,13 @@ const styles = StyleSheet.create({
   enteBottone: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center",
-    gap: spacing.sm,
-    minHeight: 52,
-    marginTop: spacing.md,
-    marginBottom: spacing.sm,
-    paddingHorizontal: spacing.lg,
-    borderRadius: radius.lg,
-    borderWidth: 1.5,
-    borderColor: colors.brandPrimaryDark,
+    alignSelf: "flex-start",
+    gap: 6,
+    minHeight: 44,
+    marginTop: spacing.xs,
+    paddingHorizontal: spacing.sm,
   },
-  enteBottoneTesto: { fontSize: 16, fontWeight: "800", color: colors.brandPrimaryDark },
+  enteBottoneTesto: { fontSize: 14, fontWeight: "800", color: colors.brandPrimaryDark, textDecorationLine: "underline" },
   switchText: {
     fontSize: 11,
     color: colors.onSurfaceTertiary,
