@@ -247,6 +247,17 @@ export default function ScegliComune() {
             TutelApp.
           </Text>
         )}
+
+        <Pressable
+          onPress={() => router.push("/per-i-comuni")}
+          style={({ pressed }) => [styles.enteLink, pressed && { opacity: 0.85 }]}
+          accessibilityRole="link"
+          accessibilityLabel="Sei un Comune o un ente? Contatta TutelApp"
+          testID="comuni-per-i-comuni"
+        >
+          <Ionicons name="business-outline" size={18} color={colors.brandPrimaryDark} />
+          <Text style={styles.enteLinkText}>Sei un Comune o un ente? Contattaci</Text>
+        </Pressable>
       </ScrollView>
     </SafeAreaView>
   );
@@ -366,5 +377,18 @@ const styles = StyleSheet.create({
     color: colors.onSurfaceTertiary,
     textAlign: "center",
     marginTop: spacing.xl,
+  },
+  enteLink: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: spacing.sm,
+    paddingVertical: spacing.md,
+    marginTop: spacing.md,
+  },
+  enteLinkText: {
+    fontSize: 15,
+    fontWeight: "700",
+    color: colors.brandPrimaryDark,
   },
 });

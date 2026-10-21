@@ -20,6 +20,7 @@ import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
 import { CasellaRicerca } from "@/src/components/CasellaRicerca";
+import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
 import { useSalvati } from "@/src/lib/salvati";
 
 const FEATURES = [
@@ -50,7 +51,7 @@ const STRUMENTI = [
   {
     id: "diritti",
     icon: "shield-checkmark-outline" as const,
-    title: "I tuoi diritti",
+    title: "I miei diritti",
     sub: "Poche domande: aiuti, permessi, bonus e agevolazioni",
     href: "/diritti",
     color: topics.esenzioni,
@@ -62,6 +63,14 @@ const STRUMENTI = [
     sub: "Richieste al Comune e al lavoro, da stampare o inviare",
     href: "/lettere",
     color: topics.documenti,
+  },
+  {
+    id: "reclamo",
+    icon: "hourglass-outline" as const,
+    title: "Reclamo liste d'attesa",
+    sub: "Modulo pronto per l'invio: visita o esame oltre i tempi del medico",
+    href: "/reclamo-attese",
+    color: topics.salute,
   },
   {
     id: "scadenze",
@@ -121,6 +130,14 @@ const INFO_LINKS = [
     sub: "Le parole della burocrazia, spiegate semplici",
     href: "/faq?sezione=glossario",
     color: topics.documenti,
+  },
+  {
+    id: "lavoro",
+    icon: "briefcase-outline" as const,
+    title: "Lavoro e disabilità",
+    sub: "Solo se cerchi lavoro: collocamento mirato e percorsi di inserimento",
+    href: "/lavoro",
+    color: topics.lavoro,
   },
   {
     id: "importi",
@@ -206,6 +223,19 @@ function HomeDelComune() {
             </Text>
           </View>
         )}
+
+        {/* Per gli enti: contatto con TutelApp. La richiesta ai Comuni è la finestra che si apre al ritorno nella Home */}
+        <Pressable
+          onPress={() => router.push("/per-i-comuni")}
+          style={({ pressed }) => [styles.enteBottone, pressed && styles.pressed]}
+          accessibilityRole="button"
+          accessibilityLabel="Sei un Comune o un ente? Contatta TutelApp"
+          testID="comune-per-i-comuni"
+        >
+          <Ionicons name="business-outline" size={22} color={colors.brandPrimaryDark} />
+          <Text style={styles.enteBottoneTesto}>Sei un Comune o un ente? Contattaci</Text>
+        </Pressable>
+        <RichiestaComuneFinestra />
 
         <View style={styles.divider} />
 
@@ -753,6 +783,20 @@ const styles = StyleSheet.create({
     marginTop: spacing.lg,
     paddingVertical: spacing.sm,
   },
+  enteBottone: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: spacing.sm,
+    minHeight: 52,
+    marginTop: spacing.md,
+    marginBottom: spacing.sm,
+    paddingHorizontal: spacing.lg,
+    borderRadius: radius.lg,
+    borderWidth: 1.5,
+    borderColor: colors.brandPrimaryDark,
+  },
+  enteBottoneTesto: { fontSize: 16, fontWeight: "800", color: colors.brandPrimaryDark },
   switchText: {
     fontSize: 11,
     color: colors.onSurfaceTertiary,

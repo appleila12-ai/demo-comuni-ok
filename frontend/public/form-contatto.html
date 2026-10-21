@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Modulo di contatto per i Comuni</title>
+  </head>
+  <body>
+    <!--
+      Questo modulo NON è la pagina che vedono i cittadini: serve solo a Netlify,
+      che lo riconosce quando pubblica il sito e da quel momento riceve gli invii
+      della pagina "Per i Comuni" (app/per-i-comuni.tsx).
+      I nomi dei campi qui sotto devono restare identici a quelli dell'app.
+    -->
+    <form name="contatto-comune" method="POST" data-netlify="true" netlify-honeypot="campo-trappola">
+      <p hidden><label>Non compilare: <input name="campo-trappola" /></label></p>
+      <input type="hidden" name="form-name" value="contatto-comune" />
+      <input name="ente" />
+      <input name="nome" />
+      <input name="ruolo" />
+      <input name="email" type="email" />
+      <input name="telefono" />
+      <input name="motivo" />
+      <textarea name="messaggio"></textarea>
+      <input name="consenso" />
+    </form>
+  </body>
+</html>

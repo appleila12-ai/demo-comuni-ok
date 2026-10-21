@@ -1,4 +1,4 @@
-// "Il tuo verbale": la persona copia dal verbale pochi dati e l'app mostra
+// "Il mio verbale": la persona copia dal verbale pochi dati e l'app mostra
 // cosa POTREBBE spettarle, sempre "da confermare con l'ente".
 // Le risposte restano su questo dispositivo. Le regole sono in `src/lib/verbale.ts`.
 
@@ -260,7 +260,7 @@ export default function VerbalePagina() {
   const vaiScadenze = () => router.push("/scadenze" as any);
 
   return (
-    <Pagina titolo="Il tuo verbale" testID="verbale-screen" sottotitoloSalvato="Cosa potrebbe spettarti">
+    <Pagina titolo="Il mio verbale" testID="verbale-screen" sottotitoloSalvato="Cosa potrebbe spettarti">
       <Intro>
         Hai in mano il verbale e non sai cosa chiedere? Copia qui sotto i dati che trovi scritti: non serve la
         diagnosi. Ti diciamo cosa potrebbe spettarti, da confermare con l'ente.

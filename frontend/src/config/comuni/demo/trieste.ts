@@ -1,9 +1,10 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Trieste (TS) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
+// Comune di Trieste (TS) — VERSIONE DIMOSTRATIVA, SCHEDA COMPLETATA (20 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Il sito del Comune non si legge in automatico: la pagina dei servizi sociali va cercata e confermata.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Completata il 20 ottobre 2026: 2 misure regionali del Friuli-Venezia Giulia in bonus.ts (FAP, barriere architettoniche) e il Comitato Paralimpico regionale in associazioni.ts, da pagine della Regione.
+// Da confermare con l'ente: misure e bandi del Comune di Trieste (la ricerca ha trovato solo il bando affitti 2026, non specifico per la disabilità); associazioni locali; recapiti dei Servizi Sociali (non verificati).
 export const trieste: ComuneConfig = {
   slug: "trieste",
   tipo: "comune",

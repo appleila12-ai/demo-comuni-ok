@@ -36,7 +36,7 @@ export default function Agevolazioni() {
   const [risposte, setRisposte] = useState<Risposte>({});
   const [risultati, setRisultati] = useState(false);
 
-  // Le risposte già date nel questionario "I tuoi diritti" non si richiedono
+  // Le risposte già date nel questionario "I miei diritti" non si richiedono
   const [dalQuestionario, setDalQuestionario] = useState<Partial<Risposte>>({});
 
   useEffect(() => {

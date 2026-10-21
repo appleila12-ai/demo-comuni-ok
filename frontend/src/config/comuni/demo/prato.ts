@@ -1,9 +1,10 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Prato (PO) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
+// Comune di Prato (PO) — VERSIONE DIMOSTRATIVA, SCHEDA COMPLETATA (20 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Il sito del Comune non è leggibile in automatico (robots): la pagina dei servizi sociali va cercata e confermata.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Completata il 20 ottobre 2026: contributo per attività estive 2026 (chiuso) in bonus.ts, da pagina del Comune. Le altre pagine del sito del Comune non sono leggibili in automatico (robots).
+// Da confermare con l'ente: altre misure del Comune (trasporto sociale, barriere architettoniche, Toscana Solidale), associazioni locali, recapiti dei Servizi Sociali (non verificati); numero verde del PUA dalla pagina dell'avviso.
 export const prato: ComuneConfig = {
   slug: "prato",
   tipo: "comune",
@@ -44,6 +45,12 @@ export const prato: ComuneConfig = {
       title: "Azienda USL Toscana Centro",
       subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
       action: { type: "web", value: "https://www.uslcentro.toscana.it" },
+    },
+    {
+      icon: "call-outline",
+      title: "Punto Unico di Accesso (PUA)",
+      subtitle: "Numero verde · Tel. 800 922 912",
+      action: { type: "tel", value: "800922912" },
     },
   ],
 

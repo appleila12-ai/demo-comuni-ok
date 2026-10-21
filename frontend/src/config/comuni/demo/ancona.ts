@@ -3,7 +3,8 @@ import type { ComuneConfig } from "../types";
 // Comune di Ancona (AN) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Dati presi dal sito ufficiale del Comune/ente (settembre 2026), da verificare.
-// Da verificare: —
+// Aggiornata il 20 ottobre 2026: 2 misure del Comune in bonus.ts (contributi autismo 2026 e disabilità gravissima 2025, entrambe chiuse), da pagine del sito del Comune.
+// Da confermare con l'ente: nuovi avvisi, importi e requisiti.
 export const ancona: ComuneConfig = {
   slug: "ancona",
   tipo: "comune",

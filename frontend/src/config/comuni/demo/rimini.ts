@@ -1,9 +1,10 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Rimini (RN) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
+// Comune di Rimini (RN) — VERSIONE DIMOSTRATIVA, SCHEDA COMPLETATA (20 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // È verificato solo l'indirizzo web indicato in sitoWeb.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
+// Completata in parte il 20 ottobre 2026: 1 misura del Comune in bonus.ts (mobilità casa-lavoro 2026, chiusa), da pagine del sito del Comune.
+// Da confermare con l'ente: importi, scadenze e requisiti dei bandi; telefono, email, indirizzo e orari dei Servizi Sociali; associazioni e sport.
 export const rimini: ComuneConfig = {
   slug: "rimini",
   tipo: "comune",
