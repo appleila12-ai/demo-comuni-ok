@@ -12,11 +12,11 @@ export const sarzana: ComuneConfig = {
   regione: "Liguria",
 
   ente: "Servizi Sociali e Welfare",
-  responsabile: "Area 1 · Servizi alla Persona",
-  indirizzo: "Piazza Don Ricchetti, 19038 Sarzana (SP)",
+  responsabile: "",
+  indirizzo: "Piazza Matteotti 1, 19038 Sarzana (SP) (sede del Comune)",
   telefono: "0187 614456",
-  email: "servizi.sociali@comune.sarzana.sp.it",
-  orari: "Lun–Ven 9:00–12:30 · Gio anche 14:30–16:30",
+  email: "",
+  orari: "",
   sitoWeb: "https://www.comune.sarzana.sp.it/servizi-sociali.html",
 
   logo: null,
@@ -33,7 +33,7 @@ export const sarzana: ComuneConfig = {
       icon: "people-outline",
       title: "Segretariato Sociale del Comune",
       subtitle:
-        "Primo ascolto gratuito: ti orienta tra servizi, pratiche e diritti · Tel. 0187 614454 · servizi.sociali@comune.sarzana.sp.it",
+        "Servizio informativo del Comune: ti orienta tra servizi e pratiche · Tel. 0187 614454",
       action: { type: "tel", value: "0187614454" },
     },
     {
@@ -42,13 +42,6 @@ export const sarzana: ComuneConfig = {
       subtitle:
         "Per progetti di vita indipendente e custodi sociali (su segnalazione del medico di famiglia) · Tel. 0187 614507 / 0187 604933",
       action: { type: "tel", value: "0187614507" },
-    },
-    {
-      icon: "home-outline",
-      title: "Sportello CAAD",
-      subtitle:
-        "Consulenza per adattare la casa e superare le barriere architettoniche · Riferimento provinciale: Punto Servizi Disabilità, via Gramsci 211, La Spezia · su appuntamento al 0187 702556 · Lun–Ven 8:30–12:30",
-      action: { type: "tel", value: "0187702556" },
     },
     {
       icon: "medkit-outline",
@@ -61,17 +54,10 @@ export const sarzana: ComuneConfig = {
           "https://www.comune.sarzana.sp.it/servizi/salute-benessere-e-assistenza/assistenza-domiciliare.html",
       },
     },
-    {
-      icon: "document-text-outline",
-      title: "Sportello per l'Amministratore di Sostegno",
-      subtitle:
-        "Informazioni e aiuto per nominare chi tutela gli interessi di un familiare fragile · Tribunale della Spezia, Cancelleria Volontaria Giurisdizione · 0187 595403 / 595410 · sportello telefonico Lun–Sab 12:00–13:30",
-      action: { type: "tel", value: "0187595403" },
-    },
   ],
 
   trasporto:
-    "Pubblica Assistenza Sarzana — Via Falcinello 2, tel. 0187 620200. In altre zone della Liguria cerca la Pubblica Assistenza (ANPAS) o la Croce Rossa del tuo Comune.",
+    "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi: 0187 614454. Puoi rivolgerti anche alle associazioni di volontariato della zona (Pubbliche Assistenze, Croce Rossa) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
     label: "ASL 5 Spezzino · Esenzione ticket",

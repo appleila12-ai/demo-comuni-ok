@@ -18,6 +18,8 @@ export type Destinatario = {
 };
 
 export const DESTINATARI: Record<string, Destinatario> = {
+  // Sarzana (SP)
+  "sarzana": { email: "urp@comune.sarzana.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Sarzana, Ufficio Relazioni con il Pubblico (21/10/2026)" },
   // Ascoli Piceno (AP)
   "ascoli-piceno": { email: "rtd@comune.ap.it", tipo: "ordinaria", fonte: "elenco Excel dei Comuni" },
   // Benevento (BN)
