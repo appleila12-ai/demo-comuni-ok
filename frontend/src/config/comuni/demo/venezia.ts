@@ -3,7 +3,8 @@ import type { ComuneConfig } from "../types";
 // Comune di Venezia (VE) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Pagina "Sociale" del sito del Comune, controllata il 13 ottobre 2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// 16 ottobre 2026: indirizzo e email del Servizio Disabili e Call Center Unico letti sulla pagina "Servizio Disabili" del Comune (aggiornata l'08/10/2026). Telefono diretto, PEC e orari del servizio non indicati.
+// Da fare: telefono diretto e orari del Servizio Disabili; bonus del Comune, associazioni, sport e tempo libero.
 export const venezia: ComuneConfig = {
   slug: "venezia",
   tipo: "comune",
@@ -14,14 +15,14 @@ export const venezia: ComuneConfig = {
   provincia: "VE",
   regione: "Veneto",
 
-  ente: "Servizi Sociali",
+  ente: "Servizio Disabili",
   responsabile: "",
-  indirizzo: "",
-  telefono: "041 2748111",
-  email: "",
+  indirizzo: "Via Verdi 36, 30170 Mestre (VE)",
+  telefono: "041 041",
+  email: "serviziodisabili@comune.venezia.it",
   pec: "",
   orari: "",
-  sitoWeb: "https://www.comune.venezia.it/it/content/sociale",
+  sitoWeb: "https://www.comune.venezia.it/it/content/servizio-disabili",
 
   logo: null,
 
@@ -35,9 +36,15 @@ export const venezia: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.venezia.it/it/content/sociale" },
+      title: "Call Center Unico del Comune",
+      subtitle: "041 041, dalle 08:00 alle 18:00: ti indirizzano al Servizio Disabili",
+      action: { type: "tel", value: "041041" },
+    },
+    {
+      icon: "mail-outline",
+      title: "Servizio Disabili",
+      subtitle: "Via Verdi 36, Mestre · serviziodisabili@comune.venezia.it",
+      action: { type: "web", value: "https://www.comune.venezia.it/it/content/servizio-disabili" },
     },
     {
       icon: "medkit-outline",
