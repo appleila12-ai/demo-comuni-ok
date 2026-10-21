@@ -18,6 +18,8 @@ export type Destinatario = {
 };
 
 export const DESTINATARI: Record<string, Destinatario> = {
+  // Arcola (SP)
+  "arcola": { email: "distrettosociale@comune.arcola.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Arcola, scheda Assistente Sociale, Ufficio Servizi Sociali e Ambito (agg. 11/02/2026, letta il 21/10/2026)" },
   // Aulla (MS)
   "aulla": { email: "sociale@comune.aulla.ms.it", tipo: "ordinaria", fonte: "sito del Comune di Aulla, Ufficio Servizi Sociali, Sanità e Sport (21/10/2026)" },
   // Riccò del Golfo di Spezia (SP)

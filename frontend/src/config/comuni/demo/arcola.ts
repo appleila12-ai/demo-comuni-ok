@@ -2,7 +2,7 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Arcola (SP) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Dati da elenchi pubblici (settembre 2026): il sito del Comune non era leggibile, da verificare con l'ente.
+// Recapiti dei Servizi Sociali: scheda dell'Assistente Sociale sul sito del Comune (aggiornata l'11/02/2026), testo copiato da Ilaria il 21/10/2026. Orari e modalità di accesso non confermati: non inseriti.
 export const arcola: ComuneConfig = {
   slug: "arcola",
   tipo: "comune",
@@ -15,9 +15,9 @@ export const arcola: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "Ufficio Servizi Sociali e Ambito",
-  indirizzo: "",
-  telefono: "",
-  email: "",
+  indirizzo: "Piazza 2 Giugno, Arcola (Ufficio Servizi Sociali e Ambito)",
+  telefono: "0187 1745834",
+  email: "distrettosociale@comune.arcola.sp.it",
   orari: "",
   sitoWeb: "https://comune.arcola.sp.it/amministrazione/uffici/ufficio_39.html",
 
@@ -31,6 +31,12 @@ export const arcola: ComuneConfig = {
   },
 
   puntiSupporto: [
+    {
+      icon: "people-outline",
+      title: "Ufficio Servizi Sociali e Ambito – Arcola",
+      subtitle: "Assistente sociale · Piazza 2 Giugno · Tel. 0187 1745834 · distrettosociale@comune.arcola.sp.it. Centralino del Comune: 0187 1745801",
+      action: { type: "tel", value: "01871745834" },
+    },
     {
       icon: "call-outline",
       title: "Distretto Sociosanitario 19 \"Val di Magra\"",
