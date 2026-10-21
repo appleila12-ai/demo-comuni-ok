@@ -10,9 +10,11 @@
 // Aggiornamento 19/10/2026: sport per la Sicilia; associazioni per Catania e provincia di Reggio Emilia
 // (elenco sezioni locali del sito nazionale Anffas, email del programma Special Olympics dalla rete ufficiale).
 // Aggiornamento 20/10/2026: Anffas Sardegna (Cagliari) dall'elenco del sito nazionale.
+// Aggiornamento 21/10/2026: raggio di 30 km (coordinate dei municipi da opendatasicilia/comuni-italiani, basato su ISTAT e IndicePA).
 // Aggiornamento 21/10/2026: Ca.Te.Ri.Na (Sarzana), recapiti forniti il 21/10/2026.
 
 import { comune } from "@/src/config/comune";
+import COORDINATE from "@/src/content/coordinate-comuni.json";
 
 export type Associazione = {
   nome: string;
@@ -466,8 +468,50 @@ const VOLONTARIATO_NAZIONALI: Associazione[] = [
   },
 ];
 
+// Raggio entro cui un'associazione si considera "vicina" (anche oltre il confine della provincia).
+export const RAGGIO_KM = 30;
+
+const COORD = COORDINATE as Record<string, [number, number]>;
+
+/** Distanza in km (linea d'aria) tra i municipi di due Comuni dell'app; null se manca una coordinata. */
+export function distanzaKm(slugA: string, slugB: string): number | null {
+  const a = COORD[slugA];
+  const b = COORD[slugB];
+  if (!a || !b) return null;
+  const rad = Math.PI / 180;
+  const dLat = (b[0] - a[0]) * rad;
+  const dLon = (b[1] - a[1]) * rad;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(a[0] * rad) * Math.cos(b[0] * rad) * Math.sin(dLon / 2) ** 2;
+  return 2 * 6371 * Math.asin(Math.sqrt(h));
+}
+
+/** L'associazione ha sede in un Comune dell'app entro RAGGIO_KM dal Comune attivo. */
+function entroRaggio(a: Associazione): boolean {
+  return !!a.comuni?.some((s) => {
+    const d = distanzaKm(s, comune.slug);
+    return d !== null && d <= RAGGIO_KM;
+  });
+}
+
 function eVicina(a: Associazione): boolean {
-  return !!(a.comuni?.includes(comune.slug) || a.province?.includes(comune.provincia));
+  return !!(a.comuni?.includes(comune.slug) || a.province?.includes(comune.provincia) || entroRaggio(a));
+}
+
+/** Elenco della provincia del Comune, più le associazioni di altre province con sede entro il raggio. */
+function elenco(tipo: "volontariato" | "sport"): Associazione[] {
+  const propria = PER_PROVINCIA[comune.provincia]?.[tipo] ?? [];
+  const nomi = new Set(propria.map((a) => a.nome));
+  const oltreConfine: Associazione[] = [];
+  for (const [pr, el] of Object.entries(PER_PROVINCIA)) {
+    if (pr === comune.provincia) continue;
+    for (const a of el[tipo]) {
+      if (!nomi.has(a.nome) && entroRaggio(a)) {
+        nomi.add(a.nome);
+        oltreConfine.push(a);
+      }
+    }
+  }
+  return [...propria, ...oltreConfine];
 }
 
 function ordina(lista: Associazione[]): Associazione[] {
@@ -475,16 +519,16 @@ function ordina(lista: Associazione[]): Associazione[] {
 }
 
 export function associazioniDelComune() {
-  const prov = PER_PROVINCIA[comune.provincia];
-  const volontariato = ordina(prov?.volontariato ?? []);
-  const sport = ordina(prov?.sport ?? []);
+  const elencoVolontariato = elenco("volontariato");
+  const volontariato = ordina(elencoVolontariato);
+  const sport = ordina(elenco("sport"));
   const sportRegione = SPORT_REGIONE[comune.regione] ?? [];
   return {
     volontariato,
     sport,
     sportRegione,
     haElenco: volontariato.length + sport.length > 0,
-    volontariatoLocali: (prov?.volontariato ?? []).filter((a) => !a.province).length,
+    volontariatoLocali: elencoVolontariato.filter((a) => !a.province).length,
     volontariatoNazionali: VOLONTARIATO_NAZIONALI,
     sportNazionali: sportRegione.length ? [] : SPORT_NAZIONALI,
     vicina: eVicina,
