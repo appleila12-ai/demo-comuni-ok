@@ -79,6 +79,25 @@ export const BONUS: Bonus[] = [
     verificatoIl: "06/10/2026",
     nota: "Chiedi all'Ambito se il bando sarà riaperto.",
   },
+  {
+    id: "liguria-bonus-badanti-gravissima-2026",
+    regione: "Liguria",
+    titolo: "Bonus badanti, prestazioni per la gravissima disabilità e bonus baby sitter (edizione 2026)",
+    perChi:
+      "Privati cittadini residenti in Liguria. Requisiti, importi e soglie ISEE sono nella deliberazione della Giunta regionale n. 345 del 6 agosto 2026.",
+    cosa:
+      "Tre misure della Regione: bonus per assistenti familiari (badanti), prestazioni integrate per la gravissima disabilità e bonus baby sitter. La pagina della Regione non scrive gli importi: sono nella deliberazione.",
+    stato: "chiuso",
+    quando: "Domande dal 1 settembre 2026 alle ore 17.30 del 15 ottobre 2026. Finanziamento fino a esaurimento dei fondi.",
+    comeSiChiede:
+      "Solo online, con SPID o CIE, sul sistema Bandi on line di Filse. Assistenza informatica: infobandi@filse.it (lunedì–venerdì, 8.30–17.30).",
+    fonte: {
+      label: "Regione Liguria · Bonus badanti, gravissima disabilità e baby sitter 2026",
+      url: "https://www.regione.liguria.it/homepage-bandi-e-avvisi/publiccompetition/4711:bonus-badanti-grave-disabilita-baby-sitter-2026.html",
+    },
+    verificatoIl: "21/10/2026",
+    nota: "Pagina pubblicata dalla Regione il 10/08/2026. Il termine per le domande è scaduto: chiedi al Comune o al Distretto se ci saranno nuove aperture.",
+  },
 
   // ------------------------------------------------------------ COMUNE DI SARZANA
   {
