@@ -1,9 +1,10 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Perugia (PG) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
+// Comune di Perugia (PG) — VERSIONE DIMOSTRATIVA, SCHEDA COMPLETATA (20 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Il sito del Comune non è stato leggibile in automatico: la pagina dei servizi sociali va cercata e confermata.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Completata in parte il 20 ottobre 2026: 2 misure del Comune in bonus.ts (autismo 2025, chiusa; Vita Indipendente 2026, graduatorie), da pagine del sito del Comune.
+// Da confermare con l'ente: importi, scadenze e requisiti dei bandi; telefono, email, indirizzo e orari dei Servizi Sociali; associazioni e sport.
 export const perugia: ComuneConfig = {
   slug: "perugia",
   tipo: "comune",

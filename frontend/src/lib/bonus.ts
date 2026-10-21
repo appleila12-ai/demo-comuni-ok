@@ -22,6 +22,7 @@
 // Dodicesima raccolta: 20/10/2026, Friuli-Venezia Giulia (misure regionali per Trieste), Comune di Cagliari e Comune di Prato.
 // Tredicesima raccolta: 20/10/2026, misure regionali di Umbria, Sardegna, Marche e Calabria.
 // Quattordicesima raccolta: 20/10/2026, misure dei Comuni di Firenze, Bari, Venezia e Padova.
+// Quindicesima raccolta: 20/10/2026 (sera), misure dei Comuni di Perugia, Ancona, Rimini e Salerno; controllo delle voci già presenti.
 
 import { comune } from "@/src/config/comune";
 
@@ -68,7 +69,7 @@ export const BONUS: Bonus[] = [
       "Bonus badanti: maggiorenni residenti in Liguria, non ricoverati in strutture residenziali, con ISEE sociosanitario fino a 35.000 euro, con invalidità civile al 100% o Legge 104 (art. 3 comma 1 o 3), oppure persone sopra i 95 anni. Non si può avere Vita Indipendente, Gravissima disabilità o Dopo di Noi. Prestazioni integrate per la gravissima disabilità: nessun limite di età, ISEE fino a 50.000 euro (65.000 per i minori), PAI dell'unità di valutazione e presenza nella lista d'attesa della gravissima disabilità. Bonus baby sitter: figli fino a 15 anni (18 se con disabilità), ISEE fino a 35.000 euro.",
     cosa:
       "Bonus badanti: 600 euro al mese, oppure 250 euro al mese se si riceve già il Fondo Grave Disabilità. Prestazioni integrate per la gravissima disabilità: fino a 1.200 euro al mese, per chi non riceve il bonus badanti. Bonus baby sitter: 350 euro al mese. Gli importi possono essere ridotti dall'INPS se si ricevono benefici simili.",
-    stato: "aperto",
+    stato: "da-verificare",
     quando: "Domande dal 1 settembre 2026 fino alle ore 17.30 del 15 ottobre 2026, dal lunedì al venerdì dalle 8.30 alle 17.30. Finanziamento fino a esaurimento dei fondi.",
     comeSiChiede:
       "Solo online, con SPID o CIE, sul sistema Bandi online di Filse. Assistenza per la compilazione: infobandi@filse.it",
@@ -77,7 +78,7 @@ export const BONUS: Bonus[] = [
       url: "https://www.regione.liguria.it/homepage-bandi-e-avvisi/publiccompetition/4711:bonus-badanti-grave-disabilita-baby-sitter-2026.html",
     },
     verificatoIl: "06/10/2026",
-    nota: "La scadenza è vicina. Nella stessa misura c'è anche il bonus baby sitter 2026.",
+    nota: "Controllo del 20/10/2026: la scadenza del 15/10/2026 è passata e la pagina della Regione non si legge in automatico, quindi non sappiamo se è stata prorogata o se i fondi sono finiti. Verifica sul sito della Regione o con Filse. Nella stessa misura c'è anche il bonus baby sitter 2026.",
   },
   {
     id: "liguria-dopo-di-noi-2026",
@@ -1242,7 +1243,129 @@ export const BONUS: Bonus[] = [
     verificatoIl: "20/10/2026",
     nota: "Pagina aggiornata il 28/07/2026; misura della Regione Veneto gestita dal Distretto. La pagina non indica scadenze: confermale con il Distretto.",
   },
+
+  // ------------------------------------------------ COMUNI (20/10/2026, sera)
+  {
+    id: "perugia-autismo-socializzazione-2025",
+    regione: "Umbria",
+    comuni: ["perugia"],
+    titolo: "Contributi per percorsi di socializzazione di persone con autismo (2025)",
+    perChi:
+      "Minori fino a 18 anni e giovani fino a 21 con autismo e disabilità accertata (Legge 104/1992 art. 3 comma 3), e adulti 18-65 anni con autismo ad alto funzionamento (livelli 1 e 2), residenti a Perugia, Corciano o Torgiano (Zona Sociale 2). ISEE ordinario del nucleo fino a 35.000 €.",
+    cosa:
+      "Fino a 800 € per percorsi di assistenza alla socializzazione (minori e giovani fino a 21 anni) e fino a 500 € per percorsi di socializzazione in ambiente esterno.",
+    stato: "chiuso",
+    quando:
+      "Domande dal 09/06/2025 al 08/07/2025 (ore 12:00). Graduatoria approvata con determinazione n. 2629 del 07/10/2025.",
+    comeSiChiede:
+      "Solo online, con SPID o CIE. Informazioni: sostegno.disabilita@comune.perugia.it, tel. 075 5773838 (lun e mer 15-17). Aiuto alla compilazione con DIGIPASS su appuntamento, cell. 335 1200989.",
+    fonte: {
+      label: "Comune di Perugia · Contributi per percorsi di assistenza alla socializzazione (autismo)",
+      url: "https://servizipg.comune.perugia.it/SocializzazioneAutismo2025/prehome",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Edizione 2025, chiusa. Chiedi al Comune se ci sarà un nuovo avviso.",
+  },
+  {
+    id: "perugia-vita-indipendente-2026",
+    regione: "Umbria",
+    comuni: ["perugia"],
+    titolo: "Progetti personali di Vita Indipendente (FSE+ 2021-2027), graduatorie 2026",
+    perChi:
+      "Persone con disabilità. La pagina non descrive i requisiti di ammissione.",
+    cosa:
+      "Progetti personali di vita indipendente finanziati dal Programma Regionale FSE+ 2021-2027. La pagina non scrive gli importi.",
+    stato: "da-verificare",
+    quando:
+      "Graduatorie approvate il 22/07/2026 (determinazione n. 2309) e rettificate il 05/08/2026 (n. 2463). Scadenze di un nuovo avviso non indicate.",
+    comeSiChiede:
+      "La pagina non spiega come fare domanda. Per verificare la tua posizione ci sono gli elenchi degli ammessi e non ammessi. Assistenza: U.O. Servizi sociali, tel. 075 075075.",
+    fonte: {
+      label: "Comune di Perugia · Graduatorie progetti personali per la Vita Indipendente, anno 2026",
+      url: "https://www.comune.perugia.it/novita/graduatorie-progetti-personali-per-la-vita-indipendente-per-persone-con-disabilita-anno-2026/",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina aggiornata il 05/08/2026. Requisiti, importi e prossime scadenze vanno chiesti ai Servizi sociali.",
+  },
+  {
+    id: "ancona-contributo-autismo-2026",
+    regione: "Marche",
+    comuni: ["ancona"],
+    titolo: "Contributi per interventi educativi e riabilitativi nell'autismo (2026)",
+    perChi:
+      "Famiglie di minori in età prescolare con diagnosi degli ultimi tre anni; di persone over 16 con ultima diagnosi valida ottenuta a scuola; di bambini sotto i 30 mesi con diagnosi di rischio. La pagina non indica ISEE.",
+    cosa:
+      "Contributo fino al 100% della spesa per interventi educativi e riabilitativi specializzati sostenuta dal 01/11/2024 al 31/10/2025, con tetto di 5.000 € per persona. Non si rimborsano spese già coperte da altri contributi.",
+    stato: "chiuso",
+    quando: "Domande entro il 10 giugno 2026.",
+    comeSiChiede:
+      "Con il modulo della Regione Marche, allegando diagnosi, progetto educativo e documento: per PEC a comune.ancona@emarche.it, a mano presso l'U.O. Servizi per la Disabilità (viale della Vittoria 37) su appuntamento al 071 2222189, o per raccomandata A/R.",
+    fonte: {
+      label: "Comune di Ancona · Avviso pubblico per contributi autismo",
+      url: "https://www.comune.ancona.it/it/news/avviso-pubblico-per-contributi-autismo",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Notizia del 16/04/2026. Chiedi al Comune se sarà riaperto l'avviso.",
+  },
+  {
+    id: "ancona-disabilita-gravissima-2025",
+    regione: "Marche",
+    comuni: ["ancona"],
+    titolo: "Contributo regionale per la disabilità gravissima (annualità 2024)",
+    perChi:
+      "Persone con disabilità gravissima residenti ad Ancona, con indennità di accompagnamento e certificazione della Commissione Sanitaria Provinciale. Esclusi gli ospiti di strutture residenziali. Non cumulabile con Assegno di cura e Vita Indipendente. Domanda della persona, di un familiare, del tutore o dell'amministratore di sostegno.",
+    cosa:
+      "Contributo del Fondo regionale per le non autosufficienze. La pagina non scrive l'importo.",
+    stato: "chiuso",
+    quando: "Domanda al Comune entro il 16 luglio 2025 (avviso del 05/05/2025, aggiornato il 10/06/2025).",
+    comeSiChiede:
+      "Con il modulo Allegato E e gli allegati richiesti: PEC a comune.ancona@emarche.it, raccomandata A/R a Largo XXIV Maggio 1, oppure a mano al Protocollo dei Servizi Sociali (viale della Vittoria 37). Informazioni: Ufficio Promozione Sociale, tel. 071 222 5136 / 5157.",
+    fonte: {
+      label: "Comune di Ancona · Contributo a favore delle persone con disabilità gravissima",
+      url: "https://comune.ancona.it/it/news/contributo-a-favore-delle-persone-con-disabilita-gravissima",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Avviso del 2025, scaduto. Chiedi al Comune se è previsto un nuovo avviso.",
+  },
+  {
+    id: "rimini-mobilita-casa-lavoro-2026",
+    regione: "Emilia-Romagna",
+    comuni: ["rimini"],
+    titolo: "Contributi per la mobilità casa-lavoro (2026)",
+    perChi:
+      "Persone maggiorenni con disabilità fisica certificata di grado medio, grave o non autosufficienza (DPCM 159/2013), residenti nel Distretto Nord di Rimini, con almeno 60 giornate di lavoro nell'anno e senza ausili per il trasporto assegnati dall'AUSL negli ultimi tre anni. Per le nuove domande serve l'attestazione del servizio sociale. Nessuna soglia ISEE.",
+    cosa: "Rimborso, in genere chilometrico, per raggiungere il posto di lavoro. Importi non scritti nella pagina.",
+    stato: "chiuso",
+    quando: "Bando aperto dal 07/04/2026 al 08/05/2026.",
+    comeSiChiede:
+      "Online, oppure su appuntamento presso il Comune di residenza (a Rimini: Ufficio Bandi, via Ducale 7, tel. 0541 704689). Prima si passa dal servizio sociale territoriale (Servizio Disabili).",
+    fonte: {
+      label: "Comune di Rimini · Richiedere contributi a sostegno della mobilità casa-lavoro",
+      url: "https://www.comune.rimini.it/servizi/salute-benessere-e-assistenza/richiedere-contributi-sostegno-della-mobilita-casa-lavoro",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "Pagina aggiornata il 16/03/2026. Chiedi al Comune quando uscirà il bando 2027.",
+  },
+  {
+    id: "salerno-assegni-di-cura",
+    regione: "Campania",
+    comuni: ["salerno"],
+    titolo: "Assegni di cura (Fondo per la Non Autosufficienza)",
+    perChi:
+      "Persone con bisogno socio-sanitario complesso che hanno un Piano di Assistenza Individuale definito dall'Unità di Valutazione Integrata, e le famiglie che le assistono. Servono ISEE e ObsiM; la pagina non scrive soglie.",
+    cosa:
+      "Contributo mensile onnicomprensivo per l'assistenza svolta da familiari o da assistenti familiari con contratto: 1.200 € per la disabilità gravissima, 600 € per la grave, per 12 mesi.",
+    stato: "da-verificare",
+    comeSiChiede:
+      "Si attiva su segnalazione del medico di famiglia, dopo la valutazione dell'UVI. Area integrazione socio-sanitaria: martedì e giovedì 9-12 e 16:30-17:30; URP 089 662134.",
+    fonte: {
+      label: "Comune di Salerno · Assegni di Cura",
+      url: "https://www.comune.salerno.it/servizi/assegni-di-cura",
+    },
+    verificatoIl: "20/10/2026",
+    nota: "La pagina non ha data né scadenze: conferma con l'Area integrazione socio-sanitaria che la misura sia aperta e per quale annualità.",
   // --- Sedicesima raccolta (20/10/2026, sera): Trentino-Alto Adige, Puglia, Valle d'Aosta ---
+  },
   {
     id: "trento-assegno-di-cura",
     regione: "Trentino-Alto Adige",
