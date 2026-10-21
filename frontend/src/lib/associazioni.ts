@@ -100,7 +100,7 @@ const PER_PROVINCIA: Record<string, Elenco> = {
       },
       {
         nome: "Ca.Te.Ri.Na",
-        cosa: "Laboratori corali inclusivi, aperti a tutti, con il metodo Canto Naturale® (marchio registrato). Referente: Jenny Fumanti. Recapiti forniti il 21/10/2026.",
+        cosa: "Ogni voce ha il suo posto. Laboratori corali inclusivi, aperti a tutti, con il metodo Canto Naturale® (marchio registrato). Referente: Jenny Fumanti. Recapiti forniti il 21/10/2026.",
         dove: "Sarzana",
         telefono: "334 1582665",
         email: "associazionecaterina.sp@gmail.com",
