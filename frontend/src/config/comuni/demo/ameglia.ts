@@ -17,11 +17,11 @@ export const ameglia: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
+  indirizzo: "Via Cafaggio 15, 19031 Ameglia (SP)",
+  telefono: "0187 609226",
+  email: "servizisociali@comune.ameglia.sp.it",
   pec: "",
-  orari: "",
+  orari: "Lunedì, mercoledì e sabato 9:00–12:00, su appuntamento",
   sitoWeb: "https://www.comune.ameglia.sp.it",
 
   logo: null,
@@ -37,7 +37,7 @@ export const ameglia: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
+      subtitle: "Ufficio Servizi Sociali · Tel. 0187 609226 · lunedì, mercoledì e sabato 9:00–12:00 su appuntamento",
       action: { type: "web", value: "https://www.comune.ameglia.sp.it" },
     },
     {
