@@ -23,6 +23,7 @@ import {
   type TipoScadenza,
 } from "@/src/lib/scadenze";
 import { Avviso, Bottone, paginaStili } from "@/src/components/Pagina";
+import { ContattiUtili } from "@/src/components/ContattiUtili";
 import { PromemoriaSezione } from "@/src/components/PromemoriaSezione";
 import { aggiornaPromemoria } from "@/src/lib/promemoriaApp";
 
@@ -268,6 +269,8 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
           </View>
         );
       })}
+
+      <ContattiUtili />
 
       <PromemoriaSezione />
 
