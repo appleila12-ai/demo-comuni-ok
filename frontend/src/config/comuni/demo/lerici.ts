@@ -39,6 +39,12 @@ export const lerici: ComuneConfig = {
       action: { type: "tel", value: "0187960277" },
     },
     {
+      icon: "document-text-outline",
+      title: "Istanza Unica Servizi Sociali",
+      subtitle: "Modulo unico per contributi, assistenza a casa, pasti caldi, telesoccorso. Si consegna all'ufficio previo appuntamento.",
+      action: { type: "web", value: "https://www.comune.lerici.sp.it/servizi/salute_benessere_e_assistenza/servizio_63.html" },
+    },
+    {
       icon: "medkit-outline",
       title: "ASL5 Spezzino",
       subtitle: "Esenzione ticket per patologia e invalidità, prenotazioni e distretti sanitari",
