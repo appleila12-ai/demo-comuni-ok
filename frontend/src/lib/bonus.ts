@@ -1365,6 +1365,7 @@ export const BONUS: Bonus[] = [
     verificatoIl: "20/10/2026",
     nota: "La pagina non ha data né scadenze: conferma con l'Area integrazione socio-sanitaria che la misura sia aperta e per quale annualità.",
   // --- Sedicesima raccolta (20/10/2026, sera): Trentino-Alto Adige, Puglia, Valle d'Aosta ---
+  },
   {
     id: "trento-assegno-di-cura",
     regione: "Trentino-Alto Adige",
