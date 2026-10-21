@@ -101,7 +101,7 @@ const PER_PROVINCIA: Record<string, Elenco> = {
       // Recapiti forniti da Ilaria il 21/10/2026 (non mostrare la fonte agli utenti).
       {
         nome: "Ca.Te.Ri.Na",
-        cosa: "Ogni voce conta. Laboratori corali inclusivi, aperti a tutti, con il metodo Canto Naturale® (marchio registrato). Referente: Jenny Fumanti.",
+        cosa: "Ogni voce conta. Laboratori corali inclusivi, aperti a tutti, con il metodo Canto Naturale®. Referente: Jenny Fumanti.",
         dove: "Sarzana",
         telefono: "334 1582665",
         email: "associazionecaterina.sp@gmail.com",
