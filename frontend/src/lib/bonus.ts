@@ -80,6 +80,46 @@ export const BONUS: Bonus[] = [
     nota: "Chiedi all'Ambito se il bando sarà riaperto.",
   },
 
+  // ------------------------------------------------------------ COMUNE DI SARZANA
+  {
+    id: "sarzana-vita-indipendente-dgr-446",
+    regione: "Liguria",
+    comuni: ["sarzana"],
+    titolo: "Progetti di vita indipendente (DGR 446/2015)",
+    perChi:
+      "Adulti con disabilità tra 18 e 65 anni, residenti in Liguria, con certificazione di gravità (art. 3, comma 3, Legge 104/1992) e ISEE per prestazioni sociosanitarie pari o inferiore a 25.000 euro.",
+    cosa:
+      "Un percorso per l'autonomia abitativa, lavorativa e l'integrazione sociale, con una misura economica fino a 1.200 euro al mese. Le spese vanno rendicontate ogni trimestre. Si accede dopo la valutazione sanitaria e quella dell'équipe multidisciplinare. I costi dipendono dall'ISEE.",
+    stato: "attivo",
+    comeSiChiede:
+      "Si compila il modulo \"Accesso ai progetti di vita indipendente (DGR n. 446/2015)\", da presentare al Distretto Sociosanitario 19 \"Val di Magra\": tel. 0187 614507 o 0187 604933. Per informazioni anche i Servizi sociali e welfare del Comune: 0187 614454.",
+    fonte: {
+      label: "Comune di Sarzana · Progetti di vita indipendente (DGR n. 446/2015)",
+      url: "https://www.comune.sarzana.sp.it/servizi/salute-benessere-e-assistenza/progetti-di-vita-indipendente-dgr-n-446-2015.html",
+    },
+    verificatoIl: "21/10/2026",
+    nota: "La pagina non riporta la data di aggiornamento né i tempi di risposta. Conferma con il Distretto che la misura sia aperta.",
+  },
+  {
+    id: "sarzana-contributi-economici",
+    regione: "Liguria",
+    comuni: ["sarzana"],
+    titolo: "Contributi economici continuativi e straordinari",
+    perChi:
+      "Continuativi: anziani, invalidi civili con totale inabilità lavorativa e famiglie con minori, se l'ISEE non supera le soglie del regolamento del distretto sociosanitario. Straordinari: residenti a Sarzana in difficoltà occasionali e imprevedibili.",
+    cosa:
+      "Un contributo economico del Comune. Quello straordinario può essere dato al massimo due volte l'anno e, se ben motivato, anche con ISEE sopra la soglia. La pagina non scrive gli importi né le soglie ISEE.",
+    stato: "attivo",
+    comeSiChiede:
+      "Si presenta la Domanda Unica di accesso (modulo sul sito del Comune) con l'ISEE e, se la hai, la certificazione di invalidità civile. L'assistente sociale valuta la richiesta con un colloquio. Telefono dei Servizi sociali e welfare: 0187 614454.",
+    fonte: {
+      label: "Comune di Sarzana · Contributi a sostegno del reddito",
+      url: "https://www.comune.sarzana.sp.it/servizi/salute-benessere-e-assistenza/contributi-a-sostegno-del-reddito.html",
+    },
+    verificatoIl: "21/10/2026",
+    nota: "La pagina elenca anche i motivi di esclusione, per esempio il possesso di più immobili. La pagina non riporta la data di aggiornamento.",
+  },
+
   // ------------------------------------------- DISTRETTO SOCIOSANITARIO 18
 
   // ------------------------------------------------------------------ SICILIA

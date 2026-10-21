@@ -37,6 +37,13 @@ export const sarzana: ComuneConfig = {
       action: { type: "tel", value: "0187614454" },
     },
     {
+      icon: "call-outline",
+      title: "Distretto Sociosanitario 19 \"Val di Magra\"",
+      subtitle:
+        "Per progetti di vita indipendente e custodi sociali (su segnalazione del medico di famiglia) · Tel. 0187 614507 / 0187 604933",
+      action: { type: "tel", value: "0187614507" },
+    },
+    {
       icon: "home-outline",
       title: "Sportello CAAD",
       subtitle:
