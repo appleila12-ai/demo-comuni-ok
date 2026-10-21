@@ -27,6 +27,7 @@ import { Avviso, Bottone, paginaStili } from "@/src/components/Pagina";
 import { CampoData } from "@/src/components/CampoData";
 import { ContattiUtili } from "@/src/components/ContattiUtili";
 import { PromemoriaSezione } from "@/src/components/PromemoriaSezione";
+import { InvitoCopia } from "@/src/components/CopiaSicurezza";
 import { aggiornaPromemoria } from "@/src/lib/promemoriaApp";
 
 const KEY = SCADENZE_KEY;
@@ -41,6 +42,7 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
   const [errore, setErrore] = useState("");
   const [messaggio, setMessaggio] = useState("");
   const [conferma, setConferma] = useState("");
+  const [invito, setInvito] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -72,6 +74,7 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
     setErrore("");
     setMessaggio("");
     setConferma("");
+    setInvito(false);
   };
 
   const aggiungi = () => {
@@ -111,6 +114,7 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
     const nome = aperto === "altro" ? titolo.trim() || "Appuntamento" : info.titolo;
     setConferma(`Aggiunto: «${nome}»${data ? `, ${inItaliano(daIso(data)!)}` : ""}. Lo trovi nell'elenco qui sopra, in ordine di data.`);
     setAperto(null);
+    setInvito(true);
   };
 
   const togli = (idEvento: string) => {
@@ -192,6 +196,7 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
           {conferma}
         </Text>
       ) : null}
+      {invito ? <InvitoCopia onCalendario={esporta} onChiudi={() => setInvito(false)} /> : null}
       <Text style={paginaStili.titoloSezione}>
         {eventi.length > 0 ? "Aggiungi un'altra data" : "Cosa vuoi ricordare?"}
       </Text>

@@ -27,6 +27,7 @@ import {
   subscribeVault,
   VaultFile,
 } from "@/src/lib/vault";
+import { InvitoCopia } from "@/src/components/CopiaSicurezza";
 
 function toast(msg: string) {
   if (Platform.OS === "android") ToastAndroid.show(msg, ToastAndroid.SHORT);
@@ -35,6 +36,13 @@ function toast(msg: string) {
 
 export function VaultSection({ report }: { report?: Report }) {
   const [files, setFiles] = useState<VaultFile[]>([]);
+  const [avviso, setAvviso] = useState("");
+  const [invito, setInvito] = useState(false);
+
+  const notifica = (msg: string) => {
+    toast(msg);
+    setAvviso(msg);
+  };
 
   const loadState = useCallback(async () => {
     setFiles(await loadVaultFiles());
@@ -56,16 +64,18 @@ export function VaultSection({ report }: { report?: Report }) {
       if (Platform.OS === "web") {
         await Print.printAsync({ html });
         await addVaultFile(name);
+        setInvito(true);
         return;
       }
       const { uri } = await Print.printToFileAsync({ html });
       const dest = `${FileSystem.documentDirectory}${Date.now()}_report.pdf`;
       await FileSystem.copyAsync({ from: uri, to: dest });
       await addVaultFile(name, dest);
-      toast("PDF aggiunto all'elenco sul dispositivo");
+      notifica("PDF aggiunto all'elenco sul dispositivo");
+      setInvito(true);
     } catch (e) {
       console.warn("save pdf failed", e);
-      toast("Impossibile salvare il PDF");
+      notifica("Impossibile salvare il PDF");
     }
   };
 
@@ -77,7 +87,9 @@ export function VaultSection({ report }: { report?: Report }) {
       });
       if (res.canceled || !res.assets?.length) return;
       const asset = res.assets[0];
-      let uri = asset.uri;
+      // Sul sito l'indirizzo del file vale solo fino al ricaricamento della pagina: non lo si salva.
+      // L'originale resta dove la persona l'ha preso (telefono, Foto, File).
+      let uri: string | undefined = Platform.OS === "web" ? undefined : asset.uri;
       if (Platform.OS !== "web") {
         const ext = asset.name?.split(".").pop() || "bin";
         const dest = `${FileSystem.documentDirectory}${Date.now()}_doc.${ext}`;
@@ -85,16 +97,21 @@ export function VaultSection({ report }: { report?: Report }) {
         uri = dest;
       }
       await addVaultFile(asset.name || "Documento", uri);
-      toast("Documento aggiunto");
+      notifica(
+        Platform.OS === "web"
+          ? "Aggiunto all'elenco. L'originale resta dove l'hai preso (telefono, Foto, File)."
+          : "Documento aggiunto",
+      );
+      setInvito(true);
     } catch (e) {
       console.warn("pick failed", e);
-      toast("Impossibile caricare il documento");
+      notifica("Impossibile caricare il documento");
     }
   };
 
   const openFile = async (f: VaultFile) => {
     if (!f.uri) {
-      toast("Anteprima non disponibile");
+      notifica("Qui c'è solo il nome del documento: l'originale è dove l'hai preso (telefono, Foto, File).");
       return;
     }
     try {
@@ -132,12 +149,18 @@ export function VaultSection({ report }: { report?: Report }) {
       <Text style={styles.body}>
         Un elenco per tenere a portata di mano referti, verbali e altri
         documenti. Resta solo su questo dispositivo: non viene inviato a
-        nessuno, non c&apos;è un account e non ne esiste una copia online. Nel
-        browser i file caricati o stampati potrebbero non restare disponibili
-        al prossimo accesso: conserva sempre gli originali.
+        nessuno e non c&apos;è un account. Sul sito qui resta il nome dei
+        documenti: l&apos;originale rimane dove l&apos;hai preso (telefono,
+        Foto, File). Conservalo sempre.
       </Text>
 
       <View style={styles.unlockedBox} testID="vault-unlocked">
+          {invito ? <InvitoCopia onChiudi={() => setInvito(false)} /> : null}
+          {avviso ? (
+            <Text style={styles.body} accessibilityLiveRegion="polite">
+              {avviso}
+            </Text>
+          ) : null}
           <View style={styles.actionsRow}>
             {report && (
             <Pressable

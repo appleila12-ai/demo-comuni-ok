@@ -30,6 +30,7 @@ import {
   type RisultatoEstrazione,
 } from "@/src/lib/doc-extract";
 import { Avviso, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
+import { CopiaSicurezzaSezione } from "@/src/components/CopiaSicurezza";
 
 // ---- Costanti ----
 
@@ -314,11 +315,14 @@ export default function Cassetto() {
         />
       </View>
 
+      {/* ─── Copia di sicurezza ─── */}
+      <CopiaSicurezzaSezione />
+
       {/* ─── Avviso finale ─── */}
       <Avviso style={{ marginTop: spacing.md }}>
         Tutto quello che vedi qui resta esclusivamente su questo dispositivo:
         non viene inviato a nessuno, non c&apos;è un account e non ne esiste una
-        copia online.{IS_WEB ? " Nel browser, i dati sono conservati nella memoria del browser (localStorage): se cancelli i dati del sito, andranno persi." : ""}
+        copia online (a meno che tu non salvi una copia tua, qui sopra).{IS_WEB ? " Nel browser, i dati sono conservati nella memoria del browser (localStorage): se cancelli i dati del sito, andranno persi." : ""}
       </Avviso>
     </Pagina>
   );
