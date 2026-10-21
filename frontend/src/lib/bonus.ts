@@ -252,6 +252,25 @@ export const BONUS: Bonus[] = [
     nota: "Pagina aggiornata dal Comune il 12/10/2026.",
   },
 
+  {
+    id: "castelnuovo-magra-teleassistenza-2026",
+    regione: "Liguria",
+    comuni: ["castelnuovo-magra"],
+    titolo: "Servizio di teleassistenza (manifestazione di interesse 2026)",
+    perChi: "Cittadini fragili, anziani e adulti in condizione di disabilità psicosociale residenti a Castelnuovo Magra.",
+    cosa: "Accesso al servizio di teleassistenza del Comune. Il servizio è gratuito.",
+    stato: "chiuso",
+    quando: "Domande dall'11 settembre all'11 ottobre 2026.",
+    comeSiChiede:
+      "Si presentava il modulo allegato all'avviso via PEC (protocollo@pec.castelnuovomagra.com) oppure all'ufficio Servizi Sociali il lunedì e il giovedì dalle 9.00 alle 12.00. Informazioni: tel. 0187 693826, servizisociali@comune.castelnuovomagra.sp.it.",
+    fonte: {
+      label: "Comune di Castelnuovo Magra · Avviso per il servizio di teleassistenza",
+      url: "https://www.comune.castelnuovomagra.sp.it/it-it/novita/avvisi/2026/sociale/avviso-manifestazione-di-interesse-per-l-accesso-al-servizio-di-teleassistenza-401297-1-42309aaecc84a1c52d4139832734d9de",
+    },
+    verificatoIl: "21/10/2026",
+    nota: "Avviso pubblicato dal Comune l'11/09/2026. Il termine è scaduto: chiedi ai Servizi Sociali se sarà riaperto.",
+  },
+
   // ------------------------------------------- DISTRETTO SOCIOSANITARIO 18
 
   // ------------------------------------------------------------------ SICILIA
