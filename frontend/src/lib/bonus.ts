@@ -309,6 +309,26 @@ export const BONUS: Bonus[] = [
     nota: "Pagina aggiornata dal Comune il 14/03/2025.",
   },
 
+  {
+    id: "massa-assegno-maternita",
+    regione: "Toscana",
+    comuni: ["massa"],
+    titolo: "Assegno di maternità",
+    perChi:
+      "Madri residenti a Massa (italiane, comunitarie o extracomunitarie con i requisiti di soggiorno) che hanno partorito, adottato o ricevuto in affido preadottivo un bambino con meno di 6 mesi e che non hanno tutela economica della maternità o ne hanno una ridotta. Il bambino deve essere nella scheda anagrafica della madre e convivere con lei.",
+    cosa:
+      "Un contributo economico a sostegno della maternità. Per i bambini nati nel 2026 la pagina del Comune indica ISEE fino a 20.668,26 euro e un assegno di 2.065,50 euro.",
+    stato: "attivo",
+    comeSiChiede:
+      "Online con SPID, CIE o tessera sanitaria, oppure con il modulo del Comune all'Ufficio protocollo (lunedì–venerdì 9.00–12.00, martedì e giovedì anche 15.00–17.00), per posta in Via Porta Fabbrica 1 o via PEC (comune.massa@postacert.toscana.it). Serve l'ISEE o la DSU e un conto corrente o postale intestato o cointestato alla madre. Domanda entro 6 mesi dalla nascita. Il Comune risponde entro 60 giorni. Gratuito. Centralino: 0585 4901.",
+    fonte: {
+      label: "Comune di Massa · Assegno di maternità",
+      url: "https://www.comune.massa.ms.it/servizi/assegno-di-maternita",
+    },
+    verificatoIl: "22/10/2026",
+    nota: "Pagina aggiornata dal Comune il 03/09/2026.",
+  },
+
   // ------------------------------------------- DISTRETTO SOCIOSANITARIO 18
 
   // ------------------------------------------------------------------ SICILIA
