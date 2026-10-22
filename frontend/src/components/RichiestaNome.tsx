@@ -17,7 +17,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Wordmark } from "@/src/components/Brand";
 import { colors, fonts, radius, spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
-import { NOME_LUNGHEZZA_MAX, impostaNome, pulisciNome } from "@/src/lib/nomeUtente";
+import { NOME_LUNGHEZZA_MAX, getCognome, impostaNome, pulisciNome } from "@/src/lib/nomeUtente";
 
 export function RichiestaNome({
   iniziale = "",
@@ -31,11 +31,12 @@ export function RichiestaNome({
   onAnnulla?: () => void;
 }) {
   const [testo, setTesto] = useState(iniziale);
+  const [cognome, setCognome] = useState(getCognome());
   const valido = pulisciNome(testo).length > 0;
   const cambio = !!onAnnulla;
 
   const conferma = () => {
-    if (!impostaNome(testo)) return;
+    if (!impostaNome(testo, cognome)) return;
     onFatto?.(pulisciNome(testo));
   };
 
@@ -57,8 +58,8 @@ export function RichiestaNome({
               {cambio ? "Come vuoi che ti chiami?" : "Come ti chiami?"}
             </Text>
             <Text style={s.testo}>
-              Così TutelApp può chiamarti per nome. Il nome resta solo su questo dispositivo:
-              non viene inviato a nessuno.
+              Così TutelApp può chiamarti per nome. Il cognome serve solo per compilare le lettere al
+              posto tuo. Restano solo su questo dispositivo: non vengono inviati a nessuno.
             </Text>
 
             <Text style={s.label}>Il tuo nome</Text>
@@ -78,6 +79,24 @@ export function RichiestaNome({
               autoComplete="name-given"
               accessibilityLabel="Il tuo nome"
               testID="richiesta-nome-input"
+            />
+
+            <Text style={[s.label, { marginTop: spacing.md }]}>Il tuo cognome (facoltativo)</Text>
+            <TextInput
+              value={cognome}
+              onChangeText={setCognome}
+              placeholder="Puoi lasciarlo vuoto"
+              placeholderTextColor="#9A9284"
+              style={s.input}
+              autoCapitalize="words"
+              autoCorrect={false}
+              maxLength={NOME_LUNGHEZZA_MAX}
+              returnKeyType="done"
+              onSubmitEditing={conferma}
+              textContentType="familyName"
+              autoComplete="name-family"
+              accessibilityLabel="Il tuo cognome, facoltativo"
+              testID="richiesta-nome-cognome"
             />
 
             <Pressable
@@ -116,10 +135,11 @@ export function RichiestaNome({
  */
 export function RichiestaNomeHome({ testID = "home-nome" }: { testID?: string }) {
   const [testo, setTesto] = useState("");
+  const [cognome, setCognome] = useState("");
   const valido = pulisciNome(testo).length > 0;
   const t = comune.theme;
   const conferma = () => {
-    impostaNome(testo);
+    impostaNome(testo, cognome);
   };
 
   return (
@@ -128,8 +148,8 @@ export function RichiestaNomeHome({ testID = "home-nome" }: { testID?: string })
         Come ti chiami?
       </Text>
       <Text style={h.testo}>
-        Così TutelApp può chiamarti per nome. Il nome resta solo su questo dispositivo: non viene
-        inviato a nessuno.
+        Così TutelApp può chiamarti per nome. Resta solo su questo dispositivo: non viene inviato a
+        nessuno.
       </Text>
       <TextInput
         value={testo}
@@ -146,6 +166,22 @@ export function RichiestaNomeHome({ testID = "home-nome" }: { testID?: string })
         autoComplete="name-given"
         accessibilityLabel="Il tuo nome"
         testID={`${testID}-input`}
+      />
+      <TextInput
+        value={cognome}
+        onChangeText={setCognome}
+        placeholder="Cognome (facoltativo)"
+        placeholderTextColor="#9A9284"
+        style={[h.input, { marginTop: spacing.sm }]}
+        autoCapitalize="words"
+        autoCorrect={false}
+        maxLength={NOME_LUNGHEZZA_MAX}
+        returnKeyType="done"
+        onSubmitEditing={conferma}
+        textContentType="familyName"
+        autoComplete="name-family"
+        accessibilityLabel="Il tuo cognome, facoltativo"
+        testID={`${testID}-cognome`}
       />
       <Pressable
         onPress={conferma}

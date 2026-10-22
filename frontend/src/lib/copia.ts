@@ -10,7 +10,7 @@ import * as FileSystem from "expo-file-system/legacy";
 
 import { comune } from "@/src/config/comune";
 import { scaricaFile } from "@/src/lib/documenti";
-import { getNome, impostaNome } from "@/src/lib/nomeUtente";
+import { getCognome, getNome, impostaNome } from "@/src/lib/nomeUtente";
 import { storage } from "@/src/utils/storage";
 
 /** Chiavi incluse nella copia (si leggono e si scrivono sempre per il Comune attivo). */
@@ -41,6 +41,7 @@ export type Copia = {
   comune: string;
   /** il nome della persona (non legato al Comune); le copie vecchie non ce l'hanno */
   nome?: string;
+  cognome?: string;
   dati: Record<string, string>;
 };
 
@@ -74,6 +75,7 @@ export async function creaCopia(adesso = new Date()): Promise<{ testo: string; n
     creata: adesso.toISOString(),
     comune: comune.nome,
     ...(getNome() ? { nome: getNome() } : {}),
+    ...(getCognome() ? { cognome: getCognome() } : {}),
     dati,
   };
   return { testo: JSON.stringify(copia), nomeFile: nomeFileCopia(adesso), voci: Object.keys(dati).length };
@@ -107,7 +109,7 @@ export async function applicaCopia(c: Copia): Promise<{ scritte: number }> {
     if (await storage.setItem(chiave, v)) scritte += 1;
   }
   // Il nome si ripristina solo se qui non c'è già: non si sovrascrive quello scelto adesso
-  if (c.nome && !getNome()) impostaNome(c.nome);
+  if (c.nome && !getNome()) impostaNome(c.nome, c.cognome ?? "");
   return { scritte };
 }
 

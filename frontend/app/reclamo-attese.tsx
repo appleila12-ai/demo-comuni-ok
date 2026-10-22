@@ -8,6 +8,7 @@ import * as Clipboard from "expo-clipboard";
 
 import { colors, radius, spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
+import { getCognome, getNome } from "@/src/lib/nomeUtente";
 import { storage } from "@/src/utils/storage";
 import { useSezione } from "@/src/lib/statistiche";
 import { creaPdf } from "@/src/lib/documenti";
@@ -94,13 +95,18 @@ export default function ReclamoAttese() {
   useEffect(() => {
     (async () => {
       const raw = await storage.getItem<string>(DATI_KEY, "");
+      let salvati: Valori = {};
       if (raw) {
         try {
-          setV((x) => ({ ...JSON.parse(raw), ...x }));
+          salvati = JSON.parse(raw);
         } catch {
           /* ignora */
         }
       }
+      // Nome e cognome detti all'inizio: si precompilano se non sono già stati scritti qui
+      if (!salvati.nome?.trim() && getNome()) salvati = { ...salvati, nome: getNome() };
+      if (!salvati.cognome?.trim() && getCognome()) salvati = { ...salvati, cognome: getCognome() };
+      setV((x) => ({ ...salvati, ...x }));
     })();
   }, []);
 
