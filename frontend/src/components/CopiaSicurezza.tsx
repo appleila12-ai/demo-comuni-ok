@@ -61,8 +61,9 @@ export function InvitoCopia({
     setOccupato(true);
     setEsito("");
     try {
-      const { nomeFile } = await consegnaCopia();
-      setEsito(`Copia pronta. ${dovePuoiTrovarla(nomeFile)} ${AVVISO_DATI}`);
+      const { nomeFile, esito: e } = await consegnaCopia();
+      if (e === "annullato") return;
+      setEsito(`Copia pronta. ${dovePuoiTrovarla(nomeFile, e)} ${AVVISO_DATI}`);
     } catch {
       setEsito("Non è stato possibile creare la copia. Riprova tra un attimo.");
     } finally {
@@ -98,11 +99,12 @@ export function CopiaSicurezzaSezione() {
     setOccupato(true);
     setEsito("");
     try {
-      const { voci, nomeFile } = await consegnaCopia();
+      const { voci, nomeFile, esito: e } = await consegnaCopia();
+      if (e === "annullato") return;
       setEsito(
         voci === 0
           ? "Non c'è ancora nulla da copiare: inserisci prima qualche appuntamento o dato."
-          : `Copia pronta. ${dovePuoiTrovarla(nomeFile)} ${AVVISO_DATI}`,
+          : `Copia pronta. ${dovePuoiTrovarla(nomeFile, e)} ${AVVISO_DATI}`,
       );
     } catch {
       setEsito("Non è stato possibile creare la copia. Riprova tra un attimo.");

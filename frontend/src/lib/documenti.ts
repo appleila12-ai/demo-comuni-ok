@@ -33,8 +33,27 @@ export async function creaPdf(html: string, nomeFile: string): Promise<void> {
 }
 
 /** Scarica un file di testo (es. calendario .ics). */
-export async function scaricaFile(nomeFile: string, contenuto: string, mime: string): Promise<void> {
+export async function scaricaFile(
+  nomeFile: string,
+  contenuto: string,
+  mime: string,
+  /** sul sito, prova prima il menu di condivisione del telefono (File, iCloud, email, WhatsApp…) */
+  condividi = false,
+): Promise<"condiviso" | "scaricato" | "annullato"> {
   if (Platform.OS === "web") {
+    if (condividi) {
+      try {
+        const nav: any = typeof navigator !== "undefined" ? navigator : null;
+        const file = new File([contenuto], nomeFile, { type: mime });
+        if (nav?.share && nav?.canShare?.({ files: [file] })) {
+          await nav.share({ files: [file], title: nomeFile });
+          return "condiviso";
+        }
+      } catch (e: any) {
+        if (e?.name === "AbortError") return "annullato";
+        /* altro errore: si scarica il file */
+      }
+    }
     const blob = new Blob([contenuto], { type: `${mime};charset=utf-8` });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -44,13 +63,14 @@ export async function scaricaFile(nomeFile: string, contenuto: string, mime: str
     a.click();
     a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 2000);
-    return;
+    return "scaricato";
   }
   const dest = `${FileSystem.documentDirectory}${nomeFile}`;
   await FileSystem.writeAsStringAsync(dest, contenuto);
   if (await Sharing.isAvailableAsync()) {
     await Sharing.shareAsync(dest, { mimeType: mime });
   }
+  return "condiviso";
 }
 
 /** Pagina HTML semplice e sobria per una lettera stampabile. */

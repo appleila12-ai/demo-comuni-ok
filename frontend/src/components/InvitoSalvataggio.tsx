@@ -68,11 +68,12 @@ export function InvitoSalvataggio() {
   const salva = async () => {
     setEsito("");
     try {
-      const { voci, nomeFile } = await consegnaCopia();
+      const { voci, nomeFile, esito: e } = await consegnaCopia();
+      if (e === "annullato") return;
       setEsito(
         voci === 0
           ? "Non c'è ancora nulla da copiare."
-          : `Copia pronta. ${dovePuoiTrovarla(nomeFile)} Conservala in un posto sicuro.`,
+          : `Copia pronta. ${dovePuoiTrovarla(nomeFile, e)} Conservala in un posto sicuro.`,
       );
     } catch {
       setEsito("Non è stato possibile creare la copia. Riprova tra un attimo.");
