@@ -167,12 +167,12 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
 const styles = StyleSheet.create({
   box: {
     backgroundColor: colors.surface,
-    borderWidth: 1.5,
+    borderWidth: 2,
     borderRadius: radius.lg,
-    padding: spacing.md,
-    marginBottom: spacing.lg,
+    padding: spacing.lg,
+    marginBottom: spacing.md,
   },
-  titolo: { fontFamily: fonts.serif, fontSize: 20, fontWeight: "700", color: colors.onSurface, marginBottom: spacing.sm },
+  titolo: { fontFamily: fonts.serif, fontSize: 28, lineHeight: 34, fontWeight: "700", color: colors.onSurface, marginBottom: spacing.md },
   inputRiga: {
     flexDirection: "row",
     alignItems: "center",
@@ -182,9 +182,9 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
     borderRadius: radius.pill,
     paddingHorizontal: spacing.md,
-    minHeight: 50,
+    minHeight: 58,
   },
-  input: { flex: 1, fontSize: 16, color: colors.onSurface, paddingVertical: 10 },
+  input: { flex: 1, fontSize: 18, color: colors.onSurface, paddingVertical: 12 },
   riprendi: { flexDirection: "row", alignItems: "center", gap: spacing.sm, marginTop: spacing.sm },
   riprendiBtn: {
     flex: 1,

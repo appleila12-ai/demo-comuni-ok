@@ -264,7 +264,7 @@ function HomeDelComune() {
           style={[styles.saluto, { backgroundColor: t.warmSoft, borderColor: t.warm }]}
           testID="home-saluto"
         >
-          <Wordmark size="md" showLogo={true} logoVariant="soft" />
+          <Wordmark size="sm" showLogo={true} logoVariant="soft" />
           <Text style={styles.kicker}>
             {comune.dimostrativo
               ? `ESEMPIO PER ${comune.nome.toUpperCase()}`
@@ -284,7 +284,7 @@ function HomeDelComune() {
             ) : null}
           </Text>
           <Text style={styles.titleSaluto}>Non devi orientarti da solo.</Text>
-          <Text style={styles.lead}>
+          <Text style={styles.leadPiccolo}>
             TutelApp ti accompagna nei passaggi da conoscere dopo una diagnosi
             o quando devi orientarti nel percorso della disabilità.
           </Text>
@@ -302,14 +302,14 @@ function HomeDelComune() {
           ) : null}
         </View>
 
-        {/* Chi è già a metà strada riparte da qui (compare solo se ci sono dati salvati) */}
-        <RiprendiHome />
-
         {/* Prima ci si presenta (solo se manca il nome), poi si dice di cosa si ha bisogno */}
         {!nome ? <RichiestaNomeHome /> : null}
 
-        {/* Scrivi cosa ti serve: la risposta arriva subito */}
+        {/* Il centro della Home: scrivi cosa ti serve, la risposta arriva subito */}
         <CasellaRicerca testID="home-ricerca" />
+
+        {/* Subito sotto: chi è già a metà strada riparte da qui (compare solo se ci sono dati salvati) */}
+        <RiprendiHome />
 
         {/* Scorciatoia ai salvati, solo se c'è qualcosa */}
         {salvati.length > 0 && (
@@ -612,13 +612,14 @@ const styles = StyleSheet.create({
   saluto: {
     borderWidth: 1.5,
     borderRadius: radius.lg,
-    padding: spacing.lg,
-    marginBottom: spacing.xl,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.lg,
+    marginBottom: spacing.md,
   },
   salutoNome: {
     fontFamily: fonts.serif,
-    fontSize: 40,
-    lineHeight: 46,
+    fontSize: 32,
+    lineHeight: 38,
     fontWeight: "700",
     color: colors.onSurface,
     letterSpacing: -0.8,
@@ -626,11 +627,11 @@ const styles = StyleSheet.create({
   salutoNomeEv: { fontWeight: "800" },
   titleSaluto: {
     fontFamily: fonts.serif,
-    fontSize: 24,
-    lineHeight: 30,
+    fontSize: 17,
+    lineHeight: 23,
     fontWeight: "700",
     color: colors.onSurface,
-    marginTop: spacing.xs,
+    marginTop: 2,
   },
   cambiaNome: {
     flexDirection: "row",
@@ -651,8 +652,8 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     letterSpacing: 1.1,
     color: colors.onSurfaceTertiary,
-    marginTop: spacing.lg,
-    marginBottom: spacing.sm,
+    marginTop: spacing.sm,
+    marginBottom: spacing.xs,
   },
   title: {
     fontFamily: fonts.serif,
@@ -669,6 +670,7 @@ const styles = StyleSheet.create({
     marginTop: spacing.md,
     maxWidth: 560,
   },
+  leadPiccolo: { fontSize: 13, lineHeight: 19, color: colors.onSurfaceSecondary, marginTop: 4 },
   heroImage: { marginBottom: spacing.xl },
   primaryCta: {
     minHeight: 76,
