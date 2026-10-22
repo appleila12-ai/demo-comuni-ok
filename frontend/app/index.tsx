@@ -283,11 +283,7 @@ function HomeDelComune() {
               </>
             ) : null}
           </Text>
-          <Text style={styles.titleSaluto}>Non devi orientarti da solo.</Text>
-          <Text style={styles.leadPiccolo}>
-            TutelApp ti accompagna nei passaggi da conoscere dopo una diagnosi
-            o quando devi orientarti nel percorso della disabilità.
-          </Text>
+          <Text style={styles.titleSaluto}>Ti accompagniamo nel tuo percorso, passo dopo passo.</Text>
           {nome ? (
             <Pressable
               onPress={() => setCambiaNome(true)}
@@ -618,8 +614,8 @@ const styles = StyleSheet.create({
   },
   salutoNome: {
     fontFamily: fonts.serif,
-    fontSize: 32,
-    lineHeight: 38,
+    fontSize: 26,
+    lineHeight: 32,
     fontWeight: "700",
     color: colors.onSurface,
     letterSpacing: -0.8,
@@ -670,7 +666,6 @@ const styles = StyleSheet.create({
     marginTop: spacing.md,
     maxWidth: 560,
   },
-  leadPiccolo: { fontSize: 13, lineHeight: 19, color: colors.onSurfaceSecondary, marginTop: 4 },
   heroImage: { marginBottom: spacing.xl },
   primaryCta: {
     minHeight: 76,
