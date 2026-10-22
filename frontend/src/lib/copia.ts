@@ -82,11 +82,25 @@ export async function creaCopia(adesso = new Date()): Promise<{ testo: string; n
 }
 
 /** Crea la copia e la consegna: sul sito si scarica il file, sul telefono si apre la condivisione. */
-export async function consegnaCopia(): Promise<{ voci: number }> {
+export async function consegnaCopia(): Promise<{ voci: number; nomeFile: string; esito: "condiviso" | "scaricato" | "annullato" }> {
   const { testo, nomeFile, voci } = await creaCopia();
-  await scaricaFile(nomeFile, testo, "application/json");
-  return { voci };
+  const esito = await scaricaFile(nomeFile, testo, "application/json", true);
+  return { voci, nomeFile, esito };
 }
+
+/** Dove si trova il file appena salvato (serve a ritrovarlo quando si vuole ripristinare). */
+export function dovePuoiTrovarla(nomeFile: string, esito: "condiviso" | "scaricato" | "annullato" = "scaricato"): string {
+  if (esito === "condiviso") {
+    return `Il file si chiama ${nomeFile}: è dove l'hai mandato dal menu (File, iCloud, email o altro). Per recuperare i dati, aprilo da lì e scegli «Ripristina i tuoi dati».`;
+  }
+  return Platform.OS === "web"
+    ? `Il file si chiama ${nomeFile}. Lo trovi nell'app File (iPhone) o in Download (Android), cartella Download.`
+    : `Il file si chiama ${nomeFile}: è dove hai scelto di salvarlo nel menu che si è aperto.`;
+}
+
+/** Da dire PRIMA che i dati si perdano: togliere l'icona o cancellare i dati del browser li cancella. */
+export const AVVISO_ICONA =
+  "Attenzione: se togli l'icona dalla schermata Home o cancelli i dati del browser, i dati si cancellano. Senza una copia non si possono recuperare.";
 
 /** Controlla che il testo sia una copia di TutelApp e che si possa leggere. */
 export function leggiCopia(testo: string): Copia | null {

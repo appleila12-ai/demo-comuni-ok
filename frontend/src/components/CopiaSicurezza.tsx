@@ -7,7 +7,7 @@ import { Platform, Pressable, StyleSheet, Text, View } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
 import { colors, radius, spacing, topics } from "@/src/theme";
-import { applicaCopia, consegnaCopia, leggiCopia, scegliFileCopia } from "@/src/lib/copia";
+import { AVVISO_ICONA, applicaCopia, consegnaCopia, dovePuoiTrovarla, leggiCopia, scegliFileCopia } from "@/src/lib/copia";
 
 const AVVISO_DATI =
   "La copia contiene i tuoi dati personali: conservala in un posto sicuro e non condividerla.";
@@ -61,8 +61,9 @@ export function InvitoCopia({
     setOccupato(true);
     setEsito("");
     try {
-      await consegnaCopia();
-      setEsito(`Copia pronta. ${AVVISO_DATI}`);
+      const { nomeFile, esito: e } = await consegnaCopia();
+      if (e === "annullato") return;
+      setEsito(`Copia pronta. ${dovePuoiTrovarla(nomeFile, e)} ${AVVISO_DATI}`);
     } catch {
       setEsito("Non è stato possibile creare la copia. Riprova tra un attimo.");
     } finally {
@@ -98,11 +99,12 @@ export function CopiaSicurezzaSezione() {
     setOccupato(true);
     setEsito("");
     try {
-      const { voci } = await consegnaCopia();
+      const { voci, nomeFile, esito: e } = await consegnaCopia();
+      if (e === "annullato") return;
       setEsito(
         voci === 0
           ? "Non c'è ancora nulla da copiare: inserisci prima qualche appuntamento o dato."
-          : `Copia pronta. ${AVVISO_DATI}`,
+          : `Copia pronta. ${dovePuoiTrovarla(nomeFile, e)} ${AVVISO_DATI}`,
       );
     } catch {
       setEsito("Non è stato possibile creare la copia. Riprova tra un attimo.");
@@ -156,6 +158,7 @@ export function CopiaSicurezzaSezione() {
         browser, la ripristini. I documenti originali non sono nella copia: restano dove li hai presi
         (telefono, Foto, File).
       </Text>
+      <Text style={[s.testo, { fontWeight: "700" }]}>{AVVISO_ICONA}</Text>
       <View style={s.riga}>
         <Tasto label="Salva una copia" icon="shield-checkmark-outline" onPress={salva} disabled={occupato} testID="copia-salva" />
         <Tasto label="Ripristina da una copia" icon="download-outline" onPress={scegli} pieno={false} disabled={occupato} testID="copia-ripristina" />

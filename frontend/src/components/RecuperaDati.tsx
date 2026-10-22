@@ -67,6 +67,10 @@ export function RecuperaDati() {
         <Ionicons name="download-outline" size={16} color={colors.brandPrimaryDark} />
         <Text style={styles.testo}>Hai già usato TutelApp? Ripristina i tuoi dati da una copia</Text>
       </Pressable>
+      <Text style={styles.aiuto}>
+        Il file si chiama «TutelApp-copia-…» e finisce con .json. Su iPhone lo trovi nell'app File, cartella Download;
+        su Android nell'app File o in Download. Se non hai mai salvato una copia, i dati non si possono recuperare.
+      </Text>
       {esito ? <Text style={styles.esito}>{esito}</Text> : null}
     </View>
   );
@@ -76,5 +80,6 @@ const styles = StyleSheet.create({
   box: { marginTop: spacing.md, alignItems: "center" },
   riga: { flexDirection: "row", alignItems: "center", gap: 6, minHeight: 44 },
   testo: { fontSize: 14, fontWeight: "700", color: colors.brandPrimaryDark, textDecorationLine: "underline", flexShrink: 1 },
+  aiuto: { fontSize: 13, lineHeight: 19, color: colors.onSurfaceSecondary, textAlign: "center", marginTop: 2, maxWidth: 520 },
   esito: { fontSize: 13, color: colors.onSurface, textAlign: "center", marginTop: 4 },
 });

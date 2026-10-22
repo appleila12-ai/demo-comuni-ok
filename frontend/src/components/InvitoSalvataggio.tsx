@@ -9,7 +9,7 @@ import Ionicons from "@react-native-vector-icons/ionicons";
 
 import { colors, radius, spacing } from "@/src/theme";
 import { Bottone } from "@/src/components/Pagina";
-import { consegnaCopia } from "@/src/lib/copia";
+import { AVVISO_ICONA, consegnaCopia, dovePuoiTrovarla } from "@/src/lib/copia";
 import { haDatiPersonali } from "@/src/lib/datiLocali";
 import { useNomeUtente } from "@/src/lib/nomeUtente";
 import { invitoRimandato, rimandaInvito, sistema, staInstallata, type Sistema } from "@/src/lib/persistenza";
@@ -68,8 +68,13 @@ export function InvitoSalvataggio() {
   const salva = async () => {
     setEsito("");
     try {
-      const { voci } = await consegnaCopia();
-      setEsito(voci === 0 ? "Non c'è ancora nulla da copiare." : "Copia pronta: conserva il file in un posto sicuro.");
+      const { voci, nomeFile, esito: e } = await consegnaCopia();
+      if (e === "annullato") return;
+      setEsito(
+        voci === 0
+          ? "Non c'è ancora nulla da copiare."
+          : `Copia pronta. ${dovePuoiTrovarla(nomeFile, e)} Conservala in un posto sicuro.`,
+      );
     } catch {
       setEsito("Non è stato possibile creare la copia. Riprova tra un attimo.");
     }
@@ -88,6 +93,7 @@ export function InvitoSalvataggio() {
           ? "I tuoi dati stanno solo su questo telefono. Il browser potrebbe cancellarli se non apri il sito per un po': con TutelApp sulla schermata Home questo non succede."
           : "Così la trovi con un tocco e il browser non cancella il tuo nome e le tue scelte, anche se non la apri per un po'."}
       </Text>
+      <Text style={[styles.testo, { fontWeight: "700" }]}>{AVVISO_ICONA}</Text>
       {passi.map((p, i) => (
         <Text key={i} style={styles.passo}>
           {i + 1}. {p}
