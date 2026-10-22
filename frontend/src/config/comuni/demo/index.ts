@@ -173,6 +173,7 @@ import { lecco } from "./lecco";
 import { legnago } from "./legnago";
 import { legnano } from "./legnano";
 import { lerici } from "./lerici";
+import { levanto } from "./levanto";
 import { licata } from "./licata";
 import { limbiate } from "./limbiate";
 import { lissone } from "./lissone";
@@ -528,6 +529,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   legnago,
   legnano,
   lerici,
+  levanto,
   licata,
   limbiate,
   lissone,

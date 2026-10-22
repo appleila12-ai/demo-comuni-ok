@@ -36,7 +36,7 @@ export const riccoDelGolfo: ComuneConfig = {
       icon: "people-outline",
       title: "Servizi Sociali – Riccò del Golfo",
       subtitle: "Ufficio Servizi Sociali e alla Persona · Municipio, Via Aurelia 150 · Tel. 0187 941725 · protocollo@comune.riccodelgolfo.sp.it",
-      action: { type: "tel", value: "0187925106" },
+      action: { type: "tel", value: "0187941725" },
     },
     {
       icon: "globe-outline",
@@ -52,7 +52,7 @@ export const riccoDelGolfo: ComuneConfig = {
     },
   ],
 
-  trasporto: "Chiedi ai Servizi Sociali di Riccò del Golfo (centralino 0187 925106) quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie).",
+  trasporto: "Chiedi ai Servizi Sociali di Riccò del Golfo (tel. 0187 941725) quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie).",
 
   esenzioneTicket: {
     label: "ASL5 Spezzino · Esenzioni ticket",
