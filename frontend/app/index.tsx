@@ -1,5 +1,7 @@
+import { useState } from "react";
 import {
   Linking,
+  Modal,
   Pressable,
   ScrollView,
   StatusBar,
@@ -24,6 +26,8 @@ import { RiprendiHome } from "@/src/components/RiprendiHome";
 import { InvitoSalvataggio } from "@/src/components/InvitoSalvataggio";
 import { RecuperaDati } from "@/src/components/RecuperaDati";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
+import { RichiestaNome } from "@/src/components/RichiestaNome";
+import { useNomeUtente } from "@/src/lib/nomeUtente";
 import { useSalvati } from "@/src/lib/salvati";
 
 const FEATURES = [
@@ -177,6 +181,8 @@ function HomeDelComune() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const t = comune.theme;
+  const nome = useNomeUtente();
+  const [cambiaNome, setCambiaNome] = useState(false);
 
   return (
     <SafeAreaView
@@ -184,6 +190,18 @@ function HomeDelComune() {
       edges={["top", "bottom"]}
       testID="comune-home"
     >
+      {/* Se il nome manca (es. si arriva da una pagina per gli enti) o si vuole cambiarlo, si chiede qui */}
+      <Modal
+        visible={!nome || cambiaNome}
+        animationType="slide"
+        onRequestClose={() => (nome ? setCambiaNome(false) : undefined)}
+      >
+        <RichiestaNome
+          iniziale={nome}
+          onFatto={() => setCambiaNome(false)}
+          onAnnulla={nome ? () => setCambiaNome(false) : undefined}
+        />
+      </Modal>
       <StatusBar barStyle="dark-content" backgroundColor={t.cream} />
       <ScrollView
         contentContainerStyle={[
@@ -241,21 +259,46 @@ function HomeDelComune() {
 
         <View style={styles.divider} />
 
-        {/* Brand + accoglienza */}
-        <View style={styles.brandBlock}>
+        {/* Brand + accoglienza: il riquadro in evidenza, con il nome della persona */}
+        <View
+          style={[styles.saluto, { backgroundColor: t.warmSoft, borderColor: t.warm }]}
+          testID="home-saluto"
+        >
           <Wordmark size="md" showLogo={true} logoVariant="soft" />
           <Text style={styles.kicker}>
             {comune.dimostrativo
               ? `ESEMPIO PER ${comune.nome.toUpperCase()}`
               : `IN COLLABORAZIONE CON ${comune.nome.toUpperCase()}`}
           </Text>
-          <Text style={styles.title}>
-            Non devi orientarti da solo.
+          <Text
+            style={styles.salutoNome}
+            accessibilityRole="header"
+            accessibilityLabel={nome ? `Ciao ${nome}` : "Ciao"}
+            testID="home-saluto-nome"
+          >
+            Ciao{" "}
+            {nome ? (
+              <Text style={[styles.salutoNomeEv, { color: t.warmDark }]}>{nome}</Text>
+            ) : null}
+            ,
           </Text>
+          <Text style={styles.titleSaluto}>Non devi orientarti da solo.</Text>
           <Text style={styles.lead}>
             TutelApp ti accompagna nei passaggi da conoscere dopo una diagnosi
             o quando devi orientarti nel percorso della disabilità.
           </Text>
+          {nome ? (
+            <Pressable
+              onPress={() => setCambiaNome(true)}
+              style={({ pressed }) => [styles.cambiaNome, pressed && styles.pressed]}
+              accessibilityRole="button"
+              accessibilityLabel={`Non sei ${nome}? Cambia nome`}
+              testID="home-cambia-nome"
+            >
+              <Ionicons name="create-outline" size={16} color={colors.brandPrimaryDark} />
+              <Text style={styles.cambiaNomeTesto}>Cambia nome</Text>
+            </Pressable>
+          ) : null}
         </View>
 
         {/* Chi è già a metà strada riparte da qui (compare solo se ci sono dati salvati) */}
@@ -309,7 +352,7 @@ function HomeDelComune() {
           <View style={styles.flex}>
             <Text style={styles.primaryCtaTitle}>Entra in TutelApp</Text>
             <Text style={styles.primaryCtaSub}>
-              Il percorso passo passo, dalla diagnosi al Progetto di Vita
+              {nome ? `${nome}, ecco il percorso` : "Il percorso"} passo passo, dalla diagnosi al Progetto di Vita
             </Text>
           </View>
         </Pressable>
@@ -562,8 +605,42 @@ const styles = StyleSheet.create({
     marginTop: spacing.xs,
     marginBottom: spacing.xl,
   },
-  brandBlock: {
+  saluto: {
+    borderWidth: 1.5,
+    borderRadius: radius.lg,
+    padding: spacing.lg,
     marginBottom: spacing.xl,
+  },
+  salutoNome: {
+    fontFamily: fonts.serif,
+    fontSize: 40,
+    lineHeight: 46,
+    fontWeight: "700",
+    color: colors.onSurface,
+    letterSpacing: -0.8,
+  },
+  salutoNomeEv: { fontWeight: "800" },
+  titleSaluto: {
+    fontFamily: fonts.serif,
+    fontSize: 24,
+    lineHeight: 30,
+    fontWeight: "700",
+    color: colors.onSurface,
+    marginTop: spacing.xs,
+  },
+  cambiaNome: {
+    flexDirection: "row",
+    alignItems: "center",
+    alignSelf: "flex-start",
+    gap: 6,
+    minHeight: 44,
+    marginTop: spacing.sm,
+  },
+  cambiaNomeTesto: {
+    fontSize: 14,
+    fontWeight: "800",
+    color: colors.brandPrimaryDark,
+    textDecorationLine: "underline",
   },
   kicker: {
     fontSize: 9,

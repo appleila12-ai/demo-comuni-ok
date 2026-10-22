@@ -19,6 +19,7 @@ import { useGlobalSearchParams, usePathname, useRouter } from "expo-router";
 import { colors, fonts, radius, spacing } from "@/src/theme";
 import { HeaderComune } from "@/src/components/HeaderComune";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
+import { useNomeUtente } from "@/src/lib/nomeUtente";
 
 export function Pagina({
   titolo,
@@ -39,6 +40,7 @@ export function Pagina({
   piede?: React.ReactNode;
 }) {
   const router = useRouter();
+  const nome = useNomeUtente();
   const insets = useSafeAreaInsets();
   const pathname = usePathname();
   const params = useGlobalSearchParams();
@@ -60,9 +62,16 @@ export function Pagina({
         >
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
-        <Text style={s.headerTitle} numberOfLines={1}>
-          {titolo}
-        </Text>
+        <View style={s.titoloBox}>
+          <Text style={s.headerTitle} numberOfLines={1}>
+            {titolo}
+          </Text>
+          {nome ? (
+            <Text style={s.headerNome} numberOfLines={1} testID={`${testID}-nome`}>
+              Per {nome}
+            </Text>
+          ) : null}
+        </View>
         <View style={s.destra}>
           {salvabile ? (
             <BottoneSalva
@@ -265,13 +274,20 @@ const s = StyleSheet.create({
     justifyContent: "center",
   },
   destra: { flexDirection: "row", alignItems: "center" },
+  titoloBox: { flex: 1, alignItems: "center" },
   headerTitle: {
     fontFamily: fonts.serif,
-    flex: 1,
     textAlign: "center",
     fontSize: 16,
     fontWeight: "700",
     color: colors.onSurface,
+  },
+  headerNome: {
+    textAlign: "center",
+    fontSize: 14,
+    fontWeight: "800",
+    color: colors.brandPrimaryDark,
+    marginTop: 1,
   },
   scroll: { paddingHorizontal: spacing.lg, paddingTop: spacing.sm },
   colonna: { width: "100%", maxWidth: 640, alignSelf: "center" },
