@@ -70,6 +70,10 @@ function tagMeta({ title, description, image, url }) {
     // (iPhone/Android). Senza questi tag compare una "T" grigia e il titolo
     // intero della pagina, che il telefono taglia.
     `<meta name="apple-mobile-web-app-title" content="TutelApp" />`,
+    // Dall'icona sulla schermata Home si apre come app (senza barra del browser):
+    // i dati non vengono cancellati dal browser dopo giorni di inattività.
+    `<meta name="apple-mobile-web-app-capable" content="yes" />`,
+    `<meta name="mobile-web-app-capable" content="yes" />`,
     `<link rel="apple-touch-icon" href="/apple-touch-icon.png" />`,
     `<link rel="manifest" href="/manifest.webmanifest" />`,
     `<meta property="og:type" content="website" />`,
@@ -91,7 +95,7 @@ function tagMeta({ title, description, image, url }) {
 function conMeta(html, meta) {
   let out = html
     .replace(/<title>[\s\S]*?<\/title>/i, "")
-    .replace(/<meta\s+(name|property)="(description|theme-color|apple-mobile-web-app-title|og:[^"]+|twitter:[^"]+)"[^>]*>/gi, "")
+    .replace(/<meta\s+(name|property)="(description|theme-color|apple-mobile-web-app-title|apple-mobile-web-app-capable|mobile-web-app-capable|og:[^"]+|twitter:[^"]+)"[^>]*>/gi, "")
     .replace(/<link\s+rel="(manifest|apple-touch-icon)"[^>]*>/gi, "")
     .replace(/<html([^>]*)\blang="[^"]*"/i, "<html$1lang=\"it\"");
   if (!/<html[^>]*\blang=/i.test(out)) out = out.replace(/<html/i, '<html lang="it"');
