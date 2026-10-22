@@ -7,6 +7,7 @@ import * as Clipboard from "expo-clipboard";
 import { useLocalSearchParams, useRouter } from "expo-router";
 
 import { colors, radius, spacing, topics } from "@/src/theme";
+import { getNomeCompleto } from "@/src/lib/nomeUtente";
 import { storage } from "@/src/utils/storage";
 import { useSezione } from "@/src/lib/statistiche";
 import { creaPdf } from "@/src/lib/documenti";
@@ -37,13 +38,17 @@ export default function Lettere() {
   useEffect(() => {
     (async () => {
       const raw = await storage.getItem<string>(DATI_KEY, "");
+      let salvati: Valori = {};
       if (raw) {
         try {
-          setValori(JSON.parse(raw));
+          salvati = JSON.parse(raw);
         } catch {
           /* ignora */
         }
       }
+      // "Il tuo nome e cognome": si precompila con quello detto all'inizio (si può cambiare)
+      if (!salvati.nome?.trim() && getNomeCompleto()) salvati = { ...salvati, nome: getNomeCompleto() };
+      setValori(salvati);
     })();
   }, []);
 

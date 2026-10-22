@@ -26,7 +26,7 @@ import { RiprendiHome } from "@/src/components/RiprendiHome";
 import { InvitoSalvataggio } from "@/src/components/InvitoSalvataggio";
 import { RecuperaDati } from "@/src/components/RecuperaDati";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
-import { RichiestaNome } from "@/src/components/RichiestaNome";
+import { RichiestaNome, RichiestaNomeHome } from "@/src/components/RichiestaNome";
 import { useNomeUtente } from "@/src/lib/nomeUtente";
 import { useSalvati } from "@/src/lib/salvati";
 
@@ -190,16 +190,16 @@ function HomeDelComune() {
       edges={["top", "bottom"]}
       testID="comune-home"
     >
-      {/* Se il nome manca (es. si arriva da una pagina per gli enti) o si vuole cambiarlo, si chiede qui */}
+      {/* Cambio del nome (la prima volta il nome si chiede in Home, sopra "Di cosa hai bisogno?") */}
       <Modal
-        visible={!nome || cambiaNome}
+        visible={cambiaNome && !!nome}
         animationType="slide"
-        onRequestClose={() => (nome ? setCambiaNome(false) : undefined)}
+        onRequestClose={() => setCambiaNome(false)}
       >
         <RichiestaNome
           iniziale={nome}
           onFatto={() => setCambiaNome(false)}
-          onAnnulla={nome ? () => setCambiaNome(false) : undefined}
+          onAnnulla={() => setCambiaNome(false)}
         />
       </Modal>
       <StatusBar barStyle="dark-content" backgroundColor={t.cream} />
@@ -264,7 +264,7 @@ function HomeDelComune() {
           style={[styles.saluto, { backgroundColor: t.warmSoft, borderColor: t.warm }]}
           testID="home-saluto"
         >
-          <Wordmark size="md" showLogo={true} logoVariant="soft" />
+          <Wordmark size="sm" showLogo={true} logoVariant="soft" />
           <Text style={styles.kicker}>
             {comune.dimostrativo
               ? `ESEMPIO PER ${comune.nome.toUpperCase()}`
@@ -276,17 +276,14 @@ function HomeDelComune() {
             accessibilityLabel={nome ? `Ciao ${nome}` : "Ciao"}
             testID="home-saluto-nome"
           >
-            Ciao{" "}
+            {nome ? "Ciao " : "Ciao!"}
             {nome ? (
-              <Text style={[styles.salutoNomeEv, { color: t.warmDark }]}>{nome}</Text>
+              <>
+                <Text style={[styles.salutoNomeEv, { color: t.warmDark }]}>{nome}</Text>,
+              </>
             ) : null}
-            ,
           </Text>
-          <Text style={styles.titleSaluto}>Non devi orientarti da solo.</Text>
-          <Text style={styles.lead}>
-            TutelApp ti accompagna nei passaggi da conoscere dopo una diagnosi
-            o quando devi orientarti nel percorso della disabilità.
-          </Text>
+          <Text style={styles.titleSaluto}>Ti accompagniamo nel tuo percorso, passo dopo passo.</Text>
           {nome ? (
             <Pressable
               onPress={() => setCambiaNome(true)}
@@ -301,11 +298,14 @@ function HomeDelComune() {
           ) : null}
         </View>
 
-        {/* Chi è già a metà strada riparte da qui (compare solo se ci sono dati salvati) */}
-        <RiprendiHome />
+        {/* Prima ci si presenta (solo se manca il nome), poi si dice di cosa si ha bisogno */}
+        {!nome ? <RichiestaNomeHome /> : null}
 
-        {/* Scrivi cosa ti serve: la risposta arriva subito */}
+        {/* Il centro della Home: scrivi cosa ti serve, la risposta arriva subito */}
         <CasellaRicerca testID="home-ricerca" />
+
+        {/* Subito sotto: chi è già a metà strada riparte da qui (compare solo se ci sono dati salvati) */}
+        <RiprendiHome />
 
         {/* Scorciatoia ai salvati, solo se c'è qualcosa */}
         {salvati.length > 0 && (
@@ -608,13 +608,14 @@ const styles = StyleSheet.create({
   saluto: {
     borderWidth: 1.5,
     borderRadius: radius.lg,
-    padding: spacing.lg,
-    marginBottom: spacing.xl,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.lg,
+    marginBottom: spacing.md,
   },
   salutoNome: {
     fontFamily: fonts.serif,
-    fontSize: 40,
-    lineHeight: 46,
+    fontSize: 26,
+    lineHeight: 32,
     fontWeight: "700",
     color: colors.onSurface,
     letterSpacing: -0.8,
@@ -622,11 +623,11 @@ const styles = StyleSheet.create({
   salutoNomeEv: { fontWeight: "800" },
   titleSaluto: {
     fontFamily: fonts.serif,
-    fontSize: 24,
-    lineHeight: 30,
+    fontSize: 17,
+    lineHeight: 23,
     fontWeight: "700",
     color: colors.onSurface,
-    marginTop: spacing.xs,
+    marginTop: 2,
   },
   cambiaNome: {
     flexDirection: "row",
@@ -647,8 +648,8 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     letterSpacing: 1.1,
     color: colors.onSurfaceTertiary,
-    marginTop: spacing.lg,
-    marginBottom: spacing.sm,
+    marginTop: spacing.sm,
+    marginBottom: spacing.xs,
   },
   title: {
     fontFamily: fonts.serif,

@@ -11,9 +11,11 @@ import { comune } from "@/src/config/comune";
 import { ESEMPI, cerca } from "@/src/lib/ricerca";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
 import { dimenticaRicerca, leggiRicerca, salvaRicerca } from "@/src/lib/riprendi";
+import { useNomeUtente } from "@/src/lib/nomeUtente";
 
 export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string }) {
   const router = useRouter();
+  const nome = useNomeUtente();
   const [testo, setTesto] = useState("");
   const risultati = useMemo(() => (testo.trim().length >= 3 ? cerca(testo) : []), [testo]);
   // L'ultima ricerca resta solo su questo telefono, per poterla riprendere
@@ -33,7 +35,7 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
 
   return (
     <View style={[styles.box, { borderColor: t.warm }]} testID={testID}>
-      <Text style={styles.titolo}>Di cosa hai bisogno?</Text>
+      <Text style={styles.titolo}>{nome ? `${nome}, di cosa hai bisogno?` : "Di cosa hai bisogno?"}</Text>
       <View style={styles.inputRiga}>
         <Ionicons name="search" size={20} color={colors.onSurfaceSecondary} />
         <TextInput
@@ -165,12 +167,12 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
 const styles = StyleSheet.create({
   box: {
     backgroundColor: colors.surface,
-    borderWidth: 1.5,
+    borderWidth: 2,
     borderRadius: radius.lg,
-    padding: spacing.md,
-    marginBottom: spacing.lg,
+    padding: spacing.lg,
+    marginBottom: spacing.md,
   },
-  titolo: { fontFamily: fonts.serif, fontSize: 20, fontWeight: "700", color: colors.onSurface, marginBottom: spacing.sm },
+  titolo: { fontFamily: fonts.serif, fontSize: 28, lineHeight: 34, fontWeight: "700", color: colors.onSurface, marginBottom: spacing.md },
   inputRiga: {
     flexDirection: "row",
     alignItems: "center",
@@ -180,9 +182,9 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
     borderRadius: radius.pill,
     paddingHorizontal: spacing.md,
-    minHeight: 50,
+    minHeight: 58,
   },
-  input: { flex: 1, fontSize: 16, color: colors.onSurface, paddingVertical: 10 },
+  input: { flex: 1, fontSize: 18, color: colors.onSurface, paddingVertical: 12 },
   riprendi: { flexDirection: "row", alignItems: "center", gap: spacing.sm, marginTop: spacing.sm },
   riprendiBtn: {
     flex: 1,
