@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react";
 import { storage } from "@/src/utils/storage";
+import { getComuneAttivo } from "@/src/config/comune";
 
 export type Salvato = {
   id: string;
@@ -19,21 +20,32 @@ export type Salvato = {
 
 const KEY = "tutelapp:salvati";
 let lista: Salvato[] | null = null;
+/** Comune a cui appartiene `lista`: i salvati sono separati per Comune, quindi la copia in memoria vale solo per quello */
+let listaComune = "";
 const ascoltatori = new Set<(l: Salvato[]) => void>();
 
 async function carica(): Promise<Salvato[]> {
-  if (lista) return lista;
+  const comune = getComuneAttivo().slug;
+  // Cambiando Comune la copia in memoria non vale più: si rilegge dal telefono.
+  // (Prima restava quella del Comune precedente, e il salvataggio successivo
+  // la scriveva nel Comune sbagliato: così i salvati "sparivano" al ricaricamento.)
+  if (lista && listaComune === comune) return lista;
   const raw = await storage.getItem<string>(KEY, "");
+  let letta: Salvato[] = [];
   try {
-    lista = raw ? (JSON.parse(raw) as Salvato[]) : [];
+    const v = raw ? JSON.parse(raw) : [];
+    letta = Array.isArray(v) ? (v as Salvato[]) : [];
   } catch {
-    lista = [];
+    letta = [];
   }
+  lista = letta;
+  listaComune = comune;
   return lista;
 }
 
 function aggiorna(nuova: Salvato[]) {
   lista = nuova;
+  listaComune = getComuneAttivo().slug;
   storage.setItem(KEY, JSON.stringify(nuova));
   ascoltatori.forEach((f) => f(nuova));
 }
@@ -50,7 +62,7 @@ export async function rimuovi(id: string) {
 }
 
 export function useSalvati() {
-  const [l, setL] = useState<Salvato[]>(lista ?? []);
+  const [l, setL] = useState<Salvato[]>(lista && listaComune === getComuneAttivo().slug ? lista : []);
   useEffect(() => {
     let vivo = true;
     carica().then((x) => vivo && setL(x));
