@@ -3,6 +3,7 @@ import type { ComuneConfig } from "../types";
 // Comune di Carrara (MS) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Dati presi dal sito ufficiale del Comune/ente (settembre 2026), da verificare.
+// Orari: pagina "U.O. 8.2.1 Servizio sociale professionale" (aggiornata il 28/07/2026); recapiti: pagina Settore 8 (aggiornata il 13/11/2025). Testo copiato da Ilaria il 22/10/2026.
 // Da verificare: email
 export const carrara: ComuneConfig = {
   slug: "carrara",
@@ -20,7 +21,7 @@ export const carrara: ComuneConfig = {
   telefono: "0585 641732",
   email: "",
   pec: "comune.carrara@postecert.it",
-  orari: "",
+  orari: "Lunedì–venerdì 9:00–13:00; martedì e giovedì anche 15:30–17:00",
   sitoWeb: "https://www.comune.carrara.ms.it/it/unita_organizzative/settore-8-supporto-organi-istituzionali-servizi-sociali-e-politiche-abitative",
 
   logo: null,
@@ -36,8 +37,8 @@ export const carrara: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali – Carrara",
-      subtitle: "Settore 8 – Supporto organi istituzionali / Servizi sociali e politiche abitative · Piazza 2 Giugno 1, 54033 Carrara (MS) · Tel. 0585 641732",
-      action: { type: "tel", value: "0585641731" },
+      subtitle: "Settore 8 – Supporto organi istituzionali / Servizi sociali e politiche abitative · Piazza 2 Giugno 1, 54033 Carrara (MS) · Tel. 0585 641732 · Centralino 0585 6411",
+      action: { type: "tel", value: "0585641732" },
     },
     {
       icon: "business-outline",
@@ -53,7 +54,7 @@ export const carrara: ComuneConfig = {
     },
   ],
 
-  trasporto: "Chiedi ai Servizi Sociali di Carrara (0585 641731) quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie).",
+  trasporto: "Chiedi ai Servizi Sociali di Carrara (0585 641732) quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie).",
 
   esenzioneTicket: {
     label: "Azienda USL Toscana Nord Ovest · Esenzioni ticket",
