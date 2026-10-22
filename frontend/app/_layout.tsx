@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { LogBox, Platform } from "react-native";
 
 import { useIconFonts } from "@/src/hooks/use-icon-fonts";
-import { caricaNomeSalvato } from "@/src/lib/nomeUtente";
+import { caricaNomeSalvato, useNomeUtente } from "@/src/lib/nomeUtente";
 import { ascoltaTocchi } from "@/src/lib/notifiche";
 import { chiediPersistenza } from "@/src/lib/persistenza";
 import { aggiornaPromemoria, segnaAttivita } from "@/src/lib/promemoriaApp";
@@ -25,6 +25,7 @@ export default function RootLayout() {
   const [nomeReady, setNomeReady] = useState(false);
   const [comuneSlug, setComuneSlug] = useState(getComuneAttivo().slug);
   const router = useRouter();
+  const nome = useNomeUtente();
 
   useEffect(() => {
     caricaComuneSalvato().finally(() => {
@@ -52,6 +53,12 @@ export default function RootLayout() {
     if (!comuneReady || Platform.OS === "web") return;
     segnaAttivita().then(() => aggiornaPromemoria());
   }, [comuneReady, comuneSlug]);
+
+  // Quando la persona dice o cambia il nome, gli avvisi già programmati si riscrivono con il nome nuovo
+  useEffect(() => {
+    if (!comuneReady || Platform.OS === "web") return;
+    aggiornaPromemoria();
+  }, [nome, comuneReady]);
 
   // Sul sito: si chiede al browser di conservare i dati (non li cancella dopo giorni di inattività)
   useEffect(() => {

@@ -2,8 +2,9 @@
 // Funzione pura (nessun import di runtime): si può provare da sola.
 //
 // REGOLE
-//  - le parole degli avvisi sono SEMPRE generiche: sulla schermata di blocco non compaiono
-//    diagnosi, verbali, nomi o terapie; il dettaglio si legge solo dentro l'app
+//  - le parole degli avvisi sono generiche: sulla schermata di blocco non compaiono
+//    diagnosi, verbali, terapie o dettagli della pratica; il dettaglio si legge solo dentro l'app.
+//    Unica eccezione voluta: il NOME di battesimo della persona all'inizio della frase ("Maria, ...")
 //  - al massimo un avviso al giorno
 //  - nessun avviso nelle ore di silenzio (di base dalle 21 alle 8)
 //  - nessuna "serie di giorni consecutivi", nessun tono di colpa
@@ -47,6 +48,8 @@ export type DatiPromemoria = {
   ultimaAttivita?: Date | null;
   oggi: Date;
   imp: Impostazioni;
+  /** Nome di battesimo della persona: se c'è, gli avvisi iniziano con "Nome, ..." */
+  nome?: string;
 };
 
 // ---------- Le parole ----------
@@ -74,6 +77,13 @@ export const FRASI = {
 } as const;
 
 const scegli = (lista: readonly string[], seme: number) => lista[Math.abs(seme) % lista.length];
+
+/** "Riprendiamo da dove…" → "Maria, riprendiamo da dove…" (senza nome resta com'è) */
+export function conNome(corpo: string, nome?: string): string {
+  const n = (nome ?? "").trim();
+  if (!n || !corpo) return corpo;
+  return `${n}, ${corpo.charAt(0).toLocaleLowerCase("it-IT")}${corpo.slice(1)}`;
+}
 
 // ---------- Date ----------
 const alle = (d: Date, ore: number, minuti = 0) =>
@@ -109,7 +119,7 @@ const oraEvento = (e: Evento): { h: number; m: number } | null => {
 const ORIZZONTE_GIORNI = 60;
 const MASSIMO_AVVISI = 30; // iPhone ne accetta fino a 64: restiamo ben sotto
 
-export function pianifica({ eventi, sospeso, ultimaAttivita, oggi, imp }: DatiPromemoria): Promemoria[] {
+export function pianifica({ eventi, sospeso, ultimaAttivita, oggi, imp, nome }: DatiPromemoria): Promemoria[] {
   if (!imp.attivi) return [];
   const limite = giorniDopo(oggi, ORIZZONTE_GIORNI).getTime();
   const grezzi: Promemoria[] = [];
@@ -206,7 +216,7 @@ export function pianifica({ eventi, sospeso, ultimaAttivita, oggi, imp }: DatiPr
     const k = chiaveGiorno(quando);
     if (giorniUsati.has(k)) continue;
     giorniUsati.add(k);
-    scelti.push({ ...p, quando });
+    scelti.push({ ...p, corpo: conNome(p.corpo, nome), quando });
   }
   return scelti.sort((a, b) => a.quando.getTime() - b.quando.getTime()).slice(0, MASSIMO_AVVISI);
 }

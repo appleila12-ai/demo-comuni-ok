@@ -8,6 +8,7 @@ import { SCADENZE_KEY, calcolaEventi, type Scadenza } from "@/src/lib/scadenze";
 import { prossimoPasso } from "@/src/lib/prossimoPasso";
 import { PROGETTO_KEY } from "@/src/lib/progetto";
 import { leggiRicerca } from "@/src/lib/riprendi";
+import { getNome } from "@/src/lib/nomeUtente";
 import { annullaTutti, notificheDisponibili, riprogramma } from "@/src/lib/notifiche";
 
 const IMPOSTAZIONI_KEY = "tutelapp:promemoria-impostazioni";
@@ -88,6 +89,6 @@ export async function aggiornaPromemoria(): Promise<number> {
     trovaSospeso(oggi),
     leggiAttivita(),
   ]);
-  const lista = pianifica({ eventi: calcolaEventi(scadenze, oggi), sospeso, ultimaAttivita, oggi, imp });
+  const lista = pianifica({ eventi: calcolaEventi(scadenze, oggi), sospeso, ultimaAttivita, oggi, imp, nome: getNome() });
   return riprogramma(lista);
 }
