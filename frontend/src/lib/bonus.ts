@@ -329,6 +329,25 @@ export const BONUS: Bonus[] = [
     nota: "Pagina aggiornata dal Comune il 03/09/2026.",
   },
 
+  {
+    id: "vezzano-ligure-contributi-affitto-2026",
+    regione: "Liguria",
+    comuni: ["vezzano-ligure"],
+    titolo: "Contributi per l'affitto pagato nel 2025 (bando comunale 2026)",
+    perChi: "Chi ha pagato un affitto nel 2025 e rispetta i requisiti del bando del Comune di Vezzano Ligure.",
+    cosa: "Un contributo a parziale rimborso del canone di locazione sostenuto nel 2025. Requisiti e importi sono nel bando sul sito del Comune.",
+    stato: "chiuso",
+    quando: "Domande dal 7 settembre al 10 ottobre 2026.",
+    comeSiChiede:
+      "Si presentava il modulo di domanda del bando, firmato e con i documenti richiesti, via PEC (protocollo.comunevezzanoligure@pec.it), via email (servizisociali@comune.vezzanoligure.sp.it), per raccomandata o a mano all'ufficio protocollo (Via Goito 2) o all'ufficio servizi sociali (Via Ruini, loc. Prati) entro il 10/10/2026. Informazioni: 0187 982520.",
+    fonte: {
+      label: "Comune di Vezzano Ligure · Bando comunale contributi affitto 2026",
+      url: "https://www.comune.vezzanoligure.sp.it/novita/avvisi/novita_834.html",
+    },
+    verificatoIl: "22/10/2026",
+    nota: "Il termine è scaduto: chiedi ai Servizi Sociali quando uscirà il prossimo bando.",
+  },
+
   // ------------------------------------------- DISTRETTO SOCIOSANITARIO 18
 
   // ------------------------------------------------------------------ SICILIA
