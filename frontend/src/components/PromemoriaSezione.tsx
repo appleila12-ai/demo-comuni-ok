@@ -71,7 +71,7 @@ export function PromemoriaSezione() {
       {disponibili && (
         <Text style={[paginaStili.piccolo, styles.regole]}>
           Al massimo un avviso al giorno, mai di notte (silenzio dalle {imp.silenzioDa} alle {imp.silenzioA}). Gli
-          avvisi non mostrano dati personali: i dettagli si leggono solo aprendo l'app. Puoi spegnerli quando vuoi.
+          avvisi mostrano solo il tuo nome: i dettagli si leggono solo aprendo l'app. Puoi spegnerli quando vuoi.
         </Text>
       )}
       {messaggio ? <Text style={styles.messaggio}>{messaggio}</Text> : null}
