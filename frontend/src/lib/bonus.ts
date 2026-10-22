@@ -271,6 +271,44 @@ export const BONUS: Bonus[] = [
     nota: "Avviso pubblicato dal Comune l'11/09/2026. Il termine è scaduto: chiedi ai Servizi Sociali se sarà riaperto.",
   },
 
+  {
+    id: "arcola-contributo-economico",
+    regione: "Liguria",
+    comuni: ["arcola"],
+    titolo: "Contributo economico socio-assistenziale",
+    perChi:
+      "Persone di qualsiasi età, sole o in famiglia, esposte a rischi sociali ed economici accertati dai Servizi Sociali, con i requisiti del Regolamento comunale per gli interventi economici assistenziali.",
+    cosa:
+      "Un progetto individualizzato e un contributo economico per prevenire o contenere il disagio quando il reddito non basta ai bisogni primari. La pagina non scrive importi né soglie.",
+    stato: "attivo",
+    comeSiChiede:
+      "Online dalla pagina del servizio sul sito del Comune, oppure agli uffici comunali. Appuntamento al 0187 1745834 (l'ufficio lo conferma per telefono). Servono: ISEE, certificato di disoccupazione e di iscrizione al centro per l'impiego, documentazione dello stato di bisogno, IBAN. Il contributo è erogato entro 30 giorni dalla richiesta. Gratuito.",
+    fonte: {
+      label: "Comune di Arcola · Presentare domanda per un contributo",
+      url: "https://comune.arcola.sp.it/servizi/salute_benessere_e_assistenza/servizio_96.html",
+    },
+    verificatoIl: "22/10/2026",
+    nota: "Pagina aggiornata dal Comune il 14/03/2025.",
+  },
+  {
+    id: "arcola-assegno-maternita",
+    regione: "Liguria",
+    comuni: ["arcola"],
+    titolo: "Assegno di maternità",
+    perChi:
+      "Madri che non ricevono un trattamento economico per la maternità o ne ricevono uno di importo inferiore (in tal caso spetta la differenza), in un nucleo con ISEE sotto i valori fissati ogni anno dalla legge. Italiane, comunitarie ed extracomunitarie (D.Lgs. 151/2001, art. 74).",
+    cosa: "Un assegno di maternità con importo mensile. La pagina non scrive l'importo.",
+    stato: "attivo",
+    comeSiChiede:
+      "Online con identità digitale dalla pagina del servizio, oppure agli uffici comunali. Servono l'ISEE in corso di validità (indicato come facoltativo) ed eventualmente il permesso di soggiorno. Il procedimento si conclude entro 30 giorni. Gratuito. Ufficio Servizi Sociali: 0187 1745812.",
+    fonte: {
+      label: "Comune di Arcola · Assegno di maternità",
+      url: "https://comune.arcola.sp.it/servizi/salute_benessere_e_assistenza/servizio_20.html",
+    },
+    verificatoIl: "22/10/2026",
+    nota: "Pagina aggiornata dal Comune il 14/03/2025.",
+  },
+
   // ------------------------------------------- DISTRETTO SOCIOSANITARIO 18
 
   // ------------------------------------------------------------------ SICILIA
