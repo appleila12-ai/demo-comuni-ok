@@ -3,7 +3,7 @@
   "short_name": "TutelApp",
   "description": "La tua guida semplice ai diritti, alla Legge 104 e alla Riforma della disabilità.",
   "lang": "it",
-  "display": "browser",
+  "display": "standalone",
   "background_color": "#F7F3EA",
   "theme_color": "#F7F3EA",
   "icons": [

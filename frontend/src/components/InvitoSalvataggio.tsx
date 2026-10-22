@@ -1,0 +1,114 @@
+// "Metti al sicuro i tuoi dati": invito della Home, solo sul sito web e solo se serve:
+// la persona ha dati suoi, TutelApp non è ancora sulla schermata Home, e non ha scelto "Più tardi" da poco.
+// Il motivo: il browser può cancellare i dati dei siti che non si aprono per un po'.
+// Dall'icona sulla schermata Home la cancellazione automatica non c'è.
+
+import { useEffect, useState } from "react";
+import { Platform, StyleSheet, Text, View } from "react-native";
+import Ionicons from "@react-native-vector-icons/ionicons";
+
+import { colors, radius, spacing } from "@/src/theme";
+import { Bottone } from "@/src/components/Pagina";
+import { consegnaCopia } from "@/src/lib/copia";
+import { haDatiPersonali } from "@/src/lib/datiLocali";
+import { invitoRimandato, rimandaInvito, sistema, staInstallata, type Sistema } from "@/src/lib/persistenza";
+
+export function passiPer(s: Sistema): string[] {
+  if (s === "ios") {
+    return [
+      "Tocca «Salva una copia» qui sotto e conserva il file.",
+      "In Safari tocca il tasto Condividi (il quadrato con la freccia) e poi «Aggiungi alla schermata Home».",
+      "Apri TutelApp dalla nuova icona e, in fondo alla Home, scegli «Ripristina i tuoi dati» con il file salvato.",
+    ];
+  }
+  return [
+    "Tocca «Salva una copia» qui sotto e conserva il file.",
+    "Nel menu del browser (i tre puntini) scegli «Installa app» oppure «Aggiungi a schermata Home».",
+  ];
+}
+
+export function InvitoSalvataggio() {
+  const [visibile, setVisibile] = useState(false);
+  const [sis, setSis] = useState<Sistema>("altro");
+  const [esito, setEsito] = useState("");
+
+  useEffect(() => {
+    if (Platform.OS !== "web") return;
+    const s = sistema();
+    // Sul computer il browser non cancella i dati come su iPhone: nessun invito
+    if (s === "altro" || staInstallata() || invitoRimandato()) return;
+    let vivo = true;
+    haDatiPersonali().then((ha) => {
+      if (vivo && ha) {
+        setSis(s);
+        setVisibile(true);
+      }
+    });
+    return () => {
+      vivo = false;
+    };
+  }, []);
+
+  if (!visibile) return null;
+
+  const salva = async () => {
+    setEsito("");
+    try {
+      const { voci } = await consegnaCopia();
+      setEsito(voci === 0 ? "Non c'è ancora nulla da copiare." : "Copia pronta: conserva il file in un posto sicuro.");
+    } catch {
+      setEsito("Non è stato possibile creare la copia. Riprova tra un attimo.");
+    }
+  };
+
+  const passi = passiPer(sis);
+
+  return (
+    <View style={styles.box} testID="invito-salvataggio" accessibilityLiveRegion="polite">
+      <View style={styles.titoloRiga}>
+        <Ionicons name="shield-checkmark-outline" size={20} color={colors.brandPrimaryDark} />
+        <Text style={styles.titolo}>Metti al sicuro i tuoi dati</Text>
+      </View>
+      <Text style={styles.testo}>
+        I tuoi dati stanno solo su questo telefono. Il browser potrebbe cancellarli se non apri il sito per un po':
+        con TutelApp sulla schermata Home questo non succede.
+      </Text>
+      {passi.map((p, i) => (
+        <Text key={i} style={styles.passo}>
+          {i + 1}. {p}
+        </Text>
+      ))}
+      {esito ? <Text style={styles.esito}>{esito}</Text> : null}
+      <View style={styles.azioni}>
+        <Bottone label="Salva una copia" icon="shield-checkmark-outline" onPress={salva} testID="invito-salvataggio-copia" />
+        <Bottone
+          label="Più tardi"
+          variante="vuoto"
+          onPress={() => {
+            rimandaInvito(30);
+            setVisibile(false);
+          }}
+          testID="invito-salvataggio-dopo"
+        />
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  box: {
+    backgroundColor: colors.surface,
+    borderColor: colors.brandPrimaryDark,
+    borderWidth: 1,
+    borderRadius: radius.lg,
+    padding: spacing.md,
+    marginBottom: spacing.md,
+    gap: 6,
+  },
+  titoloRiga: { flexDirection: "row", alignItems: "center", gap: 8 },
+  titolo: { fontSize: 15, fontWeight: "800", color: colors.onSurface },
+  testo: { fontSize: 14, lineHeight: 20, color: colors.onSurface },
+  passo: { fontSize: 14, lineHeight: 20, color: colors.onSurface },
+  esito: { fontSize: 13, fontWeight: "700", color: colors.brandPrimaryDark },
+  azioni: { gap: 8, marginTop: 4 },
+});

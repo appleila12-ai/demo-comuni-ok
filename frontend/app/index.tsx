@@ -21,6 +21,8 @@ import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
 import { CasellaRicerca } from "@/src/components/CasellaRicerca";
 import { RiprendiHome } from "@/src/components/RiprendiHome";
+import { InvitoSalvataggio } from "@/src/components/InvitoSalvataggio";
+import { RecuperaDati } from "@/src/components/RecuperaDati";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
 import { useSalvati } from "@/src/lib/salvati";
 
@@ -278,6 +280,9 @@ function HomeDelComune() {
           </Pressable>
         )}
 
+        {/* Mettere al sicuro i dati (solo sul sito, solo se la persona ne ha) */}
+        <InvitoSalvataggio />
+
         {/* Immagine di accoglienza (prima era in una schermata a parte) */}
         <MonoImage
           source={require("../assets/images/brand/hero.jpg")}
@@ -486,6 +491,9 @@ function HomeDelComune() {
             Non sei {comune.tipo === "unione" ? "di questo territorio" : `di ${comune.nomeBreve}`}? Scegli il tuo Comune
           </Text>
         </Pressable>
+
+        {/* Chi ha perso i dati ripristina da una copia (solo se qui non c'è più nulla) */}
+        <RecuperaDati />
 
         {/* Accesso discreto al cruscotto (protetto da codice) per gli operatori */}
         <Pressable
