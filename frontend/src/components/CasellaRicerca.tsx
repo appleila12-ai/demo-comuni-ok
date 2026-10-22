@@ -11,9 +11,11 @@ import { comune } from "@/src/config/comune";
 import { ESEMPI, cerca } from "@/src/lib/ricerca";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
 import { dimenticaRicerca, leggiRicerca, salvaRicerca } from "@/src/lib/riprendi";
+import { useNomeUtente } from "@/src/lib/nomeUtente";
 
 export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string }) {
   const router = useRouter();
+  const nome = useNomeUtente();
   const [testo, setTesto] = useState("");
   const risultati = useMemo(() => (testo.trim().length >= 3 ? cerca(testo) : []), [testo]);
   // L'ultima ricerca resta solo su questo telefono, per poterla riprendere
@@ -33,7 +35,7 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
 
   return (
     <View style={[styles.box, { borderColor: t.warm }]} testID={testID}>
-      <Text style={styles.titolo}>Di cosa hai bisogno?</Text>
+      <Text style={styles.titolo}>{nome ? `${nome}, di cosa hai bisogno?` : "Di cosa hai bisogno?"}</Text>
       <View style={styles.inputRiga}>
         <Ionicons name="search" size={20} color={colors.onSurfaceSecondary} />
         <TextInput

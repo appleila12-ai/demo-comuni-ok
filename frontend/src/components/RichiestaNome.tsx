@@ -16,6 +16,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { Wordmark } from "@/src/components/Brand";
 import { colors, fonts, radius, spacing } from "@/src/theme";
+import { comune } from "@/src/config/comune";
 import { NOME_LUNGHEZZA_MAX, impostaNome, pulisciNome } from "@/src/lib/nomeUtente";
 
 export function RichiestaNome({
@@ -108,6 +109,89 @@ export function RichiestaNome({
     </SafeAreaView>
   );
 }
+
+/**
+ * Il nome si chiede in Home, subito sopra "Di cosa hai bisogno?": prima ci si presenta,
+ * poi si dice di cosa si ha bisogno. Sparisce da solo appena il nome è salvato.
+ */
+export function RichiestaNomeHome({ testID = "home-nome" }: { testID?: string }) {
+  const [testo, setTesto] = useState("");
+  const valido = pulisciNome(testo).length > 0;
+  const t = comune.theme;
+  const conferma = () => {
+    impostaNome(testo);
+  };
+
+  return (
+    <View style={[h.box, { backgroundColor: t.warmSoft, borderColor: t.warm }]} testID={testID}>
+      <Text style={h.titolo} accessibilityRole="header">
+        Come ti chiami?
+      </Text>
+      <Text style={h.testo}>
+        Così TutelApp può chiamarti per nome. Il nome resta solo su questo dispositivo: non viene
+        inviato a nessuno.
+      </Text>
+      <TextInput
+        value={testo}
+        onChangeText={setTesto}
+        placeholder="Per esempio: Maria"
+        placeholderTextColor="#9A9284"
+        style={h.input}
+        autoCapitalize="words"
+        autoCorrect={false}
+        maxLength={NOME_LUNGHEZZA_MAX}
+        returnKeyType="done"
+        onSubmitEditing={conferma}
+        textContentType="givenName"
+        autoComplete="name-given"
+        accessibilityLabel="Il tuo nome"
+        testID={`${testID}-input`}
+      />
+      <Pressable
+        onPress={conferma}
+        disabled={!valido}
+        style={({ pressed }) => [h.bottone, !valido && { opacity: 0.45 }, pressed && { opacity: 0.85 }]}
+        accessibilityRole="button"
+        accessibilityState={{ disabled: !valido }}
+        accessibilityLabel="Continua"
+        testID={`${testID}-continua`}
+      >
+        <Text style={h.bottoneTesto}>Continua</Text>
+      </Pressable>
+    </View>
+  );
+}
+
+const h = StyleSheet.create({
+  box: { borderWidth: 1.5, borderRadius: radius.lg, padding: spacing.lg, marginBottom: spacing.md },
+  titolo: {
+    fontFamily: fonts.serif,
+    fontSize: 28,
+    lineHeight: 34,
+    fontWeight: "700",
+    color: colors.onSurface,
+  },
+  testo: { fontSize: 16, lineHeight: 23, color: colors.onSurfaceSecondary, marginTop: spacing.sm, marginBottom: spacing.md },
+  input: {
+    backgroundColor: colors.surface,
+    borderWidth: 1.5,
+    borderColor: colors.brandPrimaryDark,
+    borderRadius: radius.md,
+    paddingHorizontal: spacing.md,
+    paddingVertical: 14,
+    fontSize: 20,
+    color: colors.onSurface,
+  },
+  bottone: {
+    minHeight: 54,
+    borderRadius: radius.pill,
+    backgroundColor: colors.brandPrimaryDark,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: spacing.md,
+  },
+  bottoneTesto: { fontSize: 18, fontWeight: "800", color: "#FFFFFF" },
+});
 
 const s = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.background },

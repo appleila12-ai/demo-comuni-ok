@@ -26,7 +26,7 @@ import { RiprendiHome } from "@/src/components/RiprendiHome";
 import { InvitoSalvataggio } from "@/src/components/InvitoSalvataggio";
 import { RecuperaDati } from "@/src/components/RecuperaDati";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
-import { RichiestaNome } from "@/src/components/RichiestaNome";
+import { RichiestaNome, RichiestaNomeHome } from "@/src/components/RichiestaNome";
 import { useNomeUtente } from "@/src/lib/nomeUtente";
 import { useSalvati } from "@/src/lib/salvati";
 
@@ -190,16 +190,16 @@ function HomeDelComune() {
       edges={["top", "bottom"]}
       testID="comune-home"
     >
-      {/* Se il nome manca (es. si arriva da una pagina per gli enti) o si vuole cambiarlo, si chiede qui */}
+      {/* Cambio del nome (la prima volta il nome si chiede in Home, sopra "Di cosa hai bisogno?") */}
       <Modal
-        visible={!nome || cambiaNome}
+        visible={cambiaNome && !!nome}
         animationType="slide"
-        onRequestClose={() => (nome ? setCambiaNome(false) : undefined)}
+        onRequestClose={() => setCambiaNome(false)}
       >
         <RichiestaNome
           iniziale={nome}
           onFatto={() => setCambiaNome(false)}
-          onAnnulla={nome ? () => setCambiaNome(false) : undefined}
+          onAnnulla={() => setCambiaNome(false)}
         />
       </Modal>
       <StatusBar barStyle="dark-content" backgroundColor={t.cream} />
@@ -276,11 +276,12 @@ function HomeDelComune() {
             accessibilityLabel={nome ? `Ciao ${nome}` : "Ciao"}
             testID="home-saluto-nome"
           >
-            Ciao{" "}
+            {nome ? "Ciao " : "Ciao!"}
             {nome ? (
-              <Text style={[styles.salutoNomeEv, { color: t.warmDark }]}>{nome}</Text>
+              <>
+                <Text style={[styles.salutoNomeEv, { color: t.warmDark }]}>{nome}</Text>,
+              </>
             ) : null}
-            ,
           </Text>
           <Text style={styles.titleSaluto}>Non devi orientarti da solo.</Text>
           <Text style={styles.lead}>
@@ -303,6 +304,9 @@ function HomeDelComune() {
 
         {/* Chi è già a metà strada riparte da qui (compare solo se ci sono dati salvati) */}
         <RiprendiHome />
+
+        {/* Prima ci si presenta (solo se manca il nome), poi si dice di cosa si ha bisogno */}
+        {!nome ? <RichiestaNomeHome /> : null}
 
         {/* Scrivi cosa ti serve: la risposta arriva subito */}
         <CasellaRicerca testID="home-ricerca" />
