@@ -3,8 +3,8 @@ import type { ComuneConfig } from "../types";
 // Comune di Vezzano Ligure (SP) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Recapiti: solo quelli letti sul sito del Comune il 21/10/2026; il resto è stato tolto perché non verificato.
-// Il sito blocca la lettura automatica: indirizzo da elenco pubblico, da confermare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti e orari: pagina "Ufficio Servizi Sociali" del sito del Comune (aggiornata il 05/11/2025; orari dal 15/01/2025), letta il 22/10/2026.
+// Da fare: associazioni, sport e tempo libero.
 export const vezzanoLigure: ComuneConfig = {
   slug: "vezzano-ligure",
   tipo: "comune",
