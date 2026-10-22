@@ -18,7 +18,7 @@ export const arcola: ComuneConfig = {
   indirizzo: "Piazza 2 Giugno, Arcola (Ufficio Servizi Sociali e Ambito)",
   telefono: "0187 1745834",
   email: "distrettosociale@comune.arcola.sp.it",
-  orari: "",
+  orari: "Ufficio Servizi Sociali, Via Luigi Valentini 89/A: lunedì–venerdì 9:00–12:00, accesso libero (dal 06/10/2023). Ufficio Ambito, Piazza 2 Giugno: appuntamento al 0187 1745834, da confermare telefonicamente",
   sitoWeb: "https://comune.arcola.sp.it/amministrazione/uffici/ufficio_39.html",
 
   logo: null,
@@ -31,6 +31,12 @@ export const arcola: ComuneConfig = {
   },
 
   puntiSupporto: [
+    {
+      icon: "business-outline",
+      title: "Ufficio Servizi Sociali – Via Valentini",
+      subtitle: "Via Luigi Valentini 89/A (sede Arcola Ponte) · lunedì–venerdì 9:00–12:00, accesso libero · Tel. 0187 1745812 · servizi.sociali@comune.arcola.sp.it",
+      action: { type: "tel", value: "01871745812" },
+    },
     {
       icon: "people-outline",
       title: "Ufficio Servizi Sociali e Ambito – Arcola",
