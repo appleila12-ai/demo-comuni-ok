@@ -2,7 +2,7 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Riccò del Golfo di Spezia (SP) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Per ora c'è il centralino del Comune (dati 2021 da comuni-italiani.it): inserire telefono ed email diretti dei Servizi Sociali appena disponibili.
+// Recapiti: pagina "Ufficio Servizi Sociali e alla Persona" del sito del Comune (aggiornata il 05/11/2025), letta il 22/10/2026. Orari non inseriti: la pagina riporta solo il periodo estivo (1 giugno–30 settembre).
 export const riccoDelGolfo: ComuneConfig = {
   slug: "ricco-del-golfo",
   tipo: "comune",
@@ -16,10 +16,10 @@ export const riccoDelGolfo: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "Ufficio Servizi Sociali e alla Persona",
   indirizzo: "Via Aurelia 150, 19020 Riccò del Golfo di Spezia (SP)",
-  telefono: "0187 925106",
+  telefono: "0187 941725",
   email: "",
   pec: "riccodelgolfo@pec.comune.riccodelgolfo.sp.it",
-  orari: "Chiama il centralino per orari e appuntamenti",
+  orari: "Chiama lo 0187 941725 per orari e appuntamenti",
   sitoWeb: "https://www.comune.riccodelgolfo.sp.it/amministrazione/uffici/ufficio_41.html",
 
   logo: null,
@@ -35,7 +35,7 @@ export const riccoDelGolfo: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali – Riccò del Golfo",
-      subtitle: "Ufficio Servizi Sociali e alla Persona · centralino del Comune 0187 925106",
+      subtitle: "Ufficio Servizi Sociali e alla Persona · Municipio, Via Aurelia 150 · Tel. 0187 941725 · protocollo@comune.riccodelgolfo.sp.it",
       action: { type: "tel", value: "0187925106" },
     },
     {
