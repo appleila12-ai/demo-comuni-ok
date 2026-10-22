@@ -3,7 +3,9 @@ import * as SplashScreen from "expo-splash-screen";
 import { useEffect, useState } from "react";
 import { LogBox, Platform } from "react-native";
 
+import { RichiestaNome } from "@/src/components/RichiestaNome";
 import { useIconFonts } from "@/src/hooks/use-icon-fonts";
+import { caricaNomeSalvato, useNomeUtente } from "@/src/lib/nomeUtente";
 import { ascoltaTocchi } from "@/src/lib/notifiche";
 import { chiediPersistenza } from "@/src/lib/persistenza";
 import { aggiornaPromemoria, segnaAttivita } from "@/src/lib/promemoriaApp";
@@ -18,11 +20,27 @@ LogBox.ignoreAllLogs(true)
 
 SplashScreen.preventAutoHideAsync();
 
+// Pagine per operatori e per gli enti: non sono per il cittadino, quindi non chiedono il nome
+// (solo sul sito: lì il percorso è noto subito)
+const PAGINE_SENZA_NOME = ["/cruscotto", "/sentinella", "/per-i-comuni", "/test-pdf"];
+
+function paginaSenzaNome(): boolean {
+  if (Platform.OS !== "web" || typeof window === "undefined") return false;
+  try {
+    const p = window.location.pathname.replace(/\/+$/, "");
+    return PAGINE_SENZA_NOME.some((x) => p === x || p.endsWith(x));
+  } catch {
+    return false;
+  }
+}
+
 export default function RootLayout() {
   const [loaded, error] = useIconFonts();
   const [comuneReady, setComuneReady] = useState(false);
+  const [nomeReady, setNomeReady] = useState(false);
   const [comuneSlug, setComuneSlug] = useState(getComuneAttivo().slug);
   const router = useRouter();
+  const nome = useNomeUtente();
 
   useEffect(() => {
     caricaComuneSalvato().finally(() => {
@@ -30,6 +48,10 @@ export default function RootLayout() {
       setComuneReady(true);
     });
     return onComuneChange((c) => setComuneSlug(c.slug));
+  }, []);
+
+  useEffect(() => {
+    caricaNomeSalvato().finally(() => setNomeReady(true));
   }, []);
 
   // Sul web il titolo della scheda del browser riporta il Comune attivo
@@ -68,12 +90,15 @@ export default function RootLayout() {
   }, [comuneReady, router]);
 
   useEffect(() => {
-    if ((loaded || error) && comuneReady) {
+    if ((loaded || error) && comuneReady && nomeReady) {
       SplashScreen.hideAsync();
     }
-  }, [loaded, error, comuneReady]);
+  }, [loaded, error, comuneReady, nomeReady]);
 
-  if ((!loaded && !error) || !comuneReady) return null;
+  if ((!loaded && !error) || !comuneReady || !nomeReady) return null;
+
+  // Primo accesso: prima di tutto si chiede il nome. Poi l'app chiama sempre la persona per nome.
+  if (!nome && !paginaSenzaNome()) return <RichiestaNome />;
 
   return (
     // Nessun account né sincronizzazione: i dati restano sul dispositivo.

@@ -20,6 +20,7 @@ import { registra, useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
 import { prossimoPasso, type Suggerimento } from "@/src/lib/prossimoPasso";
 import { PROGETTO_KEY } from "@/src/lib/progetto";
+import { useNomeUtente } from "@/src/lib/nomeUtente";
 
 const MOMENTO_KEY = "tutelapp:hub:momento";
 // Chiavi già usate da La mia pratica e Il mio verbale (qui si leggono soltanto, mai si scrivono).
@@ -140,6 +141,7 @@ const PARTENZA: Record<Exclude<Momento, null>, string> = {
 export default function Hub() {
   useSezione("orientarsi");
   const router = useRouter();
+  const nome = useNomeUtente();
 
   const [history, setHistory] = useState<Report[]>([]);
   const [momento, setMomento] = useState<Momento>(null);
@@ -244,7 +246,7 @@ export default function Hub() {
         <View style={styles.pageTitleBox} testID="home-title">
           <Text style={styles.pageTitle}>Orientarsi insieme</Text>
           <Text style={styles.pageSub}>
-            Dove sei adesso e qual è il prossimo passo, con le regole della Riforma
+            {nome ? `${nome}, qui vedi dove` : "Dove"} sei adesso e qual è il prossimo passo, con le regole della Riforma
             della disabilità (D.Lgs. 62/2024).
           </Text>
           <View style={{ marginTop: 10 }}>

@@ -9,6 +9,7 @@ import { useFocusEffect, useRouter } from "expo-router";
 
 import { colors, radius, spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
+import { useNomeUtente } from "@/src/lib/nomeUtente";
 import { storage } from "@/src/utils/storage";
 import { prossimoPasso, type Suggerimento } from "@/src/lib/prossimoPasso";
 import { PROGETTO_KEY } from "@/src/lib/progetto";
@@ -20,6 +21,7 @@ const ENTRO_GIORNI = 30;
 
 export function RiprendiHome() {
   const router = useRouter();
+  const nome = useNomeUtente();
   const [stato, setStato] = useState<Stato>({ passo: null, data: null });
 
   useFocusEffect(
@@ -64,7 +66,9 @@ export function RiprendiHome() {
 
   return (
     <View style={[styles.box, { backgroundColor: t.warmSoft, borderColor: t.warm }]} testID="home-riprendi">
-      <Text style={styles.titolo}>Riprendi da dove eri rimasto</Text>
+      <Text style={styles.titolo}>
+        {nome ? `${nome}, riprendiamo` : "Riprendiamo"} da dove ci eravamo fermati
+      </Text>
       {stato.passo ? (
         <Pressable
           onPress={() => router.push(stato.passo!.route as any)}
