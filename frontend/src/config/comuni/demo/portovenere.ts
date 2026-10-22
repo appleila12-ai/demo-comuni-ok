@@ -14,11 +14,11 @@ export const portovenere: ComuneConfig = {
   regione: "Liguria",
 
   ente: "Servizi Sociali",
-  responsabile: "Ufficio Servizi Sociali e Scuola – Sportello di Cittadinanza",
+  responsabile: "Ufficio Servizi Sociali e Scuola",
   indirizzo: "Via Garibaldi 9, 19025 Porto Venere (SP)",
   telefono: "0187 794844",
   email: "",
-  orari: "Mar e Gio 9:00–12:00; Sab su appuntamento",
+  orari: "Telefono lunedì–venerdì 8:30–10:30 (accesso libero, dal 29/09/2025). Servizi Sociali e alla Persona: lunedì e mercoledì 9:00–12:00 su prenotazione (dal 01/10/2025)",
   sitoWeb: "https://www.comune.portovenere.sp.it/amministrazione/uffici/ufficio_16.html",
 
   logo: null,
@@ -34,7 +34,7 @@ export const portovenere: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali – Porto Venere",
-      subtitle: "Sportello di Cittadinanza · Via Garibaldi 9, 19025 Porto Venere (SP) · Tel. 0187 794844",
+      subtitle: "Ufficio Servizi Sociali e Scuola · Via Garibaldi 9, 19025 Porto Venere (SP) · Tel. 0187 794844 · telefono lun–ven 8:30–10:30; sportello lun e mer 9:00–12:00 su prenotazione",
       action: { type: "tel", value: "0187794844" },
     },
     {
