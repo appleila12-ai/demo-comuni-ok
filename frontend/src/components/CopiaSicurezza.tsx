@@ -167,8 +167,8 @@ export function CopiaSicurezzaSezione() {
       <Text style={s.sezioneTitolo}>Una copia dei tuoi dati</Text>
       <Text style={s.testo}>
         Appuntamenti, scadenze, tappe della pratica, dati delle lettere e salvati esistono solo qui.
-        Salva una copia e tienila dove preferisci (File, iCloud, Google Drive): se cambi telefono o
-        cancelli i dati, la ripristini. La copia non passa da nessun nostro server. I documenti originali non sono nella copia: restano dove li hai presi
+        Salva una copia: resta solo sul tuo telefono, nell'app File (cartella Download). Se cancelli
+        i dati, la ripristini da lì. La copia non passa da nessun server. I documenti originali non sono nella copia: restano dove li hai presi
         (telefono, Foto, File).
       </Text>
       <Text style={[s.testo, { fontWeight: "700" }]}>{AVVISO_ICONA}</Text>
