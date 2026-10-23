@@ -102,7 +102,7 @@ export default function ProvaSalvataggio() {
   };
   const provaCalendarioScarica = () => {
     scarica(new File([ics()], "TutelApp-prova.ics", { type: "text/calendar" }));
-    setEsito("Prova 2b: scaricato. Il telefono propone di aggiungere l'evento al calendario?");
+    setEsito("Fatto. Il telefono ti ha proposto di aggiungere l'evento al calendario? Compare il 31/12/2030?");
   };
 
   const provaEmail = () => {
@@ -122,60 +122,14 @@ export default function ProvaSalvataggio() {
 
   return (
     <ScrollView contentContainerStyle={s.p}>
-      <Text style={s.h}>Prove di salvataggio (dati finti)</Text>
-      <Text style={s.t}>
-        Fai le prove una alla volta e annota cosa succede. Non vengono letti né modificati i tuoi dati.
-      </Text>
-
-      <Text style={s.sub}>Lunghezza del codice di prova</Text>
-      <View style={s.riga}>
-        {LUNGHEZZE.map((l) => (
-          <Pressable key={l} onPress={() => setN(l)} style={[s.chip, n === l && s.chipOn]}>
-            <Text style={[s.chipT, n === l && { color: "#fff" }]}>{l} caratteri</Text>
-          </Pressable>
-        ))}
-      </View>
-
-      {/* Prova 1: gestore delle password */}
-      {el(
-        "form",
-        {
-          id: "modulo-prova",
-          method: "get",
-          action: "/prova-salvataggio",
-          target: "invio-nascosto",
-          style: { position: "absolute", left: -9999, top: 0, width: 1, height: 1, overflow: "hidden" },
-        },
-        el("input", { type: "text", name: "username", autoComplete: "username", defaultValue: "TutelApp prova" }),
-        el("input", { type: "password", name: "password", autoComplete: "new-password", value: testo, readOnly: true }),
-        el("button", { type: "submit" }, "ok"),
-      )}
-      {el("iframe", { name: "invio-nascosto", title: "invio", style: { display: "none" } })}
-
-      <Pressable style={s.b} onPress={provaPassword}>
-        <Text style={s.bt}>1 · Salva nel gestore password</Text>
-      </Pressable>
-      <Pressable style={s.b} onPress={provaCalendarioFile}>
-        <Text style={s.bt}>2a · Evento in calendario (menu)</Text>
-      </Pressable>
-      <Pressable style={s.b} onPress={provaCalendarioScarica}>
-        <Text style={s.bt}>2b · Evento in calendario (scarica)</Text>
-      </Pressable>
-      <Pressable style={s.b} onPress={provaEmail}>
-        <Text style={s.bt}>3 · Email a me stesso</Text>
-      </Pressable>
-      <Pressable style={s.b} onPress={provaTesto}>
-        <Text style={s.bt}>4 · Condividi come testo (Note)</Text>
+      <Text style={s.h}>Prova</Text>
+      <Text style={s.t}>Tocca il tasto: il telefono ti propone di aggiungere l'evento al calendario. Dati finti.</Text>
+      <Pressable style={s.b} onPress={provaCalendarioScarica} accessibilityRole="button" accessibilityLabel="Salva">
+        <Text style={s.bt}>Salva</Text>
       </Pressable>
 
       {esito ? <Text style={s.esito}>{esito}</Text> : null}
 
-      <Text style={s.sub}>Il tuo telefono</Text>
-      {info.map((r) => (
-        <Text key={r} style={s.t}>
-          • {r}
-        </Text>
-      ))}
     </ScrollView>
   );
 }
