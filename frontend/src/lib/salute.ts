@@ -144,10 +144,7 @@ export const FARMACIE_TURNO: Record<string, FarmacieTurno> = {
     "titolo": "Federfarma Forlì-Cesena",
     "url": "https://www.forli-cesena.federfarma.it/Home/Servizi-al-cittadino/Turni-farmacie-Forli-Cesena.aspx"
   },
-  "MO": {
-    "titolo": "AUSL di Modena",
-    "url": "https://www.ausl.mo.it/trova-farmacie/"
-  },
+  "MO": null,
   "RA": {
     "titolo": "AUSL della Romagna – Ravenna",
     "url": "https://www.auslromagna.it/luoghi/farmacie/farmacie-turno-ravenna"
@@ -246,7 +243,7 @@ export const FARMACIE_TURNO: Record<string, FarmacieTurno> = {
   },
   "BR": {
     "titolo": "ASL Brindisi – PugliaSalute",
-    "url": "https://www.sanita.puglia.it/web/asl-brindisi/gestione-farmacie-di-turno"
+    "url": "https://www.sanita.puglia.it/web/asl-brindisi/farmacie-di-turno"
   },
   "SS": {
     "titolo": "Federfarma Sassari",
