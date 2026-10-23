@@ -288,3 +288,34 @@ export function creaIcs(eventi: Evento[], nomeComune: string): string {
   righe.push("END:VCALENDAR");
   return righe.join("\r\n");
 }
+
+/**
+ * Promemoria mensile "Salva di nuovo la copia": un evento che si ripete ogni mese.
+ * NON contiene dati né codici: è solo un ricordo, così nessun segreto finisce nel calendario.
+ */
+export function creaIcsPromemoriaCopia(inizio = new Date()): string {
+  const adesso = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  const primo = new Date(inizio.getFullYear(), inizio.getMonth() + 1, Math.min(inizio.getDate(), 28));
+  const fine = new Date(primo.getFullYear(), primo.getMonth(), primo.getDate() + 1);
+  return [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//TutelApp//Copia//IT",
+    "CALSCALE:GREGORIAN",
+    "BEGIN:VEVENT",
+    "UID:promemoria-copia@tutelapp",
+    `DTSTAMP:${adesso}`,
+    `DTSTART;VALUE=DATE:${icsData(primo)}`,
+    `DTEND;VALUE=DATE:${icsData(fine)}`,
+    "RRULE:FREQ=MONTHLY",
+    `SUMMARY:${icsTesto("Salva di nuovo la copia di TutelApp")}`,
+    `DESCRIPTION:${icsTesto("Apri TutelApp, vai su «Una copia dei tuoi dati» e tocca «Salva una copia». Ci vuole un minuto.")}`,
+    "BEGIN:VALARM",
+    "ACTION:DISPLAY",
+    `DESCRIPTION:${icsTesto("Salva di nuovo la copia di TutelApp")}`,
+    "TRIGGER:PT9H",
+    "END:VALARM",
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ].join("\r\n");
+}

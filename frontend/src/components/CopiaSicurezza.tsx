@@ -7,6 +7,8 @@ import { Platform, Pressable, StyleSheet, Text, View } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
 import { colors, radius, spacing, topics } from "@/src/theme";
+import { creaIcsPromemoriaCopia } from "@/src/lib/scadenze";
+import { scaricaFile } from "@/src/lib/documenti";
 import { AVVISO_ICONA, applicaCopia, consegnaCopia, dovePuoiTrovarla, leggiCopia, scegliFileCopia } from "@/src/lib/copia";
 
 const AVVISO_DATI =
@@ -113,6 +115,17 @@ export function CopiaSicurezzaSezione() {
     }
   };
 
+  const ricorda = async () => {
+    setEsito("");
+    try {
+      const r = await scaricaFile("TutelApp-promemoria-copia.ics", creaIcsPromemoriaCopia(), "text/calendar", true);
+      if (r === "annullato") return;
+      setEsito("Promemoria pronto: conferma «Aggiungi» nel calendario. Ti ricorda ogni mese di salvare di nuovo la copia. Nel calendario non c'è nessun dato tuo.");
+    } catch {
+      setEsito("Non è stato possibile creare il promemoria. Riprova tra un attimo.");
+    }
+  };
+
   const scegli = async () => {
     setEsito("");
     setInAttesa(null);
@@ -154,13 +167,14 @@ export function CopiaSicurezzaSezione() {
       <Text style={s.sezioneTitolo}>Una copia dei tuoi dati</Text>
       <Text style={s.testo}>
         Appuntamenti, scadenze, tappe della pratica, dati delle lettere e salvati esistono solo qui.
-        Puoi salvarne una copia e tenerla dove preferisci: se cambi telefono o cancelli i dati del
-        browser, la ripristini. I documenti originali non sono nella copia: restano dove li hai presi
+        Salva una copia e tienila dove preferisci (File, iCloud, Google Drive): se cambi telefono o
+        cancelli i dati, la ripristini. La copia non passa da nessun nostro server. I documenti originali non sono nella copia: restano dove li hai presi
         (telefono, Foto, File).
       </Text>
       <Text style={[s.testo, { fontWeight: "700" }]}>{AVVISO_ICONA}</Text>
       <View style={s.riga}>
         <Tasto label="Salva una copia" icon="shield-checkmark-outline" onPress={salva} disabled={occupato} testID="copia-salva" />
+        <Tasto label="Ricordamelo ogni mese" icon="calendar-outline" onPress={ricorda} pieno={false} disabled={occupato} testID="copia-promemoria" />
         <Tasto label="Ripristina da una copia" icon="download-outline" onPress={scegli} pieno={false} disabled={occupato} testID="copia-ripristina" />
       </View>
       {inAttesa ? (
