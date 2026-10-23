@@ -81,10 +81,10 @@ export async function creaCopia(adesso = new Date()): Promise<{ testo: string; n
   return { testo: JSON.stringify(copia), nomeFile: nomeFileCopia(adesso), voci: Object.keys(dati).length };
 }
 
-/** Crea la copia e la consegna: sul sito si scarica il file, sul telefono si apre la condivisione. */
+/** Crea la copia e la consegna: il file resta sul telefono (sul sito si scarica, nell'app si apre il menu dei file). */
 export async function consegnaCopia(): Promise<{ voci: number; nomeFile: string; esito: "condiviso" | "scaricato" | "annullato" }> {
   const { testo, nomeFile, voci } = await creaCopia();
-  const esito = await scaricaFile(nomeFile, testo, "application/json", true);
+  const esito = await scaricaFile(nomeFile, testo, "application/json", false);
   return { voci, nomeFile, esito };
 }
 
