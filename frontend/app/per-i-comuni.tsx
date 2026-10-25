@@ -117,6 +117,15 @@ export default function PerIComuni() {
     ).catch(() => {});
   };
 
+  // Il libretto è un file del sito (frontend/public/libretto.pdf): si apre in una nuova scheda
+  const apriLibretto = () => {
+    if (Platform.OS === "web") {
+      window.open("/libretto.pdf", "_blank", "noopener");
+    } else {
+      Linking.openURL(`https://${SITO_TUTELAPP.replace(/^https?:\/\//, "")}/libretto.pdf`).catch(() => {});
+    }
+  };
+
   if (stato === "inviato") {
     return (
       <Pagina titolo="Per i Comuni" testID="per-i-comuni-screen" salvabile={false}>
@@ -149,6 +158,17 @@ export default function PerIComuni() {
       >
         <Ionicons name="logo-youtube" size={18} color={colors.brandPrimaryDark} />
         <Text style={styles.linkTesto}>Guarda i video sul canale YouTube di TutelApp</Text>
+      </Pressable>
+
+      <Pressable
+        onPress={apriLibretto}
+        style={styles.link}
+        accessibilityRole="link"
+        accessibilityLabel="Scarica il libretto di TutelApp per i Comuni, in PDF"
+        testID="per-i-comuni-libretto"
+      >
+        <Ionicons name="document-text-outline" size={18} color={colors.brandPrimaryDark} />
+        <Text style={styles.linkTesto}>Scarica il libretto</Text>
       </Pressable>
 
       <Campo label="Comune o ente" value={ente} onChange={setEnte} placeholder="Es. Comune di Sarzana" testID="per-i-comuni-ente" />
