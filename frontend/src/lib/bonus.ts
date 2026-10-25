@@ -86,7 +86,7 @@ export const BONUS: Bonus[] = [
     perChi:
       "Privati cittadini residenti in Liguria. Requisiti, importi e soglie ISEE sono nella deliberazione della Giunta regionale n. 345 del 6 agosto 2026.",
     cosa:
-      "Tre misure della Regione: bonus per assistenti familiari (badanti), prestazioni integrate per la gravissima disabilità e bonus baby sitter. La pagina della Regione non scrive gli importi: sono nella deliberazione.",
+      "Tre misure della Regione. Bonus assistenti familiari (badanti): 600 euro al mese per chi non riceve il fondo grave disabilità, 250 euro al mese per chi lo riceve già, con ISEE sociosanitario ordinario fino a 35.000 euro. Prestazioni integrate per la gravissima disabilità: fino a 1.200 euro al mese per chi non riceve il bonus badanti, con ISEE fino a 50.000 euro (65.000 per i minorenni). Bonus baby sitter: 350 euro al mese, per figli fino a 15 anni (18 con disabilità), ISEE fino a 35.000 euro.",
     stato: "chiuso",
     quando: "Domande dal 1 settembre 2026 alle ore 17.30 del 15 ottobre 2026. Finanziamento fino a esaurimento dei fondi.",
     comeSiChiede:
@@ -95,8 +95,8 @@ export const BONUS: Bonus[] = [
       label: "Regione Liguria · Bonus badanti, gravissima disabilità e baby sitter 2026",
       url: "https://www.regione.liguria.it/homepage-bandi-e-avvisi/publiccompetition/4711:bonus-badanti-grave-disabilita-baby-sitter-2026.html",
     },
-    verificatoIl: "21/10/2026",
-    nota: "Pagina pubblicata dalla Regione il 10/08/2026. Il termine per le domande è scaduto: chiedi al Comune o al Distretto se ci saranno nuove aperture.",
+    verificatoIl: "25/10/2026",
+    nota: "Importi dal comunicato della Giunta regionale \"Welfare, 7 milioni di euro per bonus badanti e baby sitter\". Pagina pubblicata dalla Regione il 10/08/2026. Il termine per le domande è scaduto: chiedi al Comune o al Distretto se ci saranno nuove aperture.",
   },
 
   // ------------------------------------------------------------ COMUNE DI SARZANA
@@ -433,6 +433,110 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "08/10/2026",
     nota: "Gli importi vengono dalla pagina di Lombardia Facile dedicata alla DGR 6320 del 15/06/2026; la pagina della Regione non scrive gli importi.",
+  },
+
+  // ------------------------------------------------------------ COMUNE DI GENOVA
+  // Fonti: pagine dei servizi del Comune di Genova, lette il 25/10/2026.
+  {
+    id: "genova-doge-domiciliarita-disabili",
+    regione: "Liguria",
+    comuni: ["genova"],
+    titolo: "Assistenza a domicilio DO.GE (Sistema Domiciliarità del Comune di Genova)",
+    perChi: "Persone con disabilità con più di 18 anni, residenti a Genova, con ISEE in corso di validità inferiore a 12.000 euro.",
+    cosa:
+      "Assistenza a casa da uno dei sei fornitori accreditati dal Comune, a tariffe concordate e controllate dal Comune: aiuto per alzarsi e andare a letto, igiene personale, preparazione dei pasti, pulizia della casa; assistente familiare (badante), anche per sostituzioni; interventi educativi per l'autonomia; aiuto per i contratti di lavoro. L'attivazione dipende dal progetto concordato con l'assistente sociale.",
+    stato: "attivo",
+    comeSiChiede:
+      "Vai senza prenotazione all'Ufficio dei Servizi Sociali del tuo Municipio (lunedì, mercoledì e venerdì 9:00–11:00; Municipio VIII fino alle 12:00; Municipio VII: Pegli venerdì, Prà mercoledì, Voltri lunedì). Per le persone con disabilità anche U.O. Area Disabilità, Matitone, Via di Francia 1, 6° piano, tel. 010 5577444. Le tariffe dei fornitori sono sul sito genovacare.it.",
+    fonte: {
+      label: "Comune di Genova · Sistema Domiciliarità del Comune di Genova (DO.GE)",
+      url: "https://www.comune.genova.it/servizi/salute-benessere-e-assistenza/sistema-domiciliarita-del-comune-di-genova-doge",
+    },
+    verificatoIl: "25/10/2026",
+  },
+  {
+    id: "genova-trasporto-scolastico-disabili",
+    regione: "Liguria",
+    comuni: ["genova"],
+    titolo: "Trasporto scolastico gratuito per alunni con disabilità",
+    perChi: "Famiglie residenti a Genova con figli con disabilità iscritti alla scuola dell'infanzia o al primo ciclo (primaria e secondaria di primo grado) nel territorio comunale.",
+    cosa: "Il trasporto da casa a scuola con vettura. È gratuito. Per una scuola fuori Genova il Comune copre solo il tragitto dentro i confini comunali.",
+    stato: "attivo",
+    quando: "Le domande si aprono di solito a maggio; si può presentare domanda anche durante l'anno scolastico, valutata nelle commissioni successive.",
+    comeSiChiede:
+      "Domanda online sul sito del Comune con SPID, CIE o CNS. Allegati: la richiesta del medico (modulo 1 \"Relazione sanitaria\") e la copia del certificato di disabilità (Legge 104/1992) valido; se è scaduto, anche la ricevuta INPS della domanda di revisione. Informazioni: numero verde 800 809 009 (lunedì–venerdì 8:30–13:00), trasportoscolastico@comune.genova.it.",
+    fonte: {
+      label: "Comune di Genova · Trasporto scolastico per alunni con disabilità",
+      url: "https://www.comune.genova.it/servizi/educazione-e-formazione/trasporto-scolastico-alunni-con-disabilita",
+    },
+    verificatoIl: "25/10/2026",
+  },
+  {
+    id: "genova-cude-contrassegno",
+    regione: "Liguria",
+    comuni: ["genova"],
+    titolo: "Contrassegno parcheggio per persone con disabilità (CUDE)",
+    perChi: "Residenti a Genova con capacità di deambulazione impedita o sensibilmente ridotta, accertata dalla Commissione medico legale dell'ASL o dal verbale INPS.",
+    cosa: "Il contrassegno europeo CUDE: permette la sosta negli spazi riservati e il transito nelle zone a traffico limitato in tutta Europa. È personale, non legato a un'auto: si espone in originale quando la persona con disabilità è a bordo.",
+    stato: "attivo",
+    comeSiChiede:
+      "Richiesta online sul sito del Comune con SPID, CIE o CNS. Servono: certificato della Commissione medico legale ASL o verbale INPS con la dicitura sulla deambulazione, due foto tessera, documento d'identità; per il contrassegno temporaneo due marche da bollo da 16 euro; per il rinnovo del permanente il certificato del medico curante (modello C4, non più vecchio di 180 giorni). Dopo l'approvazione (su App IO o Fascicolo del cittadino) si ritira allo sportello di Genova Parcheggi, dove si paga e serve la presenza della persona. Genova Parcheggi: tel. 010 539871 (lunedì–venerdì 8:15–16:30), servizioclienti@gepark.com.",
+    fonte: {
+      label: "Comune di Genova · Richiedere permesso per parcheggio persone con disabilità",
+      url: "https://www.comune.genova.it/servizi/mobilita-e-trasporti/richiedere-permesso-parcheggio-invalidi",
+    },
+    verificatoIl: "25/10/2026",
+  },
+  {
+    id: "genova-parcheggio-personalizzato",
+    regione: "Liguria",
+    comuni: ["genova"],
+    titolo: "Parcheggio riservato personalizzato vicino a casa o al lavoro",
+    perChi:
+      "Titolari di CUDE permanente con gravissimo disagio nel camminare o che non camminano, che usano spesso l'auto e non hanno un box o posto auto accessibile vicino a casa (o al lavoro, se guidano).",
+    cosa: "Uno stallo riservato con il cartello che riporta il numero del proprio CUDE. Decide una Commissione tecnica (Mobilità, Polizia Locale, Disability Manager, Medicina legale ASL3, Consulta per la disabilità, Politiche sociali).",
+    stato: "attivo",
+    comeSiChiede:
+      "Richiesta online sul sito del Comune. Informazioni: parcheggidisabili@comune.genova.it, tel. 010 5573341 (mercoledì 10:00–12:00), oppure lo sportello del tuo Municipio.",
+    fonte: {
+      label: "Comune di Genova · Gestione sosta - Parcheggi disabili personalizzati",
+      url: "https://www.comune.genova.it/servizi/mobilita-e-trasporti/gestione-sosta-parcheggi-disabili-personalizzati",
+    },
+    verificatoIl: "25/10/2026",
+  },
+  {
+    id: "genova-esenzione-passo-carrabile",
+    regione: "Liguria",
+    comuni: ["genova"],
+    titolo: "Esenzione dal canone del passo carrabile per persone con disabilità",
+    perChi:
+      "Persone con disabilità, o loro conviventi, con grave limitazione della capacità di camminare, pluriamputazioni, capacità di deambulazione sensibilmente ridotta o capacità motorie ridotte o impedite, scritte nei verbali delle commissioni mediche.",
+    cosa: "Non si paga il canone OSAP del passo carrabile. Il servizio è gratuito.",
+    stato: "attivo",
+    comeSiChiede:
+      "Modulo online sul sito del Comune (SPID, CIE o CNS), oppure il modulo PDF via PEC a comunegenova@postemailcertificata.it con copia a cosap@comune.genova.it. Ufficio Canone Occupazione Suolo: Via Antonio Cantore 3, 10° piano, stanza 24, lunedì–venerdì 8:30–12:30 e mercoledì anche 14:00–16:00, tel. 010 5575455.",
+    fonte: {
+      label: "Comune di Genova · Occupazione spazi e aree pubbliche: esenzione per persona con disabilità",
+      url: "https://www.comune.genova.it/servizi/tributi-finanze-e-contravvenzioni/occupazione-spazi-e-aree-pubbliche-esenzione-persona-con",
+    },
+    verificatoIl: "25/10/2026",
+  },
+  {
+    id: "genova-cohousing-disabili",
+    regione: "Liguria",
+    comuni: ["genova"],
+    titolo: "Convivenza e comunità alloggio (cohousing) per persone con disabilità",
+    perChi: "Persone con disabilità che vogliono sperimentare o costruire un percorso di autonomia.",
+    cosa:
+      "Ospitalità in appartamenti condivisi gestiti da associazioni che collaborano con il Comune, temporanea o definitiva, con un progetto sociosanitario personale (PAI) condiviso con la persona e la famiglia. Può prevedere supporto educativo e assistenziale; può essere chiesto un contributo alle spese dell'alloggio.",
+    stato: "attivo",
+    comeSiChiede:
+      "Chiedi all'Ufficio dei Servizi Sociali del tuo Municipio o al Polo cittadino per le disabilità: tel. 010 5577444, polodisabilita@comune.genova.it.",
+    fonte: {
+      label: "Comune di Genova · Soluzioni per la convivenza e comunità alloggio (Cohousing)",
+      url: "https://www.comune.genova.it/tutti-gli-argomenti/persona-con-disabilita/soluzioni-la-convivenza-e-comunita-alloggio-cohousing",
+    },
+    verificatoIl: "25/10/2026",
   },
 
   // ------------------------------------------------------------ COMUNE DI MILANO

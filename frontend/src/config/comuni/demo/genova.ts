@@ -3,8 +3,10 @@ import type { ComuneConfig } from "../types";
 // Comune di Genova (GE) — VERSIONE DIMOSTRATIVA (completata il 14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Fonte: pagina del Comune "Servizio di ascolto e orientamento sociale (Segretariato Sociale Professionale)", aggiornata il 20/03/2026 e controllata il 14/10/2026.
-// Sono riportati sedi, telefoni, email e orari scritti nella pagina. Non verificati: ASL3 (solo il sito).
-// Da fare: bonus del Comune, associazioni, sport e tempo libero.
+// Sono riportati sedi, telefoni, email e orari scritti nella pagina.
+// Aggiornamento 25/10/2026: numero unico 010 1010 (sito del Comune), Area Disabilità ricontrollata,
+// inserimenti lavorativi (UCIL), PUA e sportelli dei Distretti ASL3 8-13 (pagine ASL3 dei distretti),
+// servizi del Comune per la disabilità in bonus.ts, associazioni della provincia in associazioni.ts.
 export const genova: ComuneConfig = {
   slug: "genova",
   tipo: "comune",
@@ -18,10 +20,10 @@ export const genova: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "010 557111",
+  telefono: "010 1010",
   email: "",
   pec: "",
-  orari: "Ascolto per telefono: martedì 9:00–12:30 e giovedì 14:00–16:30 (si prenota al telefono). Sportelli senza prenotazione: orari diversi per ogni sede",
+  orari: "Numero unico del Comune 010 1010, numero verde URP 800 085 324. Ascolto per telefono: martedì 9:00–12:30 e giovedì 14:00–16:30 (si prenota al telefono). Sportelli senza prenotazione: orari diversi per ogni sede",
   sitoWeb: "https://www.comune.genova.it/tutti-gli-argomenti/questioni-sociali",
 
   logo: null,
@@ -42,8 +44,8 @@ export const genova: ComuneConfig = {
     },
     {
       icon: "accessibility-outline",
-      title: "Area Disabilità (Comune di Genova)",
-      subtitle: "Via di Francia 1, 6° piano (Matitone) · Tel. 010 5577444 · polodisabilita@comune.genova.it",
+      title: "Polo cittadino per le disabilità (Comune di Genova)",
+      subtitle: "Colloquio gratuito di informazione e orientamento su servizi, prestazioni e agevolazioni, per persone con disabilità e caregiver. Matitone, Via di Francia 1, 6° piano · Tel. 010 5577444 · polodisabilita@comune.genova.it",
       action: { type: "tel", value: "0105577444" },
     },
     {
@@ -101,10 +103,52 @@ export const genova: ComuneConfig = {
       action: { type: "tel", value: "0105574360" },
     },
     {
+      icon: "briefcase-outline",
+      title: "Inserimenti lavorativi (UCIL)",
+      subtitle: "Percorsi di avvicinamento al lavoro per persone fragili, su segnalazione dei servizi sociali. Via Fiasella 3, 1° piano · Tel. 010 5578464 (lun–gio 8:00–18:00, ven 8:00–13:00) · ucil@comune.genova.it",
+      action: { type: "tel", value: "0105578464" },
+    },
+    {
       icon: "medkit-outline",
-      title: "ASL3 Genovese",
-      subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
-      action: { type: "web", value: "https://www.asl3.liguria.it" },
+      title: "ASL3 · Punto Unico di Accesso (PUA) e sportelli dei Distretti",
+      subtitle: "Il PUA accoglie le richieste sociosanitarie (cure domiciliari, valutazioni, Dopo di Noi). Cerca il Distretto del tuo Municipio qui sotto. Centralino ASL3: 010 84911",
+      action: { type: "tel", value: "01084911" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "Distretto 8 Ponente (Municipio VII: Pegli, Prà, Voltri)",
+      subtitle: "Via Camozzini 15, Voltri · URP tel. 010 849 9674 / 9677 (lun–ven 8:30–12:30) · urp.piazzaodicini@asl3.liguria.it. Sportello unico: servizi sanitari, invalidità civile e Legge 104",
+      action: { type: "tel", value: "0108499674" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "Distretto 9 Medio Ponente (Municipi II e VI)",
+      subtitle: "Casa della Comunità Fiumara (Sampierdarena) · PUA tel. 010 849 7066 / 7045 (lun–ven 8:00–14:00). Casa della Comunità di Sestri Ponente: reception tel. 010 849 7991",
+      action: { type: "tel", value: "0108497066" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "Distretto 10 Valpolcevera (Municipio V)",
+      subtitle: "Segreteria: Via Bonghi 6, Bolzaneto · Tel. 010 849 9439 / 9486 / 9463 (lun–ven 8:30–12:30) · segreteria.distrettoss10@asl3.liguria.it. Casa della Comunità Valpolcevera: Via Pastorino 32",
+      action: { type: "tel", value: "0108499439" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "Distretto 11 Centro (Municipi I e VIII)",
+      subtitle: "Poliambulatorio Via Assarotti 35 · Sportello Unico Distrettuale tel. 010 849 6099 · Cure domiciliari tel. 010 849 4531 / 4547",
+      action: { type: "tel", value: "0108496099" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "Distretto 12 Valbisagno (Municipi III e IV)",
+      subtitle: "Casa della Comunità Via Archimede 30A (San Fruttuoso) e Casa della Comunità Struppa · PUA tel. 010 849 4087 / 4918 · Cure domiciliari tel. 010 849 4831 / 4825",
+      action: { type: "tel", value: "0108494087" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "Distretto 13 Levante (Municipio IX)",
+      subtitle: "Casa della Comunità di Quarto, Largo Cattanei 4 · PUA tel. 010 849 6431 · Cure domiciliari tel. 010 849 6738 (lun–ven 8:30–12:30) · sportellounicodistrettuale.distretto13@asl3.liguria.it",
+      action: { type: "tel", value: "0108496431" },
     },
   ],
 

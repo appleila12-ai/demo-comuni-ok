@@ -12,6 +12,7 @@
 // Aggiornamento 20/10/2026: Anffas Sardegna (Cagliari) dall'elenco del sito nazionale.
 // Aggiornamento 21/10/2026: raggio di 30 km (coordinate dei municipi da opendatasicilia/comuni-italiani, basato su ISTAT e IndicePA).
 // Aggiornamento 21/10/2026: Ca.Te.Ri.Na (Sarzana), recapiti forniti il 21/10/2026.
+// Aggiornamento 25/10/2026: provincia di Genova (Anffas, ANGSA, UICI, Chiossone, AISM, UILDM).
 
 import { comune } from "@/src/config/comune";
 import COORDINATE from "@/src/content/coordinate-comuni.json";
@@ -360,6 +361,119 @@ PER_PROVINCIA.MS.volontariato.unshift({
   email: "info@anffasms.it",
   sito: "https://www.anffasms.it",
   comuni: ["carrara"],
+});
+
+// Genova (GE): recapiti letti il 25/10/2026 sul sito nazionale Anffas (elenco "Dove siamo"),
+// sul sito del Consiglio regionale UICI Liguria, sul sito AISM, sul sito UILDM Genova
+// (anche nella "Mappatura degli Enti del Terzo Settore" del Comune di Genova), sul sito
+// della Fondazione Chiossone e sulla scheda ANGSA Liguria del sito nazionale ANGSA.
+// Tutti gli enti risultano iscritti al RUNTS (elenco ufficiale al 25/10/2026).
+PER_PROVINCIA.GE = PER_PROVINCIA.GE ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.GE.volontariato.unshift(
+  {
+    nome: "Anffas Genova",
+    cosa: "Famiglie e persone con disabilità intellettiva e disturbi del neurosviluppo: servizi per la persona, sostegno e tutela dei diritti delle famiglie.",
+    dove: "Via della Libertà 6 int. 5-6, 16129 Genova",
+    telefono: "010 5762511",
+    email: "associazione@anffas-genova.it",
+    sito: "https://www.anffas-genova.org",
+    comuni: ["genova"],
+  },
+  {
+    nome: "ANGSA Liguria",
+    cosa: "Genitori di persone con autismo: tutela dei diritti, sostegno alle famiglie e informazione.",
+    dove: "Genova",
+    telefono: "010 6533838",
+    email: "liguria@angsa.it",
+    comuni: ["genova"],
+  },
+  {
+    nome: "UICI – Unione Italiana dei Ciechi e degli Ipovedenti, sezione di Genova",
+    cosa: "Persone cieche e ipovedenti: tutela dei diritti, assistenza nelle pratiche, servizi e attività.",
+    dove: "Via Caffaro 6/1, 16124 Genova",
+    telefono: "010 2510049",
+    email: "uicge@uici.it",
+    sito: "https://www.uiciliguria.it/blog/genova-sezione-territoriale/",
+    comuni: ["genova"],
+  },
+  {
+    nome: "UICI – sezione di Chiavari",
+    cosa: "Persone cieche e ipovedenti del Tigullio: tutela dei diritti, assistenza e attività.",
+    dove: "Via Eugenio Sambuceti 22/3, 16043 Chiavari",
+    telefono: "0185 307650",
+    email: "uicchi@uici.it",
+    sito: "https://www.uiciliguria.it/blog/chiavari-sezione-territoriale/",
+    comuni: ["chiavari"],
+  },
+  {
+    nome: "Fondazione David Chiossone",
+    cosa: "Riabilitazione e servizi per persone con disabilità visiva, con pluridisabilità e per minori con autismo o disabilità dello sviluppo.",
+    dove: "Corso Armellini 11, 16122 Genova",
+    telefono: "010 83421",
+    email: "info@chiossone.it",
+    sito: "https://www.chiossone.it",
+    comuni: ["genova"],
+  },
+  {
+    nome: "AISM – Associazione Italiana Sclerosi Multipla, sezione di Genova",
+    cosa: "Persone con sclerosi multipla e familiari: informazione, sostegno e servizi, anche di trasporto.",
+    dove: "Via Alizeri 3B (cancello), 16126 Genova · lun–ven 9:00–13:00 e 14:00–17:00",
+    telefono: "010 2512296",
+    email: "aismgenova@aism.it",
+    sito: "https://www.aism.it/struttura/sezione-provinciale-aism-genova/home-page",
+    comuni: ["genova"],
+  },
+  {
+    nome: "AISM – Gruppo operativo Tigullio",
+    cosa: "Persone con sclerosi multipla del Tigullio: informazione e sostegno.",
+    dove: "Via Colonnello E. Franceschi 42, 16043 Chiavari",
+    telefono: "0185 302700",
+    email: "aism.tigullio@aism.it",
+    sito: "https://www.aism.it/struttura/sezione-provinciale-aism-genova/contattaci",
+    comuni: ["chiavari"],
+  },
+  {
+    nome: "UILDM Genova",
+    cosa: "Persone con distrofia muscolare e malattie neuromuscolari: assistenza domiciliare, consulenze, trasporto con mezzi attrezzati, sport (hockey in carrozzina, baskin), laboratori e soggiorno estivo.",
+    dove: "Viale Brigate Partigiane 14/2 sc. sx, 16129 Genova",
+    telefono: "010 5955405",
+    email: "info@uildmge.it",
+    sito: "https://www.uildmge.it",
+    comuni: ["genova"],
+  },
+  {
+    nome: "Anffas Liguria",
+    cosa: "Coordinamento regionale delle associazioni Anffas: famiglie di persone con disabilità intellettiva e relazionale.",
+    dove: "Salita Banchi 20, 16035 Rapallo",
+    telefono: "0185 289478",
+    email: "regionale@anffas.liguria.it",
+  },
+  {
+    nome: "Anffas Rapallo – Villa Gimelli",
+    cosa: "Famiglie e persone con disabilità intellettiva e disturbi del neurosviluppo del Tigullio occidentale.",
+    dove: "Salita Banchi 20, 16035 Rapallo",
+    telefono: "0185 289478",
+    email: "info@villagimelli.it",
+    sito: "https://www.villagimelli.it",
+    comuni: ["rapallo"],
+  },
+  {
+    nome: "Anffas Tigullio Est",
+    cosa: "Famiglie e persone con disabilità intellettiva e relazionale del Tigullio orientale.",
+    dove: "Via San Francesco 27, 16043 Chiavari",
+    telefono: "0185 325097",
+    email: "anffas.chiavari@libero.it",
+    sito: "https://www.anffastigullioest.it",
+    comuni: ["chiavari"],
+  },
+);
+PER_PROVINCIA.GE.sport.unshift({
+  nome: "Gruppo Sportivo Liguria (Anffas Genova)",
+  cosa: "Attività sportive per persone con disabilità intellettiva e relazionale.",
+  dove: "Via della Libertà 6 int. 6, 16129 Genova",
+  telefono: "010 5762505",
+  email: "gr.sportivo@anffas-genova.it",
+  comuni: ["genova"],
 });
 
 PER_PROVINCIA.MI = PER_PROVINCIA.MI ?? { volontariato: [], sport: [] };
