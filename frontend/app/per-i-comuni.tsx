@@ -117,12 +117,12 @@ export default function PerIComuni() {
     ).catch(() => {});
   };
 
-  // Il libretto è un file del sito (frontend/public/libretto.pdf): si apre in una nuova scheda
+  // La brochure è un file del sito (frontend/public/brochure.pdf; libretto.pdf resta per i vecchi indirizzi): si apre in una nuova scheda
   const apriLibretto = () => {
     if (Platform.OS === "web") {
-      window.open("/libretto.pdf", "_blank", "noopener");
+      window.open("/brochure.pdf", "_blank", "noopener");
     } else {
-      Linking.openURL(`https://${SITO_TUTELAPP.replace(/^https?:\/\//, "")}/libretto.pdf`).catch(() => {});
+      Linking.openURL(`https://${SITO_TUTELAPP.replace(/^https?:\/\//, "")}/brochure.pdf`).catch(() => {});
     }
   };
 
@@ -164,11 +164,11 @@ export default function PerIComuni() {
         onPress={apriLibretto}
         style={styles.link}
         accessibilityRole="link"
-        accessibilityLabel="Scarica il libretto di TutelApp per i Comuni, in PDF"
-        testID="per-i-comuni-libretto"
+        accessibilityLabel="Scarica la brochure di TutelApp per i Comuni, in PDF"
+        testID="per-i-comuni-brochure"
       >
         <Ionicons name="document-text-outline" size={18} color={colors.brandPrimaryDark} />
-        <Text style={styles.linkTesto}>Scarica il libretto</Text>
+        <Text style={styles.linkTesto}>Scarica la brochure</Text>
       </Pressable>
 
       <Campo label="Comune o ente" value={ente} onChange={setEnte} placeholder="Es. Comune di Sarzana" testID="per-i-comuni-ente" />
