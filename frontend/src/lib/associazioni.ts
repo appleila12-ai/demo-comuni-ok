@@ -12,7 +12,9 @@
 // Aggiornamento 20/10/2026: Anffas Sardegna (Cagliari) dall'elenco del sito nazionale.
 // Aggiornamento 21/10/2026: raggio di 30 km (coordinate dei municipi da opendatasicilia/comuni-italiani, basato su ISTAT e IndicePA).
 // Aggiornamento 21/10/2026: Ca.Te.Ri.Na (Sarzana), recapiti forniti il 21/10/2026.
-// Aggiornamento 25/10/2026: provincia di Genova (Anffas, ANGSA, UICI, Chiossone, AISM, UILDM).
+// Aggiornamento 25/10/2026: provincia di Genova (Anffas, ANGSA, UICI, Chiossone, AISM, UILDM, ENS, ANGLAT, Asperger,
+// e dall'elenco ASL3 'Comitato Misto Consultivo - Associazioni' agg. 18/06/2025: Consulta disabilità, Alzheimer Liguria,
+// ALFAPP, Parkinson, tutela del malato, AVO).
 
 import { comune } from "@/src/config/comune";
 import COORDINATE from "@/src/content/coordinate-comuni.json";
@@ -442,6 +444,94 @@ PER_PROVINCIA.GE.volontariato.unshift(
     comuni: ["genova"],
   },
   {
+    nome: "Consulta per la tutela dei diritti delle persone con disabilità (Comune e Città metropolitana di Genova)",
+    cosa: "Riunisce 34 associazioni e porta agli enti pubblici proposte su scuola, lavoro, barriere, trasporti, riabilitazione e sanità. Ha uno sportello di ascolto su prenotazione.",
+    dove: "Genova",
+    telefono: "010 5577211",
+    email: "consulta@comune.genova.it",
+    comuni: ["genova"],
+  },
+  {
+    nome: "ENS – Ente Nazionale Sordi, sezione di Genova",
+    cosa: "Persone sorde e famiglie: tutela dei diritti, informazioni, servizi e attività.",
+    dove: "Via Peschiera 7, 16122 Genova",
+    telefono: "010 880061",
+    email: "genova@ens.it",
+    sito: "https://genova.ens.it",
+    comuni: ["genova"],
+  },
+  {
+    nome: "Gruppo Asperger Liguria",
+    cosa: "Associazione di promozione sociale per persone autistiche senza disabilità intellettiva e per le loro famiglie.",
+    dove: "Genova",
+    telefono: "351 7470145",
+    email: "asperger.liguria@libero.it",
+    sito: "https://aspergerliguria.it",
+    comuni: ["genova"],
+  },
+  {
+    nome: "ANGLAT – sezione di Genova e provincia",
+    cosa: "Mobilità e trasporti per persone con disabilità: patente speciale (con autoscuole adattate), agevolazioni fiscali per l'auto, CUDE e posti riservati, barriere architettoniche, turismo accessibile.",
+    dove: "Via Inferiore Rio Maggiore 4 (cancello), Molassana, Genova",
+    telefono: "010 8361546",
+    email: "genova@anglat.org",
+    sito: "https://genova.anglat.it",
+    comuni: ["genova"],
+  },
+  {
+    nome: "Associazione Alzheimer Liguria",
+    cosa: "Sostegno gratuito a persone con Alzheimer e familiari: sportello di ascolto, incontri informativi, consulenze.",
+    dove: "Via Cesarea 5/1, 16121 Genova · sportello lun–ven 9:00–12:00",
+    telefono: "010 594076",
+    email: "alzheimer.liguria@libero.it",
+    sito: "https://www.alzheimerliguria.it",
+    comuni: ["genova"],
+  },
+  {
+    nome: "ALFAPP – Associazione Ligure Famiglie Pazienti Psichiatrici",
+    cosa: "Accoglienza e consulenza per persone con disagio psichiatrico e famiglie, gruppi di aiuto, laboratori, progetti per lavoro e autonomia abitativa.",
+    dove: "Via Malta, Genova · accoglienza lun–ven 15:00–19:00",
+    telefono: "010 540740",
+    email: "alfapp.genova@gmail.com",
+    sito: "https://www.alfapp.it",
+    comuni: ["genova"],
+  },
+  {
+    nome: "Associazione Ligure Parkinson",
+    cosa: "Ascolto e informazioni per persone con Parkinson, attività manuali e fisiche per mantenere l'autonomia.",
+    dove: "Genova (attività presso l'Istituto Don Orione)",
+    telefono: "347 2902857",
+    email: "info@alpgenova.it",
+    sito: "https://www.alpgenova.com",
+    comuni: ["genova"],
+  },
+  {
+    nome: "Tribunale per i diritti del malato – Cittadinanzattiva",
+    cosa: "Tutela dei diritti dei malati e segnalazioni sulla sanità, anche con consulenza legale gratuita. Si concorda un appuntamento per telefono.",
+    dove: "Ospedale Micone, Largo Nevio Rosso 2, Sestri Ponente",
+    telefono: "329 9308677",
+    email: "tribunalemalato.ge@libero.it",
+    comuni: ["genova"],
+  },
+  {
+    nome: "Centri Liguri per la Tutela dei diritti del Malato «M. Chighine»",
+    cosa: "Sportelli di ascolto e segnalazioni sulle prestazioni sanitarie negli ospedali e poliambulatori di Genova.",
+    dove: "Villa Scassi (mar e gio 9:30–11:30), Polo Levante via Maggio 6 (lun 9:00–11:30), Ospedale Gallino (mer 9:00–12:30), Poliambulatorio via Assarotti 35 (mer 9:00–11:30)",
+    telefono: "010 5557590",
+    email: "dirittimalato@tiscalinet.it",
+    sito: "https://www.tutela-del-malato.it",
+    comuni: ["genova"],
+  },
+  {
+    nome: "AVO Genova – Volontari Ospedalieri",
+    cosa: "Volontari che offrono compagnia e ascolto gratuiti negli ospedali, nelle case di riposo e nel centro per disabili di via Maggio.",
+    dove: "Genova",
+    telefono: "010 5557595",
+    email: "segreteria@avogenova.it",
+    sito: "https://www.avogenova.org",
+    comuni: ["genova"],
+  },
+  {
     nome: "Anffas Liguria",
     cosa: "Coordinamento regionale delle associazioni Anffas: famiglie di persone con disabilità intellettiva e relazionale.",
     dove: "Salita Banchi 20, 16035 Rapallo",
@@ -468,6 +558,15 @@ PER_PROVINCIA.GE.volontariato.unshift(
   },
 );
 PER_PROVINCIA.GE.sport.unshift({
+  nome: "Spiagge inclusive del Comune di Genova (Genoa Sea Inclusion 2026)",
+  cosa: "Sei spiagge attrezzate per persone con disabilità nella stagione estiva: Vesima (Janua), Voltri (Spiaggia dei bambini), Pegli 2, Easy Beach, Capo Marina, Boccadasse. Il Comune pubblica una scheda per ogni spiaggia.",
+  dove: "Genova",
+  telefono: "010 1010",
+  sito: "https://www.comune.genova.it/tutti-gli-argomenti/demanio-marittimo/schede-spiagge-accessibili-genoa-sea-inclusion-2026",
+  comuni: ["genova"],
+},
+{
+
   nome: "Gruppo Sportivo Liguria (Anffas Genova)",
   cosa: "Attività sportive per persone con disabilità intellettiva e relazionale.",
   dove: "Via della Libertà 6 int. 6, 16129 Genova",
