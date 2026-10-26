@@ -3,7 +3,9 @@ import type { ComuneConfig } from "../types";
 // Comune di Pisa (PI) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Home del sito del Comune, controllata il 14 ottobre 2026: la pagina dei servizi sociali va cercata e confermata.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// 26/10/2026: email dell'Ufficio Sociale (affari.sociali@comune.pisa.it, dati forniti da Ilaria dalla pagina del Comune).
+// Indirizzo (Palazzo Gambacorti) dalle pagine del Comune, dati forniti da Ilaria il 26/10/2026. Orari di ricevimento non confermati: non pubblicati (quelli URP non valgono per l'Ufficio Sociale).
+// Da fare: orari, associazioni (Albo comunale della disabilità, file "Elenco Associazioni 2026"), sport e tempo libero.
 export const pisa: ComuneConfig = {
   slug: "pisa",
   tipo: "comune",
@@ -16,9 +18,9 @@ export const pisa: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
+  indirizzo: "Palazzo Gambacorti, via degli Uffizi 1, 56100 Pisa (PI)",
   telefono: "050 910111",
-  email: "",
+  email: "affari.sociali@comune.pisa.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.pisa.it",

@@ -3,7 +3,8 @@ import type { ComuneConfig } from "../types";
 // Comune di Scandicci (FI) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (18 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sito del Comune e pagina "Salute, benessere e assistenza" verificati il 18/10/2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// 26/10/2026: recapiti e orari della U.O. Politiche abitative e sociali – Promozione sociale (dati forniti da Ilaria dalla scheda del Comune). Ricevimento solo su appuntamento.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const scandicci: ComuneConfig = {
   slug: "scandicci",
   tipo: "comune",
@@ -16,11 +17,11 @@ export const scandicci: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
+  indirizzo: "Municipio, Piazzale della Resistenza 1, 50018 Scandicci (FI)",
+  telefono: "055 7591257",
+  email: "promozione_sociale@comune.scandicci.fi.it",
   pec: "",
-  orari: "",
+  orari: "Solo su appuntamento. Per telefonare: lun, mer, ven 9:00–13:00; mar e gio 9:00–13:00 e 15:00–17:00",
   sitoWeb: "https://www.comune.scandicci.fi.it",
 
   logo: null,
