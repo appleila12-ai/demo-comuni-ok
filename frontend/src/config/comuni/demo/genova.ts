@@ -7,6 +7,7 @@ import type { ComuneConfig } from "../types";
 // Aggiornamento 25/10/2026: numero unico 010 1010 (sito del Comune), Area Disabilità ricontrollata,
 // inserimenti lavorativi (UCIL), PUA e sportelli dei Distretti ASL3 8-13 (pagine ASL3 dei distretti),
 // servizi del Comune per la disabilità in bonus.ts, associazioni della provincia in associazioni.ts.
+// Aggiornamento 26/10/2026: testo del trasporto sociale con Mobility Bus e trasporto lavorativo/riabilitativo (pagine del Comune del 19/08/2026).
 export const genova: ComuneConfig = {
   slug: "genova",
   tipo: "comune",
@@ -153,7 +154,7 @@ export const genova: ComuneConfig = {
   ],
 
   trasporto:
-    "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
+    "Il Comune di Genova ha il Mobility Bus per il tempo libero (prenotazioni AMT: numero verde 800 085 302) e il trasporto per andare al lavoro o in riabilitazione: i requisiti e come chiederli sono nella sezione Bonus. Per informazioni: U.O. Area Disabilità, tel. 010 5577444, polodisabilita@comune.genova.it. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
     label: "ASL3 Genovese · Esenzioni ticket",

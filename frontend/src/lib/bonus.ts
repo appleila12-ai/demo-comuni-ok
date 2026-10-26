@@ -510,6 +510,46 @@ export const BONUS: Bonus[] = [
     verificatoIl: "25/10/2026",
   },
   {
+    id: "genova-mobility-bus",
+    regione: "Liguria",
+    comuni: ["genova"],
+    titolo: "Mobility Bus: trasporto per il tempo libero",
+    perChi:
+      "Persone con disabilità fisica motoria residenti a Genova che non possono usare i mezzi pubblici ordinari. Servono: certificato medico (medico di famiglia, specialista ASL3 o medico della struttura residenziale convenzionata) e verbale definitivo INPS di disabilità ai sensi dell'art. 3 della Legge 104/1992.",
+    cosa:
+      "Un servizio di trasporto pubblico collettivo per le attività del tempo libero, su prenotazione. La pratica e la telefonata al numero verde sono gratuite; il viaggio costa quanto il biglietto ordinario AMT. La pagina avverte che la prenotazione può non essere soddisfatta per orari simultanei o mancanza di vetture.",
+    stato: "attivo",
+    quando:
+      "Si prenota almeno 24 ore prima del viaggio; AMT conferma entro le 18:00 del giorno prima. La domanda è istruita entro 30 giorni dalla ricezione.",
+    comeSiChiede:
+      "Domanda online sul sito del Comune con SPID, CIE o CNS, oppure modulo e allegati (documento d'identità, certificato medico, verbale INPS) via email a gestionedisabilita@comune.genova.it o via PEC a dpsdisabilita.comge@postecert.it. Prenotazioni dei viaggi: numero verde AMT 800 085 302. Informazioni: U.O. Area Disabilità, tel. 010 5577444, polodisabilita@comune.genova.it.",
+    fonte: {
+      label: "Comune di Genova · Trasporto per il tempo libero dedicato alle persone con disabilità (Mobility Bus)",
+      url: "https://www.comune.genova.it/servizi/salute-benessere-e-assistenza/trasporto-il-tempo-libero-dedicato-alle-persone-con",
+    },
+    verificatoIl: "26/10/2026",
+    nota: "Pagina del Comune aggiornata il 19/08/2026. Gli orari del numero verde non sono scritti in modo chiaro nella pagina: chiedi conferma al numero verde.",
+  },
+  {
+    id: "genova-trasporto-lavorativo-riabilitativo",
+    regione: "Liguria",
+    comuni: ["genova"],
+    titolo: "Trasporto per andare al lavoro o in riabilitazione",
+    perChi:
+      "Persone residenti a Genova con disabilità fisica, psichica o sensoriale (Legge 104/1992, art. 3 comma 3), fino a 65 anni, che non possono usare i mezzi pubblici di linea e hanno bisogno di un accompagnamento personalizzato.",
+    cosa:
+      "Trasporto assistito con vettura da casa al lavoro o alla struttura riabilitativa. È prevista una contribuzione mensile legata al costo dell'abbonamento annuale agevolato AMT; la pagina non indica l'importo né un limite ISEE.",
+    stato: "attivo",
+    comeSiChiede:
+      "Domanda online sul sito del Comune con SPID, CIE o CNS. Per il lavoro: certificazione sanitaria della disabilità e dell'impossibilità di usare i mezzi pubblici, più la dichiarazione del datore di lavoro con l'orario. Per la riabilitazione: segnalazione e valutazione sanitaria dell'ASL3. Informazioni: U.O. Area Disabilità, tel. 010 5577444, polodisabilita@comune.genova.it.",
+    fonte: {
+      label: "Comune di Genova · Servizio di trasporto lavorativo o riabilitativo",
+      url: "https://www.comune.genova.it/servizi/salute-benessere-e-assistenza/servizio-di-trasporto-lavorativo-o-riabilitativo",
+    },
+    verificatoIl: "26/10/2026",
+    nota: "Pagina del Comune aggiornata il 19/08/2026.",
+  },
+  {
     id: "genova-cude-contrassegno",
     regione: "Liguria",
     comuni: ["genova"],
