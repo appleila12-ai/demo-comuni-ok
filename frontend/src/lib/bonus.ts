@@ -661,6 +661,67 @@ export const BONUS: Bonus[] = [
     nota: "Pagina della Regione aggiornata il 04/03/2026. La pagina non indica soglie ISEE né scadenze: chiedile al Distretto.",
   },
 
+  // ------------------------------------------------------------ COMUNE DI LATINA
+  // Fonti: pagine dei servizi del Comune di Latina, lette il 26/10/2026.
+  {
+    id: "latina-adi-disabili",
+    regione: "Lazio",
+    comuni: ["latina"],
+    titolo: "Assistenza domiciliare integrata per persone con disabilità (0–65 anni)",
+    perChi:
+      "Persone residenti a Latina, da 0 a 65 anni, con disabilità fisica, psichica o sensoriale documentata dal verbale di invalidità INPS, che hanno bisogno di più assistenza sociosanitaria e di cure per la persona.",
+    cosa:
+      "Cura e igiene della persona e della casa, socializzazione, disbrigo pratiche, compagnia, accompagnamento all'esterno (dal medico di base, in ASL e dai servizi specialistici) e assistenza durante i ricoveri se la persona è sola. La Commissione multidisciplinare stabilisce le ore settimanali e i servizi. È gratuito.",
+    stato: "attivo",
+    quando: "Non ci sono scadenze: la domanda si può presentare in qualsiasi momento dell'anno.",
+    comeSiChiede:
+      "Si va al Punto Unico di Accesso (PUA) e si compila la domanda. Allegati: ISEE socio-sanitario in corso di validità (timbrato e firmato da CAF o patronato), documento d'identità, tessera sanitaria, certificato di invalidità civile (se manca, certificato del medico curante con le patologie). Informazioni: servizi.sociali@comune.latina.it, centralino 0773 6521.",
+    fonte: {
+      label: "Comune di Latina · Assistenza domiciliare integrata per persone disabili 0-65 anni",
+      url: "https://www.comune.latina.it/home/servizi/servizio/Servizio-84.html",
+    },
+    verificatoIl: "26/10/2026",
+    nota: "Pagina del Comune aggiornata il 12/04/2024: conferma con il PUA che il servizio sia attivo.",
+  },
+  {
+    id: "latina-centro-diurno-disabili",
+    regione: "Lazio",
+    comuni: ["latina"],
+    titolo: "Centro diurno per persone con disabilità adulte",
+    perChi:
+      "Adulti con disabilità residenti a Latina, da 18 a 65 anni, senza patologie psichiatriche prevalenti né disturbi del comportamento incompatibili con la vita in comunità.",
+    cosa:
+      "Un posto in uno dei 3 Centri Diurni per disabili adulti del Comune, con attività individuali e di gruppo secondo il Piano personalizzato individuale, per mantenere e rafforzare l'autonomia. Il trasporto da casa al centro e ritorno è offerto compatibilmente con le risorse. Dopo 30 giorni di prova la persona viene inserita in modo definitivo o dimessa. Si paga una compartecipazione che dipende dall'ISEE socio-sanitario; la pagina non scrive gli importi.",
+    stato: "attivo",
+    quando: "Non ci sono avvisi annuali: la domanda si può presentare in qualsiasi periodo.",
+    comeSiChiede:
+      "Si va al Punto Unico di Accesso (PUA), al piano terra della sede ASL. Allegati: domanda compilata, certificato di invalidità, certificazione Legge 104/1992, documento d'identità, eventuale decreto di nomina del tutore o dell'amministratore di sostegno, diagnosi funzionale, ISEE, consenso al trattamento dei dati e dichiarazione di accettare la quota di compartecipazione. Informazioni: servizi.sociali@comune.latina.it.",
+    fonte: {
+      label: "Comune di Latina · Centro diurno socio-educativo per persone disabili adulte",
+      url: "https://www.comune.latina.it/home/servizi/servizio/Servizio-85.html",
+    },
+    verificatoIl: "26/10/2026",
+    nota: "Pagina del Comune aggiornata il 12/04/2024.",
+  },
+  {
+    id: "latina-autismo-2026",
+    regione: "Lazio",
+    comuni: ["latina"],
+    titolo: "Sostegno economico per famiglie con minori con disturbo dello spettro autistico (2026)",
+    perChi: "Famiglie con minori con disturbo dello spettro autistico, fino a 17 anni e 364 giorni compiuti.",
+    cosa: "Un sostegno economico: la pagina del Comune non scrive l'importo né i requisiti ISEE.",
+    stato: "chiuso",
+    quando: "Domande dal 10/08/2026 al 10/09/2026.",
+    comeSiChiede:
+      "Domanda online dal portale servizi del Comune di Latina (servizio \"Domanda di sostegno economico\"). Dopo la Valutazione Multidimensionale l'esito arriva nell'area riservata e con una notifica sull'app IO. Informazioni: urp@comune.latina.it, tel. 0773 6521.",
+    fonte: {
+      label: "Comune di Latina · Sostegno economico per le famiglie con minori con disturbo dello spettro autistico – Anno 2026",
+      url: "https://www.comune.latina.it/notizie/Sostegno-economico-per-le-famiglie-con-minori-con-disturbo-dello-spettro-autistico---Anno-2026.html",
+    },
+    verificatoIl: "26/10/2026",
+    nota: "Il termine per le domande è scaduto: chiedi al Comune se ci sarà una nuova apertura.",
+  },
+
   // ------------------------------------------------------------------ TOSCANA
   {
     id: "toscana-vita-indipendente-fse",
