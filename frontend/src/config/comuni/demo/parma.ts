@@ -3,8 +3,8 @@ import type { ComuneConfig } from "../types";
 // Comune di Parma (PR) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (26 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Dalla scheda di ottobre 2026 (ramo parma-progetto-vita) restano solo sito del Comune, AUSL e ANffAS Parma (ha dato l'ok il 5/10/2026).
-// Indirizzo, numero unico, email e orari del Settore Sociale NON sono ancora verificati su fonte istituzionale: non pubblicati.
-// Da fare: recapiti e orari del Settore Sociale, bonus del Comune, associazioni, sport e tempo libero.
+// 26/10/2026: indirizzo, numero unico, email del Contact Center e PEC del Comune dalle pagine del Comune (dati forniti da Ilaria). Orari del Settore Sociale ancora da verificare: non pubblicati (quelli di URP e Contact Center non valgono per i Servizi Sociali).
+// Da fare: orari del Settore Sociale, bonus del Comune, associazioni, sport e tempo libero.
 // Il contatto ANffAS per il Progetto di vita (contattoProgettoVita) non è supportato da questa versione: è nei punti di supporto.
 export const parma: ComuneConfig = {
   slug: "parma",
@@ -18,10 +18,10 @@ export const parma: ComuneConfig = {
 
   ente: "Settore Sociale",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
-  pec: "",
+  indirizzo: "Largo Torello de' Strada 11/a, DUC, 43121 Parma (PR)",
+  telefono: "0521 40521",
+  email: "052140521@comune.parma.it",
+  pec: "comunediparma@postemailcertificata.it",
   orari: "",
   sitoWeb: "https://www.comune.parma.it/it/amministrazione/aree-amministrative/settore-sociale",
 
