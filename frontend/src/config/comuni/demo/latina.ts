@@ -1,9 +1,9 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Latina (LT) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
+// Comune di Latina (LT) — VERSIONE DIMOSTRATIVA (13 ottobre 2026, completata il 26/10/2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// È verificato solo l'indirizzo web indicato in sitoWeb.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
+// Fonti: pagine del Comune "Servizio Politiche sociali comunali" (agg. 12/08/2026), "Servizio PUA" e servizi per la disabilità (agg. aprile 2024), lette il 26/10/2026.
+// Da fare: telefono del PUA, sito dell'azienda sanitaria, associazioni, sport e tempo libero.
 export const latina: ComuneConfig = {
   slug: "latina",
   tipo: "comune",
@@ -15,12 +15,12 @@ export const latina: ComuneConfig = {
   regione: "Lazio",
 
   ente: "Servizi Sociali",
-  responsabile: "",
-  indirizzo: "",
+  responsabile: "Servizio Politiche sociali comunali",
+  indirizzo: "Via Bonn 2, Latina",
   telefono: "0773 6521",
-  email: "",
-  pec: "",
-  orari: "",
+  email: "servizi.sociali@comune.latina.it",
+  pec: "protocollo@pec.comune.latina.it",
+  orari: "Lunedì, mercoledì e venerdì 9:30–12:30; martedì e giovedì 15:30–17:00. Si riceve su appuntamento. Telefoni del servizio: 0773 652073, 0773 652518, 0773 652446",
   sitoWeb: "https://www.comune.latina.it/home/info/argomenti/007.html",
 
   logo: null,
@@ -35,9 +35,21 @@ export const latina: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.latina.it/home/info/argomenti/007.html" },
+      title: "Servizio Politiche sociali comunali",
+      subtitle: "Via Bonn 2, Latina · Tel. 0773 652073 / 652518 / 652446 · lun, mer, ven 9:30–12:30; mar e gio 15:30–17:00, su appuntamento · servizi.sociali@comune.latina.it",
+      action: { type: "tel", value: "0773652073" },
+    },
+    {
+      icon: "people-outline",
+      title: "Segretariato sociale professionale",
+      subtitle: "Ha una sede separata in Viale P.L. Nervi, presso il centro commerciale Latinafiori. Per gli orari chiama il Servizio Politiche sociali: 0773 652073",
+      action: { type: "web", value: "https://www.comune.latina.it/home/amministrazione/uffici/Ufficio-49.html" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "Punto Unico di Accesso (PUA)",
+      subtitle: "Sportello per i servizi sociali e sociosanitari, con competenza per le persone con disabilità. Piazza Celli 8 / via C. Battisti 50 (locali ASL, di fronte al CUP), stanza 17, Sportello P.U.A. D. Si prenota al telefono o online su www.faplatina2.it · Sportellopuadlt@gmail.com",
+      action: { type: "web", value: "https://www.comune.latina.it/home/servizi/servizio/Servizio-133.html" },
     },
   ],
 

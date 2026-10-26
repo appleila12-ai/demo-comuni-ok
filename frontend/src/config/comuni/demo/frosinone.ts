@@ -2,8 +2,9 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Frosinone (FR) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Aggiornamento 26/10/2026: Sportello Famiglia e Segretariato sociale (pagina del Comune agg. 18/06/2025, letta il 26/10/2026).
+// Il link dell'azienda sanitaria è da verificare.
+// Da fare: orari dello Sportello, bonus del Comune, associazioni, sport e tempo libero.
 export const frosinone: ComuneConfig = {
   slug: "frosinone",
   tipo: "comune",
@@ -15,11 +16,11 @@ export const frosinone: ComuneConfig = {
   regione: "Lazio",
 
   ente: "Servizi Sociali",
-  responsabile: "",
-  indirizzo: "",
+  responsabile: "Sportello Famiglia e Segretariato sociale",
+  indirizzo: "Via Armando Fabi 129–131, 03100 Frosinone",
   telefono: "0775 2651",
-  email: "",
-  pec: "",
+  email: "sportellofamiglia@comune.frosinone.it",
+  pec: "pec@pec.comune.frosinone.it",
   orari: "",
   sitoWeb: "https://www.comune.frosinone.it",
 
@@ -35,9 +36,9 @@ export const frosinone: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.frosinone.it" },
+      title: "Sportello Famiglia e Segretariato sociale",
+      subtitle: "Ascolto, orientamento e accompagnamento ai servizi del territorio; accoglie le domande per contributi economici. Via Armando Fabi 129–131 · Centralino del Comune 0775 2651 · sportellofamiglia@comune.frosinone.it · si può prenotare un appuntamento dal sito del Comune",
+      action: { type: "web", value: "https://comune.frosinone.it/servizio/sportello-famiglia-e-segretariato-sociale/" },
     },
     {
       icon: "medkit-outline",
