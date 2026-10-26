@@ -14,6 +14,7 @@
 // Quarta raccolta: 09/10/2026, Lazio e Comune di Fiumicino.
 // Quinta raccolta: 12/10/2026, Abruzzo, Comune dell'Aquila e Comune di Ocre (ambito sociale n. 5).
 // Sesta raccolta: 13/10/2026, Roma Capitale, Campania (da confermare), Piemonte e Comune di Torino.
+// Raccolta 26/10/2026: Comune di Pisa (adattamento veicoli, barriere architettoniche).
 // Settima raccolta: 14/10/2026, schede regionali in app: Piemonte (Buono domiciliarità 2026-2027, misure disabilità) ed Emilia-Romagna.
 // Ottava raccolta: 15/10/2026, Toscana.
 // Nona raccolta: 15/10/2026, Puglia (Patto di cura), Veneto (ICD).
@@ -1339,6 +1340,48 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "20/10/2026",
     nota: "Avviso del 15/06/2026, aggiornato il 28/09/2026. Chiedi al Comune quando uscirà quello del 2027.",
+  },
+
+  // -------------------------------------------------------------------- PISA (26/10/2026)
+  {
+    id: "pisa-adattamento-veicoli-2026",
+    regione: "Toscana",
+    comuni: ["pisa"],
+    titolo: "Contributo per adattare il veicolo privato (2026)",
+    perChi:
+      "Residenti nel Comune di Pisa: persone con disabilità motoria al 100% con patente di guida; familiari di persone con compromissione motoria totale (100% con assegno di accompagnamento) che non possono guidare, ad esempio per tetraplegia o tetraparesi; chi esercita tutela, potestà o amministrazione di sostegno. Nella domanda va dichiarato l'ISEE della persona con disabilità o del familiare che la ha a carico (allegare l'estratto ISEE è facoltativo).",
+    cosa:
+      "Contributo pari al 20% della spesa sostenuta per adattare il veicolo (ad esempio pedane sollevatrici, scivoli, sedili girevoli, ancoraggi per carrozzine; per la guida solo i comandi prescritti dalla Commissione patenti speciali). Fino a esaurimento delle risorse annuali, con graduatoria per reddito; erogazione entro 60 giorni dalla graduatoria definitiva. Si può chiedere a un solo ente e non si può ripresentare domanda prima di 4 anni dalla concessione.",
+    stato: "aperto",
+    quando: "Domande entro il 31 ottobre 2026.",
+    comeSiChiede:
+      "Solo con il modulo del Comune (le domande su altro modulo, incomplete o errate non vengono considerate), con certificato di invalidità e gravità se la presenta un familiare, documento d'identità, copia della patente speciale se presente e fattura o documentazione di spesa. Si consegna all'URP (lunedì–venerdì 8:30–12:30; martedì e giovedì 15:00–17:00) o si invia via PEC a comune.pisa@postacert.toscana.it. Informazioni: Ufficio Sociale, affari.sociali@comune.pisa.it, tel. 050 910265.",
+    fonte: {
+      label: "Comune di Pisa · Contributi per adattamento veicoli privati",
+      url: "https://www.comune.pisa.it/Servizi/Contributi-per-adattamento-veicoli-privati",
+    },
+    verificatoIl: "26/10/2026",
+    nota: "Pagina aggiornata il 19/08/2026; il bando e il modulo sono nei file della pagina. La scadenza è tra pochi giorni: chiama l'Ufficio Sociale per sapere se sei in tempo.",
+  },
+  {
+    id: "pisa-abbattimento-barriere-2026",
+    regione: "Toscana",
+    comuni: ["pisa"],
+    titolo: "Contributo per abbattere le barriere architettoniche in casa (2026)",
+    perChi:
+      "Residenti nel Comune di Pisa con disabilità permanente (sensoriale, cognitiva o fisica) che abitano nell'edificio interessato o ci prenderanno la residenza entro tre mesi dalla comunicazione di ammissione; possono chiedere anche tutori e amministratori di sostegno.",
+    cosa:
+      "Per le opere edilizie, contributo fino al 50% della spesa e al massimo 7.500 €; per le attrezzature, fino al 50% e al massimo 10.000 €. I due contributi si sommano fino a 17.500 €.",
+    stato: "aperto",
+    quando: "Domande entro il 31 dicembre di ogni anno; per il 2026 entro il 31 dicembre 2026.",
+    comeSiChiede:
+      "Con il modulo \"Schema di domanda 2026\" del Comune, con documento d'identità, certificato che attesta la disabilità, preventivo e progetto (per le opere) o preventivo e documentazione tecnica (per le attrezzature) e, se non sei proprietario, il benestare del proprietario. Si consegna all'URP (lunedì–venerdì 8:30–12:30; martedì e giovedì 15:00–17:00) o si invia via PEC a comune.pisa@postacert.toscana.it. La pagina dice che il servizio online al momento non è disponibile.",
+    fonte: {
+      label: "Comune di Pisa · Contributo abbattimento barriere architettoniche",
+      url: "https://www.comune.pisa.it/Servizi/Contributo-abbattimento-barriere-architettoniche",
+    },
+    verificatoIl: "26/10/2026",
+    nota: "Pagina aggiornata il 21/08/2026. Per dubbi su requisiti e tempi scrivi all'Ufficio Sociale (affari.sociali@comune.pisa.it).",
   },
 
   // ------------------------------------------------------------------- UMBRIA
