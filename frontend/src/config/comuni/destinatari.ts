@@ -243,6 +243,14 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "firenze": { email: "protocollo@pec.comune.fi.it", tipo: "pec", fonte: "documentazione ufficiale del Comune (PEC del Protocollo generale)" },
   // Parma (PR)
   "parma": { email: "comunediparma@postemailcertificata.it", tipo: "pec", fonte: "PEC istituzionale pubblicata dal Comune" },
+  // Ancona (AN)
+  "ancona": { email: "comune.ancona@emarche.it", tipo: "pec", fonte: "IPA, area organizzativa omogenea del Comune" },
+  // Torino (TO)
+  "torino": { email: "protocollogenerale@cert.comune.torino.it", tipo: "pec", fonte: "IPA, PEC primaria dell'ente (aggiornamento dichiarato 8/9/2026)" },
+  // Sondrio (SO)
+  "sondrio": { email: "protocollo@cert.comune.sondrio.it", tipo: "pec", fonte: "pagina ufficiale del Comune" },
+  // Isernia (IS)
+  "isernia": { email: "comuneisernia@pec.it", tipo: "pec", fonte: "pagina comunale dedicata alla PEC" },
   // Pietrasanta (LU)
   "pietrasanta": { email: "comune.pietrasanta@postacert.toscana.it", tipo: "pec", fonte: "pagina Ufficio sociale del sito del Comune (PEC generale)" },
   // Lucera (FG)
