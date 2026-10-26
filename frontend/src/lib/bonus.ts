@@ -438,6 +438,44 @@ export const BONUS: Bonus[] = [
   // ------------------------------------------------------------ COMUNE DI GENOVA
   // Fonti: pagine dei servizi del Comune di Genova, lette il 25/10/2026.
   {
+    id: "genova-gravissima-disabilita-asl3",
+    regione: "Liguria",
+    comuni: ["genova"],
+    titolo: "Gravissima disabilità: contributo per restare a casa (anche SLA)",
+    perChi:
+      "Adulti, anziani e minori che a casa hanno bisogno di assistenza continua nelle 24 ore. Servono: invalidità civile al 100% con indennità di accompagnamento, un quadro clinico tra quelli della DGR 1289/2016, ISEE sociosanitario fino a 50.000 euro (per i minori ISEE per prestazioni ai minorenni fino a 65.000 euro).",
+    cosa:
+      "Un contributo mensile per l'assistenza a casa. L'importo lo decide l'Unità di Valutazione Multidimensionale (UVM) nel Piano di Assistenza Individualizzato (PAI); una parte riconosce il lavoro di cura del familiare, il resto si rendiconta. È compatibile con il centro diurno. Non si può avere insieme al contributo \"Grave disabilità\", all'indennità di frequenza o al ricovero definitivo in struttura.",
+    stato: "attivo",
+    comeSiChiede:
+      "Si compila il modulo \"Gravissima disabilità\" e si allegano: verbale dell'indennità di accompagnamento, ISEE e documento d'identità di chi firma. La domanda si consegna al PUA o allo Sportello unico del tuo Distretto ASL3 (trovi telefoni e orari nella scheda del Comune, alla voce Distretti). Poi c'è la valutazione dell'UVM.",
+    fonte: {
+      label: "ASL3 · Fondo gravissima disabilità e SLA",
+      url: "https://www.asl3.liguria.it/territorio/servizi/disabili/4981-fondo-gravissima-disabilita-sla.html",
+    },
+    verificatoIl: "25/10/2026",
+    nota: "La pagina ASL3 è aggiornata al 23/10/2024. Che la misura sia attiva nel 2026, con gli stessi requisiti, lo conferma la scheda \"Gravissime disabilità (GD) – Servizio attivo\" del Comune di Rapallo (Distretto 14), controllata il 25/10/2026.",
+  },
+  {
+    id: "genova-vita-indipendente-asl3",
+    regione: "Liguria",
+    comuni: ["genova"],
+    titolo: "Progetti di vita indipendente",
+    perChi:
+      "Persone con disabilità motoria (Legge 104, art. 3 comma 3) o intellettiva (Legge 104, art. 3 comma 1), dai 18 ai 65 anni, capaci di esprimere la propria volontà, anche tramite amministratore di sostegno. ISEE sociosanitario fino a 25.000 euro.",
+    cosa:
+      "Un contributo fino a 1.200 euro al mese, secondo il Piano individuale (PIA) scritto insieme alla persona, da rendicontare ogni tre mesi. Serve per l'autonomia: andare a vivere da soli, il lavoro, un assistente personale, attività che favoriscono l'autonomia in famiglia; per ausili, domotica e barriere architettoniche è un rimborso fino a 350 euro al mese. Non si può avere insieme alla gravissima disabilità, al contributo caregiver per chi assiste la persona o al ricovero in struttura.",
+    stato: "attivo",
+    comeSiChiede:
+      "Si compila la domanda indicando come si vuole usare il contributo, con la certificazione della Legge 104, l'ISEE sociosanitario e il documento d'identità. La domanda si consegna al PUA o allo Sportello unico del tuo Distretto ASL3. Prima c'è una valutazione sanitaria sull'autodeterminazione, poi l'équipe (assistente sociale e medico ASL) scrive il progetto con te.",
+    fonte: {
+      label: "ASL3 · Progetti di vita indipendente",
+      url: "https://www.asl3.liguria.it/territorio/servizi/disabili/1102-progetti-di-vita-indipendente.html",
+    },
+    verificatoIl: "25/10/2026",
+    nota: "La pagina ASL3 è aggiornata al 23/10/2024. Importo, ISEE e stato \"attivo\" sono confermati nel 2026 dalle schede dei Comuni di Sarzana e di Rapallo, controllate a ottobre 2026.",
+  },
+  {
     id: "genova-doge-domiciliarita-disabili",
     regione: "Liguria",
     comuni: ["genova"],
@@ -462,7 +500,7 @@ export const BONUS: Bonus[] = [
     perChi: "Famiglie residenti a Genova con figli con disabilità iscritti alla scuola dell'infanzia o al primo ciclo (primaria e secondaria di primo grado) nel territorio comunale.",
     cosa: "Il trasporto da casa a scuola con vettura. È gratuito. Per una scuola fuori Genova il Comune copre solo il tragitto dentro i confini comunali.",
     stato: "attivo",
-    quando: "Le domande si aprono di solito a maggio; si può presentare domanda anche durante l'anno scolastico, valutata nelle commissioni successive.",
+    quando: "La pagina del Comune indica l'apertura delle domande il 30 maggio 2025, senza dire per quale anno scolastico: chiedi al Comune quando si apre il prossimo anno. Si può presentare domanda anche durante l'anno scolastico: viene valutata nelle commissioni successive.",
     comeSiChiede:
       "Domanda online sul sito del Comune con SPID, CIE o CNS. Allegati: la richiesta del medico (modulo 1 \"Relazione sanitaria\") e la copia del certificato di disabilità (Legge 104/1992) valido; se è scaduto, anche la ricevuta INPS della domanda di revisione. Informazioni: numero verde 800 809 009 (lunedì–venerdì 8:30–13:00), trasportoscolastico@comune.genova.it.",
     fonte: {
