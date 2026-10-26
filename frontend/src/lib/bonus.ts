@@ -500,7 +500,7 @@ export const BONUS: Bonus[] = [
     perChi: "Famiglie residenti a Genova con figli con disabilità iscritti alla scuola dell'infanzia o al primo ciclo (primaria e secondaria di primo grado) nel territorio comunale.",
     cosa: "Il trasporto da casa a scuola con vettura. È gratuito. Per una scuola fuori Genova il Comune copre solo il tragitto dentro i confini comunali.",
     stato: "attivo",
-    quando: "Secondo la pagina del Comune, per l'anno scolastico in corso le domande si sono aperte a maggio 2025. Si può presentare domanda anche durante l'anno scolastico: viene valutata nelle commissioni successive.",
+    quando: "La pagina del Comune indica l'apertura delle domande il 30 maggio 2025, senza dire per quale anno scolastico: chiedi al Comune quando si apre il prossimo anno. Si può presentare domanda anche durante l'anno scolastico: viene valutata nelle commissioni successive.",
     comeSiChiede:
       "Domanda online sul sito del Comune con SPID, CIE o CNS. Allegati: la richiesta del medico (modulo 1 \"Relazione sanitaria\") e la copia del certificato di disabilità (Legge 104/1992) valido; se è scaduto, anche la ricevuta INPS della domanda di revisione. Informazioni: numero verde 800 809 009 (lunedì–venerdì 8:30–13:00), trasportoscolastico@comune.genova.it.",
     fonte: {
