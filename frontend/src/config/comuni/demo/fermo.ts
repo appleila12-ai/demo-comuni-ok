@@ -19,7 +19,7 @@ export const fermo: ComuneConfig = {
   indirizzo: "",
   telefono: "0734 284236",
   email: "frontoffice.servizisociali@comune.fermo.it",
-  pec: "",
+  pec: "protocollo@pec.comune.fermo.it",
   orari: "Secondo numero del front office: 0734 284279. Orari non pubblicati sulla pagina",
   sitoWeb: "https://www.comune.fermo.it/Amministrazione/Aree-amministrative/Settore-V-Politiche-per-il-benessere-della-persona-e-Ambito-Territoriale-XIX/%28related_offices%29/4",
 

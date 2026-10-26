@@ -3,7 +3,8 @@ import type { ComuneConfig } from "../types";
 // Comune di Lanusei (NU) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // L'indirizzo del sito del Comune è preso dalla scheda del Comune su tuttitalia.it (collegamento al sito istituzionale): il sito non è stato aperto in questo giro, quindi indirizzo e pagina dei servizi sociali sono da verificare. Azienda sanitaria non indicata: da cercare. Lanusei è capoluogo, insieme a Tortolì, della provincia dell'Ogliastra. Sigla provincia come nelle altre schede sarde già presenti: la riforma delle province del 2025 è da recepire per tutti i Comuni sardi.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// 26/10/2026: PEC e centralino dalla pagina "Centralino Protocollo" del sito del Comune (comune.lanusei.og.it), letta il 26/10/2026. Non sono i recapiti dei Servizi Sociali.
+// Da fare: email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
 export const lanusei: ComuneConfig = {
   slug: "lanusei",
   tipo: "comune",
@@ -17,9 +18,9 @@ export const lanusei: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
+  telefono: "0782 473159",
   email: "",
-  pec: "",
+  pec: "protocollo@pec.comunedilanusei.it",
   orari: "",
   sitoWeb: "https://comune.lanusei.og.it",
 
