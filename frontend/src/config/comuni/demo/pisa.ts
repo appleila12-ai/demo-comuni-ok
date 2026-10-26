@@ -5,6 +5,7 @@ import type { ComuneConfig } from "../types";
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Home del sito del Comune, controllata il 14 ottobre 2026: la pagina dei servizi sociali va cercata e confermata.
 // 26/10/2026: email dell'Ufficio Sociale (affari.sociali@comune.pisa.it, dati forniti da Ilaria dalla pagina del Comune).
 // Indirizzo (Palazzo Gambacorti) dalle pagine del Comune, dati forniti da Ilaria il 26/10/2026. Orari di ricevimento non confermati: non pubblicati (quelli URP non valgono per l'Ufficio Sociale).
+// 26/10/2026: numero unico 050 7062 (Contact Center del Comune, comunicato del Comune del 10/07/2025): non è il numero diretto dei Servizi Sociali.
 // Da fare: orari, associazioni (Albo comunale della disabilità, file "Elenco Associazioni 2026"), sport e tempo libero.
 export const pisa: ComuneConfig = {
   slug: "pisa",
@@ -19,10 +20,10 @@ export const pisa: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "Palazzo Gambacorti, via degli Uffizi 1, 56100 Pisa (PI)",
-  telefono: "050 910111",
+  telefono: "050 7062",
   email: "affari.sociali@comune.pisa.it",
   pec: "",
-  orari: "",
+  orari: "Contact Center del Comune (numero unico, non è il numero diretto dei Servizi Sociali): lunedì–venerdì 9:00–13:15 e 14:15–17:00",
   sitoWeb: "https://www.comune.pisa.it",
 
   logo: null,

@@ -4,7 +4,8 @@ import type { ComuneConfig } from "../types";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Dalla scheda di ottobre 2026 (ramo parma-progetto-vita) restano solo sito del Comune, AUSL e ANffAS Parma (ha dato l'ok il 5/10/2026).
 // 26/10/2026: indirizzo, numero unico, email del Contact Center e PEC del Comune dalle pagine del Comune (dati forniti da Ilaria). Orari del Settore Sociale ancora da verificare: non pubblicati (quelli di URP e Contact Center non valgono per i Servizi Sociali).
-// 26/10/2026: sportello sociale Parma-Lubiana (email e orari, dalla rete degli sportelli sociali della Regione Emilia-Romagna). Orari degli altri tre Poli (San Leonardo, Pablo, Montanara) ancora da confermare.
+// 26/10/2026: sportello sociale Parma-Lubiana (email e orari, dalla rete degli sportelli sociali della Regione Emilia-Romagna).
+// 26/10/2026: Poli San Leonardo e Montanara (indirizzo, telefono, email e orari) dal sito Welfare del Comune di Parma. Polo Pablo: pagina non leggibile, ancora da confermare.
 // Da fare: bonus del Comune, associazioni, sport e tempo libero.
 // Il contatto ANffAS per il Progetto di vita (contattoProgettoVita) non è supportato da questa versione: è nei punti di supporto.
 export const parma: ComuneConfig = {
@@ -41,6 +42,18 @@ export const parma: ComuneConfig = {
       title: "Settore Sociale – Comune di Parma",
       subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
       action: { type: "web", value: "https://www.comune.parma.it/it/amministrazione/aree-amministrative/settore-sociale" },
+    },
+    {
+      icon: "people-outline",
+      title: "Polo Sociale San Leonardo",
+      subtitle: "Via Verona 36/A, 43122 Parma · Tel. 0521 218589 · lun–ven 8:30–13:30, previo appuntamento · st.sanleonardo@comune.parma.it",
+      action: { type: "tel", value: "0521218589" },
+    },
+    {
+      icon: "people-outline",
+      title: "Polo Sociale Montanara",
+      subtitle: "Via Giulio e Guido Carmignani 9/A, 43124 Parma · Tel. 0521 218358 · lun–ven 8:30–13:30, previo appuntamento · st.montanara@comune.parma.it",
+      action: { type: "tel", value: "0521218358" },
     },
     {
       icon: "accessibility-outline",
