@@ -1,9 +1,10 @@
 import type { ComuneConfig } from "../types";
 
-// Comune di Fondi (LT) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (15 ottobre 2026).
+// Comune di Fondi (LT) — VERSIONE DIMOSTRATIVA (15 ottobre 2026, aggiornata il 26/10/2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Il sito del Comune non è leggibile in automatico (robots): indirizzo e pagina dei servizi sociali vanno verificati. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Il sito del Comune non è leggibile in automatico (robots). Aggiornamento 26/10/2026: indirizzo, telefono e PEC dal portale "Rete del Sociale" del Comune e del Distretto socio sanitario LT4 (pagine del 12/10/2026); avviso caregiver in bonus.ts.
+// Il link dell'azienda sanitaria è da verificare.
+// Da fare: email ordinaria e orari dei Servizi Sociali, indirizzo del PUA, altri bonus del Comune, associazioni, sport e tempo libero.
 export const fondi: ComuneConfig = {
   slug: "fondi",
   tipo: "comune",
@@ -16,10 +17,10 @@ export const fondi: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
+  indirizzo: "Piazza Municipio, 04022 Fondi (LT)",
   telefono: "0771 5071",
   email: "",
-  pec: "",
+  pec: "comune.fondi@pecaziendale.it",
   orari: "",
   sitoWeb: "https://www.comune.fondi.lt.it",
 
@@ -36,8 +37,14 @@ export const fondi: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.fondi.lt.it" },
+      subtitle: "Piazza Municipio · Centralino 0771 5071. Servizi online e domande con SPID sul portale Rete del Sociale del Comune e del Distretto LT4. Gli orari non sono pubblicati: chiama il centralino",
+      action: { type: "tel", value: "07715071" },
+    },
+    {
+      icon: "business-outline",
+      title: "Rete del Sociale · Distretto socio sanitario LT4",
+      subtitle: "Portale dove si presentano le domande online con SPID. Distretto LT4: Campodimele, Fondi, Lenola, Monte San Biagio, San Felice Circeo, Sperlonga e Terracina. Il PUA distrettuale ha sportelli a Fondi e a Terracina",
+      action: { type: "web", value: "https://fondi.retedelsociale.it" },
     },
     {
       icon: "medkit-outline",

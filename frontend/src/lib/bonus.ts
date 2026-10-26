@@ -722,6 +722,29 @@ export const BONUS: Bonus[] = [
     nota: "Il termine per le domande è scaduto: chiedi al Comune se ci sarà una nuova apertura.",
   },
 
+  // ------------------------------------------------------- DISTRETTO LT4 (FONDI)
+  // Fonte: portale Rete del Sociale del Comune di Fondi e del Distretto LT4, letto il 26/10/2026.
+  {
+    id: "fondi-caregiver-status-lt4",
+    regione: "Lazio",
+    comuni: ["fondi", "terracina"],
+    titolo: "Riconoscimento del caregiver familiare e \"Card Giver\" (Distretto LT4)",
+    perChi:
+      "Chi assiste in modo volontario e gratuito una persona non autosufficiente, riconosciuta invalida con bisogno di assistenza globale e continua o titolare di indennità di accompagnamento. Vale per i residenti dei Comuni del Distretto LT4: Campodimele, Fondi, Lenola, Monte San Biagio, San Felice Circeo, Sperlonga e Terracina. Chi assiste può essere il coniuge, il convivente, un familiare o affine entro il secondo grado (in alcuni casi il terzo) oppure chi convive con la persona assistita.",
+    cosa:
+      "Il riconoscimento formale dello status di caregiver familiare, deciso dall'UVMD del Distretto, e un tesserino \"Card Giver\" che dà accesso a percorsi preferenziali per alcuni servizi. Il riconoscimento serve per chiedere interventi di sostegno (informativi, formativi, di sollievo, psicologici) nei limiti delle risorse. L'avviso non scrive importi.",
+    stato: "attivo",
+    quando: "Avviso aperto, senza scadenza: si può presentare domanda in qualsiasi momento. L'iter si conclude entro 90 giorni dalla domanda.",
+    comeSiChiede:
+      "Solo online, sul portale Rete del Sociale (fondi.retedelsociale.it) con SPID. Allegati obbligatori: documento d'identità della persona assistita, codice fiscale o tessera sanitaria, ISEE ordinario in corso di validità del nucleo, verbale di invalidità civile, verbale ai sensi dell'art. 3 comma 3 della Legge 104/1992. La domanda vale solo se, dopo \"Spedisci\", passa da \"Bozza\" a \"Presentata\" con numero di protocollo; dopo l'invio non si può correggere. Per aiuto: PUA distrettuale di Fondi o di Terracina, oppure l'Ufficio Servizi Sociali del Comune di residenza.",
+    fonte: {
+      label: "Distretto LT4 · Avviso pubblico per il riconoscimento del caregiver familiare",
+      url: "https://fondi.retedelsociale.it/upload/File/AllegatiNews/21.pdf",
+    },
+    verificatoIl: "26/10/2026",
+    nota: "L'avviso è datato 30/05/2025 e la pagina del portale che lo richiama è del 12/10/2026. L'avviso non indica telefoni né orari: chiedili al PUA o al Comune.",
+  },
+
   // ------------------------------------------------------------------ TOSCANA
   {
     id: "toscana-vita-indipendente-fse",
