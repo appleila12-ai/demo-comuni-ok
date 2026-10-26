@@ -12,6 +12,7 @@
 // Aggiornamento 20/10/2026: Anffas Sardegna (Cagliari) dall'elenco del sito nazionale.
 // Aggiornamento 21/10/2026: raggio di 30 km (coordinate dei municipi da opendatasicilia/comuni-italiani, basato su ISTAT e IndicePA).
 // Aggiornamento 21/10/2026: Ca.Te.Ri.Na (Sarzana), recapiti forniti il 21/10/2026.
+// Aggiornamento 26/10/2026: spiagge inclusive di Genova, 8 spiagge, recapiti e prenotazione dalla pagina del Comune (agg. 23/06/2026).
 // Aggiornamento 25/10/2026: provincia di Genova (Anffas, ANGSA, UICI, Chiossone, AISM, UILDM, ENS, ANGLAT, Asperger,
 // e dall'elenco ASL3 'Comitato Misto Consultivo - Associazioni' agg. 18/06/2025: Consulta disabilità, Alzheimer Liguria,
 // ALFAPP, Parkinson, tutela del malato, AVO).
@@ -558,11 +559,12 @@ PER_PROVINCIA.GE.volontariato.unshift(
   },
 );
 PER_PROVINCIA.GE.sport.unshift({
-  nome: "Spiagge inclusive del Comune di Genova (Genoa Sea Inclusion 2026)",
-  cosa: "Sei spiagge attrezzate per persone con disabilità nella stagione estiva: Vesima (Janua), Voltri (Spiaggia dei bambini), Pegli 2, Easy Beach, Capo Marina, Boccadasse. Il Comune pubblica una scheda per ogni spiaggia.",
+  nome: "Spiagge inclusive del Comune di Genova (Genova Sea Inclusion)",
+  cosa: "Otto spiagge attrezzate per persone con disabilità: Vesima (Janua), Voltri (Spiaggia dei bambini), Easy Beach e Pegli 2 a Pegli, Capo Marina, Boccadasse, Tritone di Sturla e Vernazzola. Si prenota (nome, cognome, spiaggia ed email) al numero unico 376 2401182 dei Bagni Marina Genovese, da lunedì a venerdì 8:00–16:00; a Boccadasse e a Pegli 2 si entra senza prenotare. Le prenotazioni dipendono dai posti disponibili.",
   dove: "Genova",
-  telefono: "010 1010",
-  sito: "https://www.comune.genova.it/tutti-gli-argomenti/demanio-marittimo/schede-spiagge-accessibili-genoa-sea-inclusion-2026",
+  telefono: "010 5579768",
+  email: "spiaggeinclusive@comune.genova.it",
+  sito: "https://www.comune.genova.it/servizi/salute-benessere-e-assistenza/spiagge-inclusive-genova-sea-inclusion",
   comuni: ["genova"],
 },
 {
