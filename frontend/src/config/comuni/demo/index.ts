@@ -180,6 +180,8 @@ import { lissone } from "./lissone";
 import { livorno } from "./livorno";
 import { lodi } from "./lodi";
 import { lucca } from "./lucca";
+import { parma } from "./parma";
+import { pietrasanta } from "./pietrasanta";
 import { lucera } from "./lucera";
 import { luni } from "./luni";
 import { macerata } from "./macerata";
@@ -536,6 +538,8 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   livorno,
   lodi,
   lucca,
+  parma,
+  pietrasanta,
   lucera,
   luni,
   macerata,

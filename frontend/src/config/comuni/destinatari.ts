@@ -237,6 +237,8 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "livorno": { email: "comune.livorno@postacert.toscana.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Lucca (LU)
   "lucca": { email: "comune.lucca@postacert.toscana.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  // Pietrasanta (LU)
+  "pietrasanta": { email: "comune.pietrasanta@postacert.toscana.it", tipo: "pec", fonte: "pagina Ufficio sociale del sito del Comune (PEC generale)" },
   // Lucera (FG)
   "lucera": { email: "comune.lucera@anutelpec.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Luni (SP)
