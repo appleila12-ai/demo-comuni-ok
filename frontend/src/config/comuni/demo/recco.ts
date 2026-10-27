@@ -20,7 +20,7 @@ export const recco: ComuneConfig = {
   indirizzo: "",
   telefono: "0185 7291209",
   email: "",
-  pec: "",
+  pec: "protocollo@pec.comune.recco.ge.it",
   orari: "Giovedì 9:00–12:00, su prenotazione",
   sitoWeb: "https://www.comune.recco.ge.it",
 

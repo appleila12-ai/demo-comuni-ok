@@ -20,7 +20,7 @@ export const arenzano: ComuneConfig = {
   indirizzo: "",
   telefono: "010 9138269",
   email: "servizisociali@comune.arenzano.ge.it",
-  pec: "",
+  pec: "info@pec.comune.arenzano.ge.it",
   orari: "Ricevimento previo appuntamento telefonico o via email",
   sitoWeb: "https://www.comune.arenzano.ge.it",
 
