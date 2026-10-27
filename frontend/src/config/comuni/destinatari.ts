@@ -261,6 +261,64 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "arenzano": { email: "servizisociali@comune.arenzano.ge.it", tipo: "ordinaria", fonte: "pagina Ufficio Servizi Sociali del sito del Comune" },
   // Recco (GE)
   "recco": { email: "protocollo@pec.comune.recco.ge.it", tipo: "pec", fonte: "sito del Comune, Ufficio Protocollo (PEC del protocollo)" },
+  // Asti (AT)
+  "asti": { email: "sindaco@comune.asti.it", tipo: "ordinaria", fonte: "indicato da Ilaria (Gabinetto del Sindaco)" },
+  // Bergamo (BG)
+  "bergamo": { email: "bergamofacile@comune.bergamo.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP / Contact Center)" },
+  // Brindisi (BR)
+  "brindisi": { email: "urp@comune.brindisi.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Como (CO)
+  "como": { email: "urp@comune.como.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Cuneo (CN)
+  "cuneo": { email: "urp@comune.cuneo.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Fermo (FM)
+  "fermo": { email: "urp@comune.fermo.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Cesena (FC)
+  "cesena": { email: "protocollo@comune.cesena.fc.it", tipo: "ordinaria", fonte: "indicato da Ilaria (Protocollo generale)" },
+  // La Spezia (SP)
+  "la-spezia": { email: "urp@comune.sp.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // L'Aquila (AQ)
+  "laquila": { email: "urp@comune.gpa.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Lecco (LC)
+  "lecco": { email: "urp@comune.lecco.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Lodi (LO)
+  "lodi": { email: "urp@comune.lodi.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Mantova (MN)
+  "mantova": { email: "urp@comune.mantova.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Nuoro (NU)
+  "nuoro": { email: "urp@comune.nuoro.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Oristano (OR)
+  "oristano": { email: "urp@comune.oristano.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Palermo (PA)
+  "palermo": { email: "urp@comune.palermo.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Pavia (PV)
+  "pavia": { email: "urp@comune.pavia.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Pesaro (PU)
+  "pesaro": { email: "urp@comune.pesaro.pu.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Urbino (PU)
+  "urbino": { email: "redazione.cittadino@comune.urbino.ps.it", tipo: "ordinaria", fonte: "indicato da Ilaria (Redazione / Relazioni con il cittadino)" },
+  // Piacenza (PC)
+  "piacenza": { email: "urp@comune.piacenza.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Teramo (TE)
+  "teramo": { email: "urp@comune.teramo.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Treviso (TV)
+  "treviso": { email: "urp@comune.treviso.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Verona (VR)
+  "verona": { email: "urp@comune.verona.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Viterbo (VT)
+  "viterbo": { email: "urp@comune.viterbo.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Iglesias (SU)
+  "iglesias": { email: "urp@comune.iglesias.ca.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Olbia (SS)
+  "olbia": { email: "urp@comune.olbia.ot.it", tipo: "ordinaria", fonte: "indicato da Ilaria (URP)" },
+  // Tempio Pausania (SS)
+  "tempio-pausania": { email: "info@comune.tempiopausania.ot.it", tipo: "ordinaria", fonte: "indicato da Ilaria (Informazioni generali)" },
+  // Tortolì (NU)
+  "tortoli": { email: "protocollo@comuneditortoli.it", tipo: "ordinaria", fonte: "indicato da Ilaria (Protocollo)" },
+  // Sanluri (SU)
+  "sanluri": { email: "protocollo@comune.sanluri.su.it", tipo: "ordinaria", fonte: "indicato da Ilaria (Protocollo)" },
+  // Villacidro (SU)
+  "villacidro": { email: "protocollo@comune.villacidro.vs.it", tipo: "ordinaria", fonte: "indicato da Ilaria (Protocollo)" },
   // Pietrasanta (LU)
   "pietrasanta": { email: "comune.pietrasanta@postacert.toscana.it", tipo: "pec", fonte: "pagina Ufficio sociale del sito del Comune (PEC generale)" },
   // Lucera (FG)
