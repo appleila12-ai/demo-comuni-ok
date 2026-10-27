@@ -19,7 +19,7 @@ export const tortoli: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "protocollo@pec.comuneditortoli.it",
   orari: "",
   sitoWeb: "https://www.comune.tortoli.nu.it",
 

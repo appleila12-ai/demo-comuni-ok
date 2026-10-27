@@ -19,7 +19,7 @@ export const capannori: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "pg.comune.capannori.lu.it@cert.legalmail.it",
   orari: "",
   sitoWeb: "https://www.comune.capannori.lu.it",
 

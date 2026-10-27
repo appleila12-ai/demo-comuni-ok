@@ -19,7 +19,7 @@ export const sanGiulianoMilanese: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "comune.sangiulianomilanese@cert.legalmail.it",
   orari: "",
   sitoWeb: "https://comune.sangiulianomilanese.mi.it",
 

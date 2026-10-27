@@ -19,7 +19,7 @@ export const cisternaDiLatina: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "mail@pec.comune.cisterna.latina.it",
   orari: "",
   sitoWeb: "https://www.comune.cisterna.latina.it",
 

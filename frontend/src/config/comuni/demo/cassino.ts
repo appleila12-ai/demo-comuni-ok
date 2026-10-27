@@ -19,7 +19,7 @@ export const cassino: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "servizio.protocollo@comunecassino.telecompost.it",
   orari: "",
   sitoWeb: "https://www.comune.cassino.fr.it",
 

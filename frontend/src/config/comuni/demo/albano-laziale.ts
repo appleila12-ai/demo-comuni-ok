@@ -19,7 +19,7 @@ export const albanoLaziale: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "protocollo@cert.comune.albanolaziale.rm.it",
   orari: "",
   sitoWeb: "https://comune.albanolaziale.rm.it",
 

@@ -19,7 +19,7 @@ export const favara: ComuneConfig = {
   indirizzo: "",
   telefono: "0922 448111",
   email: "",
-  pec: "",
+  pec: "comune.favara@pec.it",
   orari: "",
   sitoWeb: "https://www.comune.favara.ag.it",
 

@@ -19,7 +19,7 @@ export const savona: ComuneConfig = {
   indirizzo: "",
   telefono: "019 83101",
   email: "",
-  pec: "",
+  pec: "posta@pec.comune.savona.it",
   orari: "",
   sitoWeb: "https://www.comune.savona.it/it/topics/7",
 

@@ -20,7 +20,7 @@ export const castelnuovoMagra: ComuneConfig = {
   indirizzo: "Via Canale 189, 19033 Castelnuovo Magra (SP) (sede del Comune)",
   telefono: "0187 693826",
   email: "servizisociali@comune.castelnuovomagra.sp.it",
-  pec: "",
+  pec: "protocollo@pec.castelnuovomagra.com",
   orari: "In presenza solo su appuntamento lunedì e giovedì 9:00–12:00; ricevimento telefonico martedì e venerdì 8:30–10:30",
   sitoWeb: "https://www.comune.castelnuovomagra.sp.it/it-it/argomenti/assistenza-sociale",
 

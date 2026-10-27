@@ -18,6 +18,7 @@ export const calolziocorte: ComuneConfig = {
   indirizzo: "Piazza Vittorio Veneto 13, 23801 Calolziocorte (LC)",
   telefono: "0341 639216",
   email: "battiata.mariaconcetta@comune.calolziocorte.lc.it",
+  pec: "calolziocorte@legalmail.it",
   orari: "Lun 14:30–17:30; Mar 8:30–14:30; Gio 9:30–12:30",
   sitoWeb: "https://www.comune.calolziocorte.lc.it/Amministrazione/Uffici/Servizi-Sociali",
 

@@ -19,7 +19,7 @@ export const reggioCalabria: ComuneConfig = {
   indirizzo: "",
   telefono: "0965 362111",
   email: "",
-  pec: "",
+  pec: "protocollo@pec.reggiocal.it",
   orari: "",
   sitoWeb: "https://www.comune.reggio-calabria.it",
 

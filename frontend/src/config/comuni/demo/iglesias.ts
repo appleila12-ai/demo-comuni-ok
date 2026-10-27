@@ -19,7 +19,7 @@ export const iglesias: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "protocollo.comune.iglesias@pec.it",
   orari: "",
   sitoWeb: "https://www.comune.iglesias.ca.it",
 

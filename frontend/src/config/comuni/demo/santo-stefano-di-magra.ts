@@ -19,7 +19,7 @@ export const santoStefanoDiMagra: ComuneConfig = {
   indirizzo: "Via Filippo Turati 8, 19037 Santo Stefano di Magra (SP)",
   telefono: "0187 697179",
   email: "servizisociali@comune.santostefanodimagra.sp.it",
-  pec: "",
+  pec: "protocollo@pec.comune.santostefanodimagra.sp.it",
   orari: "Lunedì e giovedì 9:30–12:00, accesso libero (dal 01/09/2025)",
   sitoWeb: "https://www.comune.santostefanodimagra.sp.it/",
 

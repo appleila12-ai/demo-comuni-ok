@@ -19,7 +19,7 @@ export const modugno: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "affarigenerali.comune.modugno@pec.rupar.puglia.it",
   orari: "",
   sitoWeb: "https://www.comune.modugno.ba.it",
 

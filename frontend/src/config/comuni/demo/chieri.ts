@@ -19,7 +19,7 @@ export const chieri: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "protocollo.chieri@pcert.it",
   orari: "",
   sitoWeb: "https://www.comune.chieri.to.it",
 

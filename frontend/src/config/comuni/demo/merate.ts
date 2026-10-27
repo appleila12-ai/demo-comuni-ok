@@ -18,6 +18,7 @@ export const merate: ComuneConfig = {
   indirizzo: "Piazza degli Eroi 3, 23807 Merate (LC)",
   telefono: "039 5915351",
   email: "servizi.sociali@comune.merate.lc.it",
+  pec: "comune.merate@halleypec.it",
   orari: "Lun e Mar 9:00–12:00 e 15:30–16:30; Mer e Ven 10:30–13:30",
   sitoWeb: "https://www.comune.merate.lc.it/amministrazione/uffici/ufficio_20.html",
 

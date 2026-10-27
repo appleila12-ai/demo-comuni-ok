@@ -19,7 +19,7 @@ export const benevento: ComuneConfig = {
   indirizzo: "",
   telefono: "0824 772111",
   email: "",
-  pec: "",
+  pec: "protocollogenerale@pec.comunebn.it",
   orari: "",
   sitoWeb: "https://comune.benevento.it/argomento/assistenza-sociale/",
 

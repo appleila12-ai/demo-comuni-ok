@@ -19,7 +19,7 @@ export const sanluri: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "protocollo@pec.comune.sanluri.su.it",
   orari: "",
   sitoWeb: "https://comune.sanluri.su.it",
 

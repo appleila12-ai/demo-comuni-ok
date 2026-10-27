@@ -19,7 +19,7 @@ export const tempioPausania: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "protocollo@pec.comune.tempiopausania.ot.it",
   orari: "",
   sitoWeb: "https://comune.tempiopausania.ss.it",
 

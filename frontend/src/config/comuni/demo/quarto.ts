@@ -19,7 +19,7 @@ export const quarto: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "affari.generali@pec.comune.quarto.na.it",
   orari: "",
   sitoWeb: "https://comune.quarto.na.it",
 

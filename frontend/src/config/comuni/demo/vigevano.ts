@@ -19,7 +19,7 @@ export const vigevano: ComuneConfig = {
   indirizzo: "",
   telefono: "0381 2991",
   email: "",
-  pec: "",
+  pec: "protocollovigevano@pec.it",
   orari: "",
   sitoWeb: "https://comune.vigevano.pv.it/argomento/assistenza-sociale/",
 

@@ -20,7 +20,7 @@ export const vezzanoLigure: ComuneConfig = {
   indirizzo: "Via Goito 2, Vezzano Ligure (SP)",
   telefono: "0187 982520",
   email: "servizisociali@comune.vezzanoligure.sp.it",
-  pec: "",
+  pec: "protocollo.comunevezzanoligure@pec.it",
   orari: "Lunedì, mercoledì e giovedì 8:30–12:30, su prenotazione",
   sitoWeb: "https://www.comune.vezzanoligure.sp.it/",
 

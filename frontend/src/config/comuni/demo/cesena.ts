@@ -19,7 +19,7 @@ export const cesena: ComuneConfig = {
   indirizzo: "Piazzetta Cesenati del 1377 n. 1 (Palazzo Comunale, ingresso lato Rocca), 47521 Cesena (FC)",
   telefono: "0547 356856",
   email: "protocollo@unionevallesavio.it",
-  pec: "protocollo@pec.unionevallesavio.it",
+  pec: "protocollo@pec.comune.cesena.fc.it",
   orari: "Lun, Mar e Gio 13:00–15:00; Mer 9:00–12:00 (su appuntamento)",
   sitoWeb: "https://www.unionevallesavio.it/en/contatti-servizi-sociali",
 

@@ -19,7 +19,7 @@ export const maddaloni: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "prot.generale@pec.comune.maddaloni.ce.it",
   orari: "",
   sitoWeb: "https://www.comune.maddaloni.caserta.it",
 

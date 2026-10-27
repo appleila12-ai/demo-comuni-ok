@@ -18,6 +18,7 @@ export const nepi: ComuneConfig = {
   indirizzo: "Piazza del Comune 20, 01036 Nepi (VT)",
   telefono: "0761 5581325",
   email: "servizisociali@comune.nepi.vt.it",
+  pec: "comune.nepi.vt@legalmailpa.it",
   orari: "Lun, Mer, Ven 10:30–13:00; Mar e Gio 15:30–17:00",
   sitoWeb: "https://comune.nepi.vt.it/unita-organizzative/2558822/ufficio-servizi-sociali",
 

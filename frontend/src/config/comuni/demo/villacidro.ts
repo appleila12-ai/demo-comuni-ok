@@ -19,7 +19,7 @@ export const villacidro: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "protocollo.villacidro@pec.it",
   orari: "",
   sitoWeb: "https://www.comune.villacidro.su.it",
 

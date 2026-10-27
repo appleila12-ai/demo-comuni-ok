@@ -19,7 +19,7 @@ export const trento: ComuneConfig = {
   indirizzo: "",
   telefono: "0461 884111",
   email: "",
-  pec: "",
+  pec: "protocollo@pec.comune.trento.it",
   orari: "",
   sitoWeb: "https://www.comune.trento.it",
 

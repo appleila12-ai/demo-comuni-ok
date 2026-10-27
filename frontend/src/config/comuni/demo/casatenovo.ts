@@ -18,6 +18,7 @@ export const casatenovo: ComuneConfig = {
   indirizzo: "Piazza Repubblica 7, 23880 Casatenovo (LC)",
   telefono: "039 9235282",
   email: "servizio.sociale@comune.casatenovo.lc.it",
+  pec: "protocollo.casatenovo@legalmail.it",
   orari: "Lun 9:00–12:30 e 16:00–18:00; Mar, Gio, Ven 9:00–13:00",
   sitoWeb: "https://comune.casatenovo.lc.it/unit%C3%A0-organizzative/2198744/ufficio-servizi-sociali",
 

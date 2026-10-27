@@ -19,7 +19,7 @@ export const ascoliPiceno: ComuneConfig = {
   indirizzo: "Via Berardo Tucci 3 (Casa Albergo Ferrucci), 63100 Ascoli Piceno (AP)",
   telefono: "0736 298603",
   email: "",
-  pec: "",
+  pec: "comune.ap@pec.it",
   orari: "Lun–Ven 9:00–11:00; Mar 16:00–17:00",
   sitoWeb: "https://www.comune.ap.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/5720",
 

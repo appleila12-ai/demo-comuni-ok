@@ -18,6 +18,7 @@ export const viterbo: ComuneConfig = {
   indirizzo: "Via del Ginnasio 1, 01100 Viterbo (VT)",
   telefono: "0761 348567",
   email: "segretariatosocialevt@comune.viterbo.it",
+  pec: "protocollo@pec.comuneviterbo.it",
   orari: "Lun, Mer, Ven 10:00–12:00; Mar e Gio 15:00–16:30",
   sitoWeb: "https://comune.viterbo.it/amministrazione/unita_organizzativa/ufficio-servizi-amministrativi-sociali/",
 
