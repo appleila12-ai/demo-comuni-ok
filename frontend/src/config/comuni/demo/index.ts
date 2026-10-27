@@ -351,6 +351,8 @@ import { venezia } from "./venezia";
 import { verbania } from "./verbania";
 import { vercelli } from "./vercelli";
 import { verona } from "./verona";
+import { fabricaDiRoma } from "./fabrica-di-roma";
+import { montefiascone } from "./montefiascone";
 import { vetralla } from "./vetralla";
 import { vezzanoLigure } from "./vezzano-ligure";
 import { viareggio } from "./viareggio";
@@ -711,6 +713,8 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   verbania,
   vercelli,
   verona,
+  fabricaDiRoma,
+  montefiascone,
   vetralla,
   vezzanoLigure,
   viareggio,

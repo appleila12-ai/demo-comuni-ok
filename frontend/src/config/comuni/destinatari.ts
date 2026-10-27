@@ -251,6 +251,10 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "sondrio": { email: "protocollo@cert.comune.sondrio.it", tipo: "pec", fonte: "pagina ufficiale del Comune" },
   // Isernia (IS)
   "isernia": { email: "comuneisernia@pec.it", tipo: "pec", fonte: "pagina comunale dedicata alla PEC" },
+  // Fabrica di Roma (VT)
+  "fabrica-di-roma": { email: "servizisociali.fabricadiroma@pec.it", tipo: "pec", fonte: "pagina Ufficio Servizi Sociali del sito del Comune (PEC dei Servizi Sociali)" },
+  // Montefiascone (VT)
+  "montefiascone": { email: "protocollo@pec.comune.montefiascone.vt.it", tipo: "pec", fonte: "piè di pagina del sito del Comune (PEC del protocollo)" },
   // Pietrasanta (LU)
   "pietrasanta": { email: "comune.pietrasanta@postacert.toscana.it", tipo: "pec", fonte: "pagina Ufficio sociale del sito del Comune (PEC generale)" },
   // Lucera (FG)
