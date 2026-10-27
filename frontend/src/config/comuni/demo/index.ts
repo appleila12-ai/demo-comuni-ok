@@ -327,6 +327,14 @@ import { teramo } from "./teramo";
 import { termoli } from "./termoli";
 import { terni } from "./terni";
 import { terracina } from "./terracina";
+import { molaDiBari } from "./mola-di-bari";
+import { gragnano } from "./gragnano";
+import { sarno } from "./sarno";
+import { mondragone } from "./mondragone";
+import { fonteNuova } from "./fonte-nuova";
+import { carmagnola } from "./carmagnola";
+import { garbagnateMilanese } from "./garbagnate-milanese";
+import { abbiategrasso } from "./abbiategrasso";
 import { marigliano } from "./marigliano";
 import { villaricca } from "./villaricca";
 import { tivoli } from "./tivoli";
@@ -687,6 +695,14 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   termoli,
   terni,
   terracina,
+  molaDiBari,
+  gragnano,
+  sarno,
+  mondragone,
+  fonteNuova,
+  carmagnola,
+  garbagnateMilanese,
+  abbiategrasso,
   marigliano,
   villaricca,
   tivoli,
