@@ -57,6 +57,18 @@ export const parma: ComuneConfig = {
     },
     {
       icon: "people-outline",
+      title: "Polo sociale San Leonardo – Parma",
+      subtitle: "Via Verona 36/A · Tel. 0521 218589 · st.sanleonardo@comune.parma.it · Lunedì–venerdì 8:30–13:30, previo appuntamento",
+      action: { type: "tel", value: "0521218589" },
+    },
+    {
+      icon: "people-outline",
+      title: "Polo sociale Montanara – Parma",
+      subtitle: "Via Giulio e Guido Carmignani 9/A · Tel. 0521 218358 · st.montanara@comune.parma.it · Lunedì–venerdì 8:30–13:30, previo appuntamento",
+      action: { type: "tel", value: "0521218358" },
+    },
+    {
+      icon: "people-outline",
       title: "Polo sociale Pablo – Parma",
       subtitle: "Via Renzo Ildebrando Bocchi 1/A · Tel. 0521 218300 · st.pablo@comune.parma.it · Lunedì–venerdì 8:30–13:30, previo appuntamento",
       action: { type: "tel", value: "0521218300" },
