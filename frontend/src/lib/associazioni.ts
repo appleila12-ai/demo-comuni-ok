@@ -13,6 +13,7 @@
 // Aggiornamento 21/10/2026: raggio di 30 km (coordinate dei municipi da opendatasicilia/comuni-italiani, basato su ISTAT e IndicePA).
 // Aggiornamento 21/10/2026: Ca.Te.Ri.Na (Sarzana), recapiti forniti il 21/10/2026.
 // Aggiornamento 26/10/2026: spiagge inclusive di Genova, 8 spiagge, recapiti e prenotazione dalla pagina del Comune (agg. 23/06/2026).
+// Aggiornamento 27/10/2026: Albo comunale delle associazioni della disabilità di Pisa.
 // Aggiornamento 25/10/2026: provincia di Genova (Anffas, ANGSA, UICI, Chiossone, AISM, UILDM, ENS, ANGLAT, Asperger,
 // e dall'elenco ASL3 'Comitato Misto Consultivo - Associazioni' agg. 18/06/2025: Consulta disabilità, Alzheimer Liguria,
 // ALFAPP, Parkinson, tutela del malato, AVO).
@@ -695,6 +696,102 @@ PER_PROVINCIA.BS.volontariato.unshift({
 
 
 
+
+// Pisa (PI): dall'Albo comunale delle associazioni nell'ambito della disabilità, file "Elenco Associazioni 2026"
+// (pagina del Comune aggiornata il 24/08/2026), letto il 27/10/2026. Solo le voci con attività legate alla
+// disabilità, solo i dati scritti nel documento. Tolte le email personali; numeri ripresi senza modifiche.
+// Revisione dell'albo prevista nel 2026: ricontrollare appena il Comune pubblica l'atto.
+PER_PROVINCIA.PI = PER_PROVINCIA.PI ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.PI.volontariato.unshift(
+  {
+    nome: "Anffas Pisa",
+    cosa: "Associazione di famiglie di persone con disabilità intellettiva e/o relazionale: interventi e servizi sociali, prestazioni socio-sanitarie, formazione professionale, attività culturali e agricoltura sociale.",
+    dove: "Sede legale: via dei Cappuccini 4, 56121 Pisa",
+    telefono: "050 7215158",
+    email: "anffaspisa@tiscali.it",
+    sito: "https://www.anffaspisa.it",
+    comuni: ["pisa"],
+  },
+  {
+    nome: "ANMIC Pisa",
+    cosa: "Associazione Nazionale a tutela delle Persone con Disabilità.",
+    dove: "Via dei Sepolcri, Pisa",
+    telefono: "050 9711533",
+    email: "anmicpisa@gmail.com",
+    comuni: ["pisa"],
+  },
+  {
+    nome: "AIPD Pisa (Associazione Italiana Persone Down)",
+    cosa: "Attività per le persone con sindrome di Down e inserimento nel contesto sociale.",
+    dove: "Via Ippolito Rosselini 42/44, 56124 Pisa",
+    telefono: "050 48689",
+    email: "aipdpisa@aipd.it",
+    comuni: ["pisa"],
+  },
+  {
+    nome: "Autismo Pisa",
+    cosa: "Associazione di genitori di bambini, ragazzi e adulti con disturbo dello spettro autistico.",
+    dove: "Via B. Fredi 10, 56122 Pisa",
+    email: "autismopisa@gmail.com",
+    comuni: ["pisa"],
+  },
+  {
+    nome: "Dinsi Une Man",
+    cosa: "Laboratorio polifunzionale che coinvolge persone con disabilità di ogni età, anche anziani e bambini.",
+    dove: "Viale delle Cascine 150/E, 56122 Pisa",
+    telefono: "050 532724",
+    comuni: ["pisa"],
+  },
+  {
+    nome: "Eppursimuove",
+    cosa: "Sostiene le persone con disabilità e le loro famiglie con servizi e progetti per rispondere ai loro bisogni.",
+    dove: "Via Sterpulino 11, Pisa",
+    telefono: "328 7156863",
+    email: "eppursimuoveasd@gmail.com",
+    comuni: ["pisa"],
+  },
+  {
+    nome: "Respirando",
+    cosa: "Sostiene e dà voce alle famiglie dei bambini che dipendono da presidi medici.",
+    dove: "Via Enzo Zerboglio 5, 56125 Pisa",
+    telefono: "050 9662485",
+    email: "info@associazionerespirando.org",
+    comuni: ["pisa"],
+  },
+  {
+    nome: "Unique APS",
+    cosa: "Sensibilizza sul tema della disabilità e delle diversità.",
+    dove: "Lungarno Galileo Galilei, Pisa",
+    email: "associazioneunique@gmail.com",
+    comuni: ["pisa"],
+  },
+  {
+    nome: "Cambio di Passo APS",
+    cosa: "Lavora perché le persone con pluridisabilità abbiano pari opportunità e vedano riconosciuti i loro diritti.",
+    dove: "Piazzale Martin Luther King 12, 56123 Pisa",
+    telefono: "371 7604159",
+    email: "cambiodipasso.aps@gmail.com",
+    comuni: ["pisa"],
+  },
+);
+PER_PROVINCIA.PI.sport.unshift(
+  {
+    nome: "Sport Pisa I.E.S. (Insegnare Educare allo Sport)",
+    cosa: "Pallacanestro senior e giovanile, minibasket e baskin (il baskin è inserito tra le attività paralimpiche).",
+    dove: "Viale Giovanni Pisano 27/A, 56123 Pisa",
+    telefono: "329 2345359",
+    email: "iesbasket@fastwebnet.it",
+    comuni: ["pisa"],
+  },
+  {
+    nome: "ASD Bambini e Cavalli",
+    cosa: "Attività con i cavalli per bambini, ragazzi e adulti con disagio cognitivo.",
+    dove: "Via Palazzi 40/B, 56121 Coltano, Pisa",
+    telefono: "050 989215",
+    email: "info@ilnuovofontanile.it",
+    comuni: ["pisa"],
+  },
+);
 
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
