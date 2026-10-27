@@ -1426,6 +1426,28 @@ export const BONUS: Bonus[] = [
     nota: "Avviso del 15/06/2026, aggiornato il 28/09/2026. Chiedi al Comune quando uscirà quello del 2027.",
   },
 
+  // ---------------------------------------------------------------- PIETRASANTA (27/10/2026)
+  {
+    id: "pietrasanta-bonus-riscaldamento-2026",
+    regione: "Toscana",
+    comuni: ["pietrasanta"],
+    titolo: "Bonus spese da riscaldamento 2026",
+    perChi:
+      "Persone con più di 60 anni che hanno i requisiti scritti nel bando del Comune. L'avviso non riporta soglie ISEE o patrimoniali: sono nel bando allegato.",
+    cosa:
+      "Bonus per le spese di riscaldamento. L'avviso non scrive l'importo: è nel bando allegato.",
+    stato: "aperto",
+    quando: "Domande dal 26 ottobre al 26 novembre 2026.",
+    comeSiChiede:
+      "Online dal portale del Comune con SPID, CIE o CNS. Per essere aiutato a compilare la domanda c'è uno sportello di facilitazione digitale, su appuntamento: 0584 795275.",
+    fonte: {
+      label: "Comune di Pietrasanta · Bonus spese da riscaldamento 2026",
+      url: "https://www.comune.pietrasanta.lu.it/index.php/it/news/bonus-spese-da-riscaldamento-2026",
+    },
+    verificatoIl: "27/10/2026",
+    nota: "Avviso pubblicato il 22/10/2026. Il bando (file ODT) contiene requisiti e importi: leggili prima di fare domanda.",
+  },
+
   // -------------------------------------------------------------------- PISA (26/10/2026)
   {
     id: "pisa-adattamento-veicoli-2026",

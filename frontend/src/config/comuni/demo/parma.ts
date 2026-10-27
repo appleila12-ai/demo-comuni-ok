@@ -56,6 +56,12 @@ export const parma: ComuneConfig = {
       action: { type: "tel", value: "0521218358" },
     },
     {
+      icon: "people-outline",
+      title: "Polo sociale Pablo – Parma",
+      subtitle: "Via Renzo Ildebrando Bocchi 1/A · Tel. 0521 218300 · st.pablo@comune.parma.it · Lunedì–venerdì 8:30–13:30, previo appuntamento",
+      action: { type: "tel", value: "0521218300" },
+    },
+    {
       icon: "accessibility-outline",
       title: "ANffAS Parma – Sportello S.A.I.",
       subtitle: "Accoglienza e informazione gratuita per le famiglie · Segue anche il Progetto di vita",
