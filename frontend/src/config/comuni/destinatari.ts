@@ -255,6 +255,10 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "fabrica-di-roma": { email: "servizisociali.fabricadiroma@pec.it", tipo: "pec", fonte: "pagina Ufficio Servizi Sociali del sito del Comune (PEC dei Servizi Sociali)" },
   // Montefiascone (VT)
   "montefiascone": { email: "protocollo@pec.comune.montefiascone.vt.it", tipo: "pec", fonte: "piè di pagina del sito del Comune (PEC del protocollo)" },
+  // Camogli (GE)
+  "camogli": { email: "servizisociali@comune.camogli.ge.it", tipo: "ordinaria", fonte: "pagina Ufficio Servizi Sociali del sito del Comune" },
+  // Arenzano (GE)
+  "arenzano": { email: "servizisociali@comune.arenzano.ge.it", tipo: "ordinaria", fonte: "pagina Ufficio Servizi Sociali del sito del Comune" },
   // Pietrasanta (LU)
   "pietrasanta": { email: "comune.pietrasanta@postacert.toscana.it", tipo: "pec", fonte: "pagina Ufficio sociale del sito del Comune (PEC generale)" },
   // Lucera (FG)
