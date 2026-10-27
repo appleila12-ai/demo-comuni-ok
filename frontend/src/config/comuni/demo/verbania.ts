@@ -19,7 +19,7 @@ export const verbania: ComuneConfig = {
   indirizzo: "",
   telefono: "0323 5421",
   email: "",
-  pec: "",
+  pec: "istituzionale.verbania@legalmail.it",
   orari: "",
   sitoWeb: "https://www.comune.verbania.it",
 

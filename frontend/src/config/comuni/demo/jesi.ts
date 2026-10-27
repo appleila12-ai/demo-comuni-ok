@@ -19,7 +19,7 @@ export const jesi: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "protocollo.comune.jesi@legalmail.it",
   orari: "",
   sitoWeb: "https://www.comune.jesi.an.it",
 

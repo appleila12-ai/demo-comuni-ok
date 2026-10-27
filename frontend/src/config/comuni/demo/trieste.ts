@@ -20,7 +20,7 @@ export const trieste: ComuneConfig = {
   indirizzo: "",
   telefono: "040 6751",
   email: "",
-  pec: "",
+  pec: "comune.trieste@certgov.fvg.it",
   orari: "",
   sitoWeb: "https://www.comune.trieste.it",
 

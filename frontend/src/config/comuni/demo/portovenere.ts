@@ -18,6 +18,7 @@ export const portovenere: ComuneConfig = {
   indirizzo: "Via Garibaldi 9, 19025 Porto Venere (SP)",
   telefono: "0187 794844",
   email: "",
+  pec: "protocollo@pec.comune.portovenere.sp.it",
   orari: "Telefono lunedì–venerdì 8:30–10:30 (accesso libero, dal 29/09/2025). Servizi Sociali e alla Persona: lunedì e mercoledì 9:00–12:00 su prenotazione (dal 01/10/2025)",
   sitoWeb: "https://www.comune.portovenere.sp.it/amministrazione/uffici/ufficio_16.html",
 

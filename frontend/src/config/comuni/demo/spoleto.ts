@@ -19,7 +19,7 @@ export const spoleto: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "comune.spoleto@postacert.umbria.it",
   orari: "",
   sitoWeb: "https://www.comune.spoleto.pg.it",
 

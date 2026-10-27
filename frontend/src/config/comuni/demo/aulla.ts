@@ -19,7 +19,7 @@ export const aulla: ComuneConfig = {
   indirizzo: "Municipio, Piazza Gramsci 1, 54011 Aulla (MS)",
   telefono: "0187 400229",
   email: "sociale@comune.aulla.ms.it",
-  pec: "",
+  pec: "comune.aulla@postacert.toscana.it",
   orari: "Lun, mar, mer e ven 9:00–12:00; giovedì 9:00–12:00 e 15:00–17:00",
   sitoWeb: "https://comune.aulla.ms.it/?post_type=unita_organizzativa&p=2180",
 

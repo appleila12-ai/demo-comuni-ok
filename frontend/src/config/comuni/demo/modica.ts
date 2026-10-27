@@ -19,7 +19,7 @@ export const modica: ComuneConfig = {
   indirizzo: "",
   telefono: "0932 759111",
   email: "",
-  pec: "",
+  pec: "protocollo.comune.modica@pec.it",
   orari: "",
   sitoWeb: "https://www.comune.modica.rg.it",
 

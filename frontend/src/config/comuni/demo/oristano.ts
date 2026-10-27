@@ -19,7 +19,7 @@ export const oristano: ComuneConfig = {
   indirizzo: "Palazzo degli Scolopi, piazza Eleonora 44, 09170 Oristano",
   telefono: "0783 791208",
   email: "milena.deligia@comune.oristano.it",
-  pec: "",
+  pec: "istituzionale@pec.comune.oristano.it",
   orari: "Orari da confermare con l'ufficio (la pagina del Comune li riporta per agosto 2026)",
   sitoWeb: "https://comune.oristano.it/it/amministrazione/unita-organizzativa/Ufficio-sociale-professionale/",
 

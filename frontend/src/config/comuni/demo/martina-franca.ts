@@ -19,7 +19,7 @@ export const martinaFranca: ComuneConfig = {
   indirizzo: "",
   telefono: "080 4836111",
   email: "",
-  pec: "",
+  pec: "protocollo.comunemartinafranca@pec.rupar.puglia.it",
   orari: "",
   sitoWeb: "https://www.comune.martinafranca.ta.it/Argomenti/Politica-sociale",
 

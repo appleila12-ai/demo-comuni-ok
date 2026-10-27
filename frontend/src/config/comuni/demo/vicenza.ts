@@ -19,7 +19,7 @@ export const vicenza: ComuneConfig = {
   indirizzo: "",
   telefono: "0444 221111",
   email: "",
-  pec: "",
+  pec: "vicenza@cert.comune.vicenza.it",
   orari: "",
   sitoWeb: "https://www.comune.vicenza.it",
 

@@ -18,6 +18,7 @@ export const lodi: ComuneConfig = {
   indirizzo: "Via Volturno 4, 26900 Lodi (LO)",
   telefono: "0371 409329",
   email: "politichesociali@comune.lodi.it",
+  pec: "comunedilodi@legalmail.it",
   orari: "Lun 9:00–12:00; Mer 9:00–13:00; Sab 9:00–12:00",
   sitoWeb: "https://www.comune.lodi.it/areetematiche/sociale",
 

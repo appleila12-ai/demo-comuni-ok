@@ -19,7 +19,7 @@ export const aosta: ComuneConfig = {
   indirizzo: "",
   telefono: "0165 3001",
   email: "",
-  pec: "",
+  pec: "protocollo@pec.comune.aosta.it",
   orari: "",
   sitoWeb: "https://www.sociale.vda.it/it/sportello-sociale/funzioni-dello-sportello-sociale",
 

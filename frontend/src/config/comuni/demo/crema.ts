@@ -19,7 +19,7 @@ export const crema: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "protocollo@comunecrema.telecompost.it",
   orari: "",
   sitoWeb: "https://www.comune.crema.cr.it",
 

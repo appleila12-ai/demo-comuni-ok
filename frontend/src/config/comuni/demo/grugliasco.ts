@@ -19,7 +19,7 @@ export const grugliasco: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "grugliasco@cert.ruparpiemonte.it",
   orari: "",
   sitoWeb: "https://www.comune.grugliasco.to.it",
 

@@ -18,6 +18,7 @@ export const tarquinia: ComuneConfig = {
   indirizzo: "Via Giuseppe Garibaldi 23, 01016 Tarquinia (VT)",
   telefono: "0766 849312",
   email: "servizisociali@comune.tarquinia.vt.it",
+  pec: "pec@pec.comune.tarquinia.vt.it",
   orari: "Lun–Ven 9:00–13:00, su appuntamento telefonico",
   sitoWeb: "https://www.comune.tarquinia.vt.it/Amministrazione/Uffici/Ufficio-Servizi-Sociali-Comunali-e-Distrettuali-Segretariato-Sociale-Centro-Diurno-Socio-Riabilitativo-C.D.S.R",
 

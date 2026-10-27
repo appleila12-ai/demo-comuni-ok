@@ -18,6 +18,7 @@ export const podenzano: ComuneConfig = {
   indirizzo: "Via Monte Grappa 100, 29027 Podenzano (PC)",
   telefono: "0523 554645",
   email: "sociale@comune.podenzano.pc.it",
+  pec: "comune.podenzano@sintranet.legalmail.it",
   orari: "Lun–Ven 9:15–12:30; Mar e Gio 15:30–17:00; Sab 9:15–12:00",
   sitoWeb: "https://www.unionevalnurevalchero.it/home/vivere/luoghi/Luogo-10.html",
 

@@ -19,7 +19,7 @@ export const urbino: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "comune.urbino@emarche.it",
   orari: "",
   sitoWeb: "https://www.comune.urbino.pu.it",
 

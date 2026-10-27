@@ -20,7 +20,7 @@ export const modena: ComuneConfig = {
   indirizzo: "",
   telefono: "059 20311",
   email: "",
-  pec: "",
+  pec: "comune.modena@cert.comune.modena.it",
   orari: "",
   sitoWeb: "https://www.comune.modena.it/servizi/salute-benessere-e-assistenza",
 

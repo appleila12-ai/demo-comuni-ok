@@ -19,7 +19,7 @@ export const reggioEmilia: ComuneConfig = {
   indirizzo: "",
   telefono: "0522 4561",
   email: "",
-  pec: "",
+  pec: "comune.reggioemilia@pec.municipio.re.it",
   orari: "",
   sitoWeb: "https://www.comune.reggioemilia.it",
 

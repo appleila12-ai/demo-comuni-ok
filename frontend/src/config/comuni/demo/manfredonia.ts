@@ -19,7 +19,7 @@ export const manfredonia: ComuneConfig = {
   indirizzo: "",
   telefono: "0884 519200",
   email: "",
-  pec: "",
+  pec: "protocollo@comunemanfredonia.legalmail.it",
   orari: "",
   sitoWeb: "https://www.comune.manfredonia.fg.it/area_areaTematica/15725/pagsistema.html",
 

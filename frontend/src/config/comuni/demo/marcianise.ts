@@ -19,7 +19,7 @@ export const marcianise: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "protocollo@pec.comune.marcianise.ce.it",
   orari: "",
   sitoWeb: "https://www.comune.marcianise.ce.it",
 

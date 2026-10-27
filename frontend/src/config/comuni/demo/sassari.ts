@@ -19,7 +19,7 @@ export const sassari: ComuneConfig = {
   indirizzo: "",
   telefono: "079 279111",
   email: "",
-  pec: "",
+  pec: "protocollo@pec.comune.sassari.it",
   orari: "",
   sitoWeb: "https://www.comune.sassari.it",
 

@@ -19,7 +19,7 @@ export const casalecchioDiReno: ComuneConfig = {
   indirizzo: "",
   telefono: "",
   email: "",
-  pec: "",
+  pec: "comune.casalecchio@cert.provincia.bo.it",
   orari: "",
   sitoWeb: "https://www.comune.casalecchiodireno.bo.it",
 

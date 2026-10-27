@@ -20,7 +20,7 @@ export const luni: ComuneConfig = {
   indirizzo: "Via Castagno 61, 19034 Luni (SP) (sede del Comune)",
   telefono: "0187 690111",
   email: "",
-  pec: "",
+  pec: "segreteria@pec.comune.luni.sp.it",
   orari: "Ricevimento su appuntamento (Servizio 6 – Servizi socio-educativi)",
   sitoWeb: "https://www.comune.luni.sp.it/it-it/argomenti/assistenza-sociale",
 

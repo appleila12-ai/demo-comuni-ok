@@ -19,7 +19,7 @@ export const rovigo: ComuneConfig = {
   indirizzo: "",
   telefono: "0425 2061",
   email: "",
-  pec: "",
+  pec: "comunerovigo@legalmail.it",
   orari: "",
   sitoWeb: "https://www.comune.rovigo.it",
 

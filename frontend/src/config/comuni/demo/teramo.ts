@@ -18,8 +18,8 @@ export const teramo: ComuneConfig = {
   responsabile: "Area Welfare e Servizi al Cittadino – ECAD Ambito Distrettuale Sociale n. 20 Teramo",
   indirizzo: "Via Giosuè Carducci 33, 64100 Teramo (TE)",
   telefono: "0861 324855",
-  email: "affarigenerali@comune.pecpa.it",
-  pec: "affarigenerali@comune.pecpa.it",
+  email: "affarigenerali@comune.teramo.pecpa.it",
+  pec: "affarigenerali@comune.teramo.pecpa.it",
   orari: "Orari: vedi il sito del Comune o telefona",
   sitoWeb: "https://www.comune.teramo.it/it/unita_organizzative/area-4-servizi-per-il-sostegno-la-solidarieta-e-la-coesione-della-comunita",
 

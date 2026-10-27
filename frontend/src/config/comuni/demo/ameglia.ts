@@ -20,7 +20,7 @@ export const ameglia: ComuneConfig = {
   indirizzo: "Via Cafaggio 15, 19031 Ameglia (SP)",
   telefono: "0187 609226",
   email: "servizisociali@comune.ameglia.sp.it",
-  pec: "",
+  pec: "protocollo@pec.comune.ameglia.sp.it",
   orari: "Lunedì, mercoledì e sabato 9:00–12:00, su appuntamento",
   sitoWeb: "https://www.comune.ameglia.sp.it",
 
