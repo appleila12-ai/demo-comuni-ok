@@ -2,7 +2,7 @@ import type { ComuneConfig } from "../types";
 
 // Comune di Rieti (RI) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
+// Telefoni: pagina "Assistenza sociale" del Comune (recapiti incollati da Ilaria il 27/10/2026, concordi in due controlli). Orari non inseriti: la pagina li riporta con un riferimento alle regole Covid, da riconfermare. PEC: IndicePA. Il link dell'azienda sanitaria è da verificare.
 // Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
 export const rieti: ComuneConfig = {
   slug: "rieti",
@@ -17,9 +17,9 @@ export const rieti: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0746 2871",
+  telefono: "0746 287874",
   email: "",
-  pec: "",
+  pec: "protocollo@pec.comune.rieti.it",
   orari: "",
   sitoWeb: "https://www.comune.rieti.it",
 
@@ -35,9 +35,9 @@ export const rieti: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.rieti.it" },
+      title: "Assistenza sociale – Rieti",
+      subtitle: "Area adulti 0746 287874 · Area minori 0746 287881 / 0746 489990 · Chiarimenti 0746 287868 · Gli orari si chiedono per telefono",
+      action: { type: "tel", value: "0746287874" },
     },
     {
       icon: "medkit-outline",
