@@ -541,15 +541,15 @@ export const BONUS: Bonus[] = [
       "Un servizio di trasporto pubblico collettivo per le attività del tempo libero, su prenotazione. La pratica e la telefonata al numero verde sono gratuite; il viaggio costa quanto il biglietto ordinario AMT. La pagina avverte che la prenotazione può non essere soddisfatta per orari simultanei o mancanza di vetture.",
     stato: "attivo",
     quando:
-      "Si prenota almeno 24 ore prima del viaggio; AMT conferma entro le 18:00 del giorno prima. La domanda è istruita entro 30 giorni dalla ricezione.",
+      "Si prenota almeno 24 ore prima del viaggio, al numero verde AMT dal lunedì al sabato, dalle 6:00 alle 19:30 (domenica e festivi esclusi); per il giorno dopo si prenota entro le 12:00. AMT conferma entro le 18:00 del giorno prima. La domanda è istruita entro 30 giorni dalla ricezione.",
     comeSiChiede:
       "Domanda online sul sito del Comune con SPID, CIE o CNS, oppure modulo e allegati (documento d'identità, certificato medico, verbale INPS) via email a gestionedisabilita@comune.genova.it o via PEC a dpsdisabilita.comge@postecert.it. Prenotazioni dei viaggi: numero verde AMT 800 085 302. Informazioni: U.O. Area Disabilità, tel. 010 5577444, polodisabilita@comune.genova.it.",
     fonte: {
       label: "Comune di Genova · Trasporto per il tempo libero dedicato alle persone con disabilità (Mobility Bus)",
       url: "https://www.comune.genova.it/servizi/salute-benessere-e-assistenza/trasporto-il-tempo-libero-dedicato-alle-persone-con",
     },
-    verificatoIl: "26/10/2026",
-    nota: "Pagina del Comune aggiornata il 19/08/2026. Gli orari del numero verde non sono scritti in modo chiaro nella pagina: chiedi conferma al numero verde.",
+    verificatoIl: "27/10/2026",
+    nota: "Pagina del Comune aggiornata il 19/08/2026 e riletta il 27/10/2026. Il viaggio può non essere confermato per orari sovrapposti o mancanza di vetture.",
   },
   {
     id: "genova-trasporto-lavorativo-riabilitativo",
