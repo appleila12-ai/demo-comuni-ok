@@ -327,6 +327,8 @@ import { teramo } from "./teramo";
 import { termoli } from "./termoli";
 import { terni } from "./terni";
 import { terracina } from "./terracina";
+import { marigliano } from "./marigliano";
+import { villaricca } from "./villaricca";
 import { tivoli } from "./tivoli";
 import { torino } from "./torino";
 import { torreAnnunziata } from "./torre-annunziata";
@@ -685,6 +687,8 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   termoli,
   terni,
   terracina,
+  marigliano,
+  villaricca,
   tivoli,
   torino,
   torreAnnunziata,
