@@ -1024,6 +1024,29 @@ PER_PROVINCIA.AR.sport.unshift(
   },
 );
 
+// Arezzo (AR): Caritas diocesana (pagina "Carità e Salute – disabilità") e Istituto di Agazzi (pagina "Chi siamo" del sito dell'Istituto),
+// lette il 27/10/2026. Solo ciò che le pagine scrivono; le pagine non hanno data di aggiornamento.
+PER_PROVINCIA.AR.volontariato.unshift(
+  {
+    nome: "Caritas diocesana di Arezzo – Carità e Salute (disabilità)",
+    cosa: "La Caritas elenca 14 servizi per persone con disabilità: accompagnamento e trasporto, assistenza residenziale, centro diurno, centro \"Dopo di noi\" per chi non ha sostegno familiare, centro socio-riabilitativo, comunità alloggio protetto, formazione e sensibilizzazione, integrazione lavorativa e scolastica, punto di ascolto, residenze sanitarie (RSA e RSD per disabili), servizio domiciliare scolastico, socializzazione. La pagina non descrive i singoli servizi né gli orari: telefona alla Caritas.",
+    dove: "Via Fonte Veneziana 19, 52100 Arezzo",
+    telefono: "0575 354769",
+    email: "caritas@caritas.arezzo.it",
+    sito: "https://www.caritasarezzo.it/carita-e-salute-disabilita/",
+    comuni: ["arezzo"],
+  },
+  {
+    nome: "Istituto di Agazzi (Madre della Divina Provvidenza)",
+    cosa: "Centro di riabilitazione di Arezzo. Servizio Start: rete di servizi residenziali e diurni per persone con disabilità intellettiva tra i 18 e i 65 anni (tra cui il Centro Diurno Catasca). Futurabile: percorsi ambulatoriali per minori da 0 a 18 anni e famiglie. A-Rìa: riabilitazione intensiva in degenza dopo eventi neurologici o ortopedici acuti. Auryn: disturbi dell'alimentazione.",
+    dove: "Strada Comunale di Agazzi 47, 52100 Arezzo",
+    telefono: "057 591511",
+    email: "info@istitutoagazzi.it",
+    sito: "https://www.istitutoagazzi.it/chi-siamo/",
+    comuni: ["arezzo"],
+  },
+);
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",
