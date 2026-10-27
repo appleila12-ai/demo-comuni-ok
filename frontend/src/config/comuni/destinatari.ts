@@ -319,6 +319,8 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "sanluri": { email: "protocollo@comune.sanluri.su.it", tipo: "ordinaria", fonte: "indicato da Ilaria (Protocollo)" },
   // Villacidro (SU)
   "villacidro": { email: "protocollo@comune.villacidro.vs.it", tipo: "ordinaria", fonte: "indicato da Ilaria (Protocollo)" },
+  // Lanusei (NU)
+  "lanusei": { email: "protocollo@comune.lanusei.og.it", tipo: "ordinaria", fonte: "indicato da Ilaria, confermato il 27/10/2026 (protocollo)" },
   // Pietrasanta (LU)
   "pietrasanta": { email: "comune.pietrasanta@postacert.toscana.it", tipo: "pec", fonte: "pagina Ufficio sociale del sito del Comune (PEC generale)" },
   // Lucera (FG)

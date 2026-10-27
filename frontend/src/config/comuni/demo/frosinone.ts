@@ -4,7 +4,8 @@ import type { ComuneConfig } from "../types";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Aggiornamento 26/10/2026: Sportello Famiglia e Segretariato sociale (pagina del Comune agg. 18/06/2025, letta il 26/10/2026).
 // Il link dell'azienda sanitaria è da verificare.
-// Da fare: orari dello Sportello, bonus del Comune, associazioni, sport e tempo libero.
+// 27/10/2026: orari dalla pagina Servizi Sociali (sezione del responsabile, non orario di apertura al pubblico), confermati da Ilaria come da pubblicare con questa dicitura. La pagina dello Sportello non ha orari.
+// Da fare: orari certi di apertura dello Sportello, bonus del Comune, associazioni, sport e tempo libero.
 export const frosinone: ComuneConfig = {
   slug: "frosinone",
   tipo: "comune",
@@ -21,7 +22,7 @@ export const frosinone: ComuneConfig = {
   telefono: "0775 2651",
   email: "sportellofamiglia@comune.frosinone.it",
   pec: "pec@pec.comune.frosinone.it",
-  orari: "",
+  orari: "Orari indicati sulla pagina del Comune per il responsabile del servizio: lunedì e mercoledì 9:30–12:30 e 15:30–17:30; venerdì 9:30–12:30. Conferma gli orari di accesso allo sportello al centralino 0775 2651",
   sitoWeb: "https://www.comune.frosinone.it",
 
   logo: null,
