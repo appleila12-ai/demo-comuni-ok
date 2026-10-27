@@ -329,6 +329,26 @@ export const BONUS: Bonus[] = [
     verificatoIl: "22/10/2026",
     nota: "Pagina aggiornata dal Comune il 03/09/2026.",
   },
+  {
+    id: "pietrasanta-bonus-riscaldamento-2026",
+    regione: "Toscana",
+    comuni: ["pietrasanta"],
+    titolo: "Bonus spese da riscaldamento 2026 (ultrasessantenni a basso reddito)",
+    perChi:
+      "Persone con almeno 60 anni al momento della domanda, residenti a Pietrasanta. ISEE non superiore a 13.240 euro per chi vive solo, a 11.230 euro per chi vive in un nucleo con più persone. Giacenza mobiliare ISEE non superiore a 20.000 euro (al netto della franchigia). Non si possiedono terreni agricoli condotti in forma imprenditoriale o edificabili, altri fabbricati con rendita catastale superiore a 298 euro e quota almeno del 20% (esclusi i C2 e C6), né una casa di residenza di categoria A1, A8 o A9. Non si ha a disposizione un'auto immatricolata dopo il 1° gennaio 2022 oltre 1600 cc, una moto immatricolata dopo il 1° gennaio 2022 da 600 cc in su, un natante con motore oltre 25 cavalli, né un caravan o autocaravan.",
+    cosa:
+      "Un bonus per le spese di riscaldamento. Il bando non scrive l'importo: dice che il bonus è pagato nei limiti delle risorse del Bilancio 2026/2028.",
+    stato: "aperto",
+    quando: "Domande dal 26 ottobre al 26 novembre 2026.",
+    comeSiChiede:
+      "Solo online sul Portale del cittadino del Comune (Servizi on line, voce Servizi sociali), con SPID, CIE o CNS. A fine domanda si annota il numero di protocollo. Le domande incomplete sono escluse. Sportello di facilitazione digitale all'ufficio Servizi sociali (secondo piano, palazzina della Polizia locale), lunedì, mercoledì e venerdì 9:00–12:00, su appuntamento al 0584 795275.",
+    fonte: {
+      label: "Comune di Pietrasanta · Bonus spese da riscaldamento 2026",
+      url: "https://www.comune.pietrasanta.lu.it/it/news/bonus-spese-da-riscaldamento-2026",
+    },
+    verificatoIl: "27/10/2026",
+    nota: "Letto il testo del bando (criteri di accesso 2026, Deliberazione di Giunta n. 146 del 10/04/2026). Non è una misura pensata per la disabilità: riguarda gli ultrasessantenni a basso reddito.",
+  },
 
   {
     id: "vezzano-ligure-contributi-affitto-2026",
