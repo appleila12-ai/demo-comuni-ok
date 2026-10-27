@@ -1040,7 +1040,7 @@ PER_PROVINCIA.AR.volontariato.unshift(
     nome: "Istituto di Agazzi (Madre della Divina Provvidenza)",
     cosa: "Centro di riabilitazione di Arezzo. Servizio Start: rete di servizi residenziali e diurni per persone con disabilità intellettiva tra i 18 e i 65 anni (tra cui il Centro Diurno Catasca). Futurabile: percorsi ambulatoriali per minori da 0 a 18 anni e famiglie. A-Rìa: riabilitazione intensiva in degenza dopo eventi neurologici o ortopedici acuti. Auryn: disturbi dell'alimentazione.",
     dove: "Strada Comunale di Agazzi 47, 52100 Arezzo",
-    telefono: "057 591511",
+    telefono: "0575 91511",
     email: "info@istitutoagazzi.it",
     sito: "https://www.istitutoagazzi.it/chi-siamo/",
     comuni: ["arezzo"],
