@@ -13,6 +13,7 @@
 // Aggiornamento 21/10/2026: raggio di 30 km (coordinate dei municipi da opendatasicilia/comuni-italiani, basato su ISTAT e IndicePA).
 // Aggiornamento 21/10/2026: Ca.Te.Ri.Na (Sarzana), recapiti forniti il 21/10/2026.
 // Aggiornamento 26/10/2026: spiagge inclusive di Genova, 8 spiagge, recapiti e prenotazione dalla pagina del Comune (agg. 23/06/2026).
+// Aggiornamento 27/10/2026: elenco libere forme associative di Arezzo.
 // Aggiornamento 27/10/2026: Albo comunale delle associazioni della disabilità di Pisa.
 // Aggiornamento 25/10/2026: provincia di Genova (Anffas, ANGSA, UICI, Chiossone, AISM, UILDM, ENS, ANGLAT, Asperger,
 // e dall'elenco ASL3 'Comitato Misto Consultivo - Associazioni' agg. 18/06/2025: Consulta disabilità, Alzheimer Liguria,
@@ -790,6 +791,41 @@ PER_PROVINCIA.PI.sport.unshift(
     telefono: "050 989215",
     email: "info@ilnuovofontanile.it",
     comuni: ["pisa"],
+  },
+);
+
+// Arezzo (AR): dall'Elenco comunale delle libere forme associative, aggiornato al 19/01/2026 (21 voci), letto il 27/10/2026.
+// Sono associazioni soprattutto culturali: qui solo quelle con ambito sport, sociale o ricreazione. Dati come scritti nel documento
+// (il documento non ha telefoni). Non è un censimento delle associazioni di assistenza e disabilità.
+PER_PROVINCIA.AR = PER_PROVINCIA.AR ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.AR.sport.unshift(
+  {
+    nome: "Panathlon Club Arezzo",
+    cosa: "Ambiti di attività indicati dal Comune: cultura, sociale, sport. Il documento del Comune non dice se le attività sono accessibili alle persone con disabilità: chiedilo all'associazione.",
+    dove: "Via G. Ungaretti 7, Arezzo",
+    email: "arezzo@panathlon.net",
+    comuni: ["arezzo"],
+  },
+  {
+    nome: "Associazione culturale Ponte Futuro",
+    cosa: "Ambiti di attività indicati dal Comune: ambiente, cultura, ricreazione, sport. Il documento del Comune non dice se le attività sono accessibili alle persone con disabilità: chiedilo all'associazione.",
+    dove: "Via P. Calamandrei 183, Arezzo",
+    email: "assopontefuturo@outlook.it",
+    comuni: ["arezzo"],
+  },
+  {
+    nome: "L'Arte di Apoxiomeno",
+    cosa: "Ambiti di attività indicati dal Comune: ambiente, cultura, sociale, sport. Il documento del Comune non dice se le attività sono accessibili alle persone con disabilità: chiedilo all'associazione.",
+    dove: "Via Castiglia 4, Monte San Savino (AR)",
+    email: "segreteria@premioapoxiomeno.it",
+    comuni: ["arezzo"],
+  },
+  {
+    nome: "Il Mondo in Casa",
+    cosa: "Ambiti di attività indicati dal Comune: cultura, ricreazione, sociale, turismo. Il documento del Comune non dice se le attività sono accessibili alle persone con disabilità: chiedilo all'associazione.",
+    dove: "Via Cesalpino 21, Arezzo",
+    email: "museocomunicazione@comune.arezzo.it",
+    comuni: ["arezzo"],
   },
 );
 

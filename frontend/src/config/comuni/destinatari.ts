@@ -259,6 +259,8 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "camogli": { email: "servizisociali@comune.camogli.ge.it", tipo: "ordinaria", fonte: "pagina Ufficio Servizi Sociali del sito del Comune" },
   // Arenzano (GE)
   "arenzano": { email: "servizisociali@comune.arenzano.ge.it", tipo: "ordinaria", fonte: "pagina Ufficio Servizi Sociali del sito del Comune" },
+  // Recco (GE)
+  "recco": { email: "protocollo@pec.comune.recco.ge.it", tipo: "pec", fonte: "sito del Comune, Ufficio Protocollo (PEC del protocollo)" },
   // Pietrasanta (LU)
   "pietrasanta": { email: "comune.pietrasanta@postacert.toscana.it", tipo: "pec", fonte: "pagina Ufficio sociale del sito del Comune (PEC generale)" },
   // Lucera (FG)
