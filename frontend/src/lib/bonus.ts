@@ -767,6 +767,24 @@ export const BONUS: Bonus[] = [
 
   // ------------------------------------------------------------------ TOSCANA
   {
+    id: "toscana-centro-ascolto-caregiver",
+    regione: "Toscana",
+    titolo: "Centro regionale di ascolto per il caregiver familiare",
+    perChi:
+      "Chi si prende cura di un proprio caro non autosufficiente o con disabilità e sente che il peso dell'assistenza è diventato troppo grande.",
+    cosa:
+      "Ascolto e sostegno psicologico da parte di psicologi e psicoterapeuti formati sui bisogni dei caregiver, per elaborare gli effetti del lavoro di cura. Informazioni e orientamento sui servizi del servizio sanitario regionale e delle associazioni del territorio. Non è un contributo in denaro. La pagina non scrive se il servizio è gratuito.",
+    stato: "attivo",
+    quando: "Telefono dal lunedì al venerdì, 9:00–18:00.",
+    comeSiChiede: "Telefono 055 438 5270 oppure email ascolto.caregiver@regione.toscana.it.",
+    fonte: {
+      label: "Regione Toscana · Centro di ascolto per il caregiver familiare",
+      url: "https://www.regione.toscana.it/it/-/centro-di-ascolto-per-il-caregiver-familiare",
+    },
+    verificatoIl: "27/10/2026",
+    nota: "Pagina della Regione aggiornata il 24/03/2026.",
+  },
+  {
     id: "toscana-vita-indipendente-fse",
     regione: "Toscana",
     titolo: "Progetti di vita indipendente e inclusione per adulti con disabilità grave (FSE+ 2021-2027)",
