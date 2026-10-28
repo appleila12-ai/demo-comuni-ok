@@ -77,6 +77,13 @@ export type ComuneConfig = {
   /** Servizi del territorio mostrati in "Punti di supporto" */
   puntiSupporto: PuntoSupporto[];
 
+  /**
+   * Riferimenti del territorio per ogni passo di "Come ottenere il riconoscimento"
+   * (chiave = numero del passo, da 1 a 5). Facoltativo: se un passo non ha voci
+   * non compare nulla. Solo recapiti verificati su fonti istituzionali.
+   */
+  percorsoTerritorio?: Partial<Record<1 | 2 | 3 | 4 | 5, PuntoSupporto[]>>;
+
   /** Testo su trasporto sociale/sanitario per la pagina "Aiuti sul territorio" */
   trasporto: string;
 
