@@ -669,12 +669,6 @@ PER_PROVINCIA.GE.sport.push(
     comuni: ["genova"],
   },
   {
-    nome: "Team Velo Val Fontanabuona A.S.D.",
-    cosa: "Handbike e ciclismo (FCI). Società affiliata al CIP Liguria. Disabilità fisica.",
-    dove: "Via Domenico Cuneo 89, San Colombano Certenoli",
-    email: "info@teamvvf.com",
-  },
-  {
     nome: "Tht2002 Associazione Sportiva Dilettantistica",
     cosa: "Handbike e ciclismo (FCI). Società affiliata al CIP Liguria. Disabilità fisica.",
     dove: "Loc. Caperana Case Sparse 36/5, 16043 Chiavari",
