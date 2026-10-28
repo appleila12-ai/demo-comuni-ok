@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Mantova (MN) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -63,3 +64,6 @@ export const mantova: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (28/10/2026).
+mantova.percorsoTerritorio = percorso(mantova.puntiSupporto, [0, 1]);
