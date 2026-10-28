@@ -1,4 +1,5 @@
-import type { ComuneConfig } from "../types";
+import type { ComuneConfig, PuntoSupporto } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Palermo (PA) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -72,3 +73,13 @@ export const palermo: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Fonte passo 2: pagina "Invalidità civile" di ASP Palermo (asppalermo.org), letta il 28/10/2026 (la pagina riporta aggiornamento al 20/08/2024).
+const MEDICINA_LEGALE_ASP_PALERMO: PuntoSupporto = {
+  icon: "medkit-outline",
+  title: "ASP Palermo · Medicina Legale e Fiscale",
+  subtitle:
+    "Via Mariano Stabile 261 · Solo su appuntamento: tel. 091 7032154 e 091 7034926, martedì e venerdì mattina. La visita la fa una commissione dell'ASP con un medico INPS",
+  action: { type: "tel", value: "0917032154" },
+};
+palermo.percorsoTerritorio = percorso(palermo.puntiSupporto, [0, 1], [MEDICINA_LEGALE_ASP_PALERMO]);
