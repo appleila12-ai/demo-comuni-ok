@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorsoAsl5 } from "../percorso";
 
 // Comune di La Spezia (SP) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -63,3 +64,6 @@ export const laSpezia: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passi di "Come ottenere il riconoscimento": solo voci già in scheda con fonte (ASL 5 verificata il 28/10/2026).
+laSpezia.percorsoTerritorio = percorsoAsl5(laSpezia.puntiSupporto, [0, 1]);

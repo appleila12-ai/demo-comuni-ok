@@ -1,4 +1,5 @@
-import type { ComuneConfig } from "../types";
+import type { ComuneConfig, PuntoSupporto } from "../types";
+import { percorso, USL_MEDLEG_MASSA } from "../percorso";
 
 // Comune di Massa (MS) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -58,3 +59,12 @@ export const massa: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passo 2: sede di Massa letta il 28/10/2026. Passo 3 senza voci: il link all'azienda sanitaria è solo la home.
+const SERVIZI_SOCIALI_PERCORSO: PuntoSupporto = {
+  icon: "people-outline",
+  title: "Servizi Sociali del Comune di Massa",
+  subtitle: "Primo ascolto sociale · Centralino del Comune 0585 4901: chiedi con quale assistente sociale parlare",
+  action: { type: "tel", value: "05854901" },
+};
+massa.percorsoTerritorio = percorso([SERVIZI_SOCIALI_PERCORSO], [0], [USL_MEDLEG_MASSA]);

@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorsoAsl5 } from "../percorso";
 
 // Comune di Lerici (SP) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -68,3 +69,6 @@ export const lerici: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passi di "Come ottenere il riconoscimento": solo voci già in scheda con fonte (ASL 5 verificata il 28/10/2026).
+lerici.percorsoTerritorio = percorsoAsl5(lerici.puntiSupporto, [0]);
