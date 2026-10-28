@@ -25,6 +25,7 @@ import {
   type CasoEsenzione,
 } from "@/src/lib/esenzioneAsl5";
 import { Avviso, Bottone, Intro, Pagina, Scelte, paginaStili } from "@/src/components/Pagina";
+import { EsenzioneGenova } from "@/src/components/EsenzioneGenova";
 
 const apri = (url: string) => Linking.openURL(url).catch(() => {});
 
@@ -59,6 +60,9 @@ export default function EsenzioneTicket() {
   const [caso, setCaso] = useState<CasoEsenzione | undefined>(undefined);
   const asl5 = comune.provincia === "SP";
 
+  // Genova: scheda dell'ASL 3 Genovese
+  if (comune.slug === "genova") return <EsenzioneGenova />;
+
   if (!asl5) {
     return (
       <Pagina
@@ -67,8 +71,8 @@ export default function EsenzioneTicket() {
         sottotitoloSalvato="Cosa portare per l'esenzione ticket"
       >
         <Intro>
-          La scheda con l&apos;elenco dei documenti per l&apos;esenzione ticket è pronta per i Comuni
-          della provincia della Spezia (ASL 5). Per {comune.nomeBreve} trovi la pagina ufficiale
+          La scheda con l&apos;elenco dei documenti per l&apos;esenzione ticket è pronta per Genova (ASL 3)
+          e per i Comuni della provincia della Spezia (ASL 5). Per {comune.nomeBreve} trovi la pagina ufficiale
           della tua azienda sanitaria.
         </Intro>
         <Bottone
