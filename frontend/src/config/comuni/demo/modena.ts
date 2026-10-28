@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Modena (MO) — VERSIONE DIMOSTRATIVA, SCHEDA COMPLETATA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -59,3 +60,6 @@ export const modena: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (28/10/2026).
+modena.percorsoTerritorio = percorso(modena.puntiSupporto, [0]);
