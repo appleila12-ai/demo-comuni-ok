@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Milano (MI) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -63,3 +64,6 @@ export const milano: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passi 4 e 5: voce già in scheda. Passo 2 senza voci: il territorio di Milano ha più ASST e non è verificata quale sede serva quale zona.
+milano.percorsoTerritorio = percorso(milano.puntiSupporto, [0]);

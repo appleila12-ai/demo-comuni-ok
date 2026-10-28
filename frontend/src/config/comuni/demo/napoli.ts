@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Napoli (NA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -180,3 +181,6 @@ export const napoli: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passi 4 e 5: solo l'elenco ufficiale dei Centri (20 sedi nella scheda). Passo 2 senza voci: la pagina Medicina legale ASL Napoli 1 non è leggibile (da verificare).
+napoli.percorsoTerritorio = percorso(napoli.puntiSupporto, [20]);

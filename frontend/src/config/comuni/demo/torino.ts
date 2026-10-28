@@ -1,4 +1,5 @@
-import type { ComuneConfig } from "../types";
+import type { ComuneConfig, PuntoSupporto } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Torino (TO) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -83,3 +84,18 @@ export const torino: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Fonte passo 2: pagina "Commissione Invalidi Civili, Handicap, Cecità, Sordità e Disabilità" di ASL Città di Torino (aslcittaditorino.it), letta il 28/10/2026.
+// La pagina non dice quale ambulatorio serva quale zona.
+const COMMISSIONE_ASL_TORINO: PuntoSupporto = {
+  icon: "medkit-outline",
+  title: "ASL Città di Torino · Commissione invalidi civili e handicap",
+  subtitle:
+    "Visita solo su prenotazione, in uno dei tre ambulatori di Medicina legale: via Farinelli 25 (tel. 011 566 4067, martedì e giovedì 13:30–15:30), via Luzzatti 50, 2° piano (tel. 011 4395570, informazioni lunedì–venerdì 9:00–12:00), via Montanaro 60 (tel. 011 240 2522, martedì, mercoledì e giovedì 13:30–15:30)",
+  action: {
+    type: "web",
+    value: "https://www.aslcittaditorino.it/prestazioni/commissione-invalidi-civili-handicap-cecita-sordita-e-disabilita/",
+  },
+};
+// Passo 4: servizi sociali delle Circoscrizioni; passo 5: Progetti di Vita del Comune.
+torino.percorsoTerritorio = percorso(torino.puntiSupporto, [0, 1, 2, 3], [COMMISSIONE_ASL_TORINO], [], [4]);

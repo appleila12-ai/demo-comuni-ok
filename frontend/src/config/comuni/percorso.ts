@@ -62,21 +62,23 @@ type Passi = NonNullable<ComuneConfig["percorsoTerritorio"]>;
  * @param servizi  posizioni (in `punti`) dei servizi sociali/distretto da mostrare nei passi 4 e 5
  * @param passo2   voci per la valutazione di base (visita e commissione)
  * @param passo3   voci per il verbale (es. esenzione ticket)
+ * @param servizi5 posizioni delle voci per il passo 5, se diverse da quelle del passo 4
  */
 export function percorso(
   punti: PuntoSupporto[],
   servizi: number[],
   passo2: PuntoSupporto[] = [],
   passo3: PuntoSupporto[] = [],
+  servizi5?: number[],
 ): Passi {
-  const sociali = servizi.map((i) => punti[i]).filter(Boolean);
+  const scegli = (idx: number[]) => idx.map((i) => punti[i]).filter(Boolean);
+  const sociali = scegli(servizi);
+  const sociali5 = servizi5 ? scegli(servizi5) : sociali;
   const out: Passi = {};
   if (passo2.length) out[2] = passo2;
   if (passo3.length) out[3] = passo3;
-  if (sociali.length) {
-    out[4] = sociali;
-    out[5] = sociali;
-  }
+  if (sociali.length) out[4] = sociali;
+  if (sociali5.length) out[5] = sociali5;
   return out;
 }
 
