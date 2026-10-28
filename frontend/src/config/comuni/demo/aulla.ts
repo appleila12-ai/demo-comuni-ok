@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso, USL_MEDLEG_AULLA } from "../percorso";
 
 // Comune di Aulla (MS) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (21 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -58,3 +59,6 @@ export const aulla: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passo 2: sede di Aulla letta il 28/10/2026. Passo 3 senza voci: il link all'azienda sanitaria è solo la home.
+aulla.percorsoTerritorio = percorso(aulla.puntiSupporto, [0], [USL_MEDLEG_AULLA]);

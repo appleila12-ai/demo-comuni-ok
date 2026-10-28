@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorsoAsl5 } from "../percorso";
 
 // Comune di Vezzano Ligure (SP) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -65,3 +66,6 @@ export const vezzanoLigure: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passi di "Come ottenere il riconoscimento": solo voci già in scheda con fonte (ASL 5 verificata il 28/10/2026).
+vezzanoLigure.percorsoTerritorio = percorsoAsl5(vezzanoLigure.puntiSupporto, [0, 1]);

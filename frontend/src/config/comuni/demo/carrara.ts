@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Carrara (MS) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -64,3 +65,6 @@ export const carrara: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passo 2 senza voci: la pagina Medicina legale di Carrara non è leggibile (da verificare). Passo 3 senza voci: link solo alla home.
+carrara.percorsoTerritorio = percorso(carrara.puntiSupporto, [0, 1]);

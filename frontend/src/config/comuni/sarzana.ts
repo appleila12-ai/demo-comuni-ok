@@ -1,4 +1,5 @@
 import type { ComuneConfig, PuntoSupporto } from "./types";
+import { ASL5_CENTRALINO, ASL5_ESENZIONE, ASL5_INVALIDITA } from "./percorso";
 
 // Voci del territorio usate sia in "Punti di supporto" sia nei passi del percorso.
 const SEGRETARIATO: PuntoSupporto = {
@@ -15,36 +16,6 @@ const DISTRETTO_19: PuntoSupporto = {
   subtitle:
     "Per progetti di vita indipendente e custodi sociali (su segnalazione del medico di famiglia) · Tel. 0187 614507 / 0187 604933",
   action: { type: "tel", value: "0187614507" },
-};
-
-// Fonte: pagina "Invalidità civile" di ASL 5 (asl5.liguria.it), letta il 28/10/2026.
-const ASL5_INVALIDITA: PuntoSupporto = {
-  icon: "medkit-outline",
-  title: "ASL 5 Spezzino · Invalidità civile e handicap",
-  subtitle:
-    "La visita la fa una commissione dell'ASL, con un medico INPS. La domanda all'INPS si fa online con SPID o con un patronato.",
-  action: {
-    type: "web",
-    value:
-      "https://www.asl5.liguria.it/PerilCittadino/Serviziterritoriali/DipartimentodiPrevenzione/INVALIDITACIVILE.aspx",
-  },
-};
-
-const ASL5_CENTRALINO: PuntoSupporto = {
-  icon: "call-outline",
-  title: "ASL 5 Spezzino · Centralino",
-  subtitle: "Sede: via Fazio 30, La Spezia · Tel. 0187 5331",
-  action: { type: "tel", value: "01875331" },
-};
-
-const ASL5_ESENZIONE: PuntoSupporto = {
-  icon: "document-text-outline",
-  title: "ASL 5 Spezzino · Esenzione ticket",
-  subtitle: "Dove si chiede l'esenzione ticket per patologia",
-  action: {
-    type: "web",
-    value: "https://www.asl5.liguria.it/PerilCittadino/Prenotazioniticketesenzioni/Esenzioneticket.aspx",
-  },
 };
 
 // Comune pilota. Dati già usati nella versione precedente dell'app.
