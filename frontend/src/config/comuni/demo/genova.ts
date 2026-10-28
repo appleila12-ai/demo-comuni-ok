@@ -1,4 +1,50 @@
-import type { ComuneConfig } from "../types";
+import type { ComuneConfig, PuntoSupporto } from "../types";
+
+// Voci usate sia in "Punti di supporto" sia nei passi del percorso (stesse fonti della scheda).
+const POLO_DISABILITA: PuntoSupporto = {
+  icon: "accessibility-outline",
+  title: "Polo cittadino per le disabilità (Comune di Genova)",
+  subtitle: "Colloquio gratuito di informazione e orientamento su servizi, prestazioni e agevolazioni, per persone con disabilità e caregiver. Matitone, Via di Francia 1, 6° piano · Tel. 010 5577444 · polodisabilita@comune.genova.it",
+  action: { type: "tel", value: "0105577444" },
+};
+
+const DISTRETTO_8: PuntoSupporto = {
+  icon: "medkit-outline",
+  title: "Distretto 8 Ponente (Municipio VII: Pegli, Prà, Voltri)",
+  subtitle: "Via Camozzini 15, Voltri · URP tel. 010 849 9674 / 9677 (lun–ven 8:30–12:30) · urp.piazzaodicini@asl3.liguria.it. Sportello unico: servizi sanitari, invalidità civile e Legge 104",
+  action: { type: "tel", value: "0108499674" },
+};
+
+const PUA_ASL3: PuntoSupporto = {
+  icon: "medkit-outline",
+  title: "ASL3 · Punto Unico di Accesso (PUA) e sportelli dei Distretti",
+  subtitle: "Il PUA accoglie le richieste sociosanitarie (cure domiciliari, valutazioni, Dopo di Noi). Cerca il Distretto del tuo Municipio qui sotto. Centralino ASL3: 010 84911",
+  action: { type: "tel", value: "01084911" },
+};
+
+// Versioni per il percorso: stessi dati della scheda, senza rimandi a "qui sotto".
+const ASCOLTO_PERCORSO: PuntoSupporto = {
+  icon: "people-outline",
+  title: "Ascolto e orientamento sociale (Segretariato Sociale)",
+  subtitle:
+    "Un assistente sociale ascolta persone e famiglie, gratuito. Si chiama il servizio del proprio Municipio: telefono martedì 9:00–12:30 e giovedì 14:00–16:30, colloqui su prenotazione · Numero unico del Comune 010 1010",
+  action: { type: "web", value: "https://www.comune.genova.it/servizi/salute-benessere-e-assistenza/servizio-di-ascolto-e-orientamento-sociale-segretariato" },
+};
+
+const PUA_PERCORSO: PuntoSupporto = {
+  icon: "medkit-outline",
+  title: "ASL3 · Punto Unico di Accesso (PUA)",
+  subtitle:
+    "Il PUA accoglie le richieste sociosanitarie (cure domiciliari, valutazioni, Dopo di Noi) · Centralino ASL3: 010 84911 · Lo sportello del tuo Distretto lo trovi in \"Aiuti e contatti\"",
+  action: { type: "tel", value: "01084911" },
+};
+
+const ASL3_CENTRALINO: PuntoSupporto = {
+  icon: "call-outline",
+  title: "ASL3 Genovese · Centralino",
+  subtitle: "Tel. 010 84911",
+  action: { type: "tel", value: "01084911" },
+};
 
 // Comune di Genova (GE) — VERSIONE DIMOSTRATIVA (completata il 14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -43,12 +89,7 @@ export const genova: ComuneConfig = {
       subtitle: "Un assistente sociale ascolta persone e famiglie in difficoltà, anche temporanea, ed è gratuito. Si chiama il servizio del proprio Municipio: telefono martedì 9:00–12:30 e giovedì 14:00–16:30, colloqui su prenotazione. Qui sotto trovi i recapiti dei 9 Municipi",
       action: { type: "web", value: "https://www.comune.genova.it/servizi/salute-benessere-e-assistenza/servizio-di-ascolto-e-orientamento-sociale-segretariato" },
     },
-    {
-      icon: "accessibility-outline",
-      title: "Polo cittadino per le disabilità (Comune di Genova)",
-      subtitle: "Colloquio gratuito di informazione e orientamento su servizi, prestazioni e agevolazioni, per persone con disabilità e caregiver. Matitone, Via di Francia 1, 6° piano · Tel. 010 5577444 · polodisabilita@comune.genova.it",
-      action: { type: "tel", value: "0105577444" },
-    },
+    POLO_DISABILITA,
     {
       icon: "people-outline",
       title: "Municipio I Centro Est",
@@ -109,18 +150,8 @@ export const genova: ComuneConfig = {
       subtitle: "Percorsi di avvicinamento al lavoro per persone fragili, su segnalazione dei servizi sociali. Via Fiasella 3, 1° piano · Tel. 010 5578464 (lun–gio 8:00–18:00, ven 8:00–13:00) · ucil@comune.genova.it",
       action: { type: "tel", value: "0105578464" },
     },
-    {
-      icon: "medkit-outline",
-      title: "ASL3 · Punto Unico di Accesso (PUA) e sportelli dei Distretti",
-      subtitle: "Il PUA accoglie le richieste sociosanitarie (cure domiciliari, valutazioni, Dopo di Noi). Cerca il Distretto del tuo Municipio qui sotto. Centralino ASL3: 010 84911",
-      action: { type: "tel", value: "01084911" },
-    },
-    {
-      icon: "medkit-outline",
-      title: "Distretto 8 Ponente (Municipio VII: Pegli, Prà, Voltri)",
-      subtitle: "Via Camozzini 15, Voltri · URP tel. 010 849 9674 / 9677 (lun–ven 8:30–12:30) · urp.piazzaodicini@asl3.liguria.it. Sportello unico: servizi sanitari, invalidità civile e Legge 104",
-      action: { type: "tel", value: "0108499674" },
-    },
+    PUA_ASL3,
+    DISTRETTO_8,
     {
       icon: "medkit-outline",
       title: "Distretto 9 Medio Ponente (Municipi II e VI)",
@@ -152,6 +183,15 @@ export const genova: ComuneConfig = {
       action: { type: "tel", value: "0108496431" },
     },
   ],
+
+  // Passi di "Come ottenere il riconoscimento" (1 = medico, 2 = valutazione di base,
+  // 3 = verbale, 4 = valutazione multidimensionale, 5 = Progetto di Vita).
+  // Solo voci già presenti nella scheda, con fonte. Passo 1 e 3 senza voci: nessun recapito verificato.
+  percorsoTerritorio: {
+    2: [POLO_DISABILITA, ASL3_CENTRALINO, DISTRETTO_8],
+    4: [ASCOLTO_PERCORSO, POLO_DISABILITA, PUA_PERCORSO],
+    5: [POLO_DISABILITA, ASCOLTO_PERCORSO],
+  },
 
   trasporto:
     "Il Comune di Genova ha il Mobility Bus per il tempo libero (prenotazioni AMT: numero verde 800 085 302) e il trasporto per andare al lavoro o in riabilitazione: i requisiti e come chiederli sono nella sezione Bonus. Per informazioni: U.O. Area Disabilità, tel. 010 5577444, polodisabilita@comune.genova.it. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
