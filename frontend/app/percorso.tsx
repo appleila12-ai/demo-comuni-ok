@@ -4,6 +4,7 @@
 
 import { useState } from "react";
 import {
+  Linking,
   Pressable,
   ScrollView,
   StatusBar,
@@ -24,6 +25,7 @@ import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import { HeaderComune } from "@/src/components/HeaderComune";
 import { AvantiTappa } from "@/src/components/AvantiTappa";
+import { BottoneSalva } from "@/src/components/BottoneSalva";
 
 // Per ogni passo di NEXT_STEPS (stesso ordine): dove andare per farlo davvero.
 const AZIONI: { label: string; route: string; icon: any }[] = [
@@ -44,6 +46,9 @@ export default function PercorsoScreen() {
   const ultimo = passo === totale - 1;
   const step = NEXT_STEPS[passo];
   const azione = AZIONI[passo];
+  // Riferimenti del territorio per questo passo (solo se verificati per il Comune)
+  const punti = comune.percorsoTerritorio?.[(passo + 1) as 1 | 2 | 3 | 4 | 5] ?? [];
+  const t = comune.theme;
   return (
     <SafeAreaView style={styles.safe} edges={["top"]} testID="percorso-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
@@ -106,6 +111,50 @@ export default function PercorsoScreen() {
             <Text style={styles.azioneText}>{azione.label}</Text>
             <Ionicons name="chevron-forward" size={16} color={colors.brandPrimaryDark} />
           </Pressable>
+
+          {/* Dove farlo, nel territorio del Comune */}
+          {punti.length > 0 ? (
+            <View style={styles.territorio} testID="percorso-territorio">
+              <Text style={styles.territorioTitolo} accessibilityRole="header">
+                Dove, a {comune.nomeBreve}
+              </Text>
+              {punti.map((p) => (
+                <Pressable
+                  key={p.title}
+                  onPress={() =>
+                    Linking.openURL(p.action.type === "tel" ? `tel:${p.action.value}` : p.action.value).catch(() => {})
+                  }
+                  style={({ pressed }) => [styles.punto, pressed && { opacity: 0.85 }]}
+                  accessibilityRole="button"
+                  accessibilityLabel={`${p.title}. ${p.subtitle}`}
+                  testID="percorso-punto"
+                >
+                  <View style={[styles.puntoIcon, { backgroundColor: t.warmSoft }]}>
+                    <Ionicons name={p.icon} size={20} color={t.warmDark} />
+                  </View>
+                  <View style={styles.flex}>
+                    <Text style={styles.puntoTitle}>{p.title}</Text>
+                    <Text style={styles.puntoSub}>{p.subtitle}</Text>
+                  </View>
+                  <BottoneSalva
+                    elemento={{
+                      id: `servizio:${p.title}`,
+                      titolo: p.title,
+                      sotto: p.subtitle,
+                      tel: p.action.type === "tel" ? p.action.value : undefined,
+                      url: p.action.type === "web" ? p.action.value : undefined,
+                      route: "/percorso",
+                    }}
+                  />
+                  <Ionicons
+                    name={p.action.type === "tel" ? "call-outline" : "open-outline"}
+                    size={20}
+                    color={t.warmDark}
+                  />
+                </Pressable>
+              ))}
+            </View>
+          ) : null}
 
           <View style={styles.navRiga}>
             {passo > 0 ? (
@@ -310,6 +359,23 @@ const styles = StyleSheet.create({
     borderColor: colors.brandPrimaryDark,
   },
   azioneText: { flex: 1, fontSize: 15, fontWeight: "800", color: colors.brandPrimaryDark },
+  territorio: { marginTop: spacing.md },
+  territorioTitolo: { fontFamily: fonts.serif, fontSize: 16, fontWeight: "700", color: colors.onSurface, marginBottom: spacing.sm },
+  punto: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.md,
+    minHeight: 56,
+    padding: spacing.md,
+    marginBottom: spacing.sm,
+    borderRadius: radius.lg,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
+  },
+  puntoIcon: { width: 40, height: 40, borderRadius: radius.pill, alignItems: "center", justifyContent: "center" },
+  puntoTitle: { fontSize: 15, lineHeight: 21, fontWeight: "800", color: colors.onSurface },
+  puntoSub: { fontSize: 14, lineHeight: 20, color: colors.onSurfaceSecondary, marginTop: 2 },
   navRiga: { flexDirection: "row", gap: spacing.sm, marginTop: spacing.md },
   navIndietro: {
     flexDirection: "row",
