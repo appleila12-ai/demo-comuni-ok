@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "./types";
+import { INPS_TERZA_FASE } from "./percorso";
 
 // Comune di Mediglia (MI).
 // Fonti (29/09/2026): pagina "Servizi Sociali, Casa, Salute" del sito del Comune;
@@ -73,3 +74,6 @@ export const mediglia: ComuneConfig = {
 
   daVerificare: true,
 };
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+mediglia.percorsoTerritorio = { ...mediglia.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

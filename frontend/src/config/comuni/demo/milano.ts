@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Milano (MI) — VERSIONE DIMOSTRATIVA.
@@ -67,3 +68,6 @@ export const milano: ComuneConfig = {
 
 // Passi 4 e 5: voce già in scheda. Passo 2 senza voci: il territorio di Milano ha più ASST e non è verificata quale sede serva quale zona.
 milano.percorsoTerritorio = percorso(milano.puntiSupporto, [0]);
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+milano.percorsoTerritorio = { ...milano.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

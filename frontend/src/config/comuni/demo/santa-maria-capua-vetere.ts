@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 
 // Comune di Santa Maria Capua Vetere (CE) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (20 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -64,3 +65,6 @@ export const santaMariaCapuaVetere: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+santaMariaCapuaVetere.percorsoTerritorio = { ...santaMariaCapuaVetere.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

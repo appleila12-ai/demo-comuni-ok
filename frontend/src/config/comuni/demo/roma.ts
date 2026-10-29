@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Roma (RM) — VERSIONE DIMOSTRATIVA (completata il 13 ottobre 2026).
@@ -70,3 +71,6 @@ export const roma: ComuneConfig = {
 
 // Passi 4 e 5: voci già in scheda con fonte. Passo 2 senza voci: la pagina ASL Roma 1 "Invalidità civile" tratta la L. 210/92 e non indica sedi (letta il 28/10/2026).
 roma.percorsoTerritorio = percorso(roma.puntiSupporto, [0, 1]);
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+roma.percorsoTerritorio = { ...roma.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

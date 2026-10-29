@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "./types";
+import { INPS_TERZA_FASE } from "./percorso";
 
 // Unione Collinare "Vigne e Vini" (AT) — 12 Comuni, sede a Incisa Scapaccino.
 // Un'unica istanza dell'app per tutti i Comuni dell'Unione.
@@ -82,3 +83,6 @@ export const vigneEVini: ComuneConfig = {
 
   daVerificare: true,
 };
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+vigneEVini.percorsoTerritorio = { ...vigneEVini.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

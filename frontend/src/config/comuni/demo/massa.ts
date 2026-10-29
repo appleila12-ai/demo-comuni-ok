@@ -1,4 +1,5 @@
 import type { ComuneConfig, PuntoSupporto } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 import { percorso, USL_MEDLEG_MASSA } from "../percorso";
 
 // Comune di Massa (MS) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
@@ -68,3 +69,6 @@ const SERVIZI_SOCIALI_PERCORSO: PuntoSupporto = {
   action: { type: "tel", value: "05854901" },
 };
 massa.percorsoTerritorio = percorso([SERVIZI_SOCIALI_PERCORSO], [0], [USL_MEDLEG_MASSA]);
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+massa.percorsoTerritorio = { ...massa.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

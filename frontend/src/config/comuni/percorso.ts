@@ -101,3 +101,18 @@ export const INPS_SPERIMENTAZIONE: PuntoSupporto = {
       "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.certificato-medico-introduttivo---invalidit--civile.html",
   },
 };
+
+// Passo 1 nelle 39 province della terza fase della sperimentazione INPS (dal 1° marzo 2026).
+// Fonti: INPS, notizia del 24/02/2026 "Accertamento disabilità: sperimentazione estesa ad altre 40 province"
+// e comunicato INPS del 06/08/2026 (elenco delle fasi). Bolzano esclusa: elenchi discordanti.
+export const INPS_TERZA_FASE: PuntoSupporto = {
+  icon: "document-text-outline",
+  title: "Certificato medico introduttivo (INPS)",
+  subtitle:
+    "Il medico di famiglia o un altro medico abilitato compila e invia all'INPS il certificato medico introduttivo. Nella tua provincia la nuova procedura è in corso dal 1° marzo 2026: il certificato avvia la richiesta, senza una domanda separata",
+  action: {
+    type: "web",
+    value:
+      "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.certificato-medico-introduttivo---invalidit--civile.html",
+  },
+};
