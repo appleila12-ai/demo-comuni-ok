@@ -222,3 +222,40 @@ const OVEST_MILANESE: SchedaEsenzioneAsl = {
     "ASST Ovest Milanese · risposta scritta dell'URP del 29/10/2026 e documento «Informazioni esenzioni ticket»",
 };
 for (const slug of ["legnano", "magenta", "parabiago", "abbiategrasso"]) ESENZIONE_ASL[slug] = OVEST_MILANESE;
+
+// ASUGI (Trieste, Gorizia, Monfalcone): risposta scritta dell'URP di Trieste (29/10/2026), con rinvio alle pagine aziendali.
+const ESENZIONE_ASUGI: SchedaEsenzioneAsl = {
+  asl: "ASUGI · Azienda sanitaria universitaria Giuliano Isontina",
+  intro:
+    "Patologie croniche, patologie rare, malattie tumorali e trapianto d'organo danno diritto all'esenzione dal ticket per le prestazioni sanitarie inerenti la patologia. Il diritto è attestato dagli uffici amministrativi del Distretto sanitario competente e riportato sul tesserino sanitario.",
+  titoloPassi: "Dove si presenta",
+  comeSiPresenta: [
+    "Agli sportelli amministrativi del Distretto: l'elenco delle sedi è nella pagina dei servizi amministrativi presso le sedi territoriali (pulsante qui sotto)",
+    "La certificazione deve essere rilasciata da presidi delle aziende sanitarie, aziende ospedaliere, istituti e enti previsti dalla norma, o da istituzioni sanitarie pubbliche di Paesi dell'Unione europea",
+  ],
+  documenti: [
+    "Dichiarazione del medico specialista di una struttura pubblica che certifichi la patologia",
+    "Tessera sanitaria",
+    "Codice fiscale",
+  ],
+  telefoni: [{ etichetta: "URP ASUGI Trieste (lun–ven 9:00–12:00)", numero: "040 399 4880" }],
+  paginaUrl: "https://asugi.sanita.fvg.it/it/schede/s_dir_amm/go_esenzioni.html",
+  paginaLabel: "Pagina ASUGI sulle esenzioni per patologia",
+  manca:
+    "L'URP non ha indicato se serve l'appuntamento né i tempi di rilascio. Altre modalità di registrazione sono nella pagina ASUGI sull'esenzione per malattie (indicata dall'URP).",
+  fonte: "ASUGI · risposta scritta dell'URP di Trieste del 29/10/2026",
+};
+ESENZIONE_ASL.trieste = ESENZIONE_ASUGI;
+ESENZIONE_ASL.gorizia = ESENZIONE_ASUGI;
+ESENZIONE_ASL.monfalcone = ESENZIONE_ASUGI;
+
+// ASP Siracusa: risposta scritta dell'URP (29/10/2026), solo l'indirizzo e-mail del Distretto di Siracusa.
+ESENZIONE_ASL.siracusa = {
+  asl: "ASP Siracusa · Distretto di Siracusa",
+  intro: "L'URP dell'ASP di Siracusa indica questo indirizzo e-mail per le esenzioni ticket per patologia del Distretto di Siracusa.",
+  mail: "ticketpatologia.distrettosiracusa@asp.sr.it",
+  telefoni: [],
+  manca:
+    "L'ASP non ha indicato i documenti, se serve l'appuntamento né i tempi di rilascio: chiedili all'indirizzo qui sopra.",
+  fonte: "ASP Siracusa · risposta scritta dell'URP del 29/10/2026",
+};
