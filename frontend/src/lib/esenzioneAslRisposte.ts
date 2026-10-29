@@ -165,3 +165,60 @@ ESENZIONE_ASL.olbia = {
     "L'ufficio non ha indicato l'indirizzo e-mail né i tempi di rilascio, e la risposta non riguarda l'esenzione per invalidità civile: orari e recapiti sono sul sito dell'ASL Gallura, nella sezione Uffici Scelte e Revoche.",
   fonte: "ASL Gallura · Ufficio Scelte e Revoche, Distretto di Olbia · risposta scritta del 29/10/2026",
 };
+
+// AST Ancona: l'URP ha risposto (29/10/2026) indicando due pagine ufficiali, lette lo stesso giorno.
+// La procedura online descritta vale per il Distretto di Ancona (servizio avviato in via sperimentale dal 1/12/2025).
+ESENZIONE_ASL.ancona = {
+  asl: "AST Ancona · Distretto di Ancona",
+  intro:
+    "Per l'esenzione per patologia cronica o rara la richiesta si invia in modo telematico, con qualsiasi dispositivo. Chi ha bisogno della registrazione in presenza può andare in uno dei presìdi del Distretto negli orari indicati. Il servizio è gratuito.",
+  comeSiPresenta: [
+    "Online: entra nella piattaforma dell'AST Ancona, registrati (con SPID, CIE o email, con successivo cambio password), compila la domanda e carica i documenti",
+    "In presenza: vai in uno dei presìdi del Distretto nei giorni e negli orari indicati qui sotto",
+    "Il medico valuta la documentazione e, se l'esito è positivo, ti invia o consegna la copia della tessera sanitaria cartacea con il codice della patologia",
+    "Poliambulatorio 2000 Ancona (Viale C. Colombo 106, palazzina 23, primo piano): mercoledì e giovedì 8:30 – 11:30",
+    "Casa di Comunità «Giulia Bonarelli» (Largo Cappelli 1, Ancona): lunedì e venerdì 9:00 – 12:00",
+    "Poliambulatorio di Falconara (Via F.lli Rosselli 11): martedì 9:30 – 12:30",
+    "Poliambulatorio di Osimo (P.zza del Comune 4): venerdì 9:30 – 12:30",
+    "Sede di Castelfidardo (Via XXV Aprile 61): mercoledì 12:30 – 13:30",
+  ],
+  documenti: [
+    "Certificazione medica rilasciata da uno specialista del SSN (non in libera professione)",
+    "Oppure richiesta del medico di famiglia / pediatra, solo per le patologie previste dall'Accordo Integrativo Regionale vigente",
+  ],
+  importante:
+    "Questo servizio è solo per l'esenzione per patologia cronica o rara: non vale per altre esenzioni (reddito, invalidità civile, cause di servizio).",
+  telefoni: [{ etichetta: "AST Ancona · numero verde", numero: "800 530724" }],
+  paginaUrl: "https://teknecloud.it/SIOC-ASTANCONA/",
+  paginaLabel: "Piattaforma per inviare la richiesta online",
+  manca:
+    "L'AST non indica i tempi di rilascio né l'elenco dettagliato dei documenti da allegare oltre alla certificazione. Gli orari possono cambiare: controlla la pagina ufficiale del Distretto.",
+  fonte:
+    "AST Ancona · pagine «Esenzione ticket per patologia – Distretto Ancona» e «Richiesta esenzioni per patologia: nuova modalità telematica», indicate dall'URP il 29/10/2026",
+};
+
+// ASST Ovest Milanese: l'URP (Prof. Marcello Crivellini) ha indicato la pagina «Attività Scelta e Revoca»
+// e il documento allegato «Informazioni esenzioni ticket» (letti il 29/10/2026).
+const OVEST_MILANESE: SchedaEsenzioneAsl = {
+  asl: "ASST Ovest Milanese",
+  intro:
+    "Per l'esenzione per patologia cronica o malattia rara serve la certificazione specialistica con il codice della patologia (DM 329/99 e DPCM 12/01/2017). La richiesta si può fare in tre modi.",
+  comeSiPresenta: [
+    "Dal portale dell'ASST Ovest Milanese, nella sezione «Attività Scelta e Revoca»",
+    "Consegnando i documenti ai Punti di Ritiro elencati sul sito (modalità riservata prioritariamente agli over 65)",
+    "Prenotando lo sportello con il sistema ZEROCODA",
+  ],
+  documenti: [
+    "Certificazione specialistica che riporti il codice della patologia",
+    "Per il rinnovo di esenzioni con validità limitata il certificato può essere rilasciato anche dal medico di famiglia, tranne per l'esenzione 048, che richiede sempre uno specialista",
+  ],
+  importante: "Se risiedi in un'altra Regione, l'esenzione va registrata presso l'ASL di residenza.",
+  telefoni: [{ etichetta: "ASST Ovest Milanese · Legnano", numero: "0331 449111" }],
+  paginaUrl: "https://www.asst-ovestmi.it/attivita-scelta-e-revoca",
+  paginaLabel: "Pagina «Attività Scelta e Revoca» dell'ASST",
+  manca:
+    "Il documento non indica i tempi di rilascio. Per sedi e orari dei Punti di ritiro e degli uffici Scelta e Revoca usa il documento «Uffici Scelta e Revoca» sulla stessa pagina.",
+  fonte:
+    "ASST Ovest Milanese · risposta scritta dell'URP del 29/10/2026 e documento «Informazioni esenzioni ticket»",
+};
+for (const slug of ["legnano", "magenta", "parabiago", "abbiategrasso"]) ESENZIONE_ASL[slug] = OVEST_MILANESE;
