@@ -1,5 +1,5 @@
 import type { ComuneConfig } from "../types";
-import { percorso } from "../percorso";
+import { percorso, INPS_TERZA_FASE_BZ } from "../percorso";
 
 // Comune di Bolzano (BZ) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -57,3 +57,4 @@ export const bolzano: ComuneConfig = {
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (28/10/2026).
 bolzano.percorsoTerritorio = percorso(bolzano.puntiSupporto, [0]);
+bolzano.percorsoTerritorio = { ...bolzano.percorsoTerritorio, 1: [INPS_TERZA_FASE_BZ] };
