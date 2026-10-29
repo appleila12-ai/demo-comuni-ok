@@ -205,7 +205,7 @@ const OVEST_MILANESE: SchedaEsenzioneAsl = {
     "Per l'esenzione per patologia cronica o malattia rara serve la certificazione specialistica con il codice della patologia (DM 329/99 e DPCM 12/01/2017). La richiesta si può fare in tre modi.",
   comeSiPresenta: [
     "Dal portale dell'ASST Ovest Milanese, nella sezione «Attività Scelta e Revoca»",
-    "Consegnando i documenti ai Punti di Ritiro elencati sul sito (modalità riservata prioritariamente agli over 65)",
+    "Consegnando i documenti ai Punti di Ritiro indicati dall'ASST (modalità riservata agli assistiti ultra65enni: controlla le condizioni nell'allegato «Punti di ritiro» sulla stessa pagina)",
     "Prenotando lo sportello con il sistema ZEROCODA",
   ],
   documenti: [
