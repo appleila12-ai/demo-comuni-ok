@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_SPERIMENTAZIONE } from "../percorso";
 
 // Comune di Rapallo (GE) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -63,3 +64,6 @@ export const rapallo: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passo 1: provincia in sperimentazione INPS (messaggio INPS n. 2600 del 05/09/2025).
+rapallo.percorsoTerritorio = { ...rapallo.percorsoTerritorio, 1: [INPS_SPERIMENTAZIONE] };

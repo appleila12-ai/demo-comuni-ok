@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_SPERIMENTAZIONE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Bagheria (PA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
@@ -62,3 +63,6 @@ export const bagheria: ComuneConfig = {
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (29/10/2026).
 bagheria.percorsoTerritorio = percorso(bagheria.puntiSupporto, [0]);
+
+// Passo 1: provincia in sperimentazione INPS (messaggio INPS n. 2600 del 05/09/2025).
+bagheria.percorsoTerritorio = { ...bagheria.percorsoTerritorio, 1: [INPS_SPERIMENTAZIONE] };
