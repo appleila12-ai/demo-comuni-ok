@@ -26,6 +26,9 @@ import {
 } from "@/src/lib/esenzioneAsl5";
 import { Avviso, Bottone, Intro, Pagina, Scelte, paginaStili } from "@/src/components/Pagina";
 import { EsenzioneGenova } from "@/src/components/EsenzioneGenova";
+import { EsenzioneNuoro } from "@/src/components/EsenzioneNuoro";
+import { EsenzioneAsl } from "@/src/components/EsenzioneAsl";
+import { ESENZIONE_ASL } from "@/src/lib/esenzioneAslRisposte";
 
 const apri = (url: string) => Linking.openURL(url).catch(() => {});
 
@@ -62,6 +65,11 @@ export default function EsenzioneTicket() {
 
   // Genova: scheda dell'ASL 3 Genovese
   if (comune.slug === "genova") return <EsenzioneGenova />;
+  // Nuoro: scheda dell'ASL Nuoro (risposta scritta dell'URP)
+  if (comune.slug === "nuoro") return <EsenzioneNuoro />;
+  // Altre ASL che hanno risposto per iscritto (Palermo, Cagliari)
+  const schedaAsl = ESENZIONE_ASL[comune.slug];
+  if (schedaAsl) return <EsenzioneAsl scheda={schedaAsl} />;
 
   if (!asl5) {
     return (
@@ -71,7 +79,7 @@ export default function EsenzioneTicket() {
         sottotitoloSalvato="Cosa portare per l'esenzione ticket"
       >
         <Intro>
-          La scheda con l&apos;elenco dei documenti per l&apos;esenzione ticket è pronta per Genova (ASL 3)
+          La scheda con l&apos;elenco dei documenti per l&apos;esenzione ticket è pronta per Genova (ASL 3), per Nuoro (ASL Nuoro), per Palermo, Cagliari, Vibo Valentia, Siena, Arezzo, Grosseto, Lecce e Campobasso
           e per i Comuni della provincia della Spezia (ASL 5). Per {comune.nomeBreve} trovi la pagina ufficiale
           della tua azienda sanitaria.
         </Intro>

@@ -46,8 +46,8 @@ export const sassari: ComuneConfig = {
     "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
-    label: "Esenzioni ticket · chiedi alla tua azienda sanitaria",
-    url: "https://www.comune.sassari.it",
+    label: "ASL 1 Sassari · Esenzioni ticket",
+    url: "https://www.asl1sassari.it/le-esenzioni-chi-ne-ha-diritto-e-come-richiederla/",
   },
 
   daVerificare: true,

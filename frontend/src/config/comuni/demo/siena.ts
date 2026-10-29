@@ -53,7 +53,7 @@ export const siena: ComuneConfig = {
 
   esenzioneTicket: {
     label: "Azienda USL Toscana Sud Est · Esenzioni ticket",
-    url: "https://www.uslsudest.toscana.it",
+    url: "https://www.uslsudest.toscana.it/come-fare-per/esenzione-ticket/esenzioni-per-patologia-cronica-o-invalidante",
   },
 
   daVerificare: true,
