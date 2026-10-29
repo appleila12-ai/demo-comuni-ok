@@ -108,6 +108,41 @@ ESENZIONE_ASL.campobasso = {
   fonte: "ASReM Molise · risposta scritta dell'URP del 29/10/2026",
 };
 
+// ASUGI (Trieste e Gorizia): risposta scritta dell'URP di Trieste (29/10/2026) con i contenuti della pagina aziendale.
+const ASUGI: SchedaEsenzioneAsl = {
+  asl: "ASUGI (Trieste e Gorizia)",
+  intro:
+    "Il diritto all'esenzione per patologia (patologie croniche, rare, tumorali, trapianto d'organo) viene attestato dagli uffici amministrativi del Distretto sanitario competente e riportato sul tesserino sanitario.",
+  titoloPassi: "Dove andare",
+  comeSiPresenta: [
+    "Agli sportelli amministrativi del tuo Distretto: l'elenco delle sedi è sulla pagina dei servizi amministrativi (pulsante qui sotto)",
+    "Altre modalità di registrazione sono descritte nella pagina ASUGI dedicata alle esenzioni per malattie",
+  ],
+  documenti: [
+    "Dichiarazione del medico specialista di una struttura pubblica che certifichi la patologia",
+    "Tessera sanitaria",
+    "Codice fiscale",
+  ],
+  telefoni: [],
+  paginaUrl: "https://asugi.sanita.fvg.it/it/schede/s_dir_amm/go_esenzioni.html",
+  paginaLabel: "Pagina ASUGI sulle esenzioni per patologia",
+  manca:
+    "L'URP non ha indicato se serve l'appuntamento, i tempi di rilascio né gli orari degli sportelli: chiedili al tuo Distretto.",
+  fonte: "ASUGI · risposta scritta dell'URP di Trieste del 29/10/2026",
+};
+ESENZIONE_ASL.trieste = ASUGI;
+ESENZIONE_ASL.gorizia = ASUGI;
+
+ESENZIONE_ASL.siracusa = {
+  asl: "ASP Siracusa",
+  intro: "L'URP dell'ASP Siracusa indica questo indirizzo mail del Distretto di Siracusa per le esenzioni per patologia.",
+  mail: "ticketpatologia.distrettosiracusa@asp.sr.it",
+  telefoni: [],
+  manca:
+    "L'ASP non ha indicato come si presenta la richiesta, quali documenti servono, se serve l'appuntamento né i tempi: chiedili scrivendo all'ufficio.",
+  fonte: "ASP Siracusa · risposta scritta dell'URP del 29/10/2026",
+};
+
 // Azienda USL Toscana Sud Est: l'URP ha risposto "è spiegato tutto qui" indicando la pagina sulle esenzioni
 // per patologia cronica o invalidante; i contenuti sono quelli di quella pagina (letta il 29/10/2026).
 // Le mail degli uffici anagrafe cambiano per zona sociosanitaria: qui solo quella del Comune.

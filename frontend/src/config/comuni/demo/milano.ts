@@ -57,8 +57,8 @@ export const milano: ComuneConfig = {
     "Chiedi al Servizio Sociale del tuo Municipio quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
-    label: "ATS Milano · Esenzioni ticket",
-    url: "https://www.ats-milano.it",
+    label: "Regione Lombardia · Ticket ed esenzioni",
+    url: "https://www.regione.lombardia.it/sanita/ticket-ed-esenzioni/ticket-esenzioni-prestazioni-ssr",
   },
 
   daVerificare: true,
