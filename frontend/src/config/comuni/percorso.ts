@@ -94,7 +94,38 @@ export const INPS_SPERIMENTAZIONE: PuntoSupporto = {
   icon: "document-text-outline",
   title: "Certificato medico introduttivo (INPS)",
   subtitle:
-    "Il medico di famiglia o un altro medico abilitato compila e invia all'INPS il certificato medico introduttivo. Nella tua provincia la nuova procedura è in corso dal 30 settembre 2025: il certificato avvia la richiesta, senza una domanda separata",
+    "Il medico di famiglia o un altro medico abilitato compila e invia all'INPS il certificato medico introduttivo. Nella tua provincia la nuova procedura è in corso dal 30 settembre 2025: il certificato avvia la richiesta, senza una domanda separata. "
+    + "Se hai compiuto 70 anni e hai almeno una patologia cronica con le condizioni cliniche descritte dall'INPS (messaggio 1377 del 23/04/2026), dal 1° giugno 2026 serve anche la domanda amministrativa, da presentare entro 90 giorni dal rilascio del certificato",
+  action: {
+    type: "web",
+    value:
+      "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.certificato-medico-introduttivo---invalidit--civile.html",
+  },
+};
+
+// Passo 1 nelle 39 province della terza fase della sperimentazione INPS (dal 1° marzo 2026).
+// Fonti: INPS, notizia del 24/02/2026 "Accertamento disabilità: sperimentazione estesa ad altre 40 province"
+// e comunicato INPS del 06/08/2026 (elenco delle fasi). Bolzano esclusa: elenchi discordanti.
+export const INPS_TERZA_FASE: PuntoSupporto = {
+  icon: "document-text-outline",
+  title: "Certificato medico introduttivo (INPS)",
+  subtitle:
+    "Il medico di famiglia o un altro medico abilitato compila e invia all'INPS il certificato medico introduttivo. Nella tua provincia la nuova procedura è in corso dal 1° marzo 2026: il certificato avvia la richiesta, senza una domanda separata. "
+    + "Se hai compiuto 70 anni e hai almeno una patologia cronica con le condizioni cliniche descritte dall'INPS (messaggio 1377 del 23/04/2026), dal 1° giugno 2026 serve anche la domanda amministrativa, da presentare entro 90 giorni dal rilascio del certificato",
+  action: {
+    type: "web",
+    value:
+      "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.certificato-medico-introduttivo---invalidit--civile.html",
+  },
+};
+
+// Provincia autonoma di Bolzano: terza fase (notizia INPS del 24/02/2026).
+// Il messaggio INPS 1377/2026 non elenca Bolzano: nessuna eccezione indicata.
+export const INPS_TERZA_FASE_BZ: PuntoSupporto = {
+  icon: "document-text-outline",
+  title: "Certificato medico introduttivo (INPS)",
+  subtitle:
+    "Il medico di famiglia o un altro medico abilitato compila e invia all'INPS il certificato medico introduttivo. Nella tua provincia la nuova procedura è in corso dal 1° marzo 2026: il certificato avvia la richiesta, senza una domanda separata",
   action: {
     type: "web",
     value:

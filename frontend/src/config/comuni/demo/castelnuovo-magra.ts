@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 import { percorsoAsl5 } from "../percorso";
 
 // Comune di Castelnuovo Magra (SP) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
@@ -69,3 +70,6 @@ export const castelnuovoMagra: ComuneConfig = {
 
 // Passi di "Come ottenere il riconoscimento": solo voci già in scheda con fonte (ASL 5 verificata il 28/10/2026).
 castelnuovoMagra.percorsoTerritorio = percorsoAsl5(castelnuovoMagra.puntiSupporto, [0, 1]);
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+castelnuovoMagra.percorsoTerritorio = { ...castelnuovoMagra.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

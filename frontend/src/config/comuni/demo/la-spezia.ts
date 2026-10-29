@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 import { percorsoAsl5 } from "../percorso";
 
 // Comune di La Spezia (SP) — VERSIONE DIMOSTRATIVA.
@@ -67,3 +68,6 @@ export const laSpezia: ComuneConfig = {
 
 // Passi di "Come ottenere il riconoscimento": solo voci già in scheda con fonte (ASL 5 verificata il 28/10/2026).
 laSpezia.percorsoTerritorio = percorsoAsl5(laSpezia.puntiSupporto, [0, 1]);
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+laSpezia.percorsoTerritorio = { ...laSpezia.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

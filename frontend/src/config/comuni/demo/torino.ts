@@ -1,4 +1,5 @@
 import type { ComuneConfig, PuntoSupporto } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Torino (TO) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
@@ -99,3 +100,6 @@ const COMMISSIONE_ASL_TORINO: PuntoSupporto = {
 };
 // Passo 4: servizi sociali delle Circoscrizioni; passo 5: Progetti di Vita del Comune.
 torino.percorsoTerritorio = percorso(torino.puntiSupporto, [0, 1, 2, 3], [COMMISSIONE_ASL_TORINO], [], [4]);
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+torino.percorsoTerritorio = { ...torino.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

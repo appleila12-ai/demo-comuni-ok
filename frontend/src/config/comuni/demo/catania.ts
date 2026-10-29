@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Catania (CT) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
@@ -62,3 +63,6 @@ export const catania: ComuneConfig = {
 
 // Passi 4 e 5: voci già in scheda con fonte. Passo 2 senza voci: la pagina della Medicina legale non è leggibile o non è stata verificata (28/10/2026); chiesta conferma all'azienda sanitaria.
 catania.percorsoTerritorio = percorso(catania.puntiSupporto, [0]);
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+catania.percorsoTerritorio = { ...catania.percorsoTerritorio, 1: [INPS_TERZA_FASE] };
