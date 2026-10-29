@@ -302,3 +302,29 @@ const ASL_ROMA5: SchedaEsenzioneAsl = {
   fonte: "ASL Roma 5 · risposta scritta dell'URP e Comunicazione del 29/10/2026",
 };
 for (const slug of ["fonte-nuova", "guidonia-montecelio", "monterotondo", "tivoli"]) ESENZIONE_ASL[slug] = ASL_ROMA5;
+
+// ASP Agrigento: risposta scritta del Coordinatore della Casa della Comunità di Agrigento (29/10/2026).
+// Mail e orari valgono per Agrigento; la regola generale è quella dichiarata dal Distretto.
+ESENZIONE_ASL.agrigento = {
+  asl: "ASP Agrigento · Casa della Comunità di Agrigento",
+  intro:
+    "Secondo il Coordinatore della Casa della Comunità di Agrigento, la richiesta si presenta allo sportello di medicina di base del tuo territorio, di persona o da un delegato (care giver). Se risiedi ad Agrigento puoi anche inviarla per mail.",
+  comeSiPresenta: [
+    "Allo sportello di medicina di base competente per la tua residenza (puoi andare tu o un delegato/care giver)",
+    "Gli operatori ti rilasciano l'attestazione, che poi presenti al tuo medico di famiglia",
+    "Se risiedi ad Agrigento: invia per mail la richiesta con la scansione di carta d'identità e tessera sanitaria; l'attestazione ti arriva allo stesso indirizzo",
+    "Sportello di Agrigento (Casa della Comunità, via Giovanni XXIII): lunedì, giovedì e venerdì 8:15 – 13:00; martedì 8:15 – 13:00 e 15:00 – 17:00 (il mercoledì non è indicato)",
+  ],
+  documenti: [
+    "Patologia cronica: richiesta redatta dal medico di famiglia",
+    "Patologia rara: richiesta redatta da uno specialista del centro di riferimento per quella patologia",
+    "Carta d'identità e tessera sanitaria (anche in scansione se invii la mail)",
+  ],
+  mail: "dsagrigento.agrigento@aspag.it",
+  telefoni: [],
+  paginaUrl: "https://www.aspag.it",
+  paginaLabel: "Sito dell'ASP di Agrigento",
+  manca:
+    "L'ASP non ha indicato i tempi di rilascio né il modulo. Gli orari indicati sono quelli dello sportello di Agrigento; per altri sportelli rivolgiti al tuo Distretto.",
+  fonte: "ASP Agrigento · risposta scritta del Coordinatore della Casa della Comunità di Agrigento, 29/10/2026",
+};
