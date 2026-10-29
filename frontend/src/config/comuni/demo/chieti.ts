@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Chieti (CH) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
@@ -62,3 +63,6 @@ export const chieti: ComuneConfig = {
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (29/10/2026).
 chieti.percorsoTerritorio = percorso(chieti.puntiSupporto, [0]);
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+chieti.percorsoTerritorio = { ...chieti.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

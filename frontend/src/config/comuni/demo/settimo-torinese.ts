@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 
 // Comune di Settimo Torinese (TO) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (18 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -58,3 +59,6 @@ export const settimoTorinese: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+settimoTorinese.percorsoTerritorio = { ...settimoTorinese.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

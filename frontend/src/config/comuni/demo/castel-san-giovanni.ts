@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 
 // Comune di Castel San Giovanni (PC) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -62,3 +63,6 @@ export const castelSanGiovanni: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+castelSanGiovanni.percorsoTerritorio = { ...castelSanGiovanni.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

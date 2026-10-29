@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 import { percorso, USL_MEDLEG_AULLA } from "../percorso";
 
 // Comune di Aulla (MS) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (21 ottobre 2026).
@@ -62,3 +63,6 @@ export const aulla: ComuneConfig = {
 
 // Passo 2: sede di Aulla letta il 28/10/2026. Passo 3 senza voci: il link all'azienda sanitaria è solo la home.
 aulla.percorsoTerritorio = percorso(aulla.puntiSupporto, [0], [USL_MEDLEG_AULLA]);
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+aulla.percorsoTerritorio = { ...aulla.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

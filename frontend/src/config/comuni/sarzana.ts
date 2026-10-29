@@ -1,4 +1,5 @@
 import type { ComuneConfig, PuntoSupporto } from "./types";
+import { INPS_TERZA_FASE } from "./percorso";
 import { ASL5_CENTRALINO, ASL5_ESENZIONE, ASL5_INVALIDITA } from "./percorso";
 
 // Voci del territorio usate sia in "Punti di supporto" sia nei passi del percorso.
@@ -80,3 +81,6 @@ export const sarzana: ComuneConfig = {
     url: "https://www.asl5.liguria.it/PerilCittadino/Prenotazioniticketesenzioni/Esenzioneticket.aspx",
   },
 };
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+sarzana.percorsoTerritorio = { ...sarzana.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Terni (TR) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
@@ -56,3 +57,6 @@ export const terni: ComuneConfig = {
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (28/10/2026).
 terni.percorsoTerritorio = percorso(terni.puntiSupporto, [0]);
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+terni.percorsoTerritorio = { ...terni.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

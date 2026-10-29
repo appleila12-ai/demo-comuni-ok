@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 import { percorsoAsl5 } from "../percorso";
 
 // Comune di Lerici (SP) — VERSIONE DIMOSTRATIVA.
@@ -72,3 +73,6 @@ export const lerici: ComuneConfig = {
 
 // Passi di "Come ottenere il riconoscimento": solo voci già in scheda con fonte (ASL 5 verificata il 28/10/2026).
 lerici.percorsoTerritorio = percorsoAsl5(lerici.puntiSupporto, [0]);
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+lerici.percorsoTerritorio = { ...lerici.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_TERZA_FASE } from "../percorso";
 import { percorsoAsl5 } from "../percorso";
 
 // Comune di Arcola (SP) — VERSIONE DIMOSTRATIVA.
@@ -72,3 +73,6 @@ export const arcola: ComuneConfig = {
 
 // Passi di "Come ottenere il riconoscimento": solo voci già in scheda con fonte (ASL 5 verificata il 28/10/2026).
 arcola.percorsoTerritorio = percorsoAsl5(arcola.puntiSupporto, [0, 1, 2]);
+
+// Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
+arcola.percorsoTerritorio = { ...arcola.percorsoTerritorio, 1: [INPS_TERZA_FASE] };
