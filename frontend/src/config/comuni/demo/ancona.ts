@@ -59,7 +59,7 @@ export const ancona: ComuneConfig = {
 
   esenzioneTicket: {
     label: "AST Ancona · Esenzioni ticket",
-    url: "https://www.ast-ancona.marche.it",
+    url: "https://www.astancona.marche.it/it/ast-comunica/notizie/richiesta-esenzioni-per-patologia-nuova-modalita-telematica",
   },
 
   daVerificare: true,

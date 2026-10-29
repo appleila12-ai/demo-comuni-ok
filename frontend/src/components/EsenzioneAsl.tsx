@@ -33,7 +33,31 @@ export function EsenzioneAsl({ scheda }: { scheda: SchedaEsenzioneAsl }) {
         </>
       ) : null}
 
+      {scheda.documenti ? (
+        <>
+          <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+            Cosa serve
+          </Text>
+          <View style={paginaStili.card}>
+            {scheda.documenti.map((v) => (
+              <Text key={v} style={[paginaStili.testo, { marginBottom: spacing.sm }]}>
+                • {v}
+              </Text>
+            ))}
+          </View>
+        </>
+      ) : null}
+
       <Avviso>{scheda.manca}</Avviso>
+
+      {scheda.pec ? (
+        <Bottone
+          label={`Invia per PEC · ${scheda.pec}`}
+          icon="mail-outline"
+          onPress={() => apri(`mailto:${scheda.pec}`)}
+          testID="esenzione-asl-pec"
+        />
+      ) : null}
 
       {scheda.mail ? (
         <Bottone

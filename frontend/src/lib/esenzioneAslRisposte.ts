@@ -6,6 +6,8 @@ export type SchedaEsenzioneAsl = {
   asl: string;
   intro: string;
   comeSiPresenta?: string[];
+  documenti?: string[];
+  pec?: string;
   mail?: string;
   telefoni: { etichetta: string; numero: string }[];
   paginaUrl?: string;
@@ -41,5 +43,21 @@ export const ESENZIONE_ASL: Record<string, SchedaEsenzioneAsl> = {
     manca:
       "L'ASL non ha indicato come si presenta la richiesta, quali documenti servono, se serve l'appuntamento né i tempi: chiedili direttamente all'ufficio.",
     fonte: "ASL Cagliari · risposta scritta dell'URP del 29/10/2026",
+  },
+  "vibo-valentia": {
+    asl: "ASP Vibo Valentia",
+    intro:
+      "La richiesta di esenzione per patologia si fa con il modulo dell'ASP, firmato da chi la presenta, e si invia per PEC al Distretto Sanitario Unico di Vibo Valentia, Ufficio Esenzione per Patologia (Via Moderata Durant).",
+    documenti: [
+      "Modulo di richiesta dell'ASP, firmato dal richiedente",
+      "Carta d'identità, fronte e retro, in corso di validità",
+      "Tessera sanitaria, fronte e retro, in corso di validità",
+      "Certificazione dello specialista con il codice della patologia riscontrata",
+    ],
+    pec: "aspvibovalentia@pec.it",
+    telefoni: [],
+    manca:
+      "L'ASP non ha indicato dove scaricare il modulo, se serve l'appuntamento né i tempi di rilascio: chiedili all'URP dell'ASP.",
+    fonte: "ASP Vibo Valentia · risposta scritta dell'URP del 29/10/2026",
   },
 };
