@@ -54,7 +54,7 @@ export const modena: ComuneConfig = {
 
   esenzioneTicket: {
     label: "AUSL Modena · Esenzioni ticket",
-    url: "https://www.ausl.mo.it",
+    url: "https://www.ausl.mo.it/faq/ticket-esenzioni-dal-pagamento-e-rimborsi/quali-sono-le-tipologie-di-esenzioni-del-ticket",
   },
 
   daVerificare: true,

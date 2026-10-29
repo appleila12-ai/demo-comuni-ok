@@ -47,8 +47,8 @@ export const lecce: ComuneConfig = {
     "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
-    label: "Esenzioni ticket · chiedi alla tua azienda sanitaria",
-    url: "https://www.comune.lecce.it",
+    label: "ASL Lecce · Anagrafe assistiti del tuo Distretto",
+    url: "https://www.sanita.puglia.it/web/asl-lecce/distretti-socio-sanitari",
   },
 
   daVerificare: true,

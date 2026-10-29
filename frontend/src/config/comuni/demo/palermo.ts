@@ -67,7 +67,7 @@ export const palermo: ComuneConfig = {
 
   esenzioneTicket: {
     label: "ASP Palermo · Esenzioni ticket",
-    url: "https://www.asppalermo.org",
+    url: "https://www.asppalermo.org/servizio/ticket-esenzione-per-patologia/",
   },
 
   daVerificare: true,
