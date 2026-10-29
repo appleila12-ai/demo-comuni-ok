@@ -77,6 +77,15 @@ const MEDLEG_BOLZANETO: PuntoSupporto = {
   action: { type: "tel", value: "0108498931" },
 };
 
+// Due pagine ASL3 attribuiscono questi telefoni a sedi diverse (Struppa / Distretto 13): si indica solo il servizio, senza sede.
+const MEDLEG_INFO_TELEFONICHE: PuntoSupporto = {
+  icon: "call-outline",
+  title: "Invalidità civile · segreteria invalidi (ASL3)",
+  subtitle:
+    "Informazioni telefoniche lunedì 9–12 e venerdì 10–12 · Tel. 010 849 6618 / 5246",
+  action: { type: "tel", value: "0108496618" },
+};
+
 const SOSPENSIONE_COMMISSIONI: PuntoSupporto = {
   icon: "alert-circle-outline",
   title: "Visite delle commissioni: controlla prima di andare",
@@ -242,7 +251,7 @@ export const genova: ComuneConfig = {
   // Solo voci già presenti nella scheda, con fonte. Passo 1 e 3 senza voci: nessun recapito verificato.
   percorsoTerritorio: {
     1: [INPS_CERTIFICATO],
-    2: [MEDLEG_VOLTRI, MEDLEG_BOLZANETO, SOSPENSIONE_COMMISSIONI, POLO_DISABILITA, ASL3_CENTRALINO],
+    2: [MEDLEG_VOLTRI, MEDLEG_BOLZANETO, MEDLEG_INFO_TELEFONICHE, SOSPENSIONE_COMMISSIONI, POLO_DISABILITA, ASL3_CENTRALINO],
     3: [ESENZIONE_D12],
     4: [ASCOLTO_PERCORSO, POLO_DISABILITA, PUA_PERCORSO],
     5: [POLO_DISABILITA, ASCOLTO_PERCORSO],
