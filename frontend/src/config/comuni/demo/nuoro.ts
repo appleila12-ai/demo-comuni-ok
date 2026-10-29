@@ -52,7 +52,7 @@ export const nuoro: ComuneConfig = {
 
   esenzioneTicket: {
     label: "ASL Nuoro · Esenzioni ticket",
-    url: "https://www.asl3nuoro.it",
+    url: "https://www.asl3nuoro.it/servizio/scelta-e-revoca-del-medico/",
   },
 
   daVerificare: true,

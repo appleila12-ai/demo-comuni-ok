@@ -30,7 +30,7 @@ function buildPrimiPassi() {
       "Con una malattia cronica o rara riconosciuta puoi non pagare il ticket per visite ed esami legati alla tua patologia. Il codice esenzione (es. 048 per patologie oncologiche) è indicato nell'elenco del Ministero della Salute. Chi ne ha diritto: chi ha una diagnosi certificata da uno specialista del Servizio Sanitario. Si richiede alla ASL con il certificato dello specialista.",
     link: comune.esenzioneTicket,
     // Per i Comuni della provincia della Spezia (ASL 5) c'è la scheda con cosa portare
-    ...(comune.provincia === "SP" || comune.slug === "genova" ? { route: "/esenzione-ticket" as const } : {}),
+    ...(comune.provincia === "SP" || comune.slug === "genova" || comune.slug === "nuoro" ? { route: "/esenzione-ticket" as const } : {}),
     color: topics.salute,
   },
   {
