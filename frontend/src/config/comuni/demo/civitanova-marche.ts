@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_SPERIMENTAZIONE } from "../percorso";
 
 // Comune di Civitanova Marche (MC) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (18 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -58,3 +59,6 @@ export const civitanovaMarche: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passo 1: provincia in sperimentazione INPS (messaggio INPS n. 2600 del 05/09/2025).
+civitanovaMarche.percorsoTerritorio = { ...civitanovaMarche.percorsoTerritorio, 1: [INPS_SPERIMENTAZIONE] };
