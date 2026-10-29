@@ -46,6 +46,56 @@ const ASL3_CENTRALINO: PuntoSupporto = {
   action: { type: "tel", value: "01084911" },
 };
 
+// Aggiornamento 29/10/2026 — passi 1, 2 e 3 del percorso (fonti: messaggio INPS n. 2600 del 05/09/2025;
+// pagina ASL3 "Invalidità e handicap" per i telefoni; avviso ASL3 del 22/06/2026 per la sede di Bolzaneto;
+// pagina del Distretto 12 ASL3 aggiornata al 21/07/2026 per l'esenzione). Distretti 9, 11 e 13: non ancora verificati.
+const INPS_CERTIFICATO: PuntoSupporto = {
+  icon: "document-text-outline",
+  title: "Certificato medico introduttivo (INPS)",
+  subtitle:
+    "Il medico di famiglia o un altro medico abilitato compila e invia all'INPS il certificato medico introduttivo. A Genova la nuova procedura è in corso dal 30 settembre 2025: il certificato avvia la richiesta, senza una domanda separata",
+  action: {
+    type: "web",
+    value:
+      "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.certificato-medico-introduttivo---invalidit--civile.html",
+  },
+};
+
+const MEDLEG_VOLTRI: PuntoSupporto = {
+  icon: "call-outline",
+  title: "Invalidità civile · Voltri (Distretto 8 Ponente)",
+  subtitle:
+    "Casa della Comunità, via Camozzini 15, 4° piano · Informazioni telefoniche lunedì 9–12 e venerdì 10–12 · Tel. 010 849 8751",
+  action: { type: "tel", value: "0108498751" },
+};
+
+const MEDLEG_BOLZANETO: PuntoSupporto = {
+  icon: "call-outline",
+  title: "Invalidità civile · Bolzaneto (Distretto 10 Val Polcevera)",
+  subtitle:
+    "Casa della Comunità, via P. Pastorino 32, 3° piano (sede dal 23/06/2026) · Informazioni telefoniche lunedì 9–12 e venerdì 10–12 · Tel. 010 849 8931 / 8959 / 9629 / 8970 / 8935",
+  action: { type: "tel", value: "0108498931" },
+};
+
+const MEDLEG_STRUPPA: PuntoSupporto = {
+  icon: "call-outline",
+  title: "Invalidità civile · Struppa (Distretto 12 Valbisagno)",
+  subtitle:
+    "Informazioni telefoniche lunedì 9–12 e venerdì 10–12 · Tel. 010 849 6618 / 5246",
+  action: { type: "tel", value: "0108496618" },
+};
+
+const ESENZIONE_D12: PuntoSupporto = {
+  icon: "document-text-outline",
+  title: "Esenzione ticket per invalidità dal 67% (Distretto 12 Valbisagno e Valtrebbia)",
+  subtitle:
+    "Servono: verbale INPS con le pagine dei nominativi della commissione, documento d'identità, tessera sanitaria e modulo di richiesta. La richiesta si invia per e-mail: l'indirizzo è sulla pagina del Distretto 12",
+  action: {
+    type: "web",
+    value: "https://www.asl3.liguria.it/territorio/distretti/distretto-12-valbisagno-e-valtrebbia.html",
+  },
+};
+
 // Comune di Genova (GE) — VERSIONE DIMOSTRATIVA (completata il 14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Fonte: pagina del Comune "Servizio di ascolto e orientamento sociale (Segretariato Sociale Professionale)", aggiornata il 20/03/2026 e controllata il 14/10/2026.
@@ -188,7 +238,9 @@ export const genova: ComuneConfig = {
   // 3 = verbale, 4 = valutazione multidimensionale, 5 = Progetto di Vita).
   // Solo voci già presenti nella scheda, con fonte. Passo 1 e 3 senza voci: nessun recapito verificato.
   percorsoTerritorio: {
-    2: [POLO_DISABILITA, ASL3_CENTRALINO, DISTRETTO_8],
+    1: [INPS_CERTIFICATO],
+    2: [MEDLEG_VOLTRI, MEDLEG_BOLZANETO, MEDLEG_STRUPPA, POLO_DISABILITA, ASL3_CENTRALINO],
+    3: [ESENZIONE_D12],
     4: [ASCOLTO_PERCORSO, POLO_DISABILITA, PUA_PERCORSO],
     5: [POLO_DISABILITA, ASCOLTO_PERCORSO],
   },
