@@ -77,6 +77,26 @@ const MEDLEG_BOLZANETO: PuntoSupporto = {
   action: { type: "tel", value: "0108498931" },
 };
 
+// Due pagine ASL3 attribuiscono questi telefoni a sedi diverse (Struppa / Distretto 13): si indica solo il servizio, senza sede.
+const MEDLEG_INFO_TELEFONICHE: PuntoSupporto = {
+  icon: "call-outline",
+  title: "Invalidità civile · segreteria invalidi (ASL3)",
+  subtitle:
+    "Informazioni telefoniche lunedì 9–12 e venerdì 10–12 · Tel. 010 849 6618 / 5246",
+  action: { type: "tel", value: "0108496618" },
+};
+
+const SOSPENSIONE_COMMISSIONI: PuntoSupporto = {
+  icon: "alert-circle-outline",
+  title: "Visite delle commissioni: controlla prima di andare",
+  subtitle:
+    "La pagina ufficiale dell'ASL3 «Invalidità e handicap» indica che le visite delle Commissioni Minorazioni Invalidi Civili sono sospese fino a nuove disposizioni. La sospensione risulta ancora indicata: prima di recarti a una visita, conferma con l'azienda ai telefoni qui sopra",
+  action: {
+    type: "web",
+    value: "https://www.asl3.liguria.it/territorio/servizi/medicina-legale/465-invalidit%C3%A0-e-handicap.html",
+  },
+};
+
 const ESENZIONE_D12: PuntoSupporto = {
   icon: "document-text-outline",
   title: "Esenzione ticket per invalidità dal 67% (Distretto 12 Valbisagno e Valtrebbia)",
@@ -231,7 +251,7 @@ export const genova: ComuneConfig = {
   // Solo voci già presenti nella scheda, con fonte. Passo 1 e 3 senza voci: nessun recapito verificato.
   percorsoTerritorio: {
     1: [INPS_CERTIFICATO],
-    2: [MEDLEG_VOLTRI, MEDLEG_BOLZANETO, POLO_DISABILITA, ASL3_CENTRALINO],
+    2: [MEDLEG_VOLTRI, MEDLEG_BOLZANETO, MEDLEG_INFO_TELEFONICHE, SOSPENSIONE_COMMISSIONI, POLO_DISABILITA, ASL3_CENTRALINO],
     3: [ESENZIONE_D12],
     4: [ASCOLTO_PERCORSO, POLO_DISABILITA, PUA_PERCORSO],
     5: [POLO_DISABILITA, ASCOLTO_PERCORSO],
