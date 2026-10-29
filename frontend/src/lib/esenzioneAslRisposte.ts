@@ -7,6 +7,7 @@ export type SchedaEsenzioneAsl = {
   intro: string;
   comeSiPresenta?: string[];
   documenti?: string[];
+  importante?: string;
   pec?: string;
   mail?: string;
   telefoni: { etichetta: string; numero: string }[];
@@ -61,3 +62,34 @@ export const ESENZIONE_ASL: Record<string, SchedaEsenzioneAsl> = {
     fonte: "ASP Vibo Valentia · risposta scritta dell'URP del 29/10/2026",
   },
 };
+
+// Azienda USL Toscana Sud Est: l'URP ha risposto "è spiegato tutto qui" indicando la pagina sulle esenzioni
+// per patologia cronica o invalidante; i contenuti sono quelli di quella pagina (letta il 29/10/2026).
+// Le mail degli uffici anagrafe cambiano per zona sociosanitaria: qui solo quella del Comune.
+const SUDEST_PAGINA = "https://www.uslsudest.toscana.it/come-fare-per/esenzione-ticket/esenzioni-per-patologia-cronica-o-invalidante";
+const sudest = (zona: string, mail: string): SchedaEsenzioneAsl => ({
+  asl: "Azienda USL Toscana Sud Est",
+  intro: `Il diritto all'esenzione è riconosciuto dall'Azienda sanitaria di residenza o di domicilio sanitario, sulla base della certificazione della malattia rilasciata dalle strutture del Servizio sanitario nazionale. Per te (${zona}) l'ufficio è l'anagrafe dell'ASL.`,
+  comeSiPresenta: [
+    "Di persona: agli Uffici anagrafe dei presidi ASL negli orari di apertura, con un documento d'identità in corso di validità e la tessera sanitaria",
+    "Per mail: inviando il documento d'identità e il certificato medico che attesti la patologia all'indirizzo della tua zona",
+  ],
+  documenti: [
+    "Documento d'identità in corso di validità",
+    "Tessera sanitaria (se vai di persona)",
+    "Certificato medico che attesti la patologia (rilasciato dal Servizio sanitario nazionale)",
+  ],
+  importante:
+    "Il codice di esenzione deve essere inserito dal medico nella prescrizione: se manca, paghi il ticket anche se hai l'attestato, e la prescrizione non si può correggere dopo. Porta sempre con te l'attestato e controlla il codice.",
+  mail,
+  telefoni: [],
+  paginaUrl: SUDEST_PAGINA,
+  paginaLabel: "Pagina dell'ASL Toscana Sud Est sulle esenzioni per patologia",
+  manca:
+    "La pagina non indica se serve l'appuntamento, i tempi di rilascio né gli orari degli uffici: chiedili all'anagrafe della tua zona.",
+  fonte: "Azienda USL Toscana Sud Est · pagina indicata dall'URP di Siena il 29/10/2026",
+});
+
+ESENZIONE_ASL.siena = sudest("zona Senese", "anagrafe.senese@uslsudest.toscana.it");
+ESENZIONE_ASL.arezzo = sudest("zona Aretina", "anagrafe.aretina@uslsudest.toscana.it");
+ESENZIONE_ASL.grosseto = sudest("zona Grossetana", "anagrafe.grossetana@uslsudest.toscana.it");

@@ -48,6 +48,7 @@ export function EsenzioneAsl({ scheda }: { scheda: SchedaEsenzioneAsl }) {
         </>
       ) : null}
 
+      {scheda.importante ? <Avviso>{scheda.importante}</Avviso> : null}
       <Avviso>{scheda.manca}</Avviso>
 
       {scheda.pec ? (
