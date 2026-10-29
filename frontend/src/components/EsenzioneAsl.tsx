@@ -21,7 +21,7 @@ export function EsenzioneAsl({ scheda }: { scheda: SchedaEsenzioneAsl }) {
       {scheda.comeSiPresenta ? (
         <>
           <Text style={paginaStili.titoloSezione} accessibilityRole="header">
-            Come si presenta
+            {scheda.titoloPassi ?? "Come si presenta"}
           </Text>
           <View style={paginaStili.card}>
             {scheda.comeSiPresenta.map((v) => (

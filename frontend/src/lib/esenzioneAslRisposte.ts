@@ -5,6 +5,7 @@
 export type SchedaEsenzioneAsl = {
   asl: string;
   intro: string;
+  titoloPassi?: string;
   comeSiPresenta?: string[];
   documenti?: string[];
   importante?: string;
@@ -61,6 +62,23 @@ export const ESENZIONE_ASL: Record<string, SchedaEsenzioneAsl> = {
       "L'ASP non ha indicato dove scaricare il modulo, se serve l'appuntamento né i tempi di rilascio: chiedili all'URP dell'ASP.",
     fonte: "ASP Vibo Valentia · risposta scritta dell'URP del 29/10/2026",
   },
+};
+
+ESENZIONE_ASL.lecce = {
+  asl: "ASL Lecce",
+  intro: "L'URP dell'ASL Lecce indica che l'ufficio competente a prendere in carico la richiesta è l'Anagrafe Assistiti del Distretto Socio Sanitario in cui risiedi.",
+  titoloPassi: "Come trovare l'ufficio",
+  comeSiPresenta: [
+    "Apri la pagina dei Distretti socio sanitari dell'ASL Lecce (pulsante qui sotto) e scegli il tuo Distretto di residenza",
+    "Nella pagina del Distretto clicca sulla sezione \"Uffici Amministrativi\"",
+    "Scorri fino a \"Anagrafe Assistiti\": lì trovi i riferimenti dell'ufficio",
+  ],
+  telefoni: [],
+  paginaUrl: "https://www.sanita.puglia.it/web/asl-lecce/distretti-socio-sanitari",
+  paginaLabel: "Distretti socio sanitari dell'ASL Lecce",
+  manca:
+    "L'ASL non ha indicato come si presenta la richiesta, i documenti, l'appuntamento né i tempi: chiedili all'Anagrafe Assistiti del tuo Distretto.",
+  fonte: "ASL Lecce · risposta scritta dell'URP del 29/10/2026",
 };
 
 // Azienda USL Toscana Sud Est: l'URP ha risposto "è spiegato tutto qui" indicando la pagina sulle esenzioni
