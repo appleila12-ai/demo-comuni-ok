@@ -81,6 +81,33 @@ ESENZIONE_ASL.lecce = {
   fonte: "ASL Lecce · risposta scritta dell'URP del 29/10/2026",
 };
 
+// ASReM Molise: risposta scritta dell'URP (29/10/2026) sul RINNOVO dell'esenzione per patologia.
+ESENZIONE_ASL.campobasso = {
+  asl: "ASReM Molise",
+  intro:
+    "Secondo l'URP dell'ASReM, il rinnovo dell'esenzione per patologia non si può fare online: si fa solo agli sportelli ASReM, con la documentazione sanitaria.",
+  titoloPassi: "Dove e quando",
+  comeSiPresenta: [
+    "Sportello ASReM, Via Ugo Petrella, Campobasso (presso gli sportelli di Medicina di Base)",
+    "Dal lunedì al venerdì: 8:30 – 12:30",
+    "Il lunedì e il mercoledì anche: 15:00 – 16:30",
+  ],
+  documenti: [
+    "Documento d'identità",
+    "Tessera sanitaria",
+    "Documentazione sanitaria completa (obbligatoria per l'esenzione per patologia)",
+    "Se va un'altra persona: delega con il documento del delegato",
+  ],
+  importante: "Con molta affluenza la distribuzione dei numeri può essere sospesa prima dell'orario di chiusura.",
+  pec: "asrem@pec.it",
+  telefoni: [{ etichetta: "ASReM · centralino", numero: "0874 4091" }],
+  paginaUrl: "https://www.asrem.molise.it",
+  paginaLabel: "Sito dell'ASReM Molise",
+  manca:
+    "La risposta riguarda il rinnovo: non dice come si fa la prima richiesta di esenzione, né se serve l'appuntamento o i tempi di rilascio. Chiedilo allo sportello.",
+  fonte: "ASReM Molise · risposta scritta dell'URP del 29/10/2026",
+};
+
 // Azienda USL Toscana Sud Est: l'URP ha risposto "è spiegato tutto qui" indicando la pagina sulle esenzioni
 // per patologia cronica o invalidante; i contenuti sono quelli di quella pagina (letta il 29/10/2026).
 // Le mail degli uffici anagrafe cambiano per zona sociosanitaria: qui solo quella del Comune.
