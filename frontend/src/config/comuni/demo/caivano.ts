@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Caivano (NA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -58,3 +59,5 @@ export const caivano: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+caivano.percorsoTerritorio = percorso(caivano.puntiSupporto, [2]);

@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Alghero (SS) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -58,3 +59,5 @@ export const alghero: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+alghero.percorsoTerritorio = percorso(alghero.puntiSupporto, [2]);

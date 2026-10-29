@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Canicattì (AG) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -58,3 +59,5 @@ export const canicatti: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+canicatti.percorsoTerritorio = percorso(canicatti.puntiSupporto, [2]);
