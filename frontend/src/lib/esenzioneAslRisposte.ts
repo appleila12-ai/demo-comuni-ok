@@ -259,3 +259,46 @@ ESENZIONE_ASL.siracusa = {
     "L'ASP non ha indicato i documenti, se serve l'appuntamento né i tempi di rilascio: chiedili all'indirizzo qui sopra.",
   fonte: "ASP Siracusa · risposta scritta dell'URP del 29/10/2026",
 };
+
+// ASP Catania: risposta scritta dell'URP (29/10/2026).
+const ASP_CATANIA: SchedaEsenzioneAsl = {
+  asl: "ASP Catania",
+  intro:
+    "Secondo l'URP dell'ASP di Catania, la richiesta di esenzione ticket per patologia si può fare online, con la piattaforma «Asp Con Te – Servizi territoriali», oppure di persona.",
+  comeSiPresenta: [
+    "Online: dalla piattaforma «Asp Con Te – Servizi territoriali» dell'ASP di Catania",
+    "Di persona: all'Ufficio Anagrafe assistiti del tuo Distretto",
+  ],
+  telefoni: [{ etichetta: "URP ASP Catania · numero verde (lun–ven 9:30–12:00, lun anche 15:00–16:30)", numero: "800 279761" }],
+  paginaUrl: "https://www.aspct.it/aspconte/servizi-territoriali/",
+  paginaLabel: "Piattaforma Asp Con Te – Servizi territoriali",
+  manca:
+    "L'ASP non ha indicato i documenti da presentare, i tempi di rilascio, né se serve l'appuntamento: chiedili al tuo Distretto o sulla piattaforma.",
+  fonte: "ASP Catania · risposta scritta dell'URP del 29/10/2026",
+};
+for (const slug of ["catania", "acireale", "adrano", "mascalucia", "misterbianco", "paterno", "caltagirone"]) ESENZIONE_ASL[slug] = ASP_CATANIA;
+
+// ASL Roma 5: risposta scritta dell'URP e Comunicazione (29/10/2026).
+const ASL_ROMA5: SchedaEsenzioneAsl = {
+  asl: "ASL Roma 5",
+  intro:
+    "Secondo l'URP della ASL Roma 5, l'esenzione per patologia cronica si ottiene presentando la certificazione medica che attesta la patologia, con i documenti che ti identificano, agli uffici del tuo Distretto.",
+  comeSiPresenta: [
+    "Presenta agli uffici distrettuali competenti la certificazione medica che attesta la patologia, insieme ai documenti identificativi",
+    "Se nella certificazione manca il codice di esenzione, gli uffici lo assegnano dopo aver verificato i documenti",
+    "L'esenzione viene poi registrata nei sistemi della ASL presso gli sportelli CUP del territorio",
+  ],
+  documenti: [
+    "Certificazione medica che attesta la patologia",
+    "Documenti identificativi dell'assistito",
+    "Malattie rare: certificazione di uno specialista di un Centro della rete regionale riconosciuto",
+  ],
+  mail: "urp@aslroma5.it",
+  telefoni: [],
+  paginaUrl: "https://www.aslroma5.it",
+  paginaLabel: "Sito della ASL Roma 5",
+  manca:
+    "La ASL non ha indicato indirizzi e orari degli uffici, l'elenco preciso dei documenti, il modulo, i tempi né le regole sull'appuntamento: rivolgiti agli uffici distrettuali, che variano per tipo di esenzione.",
+  fonte: "ASL Roma 5 · risposta scritta dell'URP e Comunicazione del 29/10/2026",
+};
+for (const slug of ["fonte-nuova", "guidonia-montecelio", "monterotondo", "tivoli"]) ESENZIONE_ASL[slug] = ASL_ROMA5;
