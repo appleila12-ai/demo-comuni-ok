@@ -1,4 +1,5 @@
 import type { ComuneConfig, PuntoSupporto } from "../types";
+import { INPS_SPERIMENTAZIONE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Palermo (PA) — VERSIONE DIMOSTRATIVA.
@@ -83,3 +84,6 @@ const MEDICINA_LEGALE_ASP_PALERMO: PuntoSupporto = {
   action: { type: "tel", value: "0917032154" },
 };
 palermo.percorsoTerritorio = percorso(palermo.puntiSupporto, [0, 1], [MEDICINA_LEGALE_ASP_PALERMO]);
+
+// Passo 1: provincia in sperimentazione INPS (messaggio INPS n. 2600 del 05/09/2025).
+palermo.percorsoTerritorio = { ...palermo.percorsoTerritorio, 1: [INPS_SPERIMENTAZIONE] };

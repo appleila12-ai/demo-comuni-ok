@@ -86,3 +86,18 @@ export function percorso(
 export function percorsoAsl5(punti: PuntoSupporto[], servizi: number[]): Passi {
   return percorso(punti, servizi, [ASL5_INVALIDITA, ASL5_CENTRALINO], [ASL5_ESENZIONE]);
 }
+
+// Passo 1 nelle province della sperimentazione INPS della riforma della disabilità
+// (Alessandria, Genova, Isernia, Lecce, Macerata, Matera, Palermo, Teramo, Vicenza).
+// Fonte: INPS, messaggio n. 2600 del 05/09/2025 (seconda fase, dal 30/09/2025).
+export const INPS_SPERIMENTAZIONE: PuntoSupporto = {
+  icon: "document-text-outline",
+  title: "Certificato medico introduttivo (INPS)",
+  subtitle:
+    "Il medico di famiglia o un altro medico abilitato compila e invia all'INPS il certificato medico introduttivo. Nella tua provincia la nuova procedura è in corso dal 30 settembre 2025: il certificato avvia la richiesta, senza una domanda separata",
+  action: {
+    type: "web",
+    value:
+      "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.certificato-medico-introduttivo---invalidit--civile.html",
+  },
+};
