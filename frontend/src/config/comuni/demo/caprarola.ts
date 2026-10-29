@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Caprarola (VT) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -62,3 +63,5 @@ export const caprarola: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+caprarola.percorsoTerritorio = percorso(caprarola.puntiSupporto, [4]);

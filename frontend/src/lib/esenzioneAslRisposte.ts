@@ -138,3 +138,30 @@ const sudest = (zona: string, mail: string): SchedaEsenzioneAsl => ({
 ESENZIONE_ASL.siena = sudest("zona Senese", "anagrafe.senese@uslsudest.toscana.it");
 ESENZIONE_ASL.arezzo = sudest("zona Aretina", "anagrafe.aretina@uslsudest.toscana.it");
 ESENZIONE_ASL.grosseto = sudest("zona Grossetana", "anagrafe.grossetana@uslsudest.toscana.it");
+
+// ASL Gallura, Distretto di Olbia: risposta scritta dell'Ufficio Scelte e Revoche (29/10/2026).
+ESENZIONE_ASL.olbia = {
+  asl: "ASL Gallura · Distretto di Olbia",
+  intro:
+    "L'Ufficio Scelte e Revoche del Distretto di Olbia indica come presentare la richiesta di esenzione ticket per patologia cronica e per malattia rara.",
+  titoloPassi: "Come si presenta la richiesta",
+  comeSiPresenta: [
+    "Allo sportello dell'Ufficio Scelte e Revoche: non serve l'appuntamento",
+    "Oppure per e-mail, all'indirizzo dell'ufficio competente",
+  ],
+  documenti: [
+    "Certificato specialistico ospedaliero",
+    "Documento d'identità in corso di validità",
+    "Tessera sanitaria",
+    "Patologia cronica: il certificato è rilasciato da uno specialista ambulatoriale di una struttura ospedaliera pubblica e riporta i dati dell'interessato, il riferimento al D.M. 329/1999, il codice della patologia, il timbro e la firma dello specialista",
+    "Malattia rara: il certificato è rilasciato dalla struttura ospedaliera competente e riporta i dati dell'interessato, il codice della malattia rara, il timbro e la firma della struttura o del medico",
+  ],
+  importante:
+    "Per la malattia rara, l'attestato di esenzione viene rilasciato dopo l'autorizzazione del dirigente medico.",
+  telefoni: [],
+  paginaUrl: "https://www.aslgallura.it",
+  paginaLabel: "Sito dell'ASL Gallura (orari e recapiti degli uffici)",
+  manca:
+    "L'ufficio non ha indicato l'indirizzo e-mail né i tempi di rilascio, e la risposta non riguarda l'esenzione per invalidità civile: orari e recapiti sono sul sito dell'ASL Gallura, nella sezione Uffici Scelte e Revoche.",
+  fonte: "ASL Gallura · Ufficio Scelte e Revoche, Distretto di Olbia · risposta scritta del 29/10/2026",
+};

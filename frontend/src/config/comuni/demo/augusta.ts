@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Augusta (SR) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (15 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -58,3 +59,5 @@ export const augusta: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+augusta.percorsoTerritorio = percorso(augusta.puntiSupporto, [2]);

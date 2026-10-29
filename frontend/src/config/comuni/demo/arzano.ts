@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Arzano (NA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (20 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -58,3 +59,5 @@ export const arzano: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+arzano.percorsoTerritorio = percorso(arzano.puntiSupporto, [2]);
