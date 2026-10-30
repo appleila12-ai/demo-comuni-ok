@@ -367,3 +367,107 @@ ESENZIONE_ASL["reggio-calabria"] = {
     "L'ASP non ha indicato le mail e le PEC dei singoli Distretti, gli orari di ogni sportello né i tempi di rilascio per l'invio digitale: chiedili al tuo Distretto o nella sezione Modulistica del sito.",
   fonte: "ASP Reggio Calabria · risposta scritta dell'URP del 29/10/2026",
 };
+
+// ASL TO4: risposta scritta dell'URP (30/10/2026).
+ESENZIONE_ASL["settimo-torinese"] = {
+  asl: "ASL TO4",
+  intro:
+    "All'ASL TO4 la richiesta di esenzione per patologia (e il rinnovo, se spetta) si presenta per e-mail al Distretto sanitario di riferimento. Per il Distretto di Ciriè-Lanzo la gestione è della Medicina Legale.",
+  titoloPassi: "Come si presenta",
+  comeSiPresenta: [
+    "Per e-mail al tuo Distretto sanitario di riferimento (contatti delle sedi sulla pagina dell'ASL qui sotto)",
+    "Distretto di Ciriè-Lanzo: solo per e-mail alla Medicina Legale, certificatimedleg@aslto4.piemonte.it",
+    "In alternativa, di persona al tuo Distretto, dalle 10 alle 12 dal lunedì al venerdì, solo su appuntamento (non per Ciriè-Lanzo)",
+    "Appuntamento e informazioni: numero unico aziendale 011 9176012, dal lunedì al venerdì dalle 13 alle 15",
+  ],
+  documenti: [
+    "Documentazione specialistica recente (non più vecchia di un anno) di una struttura pubblica che attesti la patologia, oppure certificazione INPS",
+    "Documento d'identità",
+    "Codice fiscale",
+    "Recapito telefonico",
+  ],
+  mail: "certificatimedleg@aslto4.piemonte.it",
+  telefoni: [{ etichetta: "Numero unico aziendale (lun-ven 13-15)", numero: "011 9176012" }],
+  paginaUrl: "https://www.aslto4.piemonte.it/pagamento-ticket-ed-esenzioni-ticket-visite-ed-esami-specialistici",
+  paginaLabel: "Pagina dell'ASL TO4 su ticket ed esenzioni",
+  manca:
+    "L'indirizzo e-mail è quello della Medicina Legale per il solo Distretto di Ciriè-Lanzo. Gli indirizzi degli altri Distretti, i tempi di rilascio e il modulo non sono stati indicati: li trovi sulla pagina dell'ASL.",
+  fonte: "ASL TO4 · risposta scritta dell'URP del 30/10/2026",
+};
+
+// ASL Bari: risposta scritta dell'URP (29/10/2026).
+const ASL_BARI: SchedaEsenzioneAsl = {
+  asl: "ASL Bari",
+  intro:
+    "Secondo l'URP dell'ASL Bari, la richiesta di esenzione per patologia o malattia rara si presenta all'ufficio anagrafe competente per la tua residenza.",
+  documenti: [
+    "Certificazione specialistica di una struttura pubblica, oppure cartella clinica",
+    "Copia della tessera sanitaria",
+    "Copia del documento d'identità",
+  ],
+  telefoni: [],
+  paginaUrl: "https://www.sanita.puglia.it/web/asl-bari/distretti-socio-sanitari",
+  paginaLabel: "Distretti socio-sanitari dell'ASL Bari (sezione Uffici amministrativi)",
+  manca:
+    "Le sedi degli sportelli anagrafe si trovano nella sezione \"Uffici amministrativi\" del tuo Distretto. L'ASL non ha indicato se serve l'appuntamento, né i tempi di rilascio o se si può inviare per mail.",
+  fonte: "ASL Bari · risposta scritta dell'URP del 29/10/2026",
+};
+for (const slug of ["bari", "altamura", "bitonto", "corato", "gravina-in-puglia", "modugno", "mola-di-bari", "molfetta", "monopoli"]) ESENZIONE_ASL[slug] = ASL_BARI;
+
+// ASL Città di Torino: risposta scritta dell'URP (29/10/2026). L'URP indica solo la pagina dell'ASL.
+ESENZIONE_ASL.torino = {
+  asl: "ASL Città di Torino",
+  intro:
+    "L'URP dell'ASL Città di Torino indica che tutte le informazioni su come richiedere l'esenzione ticket sono sulla pagina dedicata del sito dell'Azienda.",
+  mail: "urp@aslcittaditorino.it",
+  telefoni: [],
+  paginaUrl: "https://www.aslcittaditorino.it/come-fare-per/richiedere-lesenzione-ticket/",
+  paginaLabel: "Richiedere l'esenzione ticket · ASL Città di Torino",
+  manca:
+    "L'ASL non ha scritto i passaggi nella risposta, ma rimanda alla sua pagina: documenti, sportelli e tempi sono lì. I recapiti telefonici dell'URP sono su aslcittaditorino.it/urp.",
+  fonte: "ASL Città di Torino · risposta scritta dell'URP del 29/10/2026",
+};
+
+// ATS Brescia: l'esenzione non è gestita dall'ATS ma dalle tre ASST (risposta scritta del 30/10/2026).
+ESENZIONE_ASL.brescia = {
+  asl: "ASST Spedali Civili di Brescia",
+  intro:
+    "L'ATS di Brescia ha precisato che le esenzioni non sono gestite dall'ATS ma dalle tre ASST del territorio: ASST Spedali Civili, ASST Garda e ASST Franciacorta. Per il Comune di Brescia fa riferimento l'ASST Spedali Civili. Orari e sedi sono sulle pagine delle ASST.",
+  telefoni: [],
+  paginaUrl: "https://www.asst-spedalicivili.it/esenzione-dal-pagamento-ticket",
+  paginaLabel: "Esenzione dal pagamento del ticket · ASST Spedali Civili",
+  manca:
+    "L'ATS non ha indicato i documenti, il modulo, l'appuntamento né i tempi: trovi contatti, orari e sedi sulla pagina dell'ASST. Per altri Comuni del Bresciano: ASST Garda (asst-garda.it/territori/assistenza-sanitaria-2) e ASST Franciacorta (asst-franciacorta.it, sezione Ticket ed esenzioni).",
+  fonte: "ATS Brescia · risposta scritta dell'Ufficio Pubblica Tutela del 30/10/2026",
+};
+
+// ASST Lodi: risposta scritta del Direttore del Distretto Alto Lodigiano (30/10/2026).
+ESENZIONE_ASL.lodi = {
+  asl: "ASST di Lodi",
+  intro:
+    "L'ASST di Lodi indica che tutte le informazioni su come presentare la domanda di esenzione ticket sono sulla pagina dedicata del suo sito.",
+  telefoni: [],
+  paginaUrl: "https://www.asst-lodi.it/esenzioni-ticket",
+  paginaLabel: "Esenzioni ticket · ASST di Lodi",
+  manca:
+    "L'ASST non ha scritto i passaggi nella risposta, ma rimanda alla sua pagina: documenti, sportelli e tempi sono lì.",
+  fonte: "ASST di Lodi · risposta scritta del Distretto Alto Lodigiano del 30/10/2026",
+};
+
+// Azienda ULSS 2 Marca Trevigiana: risposta scritta dell'URP (29/10/2026).
+const ULSS2_TREVISO: SchedaEsenzioneAsl = {
+  asl: "Azienda ULSS 2 Marca Trevigiana",
+  intro:
+    "L'URP dell'ULSS 2 indica la sezione \"Cittadino e famiglia\" del sito dell'Azienda, dove per ogni tipo di esenzione sono riportate le informazioni. Consiglia inoltre le FAQ sul Fascicolo Sanitario Elettronico (FSE), per sapere se si può chiedere l'esenzione per patologia e per verificare quella per reddito.",
+  telefoni: [
+    { etichetta: "URP Treviso", numero: "0422 322922" },
+    { etichetta: "URP Asolo", numero: "0423 731994" },
+    { etichetta: "URP Pieve di Soligo", numero: "0438 663608" },
+  ],
+  paginaUrl: "https://www.aulss2.veneto.it/cittadino-e-famiglia",
+  paginaLabel: "Cittadino e famiglia · ULSS 2 Marca Trevigiana",
+  manca:
+    "L'URP non ha scritto i passaggi nella risposta ma rimanda alle pagine dell'Azienda e alle FAQ regionali sul FSE (salute.regione.veneto.it/lista-faq).",
+  fonte: "Azienda ULSS 2 Marca Trevigiana · risposta scritta dell'URP del 29/10/2026",
+};
+for (const slug of ["treviso", "conegliano", "castelfranco-veneto", "montebelluna", "vittorio-veneto"]) ESENZIONE_ASL[slug] = ULSS2_TREVISO;
