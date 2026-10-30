@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso, ASL_BARI_DSS09 } from "../percorso";
 
 // Comune di Modugno (BA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -58,3 +59,5 @@ export const modugno: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+modugno.percorsoTerritorio = percorso(modugno.puntiSupporto, [], [ASL_BARI_DSS09]);

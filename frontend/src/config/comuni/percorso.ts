@@ -132,3 +132,33 @@ export const INPS_TERZA_FASE_BZ: PuntoSupporto = {
       "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.certificato-medico-introduttivo---invalidit--civile.html",
   },
 };
+
+// ---------- ASL Bari: commissioni di invalidità civile per Distretto socio-sanitario ----------
+// Fonte: pagina "Commissioni di invalidità" di ASL Bari (sist.sanita.puglia.it/en/web/asl-bari/commissioni-di-invalidita),
+// schede aggiornate tra 26/11/2024 e 04/09/2025, lette il 30/10/2026. Le pagine non indicano se serve l'appuntamento.
+const ASL_BARI_COMMISSIONI_URL = "https://sist.sanita.puglia.it/en/web/asl-bari/commissioni-di-invalidita";
+
+function aslBariCommissione(dss: string, zona: string, indirizzo: string, telefono: string, ricevimento: string): PuntoSupporto {
+  return {
+    icon: "medkit-outline",
+    title: `ASL Bari · Commissione invalidi civili ${dss}`,
+    subtitle: `${zona} · ${indirizzo} · Tel. ${telefono} · Ricevimento: ${ricevimento}`,
+    action: { type: "tel", value: telefono.replace(/\D/g, "") },
+  };
+}
+
+export const ASL_BARI_DSS01 = aslBariCommissione("DSS 01", "Giovinazzo, Molfetta", "via P. Togliatti 6/L, Molfetta", "080 5847904", "mercoledì 9:00–12:00");
+export const ASL_BARI_DSS02 = aslBariCommissione("DSS 02", "Corato, Ruvo di Puglia, Terlizzi", "via I Maggio 1, Ruvo di Puglia", "080 5841709", "lunedì 9:30–11:30");
+export const ASL_BARI_DSS03 = aslBariCommissione("DSS 03", "Bitonto, Palo del Colle", "via Comes 84, ex Ospedale, Bitonto", "080 5847214", "martedì 15:30–18:30");
+export const ASL_BARI_DSS04 = aslBariCommissione("DSS 04", "Altamura, Gravina in Puglia, Poggiorsini", "piazza De Napoli 5, Altamura", "080 5848681", "mercoledì 9:30–12:30");
+export const ASL_BARI_DSS09 = aslBariCommissione("DSS 09", "Bitetto, Bitritto, Modugno, Bari San Paolo e Stanic", "via X Marzo 162, Modugno", "080 5843123", "lunedì 9:00–12:00");
+export const ASL_BARI_DSS11 = aslBariCommissione("DSS 11", "Mola di Bari, Noicattaro, Rutigliano", "via San Francesco d'Assisi 194, ex Ospedale Monte dei Poveri, Rutigliano", "080 5847701", "martedì 15:30–18:00");
+export const ASL_BARI_DSS12 = aslBariCommissione("DSS 12", "Conversano, Monopoli, Polignano a Mare", "via De Amicis 24/26, Conversano", "080 5849757", "a Conversano (via De Amicis 24) il 2° e 4° lunedì del mese 9:00–12:00; a Monopoli (via Pisonio 24) il 1° e 3° lunedì del mese 9:00–12:00");
+/** Città di Bari: quattro commissioni a seconda del quartiere. */
+export const ASL_BARI_CITTA: PuntoSupporto = {
+  icon: "medkit-outline",
+  title: "ASL Bari · Commissioni invalidi civili (città di Bari)",
+  subtitle:
+    "Dipende dal quartiere. DSS 06 (Fesca, Libertà, Marconi, Palese, San Girolamo, Santo Spirito) tel. 080 5842392, ricevimento giovedì 9:00–12:00. DSS 07 (Carbonara, Ceglie, Loseto, Murat, Picone, Poggiofranco, San Nicola) tel. 080 5842367, martedì 9:00–12:00. DSS 08 (Carrassi, Japigia, Madonnella, San Pasquale, Torre a Mare) tel. 080 5842728, martedì 9:00–12:00. DSS 06, 07 e 08: via G. Appulo 23, Bari. DSS 09 (San Paolo e Stanic): via X Marzo 162, Modugno, tel. 080 5843123, lunedì 9:00–12:00",
+  action: { type: "web", value: ASL_BARI_COMMISSIONI_URL },
+};
