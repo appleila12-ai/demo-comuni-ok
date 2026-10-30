@@ -498,3 +498,52 @@ const ULSS2_TREVISO: SchedaEsenzioneAsl = {
   fonte: "Azienda ULSS 2 Marca Trevigiana · risposta scritta dell'URP del 29/10/2026",
 };
 for (const slug of ["treviso", "conegliano", "castelfranco-veneto", "montebelluna", "vittorio-veneto"]) ESENZIONE_ASL[slug] = ULSS2_TREVISO;
+
+// ASL TO4: risposta scritta dell'URP (30/10/2026).
+ESENZIONE_ASL["settimo-torinese"] = {
+  asl: "ASL TO4",
+  intro:
+    "Secondo l'URP dell'ASL TO4, le esenzioni per patologia e i relativi rinnovi si chiedono per e-mail al Distretto sanitario di riferimento, oppure di persona su appuntamento.",
+  comeSiPresenta: [
+    "Per e-mail al tuo Distretto sanitario, allegando i documenti qui sotto (i contatti dei Distretti sono sulla pagina dell'ASL)",
+    "Di persona, solo su appuntamento: dal lunedì al venerdì, 10:00 – 12:00",
+    "L'appuntamento si prende al numero unico aziendale, dal lunedì al venerdì, 13:00 – 15:00",
+    "Al Distretto di Ciriè-Lanzo le richieste vanno solo per e-mail alla Medicina Legale: certificatimedleg@aslto4.piemonte.it",
+  ],
+  documenti: [
+    "Documentazione specialistica recente (non più vecchia di un anno) rilasciata da una struttura pubblica che attesta la patologia, oppure certificazione dell'INPS",
+    "Documento d'identità",
+    "Codice fiscale",
+    "Recapito telefonico",
+  ],
+  telefoni: [{ etichetta: "Numero unico aziendale · appuntamenti e informazioni (lun–ven 13:00–15:00)", numero: "011 9176012" }],
+  paginaUrl: "https://www.aslto4.piemonte.it/pagamento-ticket-ed-esenzioni-ticket-visite-ed-esami-specialistici",
+  paginaLabel: "Pagina dell'ASL TO4 su ticket ed esenzioni",
+  manca: "L'ASL non ha indicato i tempi di rilascio né il modulo. Gli indirizzi e-mail dei Distretti sono sulla pagina ufficiale.",
+  fonte: "ASL TO4 · risposta scritta dell'URP del 30/10/2026",
+};
+
+// ASP Reggio Calabria: risposta scritta dell'URP (29/10/2026). Il logo dell'ASP non va usato senza autorizzazione.
+ESENZIONE_ASL["reggio-calabria"] = {
+  asl: "ASP Reggio Calabria",
+  intro:
+    "Secondo l'URP dell'ASP di Reggio Calabria, la richiesta di esenzione per patologia cronica o malattia rara si presenta agli sportelli Scelta/Revoca ed Esenzioni del Poliambulatorio o del Distretto sanitario di competenza, oppure si invia in digitale.",
+  comeSiPresenta: [
+    "Di persona: agli sportelli Scelta/Revoca ed Esenzioni del tuo Distretto o Poliambulatorio, in base alla residenza o al domicilio sanitario. Non serve prenotare",
+    "Da casa: con PEC o e-mail ordinaria ai contatti del tuo Distretto o Poliambulatorio di riferimento",
+    "Gli orari dei singoli sportelli sono sulla pagina dei Distretti sanitari dell'ASP (per esempio, in diverse sedi martedì, giovedì e venerdì mattina)",
+    "Allo sportello l'attestato di esenzione viene rilasciato subito, dopo la verifica dei requisiti",
+  ],
+  documenti: [
+    "Copia del documento d'identità in corso di validità",
+    "Copia della tessera sanitaria",
+    "Certificazione medica di uno specialista di una struttura pubblica (o idonea documentazione medico-legale) che attesta la patologia e indica il codice",
+    "Se invii per PEC o e-mail: modulo di richiesta firmato, con dichiarazione sostitutiva (DPR 445/2000) di conformità all'originale dei documenti allegati",
+  ],
+  telefoni: [],
+  paginaUrl: "https://www.asprc.it",
+  paginaLabel: "Sito dell'ASP di Reggio Calabria (sezione Modulistica)",
+  manca:
+    "L'ASP non ha indicato i tempi di rilascio quando si invia per e-mail o PEC, né gli indirizzi dei singoli Distretti: li trovi sulla pagina dei Distretti sanitari.",
+  fonte: "ASP Reggio Calabria · risposta scritta dell'URP del 29/10/2026",
+};
