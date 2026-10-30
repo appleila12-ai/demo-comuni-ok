@@ -498,3 +498,26 @@ const ULSS2_TREVISO: SchedaEsenzioneAsl = {
   fonte: "Azienda ULSS 2 Marca Trevigiana · risposta scritta dell'URP del 29/10/2026",
 };
 for (const slug of ["treviso", "conegliano", "castelfranco-veneto", "montebelluna", "vittorio-veneto"]) ESENZIONE_ASL[slug] = ULSS2_TREVISO;
+
+// AUSL della Romagna: pagina ufficiale «Esenzione dal ticket per patologia e malattia cronica» (aggiornata il 16/04/2024, letta il 30/10/2026).
+// L'URP di Rimini ha rimandato a questa pagina per iscritto (30/10/2026). Imola ha un'altra azienda sanitaria.
+const AUSL_ROMAGNA: SchedaEsenzioneAsl = {
+  asl: "AUSL della Romagna",
+  intro:
+    "Il diritto all'esenzione è certificato da un promemoria di attestato di esenzione, rilasciato dallo sportello territoriale dell'AUSL di residenza. Lì devi presentare la certificazione della patologia.",
+  titoloPassi: "Come si ottiene",
+  comeSiPresenta: [
+    "Allo sportello territoriale dell'AUSL (sportelli unici CUP) della tua residenza, con la certificazione della patologia",
+    "La certificazione deve essere emessa dallo specialista di una struttura pubblica, durante una visita del Servizio sanitario nazionale (non in libera professione), sulla modulistica prevista",
+    "L'esenzione viene registrata nell'Anagrafe Regionale degli Assistiti e inviata in automatico al tuo medico di famiglia o pediatra",
+  ],
+  importante:
+    "Per usare l'esenzione, il medico di famiglia, il pediatra o lo specialista deve scrivere il codice della patologia nell'apposito campo dell'impegnativa, per visite, esami o farmaci. L'esenzione può valere solo per le prestazioni specifiche collegate alla malattia (allegati 8 e 8bis del DPCM 2017) oppure essere generica, a valutazione di chi prescrive. La tessera può avere scadenza illimitata o limitata, secondo la patologia (DM 23 novembre 2012 e circolare regionale n. 11 del 12 luglio 2013). Se risiedi in un'altra regione ma sei assistito in Romagna, presenta la certificazione alla tua AUSL di residenza e porta poi agli sportelli romagnoli l'attestato che ti rilasciano.",
+  telefoni: [],
+  paginaUrl: "https://www.auslromagna.it/servizi/ticket/esenzioni/per-patologia-e-malattia-cronica",
+  paginaLabel: "Pagina dell'AUSL Romagna sull'esenzione per patologia",
+  manca:
+    "L'AUSL non indica l'elenco preciso dei documenti da portare oltre alla certificazione, se serve l'appuntamento, i tempi di rilascio né se si può inviare per mail. Gli orari e le sedi degli sportelli unici CUP sono sul sito dell'AUSL.",
+  fonte: "AUSL della Romagna · pagina ufficiale sull'esenzione per patologia e risposta scritta dell'URP di Rimini del 30/10/2026",
+};
+for (const slug of ["rimini", "riccione", "ravenna", "faenza", "forli", "cesena"]) ESENZIONE_ASL[slug] = AUSL_ROMAGNA;
