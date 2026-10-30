@@ -547,3 +547,45 @@ ESENZIONE_ASL["reggio-calabria"] = {
     "L'ASP non ha indicato i tempi di rilascio quando si invia per e-mail o PEC, né gli indirizzi dei singoli Distretti: li trovi sulla pagina dei Distretti sanitari.",
   fonte: "ASP Reggio Calabria · risposta scritta dell'URP del 29/10/2026",
 };
+
+// ASL 5 Liguria (Distretti 17, 18, 19): modulo ufficiale "Esenzione per patologia - invalidità" e avviso all'utenza del 30/09/2026.
+function asl5(sportello: string, mail: string, telefono: string, orari: string): SchedaEsenzioneAsl {
+  return {
+    asl: "ASL 5 Liguria · Distretti 17, 18 e 19",
+    intro:
+      "Per far registrare sul libretto sanitario una patologia cronica o un'invalidità, ci si rivolge al presidio dell'anagrafe sanitaria competente per la propria residenza anagrafica (o domicilio sanitario).",
+    titoloPassi: "Come si presenta la richiesta",
+    comeSiPresenta: [
+      "Per e-mail all'indirizzo del distretto di appartenenza, oppure con accesso libero nei giorni e negli orari del distretto (il modulo non richiede l'appuntamento)",
+      `Sportello: ${sportello}. Orari (avviso ASL 5 del 30/09/2026): ${orari}`,
+      "Si compila il modulo «Richiesta di riconoscimento esenzione ticket per patologia cronica o invalidità»",
+    ],
+    documenti: [
+      "Per patologia cronica, copia di uno di questi: certificato recente con diagnosi e codice della patologia rilasciato da un medico specialista di una struttura pubblica; cartella clinica di una struttura ospedaliera pubblica; verbale di invalidità; cartella clinica di una struttura ospedaliera privata accreditata (previa valutazione del medico del Distretto); certificati delle Commissioni mediche degli Ospedali militari; certificazioni di istituzioni sanitarie pubbliche di Paesi dell'Unione europea",
+      "Per invalidità, copia del verbale rilasciato dalla pertinente commissione medica",
+      "Documento di riconoscimento del richiedente",
+      "Codice fiscale / tessera sanitaria delle persone interessate",
+      "Se serve delega: documento del delegato e del delegante. Con tutore o amministratore di sostegno: documento del tutore/amministratore e della persona tutelata. Per un minore: documenti di entrambi i genitori e delega del genitore non convivente",
+    ],
+    mail,
+    telefoni: [{ etichetta: `Anagrafe sanitaria ${sportello}`, numero: telefono }],
+    paginaUrl:
+      "https://www.asl5.liguria.it/PerilCittadino/Serviziterritoriali/CurePrimarieeAttivit%C3%A0Distrettuali/Attivit%C3%A0dianagrafesanitaria-Moduli.aspx",
+    paginaLabel: "Modulistica ASL 5 · Esenzione per patologia - invalidità",
+    manca:
+      "Le pagine ASL 5 non indicano i tempi di rilascio né una soglia di invalidità: il modulo parla di «invalidità» in generale.",
+    fonte: "ASL 5 Liguria · modulo «Esenzione per patologia - invalidità» e avviso all'utenza del 30/09/2026",
+  };
+}
+ESENZIONE_ASL.sarzana = asl5(
+  "Sarzana, via Paci 1",
+  "anagrafe.sz@asl5.liguria.it",
+  "0187 604318 · 0187 604332 · 0187 604704",
+  "dal lunedì al venerdì 8:00–12:00, martedì e giovedì 14:30–16:00",
+);
+ESENZIONE_ASL["la-spezia"] = asl5(
+  "La Spezia, via XXIV Maggio 141",
+  "anagrafe.sp@asl5.liguria.it",
+  "0187 533580",
+  "dal lunedì al venerdì 8:00–12:00, martedì e giovedì 14:00–16:00",
+);
