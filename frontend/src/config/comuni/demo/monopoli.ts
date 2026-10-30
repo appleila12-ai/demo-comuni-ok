@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso, ASL_BARI_DSS12 } from "../percorso";
 
 // Comune di Monopoli (BA) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -62,3 +63,5 @@ export const monopoli: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+monopoli.percorsoTerritorio = percorso(monopoli.puntiSupporto, [], [ASL_BARI_DSS12]);

@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso, ASL_BARI_DSS01 } from "../percorso";
 
 // Comune di Molfetta (BA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -58,3 +59,5 @@ export const molfetta: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+molfetta.percorsoTerritorio = percorso(molfetta.puntiSupporto, [], [ASL_BARI_DSS01]);

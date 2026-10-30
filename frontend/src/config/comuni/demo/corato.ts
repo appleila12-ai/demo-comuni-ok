@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso, ASL_BARI_DSS02 } from "../percorso";
 
 // Comune di Corato (BA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (15 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -58,3 +59,5 @@ export const corato: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+corato.percorsoTerritorio = percorso(corato.puntiSupporto, [], [ASL_BARI_DSS02]);
