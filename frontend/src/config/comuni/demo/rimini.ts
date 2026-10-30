@@ -1,4 +1,4 @@
-import type { ComuneConfig } from "../types";
+import type { ComuneConfig, PuntoSupporto } from "../types";
 import { INPS_TERZA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
@@ -57,7 +57,16 @@ export const rimini: ComuneConfig = {
 };
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (28/10/2026).
-rimini.percorsoTerritorio = percorso(rimini.puntiSupporto, [0]);
+// Passo 2: sede della Segreteria Invalidi Civili di Rimini, dalla pagina dell'AUSL Romagna (aggiornata il 19/05/2025, letta il 30/10/2026).
+// La pagina non indica telefono né orari, e descrive la domanda all'INPS con la procedura precedente: non riportata qui.
+const RIMINI_MEDICINA_LEGALE: PuntoSupporto = {
+  icon: "medkit-outline",
+  title: "AUSL Romagna · Segreteria Invalidi Civili di Rimini",
+  subtitle:
+    "Medicina Legale, Via Coriano 38, Rimini. Alla visita porta un documento di identità. Telefono e orari non sono indicati sulla pagina dell'AUSL: chiedili alla Medicina Legale",
+  action: { type: "web", value: "https://www.auslromagna.it/servizi/visita-accertamento-invalidita" },
+};
+rimini.percorsoTerritorio = percorso(rimini.puntiSupporto, [0], [RIMINI_MEDICINA_LEGALE]);
 
 // Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
 rimini.percorsoTerritorio = { ...rimini.percorsoTerritorio, 1: [INPS_TERZA_FASE] };
