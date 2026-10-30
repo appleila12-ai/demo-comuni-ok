@@ -521,3 +521,22 @@ const AUSL_ROMAGNA: SchedaEsenzioneAsl = {
   fonte: "AUSL della Romagna · pagina ufficiale sull'esenzione per patologia e risposta scritta dell'URP di Rimini del 30/10/2026",
 };
 for (const slug of ["rimini", "riccione", "ravenna", "faenza", "forli", "cesena"]) ESENZIONE_ASL[slug] = AUSL_ROMAGNA;
+
+// Gorizia: risposta scritta dell'Ufficio Anagrafe Sanitaria di Gorizia (30/10/2026), che completa la scheda ASUGI.
+ESENZIONE_ASL.gorizia = {
+  ...ESENZIONE_ASUGI,
+  intro:
+    "L'Ufficio Anagrafe Sanitaria di Gorizia (ASUGI) indica come chiedere la registrazione dell'esenzione per malattie croniche e invalidanti o per malattie rare.",
+  titoloPassi: "Come si presenta",
+  comeSiPresenta: [
+    "Allo sportello: puoi andare tu, una persona delegata oppure l'amministratore di sostegno o il tutore",
+    "Per e-mail, oppure per PEC",
+    "In ogni caso con la documentazione indicata sulla pagina ASUGI",
+  ],
+  telefoni: [{ etichetta: "Ufficio Anagrafe Sanitaria Gorizia", numero: "0481 592860" }],
+  paginaUrl: "https://asugi.sanita.fvg.it/it/servizi/dist_amm_esenz_malattie_croniche.html",
+  paginaLabel: "Pagina ASUGI: esenzione ticket per malattie croniche e invalidanti",
+  manca:
+    "L'ufficio non ha scritto l'indirizzo e-mail e la PEC, né se serve l'appuntamento o i tempi di rilascio: li trovi sulla pagina ASUGI o chiamando l'ufficio.",
+  fonte: "ASUGI · risposta scritta dell'Ufficio Anagrafe Sanitaria di Gorizia del 30/10/2026",
+};
