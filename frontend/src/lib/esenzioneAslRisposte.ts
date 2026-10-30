@@ -343,3 +343,27 @@ const USL_UMBRIA1: SchedaEsenzioneAsl = {
   fonte: "USL Umbria 1 · risposta scritta dell'URP aziendale del 29/10/2026",
 };
 for (const slug of ["perugia", "citta-di-castello", "gubbio"]) ESENZIONE_ASL[slug] = USL_UMBRIA1;
+
+// ASP Reggio Calabria: risposta scritta dell'URP (29/10/2026). Mail e PEC dei singoli Distretti non indicate.
+ESENZIONE_ASL["reggio-calabria"] = {
+  asl: "ASP Reggio Calabria",
+  intro:
+    "Secondo l'URP dell'ASP, la richiesta di esenzione per patologia cronica o malattia rara si presenta agli sportelli Scelta/Revoca ed Esenzioni del Poliambulatorio o del Distretto Sanitario competente per la tua residenza o il tuo domicilio sanitario. In alternativa si può inviare in digitale, per PEC o mail ordinaria, al tuo Distretto o Poliambulatorio.",
+  comeSiPresenta: [
+    "Di persona, agli sportelli Scelta/Revoca ed Esenzioni del tuo Poliambulatorio o Distretto: non serve prenotare, ma contano gli orari di apertura di ogni sportello (per diverse sedi, martedì, giovedì e venerdì mattina)",
+    "Da casa: per PEC o mail ordinaria ai contatti del tuo Distretto o Poliambulatorio, così eviti code e appuntamenti",
+    "Allo sportello l'attestato di esenzione viene rilasciato subito, dopo la verifica dei requisiti",
+  ],
+  documenti: [
+    "Copia del documento d'identità in corso di validità",
+    "Copia della tessera sanitaria (TS-CNS)",
+    "Certificazione medica di uno specialista di una struttura pubblica (o documentazione medico-legale) che attesti la patologia e indichi il codice",
+    "Modulo di richiesta firmato, con la dichiarazione sostitutiva (DPR 445/2000) di conformità all'originale dei documenti allegati",
+  ],
+  telefoni: [],
+  paginaUrl: "https://www.asprc.it",
+  paginaLabel: "Sito dell'ASP Reggio Calabria (sezione Modulistica)",
+  manca:
+    "L'ASP non ha indicato le mail e le PEC dei singoli Distretti, gli orari di ogni sportello né i tempi di rilascio per l'invio digitale: chiedili al tuo Distretto o nella sezione Modulistica del sito.",
+  fonte: "ASP Reggio Calabria · risposta scritta dell'URP del 29/10/2026",
+};
