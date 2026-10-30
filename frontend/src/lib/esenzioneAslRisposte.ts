@@ -303,6 +303,33 @@ const ASL_ROMA5: SchedaEsenzioneAsl = {
 };
 for (const slug of ["fonte-nuova", "guidonia-montecelio", "monterotondo", "tivoli"]) ESENZIONE_ASL[slug] = ASL_ROMA5;
 
+// ASL TO4: risposta scritta dell'URP (30/10/2026). Nessun dato oltre a quanto scritto.
+const ASL_TO4: SchedaEsenzioneAsl = {
+  asl: "ASL TO4",
+  intro:
+    "Secondo l'URP dell'ASL TO4, le esenzioni per patologia e i relativi rinnovi vengono presi in carico per e-mail dal Distretto sanitario di riferimento, allegando la documentazione.",
+  comeSiPresenta: [
+    "Per e-mail al Distretto sanitario di riferimento, allegando i documenti qui sotto",
+    "Oppure di persona, su appuntamento, al tuo Distretto: l'accesso è dal lunedì al venerdì, dalle 10 alle 12",
+    "Per l'appuntamento telefona al numero unico aziendale, dal lunedì al venerdì dalle 13 alle 15",
+  ],
+  documenti: [
+    "Documentazione specialistica recente (non più vecchia di un anno), rilasciata da una struttura pubblica, che attesta la patologia, oppure certificazione rilasciata dall'INPS",
+    "Documento d'identità",
+    "Codice fiscale",
+    "Recapito telefonico",
+  ],
+  importante:
+    "Nel Distretto di Ciriè-Lanzo le esenzioni sono gestite dalla Medicina Legale, solo per e-mail (certificatimedleg@aslto4.piemonte.it): lì non si va allo sportello.",
+  telefoni: [{ etichetta: "Appuntamenti · numero unico ASL TO4 (lun–ven 13–15)", numero: "011 9176012" }],
+  paginaUrl: "https://www.aslto4.piemonte.it/pagamento-ticket-ed-esenzioni-ticket-visite-ed-esami-specialistici",
+  paginaLabel: "Pagina dell'ASL TO4 su ticket ed esenzioni (con i contatti dei Distretti)",
+  manca:
+    "L'ASL non ha indicato il modulo né i tempi di rilascio. Gli indirizzi e-mail dei singoli Distretti li trovi sulla pagina dell'ASL qui sotto.",
+  fonte: "ASL TO4 · risposta scritta dell'URP del 30/10/2026",
+};
+for (const slug of ["settimo-torinese"]) ESENZIONE_ASL[slug] = ASL_TO4;
+
 // ASP Agrigento: risposta scritta del Coordinatore della Casa della Comunità di Agrigento (29/10/2026).
 // Mail e orari valgono per Agrigento; la regola generale è quella dichiarata dal Distretto.
 ESENZIONE_ASL.agrigento = {
