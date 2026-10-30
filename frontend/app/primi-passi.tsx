@@ -54,6 +54,15 @@ function buildPrimiPassi() {
     color: topics.patronato,
   },
   {
+    id: "amministratore",
+    icon: "hand-left-outline" as const,
+    title: "Amministratore di sostegno",
+    body:
+      "Se tu o un tuo familiare non riuscite a occuparvi da soli di pratiche, firme o spese per una malattia o una menomazione, il giudice può nominare un amministratore di sostegno. Qui trovi chi può chiederlo e come si fa.",
+    route: "/amministratore-sostegno" as const,
+    color: topics.patronato,
+  },
+  {
     id: "malattia",
     icon: "calendar-outline" as const,
     title: "Congedo per malattia",
