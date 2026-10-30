@@ -25,6 +25,7 @@
 // Tredicesima raccolta: 20/10/2026, misure regionali di Umbria, Sardegna, Marche e Calabria.
 // Quattordicesima raccolta: 20/10/2026, misure dei Comuni di Firenze, Bari, Venezia e Padova.
 // Quindicesima raccolta: 20/10/2026 (sera), misure dei Comuni di Perugia, Ancona, Rimini e Salerno; controllo delle voci già presenti.
+// Raccolta 30/10/2026: Lombardia (Misura Sostegno, barriere architettoniche, Dopo di Noi), Piemonte (Buono domiciliarità, barriere architettoniche), Toscana (esenzione bollo, mobilità LR 81/2017, vita indipendente).
 
 import { comune } from "@/src/config/comune";
 
@@ -452,8 +453,46 @@ export const BONUS: Bonus[] = [
       label: "Regione Lombardia · Misura Sostegno (ex B1)",
       url: "https://www.regione.lombardia.it/politiche-sociali-e-abitative/disabilita/politiche-e-misure-per-la-disabilita/sostegno-per-la-disabilit--gravissima-misura-sostegno",
     },
-    verificatoIl: "08/10/2026",
-    nota: "Gli importi vengono dalla pagina di Lombardia Facile dedicata alla DGR 6320 del 15/06/2026; la pagina della Regione non scrive gli importi.",
+    verificatoIl: "30/10/2026",
+    nota: "Il 31 ottobre 2026 è un sabato: se devi presentare la prima domanda, non aspettare l'ultimo giorno. Chi rientra tra gli ex \"gravi\" (ex Misura B2) ha un ISEE sociosanitario fino a 25.000 euro (ISEE ordinario fino a 40.000 euro per i minorenni) e presenta la domanda all'Ambito territoriale sociale, con date proprie. Gli importi vengono dalla pagina di Lombardia Facile dedicata alla DGR 6320 del 15/06/2026; la pagina della Regione non scrive gli importi.",
+  },
+  {
+    id: "lombardia-barriere-architettoniche-2026",
+    regione: "Lombardia",
+    titolo: "Contributi per eliminare le barriere architettoniche in casa (Legge 13/1989)",
+    perChi:
+      "Persone con disabilità che devono eliminare barriere architettoniche nell'abitazione in cui vivono. I requisiti precisi sono quelli del bando del tuo Comune.",
+    cosa:
+      "Contributo per i lavori di eliminazione delle barriere architettoniche. La Regione ha stanziato 1,1 milioni di euro per il fabbisogno 2026 (deliberazione n. 6943 del 19 ottobre 2026) e ha trasferito i fondi ai Comuni. La pagina non scrive l'importo per persona.",
+    stato: "chiuso",
+    quando:
+      "Le domande per il 2026 si presentavano al Comune entro febbraio 2026. I fondi sono già stati assegnati ai Comuni.",
+    comeSiChiede:
+      "Si presenta la domanda al Comune di residenza. Il contributo viene pagato dopo la fine dei lavori, con le fatture quietanzate. Se hai già presentato la domanda, chiedi al Comune a che punto è.",
+    fonte: {
+      label: "Regione Lombardia · Contributi per l'eliminazione delle barriere architettoniche",
+      url: "https://www.regione.lombardia.it/politiche-sociali-e-abitative/disabilita/barriere-architettoniche/contributi-eliminazione-barriere-architettoniche",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Per la prossima finestra chiedi al tuo Comune: non è scritta una data sulla pagina della Regione.",
+  },
+  {
+    id: "lombardia-dopo-di-noi",
+    regione: "Lombardia",
+    titolo: "Dopo di Noi: percorso per chi non ha più il sostegno della famiglia",
+    perChi:
+      "Persone con disabilità grave (art. 3, comma 3, Legge 104/1992), non dovuta all'invecchiamento, che non hanno più il sostegno della famiglia o rischiano di perderlo.",
+    cosa:
+      "Un Progetto individuale della durata di due anni, costruito dopo una valutazione multidimensionale. La pagina non scrive importi.",
+    stato: "attivo",
+    comeSiChiede:
+      "Ci si rivolge all'Ambito territoriale o al Comune di residenza, che avvia la valutazione multidimensionale e il Progetto individuale.",
+    fonte: {
+      label: "Lombardia Facile · Dopo di Noi",
+      url: "https://www.lombardiafacile.regione.lombardia.it/wps/portal/site/Lombardia-Facile/agevolazioni-contributi-servizi/dopo-di-noi",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Non abbiamo trovato un avviso con scadenza per il 2026: chiedi all'Ambito se ci sono fondi e posti disponibili.",
   },
 
   // ------------------------------------------------------------ COMUNE DI GENOVA
@@ -801,8 +840,48 @@ export const BONUS: Bonus[] = [
       label: "Regione Toscana · Disabilità e grave limitazione dell'autonomia: finanziamenti per vita indipendente e inclusione",
       url: "https://www.regione.toscana.it/it/-/disabilit%C3%A0-e-grave-limitazione-dell-autonomia-finanziamenti-per-sostenere-vita-indipendente-e-inclusione",
     },
-    verificatoIl: "21/10/2026",
-    nota: "Pagina della Regione aggiornata il 22/06/2026. Importo per persona, requisiti ISEE e tempi vanno chiesti alla Società della Salute.",
+    verificatoIl: "30/10/2026",
+    nota: "Pagina della Regione aggiornata il 22/06/2026. Il 16/06/2026 la Regione ha impegnato altri 4,8 milioni di euro per ridurre le liste d'attesa (decreto n. 13481). Importo per persona, requisiti ISEE e tempi vanno chiesti alla Società della Salute. Domande e informazioni sul bando: vitaindipendentefse@regione.toscana.it.",
+  },
+  {
+    id: "toscana-esenzione-bollo-disabilita",
+    regione: "Toscana",
+    titolo: "Esenzione dal bollo auto per persone con disabilità",
+    perChi:
+      "Persone con ridotte o impedite capacità motorie permanenti (solo per veicoli adattati); con handicap grave (art. 3, comma 3, Legge 104/1992) o invalidità grave, solo se dai verbali risulta anche la grave limitazione della capacità di deambulazione; ciechi e ipovedenti gravi; sordi; persone con handicap psichico o mentale che ha dato diritto all'indennità di accompagnamento. Per i maggiorenni il verbale deve essere permanente, senza revisione, rilasciato dalle Commissioni mediche pubbliche: non valgono i certificati del medico di base o di specialisti.",
+    cosa:
+      "Esenzione dalla tassa automobilistica per un solo veicolo, intestato alla persona con disabilità o a chi la ha fiscalmente a carico. Limiti: 2.000 cc a benzina o ibrido, 2.800 cc a gasolio, 150 kW se elettrico. Se la persona con disabilità non è l'intestataria del veicolo, deve essere fiscalmente a carico: reddito complessivo annuo non superiore a 2.840,51 euro (4.000 euro per i figli fino a 24 anni). L'ISEE non è ammesso.",
+    stato: "attivo",
+    quando:
+      "Nessuna scadenza fissa. La domanda va presentata entro 180 giorni dalla scadenza del termine di pagamento del bollo del periodo in corso. L'esenzione vale dal periodo in corso e non è retroattiva.",
+    comeSiChiede:
+      "Sul portale regionale www.regione.toscana.it/bolloauto con SPID, CIE o CNS, oppure per PEC a regionetoscana@postacert.toscana.it o con raccomandata a Regione Toscana, Settore Politiche Fiscali e Riscossione, Via di Novoli 26, 50127 Firenze. Servono il modulo (E1 se il proprietario è la persona con disabilità, E2 se è a carico di altri), documento d'identità, libretto di circolazione, verbali delle Commissioni mediche, patente speciale se il veicolo è adattato e, se serve, la dichiarazione dei redditi. File in PDF fino a 3 MB. La Regione risponde entro 120 giorni e, finché non risponde, il bollo è sospeso.",
+    fonte: {
+      label: "Regione Toscana · Esenzioni per disabilità e minorenni trapiantati",
+      url: "https://www.regione.toscana.it/-/esenzioni_per_disabilit%C3%A0_e_minorenni_trapiantati",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Pagina della Regione aggiornata il 09/02/2026. Se cambiano i requisiti, scade il verbale o vendi il veicolo, devi avvisare la Regione entro 60 giorni, altrimenti ci sono sanzioni.",
+  },
+  {
+    id: "toscana-mobilita-autonomia-lr-81-2017",
+    regione: "Toscana",
+    titolo: "Contributi per la mobilità individuale e l'autonomia personale (L.R. 81/2017)",
+    perChi:
+      "Persone con disabilità oppure genitori o componenti del nucleo familiare della persona con disabilità, per le spese già sostenute.",
+    cosa:
+      "Contributo economico a copertura delle spese sostenute. L'ultimo avviso riguardava le spese del 2025 (e, per chi non aveva presentato domanda, quelle del 2023). La pagina non scrive gli importi né quali spese sono ammesse.",
+    stato: "chiuso",
+    quando:
+      "Ultimo avviso: domande dal 7 aprile al 7 giugno 2026. Il prossimo avviso, per le spese del 2026, non è ancora stato pubblicato.",
+    comeSiChiede:
+      "All'Azienda USL Toscana Centro, Centro Regionale per l'Accessibilità: per PEC a centroregionale.accessibilita@postacert.toscana.it oppure a mano all'Ufficio Protocollo (Ospedale Santa Maria Nuova, Firenze, lunedì–venerdì 9–13). Conserva le fatture delle spese di quest'anno.",
+    fonte: {
+      label: "Regione Toscana · Contributi per mobilità individuale e autonomia delle persone con disabilità",
+      url: "https://www.regione.toscana.it/-/contributi-per-favorire-la-mobilit%C3%A0-individuale-e-l-autonomia-delle-persone-con-disabilit%C3%A0",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Pagina della Regione aggiornata il 16/04/2026. Avviso gestito dall'AUSL Toscana Centro (delibera n. 345 del 2 aprile 2026). Per le informazioni: toscana-accessibile.it.",
   },
 
   // ------------------------------------------------------------------- PUGLIA
@@ -856,20 +935,40 @@ export const BONUS: Bonus[] = [
     regione: "Piemonte",
     titolo: "Buono domiciliarità 2026-2027: 700 euro al mese per l'assistenza familiare",
     perChi:
-      "Persone con disabilità non autosufficienti (o over 65 non autosufficienti) residenti in Piemonte, già valutate dall'UMVD o dall'UVG con punteggio sociale non inferiore a 7. ISEE ordinario o sociosanitario in corso di validità non superiore a 40.000 euro; non è ammesso l'ISEE corrente o con anomalie.",
+      "Persone con disabilità non autosufficienti (o over 65 non autosufficienti) residenti in Piemonte, già valutate dall'UMVD o dall'UVG con punteggio sanitario non inferiore a 5 e punteggio sociale non inferiore a 7. ISEE ordinario o sociosanitario in corso di validità non superiore a 40.000 euro; non è ammesso l'ISEE corrente o con anomalie. Serve un assistente familiare con contratto già in corso alla data della domanda (non può essere il coniuge né un parente o affine fino al secondo grado).",
     cosa:
-      "Contributo di 700 euro al mese per 12 mesi, che può arrivare a 24 in base alle domande ammissibili, da spendere per un servizio di assistenza familiare: contratto di lavoro domestico (almeno livello CS), contratto con cooperativa o agenzia, o incarico a un assistente libero professionista. Servono almeno 30 giorni di servizio e 16 ore a settimana documentate. Erogazione trimestrale.",
+      "Contributo di 700 euro al mese per 12 mesi, che può arrivare a 24 in base alle domande ammissibili, da spendere per un servizio di assistenza familiare: contratto di lavoro domestico (almeno livello CS), contratto con cooperativa o agenzia, o incarico a un assistente libero professionista. Servono 16 ore di assistenza a settimana. Il contratto di lavoro subordinato deve durare almeno 30 giorni. Erogazione trimestrale, dopo la rendicontazione. Il contributo parte dal primo giorno del mese successivo alla comunicazione di assegnazione.",
     stato: "aperto",
     quando:
       "Domande dalle 0:00 del 14 settembre 2026 alle 23:59 del 2 novembre 2026. Assegnato fino a esaurimento delle risorse: prima il punteggio sociale più alto, poi l'ISEE più basso, poi l'ordine di presentazione.",
     comeSiChiede:
       "Online su piemontetu.it o sceltasociale.it con SPID, CIE o CNS. La domanda la presenta un delegato (genitore, tutore, coniuge, parente di primo grado, amministratore di sostegno) che non può essere l'assistente. Allegati obbligatori: verbale di valutazione UVG/UMVD (o lettera con il punteggio) e contratto o incarico: senza, la domanda non è ammessa.",
     fonte: {
-      label: "Regione Piemonte · Scelta sociale, Buono domiciliarità 2026-2027",
-      url: "https://www.regione.piemonte.it/web/temi/diritti-politiche-sociali/politiche-sociali/scelta-sociale-buono-per-domiciliarita-2026-2027",
+      label: "Regione Piemonte · Avviso Scelta sociale, Buono domiciliarità 2026",
+      url: "https://bandi.regione.piemonte.it/system/files/All.1_AVVISO_DOM_2026.pdf",
     },
-    verificatoIl: "14/10/2026",
-    nota: "Non è compatibile con alcune misure, tra cui gli assegni di cura e l'accoglienza definitiva in strutture residenziali: leggi l'avviso. La pagina non dice quanti Buoni ci sono. Scade fra pochi giorni.",
+    verificatoIl: "30/10/2026",
+    nota: "Il termine è lunedì 2 novembre 2026 alle 23:59: non aspettare l'ultimo giorno. Non è compatibile con alcune misure, tra cui gli assegni di cura, i contributi del Fondo caregiver, Home Care Premium e l'accoglienza definitiva in strutture residenziali: leggi l'avviso. Le risorse totali sono 20.193.600 euro, non per persona. Per informazioni: sceltasociale@regione.piemonte.it o numero verde 800 333 444 (lunedì–venerdì, 8–18). Attenzione: la vecchia pagina \"Scelta sociale - Buono per la domiciliarità\" mostra ancora i dati del 2023, che non valgono più.",
+  },
+  {
+    id: "piemonte-barriere-architettoniche",
+    regione: "Piemonte",
+    titolo: "Contributi per eliminare le barriere architettoniche in casa (Legge 13/1989)",
+    perChi:
+      "Persone con invalidità al 100% che devono eliminare barriere architettoniche nella casa in cui vivono, per lavori non ancora iniziati.",
+    cosa:
+      "Contributo per i lavori di eliminazione delle barriere. L'erogazione avviene solo dopo che lo Stato ha trasferito i fondi alla Regione, a lavori finiti e con le fatture quietanzate. La domanda non finanziata resta valida negli anni successivi. La pagina non scrive l'importo massimo né i fondi del 2026.",
+    stato: "attivo",
+    quando:
+      "La domanda si presenta in qualsiasi giorno dell'anno. Il Comune mette in ordine le domande arrivate entro il 1° marzo e comunica alla Regione il fabbisogno entro il 31 marzo.",
+    comeSiChiede:
+      "Al Comune dove si trova l'immobile (a Torino, ad ATC Piemonte Centrale), prima di iniziare i lavori. Servono: certificato di invalidità al 100%, certificato medico, preventivo di spesa dettagliato, documento d'identità e dichiarazione di residenza. Informazioni: ediliziasociale@regione.piemonte.it, telefono 011 432 3888.",
+    fonte: {
+      label: "Regione Piemonte · Eliminazione delle barriere architettoniche negli edifici privati",
+      url: "https://www.regione.piemonte.it/web/temi/diritti-politiche-sociali/casa/eliminazione-delle-barriere-architettoniche-negli-edifici-privati",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Chiedi al Comune se ci sono fondi per il 2026: la pagina della Regione non lo scrive.",
   },
   {
     id: "piemonte-misure-disabilita",
