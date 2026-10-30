@@ -2009,6 +2009,26 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "30/10/2026",
   },
+  // --- Raccolta 30/10/2026: Molise (misura regionale valida per tutta la Regione) ---
+  {
+    id: "molise-caregiver-2026-2027",
+    regione: "Molise",
+    titolo: "Caregiver familiare: contributo di 5.000 euro (annualità 2026 e 2027)",
+    perChi:
+      "Caregiver familiare disoccupato o inoccupato che assiste in modo continuativo una persona con disabilità o non autosufficiente, riconosciuta bisognosa di assistenza globale e continua ai sensi della legge 104/1992 o titolare di indennità di accompagnamento. L'ISEE socio-sanitario deve essere pari o inferiore a 50.000 euro, elevato a 65.000 euro per le famiglie con un minore convivente con disabilità. Lo status di caregiver viene riconosciuto dall'Ambito Territoriale Sociale (ATS), che rilascia la «Card del Caregiver» (L.R. 13/2025).",
+    cosa: "Contributo di 5.000 euro per il caregiver familiare. La Regione ha stanziato 800.000 euro in totale.",
+    stato: "da-verificare",
+    quando:
+      "Sulla pagina della Regione l'invio delle domande è indicato dal 1 ottobre 2026, con scadenza 30 maggio 2027. L'avviso rivolto ai caregiver lo pubblica ogni ATS: per il 2026 entro ottobre, per il 2027 entro maggio.",
+    comeSiChiede:
+      "Si risponde all'avviso pubblicato dal proprio Ambito Territoriale Sociale, che raccoglie anche le adesioni. Per sapere se l'avviso del tuo Ambito è già uscito, rivolgiti all'ATS.",
+    fonte: {
+      label: "Regione Molise · Misure per il riconoscimento e il sostegno del Caregiver familiare, annualità 2026 e 2027",
+      url: "https://prfesrfse2127.regione.molise.it/bandi-avvisi/misure-per-il-riconoscimento-e-il-sostegno-del-caregiver-familiare-annualita-2026-e-2027/",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "La pagina regionale non dice se l'avviso del singolo Ambito sia già aperto: controlla sul sito del tuo ATS.",
+  },
 ];
 
 /** Misure che valgono per il Comune attivo, prima quelle del suo territorio. */
