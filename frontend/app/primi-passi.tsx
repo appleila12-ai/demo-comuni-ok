@@ -35,6 +35,25 @@ function buildPrimiPassi() {
     color: topics.salute,
   },
   {
+    id: "ausili",
+    icon: "accessibility-outline" as const,
+    title: "Ausili e protesi",
+    body:
+      "Carrozzina, deambulatore, protesi, ortesi: se ne hai diritto li fornisce il Servizio sanitario, su prescrizione dello specialista e con l'autorizzazione dell'ASL. Qui trovi chi ha diritto e come funziona.",
+    route: "/ausili" as const,
+    color: topics.salute,
+  },
+  {
+    id: "trasporto",
+    icon: "car-outline" as const,
+    title: "Trasporto per visite e terapie",
+    body: comune.trasporto,
+    ...(comune.telefono
+      ? { link: { label: `Chiama ${comune.ente} · ${comune.telefono}`, url: `tel:${comune.telefono.replace(/\s+/g, "")}` } }
+      : { link: { label: "Sito dei servizi sociali", url: comune.sitoWeb } }),
+    color: topics.patronato,
+  },
+  {
     id: "malattia",
     icon: "calendar-outline" as const,
     title: "Congedo per malattia",
