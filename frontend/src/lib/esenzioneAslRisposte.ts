@@ -328,3 +328,18 @@ ESENZIONE_ASL.agrigento = {
     "L'ASP non ha indicato i tempi di rilascio né il modulo. Gli orari indicati sono quelli dello sportello di Agrigento; per altri sportelli rivolgiti al tuo Distretto.",
   fonte: "ASP Agrigento · risposta scritta del Coordinatore della Casa della Comunità di Agrigento, 29/10/2026",
 };
+
+// USL Umbria 1: risposta scritta dell'URP aziendale (29/10/2026).
+const USL_UMBRIA1: SchedaEsenzioneAsl = {
+  asl: "USL Umbria 1",
+  intro:
+    "Secondo l'URP della USL Umbria 1, per chiedere l'esenzione dal ticket per patologia cronica o malattia rara ci si rivolge agli Sportelli Anagrafe Assistibili del Distretto di appartenenza.",
+  comeSiPresenta: ["Vai allo Sportello Anagrafe Assistibili del Distretto in cui rientri"],
+  telefoni: [],
+  paginaUrl: "https://www.uslumbria1.it/servizio/anagrafe-assistibili/",
+  paginaLabel: "Pagina della USL Umbria 1 sull'Anagrafe Assistibili",
+  manca:
+    "L'URP non ha indicato i documenti, gli orari e le sedi degli sportelli, il modulo, l'appuntamento né i tempi di rilascio: consulta la pagina della USL o chiedi allo sportello.",
+  fonte: "USL Umbria 1 · risposta scritta dell'URP aziendale del 29/10/2026",
+};
+for (const slug of ["perugia", "citta-di-castello", "gubbio"]) ESENZIONE_ASL[slug] = USL_UMBRIA1;
