@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_PRIMA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Firenze (FI) — VERSIONE DIMOSTRATIVA (completata il 14 ottobre 2026).
@@ -63,3 +64,4 @@ export const firenze: ComuneConfig = {
 
 // Passi 4 e 5: voci già in scheda con fonte. Passo 2 senza voci: la pagina della Medicina legale non è leggibile o non è stata verificata (28/10/2026); chiesta conferma all'azienda sanitaria.
 firenze.percorsoTerritorio = percorso(firenze.puntiSupporto, [0]);
+firenze.percorsoTerritorio = { ...firenze.percorsoTerritorio, 1: [INPS_PRIMA_FASE] };
