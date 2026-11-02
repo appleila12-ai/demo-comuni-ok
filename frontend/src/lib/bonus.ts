@@ -2187,13 +2187,13 @@ export const BONUS: Bonus[] = [
     stato: "attivo",
     quando: "Misura permanente. Nessuna scadenza indicata.",
     comeSiChiede:
-      "La richiesta è indirizzata alla Regione Campania, Direzione Generale Risorse Finanziarie, UOS Gestione amministrativa e contabile delle tasse e dei tributi regionali (Centro Direzionale Isola C5, 80143 Napoli). Si consegna alle Unità territoriali ACI, agli Automobile Club, alle Delegazioni ACI o alle agenzie convenzionate. Serve la carta di circolazione e, se il veicolo è intestato a un familiare, la documentazione o l'autocertificazione del carico fiscale. La targa va indicata nella domanda.",
+      "La richiesta è indirizzata alla Regione Campania, Direzione Generale Risorse Finanziarie, UOS Gestione amministrativa e contabile delle tasse e dei tributi regionali (Centro Direzionale Isola C5, 80143 Napoli). Si consegna alle Unità territoriali ACI, agli Automobile Club, alle Delegazioni ACI o alle agenzie convenzionate (l'elenco dei punti di servizio abilitati è sulla pagina). Serve la carta di circolazione e, se il veicolo è intestato a un familiare, la documentazione o l'autocertificazione del carico fiscale. La targa va indicata nella domanda. Sulla stessa pagina trovi i modelli: istanza di esenzione, autocertificazione del disabile e autocertificazione del disabile a carico. Il procedimento si conclude entro 120 giorni. L'esito (accolta o respinta) viene comunicato tramite SEND, di norma alla PEC, con eventuale avviso su App IO; se non hai recapiti digitali arriva con raccomandata A/R.",
     fonte: {
       label: "Regione Campania · Tassa automobilistica (con tabella ACI delle esenzioni)",
       url: "https://entrate.regione.campania.it/tassa-automobilistica-info",
     },
     verificatoIl: "02/11/2026",
-    nota: "I documenti cambiano con la categoria: verbale di handicap grave, certificazioni pubbliche di cecità o sordità, patente speciale per le capacità motorie ridotte. Controlla l'elenco sulla pagina. I limiti per alimentazioni diverse da benzina e gasolio non sono nelle fonti lette.",
+    nota: "I documenti cambiano con la categoria: verbale di handicap grave, certificazioni pubbliche di cecità o sordità, patente speciale per le capacità motorie ridotte. Controlla l'elenco sulla pagina. I limiti per alimentazioni diverse da benzina e gasolio non sono nelle fonti lette. La pagina non indica da quando decorre l'esenzione né come si rinnova, e non riporta la data di aggiornamento: per questi punti scrivi alla Regione (tributiregionali@regione.campania.it, PEC tributiregionali@pec.regione.campania.it, tel. 081 796 61 11 o 081 796 91 11).",
   },
 
   // ------------------------------------------------------------------ MOLISE
