@@ -121,14 +121,14 @@ export const INPS_TERZA_FASE: PuntoSupporto = {
 
 // Passo 1 nelle 9 province della prima fase della sperimentazione INPS (Brescia, Catanzaro, Firenze,
 // Forlì-Cesena, Frosinone, Perugia, Salerno, Sassari, Trieste).
-// Fonti: INPS, messaggio n. 4014 del 28/11/2024 (la richiesta parte unicamente con il nuovo certificato
-// medico introduttivo) e messaggio n. 1377 del 23/04/2026 (eccezione per chi ha compiuto 70 anni).
+// Fonte: INPS, messaggio n. 4014 del 28/11/2024 (la richiesta parte unicamente con il nuovo certificato
+// medico introduttivo). La regola per chi ha compiuto 70 anni NON è inserita: il messaggio citato
+// (1377/2026) non è stato verificato e risulta un messaggio successivo (1750 del 27/05/2026), da leggere su inps.it.
 export const INPS_PRIMA_FASE: PuntoSupporto = {
   icon: "document-text-outline",
   title: "Certificato medico introduttivo (INPS)",
   subtitle:
-    "Il medico di famiglia o un altro medico abilitato compila e invia all'INPS il certificato medico introduttivo. Nella tua provincia la nuova procedura è già attiva: la richiesta parte unicamente con il certificato, senza una domanda separata. "
-    + "Se hai compiuto 70 anni e hai almeno una patologia cronica con le condizioni cliniche descritte dall'INPS (messaggio 1377 del 23/04/2026), dal 1° giugno 2026 serve anche la domanda amministrativa, da presentare entro 90 giorni dal rilascio del certificato",
+    "Il medico di famiglia o un altro medico abilitato compila e invia all'INPS il certificato medico introduttivo. Nella tua provincia la nuova procedura è già attiva: la richiesta parte unicamente con il certificato, senza una domanda separata. Alcuni casi seguono regole diverse: controlla la pagina INPS o chiedi a un patronato",
   action: {
     type: "web",
     value:
