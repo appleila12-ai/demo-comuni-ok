@@ -698,3 +698,59 @@ ESENZIONE_ASL["cava-de-tirreni"] = aslSalerno("Cava de' Tirreni/Costa d'Amalfi",
 ESENZIONE_ASL.eboli = aslSalerno("Eboli/Buccino", "ds64.ticket@aslsalerno.it");
 ESENZIONE_ASL.battipaglia = aslSalerno("Battipaglia", "ds65.ticket@aslsalerno.it");
 ESENZIONE_ASL.salerno = aslSalerno("Salerno", "ds66.ticket@aslsalerno.it");
+
+// AUSL Ferrara: risposta scritta dell'URP del 02/11/2026, che riporta il testo della pagina ufficiale.
+ESENZIONE_ASL.ferrara = {
+  asl: "AUSL Ferrara",
+  intro:
+    "Hanno diritto all'esenzione per patologia i cittadini con malattie croniche tra quelle previste dal DPCM 12 gennaio 2017 (Nuovi LEA): cittadini italiani, comunitari e stranieri iscritti al Servizio sanitario nazionale, e cittadini comunitari con tessera sanitaria (TEAM).",
+  titoloPassi: "Come si chiede",
+  comeSiPresenta: [
+    "Agli Sportelli Unici CUP: la persona interessata, o chi ha una delega, presenta la certificazione della patologia, rilasciata su apposito modulo da uno specialista di una struttura pubblica",
+    "Il diritto all'esenzione risulta sul documento di iscrizione al Servizio sanitario regionale che rilasciano gli Sportelli Unici CUP. L'AUSL registra l'esenzione e la comunica al tuo medico di famiglia o pediatra",
+    "Malattia rara: ti rivolgi allo Sportello Unico CUP dell'AUSL di residenza con il certificato di diagnosi rilasciato da uno dei Centri accreditati della Rete nazionale malattie rare",
+  ],
+  importante:
+    "Per usare l'esenzione, il medico di famiglia, il pediatra o lo specialista deve scrivere il codice della patologia nell'apposito campo dell'impegnativa. Senza il codice l'esenzione non può essere riconosciuta.",
+  telefoni: [],
+  paginaUrl: "https://www.ausl.fe.it/come-fare-per/esenzioni-ticket",
+  paginaLabel: "Esenzioni ticket · AUSL Ferrara",
+  manca:
+    "L'AUSL non ha indicato indirizzi e orari degli Sportelli Unici CUP, l'elenco dei documenti, se serve l'appuntamento, se si può inviare per mail né i tempi di rilascio: chiedili allo Sportello Unico CUP.",
+  fonte: "AUSL Ferrara · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale sulle esenzioni ticket",
+};
+
+// ASP Catanzaro: risposta scritta dell'URP del 02/11/2026 (distretti citati: Catanzaro e Lamezia Terme).
+ESENZIONE_ASL.catanzaro = {
+  asl: "ASP Catanzaro",
+  intro:
+    "La richiesta di esenzione per patologia si presenta agli sportelli del Servizio Cure Primarie – Assistenza Integrativa ed Esenzione Ticket dell'ASP di Catanzaro, oppure nei distretti sanitari territoriali, come quelli di Lamezia Terme e di Catanzaro.",
+  titoloPassi: "Dove si presenta",
+  comeSiPresenta: [
+    "Agli sportelli del Servizio Cure Primarie – Assistenza Integrativa ed Esenzione Ticket, all'ASP o nel distretto sanitario territoriale (per esempio Lamezia Terme o Catanzaro)",
+  ],
+  documenti: [
+    "Certificato medico che attesti la patologia cronica o rara, rilasciato da uno specialista di una struttura pubblica",
+    "Tessera sanitaria (TS-CNS) in corso di validità",
+    "Documento di identità valido",
+    "Se la richiesta è collegata a un'invalidità riconosciuta: il verbale di invalidità civile rilasciato dalla commissione medica di prima istanza",
+  ],
+  telefoni: [],
+  manca:
+    "L'ASP non ha indicato indirizzi e orari degli sportelli, se serve l'appuntamento, se si può inviare per mail o PEC né i tempi di rilascio: chiedili all'URP dell'ASP o al tuo distretto.",
+  fonte: "ASP Catanzaro · risposta scritta dell'URP del 02/11/2026",
+};
+ESENZIONE_ASL["lamezia-terme"] = { ...ESENZIONE_ASL.catanzaro };
+
+// ASST Lecco: l'Ufficio di Pubblica Tutela ha indicato solo la pagina ufficiale con l'elenco delle esenzioni (02/11/2026).
+ESENZIONE_ASL.lecco = {
+  asl: "ASST Lecco",
+  intro:
+    "L'ASST Lecco ha una pagina ufficiale con l'elenco delle esenzioni dell'azienda sanitaria: la trovi con il pulsante qui sotto.",
+  telefoni: [],
+  paginaUrl: "https://www.asst-lecco.it/esenzioni/",
+  paginaLabel: "Esenzioni · ASST Lecco",
+  manca:
+    "La risposta ricevuta dall'ASST non indica come si presenta la richiesta, i documenti, l'appuntamento né i tempi: consulta la pagina ufficiale o chiedi all'ASST.",
+  fonte: "ASST Lecco · risposta scritta dell'Ufficio di Pubblica Tutela del 02/11/2026",
+};
