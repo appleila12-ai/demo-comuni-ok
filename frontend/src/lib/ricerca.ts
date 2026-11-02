@@ -34,6 +34,28 @@ export const ESEMPI = [
   "Prenotare una visita",
 ];
 
+/**
+ * Gli strumenti della Home. Se la ricerca non trova nulla vengono mostrati tutti,
+ * così nessuna funzione resta irraggiungibile. Tenere allineato con l'elenco in app/index.tsx.
+ */
+export const STRUMENTI: { titolo: string; route: string }[] = [
+  { titolo: "Progetto di Vita", route: "/progetto" },
+  { titolo: "La mia pratica", route: "/tracker" },
+  { titolo: "Aiuti e contatti", route: "/territorio" },
+  { titolo: "I miei diritti", route: "/diritti" },
+  { titolo: "Lettere pronte", route: "/lettere" },
+  { titolo: "Reclamo liste d'attesa", route: "/reclamo-attese" },
+  { titolo: "Le mie scadenze", route: "/scadenze" },
+  { titolo: "Il mio cassetto", route: "/cassetto" },
+  { titolo: "Salute vicino a te", route: "/salute" },
+  { titolo: "Associazioni e sport", route: "/associazioni" },
+  { titolo: "I miei salvati", route: "/salvati" },
+  { titolo: "Domande frequenti", route: "/faq" },
+  { titolo: "Glossario", route: "/faq?sezione=glossario" },
+  { titolo: "Lavoro e disabilità", route: "/lavoro" },
+  { titolo: "Importi aggiornati", route: "/importi" },
+];
+
 const RISPOSTE: Risposta[] = [
   // --- Riconoscimento ---
   { id: "invalidita", titolo: "Chiedere l'invalidità civile e la 104", testo: "Si parte dal medico di famiglia, che invia online all'INPS il certificato introduttivo. Poi arriva la convocazione a visita.", route: "/percorso", bottone: "Il percorso passo passo", chiavi: ["invalidita", "invalidità", "domanda invalidita", "riconoscimento", "richiedere la 104", "richiesta 104", "ottenere la 104", "come si ottiene la 104", "domanda 104", "richiedere", "ottenere", "certificato medico", "certificato introduttivo", "legge 104", "104", "handicap", "percentuale", "visita inps", "commissione"] },
@@ -87,6 +109,7 @@ const RISPOSTE: Risposta[] = [
   { id: "hub", titolo: "Orientarsi insieme: tutto il percorso", testo: "Il percorso dalla diagnosi al Progetto di Vita, con tutte le sezioni dell'app in un posto solo.", route: "/hub", bottone: "Entra in TutelApp", chiavi: ["orientarsi", "orientarsi insieme", "tutto il percorso", "dal primo giorno", "non so da dove partire", "menu", "tutte le funzioni", "cosa c'è nell'app", "entra in tutelapp"] },
   { id: "glossario", titolo: "Glossario: cosa vuol dire", testo: "Le parole difficili spiegate in modo semplice: ATP, UVM, collocamento mirato, ISEE e altre.", route: "/faq?sezione=glossario", bottone: "Apri il glossario", chiavi: ["glossario", "significato", "cosa vuol dire", "cosa significa", "parole difficili", "sigla", "sigle", "non capisco"] },
   { id: "faq-pagina", titolo: "Domande frequenti", testo: "Le risposte alle domande che le famiglie fanno più spesso su 104, invalidità, permessi e aiuti.", route: "/faq", bottone: "Domande frequenti", chiavi: ["domande frequenti", "faq", "domande più comuni", "dubbi comuni", "domande delle famiglie"] },
+  { id: "per-comuni", titolo: "Sei un Comune o un ente?", testo: "Se rappresenti un Comune o un ente, da qui puoi metterti in contatto con TutelApp.", route: "/per-i-comuni", bottone: "Contattaci", chiavi: ["sono un comune", "sono un ente", "per i comuni", "per comuni", "aderire", "adesione", "sono un sindaco", "sono un assessore"] },
   { id: "emergenza", titolo: "Emergenza", testo: "In caso di pericolo chiama subito il 112.", route: "/salute", bottone: "Salute vicino a te", chiavi: ["emergenza", "112", "118", "ambulanza urgente", "sta male", "pronto soccorso"] },
 ];
 

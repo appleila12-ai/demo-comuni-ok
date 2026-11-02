@@ -8,7 +8,7 @@ import { useRouter } from "expo-router";
 
 import { colors, fonts, radius, spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
-import { ESEMPI, cerca } from "@/src/lib/ricerca";
+import { ESEMPI, STRUMENTI, cerca } from "@/src/lib/ricerca";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
 import { dimenticaRicerca, leggiRicerca, salvaRicerca } from "@/src/lib/riprendi";
 import { useNomeUtente } from "@/src/lib/nomeUtente";
@@ -156,6 +156,22 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
             <Text style={styles.btnText}>Contatti del Comune</Text>
             <Ionicons name="arrow-forward" size={16} color="#FFFFFF" />
           </Pressable>
+          {/* Se la ricerca non trova nulla, tutti gli strumenti restano a un tocco */}
+          <View style={styles.esempi}>
+            <Text style={styles.esempiLabel}>Oppure scegli da qui:</Text>
+            <View style={styles.chips}>
+              {STRUMENTI.map((s) => (
+                <Pressable
+                  key={s.route}
+                  onPress={() => vai(s.route)}
+                  style={({ pressed }) => [styles.chip, pressed && { opacity: 0.8 }]}
+                  accessibilityRole="button"
+                >
+                  <Text style={styles.chipText}>{s.titolo}</Text>
+                </Pressable>
+              ))}
+            </View>
+          </View>
         </View>
       )}
 
