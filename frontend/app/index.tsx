@@ -139,6 +139,14 @@ const INFO_LINKS = [
     color: topics.documenti,
   },
   {
+    id: "infortunio-lavoro",
+    icon: "bandage-outline" as const,
+    title: "Mi sono fatto male al lavoro",
+    sub: "INAIL: a chi chiedere dopo un infortunio o una malattia professionale",
+    href: "/infortunio-lavoro",
+    color: topics.salute,
+  },
+  {
     id: "lavoro",
     icon: "briefcase-outline" as const,
     title: "Lavoro e disabilità",
