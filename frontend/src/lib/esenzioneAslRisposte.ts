@@ -770,3 +770,31 @@ ESENZIONE_ASL.lecco = {
     "La risposta ricevuta dall'ASST non indica come si presenta la richiesta, i documenti, l'appuntamento né i tempi: consulta la pagina ufficiale o chiedi all'ASST.",
   fonte: "ASST Lecco · risposta scritta dell'Ufficio di Pubblica Tutela del 02/11/2026",
 };
+
+// ASL Napoli 2 Nord, Distretto 39 (Villaricca, Qualiano, Calvizzano): pagine «Esenzioni per patologia» e «Centro Unico
+// Prenotazioni (CUP)» (pubblicate il 12/03/2025, aggiornate al 20/03/2025) e scheda del Distretto (aggiornata al 16/04/2026)
+// sul portale trasparenza.aslnapoli2nord.it, lette il 02/11/2026.
+ESENZIONE_ASL.villaricca = {
+  asl: "ASL Napoli 2 Nord · Distretto 39",
+  intro:
+    "Il Distretto 39 assiste i residenti dei Comuni di Villaricca, Qualiano e Calvizzano. Secondo la pagina dell'ASL, l'esenzione va richiesta all'ASL territorialmente competente. Il Centro Unico Prenotazioni (CUP) del Distretto gestisce le esenzioni per patologia con documentazione sanitaria e/o verbale di invalidità civile.",
+  titoloPassi: "Dove si presenta",
+  comeSiPresenta: [
+    "Nella sede del Distretto 39 a Villaricca, in Corso Italia (adiacenze Carabinieri), dove si trovano gli sportelli del CUP",
+    "Se non puoi andare di persona, serve una delega scritta e firmata, con il documento d'identità in corso di validità del delegato e del delegante",
+  ],
+  documenti: [
+    "Documento di identità, tessera sanitaria e codice fiscale",
+    "Certificato medico recente (massimo 3 mesi) che attesta la malattia, rilasciato da uno specialista di una struttura pubblica o accreditata",
+    "Oppure copia della cartella clinica (la valuta un medico dell'ASL) rilasciata da un ospedale pubblico o da una struttura accreditata",
+    "Copia del verbale di invalidità, se c'è",
+  ],
+  mail: "distretto39@aslnapoli2nord.it",
+  pec: "distretto39@pec.aslnapoli2nord.it",
+  telefoni: [{ etichetta: "Distretto 39 · attivo dal lunedì al venerdì, 9:00–13:00", numero: "081 18840135" }],
+  paginaUrl: "https://trasparenza.aslnapoli2nord.it/index.php?id_cat=0&id_doc=19292&id_oggetto=13",
+  paginaLabel: "Pagina ASL Napoli 2 Nord · Esenzioni per patologia",
+  manca:
+    "Le pagine non indicano gli orari degli sportelli del CUP, se serve la prenotazione né i tempi di rilascio. E-mail e PEC sono quelle generali del Distretto: le pagine non dicono che si possa presentare la richiesta per via telematica. Le pagine sono state aggiornate il 20/03/2025.",
+  fonte: "ASL Napoli 2 Nord · portale trasparenza, pagine del Distretto 39 (lette il 02/11/2026)",
+};
