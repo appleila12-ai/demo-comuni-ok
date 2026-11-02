@@ -4,6 +4,13 @@
 // Capisce parole comuni (sinonimi) e piccoli errori di battitura.
 
 import { CONTENUTI_BASE } from "@/src/lib/remoteContent";
+import { comune } from "@/src/config/comune";
+import { LETTERE } from "@/src/lib/lettere";
+import { bonusDelComune } from "@/src/lib/bonus";
+import { lavoroDelComune } from "@/src/lib/lavoro";
+import { associazioniDelComune } from "@/src/lib/associazioni";
+import { getHelpCards } from "@/src/lib/territorio";
+import { AREE } from "@/src/lib/progetto";
 
 export type Risposta = {
   id: string;
@@ -45,10 +52,9 @@ const RISPOSTE: Risposta[] = [
   { id: "agevolazioni", titolo: "Bonus e agevolazioni", testo: "Esenzioni, agevolazioni fiscali e per l'auto, bonus bollette, Carta europea della disabilità: scopri quali ti riguardano.", route: "/agevolazioni", bottone: "Bonus e agevolazioni", chiavi: ["bonus", "agevolazione", "iva 4", "detrazione", "auto", "macchina", "bollo", "carta europea", "disability card", "esenzione"] },
   { id: "bollette", titolo: "Bonus luce, gas e acqua", testo: "Con ISEE fino a 9.796 € lo sconto in bolletta arriva da solo, basta avere l'ISEE aggiornato.", route: "/agevolazioni", bottone: "Bonus e agevolazioni", chiavi: ["bollette", "bolletta", "luce", "gas", "acqua", "bonus sociale", "tari", "rifiuti"] },
   { id: "isee", titolo: "ISEE", testo: "L'ISEE vale fino al 31 dicembre: si fa gratis online sul sito INPS o al CAF. Serve per bonus e servizi del Comune.", route: "/scadenze", bottone: "Promemoria ISEE", chiavi: ["isee", "dsu", "caf", "reddito familiare"] },
-  { id: "esenzione-asl5", titolo: "Esenzione ticket: cosa portare (ASL 5)", testo: "Per patologia cronica o invalidità: i documenti da portare, per te, per un figlio minore o se sei tutore, e come presentare la richiesta all'ASL 5 della Spezia.", route: "/esenzione-ticket", bottone: "Cosa portare per l'esenzione", chiavi: ["esenzione ticket", "esenzione patologia", "esenzione invalidita", "libretto sanitario", "codice esenzione", "esenzione asl", "asl 5", "asl5", "patologia cronica", "ticket", "esenzione"] },
-  { id: "ticket", titolo: "Esenzione dal ticket", testo: "Con un riconoscimento di invalidità o per patologia puoi non pagare il ticket: porta il verbale allo sportello dell'azienda sanitaria.", route: "/primi-passi", bottone: "Primi passi", chiavi: ["ticket", "esenzione", "non pagare visite", "codice esenzione"] },
+  { id: "esenzione-ticket", titolo: "Esenzione ticket: cosa portare", testo: "Per patologia cronica o invalidità: i documenti da portare, per te, per un figlio minore o se sei tutore, e come presentare la richiesta alla tua azienda sanitaria.", route: "/esenzione-ticket", bottone: "Cosa portare per l'esenzione", chiavi: ["esenzione ticket", "esenzione patologia", "esenzione per patologia", "esenzione invalidita", "libretto sanitario", "codice esenzione", "esenzione asl", "asl", "asl 5", "asl5", "asl 3", "patologia cronica", "ticket", "esenzione", "non pagare visite", "non pagare il ticket", "tessera sanitaria"] },
   { id: "contrassegno", titolo: "Contrassegno per il parcheggio", testo: "Per chi ha gravi difficoltà a camminare o è non vedente. Si chiede al Comune con il certificato medico e dura 5 anni.", route: "/agevolazioni", bottone: "Bonus e agevolazioni", chiavi: ["contrassegno", "parcheggio", "cude", "posto auto disabili", "pass disabili"] },
-  { id: "lavoro", titolo: "Lavoro e disabilità", testo: "Con invalidità dal 46% puoi iscriverti al collocamento mirato al Centro per l'impiego.", route: "/agevolazioni", bottone: "Bonus e agevolazioni", chiavi: ["lavoro", "cerco lavoro", "collocamento mirato", "categorie protette", "assunzione", "disoccupato"] },
+  { id: "lavoro", titolo: "Lavoro e disabilità", testo: "Con invalidità dal 46% puoi iscriverti al collocamento mirato al Centro per l'impiego.", route: "/agevolazioni", bottone: "Bonus e agevolazioni", chiavi: ["lavoro", "lavorare", "posso lavorare", "mantenere il lavoro", "cerco lavoro", "collocamento mirato", "categorie protette", "assunzione", "disoccupato"] },
 
   // --- Progetto di Vita e servizi ---
   { id: "progetto", titolo: "Progetto di Vita", testo: "Il piano costruito con i servizi a partire da ciò che conta per te. Preparalo con calma prima dell'incontro con l'équipe (UVM).", route: "/progetto", bottone: "Il mio Progetto di Vita", chiavi: ["progetto di vita", "progetto", "uvm", "equipe", "desideri", "piano personalizzato", "vita indipendente"] },
@@ -69,6 +75,18 @@ const RISPOSTE: Risposta[] = [
   { id: "associazioni", titolo: "Associazioni del territorio", testo: "Associazioni di volontariato e di famiglie che si occupano di disabilità nella tua zona: sostegno, informazioni, incontri.", route: "/associazioni", bottone: "Associazioni e sport", chiavi: ["associazione", "associazioni", "volontariato", "volontari", "famiglie", "genitori", "gruppo", "anffas", "autismo", "sostegno"] },
   { id: "sport", titolo: "Sport per persone con disabilità", testo: "Società sportive e sport paralimpico vicino a te: nuoto, equitazione, atletica, calcio integrato e altro.", route: "/associazioni?tipo=sport", bottone: "Sport nella tua zona", chiavi: ["sport", "sportiva", "paralimpico", "piscina", "nuoto", "calcio", "palestra", "special olympics", "equitazione", "cavallo", "attivita fisica"] },
   { id: "salvati", titolo: "I miei salvati", testo: "Qui ritrovi pagine, servizi e contatti che hai salvato con il segnalibro.", route: "/salvati", bottone: "Apri i salvati", chiavi: ["salvati", "salvato", "preferiti", "segnalibro", "messo da parte", "ritrovare"] },
+  { id: "reclamo-attese", titolo: "Reclamo per le liste d'attesa", testo: "Se la visita o l'esame ti vengono dati dopo i tempi previsti, puoi preparare il modulo di reclamo già compilato, pronto da inviare. Il modulo è dell'associazione APS Gazebo Sanità e Beni Comuni.", route: "/reclamo-attese", bottone: "Prepara il reclamo", chiavi: ["reclamo", "reclami", "reclamare", "liste d'attesa", "lista d'attesa", "liste attesa", "tempi di attesa", "attesa troppo lunga", "visita rimandata", "visita troppo lontana", "non mi danno la visita", "segnalazione asl", "urp", "reclamo asl", "reclamo sanità", "lamentela", "gazebo"] },
+  { id: "domande-104", titolo: "Domande sulla legge 104", testo: "Scrivi la tua domanda sulla 104 e l'assistente risponde usando le norme e i contenuti verificati dell'app.", route: "/domande-104", bottone: "Fai una domanda sulla 104", chiavi: ["domanda sulla 104", "domande 104", "fai una domanda", "chiedere informazioni 104", "dubbi 104", "104 domanda", "chiedi all'assistente", "assistente 104"] },
+  { id: "agenda", titolo: "Appuntamenti e scadenze", testo: "Segna visite, appuntamenti e scadenze con data e ora, e scegli se ricevere un promemoria gentile. Nella stessa pagina trovi anche i contatti utili.", route: "/scadenze", bottone: "Le mie scadenze", chiavi: ["agenda", "appuntamento", "appuntamenti", "calendario", "promemoria", "ricordami", "segnare una visita", "scadenza", "scadenze", "avvisi", "notifiche"] },
+  { id: "contatti-utili", titolo: "I miei contatti utili", testo: "La tua rubrica personale: medico, assistente sociale, patronato e altri numeri che ti servono. Restano solo sul tuo telefono.", route: "/scadenze", bottone: "Apri i contatti utili", chiavi: ["rubrica", "contatti utili", "numeri utili", "numero del medico", "salvare un numero", "miei contatti", "numeri di telefono"] },
+  { id: "cassetto", titolo: "Il mio cassetto", testo: "Qui tieni i tuoi documenti e puoi fare la copia di sicurezza o ripristinarla. Tutto resta sul tuo telefono.", route: "/cassetto", bottone: "Apri il mio cassetto", chiavi: ["cassetto", "il mio cassetto", "copia di sicurezza", "backup", "ripristinare", "ripristino", "salvare i dati", "ho perso i dati", "cambio telefono"] },
+  { id: "bonus-regione", titolo: "Bonus e contributi della Regione e del Comune", testo: "Le misure della tua Regione e del tuo Comune, ciascuna con fonte ufficiale e data dell'ultimo controllo.", route: "/bonus", bottone: "Bonus e contributi", chiavi: ["bonus regionali", "bonus regione", "contributo regionale", "contributi", "contributo", "bonus comunale", "bonus del comune", "dopo di noi", "patente speciale", "patenti speciali", "fondo regionale", "misure regionali"] },
+  { id: "lavoro-pagina", titolo: "Lavoro e disabilità: le misure del tuo territorio", testo: "Collocamento mirato e misure della Regione e del Comune per chi cerca o ha un lavoro, con fonte e data di controllo.", route: "/lavoro", bottone: "Lavoro e disabilità", chiavi: ["lavoro e disabilità", "inserimento lavorativo", "tirocinio", "tirocini", "borsa lavoro", "incentivi assunzione", "centro per l'impiego", "centro impiego"] },
+  { id: "comuni", titolo: "Cambiare Comune", testo: "Cerca il tuo Comune per nome, provincia o regione: l'app mostra contatti, aiuti e bonus del posto in cui vivi.", route: "/comuni", bottone: "Scegli il Comune", chiavi: ["cambiare comune", "cambia comune", "scegliere il comune", "altro comune", "non trovo il mio comune", "il mio comune", "provincia", "regione", "residenza"] },
+  { id: "valutazione", titolo: "Valutazione: le domande in una schermata", testo: "Tutte le domande della valutazione su una sola schermata, per capire a quali aiuti e diritti puoi avere accesso.", route: "/valutazione", bottone: "Apri la valutazione", chiavi: ["valutazione", "questionario", "test diritti", "controllare se ho diritto"] },
+  { id: "hub", titolo: "Orientarsi insieme: tutto il percorso", testo: "Il percorso dalla diagnosi al Progetto di Vita, con tutte le sezioni dell'app in un posto solo.", route: "/hub", bottone: "Entra in TutelApp", chiavi: ["orientarsi", "orientarsi insieme", "tutto il percorso", "dal primo giorno", "non so da dove partire", "menu", "tutte le funzioni", "cosa c'è nell'app", "entra in tutelapp"] },
+  { id: "glossario", titolo: "Glossario: cosa vuol dire", testo: "Le parole difficili spiegate in modo semplice: ATP, UVM, collocamento mirato, ISEE e altre.", route: "/faq?sezione=glossario", bottone: "Apri il glossario", chiavi: ["glossario", "significato", "cosa vuol dire", "cosa significa", "parole difficili", "sigla", "sigle", "non capisco"] },
+  { id: "faq-pagina", titolo: "Domande frequenti", testo: "Le risposte alle domande che le famiglie fanno più spesso su 104, invalidità, permessi e aiuti.", route: "/faq", bottone: "Domande frequenti", chiavi: ["domande frequenti", "faq", "domande più comuni", "dubbi comuni", "domande delle famiglie"] },
   { id: "emergenza", titolo: "Emergenza", testo: "In caso di pericolo chiama subito il 112.", route: "/salute", bottone: "Salute vicino a te", chiavi: ["emergenza", "112", "118", "ambulanza urgente", "sta male", "pronto soccorso"] },
 ];
 
@@ -112,8 +130,28 @@ function simili(a: string, b: string): boolean {
   return false;
 }
 
-type Voce = Risposta & { _chiavi: string[][]; _titolo: string[]; fonte: "app" | "faq" | "glossario" };
+type Fonte = "app" | "faq" | "glossario" | "lettera" | "bonus" | "lavoro" | "associazione" | "aiuto" | "progetto";
+type Voce = Risposta & { _chiavi: string[][]; _titolo: string[]; fonte: Fonte };
 
+function voce(
+  fonte: Fonte,
+  id: string,
+  titolo: string,
+  testo: string,
+  route: string,
+  bottone: string,
+  chiavi: string[],
+): Voce {
+  return { id, titolo, testo, route, bottone, chiavi, fonte, _chiavi: chiavi.map(parole), _titolo: parole(titolo) };
+}
+
+const breve = (t: string, n = 170) => (t.length > n ? t.slice(0, n - 1).trimEnd() + "…" : t);
+
+/**
+ * Tutto ciò che nell'app si può cercare, preso DIRETTAMENTE dai contenuti:
+ * lettere pronte, bonus e lavoro del Comune, associazioni, aiuti, aree del Progetto di Vita,
+ * domande frequenti e glossario. Quando si aggiunge un contenuto, la ricerca lo trova da sola.
+ */
 function indice(): Voce[] {
   const voci: Voce[] = RISPOSTE.map((r) => ({
     ...r,
@@ -121,42 +159,85 @@ function indice(): Voce[] {
     _chiavi: r.chiavi.map(parole),
     _titolo: parole(r.titolo),
   }));
-  (CONTENUTI_BASE.faq || []).forEach((f: { d: string; r: string }, i: number) =>
-    voci.push({
-      id: `faq-${i}`,
-      titolo: f.d,
-      testo: f.r,
-      route: "/faq",
-      bottone: "Domande frequenti",
-      chiavi: [],
-      fonte: "faq",
-      _chiavi: [],
-      _titolo: parole(f.d),
-    }),
+  // Se una fonte ha un problema, le altre continuano a funzionare.
+  const prova = (nome: string, f: () => void) => {
+    try {
+      f();
+    } catch (e) {
+      console.warn(`[ricerca] fonte "${nome}" non letta`, e);
+    }
+  };
+
+  prova("faq", () =>
+    (CONTENUTI_BASE.faq || []).forEach((f: { d: string; r: string }, i: number) =>
+      voci.push(voce("faq", `faq-${i}`, f.d, f.r, "/faq", "Domande frequenti", [])),
+    ),
   );
-  (CONTENUTI_BASE.glossario || []).forEach((g: { t: string; d: string }, i: number) =>
-    voci.push({
-      id: `gloss-${i}`,
-      titolo: g.t,
-      testo: g.d,
-      route: "/faq?sezione=glossario",
-      bottone: "Glossario",
-      chiavi: [g.t],
-      fonte: "glossario",
-      _chiavi: [parole(g.t)],
-      _titolo: parole(g.t),
-    }),
+  prova("glossario", () =>
+    (CONTENUTI_BASE.glossario || []).forEach((g: { t: string; d: string }, i: number) =>
+      voci.push(voce("glossario", `gloss-${i}`, g.t, g.d, "/faq?sezione=glossario", "Glossario", [g.t])),
+    ),
+  );
+  prova("lettere", () =>
+    LETTERE.forEach((l) =>
+      voci.push(
+        voce("lettera", `lettera-${l.id}`, l.titolo, `${l.sottotitolo}. ${l.quando}`, `/lettere?id=${l.id}`, "Prepara la lettera", [
+          l.titolo,
+          l.sottotitolo,
+          l.id.replace(/-/g, " "),
+        ]),
+      ),
+    ),
+  );
+  prova("bonus", () => {
+    const b = bonusDelComune();
+    [...b.locali, ...b.regionali].forEach((x) =>
+      voci.push(voce("bonus", `bonus-${x.id}`, x.titolo, breve(x.cosa), "/bonus", "Bonus e contributi", [x.titolo])),
+    );
+  });
+  prova("lavoro", () => {
+    const l = lavoroDelComune();
+    [...l.nazionali, ...l.locali, ...l.regionali].forEach((x) =>
+      voci.push(voce("lavoro", `lavoro-${x.id}`, x.titolo, breve(x.cosa), "/lavoro", "Lavoro e disabilità", [x.titolo])),
+    );
+  });
+  prova("associazioni", () => {
+    const a = associazioniDelComune();
+    const vol: any[] = [...(a.volontariato || []), ...(a.volontariatoNazionali || [])];
+    const spo: any[] = [...(a.sport || []), ...(a.sportRegione || []), ...(a.sportNazionali || [])];
+    vol.forEach((x, i) =>
+      voci.push(voce("associazione", `ass-${i}-${x.nome}`, x.nome, breve(x.cosa || ""), "/associazioni", "Associazioni e sport", [x.nome])),
+    );
+    spo.forEach((x, i) =>
+      voci.push(voce("associazione", `spo-${i}-${x.nome}`, x.nome, breve(x.cosa || ""), "/associazioni?tipo=sport", "Sport nella tua zona", [x.nome])),
+    );
+  });
+  prova("aiuti", () =>
+    getHelpCards(comune.regione).forEach((c) =>
+      voci.push(voce("aiuto", `aiuto-${c.id}`, c.title, breve(c.body), "/territorio", "Aiuti e contatti", [c.title, c.label])),
+    ),
+  );
+  prova("progetto", () =>
+    AREE.forEach((a) =>
+      voci.push(
+        voce("progetto", `area-${a.id}`, `Progetto di Vita: ${a.title}`, a.hint, "/progetto", "Il mio Progetto di Vita", [a.title, ...a.suggestions]),
+      ),
+    ),
   );
   return voci;
 }
 
 let INDICE: Voce[] | null = null;
+let INDICE_PER: string | null = null;
 
-/** Le risposte più adatte a quello che la persona ha scritto (al massimo 4). */
+/** Le risposte più adatte a quello che la persona ha scritto (al massimo 5). */
 export function cerca(testo: string): Risposta[] {
   const q = parole(testo);
   if (q.length === 0) return [];
-  if (!INDICE) INDICE = indice();
+  if (!INDICE || INDICE_PER !== comune.slug) {
+    INDICE = indice();
+    INDICE_PER = comune.slug;
+  }
   const qn = norm(testo);
 
   const punteggi = INDICE.map((v) => {
@@ -164,15 +245,19 @@ export function cerca(testo: string): Risposta[] {
     // frase chiave contenuta intera nel testo
     v.chiavi.forEach((k, i) => {
       const kn = norm(k);
-      if (kn.length > 2 && qn.includes(kn)) p += 6 + v._chiavi[i].length;
+      if (kn.length > 2 && ` ${qn} `.includes(` ${kn} `)) p += 6 + v._chiavi[i].length;
     });
     // parola per parola (con errori di battitura)
+    let dalTesto = 0;
+    const paroleTesto = v.fonte !== "app" ? parole(v.testo) : [];
     for (const w of q) {
       if (v._chiavi.some((ch) => ch.some((c) => simili(w, c)))) p += 3;
       if (v._titolo.some((c) => simili(w, c))) p += 2;
-      if (v.fonte !== "app" && parole(v.testo).some((c) => simili(w, c))) p += 1;
+      // il testo conta poco e ha un tetto, così le voci "di contorno" non superano quelle giuste
+      if (dalTesto < 2 && paroleTesto.some((c) => simili(w, c))) dalTesto += 1;
     }
-    if (v.fonte !== "app") p *= 0.8;
+    p += dalTesto;
+    if (v.fonte !== "app") p *= 0.85;
     return { v, p };
   })
     .filter((x) => x.p >= 3)
@@ -184,7 +269,7 @@ export function cerca(testo: string): Risposta[] {
     if (visti.has(v.titolo)) continue;
     visti.add(v.titolo);
     out.push(v);
-    if (out.length >= 4) break;
+    if (out.length >= 5) break;
   }
   return out;
 }
