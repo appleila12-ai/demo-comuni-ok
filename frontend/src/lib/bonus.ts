@@ -25,6 +25,7 @@
 // Tredicesima raccolta: 20/10/2026, misure regionali di Umbria, Sardegna, Marche e Calabria.
 // Quattordicesima raccolta: 20/10/2026, misure dei Comuni di Firenze, Bari, Venezia e Padova.
 // Quindicesima raccolta: 20/10/2026 (sera), misure dei Comuni di Perugia, Ancona, Rimini e Salerno; controllo delle voci già presenti.
+// Raccolta 02/11/2026: Sardegna, Abruzzo, Campania, Molise e Basilicata (dossier verificato il 30/10/2026).
 // Raccolta 30/10/2026: Lombardia (Misura Sostegno, barriere architettoniche, Dopo di Noi), Piemonte (Buono domiciliarità, barriere architettoniche), Toscana (esenzione bollo, mobilità LR 81/2017, vita indipendente).
 
 import { comune } from "@/src/config/comune";
@@ -2028,6 +2029,241 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "30/10/2026",
     nota: "La pagina regionale non dice se l'avviso del singolo Ambito sia già aperto: controlla sul sito del tuo ATS.",
+  },
+
+  // --- Raccolta 02/11/2026: Sardegna, Abruzzo, Campania, Molise, Basilicata (dossier verificato il 30/10/2026, solo fonti istituzionali) ---
+
+  // ---------------------------------------------------------------- SARDEGNA
+  {
+    id: "sardegna-ritornare-a-casa-plus-2026-2027",
+    regione: "Sardegna",
+    titolo: "Ritornare a casa PLUS (linee 2026-2027)",
+    perChi:
+      "Persone non autosufficienti valutate dall'Unità di Valutazione Territoriale (UVT). Serve l'indennità di accompagnamento. In alternativa vanno bene la certificazione dell'allegato 3 del DPCM 159/2013, l'accertamento del D.Lgs. 29/2024 per gli over 70 o quello del D.Lgs. 62/2024. Si può presentare la domanda con riserva di integrare il verbale.",
+    cosa:
+      "Un progetto personalizzato a domicilio, con un contributo. Importi massimi del progetto: dimissioni protette 1.700 euro (30 giorni, una volta nell'anno); base A 4.000 euro; base B 7.400 euro; primo livello 16.000 euro; secondo livello 16.000 euro più 9.000 di potenziamento; terzo livello 16.000 euro più 27.000 di potenziamento. Importi su 12 mesi. Per chi assiste c'è una quota per il caregiver, compresa nel progetto: al massimo il 50% nei livelli base A e B, al massimo un terzo del solo contributo ordinario nel primo, secondo e terzo livello; non per le dimissioni protette.",
+    stato: "attivo",
+    quando: "Linee d'indirizzo 2026-2027 (delibera della Giunta n. 1/28 del 14/01/2026, pubblicata il 15/01/2026). Nessuna scadenza indicata.",
+    comeSiChiede:
+      "Si presenta la richiesta al Comune di residenza o al Punto Unico di Accesso (PUA), che la trasmette all'Ambito PLUS.",
+    fonte: {
+      label: "Regione Sardegna · Delibera n. 1/28 del 14/01/2026, Ritornare a casa PLUS, linee d'indirizzo 2026-2027",
+      url: "https://delibere.regione.sardegna.it/delibera/116719",
+    },
+    verificatoIl: "02/11/2026",
+    nota: "L'ISEE sociosanitario riduce il contributo: nessuna riduzione fino a 15.000 euro (base A, base B e primo livello), 25.000 (secondo) e 40.000 (terzo). Oltre queste soglie la riduzione sale per fasce, fino all'80% sopra 80.000, 90.000 e 100.000 euro. Per le dimissioni protette la riduzione parte sopra 50.000 euro (10%, poi 20% e 30%). Gli importi sono massimi di progetto, non un accredito automatico. Il testo completo delle linee è l'allegato alla delibera.",
+  },
+  {
+    id: "sardegna-piani-162-98-2026",
+    regione: "Sardegna",
+    titolo: "Piani personalizzati di sostegno (legge 162/1998), gestione 2026",
+    perChi: "Persone con disabilità grave, secondo le linee attuative regionali. Residenti in Sardegna, tramite il proprio Comune.",
+    cosa:
+      "Piani personalizzati di sostegno. La Regione ha assegnato ai Comuni altri 10 milioni di euro per il 2026. È un finanziamento ai Comuni, non un importo per la singola persona: l'importo individuale non è indicato.",
+    stato: "attivo",
+    quando: "Finanziamento 2026 confermato dalla Regione il 23/10/2026. Le scadenze per presentare la domanda non sono indicate.",
+    comeSiChiede: "Rivolgiti ai Servizi sociali del Comune di residenza per sapere se e quando è aperta la raccolta delle domande.",
+    fonte: {
+      label: "Regione Sardegna · Piani personalizzati legge 162/98, assegnate ulteriori risorse ai Comuni",
+      url: "https://www.regione.sardegna.it/notizie/piani-personalizzati-di-sostegno-legge-n-162-98-assegnate-ulteriori-risorse-ai-comuni",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Requisiti sanitari, ISEE e compatibilità con Ritornare a casa PLUS dipendono dalle linee attuative e dal livello del progetto: chiedili al Comune.",
+  },
+  {
+    id: "sardegna-sine-limes-2-2026",
+    regione: "Sardegna",
+    titolo: "Sine Limes 2 (annualità 2026): buono servizio",
+    perChi:
+      "Residenti in Sardegna con disabilità (art. 3 della legge 104), persone in carico al Centro di salute mentale o alla UONPIA, anziani da 85 anni in su. ISEE ordinario o corrente 2026 fino a 45.000 euro. Esclusi i fruitori di servizi residenziali.",
+    cosa: "Buono fino a 8.000 euro, entro le spese documentate ammissibili.",
+    stato: "chiuso",
+    quando:
+      "Le domande si sono chiuse il 28/10/2026 alle 17:00. Le spese ammissibili vanno dal 01/10/2026 al 31/12/2027 e i rimborsi dal 03/05/2027 al 24/02/2028: queste date non riaprono le domande.",
+    comeSiChiede: "Domanda telematica sul sistema regionale SIL. Termine scaduto.",
+    fonte: {
+      label: "Regione Sardegna · Avviso Sine Limes 2 (annualità 2026)",
+      url: "https://www.regione.sardegna.it/atti-bandi-archivi/atti-amministrativi/bandi/172000098463251",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Chi ha già presentato domanda segue le istruzioni dell'avviso per spese e rimborsi.",
+  },
+
+  // ----------------------------------------------------------------- ABRUZZO
+  {
+    id: "abruzzo-vita-indipendente-2025",
+    regione: "Abruzzo",
+    titolo: "Sostegni ai progetti di Vita indipendente (avviso 2025)",
+    perChi:
+      "Maggiorenni residenti in Abruzzo con disabilità e capacità di autodeterminazione, anche con supporto. Serve la certificazione di gravità (art. 3, comma 3, legge 104). Da 67 anni in su l'ISEE sociosanitario non deve superare 20.000 euro.",
+    cosa:
+      "Sostegno annuo massimo secondo il livello di bisogno, compresi i costi indiretti del 7%: molto alto 12.000 euro; alto 10.000; medio 8.000; basso 6.000.",
+    stato: "chiuso",
+    quando: "Candidature degli enti (ECAD) alla Regione entro il 15/12/2025. Il pagamento dei progetti ammessi prosegue nel 2026, ma non ci sono nuove domande aperte.",
+    comeSiChiede: "La persona presentava la richiesta all'Ente d'Ambito (ECAD), che candidava il progetto alla Regione. Per eventuali nuove edizioni chiedi al tuo Ambito sociale.",
+    fonte: {
+      label: "Regione Abruzzo · Sostegno ai progetti di Vita indipendente, anno 2025",
+      url: "https://coesione.regione.abruzzo.it/avvisi-pubblici/fse/sostegno-ai-progetti-di-vita-indipendente-anno-2025",
+    },
+    verificatoIl: "30/10/2026",
+  },
+  {
+    id: "abruzzo-caregiver-minori-gravissimi-2025",
+    regione: "Abruzzo",
+    titolo: "Contributo ai genitori caregiver di minori con disabilità gravissima (2025)",
+    perChi:
+      "Genitori disoccupati o inoccupati di minori che hanno bisogno di assistenza continua 24 ore su 24, con le malattie rare o croniche gravi indicate nel bando.",
+    cosa: "10.000 euro per famiglia: il 70% all'ammissione e il 30% dopo la relazione semestrale. Non è cumulabile con l'assegno per la disabilità gravissima del Fondo non autosufficienza.",
+    stato: "chiuso",
+    quando: "Domande dal 6 al 30 novembre 2025: scaduto. Non c'è un nuovo bando.",
+    comeSiChiede: "Sportello telematico regionale (chiuso). Per nuove edizioni controlla le notizie della Regione.",
+    fonte: {
+      label: "Regione Abruzzo · Istanze caregiver familiare dal 6 novembre (04/11/2025)",
+      url: "https://www.regione.abruzzo.it/notizie/al-le-istanze-caregiver-famigliare-dal-6-novembre",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Le verifiche e le concessioni fatte nel 2026 non riaprono il bando.",
+  },
+  {
+    id: "abruzzo-barriere-casa-legge-13-1989",
+    regione: "Abruzzo",
+    titolo: "Contributi per eliminare le barriere architettoniche nella casa privata (legge 13/1989)",
+    perChi: "Persone con disabilità che rientrano nella legge 13/1989. I requisiti individuali e lo stato dei lavori si verificano nel procedimento del Comune.",
+    cosa: "Contributo calcolato secondo la normativa. Gli importi non sono indicati nella fonte.",
+    stato: "attivo",
+    quando: "Servizio permanente. Nessuna scadenza indicata.",
+    comeSiChiede: "La domanda si presenta al Comune; la Regione raccoglie il fabbisogno dei Comuni e poi eroga i fondi.",
+    fonte: {
+      label: "Regione Abruzzo · Carta dei servizi: superamento delle barriere architettoniche negli edifici privati",
+      url: "https://trasparenza.regione.abruzzo.it/servizi-erogati/carta-servizi/superamento-ed-eliminazione-delle-barriere-architettoniche-negli",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "I pagamenti recenti riguardano le domande degli anni scorsi: chiedi al Comune quando e come presentare una nuova richiesta.",
+  },
+
+  // ---------------------------------------------------------------- CAMPANIA
+  {
+    id: "campania-registro-caregiver",
+    regione: "Campania",
+    titolo: "Registro regionale dei caregiver familiari",
+    perChi:
+      "Familiari che assistono una persona con disabilità o infermità. Servono la parentela ammessa e il verbale della UVI o una certificazione specialistica pubblica, più i dati richiesti dal portale.",
+    cosa: "L'iscrizione al registro riconosce il ruolo di caregiver. Da sola non dà nessun contributo in denaro: può essere il primo passo per misure separate.",
+    stato: "attivo",
+    quando: "Portale attivo dal 21/12/2023. Nessuna scadenza indicata.",
+    comeSiChiede: "Sul portale regionale con SPID, CIE o CNS. Si può fare anche tramite un delegato.",
+    fonte: {
+      label: "Regione Campania · Registro caregiver familiare",
+      url: "https://servizi-digitali.regione.campania.it/Caregiver",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Non è un bonus: l'iscrizione non garantisce contributi.",
+  },
+  {
+    id: "campania-dopo-di-noi",
+    regione: "Campania",
+    titolo: "Programma Dopo di Noi",
+    perChi: "Persone con disabilità grave non dovuta all'invecchiamento, senza un adeguato sostegno familiare. Contano la valutazione dei bisogni e le priorità del programma.",
+    cosa: "Servizi e percorsi per l'autonomia e la vita fuori dalla famiglia di origine. Il valore del sostegno per la singola persona non è indicato.",
+    stato: "attivo",
+    quando:
+      "Programma in corso (atto regionale del 07/05/2026 e aggiornamenti di luglio 2026). La data del 31/12/2026 riguarda gli enti che si iscrivono all'elenco, non le famiglie.",
+    comeSiChiede: "Rivolgiti al Servizio sociale dell'Ambito o del Consorzio del tuo Comune: i servizi possono anche cercare le persone da coinvolgere.",
+    fonte: {
+      label: "Regione Campania · Programma Dopo di Noi",
+      url: "https://www.regione.campania.it/aree-tematiche/politiche-sociali/programma-dopo-noi",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Le procedure variano da Ambito ad Ambito.",
+  },
+  {
+    id: "campania-esenzione-bollo",
+    regione: "Campania",
+    titolo: "Esenzione dalla tassa automobilistica (bollo) per veicoli di persone con disabilità",
+    perChi:
+      "La persona con disabilità o chi l'ha fiscalmente a carico, intestatario del veicolo. Categorie ammesse: ridotte o impedite capacità motorie permanenti; grave limitazione della deambulazione o pluriamputazioni; disabilità mentale o psichica con handicap grave e accompagnamento; cecità o sordità.",
+    cosa:
+      "Esenzione dal bollo per un solo veicolo. Limiti di cilindrata: 2000 cc a benzina, 2800 cc a gasolio. Per le ridotte capacità motorie il veicolo deve avere gli adattamenti necessari; nelle altre categorie no.",
+    stato: "attivo",
+    quando: "Misura permanente. Nessuna scadenza indicata.",
+    comeSiChiede:
+      "La richiesta è indirizzata alla Regione Campania, Direzione Generale Risorse Finanziarie, UOS Gestione amministrativa e contabile delle tasse e dei tributi regionali (Centro Direzionale Isola C5, 80143 Napoli). Si consegna alle Unità territoriali ACI, agli Automobile Club, alle Delegazioni ACI o alle agenzie convenzionate. Serve la carta di circolazione e, se il veicolo è intestato a un familiare, la documentazione o l'autocertificazione del carico fiscale. La targa va indicata nella domanda.",
+    fonte: {
+      label: "Regione Campania · Tassa automobilistica (con tabella ACI delle esenzioni)",
+      url: "https://entrate.regione.campania.it/tassa-automobilistica-info",
+    },
+    verificatoIl: "02/11/2026",
+    nota: "I documenti cambiano con la categoria: verbale di handicap grave, certificazioni pubbliche di cecità o sordità, patente speciale per le capacità motorie ridotte. Controlla l'elenco sulla pagina. I limiti per alimentazioni diverse da benzina e gasolio non sono nelle fonti lette.",
+  },
+
+  // ------------------------------------------------------------------ MOLISE
+  {
+    id: "molise-caregiver-2025",
+    regione: "Molise",
+    titolo: "Sostegno al ruolo di cura del caregiver familiare (avviso 2025)",
+    perChi: "Caregiver di persone con disabilità gravissima fino a 65 anni, inserite nella graduatoria del Fondo non autosufficienza 2023.",
+    cosa: "Dotazione complessiva di 1.000.000 di euro. L'importo per la singola persona non è indicato.",
+    stato: "chiuso",
+    quando: "Domande entro il 01/12/2025: scaduto.",
+    comeSiChiede: "Era gestito dagli Ambiti territoriali sociali. Per le misure nuove vedi «Caregiver familiare 2026 e 2027».",
+    fonte: {
+      label: "Regione Molise · Misure per il sostegno del ruolo di cura e assistenza al caregiver familiare",
+      url: "https://prfesrfse2127.regione.molise.it/bandi-avvisi/misure-per-il-sostegno-del-ruolo-di-cura-e-assistenza-al-caregiver-familiare/",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Non è la misura 2026-2027.",
+  },
+  {
+    id: "molise-ti-muovi-2026-2027",
+    regione: "Molise",
+    titolo: "Ti Muovi: agevolazioni per studenti sul trasporto extraurbano (2026-2027)",
+    perChi:
+      "Studenti residenti tra 11 e 26 anni che frequentano corsi ammessi, con ISEE valido. Hanno priorità gli studenti con disabilità certificata dalla legge 104. Contributo annuo non rimborsabile di 15 euro.",
+    cosa: "Rimborso totale o parziale dell'abbonamento, secondo la fascia ISEE. Le percentuali non sono riportate qui. Vale da settembre 2026 a luglio 2027.",
+    stato: "chiuso",
+    quando: "Domande entro il 31/10/2026: scaduto.",
+    comeSiChiede: "Sulla piattaforma regionale Ti Muovi (Servizio Mobilità della Regione).",
+    fonte: {
+      label: "Regione Molise · Ti Muovi, agevolazioni studenti TPL extraurbano",
+      url: "https://www.regione.molise.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/22409",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Non è una misura solo per la disabilità: la disabilità dà priorità, non la gratuità automatica. Chiedi alla Regione se ci sono riaperture.",
+  },
+
+  // -------------------------------------------------------------- BASILICATA
+  {
+    id: "basilicata-assistenza-specialistica-alunni-2026-2027",
+    regione: "Basilicata",
+    titolo: "Assistenza specialistica agli alunni con disabilità (a.s. 2026-2027)",
+    perChi: "Alunni con disabilità certificata di infanzia, primaria e secondaria di primo grado, comprese le scuole paritarie indicate.",
+    cosa: "Servizio di assistenza specialistica a scuola, finanziato con 600 mila euro complessivi. Non è un contributo alla famiglia.",
+    stato: "attivo",
+    quando: "Anno scolastico 2026-2027 (notizia del 29/08/2026).",
+    comeSiChiede: "Il servizio passa dai nove Ambiti e dai Comuni capofila. Per attivarlo, rivolgiti alla scuola e al Servizio sociale del Comune.",
+    fonte: {
+      label: "Regione Basilicata · Disabilità e scuola, 600mila euro per l'assistenza specialistica",
+      url: "https://www.regione.basilicata.it/disabilita-e-scuola-600mila-euro-per-assistenza-specialistica/",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Per le scuole secondarie di secondo grado c'è un altro finanziamento, il Piano disabilità 2025-2026.",
+  },
+  {
+    id: "matera-caregiver-2023",
+    regione: "Basilicata",
+    comuni: ["matera"],
+    titolo: "Contributo ai caregiver familiari del Comune di Matera (annualità 2023)",
+    perChi: "Caregiver maggiorenni residenti a Matera, conviventi da almeno sei mesi con una persona con disabilità grave o gravissima.",
+    cosa: "Contributo una tantum: 500 euro per la disabilità gravissima, 400 euro per la grave.",
+    stato: "chiuso",
+    quando: "Domande entro le ore 12:00 del 23/01/2026: scaduto.",
+    comeSiChiede: "Era presentata all'URP del Comune di Matera o per PEC, con il modello dell'avviso.",
+    fonte: {
+      label: "Regione Basilicata · Matera, contributi ai caregiver familiari (08/01/2026)",
+      url: "https://www.regione.basilicata.it/matera-contributi-ai-caregiver-familiari/",
+    },
+    verificatoIl: "30/10/2026",
+    nota: "Misura solo del Comune di Matera: non vale per il resto della Basilicata.",
   },
 ];
 
