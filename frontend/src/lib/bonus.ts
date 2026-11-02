@@ -2265,6 +2265,24 @@ export const BONUS: Bonus[] = [
     verificatoIl: "30/10/2026",
     nota: "Misura solo del Comune di Matera: non vale per il resto della Basilicata.",
   },
+  {
+    id: "matera-assegni-di-cura-fna-2022-2024",
+    regione: "Basilicata",
+    comuni: ["matera"],
+    titolo: "Assegni di cura del Comune di Matera (Fondo non autosufficienze 2022-2024)",
+    perChi:
+      "Anziani non autosufficienti (65 anni compiuti alla scadenza dell'avviso) e persone con disabilità, residenti a Matera, che ricevono l'indennità di accompagnamento. Serve l'ISEE socio-sanitario; l'avviso non indica una soglia.",
+    cosa: "Fino a 500 euro al mese per alto carico assistenziale o disabilità gravissima, fino a 300 euro al mese per basso carico o disabilità grave. Importi massimi, stabiliti dall'équipe di valutazione (UVM). Fino al 30% può riconoscere il lavoro di cura del caregiver familiare. Durata massima 12 mesi.",
+    stato: "chiuso",
+    quando: "Avviso del 03/10/2025 (prot. 0101302/2025): domande entro trenta giorni dalla pubblicazione, scaduto.",
+    comeSiChiede: "Era presentata al Comune di Matera, per PEC o all'URP, con il modello dell'avviso.",
+    fonte: {
+      label: "Comune di Matera · Avviso pubblico Assegni di cura FNA 2022-2024 (prot. 0101302/2025)",
+      url: "https://comune.matera.it/wp-content/uploads/2025/10/Avviso-Pubblico-ASSEGNI-DI-CURA-prot_0101302_2025.pdf",
+    },
+    verificatoIl: "02/11/2026",
+    nota: "Misura solo del Comune di Matera, non regionale: non vale per il resto della Basilicata. Per eventuali nuove edizioni chiedi ai Servizi sociali del Comune.",
+  },
 ];
 
 /** Misure che valgono per il Comune attivo, prima quelle del suo territorio. */
