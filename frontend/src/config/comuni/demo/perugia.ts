@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_PRIMA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Perugia (PG) — VERSIONE DIMOSTRATIVA, SCHEDA COMPLETATA (20 ottobre 2026).
@@ -63,3 +64,4 @@ export const perugia: ComuneConfig = {
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (28/10/2026).
 perugia.percorsoTerritorio = percorso(perugia.puntiSupporto, [0]);
+perugia.percorsoTerritorio = { ...perugia.percorsoTerritorio, 1: [INPS_PRIMA_FASE] };

@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_PRIMA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Brescia (BS) — VERSIONE DIMOSTRATIVA, SCHEDA COMPLETATA (19 ottobre 2026).
@@ -63,3 +64,4 @@ export const brescia: ComuneConfig = {
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (28/10/2026).
 brescia.percorsoTerritorio = percorso(brescia.puntiSupporto, [0]);
+brescia.percorsoTerritorio = { ...brescia.percorsoTerritorio, 1: [INPS_PRIMA_FASE] };

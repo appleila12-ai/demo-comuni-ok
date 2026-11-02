@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_PRIMA_FASE } from "../percorso";
 
 // Comune di Sarno (SA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (27 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -58,3 +59,6 @@ export const sarno: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passo 1: prima fase della sperimentazione INPS
+sarno.percorsoTerritorio = { 1: [INPS_PRIMA_FASE] };

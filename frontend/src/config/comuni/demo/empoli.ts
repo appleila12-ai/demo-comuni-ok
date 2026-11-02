@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_PRIMA_FASE } from "../percorso";
 
 // Comune di Empoli (FI) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -62,3 +63,6 @@ export const empoli: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passo 1: prima fase della sperimentazione INPS
+empoli.percorsoTerritorio = { 1: [INPS_PRIMA_FASE] };

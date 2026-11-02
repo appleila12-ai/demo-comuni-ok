@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_PRIMA_FASE } from "../percorso";
 
 // Comune di Scandicci (FI) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (18 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -59,3 +60,6 @@ export const scandicci: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passo 1: prima fase della sperimentazione INPS
+scandicci.percorsoTerritorio = { 1: [INPS_PRIMA_FASE] };

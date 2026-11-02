@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_PRIMA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Campi Bisenzio (FI) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (18 ottobre 2026).
@@ -62,3 +63,4 @@ export const campiBisenzio: ComuneConfig = {
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (29/10/2026).
 campiBisenzio.percorsoTerritorio = percorso(campiBisenzio.puntiSupporto, [0]);
+campiBisenzio.percorsoTerritorio = { ...campiBisenzio.percorsoTerritorio, 1: [INPS_PRIMA_FASE] };

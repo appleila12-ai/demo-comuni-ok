@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_PRIMA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Alghero (SS) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
@@ -61,3 +62,4 @@ export const alghero: ComuneConfig = {
 };
 
 alghero.percorsoTerritorio = percorso(alghero.puntiSupporto, [2]);
+alghero.percorsoTerritorio = { ...alghero.percorsoTerritorio, 1: [INPS_PRIMA_FASE] };

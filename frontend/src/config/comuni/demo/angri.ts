@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_PRIMA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Angri (SA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (15 ottobre 2026).
@@ -61,3 +62,4 @@ export const angri: ComuneConfig = {
 };
 
 angri.percorsoTerritorio = percorso(angri.puntiSupporto, [2]);
+angri.percorsoTerritorio = { ...angri.percorsoTerritorio, 1: [INPS_PRIMA_FASE] };

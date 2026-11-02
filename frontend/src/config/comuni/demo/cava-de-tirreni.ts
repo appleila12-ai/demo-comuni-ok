@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { INPS_PRIMA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
 // Comune di Cava de' Tirreni (SA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
@@ -62,3 +63,4 @@ export const cavaDeTirreni: ComuneConfig = {
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (29/10/2026).
 cavaDeTirreni.percorsoTerritorio = percorso(cavaDeTirreni.puntiSupporto, [0]);
+cavaDeTirreni.percorsoTerritorio = { ...cavaDeTirreni.percorsoTerritorio, 1: [INPS_PRIMA_FASE] };
