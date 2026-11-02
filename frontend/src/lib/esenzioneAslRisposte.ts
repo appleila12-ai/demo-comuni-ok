@@ -638,3 +638,63 @@ ESENZIONE_ASL.gorizia = {
     "L'ufficio non ha scritto l'indirizzo e-mail e la PEC, né se serve l'appuntamento o i tempi di rilascio: li trovi sulla pagina ASUGI o chiamando l'ufficio.",
   fonte: "ASUGI · risposta scritta dell'Ufficio Anagrafe Sanitaria di Gorizia del 30/10/2026",
 };
+
+// ASL Bari, Distretto unico di Bari: Guida ai Servizi del Distretto e pagine "Tipologia procedimenti amministrativi" e informativa
+// dell'Anagrafe (sist.sanita.puglia.it), lette il 02/11/2026. I documenti non riportano una data di redazione.
+ESENZIONE_ASL.bari = {
+  asl: "ASL Bari · Distretto unico di Bari",
+  intro:
+    "L'attestato di esenzione per patologia è rilasciato dagli operatori dell'Anagrafe assistibili del Distretto, dopo la verifica del diritto da parte del medico dei servizi. Per l'esenzione per invalidità civile, di lavoro, di servizio o di guerra serve il verbale di invalidità.",
+  titoloPassi: "Dove si presenta",
+  comeSiPresenta: [
+    "Per e-mail all'Anagrafe sanitaria del Distretto, indicando sempre un numero di telefono e un indirizzo e-mail per eventuali contatti",
+    "Oppure consegnando l'istanza di persona, con fotocopie, in una delle sedi dell'Anagrafe: via Caduti di Via Fani 25 (Murat), via Aquilino 1 (Japigia), vico Traversa 11 (Santo Spirito), presso l'Ospedale Di Venere (Carbonara), via Cacudi 31 (San Paolo), via Giulio Petroni 47 (Carrassi)",
+    "Orari di consegna: dal lunedì al venerdì 8:00–12:00. Più un pomeriggio 15:00–17:00: martedì a Murat, Santo Spirito e Carbonara; giovedì a Japigia e Carrassi; mercoledì a San Paolo",
+    "Il rilascio è «in tempo reale salvo casi particolari»",
+  ],
+  documenti: [
+    "Per patologia e malattia rara: certificazione specialistica di struttura pubblica oppure cartella clinica; copia della tessera sanitaria; copia del documento di identità",
+    "Per invalidità civile, lavoro, servizio, guerra: verbale di invalidità; copia della tessera sanitaria; copia del documento di identità",
+  ],
+  mail: "anagrafesanitaria.dssbari@asl.bari.it",
+  telefoni: [{ etichetta: "Anagrafe sanitaria · informazioni telefoniche", numero: "080 5842719" }],
+  paginaUrl: "https://sist.sanita.puglia.it/de/web/asl-bari/distretti-socio-sanitari_det/-/journal_content/56/25619/dss-unico-bari",
+  paginaLabel: "Pagina ASL Bari · Distretto unico di Bari",
+  manca:
+    "I documenti dell'ASL che descrivono la procedura non riportano una data di aggiornamento. Non sono indicati i tempi specifici per l'esenzione per invalidità né se serve l'appuntamento.",
+  fonte: "ASL Bari · Guida ai Servizi del Distretto, procedimenti amministrativi e informativa dell'Anagrafe (sist.sanita.puglia.it)",
+};
+
+// ASL Salerno: pagina "Esenzione ticket" (aslsalerno.it), letta il 02/11/2026; la pagina non riporta una data di aggiornamento.
+function aslSalerno(distretto: string, mail: string): SchedaEsenzioneAsl {
+  return {
+    asl: `ASL Salerno · Distretto di ${distretto}`,
+    intro:
+      "L'esenzione per malattie croniche si chiede al Servizio di medicina di base del Distretto di appartenenza, presentando una certificazione che attesti una o più malattie dell'elenco, rilasciata da una struttura ospedaliera o ambulatoriale pubblica. Con questa si ottiene un attestato di esenzione con il codice della malattia e le prestazioni esenti.",
+    titoloPassi: "Come si presenta la richiesta",
+    comeSiPresenta: [
+      "Di persona agli Sportelli Esenzione del Distretto di appartenenza",
+      `Oppure per e-mail ordinaria all'indirizzo del proprio distretto di residenza (${mail}), allegando in PDF carta di identità e tessera sanitaria (fronte e retro): la risposta con il certificato provvisorio di esenzione arriva sulla stessa casella. La pagina indica questa via per chi chiede l'autocertificazione per la prima volta per reddito o per patologia/condizione`,
+    ],
+    documenti: [
+      "Certificazione di una o più malattie dell'elenco, rilasciata da una struttura ospedaliera o ambulatoriale pubblica. Sono validi anche: cartella clinica di una struttura ospedaliera pubblica; verbale di invalidità; cartella clinica di una struttura ospedaliera privata accreditata (previa valutazione del medico del Distretto sanitario); certificati delle Commissioni mediche degli Ospedali militari; certificazioni di istituzioni sanitarie pubbliche di Paesi dell'Unione europea",
+      "Carta di identità e tessera sanitaria (fronte e retro) in PDF se si scrive per e-mail",
+    ],
+    mail,
+    telefoni: [],
+    paginaUrl: "https://www.aslsalerno.it/pagina2502_esenzione-ticket.html",
+    paginaLabel: "Pagina ASL Salerno · Esenzione ticket",
+    manca:
+      "La pagina non indica indirizzo, telefono e orari degli Sportelli Esenzione, né l'appuntamento. Per l'esenzione per invalidità non descrive documenti né ufficio. La pagina non riporta la data di aggiornamento.",
+    fonte: "ASL Salerno · pagina «Esenzione ticket» (aslsalerno.it)",
+  };
+}
+ESENZIONE_ASL["nocera-inferiore"] = aslSalerno("Nocera Inferiore", "ds60.ticket@aslsalerno.it");
+ESENZIONE_ASL.angri = aslSalerno("Angri/Scafati", "ds61.ticket@aslsalerno.it");
+ESENZIONE_ASL.scafati = aslSalerno("Angri/Scafati", "ds61.ticket@aslsalerno.it");
+ESENZIONE_ASL.sarno = aslSalerno("Sarno/Pagani", "ds62.ticket@aslsalerno.it");
+ESENZIONE_ASL.pagani = aslSalerno("Sarno/Pagani", "ds62.ticket@aslsalerno.it");
+ESENZIONE_ASL["cava-de-tirreni"] = aslSalerno("Cava de' Tirreni/Costa d'Amalfi", "ds63.ticket@aslsalerno.it");
+ESENZIONE_ASL.eboli = aslSalerno("Eboli/Buccino", "ds64.ticket@aslsalerno.it");
+ESENZIONE_ASL.battipaglia = aslSalerno("Battipaglia", "ds65.ticket@aslsalerno.it");
+ESENZIONE_ASL.salerno = aslSalerno("Salerno", "ds66.ticket@aslsalerno.it");
