@@ -170,7 +170,7 @@ export const SPORTELLI_ASL5: SportelloAsl5[] = [
 ];
 
 export const NOTA_SPORTELLI =
-  "Sedi, orari, telefoni e mail sono quelli della pagina dell'ASL 5 sull'anagrafe sanitaria (letta il 02/11/2026; la pagina non indica la data di aggiornamento). L'ufficio relazioni con il pubblico dell'ASL ha confermato il 30/10/2026 che i dati pubblicati lì sono corretti. Se dall'ASL cambia qualcosa, controlla la pagina ufficiale.";
+  "L'ASL scrive che ci si rivolge al presidio di competenza, individuato in base alla residenza anagrafica (o al domicilio sanitario). Sedi, orari, telefoni e mail sono quelli della pagina dell'ASL 5 sull'anagrafe sanitaria (letta il 02/11/2026; la pagina non indica la data di aggiornamento). L'ufficio relazioni con il pubblico dell'ASL ha confermato il 30/10/2026 che i dati pubblicati lì sono corretti. Se dall'ASL cambia qualcosa, controlla la pagina ufficiale.";
 
 export const FONTE_ESENZIONE =
   "Scheda ASL 5 · Dipartimento Cure Primarie · Distretti 17-18-19; risposta scritta dell'URP ASL 5 del 30/10/2026";
