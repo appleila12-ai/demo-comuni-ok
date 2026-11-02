@@ -27,6 +27,28 @@ export const ESEMPI = [
   "Prenotare una visita",
 ];
 
+/**
+ * Gli strumenti della Home. Se la ricerca non trova nulla vengono mostrati tutti,
+ * così nessuna funzione resta irraggiungibile. Tenere allineato con l'elenco in app/index.tsx.
+ */
+export const STRUMENTI: { titolo: string; route: string }[] = [
+  { titolo: "Progetto di Vita", route: "/progetto" },
+  { titolo: "La mia pratica", route: "/tracker" },
+  { titolo: "Aiuti e contatti", route: "/territorio" },
+  { titolo: "I miei diritti", route: "/diritti" },
+  { titolo: "Lettere pronte", route: "/lettere" },
+  { titolo: "Reclamo liste d'attesa", route: "/reclamo-attese" },
+  { titolo: "Le mie scadenze", route: "/scadenze" },
+  { titolo: "Il mio cassetto", route: "/cassetto" },
+  { titolo: "Salute vicino a te", route: "/salute" },
+  { titolo: "Associazioni e sport", route: "/associazioni" },
+  { titolo: "I miei salvati", route: "/salvati" },
+  { titolo: "Domande frequenti", route: "/faq" },
+  { titolo: "Glossario", route: "/faq?sezione=glossario" },
+  { titolo: "Lavoro e disabilità", route: "/lavoro" },
+  { titolo: "Importi aggiornati", route: "/importi" },
+];
+
 const RISPOSTE: Risposta[] = [
   // --- Riconoscimento ---
   { id: "invalidita", titolo: "Chiedere l'invalidità civile e la 104", testo: "Si parte dal medico di famiglia, che invia online all'INPS il certificato introduttivo. Poi arriva la convocazione a visita.", route: "/percorso", bottone: "Il percorso passo passo", chiavi: ["invalidita", "invalidità", "domanda invalidita", "riconoscimento", "richiedere la 104", "richiesta 104", "ottenere la 104", "come si ottiene la 104", "domanda 104", "richiedere", "ottenere", "certificato medico", "certificato introduttivo", "legge 104", "104", "handicap", "percentuale", "visita inps", "commissione"] },
@@ -48,7 +70,7 @@ const RISPOSTE: Risposta[] = [
   { id: "esenzione-asl5", titolo: "Esenzione ticket: cosa portare (ASL 5)", testo: "Per patologia cronica o invalidità: i documenti da portare, per te, per un figlio minore o se sei tutore, e come presentare la richiesta all'ASL 5 della Spezia.", route: "/esenzione-ticket", bottone: "Cosa portare per l'esenzione", chiavi: ["esenzione ticket", "esenzione patologia", "esenzione invalidita", "libretto sanitario", "codice esenzione", "esenzione asl", "asl 5", "asl5", "patologia cronica", "ticket", "esenzione"] },
   { id: "ticket", titolo: "Esenzione dal ticket", testo: "Con un riconoscimento di invalidità o per patologia puoi non pagare il ticket: porta il verbale allo sportello dell'azienda sanitaria.", route: "/primi-passi", bottone: "Primi passi", chiavi: ["ticket", "esenzione", "non pagare visite", "codice esenzione"] },
   { id: "contrassegno", titolo: "Contrassegno per il parcheggio", testo: "Per chi ha gravi difficoltà a camminare o è non vedente. Si chiede al Comune con il certificato medico e dura 5 anni.", route: "/agevolazioni", bottone: "Bonus e agevolazioni", chiavi: ["contrassegno", "parcheggio", "cude", "posto auto disabili", "pass disabili"] },
-  { id: "lavoro", titolo: "Lavoro e disabilità", testo: "Con invalidità dal 46% puoi iscriverti al collocamento mirato al Centro per l'impiego.", route: "/agevolazioni", bottone: "Bonus e agevolazioni", chiavi: ["lavoro", "cerco lavoro", "collocamento mirato", "categorie protette", "assunzione", "disoccupato"] },
+  { id: "lavoro", titolo: "Lavoro e disabilità", testo: "Con invalidità dal 46% puoi iscriverti al collocamento mirato al Centro per l'impiego.", route: "/lavoro", bottone: "Lavoro e disabilità", chiavi: ["lavoro", "lavoro e disabilita", "cerco lavoro", "cerco un lavoro", "trovare lavoro", "collocamento mirato", "categorie protette", "centro per l'impiego", "inserimento lavorativo", "assunzione", "disoccupato"] },
 
   // --- Progetto di Vita e servizi ---
   { id: "progetto", titolo: "Progetto di Vita", testo: "Il piano costruito con i servizi a partire da ciò che conta per te. Preparalo con calma prima dell'incontro con l'équipe (UVM).", route: "/progetto", bottone: "Il mio Progetto di Vita", chiavi: ["progetto di vita", "progetto", "uvm", "equipe", "desideri", "piano personalizzato", "vita indipendente"] },
@@ -70,6 +92,20 @@ const RISPOSTE: Risposta[] = [
   { id: "sport", titolo: "Sport per persone con disabilità", testo: "Società sportive e sport paralimpico vicino a te: nuoto, equitazione, atletica, calcio integrato e altro.", route: "/associazioni?tipo=sport", bottone: "Sport nella tua zona", chiavi: ["sport", "sportiva", "paralimpico", "piscina", "nuoto", "calcio", "palestra", "special olympics", "equitazione", "cavallo", "attivita fisica"] },
   { id: "salvati", titolo: "I miei salvati", testo: "Qui ritrovi pagine, servizi e contatti che hai salvato con il segnalibro.", route: "/salvati", bottone: "Apri i salvati", chiavi: ["salvati", "salvato", "preferiti", "segnalibro", "messo da parte", "ritrovare"] },
   { id: "emergenza", titolo: "Emergenza", testo: "In caso di pericolo chiama subito il 112.", route: "/salute", bottone: "Salute vicino a te", chiavi: ["emergenza", "112", "118", "ambulanza urgente", "sta male", "pronto soccorso"] },
+
+  // --- Strumenti della Home ---
+  // Ogni strumento elencato nella Home deve poter essere trovato scrivendone il nome o
+  // le parole con cui la persona lo chiede. I testi sono gli stessi già mostrati nella Home.
+  { id: "reclamo", titolo: "Reclamo liste d'attesa", testo: "Modulo pronto per l'invio: visita o esame oltre i tempi del medico.", route: "/reclamo-attese", bottone: "Apri il modulo di reclamo", chiavi: ["reclamo", "reclami", "fare un reclamo", "fare reclamo", "reclamo liste d'attesa", "reclamo liste di attesa", "reclamo attese", "reclamo asl", "reclamo visita", "reclamo esame", "modulo reclamo", "lamentela", "liste d'attesa", "liste di attesa", "lista d'attesa", "lista di attesa", "tempi di attesa", "attesa troppo lunga", "visita troppo lontana", "esame troppo lontano", "visita oltre i tempi", "esame oltre i tempi", "visita in ritardo", "esame in ritardo", "attesa visita", "attesa esame", "oltre i tempi", "tempi di una visita", "tempi di un esame"] },
+  { id: "salute", titolo: "Salute vicino a te", testo: "Prenota visite, farmacie di turno, guardia medica.", route: "/salute", bottone: "Salute vicino a te", chiavi: ["salute", "salute vicino a te", "vicino a te", "vicino a me"] },
+  { id: "cassetto", titolo: "Il mio cassetto", testo: "Documenti, pratiche, scadenze e appunti in un'unica vista.", route: "/cassetto", bottone: "Apri il mio cassetto", chiavi: ["cassetto", "il mio cassetto", "appunti", "appunti delle lettere", "unica vista", "carica documento", "caricare un documento", "copia di sicurezza", "copia dei dati", "backup", "documenti"] },
+  { id: "scadenze", titolo: "Le mie scadenze", testo: "Ricorsi, revisioni, ISEE: promemoria sul calendario.", route: "/scadenze", bottone: "Le mie scadenze", chiavi: ["scadenza", "scadenze", "le mie scadenze", "promemoria", "promemoria gentili", "calendario", "ricordami", "agenda", "appuntamenti", "contatti utili", "rubrica"] },
+  { id: "bonus-contributi", titolo: "Bonus e contributi", testo: "Le misure della tua Regione e del tuo Comune: per chi sono, cosa si ottiene e come si chiedono.", route: "/bonus", bottone: "Bonus e contributi", chiavi: ["bonus e contributi", "contributi", "contributo", "bonus regionali", "bonus regione", "bonus comunali", "bonus comune", "sussidio", "sussidi", "misure regionali"] },
+  { id: "faq", titolo: "Domande frequenti", testo: "Le risposte ai dubbi più comuni.", route: "/faq", bottone: "Domande frequenti", chiavi: ["domande frequenti", "faq", "dubbi", "domande e risposte"] },
+  { id: "glossario", titolo: "Glossario", testo: "Le parole della burocrazia, spiegate semplici.", route: "/faq?sezione=glossario", bottone: "Apri il glossario", chiavi: ["glossario", "parole difficili", "parole della burocrazia", "cosa significa", "significato", "sigla", "sigle", "vocabolario"] },
+  { id: "hub", titolo: "Orientarsi insieme", testo: "Dove sei adesso e qual è il prossimo passo: sei tappe, da seguire nell'ordine che preferisci.", route: "/hub", bottone: "Orientarsi insieme", chiavi: ["orientarsi", "orientarsi insieme", "non so da dove cominciare", "non so da dove iniziare", "da dove parto", "dove mi trovo", "sei tappe", "tutte le tappe", "percorso completo"] },
+  { id: "scegli-comune", titolo: "Scegli il tuo Comune", testo: "Contatti e servizi cambiano in base al Comune: puoi sceglierne o cambiarne uno.", route: "/comuni", bottone: "Scegli il Comune", chiavi: ["cambiare comune", "cambia comune", "scegliere il comune", "scegli il comune", "scegli il tuo comune", "altro comune", "comune diverso", "non sono di", "non abito qui", "comune non trovato"] },
+  { id: "per-comuni", titolo: "Sei un Comune o un ente?", testo: "Se rappresenti un Comune o un ente, da qui puoi metterti in contatto con TutelApp.", route: "/per-i-comuni", bottone: "Contattaci", chiavi: ["sono un comune", "sono un ente", "per i comuni", "per comuni", "aderire", "adesione", "sono un sindaco", "sono un assessore"] },
 ];
 
 // ---------- normalizzazione e confronto ----------
