@@ -740,7 +740,23 @@ ESENZIONE_ASL.catanzaro = {
     "L'ASP non ha indicato indirizzi e orari degli sportelli, se serve l'appuntamento, se si può inviare per mail o PEC né i tempi di rilascio: chiedili all'URP dell'ASP o al tuo distretto.",
   fonte: "ASP Catanzaro · risposta scritta dell'URP del 02/11/2026",
 };
-ESENZIONE_ASL["lamezia-terme"] = { ...ESENZIONE_ASL.catanzaro };
+// Lamezia Terme: in più i dati della pagina ufficiale del Servizio (aggiornata il 15/10/2026, letta il 02/11/2026).
+ESENZIONE_ASL["lamezia-terme"] = {
+  ...ESENZIONE_ASL.catanzaro,
+  intro:
+    "A Lamezia Terme la richiesta di esenzione per patologia si presenta agli sportelli del Servizio Assistenza Integrativa ed Esenzione Ticket del Distretto, in Piazza Borelli 12, piano terra.",
+  comeSiPresenta: [
+    "Di persona agli sportelli del Servizio Assistenza Integrativa ed Esenzione Ticket, Distretto Socio Sanitario di Lamezia Terme, Piazza Borelli 12, piano terra",
+  ],
+  telefoni: [{ etichetta: "Segreteria del Servizio (11:30–12:30)", numero: "0968 208403" }],
+  paginaUrl:
+    "https://www.asp.cz.it/distretti-sanitari/distretto-socio-sanitario-di-lamezia-terme/cure-primarie-servizio-assistenza-integrativa-ed-esenzione-ticket/",
+  paginaLabel: "Servizio Assistenza Integrativa ed Esenzione Ticket · ASP Catanzaro",
+  manca:
+    "La pagina dell'ASP non indica i giorni e gli orari di apertura al pubblico, se serve l'appuntamento, se si può inviare per mail o PEC né i tempi di rilascio: chiedili alla segreteria al telefono.",
+  fonte:
+    "ASP Catanzaro · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale del Servizio (aggiornata il 15/10/2026)",
+};
 
 // ASST Lecco: l'Ufficio di Pubblica Tutela ha indicato solo la pagina ufficiale con l'elenco delle esenzioni (02/11/2026).
 ESENZIONE_ASL.lecco = {
