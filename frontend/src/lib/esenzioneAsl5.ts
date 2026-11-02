@@ -1,8 +1,10 @@
 // Esenzione ticket per patologia cronica o invalidità: scheda dell'ASL 5 Spezzino.
 // Fonte unica: scheda "Esenzione per patologia - invalidità" del Dipartimento Cure
 // Primarie, Distretti 17-18-19, ASL 5 (documento ufficiale "Schede attività anagrafe sanitaria").
-// Qui non c'è nulla che non sia scritto in quella scheda: indirizzi mail e orari dei
-// distretti NON sono nel documento e quindi non si inseriscono finché l'ASL non li conferma.
+// Qui non c'è nulla che non sia scritto in quella scheda o nella risposta scritta dell'URP
+// (30/10/2026): l'URP ha verificato con i Distretti che i dati della pagina sull'anagrafe
+// sanitaria sono corretti e ha indicato quali Comuni fanno capo a ciascun distretto.
+// Mail e orari degli sportelli NON sono riportati qui: si rimanda alla pagina ufficiale.
 // Da ricontrollare con l'ASL almeno una volta l'anno.
 
 export type CasoEsenzione = "io" | "minore" | "tutela";
@@ -65,6 +67,37 @@ export const NOTA_MAIL =
   "Se mandi la richiesta per mail ordinaria (non PEC), nel modulo va compilata anche l'autorizzazione all'invio di documenti per posta elettronica non certificata, con l'indirizzo mail, la data e la firma.";
 
 export const NOTA_MANCA =
-  "In questa scheda dell'ASL non ci sono gli indirizzi mail dei distretti né i loro orari di accesso libero. Li trovi sul sito di ASL 5 alla pagina dell'esenzione ticket, oppure puoi chiamare il centralino.";
+  "Gli indirizzi mail e gli orari di apertura degli sportelli del tuo distretto sono sulla pagina dell'ASL 5 sull'anagrafe sanitaria. L'ufficio relazioni con il pubblico (URP) dell'ASL ha confermato che i dati pubblicati lì sono corretti. Se hai dubbi, puoi chiamare il centralino.";
 
-export const FONTE_ESENZIONE = "Scheda ASL 5 · Dipartimento Cure Primarie · Distretti 17-18-19";
+/** Pagina indicata dall'URP di ASL 5 (30/10/2026) per sedi, mail e orari degli sportelli */
+export const URL_ANAGRAFE_ASL5 =
+  "https://www.asl5.liguria.it/PerilCittadino/Serviziterritoriali/CurePrimarieeAttivit%C3%A0Distrettuali/Attivit%C3%A0dianagrafesanitaria.aspx";
+
+/**
+ * Comuni per distretto, come comunicato dall'URP di ASL 5 il 30/10/2026.
+ * Distretto 17: elenco sotto; Distretto 18: Portovenere, La Spezia, Lerici;
+ * Distretto 19: "i restanti" Comuni della provincia.
+ */
+const DISTRETTO_17 = [
+  "Levanto", "Beverino", "Bolano", "Bonassola", "Borghetto Vara", "Brugnato",
+  "Calice al Cornoviglio", "Carrodano", "Deiva Marina", "Follo", "Framura",
+  "Monterosso", "Monterosso al Mare", "Pignone", "Riccò del Golfo", "Riomaggiore",
+  "Rocchetta Vara", "Sesta Godano", "Vernazza", "Zignago",
+];
+const DISTRETTO_18 = ["Portovenere", "La Spezia", "Lerici"];
+
+const chiave = (nome: string) =>
+  nome.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z]/g, "");
+
+export type DistrettoAsl5 = 17 | 18 | 19;
+
+/** Distretto ASL 5 di un Comune della provincia della Spezia (dal nome del Comune) */
+export function distrettoAsl5(nomeComune: string): DistrettoAsl5 {
+  const k = chiave(nomeComune);
+  if (DISTRETTO_17.some((c) => chiave(c) === k)) return 17;
+  if (DISTRETTO_18.some((c) => chiave(c) === k)) return 18;
+  return 19;
+}
+
+export const FONTE_ESENZIONE =
+  "Scheda ASL 5 · Dipartimento Cure Primarie · Distretti 17-18-19; risposta scritta dell'URP ASL 5 del 30/10/2026";

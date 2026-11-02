@@ -17,6 +17,8 @@ import {
   DOCUMENTI_COMUNI,
   DOCUMENTI_PER_CASO,
   FONTE_ESENZIONE,
+  URL_ANAGRAFE_ASL5,
+  distrettoAsl5,
   NOTA_DOMICILIO_SANITARIO,
   NOTA_MAIL,
   NOTA_MANCA,
@@ -157,9 +159,25 @@ export default function EsenzioneTicket() {
         <Text style={[paginaStili.testo, { marginTop: spacing.md }]}>{NOTA_MAIL}</Text>
       </View>
 
+      <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+        Il tuo distretto
+      </Text>
+      <View style={paginaStili.card} testID="esenzione-distretto">
+        <Text style={paginaStili.testo}>
+          {comune.nomeBreve} fa capo al Distretto {distrettoAsl5(comune.nomeBreve)} dell&apos;ASL 5. La
+          richiesta va fatta allo sportello o all&apos;indirizzo mail del tuo distretto.
+        </Text>
+      </View>
       <Avviso>{NOTA_MANCA}</Avviso>
       <Bottone
+        label="Sportelli, mail e orari del distretto"
+        icon="open-outline"
+        onPress={() => apri(URL_ANAGRAFE_ASL5)}
+        testID="esenzione-ticket-sportelli"
+      />
+      <Bottone
         label="Pagina ASL 5 sull'esenzione ticket"
+        variante="vuoto"
         icon="open-outline"
         onPress={() => apri(ASL5_ESENZIONE.action.value)}
         testID="esenzione-ticket-asl5"
