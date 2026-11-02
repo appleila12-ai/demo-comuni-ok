@@ -2051,7 +2051,7 @@ export const BONUS: Bonus[] = [
       url: "https://delibere.regione.sardegna.it/delibera/116719",
     },
     verificatoIl: "02/11/2026",
-    nota: "L'ISEE sociosanitario riduce il contributo: nessuna riduzione fino a 15.000 euro (base A, base B e primo livello), 25.000 (secondo) e 40.000 (terzo). Oltre queste soglie la riduzione sale per fasce, fino all'80% sopra 80.000, 90.000 e 100.000 euro. Per le dimissioni protette la riduzione parte sopra 50.000 euro (10%, poi 20% e 30%). Gli importi sono massimi di progetto, non un accredito automatico. Il testo completo delle linee è l'allegato alla delibera.",
+    nota: "L'ISEE sociosanitario riduce il contributo: nessuna riduzione fino a 15.000 euro (base A, base B e primo livello), 25.000 (secondo) e 40.000 (terzo). Oltre queste soglie la riduzione sale per fasce, fino all'80% sopra 80.000, 90.000 e 100.000 euro. Per le dimissioni protette la riduzione parte sopra 50.000 euro (10%, poi 20% e 30%). Gli importi sono massimi di progetto, non un accredito automatico. Il testo completo delle linee è l'allegato alla delibera, pubblicato dalla Regione.",
   },
   {
     id: "sardegna-piani-162-98-2026",
@@ -2183,17 +2183,17 @@ export const BONUS: Bonus[] = [
     perChi:
       "La persona con disabilità o chi l'ha fiscalmente a carico, intestatario del veicolo. Categorie ammesse: ridotte o impedite capacità motorie permanenti; grave limitazione della deambulazione o pluriamputazioni; disabilità mentale o psichica con handicap grave e accompagnamento; cecità o sordità.",
     cosa:
-      "Esenzione dal bollo per un solo veicolo. Limiti di cilindrata: 2000 cc a benzina, 2800 cc a gasolio. Per le ridotte capacità motorie il veicolo deve avere gli adattamenti necessari; nelle altre categorie no.",
+      "Esenzione dal bollo per un solo veicolo. Limiti per le persone con disabilità: 2000 cc a benzina, 2800 cc a gasolio; ibrido a benzina fino a 2000 cc, ibrido a gasolio fino a 2800 cc; elettrico con potenza non superiore a 150 kW. Per le ridotte capacità motorie il veicolo deve avere gli adattamenti necessari; nelle altre categorie no.",
     stato: "attivo",
     quando: "Misura permanente. Nessuna scadenza indicata.",
     comeSiChiede:
       "La richiesta è indirizzata alla Regione Campania, Direzione Generale Risorse Finanziarie, UOS Gestione amministrativa e contabile delle tasse e dei tributi regionali (Centro Direzionale Isola C5, 80143 Napoli). Si consegna alle Unità territoriali ACI, agli Automobile Club, alle Delegazioni ACI o alle agenzie convenzionate. Serve la carta di circolazione e, se il veicolo è intestato a un familiare, la documentazione o l'autocertificazione del carico fiscale. La targa va indicata nella domanda.",
     fonte: {
-      label: "Regione Campania · Tassa automobilistica (con tabella ACI delle esenzioni)",
-      url: "https://entrate.regione.campania.it/tassa-automobilistica-info",
+      label: "ACI · Guida al bollo auto, Regione Campania (aggiornata al 25/08/2026) e Regione Campania · Tassa automobilistica",
+      url: "https://aci.gov.it/approfondimento/guida-al-bollo-auto/regioni-e-province-autonome-convenzionate/regione-campania/",
     },
     verificatoIl: "02/11/2026",
-    nota: "I documenti cambiano con la categoria: verbale di handicap grave, certificazioni pubbliche di cecità o sordità, patente speciale per le capacità motorie ridotte. Controlla l'elenco sulla pagina. I limiti per alimentazioni diverse da benzina e gasolio non sono nelle fonti lette.",
+    nota: "I documenti cambiano con la categoria: verbale di handicap grave, certificazioni pubbliche di cecità o sordità, patente speciale per le capacità motorie ridotte. Controlla l'elenco sulla pagina. Per GPL e metano la guida ACI non indica un limite specifico: chiedi all'ACI o alla Regione. Guida ACI Campania aggiornata al 25/08/2026.",
   },
 
   // ------------------------------------------------------------------ MOLISE
