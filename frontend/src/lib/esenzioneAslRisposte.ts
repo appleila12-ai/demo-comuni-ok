@@ -441,18 +441,25 @@ const ASL_BARI: SchedaEsenzioneAsl = {
 };
 for (const slug of ["bari", "altamura", "bitonto", "corato", "gravina-in-puglia", "modugno", "mola-di-bari", "molfetta", "monopoli"]) ESENZIONE_ASL[slug] = ASL_BARI;
 
-// ASL Città di Torino: risposta scritta dell'URP (29/10/2026). L'URP indica solo la pagina dell'ASL.
+// ASL Città di Torino: risposta scritta dell'URP (29/10/2026) e pagina ufficiale dell'ASL «Richiedere l'esenzione ticket» (aggiornata il 16/06/2026, letta il 02/11/2026).
 ESENZIONE_ASL.torino = {
   asl: "ASL Città di Torino",
   intro:
-    "L'URP dell'ASL Città di Torino indica che tutte le informazioni su come richiedere l'esenzione ticket sono sulla pagina dedicata del sito dell'Azienda.",
+    "L'ASL Città di Torino indica che l'esenzione ticket per patologia (malattie croniche, malattie rare, malattie invalidanti, patologie oncologiche, attesa di trapianto) si chiede presso gli sportelli amministrativi del Distretto di competenza territoriale.",
+  titoloPassi: "Come si chiede",
+  comeSiPresenta: ["Agli sportelli amministrativi del Distretto di competenza per la tua residenza"],
+  documenti: [
+    "Documentazione medica che attesti la patologia",
+    "Copia del codice fiscale / tessera sanitaria",
+    "Copia del documento di identità",
+  ],
   mail: "urp@aslcittaditorino.it",
   telefoni: [],
   paginaUrl: "https://www.aslcittaditorino.it/come-fare-per/richiedere-lesenzione-ticket/",
   paginaLabel: "Richiedere l'esenzione ticket · ASL Città di Torino",
   manca:
-    "L'ASL non ha scritto i passaggi nella risposta, ma rimanda alla sua pagina: documenti, sportelli e tempi sono lì. I recapiti telefonici dell'URP sono su aslcittaditorino.it/urp.",
-  fonte: "ASL Città di Torino · risposta scritta dell'URP del 29/10/2026",
+    "La pagina non indica sedi e orari degli sportelli, se serve l'appuntamento, se si può inviare per mail né i tempi di rilascio: chiedili al tuo Distretto o all'URP (urp@aslcittaditorino.it).",
+  fonte: "ASL Città di Torino · pagina ufficiale sull'esenzione ticket (aggiornata il 16/06/2026) e risposta scritta dell'URP del 29/10/2026",
 };
 
 // ATS Brescia: l'esenzione non è gestita dall'ATS ma dalle tre ASST (risposta scritta del 30/10/2026).
