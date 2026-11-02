@@ -2039,19 +2039,19 @@ export const BONUS: Bonus[] = [
     regione: "Sardegna",
     titolo: "Ritornare a casa PLUS (linee 2026-2027)",
     perChi:
-      "Persone non autosufficienti valutate dall'Unità di Valutazione Territoriale (UVT). Serve l'indennità di accompagnamento oppure una delle certificazioni alternative di non autosufficienza ammesse. L'ISEE sociosanitario conta, con riduzioni per fasce: le tabelle complete sono nell'allegato della delibera.",
+      "Persone non autosufficienti valutate dall'Unità di Valutazione Territoriale (UVT). Serve l'indennità di accompagnamento. In alternativa vanno bene la certificazione dell'allegato 3 del DPCM 159/2013, l'accertamento del D.Lgs. 29/2024 per gli over 70 o quello del D.Lgs. 62/2024. Si può presentare la domanda con riserva di integrare il verbale.",
     cosa:
-      "Un progetto personalizzato a domicilio, con un contributo. Importi massimi del progetto: dimissioni protette 1.700 euro per 30 giorni; livello base A 4.000 euro; base B 7.400 euro; primo livello 16.000 euro; secondo livello 16.000 euro più 9.000 di potenziamento; terzo livello 16.000 euro più 27.000 di potenziamento. Gli altri livelli sono su 12 mensilità. Chi assiste può avere una quota per il caregiver, già compresa nel progetto: al massimo il 50% del contributo per i livelli base A e B, e al massimo un terzo della parte ordinaria per il primo, secondo e terzo livello.",
+      "Un progetto personalizzato a domicilio, con un contributo. Importi massimi del progetto: dimissioni protette 1.700 euro (30 giorni, una volta nell'anno); base A 4.000 euro; base B 7.400 euro; primo livello 16.000 euro; secondo livello 16.000 euro più 9.000 di potenziamento; terzo livello 16.000 euro più 27.000 di potenziamento. Importi su 12 mesi. Per chi assiste c'è una quota per il caregiver, compresa nel progetto: al massimo il 50% nei livelli base A e B, al massimo un terzo del solo contributo ordinario nel primo, secondo e terzo livello; non per le dimissioni protette.",
     stato: "attivo",
-    quando: "Linee guida 2026-2027, pubblicate il 15/01/2026. Nessuna scadenza indicata: i nuovi progetti dipendono dalle risorse disponibili.",
+    quando: "Linee d'indirizzo 2026-2027 (delibera della Giunta n. 1/28 del 14/01/2026, pubblicata il 15/01/2026). Nessuna scadenza indicata.",
     comeSiChiede:
-      "La persona, un familiare o un delegato presenta la richiesta al Comune o al Punto Unico di Accesso (PUA). Poi valutano il PLUS e l'UVT.",
+      "Si presenta la richiesta al Comune di residenza o al Punto Unico di Accesso (PUA), che la trasmette all'Ambito PLUS.",
     fonte: {
-      label: "Regione Sardegna · Delibera della Giunta regionale (linee Ritornare a casa PLUS 2026-2027)",
+      label: "Regione Sardegna · Delibera n. 1/28 del 14/01/2026, Ritornare a casa PLUS, linee d'indirizzo 2026-2027",
       url: "https://delibere.regione.sardegna.it/delibera/116719",
     },
-    verificatoIl: "30/10/2026",
-    nota: "Gli importi sono massimali del progetto, non un accredito automatico. La quota caregiver non si somma per intero al contributo. In alcuni casi il Comune cofinanzia.",
+    verificatoIl: "02/11/2026",
+    nota: "L'ISEE sociosanitario riduce il contributo: nessuna riduzione fino a 15.000 euro (base A, base B e primo livello), 25.000 (secondo) e 40.000 (terzo). Oltre queste soglie la riduzione sale per fasce, fino all'80% sopra 80.000, 90.000 e 100.000 euro. Per le dimissioni protette la riduzione parte sopra 50.000 euro (10%, poi 20% e 30%). Gli importi sono massimi di progetto, non un accredito automatico. Il testo completo delle linee è l'allegato alla delibera.",
   },
   {
     id: "sardegna-piani-162-98-2026",
@@ -2180,17 +2180,20 @@ export const BONUS: Bonus[] = [
     id: "campania-esenzione-bollo",
     regione: "Campania",
     titolo: "Esenzione dalla tassa automobilistica (bollo) per veicoli di persone con disabilità",
-    perChi: "Intestatari e familiari fiscalmente a carico di persone che rientrano nelle categorie sanitarie previste. Categorie, documenti e limiti del veicolo sono sulla pagina della Regione.",
-    cosa: "Esenzione dal bollo per un solo veicolo ammesso.",
+    perChi:
+      "La persona con disabilità o chi l'ha fiscalmente a carico, intestatario del veicolo. Categorie ammesse: ridotte o impedite capacità motorie permanenti; grave limitazione della deambulazione o pluriamputazioni; disabilità mentale o psichica con handicap grave e accompagnamento; cecità o sordità.",
+    cosa:
+      "Esenzione dal bollo per un solo veicolo. Limiti di cilindrata: 2000 cc a benzina, 2800 cc a gasolio. Per le ridotte capacità motorie il veicolo deve avere gli adattamenti necessari; nelle altre categorie no.",
     stato: "attivo",
     quando: "Misura permanente. Nessuna scadenza indicata.",
-    comeSiChiede: "Richiesta alla Regione tramite la rete ACI e gli altri soggetti convenzionati indicati sulla pagina.",
+    comeSiChiede:
+      "La richiesta è indirizzata alla Regione Campania, Direzione Generale Risorse Finanziarie, UOS Gestione amministrativa e contabile delle tasse e dei tributi regionali (Centro Direzionale Isola C5, 80143 Napoli). Si consegna alle Unità territoriali ACI, agli Automobile Club, alle Delegazioni ACI o alle agenzie convenzionate. Serve la carta di circolazione e, se il veicolo è intestato a un familiare, la documentazione o l'autocertificazione del carico fiscale. La targa va indicata nella domanda.",
     fonte: {
-      label: "Regione Campania · Tassa automobilistica",
+      label: "Regione Campania · Tassa automobilistica (con tabella ACI delle esenzioni)",
       url: "https://entrate.regione.campania.it/tassa-automobilistica-info",
     },
-    verificatoIl: "30/10/2026",
-    nota: "Avere la legge 104 non basta: controlla la tua categoria e i documenti.",
+    verificatoIl: "02/11/2026",
+    nota: "I documenti cambiano con la categoria: verbale di handicap grave, certificazioni pubbliche di cecità o sordità, patente speciale per le capacità motorie ridotte. Controlla l'elenco sulla pagina. I limiti per alimentazioni diverse da benzina e gasolio non sono nelle fonti lette.",
   },
 
   // ------------------------------------------------------------------ MOLISE
@@ -2229,22 +2232,6 @@ export const BONUS: Bonus[] = [
   },
 
   // -------------------------------------------------------------- BASILICATA
-  {
-    id: "basilicata-assegni-cura-voucher-fna",
-    regione: "Basilicata",
-    titolo: "Assegni di cura e voucher (Fondo non autosufficienza)",
-    perChi: "Anziani non autosufficienti e persone con disabilità, dopo la valutazione multidimensionale. Requisiti, ISEE e invalidità variano negli avvisi degli Ambiti.",
-    cosa: "Contributo mensile tra 300 e 500 euro, per 12 mesi prorogabili secondo le risorse.",
-    stato: "attivo",
-    quando: "Programma in attuazione nel 2026. Ogni Ambito pubblica i propri avvisi: le scadenze non sono uniformi.",
-    comeSiChiede: "La persona, un familiare o il caregiver presenta la domanda al Comune; i nove Ambiti socioterritoriali gestiscono le graduatorie.",
-    fonte: {
-      label: "Regione Basilicata · Fondi per anziani e persone con disabilità",
-      url: "https://www.regione.basilicata.it/fondi-per-anziani-e-persone-con-disabilita/",
-    },
-    verificatoIl: "30/10/2026",
-    nota: "La fonte regionale è del 06/11/2024. Che il programma sia ancora in corso nel 2026 risulta dalla semplificazione della rendicontazione. Non vuol dire che l'avviso del tuo Ambito sia aperto.",
-  },
   {
     id: "basilicata-assistenza-specialistica-alunni-2026-2027",
     regione: "Basilicata",
