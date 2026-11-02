@@ -1,4 +1,5 @@
 import type { ComuneConfig } from "../types";
+import { percorso } from "../percorso";
 
 // Comune di Montefiascone (VT) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (27 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
@@ -59,3 +60,6 @@ export const montefiascone: ComuneConfig = {
   daVerificare: true,
   dimostrativo: true,
 };
+
+// Passi 4 e 5: servizi sociali già in scheda con fonte (lotto 18, 02/11/2026). Passi 1-3 vuoti: nessun recapito verificato.
+montefiascone.percorsoTerritorio = percorso(montefiascone.puntiSupporto, [0]);
