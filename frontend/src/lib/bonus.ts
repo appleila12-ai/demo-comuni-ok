@@ -2071,6 +2071,25 @@ export const BONUS: Bonus[] = [
     nota: "Requisiti sanitari, ISEE e compatibilità con Ritornare a casa PLUS dipendono dalle linee attuative e dal livello del progetto: chiedili al Comune.",
   },
   {
+    id: "sardegna-mi-prendo-cura-2026-2027",
+    regione: "Sardegna",
+    titolo: "Mi prendo cura (annualità 2026-2027)",
+    perChi:
+      "Persone con un progetto Ritornare a casa PLUS attivo nell'annualità, oppure con la domanda già acquisita dall'Ambito e l'attivazione attesa da più di trenta giorni. L'ISEE sociosanitario non esclude ma riduce il contributo.",
+    cosa:
+      "Contributo una tantum per l'intera annualità: al massimo 2.000 euro, oppure 3.000 euro con l'integrazione prevista dalla delibera. Riduzioni per ISEE sociosanitario: nessuna fino a 15.000 euro; 5% da 15.001 a 25.000; 10% da 25.001 a 35.000; 25% da 35.001 a 40.000; 35% da 40.001 a 50.000; 50% da 50.001 a 60.000; 65% da 60.001 a 80.000; 80% oltre 80.000.",
+    stato: "attivo",
+    quando:
+      "Linee d'indirizzo 2026-2027 (delibera della Giunta n. 67/24 del 23/12/2025, pubblicata il 24/12/2025). I termini li fissa ogni Comune: per esempio Sassari ha indicato il 31 dicembre per le nuove domande.",
+    comeSiChiede: "La domanda si presenta al Comune di residenza, con il modulo e secondo le modalità del Comune (PEC o consegna ai servizi sociali).",
+    fonte: {
+      label: "Regione Sardegna · Delibera n. 67/24 del 23/12/2025, programma Mi prendo cura, linee 2026-2027",
+      url: "https://delibere.regione.sardegna.it/delibera/116799",
+    },
+    verificatoIl: "02/11/2026",
+    nota: "Chi ha avuto il contributo l'anno scorso di solito presenta solo la dichiarazione delle spese: chiedilo al Comune. Il testo della delibera lega l'integrazione a una condizione sanitaria scritta in modo poco chiaro: chiedi al Comune se la tua situazione la prevede.",
+  },
+  {
     id: "sardegna-sine-limes-2-2026",
     regione: "Sardegna",
     titolo: "Sine Limes 2 (annualità 2026): buono servizio",
@@ -2229,6 +2248,43 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "30/10/2026",
     nota: "Non è una misura solo per la disabilità: la disabilità dà priorità, non la gratuità automatica. Chiedi alla Regione se ci sono riaperture.",
+  },
+
+  {
+    id: "isernia-fna-2024-assegno-cura",
+    regione: "Molise",
+    comuni: ["isernia"],
+    titolo: "Assegno di cura e voucher domiciliare, Fondo non autosufficienza (ATS Isernia, annualità 2024)",
+    perChi:
+      "Residenti nell'Ambito Territoriale Sociale di Isernia, assistiti a casa: anziani non autosufficienti e persone con disabilità grave o gravissima. Per la gravissima serve l'accompagnamento oppure la non autosufficienza dell'allegato 3 del DPCM 159/2013, più le condizioni sanitarie dell'avviso. ISEE socio-sanitario fino a 50.000 euro (65.000 per i minori): l'avviso scrive sia «pari o inferiore» sia «inferiore» a 50.000.",
+    cosa: "500 euro al mese dal 01/01/2026 al 31/12/2026, pagati ogni quattro mesi.",
+    stato: "chiuso",
+    quando: "Domande entro il 30/10/2025: scaduto. L'avviso è del 30/09/2025.",
+    comeSiChiede: "Era presentata all'Ufficio di Piano, Comune di Isernia (Piazza Marconi 1), con raccomandata A/R, PEC o a mano. Per un nuovo avviso chiedi all'Ufficio di Piano.",
+    fonte: {
+      label: "ATS Isernia · Avviso pubblico Programma regionale non autosufficienza 2022-2024, annualità 2024",
+      url: "https://www.atsisernia.com/2025/09/30/avviso-pubblico-per-accedere-al-programma-regionale-non-autosufficienza-2022-2024-annualita-2024/",
+    },
+    verificatoIl: "02/11/2026",
+    nota: "Vale solo per l'Ambito di Isernia. Gli altri Ambiti del Molise pubblicano avvisi propri.",
+  },
+  {
+    id: "isernia-provi-2025",
+    regione: "Molise",
+    comuni: ["isernia"],
+    titolo: "Progetti per la Vita Indipendente PRO.VI (ATS Isernia, 2025)",
+    perChi:
+      "Residenti nell'ATS di Isernia tra 18 e 64 anni compiuti, con certificazione dell'art. 3 della legge 104/1992, ISEE socio-sanitario fino a 50.000 euro, capacità di autodeterminazione, non ricoverati.",
+    cosa: "Contributo che dipende dal progetto personale: nessun importo fisso nell'avviso. Il progetto si conclude entro 12 mesi, con rendicontazione ogni tre mesi.",
+    stato: "chiuso",
+    quando: "Domande entro le 12:00 del 09/12/2025: scaduto.",
+    comeSiChiede: "Domanda e progetto all'Ufficio di Piano, Comune di Isernia (Piazza Marconi 1), via PEC o a mano. Per un nuovo avviso chiedi all'Ufficio di Piano.",
+    fonte: {
+      label: "ATS Isernia · Avviso pubblico Progetti per la Vita Indipendente (Pro.VI), 24/11/2025",
+      url: "https://www.atsisernia.com/wp-content/uploads/2025/11/Avviso-Pubblico-PRO.VI-24.11.2025.pdf",
+    },
+    verificatoIl: "02/11/2026",
+    nota: "Avviso del solo Ambito di Isernia.",
   },
 
   // -------------------------------------------------------------- BASILICATA
