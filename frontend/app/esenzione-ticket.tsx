@@ -21,7 +21,8 @@ import {
   distrettoAsl5,
   NOTA_DOMICILIO_SANITARIO,
   NOTA_MAIL,
-  NOTA_MANCA,
+  NOTA_SPORTELLI,
+  SPORTELLI_ASL5,
   PROVA_INVALIDITA,
   PROVE_PATOLOGIA,
   type CasoEsenzione,
@@ -168,7 +169,19 @@ export default function EsenzioneTicket() {
           richiesta va fatta allo sportello o all&apos;indirizzo mail del tuo distretto.
         </Text>
       </View>
-      <Avviso>{NOTA_MANCA}</Avviso>
+      {SPORTELLI_ASL5.filter((x) => x.distretto === distrettoAsl5(comune.nomeBreve)).map((x) => (
+        <View key={x.localita} style={paginaStili.card} testID={`esenzione-sportello-${x.localita}`}>
+          <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+            Sportello di {x.localita}
+          </Text>
+          {x.indirizzo ? <Text style={paginaStili.testo}>{x.indirizzo}</Text> : null}
+          <Punti voci={x.orari} />
+          {x.appuntamento ? <Text style={paginaStili.testo}>{x.appuntamento}</Text> : null}
+          <Text style={paginaStili.testo}>Telefono: {x.telefoni.join(" · ")}</Text>
+          <Text style={paginaStili.testo}>Mail: {x.mail}</Text>
+        </View>
+      ))}
+      <Avviso>{NOTA_SPORTELLI}</Avviso>
       <Bottone
         label="Sportelli, mail e orari del distretto"
         icon="open-outline"

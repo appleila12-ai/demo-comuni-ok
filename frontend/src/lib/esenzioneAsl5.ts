@@ -4,7 +4,7 @@
 // Qui non c'è nulla che non sia scritto in quella scheda o nella risposta scritta dell'URP
 // (30/10/2026): l'URP ha verificato con i Distretti che i dati della pagina sull'anagrafe
 // sanitaria sono corretti e ha indicato quali Comuni fanno capo a ciascun distretto.
-// Mail e orari degli sportelli NON sono riportati qui: si rimanda alla pagina ufficiale.
+// Sedi, orari, telefoni e mail degli sportelli (SPORTELLI_ASL5) vengono dalla pagina ufficiale dell'ASL 5 sull'anagrafe sanitaria, letta il 02/11/2026.
 // Da ricontrollare con l'ASL almeno una volta l'anno.
 
 export type CasoEsenzione = "io" | "minore" | "tutela";
@@ -98,6 +98,79 @@ export function distrettoAsl5(nomeComune: string): DistrettoAsl5 {
   if (DISTRETTO_18.some((c) => chiave(c) === k)) return 18;
   return 19;
 }
+
+/**
+ * Sportelli di anagrafe sanitaria dell'ASL 5, copiati dalla pagina ufficiale
+ * "Attività di anagrafe sanitaria" (letta il 02/11/2026; la pagina non riporta la data di
+ * aggiornamento). L'URP di ASL 5 ha confermato il 30/10/2026 che i dati di quella pagina sono
+ * corretti. Dove la pagina non scrive un dato, qui il campo manca: non va completato da altre fonti.
+ */
+export type SportelloAsl5 = {
+  distretto: DistrettoAsl5;
+  localita: string;
+  indirizzo?: string;
+  orari: string[];
+  telefoni: string[];
+  mail: string;
+  /** Solo se la pagina lo scrive */
+  appuntamento?: string;
+};
+
+export const SPORTELLI_ASL5: SportelloAsl5[] = [
+  {
+    distretto: 17,
+    localita: "Ceparana",
+    indirizzo: "Casa della Comunità, Via Garibaldi 12, Ceparana",
+    orari: ["Dal lunedì al venerdì dalle 8:00 alle 12:00", "Martedì e giovedì dalle 14:30 alle 16:00"],
+    telefoni: ["0187 604950", "0187 604956"],
+    mail: "anagrafe.cep@asl5.liguria.it",
+    appuntamento: "Accesso anche su appuntamento, contattando i numeri 0187/604950-956",
+  },
+  {
+    distretto: 17,
+    localita: "Levanto",
+    indirizzo: "Piazza Cavour, presso il Comune (piano terra)",
+    orari: ["Lunedì, martedì, giovedì e venerdì dalle 8:00 alle 13:00"],
+    telefoni: ["0187 533844"],
+    mail: "anagrafe.lev@asl5.liguria.it",
+  },
+  {
+    distretto: 17,
+    localita: "Brugnato",
+    orari: ["Lunedì e mercoledì dalle 8:00 alle 12:00"],
+    telefoni: ["0187 534800"],
+    mail: "anagrafe.cep@asl5.liguria.it",
+  },
+  {
+    distretto: 18,
+    localita: "La Spezia",
+    indirizzo: "Via XXIV Maggio 139",
+    orari: [
+      "Aperto al pubblico: lunedì, mercoledì e venerdì dalle 8:00 alle 12:00; martedì e giovedì dalle 8:00 alle 12:00 e dalle 14:00 alle 16:00",
+      "Per telefono: lunedì, mercoledì e venerdì dalle 8:00 alle 10:00; martedì e giovedì dalle 8:00 alle 10:00 e dalle 14:00 alle 16:00",
+    ],
+    telefoni: ["0187 533580"],
+    mail: "anagrafe.sp@asl5.liguria.it",
+  },
+  {
+    distretto: 18,
+    localita: "Lerici",
+    orari: ["Dal lunedì al sabato dalle 7:30 alle 12:00"],
+    telefoni: ["0187 534901", "0187 534902"],
+    mail: "anagrafe.sp@asl5.liguria.it",
+  },
+  {
+    distretto: 19,
+    localita: "Sarzana",
+    indirizzo: "Via Paci 1",
+    orari: ["Dal lunedì al venerdì dalle 8:00 alle 12:00", "Martedì e giovedì dalle 14:30 alle 16:00"],
+    telefoni: ["0187 604332", "0187 604704"],
+    mail: "anagrafe.sz@asl5.liguria.it",
+  },
+];
+
+export const NOTA_SPORTELLI =
+  "Sedi, orari, telefoni e mail sono quelli della pagina dell'ASL 5 sull'anagrafe sanitaria (letta il 02/11/2026; la pagina non indica la data di aggiornamento). L'ufficio relazioni con il pubblico dell'ASL ha confermato il 30/10/2026 che i dati pubblicati lì sono corretti. Se dall'ASL cambia qualcosa, controlla la pagina ufficiale.";
 
 export const FONTE_ESENZIONE =
   "Scheda ASL 5 · Dipartimento Cure Primarie · Distretti 17-18-19; risposta scritta dell'URP ASL 5 del 30/10/2026";
