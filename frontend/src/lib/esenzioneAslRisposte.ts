@@ -840,6 +840,12 @@ ESENZIONE_ASL.bergamo = {
   asl: "ASST Papa Giovanni XXIII",
   intro:
     "L'URP dell'ASST Papa Giovanni XXIII indica che i cittadini che fanno capo all'ASST devono rivolgersi al proprio Distretto di residenza (Borgo Palazzo – Bergamo e Valli). Le pagine ufficiali sulle esenzioni ticket sono qui sotto.",
+  comeSiPresenta: [
+    "Di norma negli Uffici di scelta/revoca del Distretto di residenza: ti rilasciano l'attestato di esenzione se presenti la documentazione richiesta",
+    "Per sapere se hai diritto all'esenzione, la pagina dell'ASST rimanda al sito di Regione Lombardia",
+  ],
+  importante:
+    "Se risiedi in un'altra regione, l'ASST non può rilasciare l'attestato di esenzione (con l'avvio dell'Anagrafe Nazionale degli Assistiti): va chiesto all'ASL del tuo Comune di residenza.",
   telefoni: [{ etichetta: "URP ASST Papa Giovanni XXIII", numero: "035 2675010" }],
   paginaUrl: "https://www.asst-pg23.it/come-fare/pagamento-ticket/esenzioni",
   paginaLabel: "Esenzioni ticket · ASST Papa Giovanni XXIII",
@@ -851,7 +857,7 @@ ESENZIONE_ASL.bergamo = {
   ],
   manca:
     "La risposta ricevuta dall'ASST non indica documenti, sedi e orari degli sportelli, appuntamento né tempi di rilascio: consulta le pagine ufficiali o chiedi all'URP.",
-  fonte: "ASST Papa Giovanni XXIII · risposta scritta dell'URP del 02/11/2026",
+  fonte: "ASST Papa Giovanni XXIII · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale «Esenzioni» (aggiornata all'08/10/2026)",
 };
 
 // ASST Rhodense (Rho, Bollate, Garbagnate Milanese): l'ufficio CUP / Scelta e Revoca ha indicato per iscritto
