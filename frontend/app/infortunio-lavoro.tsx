@@ -1,13 +1,14 @@
 // Mi sono fatto male al lavoro: a chi rivolgersi (INAIL).
-// Contiene SOLO dati letti sulle pagine ufficiali di inail.it o scritti dall'INAIL in risposta a TutelApp, ciascuno con fonte e data.
-// Importi e soglie si aggiungono solo dopo la conferma scritta dell'INAIL.
+// Contiene SOLO dati letti sulle pagine ufficiali di inail.it o scritti dall'INAIL in risposta a TutelApp (testo e allegati), ciascuno con fonte e data.
+// Gli importi stanno in `src/lib/inailImporti.ts` (copiati dalla tabella INAIL, da ricontrollare ogni luglio).
 
-import React from "react";
+import React, { useState } from "react";
 import { Linking, Pressable, StyleSheet, Text, View } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
 import { colors, fonts, radius, spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
+import { euro, INAIL_CAPITALE_2019, INAIL_IMPORTI_AGGIORNATI_AL, INAIL_RENDITA_ANNUA } from "@/src/lib/inailImporti";
 import { Avviso, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
 
 const apri = (url: string) => Linking.openURL(url).catch(() => {});
@@ -53,6 +54,10 @@ const CONTATTI: Contatto[] = [
 // ---------- Risposta scritta dell'INAIL (Direzione regionale Puglia, 03/11/2026) ----------
 const FONTE_PUGLIA = "INAIL Direzione regionale Puglia · risposta scritta a TutelApp del 03/11/2026";
 const RISPOSTA_IL = "03/11/2026";
+const FONTE_GUIDA =
+  "INAIL · Guida alle prestazioni (edizione 2018), allegata alla risposta della Direzione regionale Puglia del 03/11/2026";
+const FONTE_TABELLA =
+  "INAIL · Tabella indennizzo danno biologico, importi dal 01/07/2026, allegata alla risposta della Direzione regionale Puglia del 03/11/2026";
 
 type Voce = { titolo: string; testo: string };
 type SchedaTesto = {
@@ -61,9 +66,73 @@ type SchedaTesto = {
   intro?: string;
   voci: Voce[];
   riferimenti?: string;
+  /** Se manca, vale la risposta scritta della Direzione regionale Puglia */
+  fonte?: string;
 };
 
 const SCHEDE_RISPOSTA: SchedaTesto[] = [
+  {
+    id: "indennita-giornaliera",
+    titolo: "Se non puoi lavorare: l'indennità giornaliera",
+    fonte: FONTE_GUIDA,
+    intro:
+      "È un indennizzo per la retribuzione che non prendi mentre sei assente dal lavoro a causa dell'infortunio o della malattia professionale.",
+    voci: [
+      {
+        titolo: "Chi ne ha diritto",
+        testo:
+          "Serve che l'infortunio o la malattia siano causati dal lavoro e che l'inabilità ti tenga lontano dal lavoro per più di tre giorni.",
+      },
+      {
+        titolo: "Da quando",
+        testo:
+          "Dal quarto giorno dopo la data dell'infortunio, o dopo quella in cui si è manifestata la malattia professionale.",
+      },
+      {
+        titolo: "Per quanto tempo",
+        testo: "Per tutto il periodo in cui non puoi lavorare, compresi i giorni festivi.",
+      },
+      {
+        titolo: "Quanto",
+        testo:
+          "Il 60% della retribuzione media giornaliera fino al 90° giorno e il 75% dal 91° giorno fino alla guarigione clinica. La retribuzione media si calcola su quella effettivamente pagata nei 15 giorni prima dell'evento.",
+      },
+      {
+        titolo: "Cosa paga il datore di lavoro",
+        testo:
+          "Deve pagarti l'intera retribuzione del giorno dell'infortunio e il 60% per i 3 giorni successivi, salvo condizioni migliori previste dai contratti collettivi.",
+      },
+      {
+        titolo: "Tasse",
+        testo: "L'indennità è soggetta a Irpef: la trattenuta la fa l'INAIL, che rilascia la certificazione fiscale.",
+      },
+    ],
+  },
+  {
+    id: "danno-biologico",
+    titolo: "Se resta una menomazione: l'indennizzo del danno biologico",
+    fonte: FONTE_GUIDA,
+    intro:
+      "Se dopo l'infortunio o la malattia professionale resta una menomazione dell'integrità fisica o psichica, l'INAIL la valuta con una percentuale, secondo le tabelle del D.Lgs. 38/2000.",
+    voci: [
+      {
+        titolo: "Chi ne ha diritto",
+        testo:
+          "Serve che la causa sia il lavoro e che la menomazione sia compresa tra il 6% e il 100%. Vale per gli infortuni dal 25 luglio 2000 e per le malattie professionali denunciate da quella data.",
+      },
+      { titolo: "Sotto il 6%", testo: "Nessun indennizzo per danno biologico." },
+      {
+        titolo: "Dal 6% al 15%",
+        testo: "Indennizzo in una somma unica (in capitale), che dipende dal grado e dall'età.",
+      },
+      {
+        titolo: "Dal 16% al 100%",
+        testo:
+          "Indennizzo in rendita, cioè un importo che si riceve ogni anno, più una quota di rendita per le conseguenze sul lavoro (conseguenze patrimoniali), calcolata con i coefficienti dell'INAIL.",
+      },
+      { titolo: "Tasse", testo: "Non è soggetto a Irpef." },
+    ],
+  },
   {
     id: "ausili",
     titolo: "Protesi, ortesi e ausili",
@@ -232,8 +301,104 @@ function SchedaRisposta({ s }: { s: SchedaTesto }) {
       ))}
       {s.riferimenti ? <Text style={styles.controllo}>{s.riferimenti}</Text> : null}
       <Text style={styles.controllo}>
-        Fonte: {FONTE_PUGLIA}. Controllato il {RISPOSTA_IL}.
+        Fonte: {s.fonte ?? FONTE_PUGLIA}. Controllato il {RISPOSTA_IL}.
       </Text>
+    </View>
+  );
+}
+
+function etichettaEta(e: string): string {
+  return `${e} anni`;
+}
+
+function Importi() {
+  const [rendita, setRendita] = useState(false);
+  const [capitale, setCapitale] = useState(false);
+  const [grado, setGrado] = useState(6);
+  const gradi = Object.keys(INAIL_CAPITALE_2019).map(Number);
+  return (
+    <View testID="infortunio-importi">
+      <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+        Gli importi dal 1° luglio {INAIL_IMPORTI_AGGIORNATI_AL.slice(-4)}
+      </Text>
+
+      <View style={paginaStili.card} testID="infortunio-rendita">
+        <Text style={styles.titolo} accessibilityRole="header">
+          Rendita per danno biologico (dal 16%)
+        </Text>
+        <Text style={styles.testo}>
+          Importo annuo in euro, per grado di menomazione. Gli importi vengono rivalutati ogni anno dal 1° luglio:
+          questi sono quelli in vigore dal 1° luglio 2026 (aumento dell'1,4%). Non comprendono la quota per le
+          conseguenze patrimoniali.
+        </Text>
+        <Pressable
+          onPress={() => setRendita((v) => !v)}
+          style={({ pressed }) => [styles.fonte, { marginTop: spacing.md }, pressed && { opacity: 0.85 }]}
+          accessibilityRole="button"
+          accessibilityState={{ expanded: rendita }}
+          testID="infortunio-rendita-apri"
+        >
+          <Ionicons name={rendita ? "chevron-up" : "chevron-down"} size={16} color={colors.brandPrimaryDark} />
+          <Text style={styles.fonteText}>{rendita ? "Nascondi la tabella" : "Mostra la tabella (dal 16% al 100%)"}</Text>
+        </Pressable>
+        {rendita
+          ? INAIL_RENDITA_ANNUA.map((r) => (
+              <View key={r.grado} style={styles.rigaTabella}>
+                <Text style={styles.testo}>Grado {r.grado}%</Text>
+                <Text style={styles.importo}>€ {euro(r.importo)} all'anno</Text>
+              </View>
+            ))
+          : null}
+        <Text style={styles.controllo}>Fonte: {FONTE_TABELLA}.</Text>
+      </View>
+
+      <View style={paginaStili.card} testID="infortunio-capitale">
+        <Text style={styles.titolo} accessibilityRole="header">
+          Somma unica per danno biologico (dal 6% al 15%)
+        </Text>
+        <Text style={styles.testo}>
+          Importo in euro, per grado di menomazione e per età di chi ha avuto l'infortunio. Sono i valori della tabella
+          2019 (D.M. n. 45/2019) aggiornati al 1° luglio 2026. Il file INAIL contiene anche una tabella del 2000, diversa
+          per uomini e donne: se non sai quale vale per il tuo caso, chiedilo alla sede INAIL.
+        </Text>
+        <Pressable
+          onPress={() => setCapitale((v) => !v)}
+          style={({ pressed }) => [styles.fonte, { marginTop: spacing.md }, pressed && { opacity: 0.85 }]}
+          accessibilityRole="button"
+          accessibilityState={{ expanded: capitale }}
+          testID="infortunio-capitale-apri"
+        >
+          <Ionicons name={capitale ? "chevron-up" : "chevron-down"} size={16} color={colors.brandPrimaryDark} />
+          <Text style={styles.fonteText}>{capitale ? "Nascondi la tabella" : "Mostra la tabella"}</Text>
+        </Pressable>
+        {capitale ? (
+          <View>
+            <Text style={[styles.voceTitolo, { marginTop: spacing.md }]}>Scegli il grado di menomazione</Text>
+            <View style={styles.gradi}>
+              {gradi.map((g) => (
+                <Pressable
+                  key={g}
+                  onPress={() => setGrado(g)}
+                  style={({ pressed }) => [styles.grado, g === grado && styles.gradoAttivo, pressed && { opacity: 0.85 }]}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: g === grado }}
+                  accessibilityLabel={`Grado ${g} per cento`}
+                  testID={`infortunio-grado-${g}`}
+                >
+                  <Text style={[styles.fonteText, g === grado && { color: colors.onSurface }]}>{g}%</Text>
+                </Pressable>
+              ))}
+            </View>
+            {INAIL_CAPITALE_2019[grado].map((r) => (
+              <View key={r.eta} style={styles.rigaTabella}>
+                <Text style={styles.testo}>{etichettaEta(r.eta)}</Text>
+                <Text style={styles.importo}>€ {euro(r.importo)}</Text>
+              </View>
+            ))}
+          </View>
+        ) : null}
+        <Text style={styles.controllo}>Fonte: {FONTE_TABELLA}.</Text>
+      </View>
     </View>
   );
 }
@@ -288,9 +453,8 @@ export default function InfortunioLavoro() {
     <Pagina titolo="Mi sono fatto male al lavoro" testID="infortunio-lavoro-screen" sottotitoloSalvato="INAIL: a chi chiedere">
       <Intro>
         L'INAIL è l'istituto che assicura chi si fa male sul lavoro o si ammala per il suo lavoro, e dà prestazioni
-        economiche, sanitarie e socio-sanitarie. Qui trovi a chi rivolgerti, come chiedere protesi e ausili, come
-        tornare al lavoro e il rapporto con gli altri aiuti. Gli importi delle rendite non sono ancora in questa
-        pagina: per conoscerli chiama l'INAIL.
+        economiche, sanitarie e socio-sanitarie. Qui trovi cosa spetta, gli importi aggiornati, come chiedere protesi
+        e ausili, come tornare al lavoro, il rapporto con gli altri aiuti e a chi rivolgerti.
       </Intro>
 
       <Text style={paginaStili.titoloSezione} accessibilityRole="header">
@@ -303,6 +467,8 @@ export default function InfortunioLavoro() {
       {SCHEDE_RISPOSTA.map((x) => (
         <SchedaRisposta key={x.id} s={x} />
       ))}
+
+      <Importi />
 
       {comune.regione === "Puglia" ? <SediPuglia /> : null}
 
@@ -325,6 +491,28 @@ const styles = StyleSheet.create({
   },
   testo: { fontSize: 15, lineHeight: 22, color: colors.onSurface },
   voce: { marginTop: spacing.sm },
+  rigaTabella: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: spacing.sm,
+    minHeight: 44,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.surfaceTertiary,
+  },
+  importo: { fontSize: 15, lineHeight: 22, fontWeight: "800", color: colors.onSurface },
+  gradi: { flexDirection: "row", flexWrap: "wrap", gap: spacing.sm, marginVertical: spacing.sm },
+  grado: {
+    minWidth: 52,
+    minHeight: 44,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: spacing.md,
+    borderRadius: radius.pill,
+    borderWidth: 1.5,
+    borderColor: colors.brandPrimaryDark,
+  },
+  gradoAttivo: { backgroundColor: colors.warningSoft },
   voceTitolo: { fontSize: 14, fontWeight: "800", color: colors.onSurface, marginBottom: 2 },
   piede: {
     flexDirection: "row",
