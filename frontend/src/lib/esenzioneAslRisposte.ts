@@ -332,6 +332,39 @@ const ASL_TO4: SchedaEsenzioneAsl = {
 };
 for (const slug of ["settimo-torinese"]) ESENZIONE_ASL[slug] = ASL_TO4;
 
+// ASL TO5: pagina ufficiale «Esenzioni ticket» del sito dell'ASL (modificata il 07/10/2026). Nessun dato oltre a quanto scritto.
+const ASL_TO5: SchedaEsenzioneAsl = {
+  asl: "ASL TO5",
+  intro:
+    "Secondo la pagina dell'ASL TO5, l'esenzione per patologia e per malattie rare viene rilasciata dagli uffici distrettuali (CUP), sulla base della documentazione clinica. La richiesta è verificata dai medici del distretto.",
+  titoloPassi: "Esenzione per patologia: come si chiede",
+  comeSiPresenta: [
+    "Compila il modulo «richiesta attestato di esenzione per patologia», che trovi sulla pagina dell'ASL",
+    "Invialo per e-mail a esenzioni048@aslto5.piemonte.it, con gli allegati qui sotto",
+    "Se la richiesta è accettata, il certificato di esenzione viene consegnato entro cinque giorni",
+  ],
+  documenti: [
+    "Carta d'identità dell'interessato",
+    "Documentazione clinica: lettera di dimissioni e referti ospedalieri, di strutture pubbliche o private accreditate",
+  ],
+  importante:
+    "Con un'invalidità dal 67% al 100% (o certificati delle commissioni mediche degli ospedali militari) c'è l'esenzione per invalidità, che riguarda prestazioni diagnostiche e farmaci correlati alla patologia riconosciuta: la richiesta si presenta allo sportello del distretto, anche qui con consegna del certificato entro cinque giorni. Per alcune patologie serve la richiesta del medico curante; in generale non è obbligatoria. Il certificato va mostrato al medico a ogni visita.",
+  pec: "protocollo@cert.aslto5.piemonte.it",
+  mail: "urp@aslto5.piemonte.it",
+  telefoni: [
+    { etichetta: "ASL TO5 · Chieri", numero: "011 94291" },
+    { etichetta: "ASL TO5 · Carmagnola", numero: "011 97191" },
+    { etichetta: "ASL TO5 · Moncalieri", numero: "011 69301" },
+    { etichetta: "ASL TO5 · Nichelino", numero: "011 6802011" },
+  ],
+  paginaUrl: "https://www.aslto5.piemonte.it",
+  paginaLabel: "Sito dell'ASL TO5 (sezione «Come fare per» > «Esenzioni ticket»)",
+  manca:
+    "La pagina non indica indirizzi e orari degli sportelli distrettuali né come prenotare: chiedi all'URP (urp@aslto5.piemonte.it). I numeri sopra sono quelli riportati in cima alla pagina per le sedi di Chieri, Carmagnola, Moncalieri e Nichelino.",
+  fonte: "ASL TO5 · pagina ufficiale «Esenzioni ticket», modificata il 07/10/2026",
+};
+for (const slug of ["chieri", "carmagnola", "moncalieri", "nichelino"]) ESENZIONE_ASL[slug] = ASL_TO5;
+
 // ASP Agrigento: risposta scritta del Coordinatore della Casa della Comunità di Agrigento (29/10/2026).
 // Mail e orari valgono per Agrigento; la regola generale è quella dichiarata dal Distretto.
 ESENZIONE_ASL.agrigento = {
