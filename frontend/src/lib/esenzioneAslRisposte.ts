@@ -739,9 +739,10 @@ ESENZIONE_ASL.catanzaro = {
     "Documento di identità valido",
     "Se la richiesta è collegata a un'invalidità riconosciuta: il verbale di invalidità civile rilasciato dalla commissione medica di prima istanza",
   ],
-  telefoni: [],
+  telefoni: [{ etichetta: "URP ASP Catanzaro, Via Acri 24 (lun–ven 9–12)", numero: "0961 7033543" }],
+  mail: "urp@asp.cz.it",
   manca:
-    "L'ASP non ha indicato indirizzi e orari degli sportelli, se serve l'appuntamento, se si può inviare per mail o PEC né i tempi di rilascio: chiedili all'URP dell'ASP o al tuo distretto.",
+    "L'ASP non ha indicato indirizzi e orari degli sportelli del Servizio, se serve l'appuntamento, se si può inviare per mail o PEC né i tempi di rilascio: chiedili all'URP dell'ASP o al tuo distretto.",
   fonte: "ASP Catanzaro · risposta scritta dell'URP del 02/11/2026",
 };
 // Lamezia Terme: in più i dati della pagina ufficiale del Servizio (aggiornata il 15/10/2026, letta il 02/11/2026).
@@ -752,7 +753,10 @@ ESENZIONE_ASL["lamezia-terme"] = {
   comeSiPresenta: [
     "Di persona agli sportelli del Servizio Assistenza Integrativa ed Esenzione Ticket, Distretto Socio Sanitario di Lamezia Terme, Piazza Borelli 12, piano terra",
   ],
-  telefoni: [{ etichetta: "Segreteria del Servizio (11:30–12:30)", numero: "0968 208403" }],
+  telefoni: [
+    { etichetta: "Segreteria del Servizio (11:30–12:30)", numero: "0968 208403" },
+    { etichetta: "URP, sportello Ospedale di Lamezia (lun–ven 9–12)", numero: "0968 208919" },
+  ],
   paginaUrl:
     "https://www.asp.cz.it/distretti-sanitari/distretto-socio-sanitario-di-lamezia-terme/cure-primarie-servizio-assistenza-integrativa-ed-esenzione-ticket/",
   paginaLabel: "Servizio Assistenza Integrativa ed Esenzione Ticket · ASP Catanzaro",
