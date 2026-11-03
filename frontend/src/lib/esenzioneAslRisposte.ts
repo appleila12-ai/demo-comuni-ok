@@ -930,11 +930,29 @@ ESENZIONE_ASL["garbagnate-milanese"] = {
 ESENZIONE_ASL.treviglio = {
   asl: "ASST Bergamo Ovest",
   intro:
-    "L'URP dell'ASST Bergamo Ovest indica la pagina ufficiale con i Distretti e le informazioni utili per le richieste: la trovi con il pulsante qui sotto. Treviglio fa parte del Distretto Pianura Occidentale, che ha sede a Treviglio. La pagina descrive i Distretti ma non spiega come si chiede l'esenzione.",
-  telefoni: [{ etichetta: "URP ASST Bergamo Ovest", numero: "0363 424325" }],
+    "A Treviglio le esenzioni ticket, compreso il rinnovo, si gestiscono all'Ufficio Scelta e Revoca del Distretto Pianura Occidentale, nella Casa di Comunità di Via Matteotti 4. Si può fare anche online dallo sportello telematico SIOC.",
+  titoloPassi: "Dove si presenta",
+  comeSiPresenta: [
+    "Di persona, all'Ufficio Scelta e Revoca, Casa di Comunità, Via Matteotti 4, Treviglio",
+    "Online dallo sportello telematico SIOC dell'ASST Bergamo Ovest",
+    "Orari dal 1° settembre 2026: dal lunedì al venerdì dalle 9.30 alle 13.30 con appuntamento su Prenotami.Cloud; lunedì, martedì, giovedì e venerdì dalle 14.00 alle 15.50 accesso libero",
+    "Se serve integrare i documenti, l'ufficio fissa un nuovo appuntamento. Per pratiche di più persone, ogni persona prenota il proprio appuntamento",
+  ],
+  telefoni: [
+    { etichetta: "Ufficio Scelta e Revoca (lun, mer, ven 14.00–15.30)", numero: "0363 590902" },
+    { etichetta: "Segreteria del Distretto (lun–ven 9–13, tasto 9)", numero: "0363 590960" },
+    { etichetta: "URP ASST Bergamo Ovest", numero: "0363 424325" },
+  ],
+  mail: "distrettopianuraoccidentale@asst-bgovest.it",
+  pec: "distretto_bassabergamasca@pec.asst-bgovest.it",
   paginaUrl: "https://www.asst-bgovest.it/491.asp",
-  paginaLabel: "Distretti · ASST Bergamo Ovest",
+  paginaLabel: "Distretto Pianura Occidentale · ASST Bergamo Ovest",
+  altriLink: [
+    { label: "Sportello telematico SIOC · ASST Bergamo Ovest", url: "https://teknecloud.it/SIOC-ASSTBGOVEST/" },
+    { label: "Prenota l'appuntamento · Prenotami.Cloud", url: "https://webapp.prenotami.cloud/" },
+  ],
   manca:
-    "La risposta ricevuta dall'ASST non indica documenti, sedi e orari, appuntamento né tempi di rilascio: consulta la pagina ufficiale o chiedi all'URP.",
-  fonte: "ASST Bergamo Ovest · risposta scritta dell'URP del 02/11/2026",
+    "La pagina non elenca i documenti per l'esenzione né i tempi di rilascio: chiedili all'Ufficio Scelta e Revoca.",
+  fonte:
+    "ASST Bergamo Ovest · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale del Distretto Pianura Occidentale (aggiornata il 13/08/2026)",
 };
