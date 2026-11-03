@@ -708,6 +708,8 @@ ESENZIONE_ASL.ferrara = {
     "Hanno diritto all'esenzione per patologia i cittadini con malattie croniche tra quelle previste dal DPCM 12 gennaio 2017 (Nuovi LEA): cittadini italiani, comunitari e stranieri iscritti al Servizio sanitario nazionale, e cittadini comunitari con tessera sanitaria (TEAM).",
   titoloPassi: "Come si chiede",
   comeSiPresenta: [
+    "A Ferrara: Sportello Unico CUP, Casa della Salute «Cittadella San Rocco», Corso della Giovecca 203, Settore 4. Aperto dal lunedì al venerdì dalle 8.00 alle 13.00 (il pomeriggio dalle 14.30 alle 16.30 lo sportello è aperto solo per i referti di laboratorio e per le pratiche di mancata disdetta)",
+    "Gli altri Sportelli Unici CUP della provincia (Argenta, Codigoro, Comacchio, Copparo, Bondeno, Cento e altri) hanno indirizzi e orari sulla pagina ufficiale",
     "Agli Sportelli Unici CUP: la persona interessata, o chi ha una delega, presenta la certificazione della patologia, rilasciata su apposito modulo da uno specialista di una struttura pubblica",
     "Il diritto all'esenzione risulta sul documento di iscrizione al Servizio sanitario regionale che rilasciano gli Sportelli Unici CUP. L'AUSL registra l'esenzione e la comunica al tuo medico di famiglia o pediatra",
     "Malattia rara: ti rivolgi allo Sportello Unico CUP dell'AUSL di residenza con il certificato di diagnosi rilasciato da uno dei Centri accreditati della Rete nazionale malattie rare",
@@ -716,13 +718,13 @@ ESENZIONE_ASL.ferrara = {
   ],
   importante:
     "Per usare l'esenzione, il medico di famiglia, il pediatra o lo specialista deve scrivere il codice della patologia (o dell'invalidità riconosciuta) nell'apposito campo dell'impegnativa. L'esenzione può essere totale o parziale (solo le prestazioni legate alla patologia) e la tessera può avere scadenza limitata o illimitata.",
-  telefoni: [],
+  telefoni: [{ etichetta: "Call center CUP", numero: "800 532 000" }],
   paginaUrl: "https://www.ausl.fe.it/come-fare-per/esenzioni-ticket",
   paginaLabel: "Esenzioni ticket · AUSL Ferrara",
   altriLink: [
     {
       label: "Sportelli Unici CUP · AUSL Ferrara",
-      url: "https://www.ausl.fe.it/strutture/azienda/servizi-territoriali/dipartimento-cure-primarie/unita-operativa-servizi-amministrativi-distrettuali/c-u-p",
+      url: "https://www.ausl.fe.it/servizi-e-prestazioni/esami-e-analisi/c-u-p",
     },
     {
       label: "Malattie, codici e prestazioni esenti · Ministero della Salute",
@@ -730,8 +732,8 @@ ESENZIONE_ASL.ferrara = {
     },
   ],
   manca:
-    "L'AUSL non indica, nella pagina sulle esenzioni, indirizzi e orari degli Sportelli Unici CUP (li trovi sulla pagina dedicata), se serve l'appuntamento, se si può inviare per mail né i tempi di rilascio: chiedili allo Sportello Unico CUP.",
-  fonte: "AUSL Ferrara · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale sulle esenzioni ticket (ultimo aggiornamento 11/06/2025)",
+    "La pagina dello Sportello Unico CUP non dice se per le esenzioni serva l'appuntamento (lo indica solo per l'iscrizione al Servizio sanitario dei cittadini extracomunitari) né i tempi di rilascio e le regole sulla delega: chiedili allo Sportello Unico CUP.",
+  fonte: "AUSL Ferrara · risposta scritta dell'URP del 02/11/2026 e pagine ufficiali «Esenzioni ticket» (aggiornata l'11/06/2025) e «Sportello Unico - CUP» (aggiornata il 29/10/2026)",
 };
 
 // ASP Catanzaro: risposta scritta dell'URP del 02/11/2026 (distretti citati: Catanzaro e Lamezia Terme).
