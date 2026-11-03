@@ -719,8 +719,18 @@ ESENZIONE_ASL.ferrara = {
   telefoni: [],
   paginaUrl: "https://www.ausl.fe.it/come-fare-per/esenzioni-ticket",
   paginaLabel: "Esenzioni ticket · AUSL Ferrara",
+  altriLink: [
+    {
+      label: "Sportelli Unici CUP · AUSL Ferrara",
+      url: "https://www.ausl.fe.it/strutture/azienda/servizi-territoriali/dipartimento-cure-primarie/unita-operativa-servizi-amministrativi-distrettuali/c-u-p",
+    },
+    {
+      label: "Malattie, codici e prestazioni esenti · Ministero della Salute",
+      url: "http://www.salute.gov.it/portale/esenzioni/homeEsenzioni.jsp",
+    },
+  ],
   manca:
-    "L'AUSL non ha indicato indirizzi e orari degli Sportelli Unici CUP, l'elenco dei documenti, se serve l'appuntamento, se si può inviare per mail né i tempi di rilascio: chiedili allo Sportello Unico CUP.",
+    "L'AUSL non indica, nella pagina sulle esenzioni, indirizzi e orari degli Sportelli Unici CUP (li trovi sulla pagina dedicata), se serve l'appuntamento, se si può inviare per mail né i tempi di rilascio: chiedili allo Sportello Unico CUP.",
   fonte: "AUSL Ferrara · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale sulle esenzioni ticket (ultimo aggiornamento 11/06/2025)",
 };
 
