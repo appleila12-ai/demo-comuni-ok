@@ -860,10 +860,14 @@ ESENZIONE_ASL.bergamo = {
     "L'URP dell'ASST Papa Giovanni XXIII indica che i cittadini che fanno capo all'ASST devono rivolgersi al proprio Distretto di residenza (Borgo Palazzo – Bergamo e Valli). Le pagine ufficiali sulle esenzioni ticket sono qui sotto.",
   comeSiPresenta: [
     "Di norma negli Uffici di scelta/revoca del Distretto di residenza: ti rilasciano l'attestato di esenzione se presenti la documentazione richiesta",
+    "A Bergamo: Ufficio Scelta e Revoca di Borgo Palazzo, Via Borgo Palazzo 130, Padiglione 6B. Registra le esenzioni per patologia cronica, malattia rara e invalidità civile",
+    "Accesso libero senza prenotazione dal lunedì al venerdì dalle 8.30 alle 12.00. Dal lunedì al giovedì dalle 14.00 alle 15.30 solo su appuntamento online dal sito ZeroCoda: se non puoi venire, cancella la prenotazione con lo stesso strumento",
+    "Per le pratiche per conto di altri servono la delega e la copia del documento d'identità del delegante",
     "Per sapere se hai diritto all'esenzione, la pagina dell'ASST rimanda al sito di Regione Lombardia",
   ],
   importante:
     "Se risiedi in un'altra regione, l'ASST non può rilasciare l'attestato di esenzione (con l'avvio dell'Anagrafe Nazionale degli Assistiti): va chiesto all'ASL del tuo Comune di residenza.",
+  mail: "sceltarevoca.bergamo@asst-pg23.it",
   telefoni: [{ etichetta: "URP ASST Papa Giovanni XXIII", numero: "035 2675010" }],
   paginaUrl: "https://www.asst-pg23.it/come-fare/pagamento-ticket/esenzioni",
   paginaLabel: "Esenzioni ticket · ASST Papa Giovanni XXIII",
@@ -874,8 +878,8 @@ ESENZIONE_ASL.bergamo = {
     },
   ],
   manca:
-    "La risposta ricevuta dall'ASST non indica documenti, sedi e orari degli sportelli, appuntamento né tempi di rilascio: consulta le pagine ufficiali o chiedi all'URP.",
-  fonte: "ASST Papa Giovanni XXIII · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale «Esenzioni» (aggiornata all'08/10/2026)",
+    "L'ASST non indica l'elenco dei documenti per l'esenzione né i tempi di rilascio: chiedili all'Ufficio Scelta e Revoca. Gli sportelli per chi abita fuori Bergamo città sono sulla pagina delle Case di Comunità.",
+  fonte: "ASST Papa Giovanni XXIII · risposta scritta dell'URP del 02/11/2026 e pagine ufficiali «Esenzioni» (aggiornata all'08/10/2026) e «Scelta e revoca – Borgo Palazzo» (aggiornata al 30/09/2026)",
 };
 
 // ASST Rhodense (Rho, Bollate, Garbagnate Milanese): risposta scritta dell'Area Accoglienza – CUP aziendali del
