@@ -920,7 +920,7 @@ ESENZIONE_ASL["garbagnate-milanese"] = {
 ESENZIONE_ASL.treviglio = {
   asl: "ASST Bergamo Ovest",
   intro:
-    "L'URP dell'ASST Bergamo Ovest indica la pagina ufficiale con i Distretti e le informazioni utili per le richieste: la trovi con il pulsante qui sotto.",
+    "L'URP dell'ASST Bergamo Ovest indica la pagina ufficiale con i Distretti e le informazioni utili per le richieste: la trovi con il pulsante qui sotto. Treviglio fa parte del Distretto Pianura Occidentale, che ha sede a Treviglio. La pagina descrive i Distretti ma non spiega come si chiede l'esenzione.",
   telefoni: [{ etichetta: "URP ASST Bergamo Ovest", numero: "0363 424325" }],
   paginaUrl: "https://www.asst-bgovest.it/491.asp",
   paginaLabel: "Distretti · ASST Bergamo Ovest",
