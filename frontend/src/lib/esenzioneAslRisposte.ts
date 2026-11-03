@@ -708,6 +708,8 @@ ESENZIONE_ASL.ferrara = {
     "Hanno diritto all'esenzione per patologia i cittadini con malattie croniche tra quelle previste dal DPCM 12 gennaio 2017 (Nuovi LEA): cittadini italiani, comunitari e stranieri iscritti al Servizio sanitario nazionale, e cittadini comunitari con tessera sanitaria (TEAM).",
   titoloPassi: "Come si chiede",
   comeSiPresenta: [
+    "A Ferrara: Sportello Unico CUP, Casa della Salute «Cittadella San Rocco», Corso della Giovecca 203, Settore 4. Aperto dal lunedì al venerdì dalle 8.00 alle 13.00 (il pomeriggio dalle 14.30 alle 16.30 lo sportello è aperto solo per i referti di laboratorio e per le pratiche di mancata disdetta)",
+    "Gli altri Sportelli Unici CUP della provincia (Argenta, Codigoro, Comacchio, Copparo, Bondeno, Cento e altri) hanno indirizzi e orari sulla pagina ufficiale",
     "Agli Sportelli Unici CUP: la persona interessata, o chi ha una delega, presenta la certificazione della patologia, rilasciata su apposito modulo da uno specialista di una struttura pubblica",
     "Il diritto all'esenzione risulta sul documento di iscrizione al Servizio sanitario regionale che rilasciano gli Sportelli Unici CUP. L'AUSL registra l'esenzione e la comunica al tuo medico di famiglia o pediatra",
     "Malattia rara: ti rivolgi allo Sportello Unico CUP dell'AUSL di residenza con il certificato di diagnosi rilasciato da uno dei Centri accreditati della Rete nazionale malattie rare",
@@ -716,12 +718,22 @@ ESENZIONE_ASL.ferrara = {
   ],
   importante:
     "Per usare l'esenzione, il medico di famiglia, il pediatra o lo specialista deve scrivere il codice della patologia (o dell'invalidità riconosciuta) nell'apposito campo dell'impegnativa. L'esenzione può essere totale o parziale (solo le prestazioni legate alla patologia) e la tessera può avere scadenza limitata o illimitata.",
-  telefoni: [],
+  telefoni: [{ etichetta: "Call center CUP", numero: "800 532 000" }],
   paginaUrl: "https://www.ausl.fe.it/come-fare-per/esenzioni-ticket",
   paginaLabel: "Esenzioni ticket · AUSL Ferrara",
+  altriLink: [
+    {
+      label: "Sportelli Unici CUP · AUSL Ferrara",
+      url: "https://www.ausl.fe.it/servizi-e-prestazioni/esami-e-analisi/c-u-p",
+    },
+    {
+      label: "Malattie, codici e prestazioni esenti · Ministero della Salute",
+      url: "http://www.salute.gov.it/portale/esenzioni/homeEsenzioni.jsp",
+    },
+  ],
   manca:
-    "L'AUSL non ha indicato indirizzi e orari degli Sportelli Unici CUP, l'elenco dei documenti, se serve l'appuntamento, se si può inviare per mail né i tempi di rilascio: chiedili allo Sportello Unico CUP.",
-  fonte: "AUSL Ferrara · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale sulle esenzioni ticket (ultimo aggiornamento 11/06/2025)",
+    "La pagina dello Sportello Unico CUP non dice se per le esenzioni serva l'appuntamento (lo indica solo per l'iscrizione al Servizio sanitario dei cittadini extracomunitari) né i tempi di rilascio e le regole sulla delega: chiedili allo Sportello Unico CUP.",
+  fonte: "AUSL Ferrara · risposta scritta dell'URP del 02/11/2026 e pagine ufficiali «Esenzioni ticket» (aggiornata l'11/06/2025) e «Sportello Unico - CUP» (aggiornata il 29/10/2026)",
 };
 
 // ASP Catanzaro: risposta scritta dell'URP del 02/11/2026 (distretti citati: Catanzaro e Lamezia Terme).
@@ -773,15 +785,23 @@ ESENZIONE_ASL.lecco = {
     "L'URP dell'ASST Lecco indica che le richieste relative alle esenzioni non passano da lui: vanno presentate direttamente agli sportelli Scelta e Revoca presenti su tutto il territorio provinciale, oppure online dallo sportello SIOC (Servizio Istanze Online Cittadino), a cui ci si registra senza bisogno dello SPID.",
   titoloPassi: "Dove si presenta",
   comeSiPresenta: [
-    "Di persona agli sportelli Scelta e Revoca dell'ASST Lecco: servizi, sedi e orari sono sulla pagina ufficiale",
+    "Di persona all'Ufficio Scelta e Revoca di Lecco, nella Casa di Comunità di Via Ghislanzoni 9. Sportelli aperti il lunedì e il mercoledì dalle 8.00 alle 13.00 e dalle 14.00 alle 15.50, il martedì, giovedì e venerdì dalle 8.00 alle 13.00",
+    "Per informazioni telefoniche: 0341 253713, il martedì, giovedì e venerdì dalle 14.00 alle 15.30",
+    "Gli altri sportelli della provincia (Bellano, Calolziocorte, Casatenovo, Merate, Mandello del Lario e altri) hanno indirizzi e orari sulla pagina ufficiale",
     "Online dallo sportello SIOC (serve registrarsi, non serve lo SPID)",
+    "Per pratiche per conto di un'altra persona agli sportelli serve la delega: il modulo è sulla pagina ufficiale",
   ],
   documenti: [
     "Patologia cronica: certificazione rilasciata da un medico specialista di una struttura pubblica o privata accreditata, e tessera sanitaria. L'esenzione vale per le prestazioni correlate alla patologia",
     "Malattia rara: certificazione redatta su apposita modulistica dal Presidio ospedaliero abilitato a diagnosticare la malattia rara",
     "Invalidità civile riconosciuta dall'INPS: il verbale che attesta l'invalidità, da portare agli sportelli Scelta e Revoca",
   ],
-  telefoni: [{ etichetta: "URP ASST Lecco", numero: "0341 489105" }],
+  importante:
+    "Gli orari possono cambiare durante festività, ponti ed estate: l'ASST invita a contattare lo sportello. Agli sportelli si pagano solo con carte o bancomat, non in contanti.",
+  telefoni: [
+    { etichetta: "Scelta e Revoca di Lecco (mar, gio, ven 14.00–15.30)", numero: "0341 253713" },
+    { etichetta: "URP ASST Lecco", numero: "0341 489105" },
+  ],
   paginaUrl: "https://www.asst-lecco.it/scelta-e-revoca/",
   paginaLabel: "Sportelli Scelta e Revoca · ASST Lecco",
   altriLink: [
@@ -789,9 +809,9 @@ ESENZIONE_ASL.lecco = {
     { label: "Esenzioni · ASST Lecco", url: "https://www.asst-lecco.it/esenzioni/" },
   ],
   manca:
-    "L'ASST non ha indicato se serve l'appuntamento né i tempi di rilascio: chiedili allo sportello Scelta e Revoca. L'elenco dei documenti viene dalla scheda informativa di Regione Lombardia, aggiornata al 22/08/2019: conferma allo sportello che sia ancora valido.",
+    "L'ASST non indica i tempi di rilascio: chiedili allo sportello Scelta e Revoca. La pagina non dice se per le esenzioni serva l'appuntamento: chiedilo allo sportello. L'elenco dei documenti viene dalla scheda informativa di Regione Lombardia, aggiornata al 22/08/2019: conferma allo sportello che sia ancora valido.",
   fonte:
-    "ASST Lecco · risposta dell'Ufficio di Pubblica Tutela del 02/11/2026 e risposta dell'URP del 02/11/2026 · Regione Lombardia, scheda informativa «Ticket ed Esenzioni» (aggiornata al 22/08/2019)",
+    "ASST Lecco · risposta dell'Ufficio di Pubblica Tutela del 02/11/2026 e risposta dell'URP del 02/11/2026 · pagina ufficiale «Scelta e Revoca» (aggiornata il 24/08/2026) · Regione Lombardia, scheda informativa «Ticket ed Esenzioni» (aggiornata al 22/08/2019)",
 };
 
 // ASL Napoli 2 Nord, Distretto 39 (Villaricca, Qualiano, Calvizzano): pagine «Esenzioni per patologia» e «Centro Unico
@@ -842,10 +862,14 @@ ESENZIONE_ASL.bergamo = {
     "L'URP dell'ASST Papa Giovanni XXIII indica che i cittadini che fanno capo all'ASST devono rivolgersi al proprio Distretto di residenza (Borgo Palazzo – Bergamo e Valli). Le pagine ufficiali sulle esenzioni ticket sono qui sotto.",
   comeSiPresenta: [
     "Di norma negli Uffici di scelta/revoca del Distretto di residenza: ti rilasciano l'attestato di esenzione se presenti la documentazione richiesta",
+    "A Bergamo: Ufficio Scelta e Revoca di Borgo Palazzo, Via Borgo Palazzo 130, Padiglione 6B. Registra le esenzioni per patologia cronica, malattia rara e invalidità civile",
+    "Accesso libero senza prenotazione dal lunedì al venerdì dalle 8.30 alle 12.00. Dal lunedì al giovedì dalle 14.00 alle 15.30 solo su appuntamento online dal sito ZeroCoda: se non puoi venire, cancella la prenotazione con lo stesso strumento",
+    "Per le pratiche per conto di altri servono la delega e la copia del documento d'identità del delegante",
     "Per sapere se hai diritto all'esenzione, la pagina dell'ASST rimanda al sito di Regione Lombardia",
   ],
   importante:
     "Se risiedi in un'altra regione, l'ASST non può rilasciare l'attestato di esenzione (con l'avvio dell'Anagrafe Nazionale degli Assistiti): va chiesto all'ASL del tuo Comune di residenza.",
+  mail: "sceltarevoca.bergamo@asst-pg23.it",
   telefoni: [{ etichetta: "URP ASST Papa Giovanni XXIII", numero: "035 2675010" }],
   paginaUrl: "https://www.asst-pg23.it/come-fare/pagamento-ticket/esenzioni",
   paginaLabel: "Esenzioni ticket · ASST Papa Giovanni XXIII",
@@ -856,8 +880,8 @@ ESENZIONE_ASL.bergamo = {
     },
   ],
   manca:
-    "La risposta ricevuta dall'ASST non indica documenti, sedi e orari degli sportelli, appuntamento né tempi di rilascio: consulta le pagine ufficiali o chiedi all'URP.",
-  fonte: "ASST Papa Giovanni XXIII · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale «Esenzioni» (aggiornata all'08/10/2026)",
+    "L'ASST non indica l'elenco dei documenti per l'esenzione né i tempi di rilascio: chiedili all'Ufficio Scelta e Revoca. Gli sportelli per chi abita fuori Bergamo città sono sulla pagina delle Case di Comunità.",
+  fonte: "ASST Papa Giovanni XXIII · risposta scritta dell'URP del 02/11/2026 e pagine ufficiali «Esenzioni» (aggiornata all'08/10/2026) e «Scelta e revoca – Borgo Palazzo» (aggiornata al 30/09/2026)",
 };
 
 // ASST Rhodense (Rho, Bollate, Garbagnate Milanese): risposta scritta dell'Area Accoglienza – CUP aziendali del
@@ -920,11 +944,34 @@ ESENZIONE_ASL["garbagnate-milanese"] = {
 ESENZIONE_ASL.treviglio = {
   asl: "ASST Bergamo Ovest",
   intro:
-    "L'URP dell'ASST Bergamo Ovest indica la pagina ufficiale con i Distretti e le informazioni utili per le richieste: la trovi con il pulsante qui sotto. Treviglio fa parte del Distretto Pianura Occidentale, che ha sede a Treviglio. La pagina descrive i Distretti ma non spiega come si chiede l'esenzione.",
-  telefoni: [{ etichetta: "URP ASST Bergamo Ovest", numero: "0363 424325" }],
+    "A Treviglio le esenzioni ticket, compreso il rinnovo, si gestiscono all'Ufficio Scelta e Revoca del Distretto Pianura Occidentale, nella Casa di Comunità di Via Matteotti 4. Si può fare anche online dallo sportello telematico SIOC.",
+  titoloPassi: "Dove si presenta",
+  comeSiPresenta: [
+    "Di persona, all'Ufficio Scelta e Revoca, Casa di Comunità, Via Matteotti 4, Treviglio",
+    "Online dallo sportello telematico SIOC dell'ASST Bergamo Ovest",
+    "Orari dal 1° settembre 2026: dal lunedì al venerdì dalle 9.30 alle 13.30 con appuntamento su Prenotami.Cloud; lunedì, martedì, giovedì e venerdì dalle 14.00 alle 15.50 accesso libero",
+    "Se serve integrare i documenti, l'ufficio fissa un nuovo appuntamento. Per pratiche di più persone, ogni persona prenota il proprio appuntamento",
+  ],
+  documenti: [
+    "Patologia cronica: certificazione rilasciata da un medico specialista di una struttura pubblica o privata accreditata e tessera sanitaria. L'esenzione vale per le prestazioni correlate alla patologia",
+    "Malattia rara: certificazione su apposita modulistica rilasciata dal Presidio ospedaliero abilitato a diagnosticare la malattia rara",
+    "Invalidità civile: il verbale che attesta l'invalidità, da portare agli sportelli Scelta e Revoca",
+  ],
+  telefoni: [
+    { etichetta: "Ufficio Scelta e Revoca (lun, mer, ven 14.00–15.30)", numero: "0363 590902" },
+    { etichetta: "Segreteria del Distretto (lun–ven 9–13, tasto 9)", numero: "0363 590960" },
+    { etichetta: "URP ASST Bergamo Ovest", numero: "0363 424325" },
+  ],
+  mail: "distrettopianuraoccidentale@asst-bgovest.it",
+  pec: "distretto_bassabergamasca@pec.asst-bgovest.it",
   paginaUrl: "https://www.asst-bgovest.it/491.asp",
-  paginaLabel: "Distretti · ASST Bergamo Ovest",
+  paginaLabel: "Distretto Pianura Occidentale · ASST Bergamo Ovest",
+  altriLink: [
+    { label: "Sportello telematico SIOC · ASST Bergamo Ovest", url: "https://teknecloud.it/SIOC-ASSTBGOVEST/" },
+    { label: "Prenota l'appuntamento · Prenotami.Cloud", url: "https://webapp.prenotami.cloud/" },
+  ],
   manca:
-    "La risposta ricevuta dall'ASST non indica documenti, sedi e orari, appuntamento né tempi di rilascio: consulta la pagina ufficiale o chiedi all'URP.",
-  fonte: "ASST Bergamo Ovest · risposta scritta dell'URP del 02/11/2026",
+    "L'ASST non indica i tempi di rilascio né le regole sulla delega per le esenzioni: chiedili all'Ufficio Scelta e Revoca. L'elenco dei documenti viene dalle pagine di ATS Bergamo e Regione Lombardia.",
+  fonte:
+    "ASST Bergamo Ovest · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale del Distretto Pianura Occidentale (aggiornata il 13/08/2026) · ATS Bergamo, pagina «Ticket ed esenzioni» (aggiornata il 19/11/2025)",
 };
