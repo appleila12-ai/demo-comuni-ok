@@ -14,6 +14,8 @@ export type SchedaEsenzioneAsl = {
   telefoni: { etichetta: string; numero: string }[];
   paginaUrl?: string;
   paginaLabel?: string;
+  /** Altri collegamenti ufficiali indicati dall'ente (oltre a paginaUrl) */
+  altriLink?: { label: string; url: string }[];
   manca: string;
   fonte: string;
 };
@@ -709,15 +711,17 @@ ESENZIONE_ASL.ferrara = {
     "Agli Sportelli Unici CUP: la persona interessata, o chi ha una delega, presenta la certificazione della patologia, rilasciata su apposito modulo da uno specialista di una struttura pubblica",
     "Il diritto all'esenzione risulta sul documento di iscrizione al Servizio sanitario regionale che rilasciano gli Sportelli Unici CUP. L'AUSL registra l'esenzione e la comunica al tuo medico di famiglia o pediatra",
     "Malattia rara: ti rivolgi allo Sportello Unico CUP dell'AUSL di residenza con il certificato di diagnosi rilasciato da uno dei Centri accreditati della Rete nazionale malattie rare",
+    "Invalidità: lo Sportello Unico CUP dell'AUSL di residenza rilascia la certificazione di esenzione a chi (o il suo delegato) presenta il documento che attesta lo stato di invalidità. Stato e grado di invalidità li accerta la Commissione medica dell'AUSL di residenza",
+    "Hanno diritto all'esenzione per invalidità, tra gli altri, i cittadini con invalidità civile, di guerra o del lavoro, con cecità o sordomutismo, iscritti al Servizio sanitario nazionale. Per i cittadini comunitari con tessera TEAM, la certificazione di invalidità rilasciata all'estero la valuta un medico funzionario del Distretto",
   ],
   importante:
-    "Per usare l'esenzione, il medico di famiglia, il pediatra o lo specialista deve scrivere il codice della patologia nell'apposito campo dell'impegnativa. Senza il codice l'esenzione non può essere riconosciuta.",
+    "Per usare l'esenzione, il medico di famiglia, il pediatra o lo specialista deve scrivere il codice della patologia (o dell'invalidità riconosciuta) nell'apposito campo dell'impegnativa. L'esenzione può essere totale o parziale (solo le prestazioni legate alla patologia) e la tessera può avere scadenza limitata o illimitata.",
   telefoni: [],
   paginaUrl: "https://www.ausl.fe.it/come-fare-per/esenzioni-ticket",
   paginaLabel: "Esenzioni ticket · AUSL Ferrara",
   manca:
     "L'AUSL non ha indicato indirizzi e orari degli Sportelli Unici CUP, l'elenco dei documenti, se serve l'appuntamento, se si può inviare per mail né i tempi di rilascio: chiedili allo Sportello Unico CUP.",
-  fonte: "AUSL Ferrara · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale sulle esenzioni ticket",
+  fonte: "AUSL Ferrara · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale sulle esenzioni ticket (ultimo aggiornamento 11/06/2025)",
 };
 
 // ASP Catanzaro: risposta scritta dell'URP del 02/11/2026 (distretti citati: Catanzaro e Lamezia Terme).
@@ -735,9 +739,10 @@ ESENZIONE_ASL.catanzaro = {
     "Documento di identità valido",
     "Se la richiesta è collegata a un'invalidità riconosciuta: il verbale di invalidità civile rilasciato dalla commissione medica di prima istanza",
   ],
-  telefoni: [],
+  telefoni: [{ etichetta: "URP ASP Catanzaro, Via Acri 24 (lun–ven 9–12)", numero: "0961 7033543" }],
+  mail: "urp@asp.cz.it",
   manca:
-    "L'ASP non ha indicato indirizzi e orari degli sportelli, se serve l'appuntamento, se si può inviare per mail o PEC né i tempi di rilascio: chiedili all'URP dell'ASP o al tuo distretto.",
+    "L'ASP non ha indicato indirizzi e orari degli sportelli del Servizio, se serve l'appuntamento, se si può inviare per mail o PEC né i tempi di rilascio: chiedili all'URP dell'ASP o al tuo distretto.",
   fonte: "ASP Catanzaro · risposta scritta dell'URP del 02/11/2026",
 };
 // Lamezia Terme: in più i dati della pagina ufficiale del Servizio (aggiornata il 15/10/2026, letta il 02/11/2026).
@@ -748,7 +753,10 @@ ESENZIONE_ASL["lamezia-terme"] = {
   comeSiPresenta: [
     "Di persona agli sportelli del Servizio Assistenza Integrativa ed Esenzione Ticket, Distretto Socio Sanitario di Lamezia Terme, Piazza Borelli 12, piano terra",
   ],
-  telefoni: [{ etichetta: "Segreteria del Servizio (11:30–12:30)", numero: "0968 208403" }],
+  telefoni: [
+    { etichetta: "Segreteria del Servizio (11:30–12:30)", numero: "0968 208403" },
+    { etichetta: "URP, sportello Ospedale di Lamezia (lun–ven 9–12)", numero: "0968 208919" },
+  ],
   paginaUrl:
     "https://www.asp.cz.it/distretti-sanitari/distretto-socio-sanitario-di-lamezia-terme/cure-primarie-servizio-assistenza-integrativa-ed-esenzione-ticket/",
   paginaLabel: "Servizio Assistenza Integrativa ed Esenzione Ticket · ASP Catanzaro",
@@ -762,13 +770,28 @@ ESENZIONE_ASL["lamezia-terme"] = {
 ESENZIONE_ASL.lecco = {
   asl: "ASST Lecco",
   intro:
-    "L'ASST Lecco ha una pagina ufficiale con l'elenco delle esenzioni dell'azienda sanitaria: la trovi con il pulsante qui sotto.",
-  telefoni: [],
-  paginaUrl: "https://www.asst-lecco.it/esenzioni/",
-  paginaLabel: "Esenzioni · ASST Lecco",
+    "L'URP dell'ASST Lecco indica che le richieste relative alle esenzioni non passano da lui: vanno presentate direttamente agli sportelli Scelta e Revoca presenti su tutto il territorio provinciale, oppure online dallo sportello SIOC (Servizio Istanze Online Cittadino), a cui ci si registra senza bisogno dello SPID.",
+  titoloPassi: "Dove si presenta",
+  comeSiPresenta: [
+    "Di persona agli sportelli Scelta e Revoca dell'ASST Lecco: servizi, sedi e orari sono sulla pagina ufficiale",
+    "Online dallo sportello SIOC (serve registrarsi, non serve lo SPID)",
+  ],
+  documenti: [
+    "Patologia cronica: certificazione rilasciata da un medico specialista di una struttura pubblica o privata accreditata, e tessera sanitaria. L'esenzione vale per le prestazioni correlate alla patologia",
+    "Malattia rara: certificazione redatta su apposita modulistica dal Presidio ospedaliero abilitato a diagnosticare la malattia rara",
+    "Invalidità civile riconosciuta dall'INPS: il verbale che attesta l'invalidità, da portare agli sportelli Scelta e Revoca",
+  ],
+  telefoni: [{ etichetta: "URP ASST Lecco", numero: "0341 489105" }],
+  paginaUrl: "https://www.asst-lecco.it/scelta-e-revoca/",
+  paginaLabel: "Sportelli Scelta e Revoca · ASST Lecco",
+  altriLink: [
+    { label: "Sportello online SIOC · ASST Lecco", url: "https://sioc.asst-lecco.it/SIOC/" },
+    { label: "Esenzioni · ASST Lecco", url: "https://www.asst-lecco.it/esenzioni/" },
+  ],
   manca:
-    "La risposta ricevuta dall'ASST non indica come si presenta la richiesta, i documenti, l'appuntamento né i tempi: consulta la pagina ufficiale o chiedi all'ASST.",
-  fonte: "ASST Lecco · risposta scritta dell'Ufficio di Pubblica Tutela del 02/11/2026",
+    "L'ASST non ha indicato se serve l'appuntamento né i tempi di rilascio: chiedili allo sportello Scelta e Revoca. L'elenco dei documenti viene dalla scheda informativa di Regione Lombardia, aggiornata al 22/08/2019: conferma allo sportello che sia ancora valido.",
+  fonte:
+    "ASST Lecco · risposta dell'Ufficio di Pubblica Tutela del 02/11/2026 e risposta dell'URP del 02/11/2026 · Regione Lombardia, scheda informativa «Ticket ed Esenzioni» (aggiornata al 22/08/2019)",
 };
 
 // ASL Napoli 2 Nord, Distretto 39 (Villaricca, Qualiano, Calvizzano): pagine «Esenzioni per patologia» e «Centro Unico
@@ -797,4 +820,111 @@ ESENZIONE_ASL.villaricca = {
   manca:
     "Le pagine non indicano gli orari degli sportelli del CUP, se serve la prenotazione né i tempi di rilascio. E-mail e PEC sono quelle generali del Distretto: le pagine non dicono che si possa presentare la richiesta per via telematica. Le pagine sono state aggiornate il 20/03/2025.",
   fonte: "ASL Napoli 2 Nord · portale trasparenza, pagine del Distretto 39 (lette il 02/11/2026)",
+};
+
+// ASL Biella: l'URP ha indicato per iscritto la pagina ufficiale (risposta del 02/11/2026).
+ESENZIONE_ASL.biella = {
+  asl: "ASL Biella",
+  intro:
+    "Per sapere come ottenere e rinnovare l'esenzione ticket, l'ASL Biella rimanda alla sua pagina ufficiale: la trovi con il pulsante qui sotto.",
+  telefoni: [],
+  paginaUrl: "https://aslbi.piemonte.it/come-fare-per/come-ottenere-e-rinnovare-lesenzione-ticket",
+  paginaLabel: "Come ottenere e rinnovare l'esenzione ticket · ASL Biella",
+  manca:
+    "La risposta ricevuta dall'ASL non indica sedi, orari, appuntamento, documenti né tempi: consulta la pagina ufficiale o chiedi all'ASL.",
+  fonte: "ASL Biella · risposta scritta dell'URP del 02/11/2026",
+};
+
+// ASST Papa Giovanni XXIII (Bergamo): l'URP ha indicato per iscritto le pagine ufficiali (risposta del 02/11/2026).
+ESENZIONE_ASL.bergamo = {
+  asl: "ASST Papa Giovanni XXIII",
+  intro:
+    "L'URP dell'ASST Papa Giovanni XXIII indica che i cittadini che fanno capo all'ASST devono rivolgersi al proprio Distretto di residenza (Borgo Palazzo – Bergamo e Valli). Le pagine ufficiali sulle esenzioni ticket sono qui sotto.",
+  comeSiPresenta: [
+    "Di norma negli Uffici di scelta/revoca del Distretto di residenza: ti rilasciano l'attestato di esenzione se presenti la documentazione richiesta",
+    "Per sapere se hai diritto all'esenzione, la pagina dell'ASST rimanda al sito di Regione Lombardia",
+  ],
+  importante:
+    "Se risiedi in un'altra regione, l'ASST non può rilasciare l'attestato di esenzione (con l'avvio dell'Anagrafe Nazionale degli Assistiti): va chiesto all'ASL del tuo Comune di residenza.",
+  telefoni: [{ etichetta: "URP ASST Papa Giovanni XXIII", numero: "035 2675010" }],
+  paginaUrl: "https://www.asst-pg23.it/come-fare/pagamento-ticket/esenzioni",
+  paginaLabel: "Esenzioni ticket · ASST Papa Giovanni XXIII",
+  altriLink: [
+    {
+      label: "Case di Comunità: scelta e revoca, esenzioni · ASST Papa Giovanni XXIII",
+      url: "https://www.asst-pg23.it/servizi-territoriali/case-comunita/scelta-revoca-del-medico-esenzioni-smarrimento-tessera-pinpuk-deleghe-FSE-assistenza-allestero",
+    },
+  ],
+  manca:
+    "La risposta ricevuta dall'ASST non indica documenti, sedi e orari degli sportelli, appuntamento né tempi di rilascio: consulta le pagine ufficiali o chiedi all'URP.",
+  fonte: "ASST Papa Giovanni XXIII · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale «Esenzioni» (aggiornata all'08/10/2026)",
+};
+
+// ASST Rhodense (Rho, Bollate, Garbagnate Milanese): risposta scritta dell'Area Accoglienza – CUP aziendali del
+// 03/11/2026 e pagina ufficiale «Scelta e Revoca del medico» (sezione Esenzioni), letta il 03/11/2026.
+const ESENZIONE_RHODENSE: SchedaEsenzioneAsl = {
+  asl: "ASST Rhodense",
+  intro:
+    "L'esenzione per patologia o invalidità si può chiedere online dal portale SIOC (Sportello Istanze Online Cittadino, dopo la registrazione) oppure di persona nelle sedi di rilascio dell'ASST Rhodense.",
+  titoloPassi: "Come si chiede",
+  comeSiPresenta: [
+    "Online dal portale SIOC: ti registri e fai la richiesta in autonomia",
+    "Di persona, solo se non puoi usare il portale: nelle sedi di rilascio dell'ASST. Per l'appuntamento chiami il numero verde regionale 800 638638 (da fisso) o 02 999 599 (da cellulare), oppure usi prenotasalute.regione.lombardia.it o l'app Salutile",
+    "L'ASST chiede di prenotare l'appuntamento solo se non riesci a usare i servizi online nemmeno con l'aiuto di un familiare o di chi ti assiste",
+  ],
+  documenti: [
+    "Tessera sanitaria con microchip e documento di identità in corso di validità (obbligatori all'appuntamento). Senza tessera con microchip, ti presenti agli sportelli il giorno e all'ora dell'appuntamento",
+    "Patologia cronica: certificazione di un medico specialista (struttura pubblica o privata accreditata). Il medico di famiglia può certificare solo alcune patologie, tra cui il diabete mellito e l'ipertensione",
+    "Malattia rara: certificazione su apposita modulistica rilasciata dal Presidio ospedaliero abilitato alla diagnosi",
+    "Invalidità civile: copia del verbale della Commissione di accertamento dell'invalidità",
+    "Se la pratica è per conto di un'altra persona, anche dello stesso nucleo familiare: delega scritta e firmata e copia del documento di identità del delegato",
+  ],
+  importante:
+    "Se risiedi in un'altra regione, l'ASST non può rilasciare l'attestato di esenzione (con l'avvio dell'Anagrafe Nazionale degli Assistiti): va chiesto all'ASL del tuo Comune di residenza.",
+  telefoni: [
+    { etichetta: "CUP / Scelta e Revoca · Casa di Comunità di Bollate", numero: "02 994305880" },
+    { etichetta: "Appuntamento allo sportello (da fisso)", numero: "800 638638" },
+    { etichetta: "Appuntamento allo sportello (da cellulare)", numero: "02 999 599" },
+  ],
+  paginaUrl: "https://www.asst-rhodense.it/v2/ambiti-territoriali/scelta-revoca.html",
+  paginaLabel: "Scelta e Revoca · ASST Rhodense",
+  altriLink: [{ label: "Portale SIOC · ASST Rhodense", url: "https://sioc.asst-rhodense.it/SIOC" }],
+  manca:
+    "L'ASST non indica gli orari di apertura degli sportelli né i tempi di rilascio: chiedili all'ASST.",
+  fonte:
+    "ASST Rhodense · risposta scritta dell'Area Accoglienza – CUP aziendali del 03/11/2026 e pagina ufficiale «Scelta e Revoca del medico» (letta il 03/11/2026)",
+};
+ESENZIONE_ASL.rho = {
+  ...ESENZIONE_RHODENSE,
+  comeSiPresenta: [
+    ...(ESENZIONE_RHODENSE.comeSiPresenta ?? []),
+    "Sedi per chi abita a Rho: sportello Scelta e Revoca di Rho (Via Legnano 22) e Casa di Comunità di Passirana di Rho (Via Settembrini 1)",
+  ],
+};
+ESENZIONE_ASL.bollate = {
+  ...ESENZIONE_RHODENSE,
+  comeSiPresenta: [
+    ...(ESENZIONE_RHODENSE.comeSiPresenta ?? []),
+    "Sede per chi abita a Bollate: Casa di Comunità di Bollate (Via Piave 20)",
+  ],
+};
+ESENZIONE_ASL["garbagnate-milanese"] = {
+  ...ESENZIONE_RHODENSE,
+  comeSiPresenta: [
+    ...(ESENZIONE_RHODENSE.comeSiPresenta ?? []),
+    "Sede per chi abita a Garbagnate Milanese: Casa di Comunità di Garbagnate Milanese (Via per Cesate 62)",
+  ],
+};
+
+// ASST Bergamo Ovest (Treviglio): l'URP ha indicato per iscritto la pagina dei Distretti (risposta del 02/11/2026).
+ESENZIONE_ASL.treviglio = {
+  asl: "ASST Bergamo Ovest",
+  intro:
+    "L'URP dell'ASST Bergamo Ovest indica la pagina ufficiale con i Distretti e le informazioni utili per le richieste: la trovi con il pulsante qui sotto. Treviglio fa parte del Distretto Pianura Occidentale, che ha sede a Treviglio. La pagina descrive i Distretti ma non spiega come si chiede l'esenzione.",
+  telefoni: [{ etichetta: "URP ASST Bergamo Ovest", numero: "0363 424325" }],
+  paginaUrl: "https://www.asst-bgovest.it/491.asp",
+  paginaLabel: "Distretti · ASST Bergamo Ovest",
+  manca:
+    "La risposta ricevuta dall'ASST non indica documenti, sedi e orari, appuntamento né tempi di rilascio: consulta la pagina ufficiale o chiedi all'URP.",
+  fonte: "ASST Bergamo Ovest · risposta scritta dell'URP del 02/11/2026",
 };
