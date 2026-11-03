@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   Linking,
   Modal,
+  Platform,
   Pressable,
   ScrollView,
   StatusBar,
@@ -28,6 +29,7 @@ import { RecuperaDati } from "@/src/components/RecuperaDati";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
 import { RichiestaNome, RichiestaNomeHome } from "@/src/components/RichiestaNome";
 import { useNomeUtente } from "@/src/lib/nomeUtente";
+import { SITO_TUTELAPP } from "@/src/lib/richiestaComune";
 import { useSalvati } from "@/src/lib/salvati";
 
 const FEATURES = [
@@ -523,6 +525,28 @@ function HomeDelComune() {
           </Pressable>
         </View>
 
+        {/* Brochure per i cittadini (PDF): si apre in una nuova scheda; quella per i Comuni sta in "Per i Comuni" */}
+        <Pressable
+          onPress={() => {
+            if (Platform.OS === "web") {
+              window.open("/brochure-cittadini.pdf", "_blank", "noopener");
+            } else {
+              Linking.openURL(`https://${SITO_TUTELAPP.replace(/^https?:\/\//, "")}/brochure-cittadini.pdf`).catch(() => {});
+            }
+          }}
+          style={({ pressed }) => [styles.brochureCard, pressed && styles.pressed]}
+          accessibilityRole="link"
+          accessibilityLabel="Scarica la brochure di TutelApp per te e la tua famiglia, in PDF"
+          testID="home-brochure-cittadini"
+        >
+          <Ionicons name="document-text-outline" size={26} color={colors.brandPrimaryDark} />
+          <View style={styles.brochureTesti}>
+            <Text style={styles.brochureTitolo}>Scarica la brochure di TutelApp</Text>
+            <Text style={styles.brochureSotto}>Per te e per la tua famiglia (PDF). Puoi farla vedere a chi ti sta vicino.</Text>
+          </View>
+          <Ionicons name="download-outline" size={22} color={colors.brandPrimaryDark} />
+        </Pressable>
+
         <Text style={styles.footer}>
           Informazioni di orientamento · Verifica sempre le procedure sui canali ufficiali degli enti competenti.
           {HA_BACKEND
@@ -866,6 +890,21 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     color: colors.onSurface,
   },
+  brochureCard: {
+    marginTop: spacing.md,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.sm,
+    backgroundColor: "#FBF1DC",
+    borderColor: "#E8C98A",
+    borderWidth: 1,
+    borderRadius: radius.lg,
+    padding: spacing.md,
+    minHeight: 56,
+  },
+  brochureTesti: { flex: 1 },
+  brochureTitolo: { fontSize: 16, fontWeight: "800", color: colors.onSurface },
+  brochureSotto: { fontSize: 14, lineHeight: 20, color: colors.onSurface, marginTop: 2 },
   footer: {
     fontSize: 10,
     lineHeight: 15,
