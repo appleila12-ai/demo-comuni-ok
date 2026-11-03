@@ -772,6 +772,11 @@ ESENZIONE_ASL.lecco = {
     "Di persona agli sportelli Scelta e Revoca dell'ASST Lecco: servizi, sedi e orari sono sulla pagina ufficiale",
     "Online dallo sportello SIOC (serve registrarsi, non serve lo SPID)",
   ],
+  documenti: [
+    "Patologia cronica: certificazione rilasciata da un medico specialista di una struttura pubblica o privata accreditata, e tessera sanitaria. L'esenzione vale per le prestazioni correlate alla patologia",
+    "Malattia rara: certificazione redatta su apposita modulistica dal Presidio ospedaliero abilitato a diagnosticare la malattia rara",
+    "Invalidità civile riconosciuta dall'INPS: il verbale che attesta l'invalidità, da portare agli sportelli Scelta e Revoca",
+  ],
   telefoni: [{ etichetta: "URP ASST Lecco", numero: "0341 489105" }],
   paginaUrl: "https://www.asst-lecco.it/scelta-e-revoca/",
   paginaLabel: "Sportelli Scelta e Revoca · ASST Lecco",
@@ -780,9 +785,9 @@ ESENZIONE_ASL.lecco = {
     { label: "Esenzioni · ASST Lecco", url: "https://www.asst-lecco.it/esenzioni/" },
   ],
   manca:
-    "L'ASST non ha indicato l'elenco dei documenti, se serve l'appuntamento né i tempi di rilascio: chiedili allo sportello Scelta e Revoca.",
+    "L'ASST non ha indicato se serve l'appuntamento né i tempi di rilascio: chiedili allo sportello Scelta e Revoca. L'elenco dei documenti viene dalla scheda informativa di Regione Lombardia, aggiornata al 22/08/2019: conferma allo sportello che sia ancora valido.",
   fonte:
-    "ASST Lecco · risposta dell'Ufficio di Pubblica Tutela del 02/11/2026 e risposta dell'URP del 02/11/2026",
+    "ASST Lecco · risposta dell'Ufficio di Pubblica Tutela del 02/11/2026 e risposta dell'URP del 02/11/2026 · Regione Lombardia, scheda informativa «Ticket ed Esenzioni» (aggiornata al 22/08/2019)",
 };
 
 // ASL Napoli 2 Nord, Distretto 39 (Villaricca, Qualiano, Calvizzano): pagine «Esenzioni per patologia» e «Centro Unico
