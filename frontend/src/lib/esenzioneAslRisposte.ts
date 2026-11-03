@@ -952,6 +952,11 @@ ESENZIONE_ASL.treviglio = {
     "Orari dal 1° settembre 2026: dal lunedì al venerdì dalle 9.30 alle 13.30 con appuntamento su Prenotami.Cloud; lunedì, martedì, giovedì e venerdì dalle 14.00 alle 15.50 accesso libero",
     "Se serve integrare i documenti, l'ufficio fissa un nuovo appuntamento. Per pratiche di più persone, ogni persona prenota il proprio appuntamento",
   ],
+  documenti: [
+    "Patologia cronica: certificazione rilasciata da un medico specialista di una struttura pubblica o privata accreditata e tessera sanitaria. L'esenzione vale per le prestazioni correlate alla patologia",
+    "Malattia rara: certificazione su apposita modulistica rilasciata dal Presidio ospedaliero abilitato a diagnosticare la malattia rara",
+    "Invalidità civile: il verbale che attesta l'invalidità, da portare agli sportelli Scelta e Revoca",
+  ],
   telefoni: [
     { etichetta: "Ufficio Scelta e Revoca (lun, mer, ven 14.00–15.30)", numero: "0363 590902" },
     { etichetta: "Segreteria del Distretto (lun–ven 9–13, tasto 9)", numero: "0363 590960" },
@@ -966,7 +971,7 @@ ESENZIONE_ASL.treviglio = {
     { label: "Prenota l'appuntamento · Prenotami.Cloud", url: "https://webapp.prenotami.cloud/" },
   ],
   manca:
-    "La pagina non elenca i documenti per l'esenzione né i tempi di rilascio: chiedili all'Ufficio Scelta e Revoca.",
+    "L'ASST non indica i tempi di rilascio né le regole sulla delega per le esenzioni: chiedili all'Ufficio Scelta e Revoca. L'elenco dei documenti viene dalle pagine di ATS Bergamo e Regione Lombardia.",
   fonte:
-    "ASST Bergamo Ovest · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale del Distretto Pianura Occidentale (aggiornata il 13/08/2026)",
+    "ASST Bergamo Ovest · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale del Distretto Pianura Occidentale (aggiornata il 13/08/2026) · ATS Bergamo, pagina «Ticket ed esenzioni» (aggiornata il 19/11/2025)",
 };
