@@ -807,7 +807,7 @@ ESENZIONE_ASL.lecco = {
     { label: "Esenzioni · ASST Lecco", url: "https://www.asst-lecco.it/esenzioni/" },
   ],
   manca:
-    "L'ASST non indica i tempi di rilascio: chiedili allo sportello Scelta e Revoca. Gli sportelli di Lecco sono aperti senza appuntamento negli orari indicati sulla pagina (non c'è scritto che serva prenotare). L'elenco dei documenti viene dalla scheda informativa di Regione Lombardia, aggiornata al 22/08/2019: conferma allo sportello che sia ancora valido.",
+    "L'ASST non indica i tempi di rilascio: chiedili allo sportello Scelta e Revoca. La pagina non dice se per le esenzioni serva l'appuntamento: chiedilo allo sportello. L'elenco dei documenti viene dalla scheda informativa di Regione Lombardia, aggiornata al 22/08/2019: conferma allo sportello che sia ancora valido.",
   fonte:
     "ASST Lecco · risposta dell'Ufficio di Pubblica Tutela del 02/11/2026 e risposta dell'URP del 02/11/2026 · pagina ufficiale «Scelta e Revoca» (aggiornata il 24/08/2026) · Regione Lombardia, scheda informativa «Ticket ed Esenzioni» (aggiornata al 22/08/2019)",
 };
