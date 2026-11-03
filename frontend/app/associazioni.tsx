@@ -2,7 +2,7 @@
 // Si vede l'elenco della provincia del Comune attivo, prima quelle del Comune.
 
 import React, { useState } from "react";
-import { Linking, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Linking, Pressable, StyleSheet, Text, View } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
 import { useLocalSearchParams } from "expo-router";
 
@@ -34,6 +34,7 @@ function Scheda({ a, vicina }: { a: Associazione; vicina: boolean }) {
   return (
     <View style={paginaStili.card} testID={`associazione-${a.nome}`}>
       {vicina ? <Text style={[styles.badge, { color: comune.theme.warmDark, backgroundColor: comune.theme.warmSoft }]}>Vicino a te</Text> : null}
+      {a.logo ? <Image source={{ uri: a.logo }} style={styles.logo} resizeMode="contain" accessibilityLabel={`Logo di ${a.nome}`} /> : null}
       <Text style={styles.nome}>{a.nome}</Text>
       <Text style={paginaStili.testo}>{a.cosa}</Text>
       {a.dove ? (
@@ -162,6 +163,7 @@ const styles = StyleSheet.create({
     marginBottom: 6,
     overflow: "hidden",
   },
+  logo: { width: 160, height: 90, marginBottom: 8 },
   nome: { fontSize: 16, fontWeight: "800", color: colors.onSurface, marginBottom: 4 },
   dove: { flexDirection: "row", alignItems: "center", gap: 4, marginTop: 6 },
   azioni: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginTop: spacing.sm },
