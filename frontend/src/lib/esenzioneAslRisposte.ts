@@ -860,22 +860,61 @@ ESENZIONE_ASL.bergamo = {
   fonte: "ASST Papa Giovanni XXIII · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale «Esenzioni» (aggiornata all'08/10/2026)",
 };
 
-// ASST Rhodense (Rho, Bollate, Garbagnate Milanese): l'ufficio CUP / Scelta e Revoca ha indicato per iscritto
-// la pagina ufficiale (risposta del 03/11/2026).
+// ASST Rhodense (Rho, Bollate, Garbagnate Milanese): risposta scritta dell'Area Accoglienza – CUP aziendali del
+// 03/11/2026 e pagina ufficiale «Scelta e Revoca del medico» (sezione Esenzioni), letta il 03/11/2026.
 const ESENZIONE_RHODENSE: SchedaEsenzioneAsl = {
   asl: "ASST Rhodense",
   intro:
-    "L'ASST Rhodense indica la pagina ufficiale «Scelta e Revoca», dove sono disponibili le informazioni utili ai cittadini, comprese quelle sulle esenzioni: la trovi con il pulsante qui sotto.",
-  telefoni: [{ etichetta: "CUP / Scelta e Revoca · Casa di Comunità di Bollate", numero: "02 994305880" }],
+    "L'esenzione per patologia o invalidità si può chiedere online dal portale SIOC (Sportello Istanze Online Cittadino, dopo la registrazione) oppure di persona nelle sedi di rilascio dell'ASST Rhodense.",
+  titoloPassi: "Come si chiede",
+  comeSiPresenta: [
+    "Online dal portale SIOC: ti registri e fai la richiesta in autonomia",
+    "Di persona, solo se non puoi usare il portale: nelle sedi di rilascio dell'ASST. Per l'appuntamento chiami il numero verde regionale 800 638638 (da fisso) o 02 999 599 (da cellulare), oppure usi prenotasalute.regione.lombardia.it o l'app Salutile",
+    "L'ASST chiede di prenotare l'appuntamento solo se non riesci a usare i servizi online nemmeno con l'aiuto di un familiare o di chi ti assiste",
+  ],
+  documenti: [
+    "Tessera sanitaria con microchip e documento di identità in corso di validità (obbligatori all'appuntamento). Senza tessera con microchip, ti presenti agli sportelli il giorno e all'ora dell'appuntamento",
+    "Patologia cronica: certificazione di un medico specialista (struttura pubblica o privata accreditata). Il medico di famiglia può certificare solo alcune patologie, tra cui il diabete mellito e l'ipertensione",
+    "Malattia rara: certificazione su apposita modulistica rilasciata dal Presidio ospedaliero abilitato alla diagnosi",
+    "Invalidità civile: copia del verbale della Commissione di accertamento dell'invalidità",
+    "Se la pratica è per conto di un'altra persona, anche dello stesso nucleo familiare: delega scritta e firmata e copia del documento di identità del delegato",
+  ],
+  importante:
+    "Se risiedi in un'altra regione, l'ASST non può rilasciare l'attestato di esenzione (con l'avvio dell'Anagrafe Nazionale degli Assistiti): va chiesto all'ASL del tuo Comune di residenza.",
+  telefoni: [
+    { etichetta: "CUP / Scelta e Revoca · Casa di Comunità di Bollate", numero: "02 994305880" },
+    { etichetta: "Appuntamento allo sportello (da fisso)", numero: "800 638638" },
+    { etichetta: "Appuntamento allo sportello (da cellulare)", numero: "02 999 599" },
+  ],
   paginaUrl: "https://www.asst-rhodense.it/v2/ambiti-territoriali/scelta-revoca.html",
   paginaLabel: "Scelta e Revoca · ASST Rhodense",
+  altriLink: [{ label: "Portale SIOC · ASST Rhodense", url: "https://sioc.asst-rhodense.it/SIOC" }],
   manca:
-    "La risposta ricevuta dall'ASST non indica documenti, sedi e orari degli sportelli, appuntamento né tempi di rilascio: consulta la pagina ufficiale o chiedi all'ASST.",
-  fonte: "ASST Rhodense · risposta scritta dell'Area Accoglienza – CUP aziendali del 03/11/2026",
+    "L'ASST non indica gli orari di apertura degli sportelli né i tempi di rilascio: chiedili all'ASST.",
+  fonte:
+    "ASST Rhodense · risposta scritta dell'Area Accoglienza – CUP aziendali del 03/11/2026 e pagina ufficiale «Scelta e Revoca del medico» (letta il 03/11/2026)",
 };
-ESENZIONE_ASL.rho = ESENZIONE_RHODENSE;
-ESENZIONE_ASL.bollate = ESENZIONE_RHODENSE;
-ESENZIONE_ASL["garbagnate-milanese"] = ESENZIONE_RHODENSE;
+ESENZIONE_ASL.rho = {
+  ...ESENZIONE_RHODENSE,
+  comeSiPresenta: [
+    ...(ESENZIONE_RHODENSE.comeSiPresenta ?? []),
+    "Sedi per chi abita a Rho: sportello Scelta e Revoca di Rho (Via Legnano 22) e Casa di Comunità di Passirana di Rho (Via Settembrini 1)",
+  ],
+};
+ESENZIONE_ASL.bollate = {
+  ...ESENZIONE_RHODENSE,
+  comeSiPresenta: [
+    ...(ESENZIONE_RHODENSE.comeSiPresenta ?? []),
+    "Sede per chi abita a Bollate: Casa di Comunità di Bollate (Via Piave 20)",
+  ],
+};
+ESENZIONE_ASL["garbagnate-milanese"] = {
+  ...ESENZIONE_RHODENSE,
+  comeSiPresenta: [
+    ...(ESENZIONE_RHODENSE.comeSiPresenta ?? []),
+    "Sede per chi abita a Garbagnate Milanese: Casa di Comunità di Garbagnate Milanese (Via per Cesate 62)",
+  ],
+};
 
 // ASST Bergamo Ovest (Treviglio): l'URP ha indicato per iscritto la pagina dei Distretti (risposta del 02/11/2026).
 ESENZIONE_ASL.treviglio = {
