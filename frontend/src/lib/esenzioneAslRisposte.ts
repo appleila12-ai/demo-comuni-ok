@@ -783,15 +783,23 @@ ESENZIONE_ASL.lecco = {
     "L'URP dell'ASST Lecco indica che le richieste relative alle esenzioni non passano da lui: vanno presentate direttamente agli sportelli Scelta e Revoca presenti su tutto il territorio provinciale, oppure online dallo sportello SIOC (Servizio Istanze Online Cittadino), a cui ci si registra senza bisogno dello SPID.",
   titoloPassi: "Dove si presenta",
   comeSiPresenta: [
-    "Di persona agli sportelli Scelta e Revoca dell'ASST Lecco: servizi, sedi e orari sono sulla pagina ufficiale",
+    "Di persona all'Ufficio Scelta e Revoca di Lecco, nella Casa di Comunità di Via Ghislanzoni 9. Sportelli aperti il lunedì e il mercoledì dalle 8.00 alle 13.00 e dalle 14.00 alle 15.50, il martedì, giovedì e venerdì dalle 8.00 alle 13.00",
+    "Per informazioni telefoniche: 0341 253713, il martedì, giovedì e venerdì dalle 14.00 alle 15.30",
+    "Gli altri sportelli della provincia (Bellano, Calolziocorte, Casatenovo, Merate, Mandello del Lario e altri) hanno indirizzi e orari sulla pagina ufficiale",
     "Online dallo sportello SIOC (serve registrarsi, non serve lo SPID)",
+    "Per pratiche per conto di un'altra persona agli sportelli serve la delega: il modulo è sulla pagina ufficiale",
   ],
   documenti: [
     "Patologia cronica: certificazione rilasciata da un medico specialista di una struttura pubblica o privata accreditata, e tessera sanitaria. L'esenzione vale per le prestazioni correlate alla patologia",
     "Malattia rara: certificazione redatta su apposita modulistica dal Presidio ospedaliero abilitato a diagnosticare la malattia rara",
     "Invalidità civile riconosciuta dall'INPS: il verbale che attesta l'invalidità, da portare agli sportelli Scelta e Revoca",
   ],
-  telefoni: [{ etichetta: "URP ASST Lecco", numero: "0341 489105" }],
+  importante:
+    "Gli orari possono cambiare durante festività, ponti ed estate: l'ASST invita a contattare lo sportello. Agli sportelli si pagano solo con carte o bancomat, non in contanti.",
+  telefoni: [
+    { etichetta: "Scelta e Revoca di Lecco (mar, gio, ven 14.00–15.30)", numero: "0341 253713" },
+    { etichetta: "URP ASST Lecco", numero: "0341 489105" },
+  ],
   paginaUrl: "https://www.asst-lecco.it/scelta-e-revoca/",
   paginaLabel: "Sportelli Scelta e Revoca · ASST Lecco",
   altriLink: [
@@ -799,9 +807,9 @@ ESENZIONE_ASL.lecco = {
     { label: "Esenzioni · ASST Lecco", url: "https://www.asst-lecco.it/esenzioni/" },
   ],
   manca:
-    "L'ASST non ha indicato se serve l'appuntamento né i tempi di rilascio: chiedili allo sportello Scelta e Revoca. L'elenco dei documenti viene dalla scheda informativa di Regione Lombardia, aggiornata al 22/08/2019: conferma allo sportello che sia ancora valido.",
+    "L'ASST non indica i tempi di rilascio: chiedili allo sportello Scelta e Revoca. Gli sportelli di Lecco sono aperti senza appuntamento negli orari indicati sulla pagina (non c'è scritto che serva prenotare). L'elenco dei documenti viene dalla scheda informativa di Regione Lombardia, aggiornata al 22/08/2019: conferma allo sportello che sia ancora valido.",
   fonte:
-    "ASST Lecco · risposta dell'Ufficio di Pubblica Tutela del 02/11/2026 e risposta dell'URP del 02/11/2026 · Regione Lombardia, scheda informativa «Ticket ed Esenzioni» (aggiornata al 22/08/2019)",
+    "ASST Lecco · risposta dell'Ufficio di Pubblica Tutela del 02/11/2026 e risposta dell'URP del 02/11/2026 · pagina ufficiale «Scelta e Revoca» (aggiornata il 24/08/2026) · Regione Lombardia, scheda informativa «Ticket ed Esenzioni» (aggiornata al 22/08/2019)",
 };
 
 // ASL Napoli 2 Nord, Distretto 39 (Villaricca, Qualiano, Calvizzano): pagine «Esenzioni per patologia» e «Centro Unico
