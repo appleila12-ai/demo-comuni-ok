@@ -711,15 +711,17 @@ ESENZIONE_ASL.ferrara = {
     "Agli Sportelli Unici CUP: la persona interessata, o chi ha una delega, presenta la certificazione della patologia, rilasciata su apposito modulo da uno specialista di una struttura pubblica",
     "Il diritto all'esenzione risulta sul documento di iscrizione al Servizio sanitario regionale che rilasciano gli Sportelli Unici CUP. L'AUSL registra l'esenzione e la comunica al tuo medico di famiglia o pediatra",
     "Malattia rara: ti rivolgi allo Sportello Unico CUP dell'AUSL di residenza con il certificato di diagnosi rilasciato da uno dei Centri accreditati della Rete nazionale malattie rare",
+    "Invalidità: lo Sportello Unico CUP dell'AUSL di residenza rilascia la certificazione di esenzione a chi (o il suo delegato) presenta il documento che attesta lo stato di invalidità. Stato e grado di invalidità li accerta la Commissione medica dell'AUSL di residenza",
+    "Hanno diritto all'esenzione per invalidità, tra gli altri, i cittadini con invalidità civile, di guerra o del lavoro, con cecità o sordomutismo, iscritti al Servizio sanitario nazionale. Per i cittadini comunitari con tessera TEAM, la certificazione di invalidità rilasciata all'estero la valuta un medico funzionario del Distretto",
   ],
   importante:
-    "Per usare l'esenzione, il medico di famiglia, il pediatra o lo specialista deve scrivere il codice della patologia nell'apposito campo dell'impegnativa. Senza il codice l'esenzione non può essere riconosciuta.",
+    "Per usare l'esenzione, il medico di famiglia, il pediatra o lo specialista deve scrivere il codice della patologia (o dell'invalidità riconosciuta) nell'apposito campo dell'impegnativa. L'esenzione può essere totale o parziale (solo le prestazioni legate alla patologia) e la tessera può avere scadenza limitata o illimitata.",
   telefoni: [],
   paginaUrl: "https://www.ausl.fe.it/come-fare-per/esenzioni-ticket",
   paginaLabel: "Esenzioni ticket · AUSL Ferrara",
   manca:
     "L'AUSL non ha indicato indirizzi e orari degli Sportelli Unici CUP, l'elenco dei documenti, se serve l'appuntamento, se si può inviare per mail né i tempi di rilascio: chiedili allo Sportello Unico CUP.",
-  fonte: "AUSL Ferrara · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale sulle esenzioni ticket",
+  fonte: "AUSL Ferrara · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale sulle esenzioni ticket (ultimo aggiornamento 11/06/2025)",
 };
 
 // ASP Catanzaro: risposta scritta dell'URP del 02/11/2026 (distretti citati: Catanzaro e Lamezia Terme).
