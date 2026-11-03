@@ -86,6 +86,15 @@ export function EsenzioneAsl({ scheda }: { scheda: SchedaEsenzioneAsl }) {
           testID="esenzione-asl-pagina"
         />
       ) : null}
+      {(scheda.altriLink ?? []).map((l) => (
+        <Bottone
+          key={l.url}
+          label={l.label}
+          icon="open-outline"
+          variante="vuoto"
+          onPress={() => apri(l.url)}
+        />
+      ))}
       <Text style={[paginaStili.testo, st.fonte]}>Fonte: {scheda.fonte}</Text>
     </Pagina>
   );
