@@ -31,6 +31,8 @@ export type Associazione = {
   sito?: string;
   /** numero WhatsApp (si apre la chat) */
   whatsapp?: string;
+  /** logo dell'associazione (percorso dentro public/, es. "/associazioni/nome.png"), solo se l'associazione ha dato l'ok */
+  logo?: string;
   /** slug dei Comuni in cui l'associazione è di casa (compare per prima lì) */
   comuni?: string[];
   /** sigle delle province in cui è di casa (compare come "Vicino a te" in tutti i loro Comuni) */
@@ -558,6 +560,18 @@ PER_PROVINCIA.GE.volontariato.unshift(
     email: "anffas.chiavari@libero.it",
     sito: "https://www.anffastigullioest.it",
     comuni: ["chiavari"],
+  },
+  // 03/11/2026: dati letti sul sito dell'associazione (www.xfragileliguria.it): sede, contatti e progetti;
+  // iscritta al RUNTS (Repertorio 31583). La presidente ha risposto a TutelApp il 03/11/2026.
+  {
+    nome: "Associazione Ligure Sindrome X-Fragile ODV",
+    cosa: "Famiglie e persone con Sindrome X Fragile e altre disabilità intellettive: informazione, sostegno alle famiglie e inserimento scolastico, sociale e lavorativo. A Villa Lanza c'è l'Università dell'autonomia, un progetto di vita autonoma. Attiva in Liguria dal 1999.",
+    dove: "Villa Lanza, Via Sant'Alberto 36, 16154 Genova Sestri Ponente",
+    telefono: "338 2440104",
+    email: "infoxfragile.liguria@gmail.com",
+    sito: "https://www.xfragileliguria.it",
+    logo: "/associazioni/x-fragile-liguria.png",
+    comuni: ["genova"],
   },
 );
 PER_PROVINCIA.GE.sport.unshift({
