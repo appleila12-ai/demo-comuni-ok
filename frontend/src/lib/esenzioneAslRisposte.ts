@@ -842,3 +842,33 @@ ESENZIONE_ASL.bergamo = {
     "La risposta ricevuta dall'ASST non indica documenti, sedi e orari degli sportelli, appuntamento né tempi di rilascio: consulta le pagine ufficiali o chiedi all'URP.",
   fonte: "ASST Papa Giovanni XXIII · risposta scritta dell'URP del 02/11/2026",
 };
+
+// ASST Rhodense (Rho, Bollate, Garbagnate Milanese): l'ufficio CUP / Scelta e Revoca ha indicato per iscritto
+// la pagina ufficiale (risposta del 03/11/2026).
+const ESENZIONE_RHODENSE: SchedaEsenzioneAsl = {
+  asl: "ASST Rhodense",
+  intro:
+    "L'ASST Rhodense indica la pagina ufficiale «Scelta e Revoca», dove sono disponibili le informazioni utili ai cittadini, comprese quelle sulle esenzioni: la trovi con il pulsante qui sotto.",
+  telefoni: [{ etichetta: "CUP / Scelta e Revoca · Casa di Comunità di Bollate", numero: "02 994305880" }],
+  paginaUrl: "https://www.asst-rhodense.it/v2/ambiti-territoriali/scelta-revoca.html",
+  paginaLabel: "Scelta e Revoca · ASST Rhodense",
+  manca:
+    "La risposta ricevuta dall'ASST non indica documenti, sedi e orari degli sportelli, appuntamento né tempi di rilascio: consulta la pagina ufficiale o chiedi all'ASST.",
+  fonte: "ASST Rhodense · risposta scritta dell'Area Accoglienza – CUP aziendali del 03/11/2026",
+};
+ESENZIONE_ASL.rho = ESENZIONE_RHODENSE;
+ESENZIONE_ASL.bollate = ESENZIONE_RHODENSE;
+ESENZIONE_ASL["garbagnate-milanese"] = ESENZIONE_RHODENSE;
+
+// ASST Bergamo Ovest (Treviglio): l'URP ha indicato per iscritto la pagina dei Distretti (risposta del 02/11/2026).
+ESENZIONE_ASL.treviglio = {
+  asl: "ASST Bergamo Ovest",
+  intro:
+    "L'URP dell'ASST Bergamo Ovest indica la pagina ufficiale con i Distretti e le informazioni utili per le richieste: la trovi con il pulsante qui sotto.",
+  telefoni: [{ etichetta: "URP ASST Bergamo Ovest", numero: "0363 424325" }],
+  paginaUrl: "https://www.asst-bgovest.it/491.asp",
+  paginaLabel: "Distretti · ASST Bergamo Ovest",
+  manca:
+    "La risposta ricevuta dall'ASST non indica documenti, sedi e orari, appuntamento né tempi di rilascio: consulta la pagina ufficiale o chiedi all'URP.",
+  fonte: "ASST Bergamo Ovest · risposta scritta dell'URP del 02/11/2026",
+};
