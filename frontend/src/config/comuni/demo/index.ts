@@ -197,6 +197,7 @@ import { maranoDiNapoli } from "./marano-di-napoli";
 import { marcianise } from "./marcianise";
 import { marino } from "./marino";
 import { marsala } from "./marsala";
+import { masserano } from "./masserano";
 import { martinaFranca } from "./martina-franca";
 import { mascalucia } from "./mascalucia";
 import { massa } from "./massa";
@@ -570,6 +571,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   marcianise,
   marino,
   marsala,
+  masserano,
   martinaFranca,
   mascalucia,
   massa,

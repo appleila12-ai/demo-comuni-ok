@@ -888,6 +888,9 @@ ESENZIONE_ASL.biella = {
   fonte: "ASL Biella · risposta scritta dell'URP del 02/11/2026",
 };
 
+// Masserano (BI): rientra nell'ASL BI, stessa scheda di Biella.
+ESENZIONE_ASL.masserano = ESENZIONE_ASL.biella;
+
 // ASST Papa Giovanni XXIII (Bergamo): l'URP ha indicato per iscritto le pagine ufficiali (risposta del 02/11/2026).
 ESENZIONE_ASL.bergamo = {
   asl: "ASST Papa Giovanni XXIII",
