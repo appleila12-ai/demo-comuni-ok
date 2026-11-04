@@ -4,6 +4,9 @@ import { INPS_TERZA_FASE } from "./percorso";
 // Comune di Mediglia (MI).
 // Fonti (29/09/2026): pagina "Servizi Sociali, Casa, Salute" del sito del Comune;
 // pagina "Piano di Zona - Distretto Sociale Paullese" del Comune di Peschiera Borromeo.
+// Aggiornamento 04/11/2026: recapiti dell'Ufficio di Piano (indirizzo, telefoni, email) presi
+// dall'avviso pubblico Misura B2 2025 dell'Ambito di Paullo, pubblicato sul sito del Comune di Paullo
+// (sostituiscono il telefono 02 51690251 della prima versione, non ritrovato in fonti ufficiali).
 // DA VERIFICARE con il Comune prima del pilota: sede e sportello del Distretto
 // sanitario (ASST Melegnano e della Martesana, Distretto Sud Est Milano) usati
 // dalle famiglie di Mediglia, e associazioni del territorio per la disabilità.
@@ -53,8 +56,8 @@ export const mediglia: ComuneConfig = {
       icon: "git-network-outline",
       title: "Distretto Sociale Paullese – Ufficio di Piano",
       subtitle:
-        "Servizi sociali gestiti insieme da Mediglia, Pantigliate, Paullo, Peschiera Borromeo (capofila) e Tribiano · c/o Servizi Sociali di Peschiera Borromeo · Tel. 02 51690251",
-      action: { type: "tel", value: "0251690251" },
+        "Servizi sociali gestiti insieme da Mediglia, Pantigliate, Paullo, Peschiera Borromeo (capofila) e Tribiano · Via XXV Aprile 1, Peschiera Borromeo · Tel. 02 516902.57 / 02 516902.14 · distrettosociale1@comune.peschieraborromeo.mi.it",
+      action: { type: "tel", value: "0251690257" },
     },
     {
       icon: "medkit-outline",
