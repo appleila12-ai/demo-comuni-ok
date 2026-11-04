@@ -118,6 +118,7 @@ import { cremona } from "./cremona";
 import { crotone } from "./crotone";
 import { cuneo } from "./cuneo";
 import { desio } from "./desio";
+import { duinoAurisina } from "./duino-aurisina";
 import { eboli } from "./eboli";
 import { empoli } from "./empoli";
 import { enna } from "./enna";
@@ -491,6 +492,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   crotone,
   cuneo,
   desio,
+  duinoAurisina,
   eboli,
   empoli,
   enna,
