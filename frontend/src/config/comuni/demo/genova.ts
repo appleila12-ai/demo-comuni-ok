@@ -15,6 +15,17 @@ const DISTRETTO_8: PuntoSupporto = {
   action: { type: "tel", value: "0108499674" },
 };
 
+const ASSISTENZA_DISABILI_ASL3: PuntoSupporto = {
+  icon: "medkit-outline",
+  title: "ASL3 · Assistenza disabili (anche per familiari e caregiver)",
+  subtitle:
+    "Servizio in ogni Distretto, rivolto anche a familiari e caregiver di persone con disabilità. Si accede direttamente o su segnalazione dei servizi del territorio. Distretto 8 (Voltri, Piazza Odicini 4): 010 849 7949, martedì e mercoledì 8–13 · Distretto 9 (Fiumara, Via Operai 80): 010 849 7350, martedì–venerdì 8–13 · Distretto 10 (Via Bonghi 6): 010 849 9466, lunedì–giovedì 8–13 · Distretto 11 (Via Assarotti 35): 010 849 6879, martedì, giovedì e venerdì 8–13 · Distretto 12 (Via Archimede 30A): 331 4666746, martedì, giovedì e venerdì 8–13 · Distretto 13 (Via Bainsizza 42, 4° piano): 010 849 6274, lunedì–venerdì 8–13. Pagina ASL3 del 06/05/2026",
+  action: {
+    type: "web",
+    value: "https://www.asl3.liguria.it/azienda/dipartimenti/dipartimenti-direzione-sociosanitaria/cure-primarie/541-assistenza-disabili.html",
+  },
+};
+
 const PUA_ASL3: PuntoSupporto = {
   icon: "medkit-outline",
   title: "ASL3 · Punto Unico di Accesso (PUA) e sportelli dei Distretti",
@@ -213,6 +224,7 @@ export const genova: ComuneConfig = {
       action: { type: "tel", value: "0105578464" },
     },
     PUA_ASL3,
+    ASSISTENZA_DISABILI_ASL3,
     DISTRETTO_8,
     {
       icon: "medkit-outline",
