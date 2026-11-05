@@ -104,7 +104,8 @@ export const INPS_SPERIMENTAZIONE: PuntoSupporto = {
 
 // Passo 1 nelle 39 province della terza fase della sperimentazione INPS (dal 1° marzo 2026).
 // Fonti: INPS, notizia del 24/02/2026 "Accertamento disabilità: sperimentazione estesa ad altre 40 province"
-// e comunicato INPS del 06/08/2026 (elenco delle fasi). Bolzano esclusa: elenchi discordanti.
+// e comunicato INPS del 06/08/2026 (elenco delle fasi). La notizia elenca 40 territori, compresa la Provincia
+// autonoma di Bolzano: qui sono 39 perché a Bolzano l'INPS non interviene nell'accertamento (vedi PROVINCIA_BZ_INVALIDITA).
 export const INPS_TERZA_FASE: PuntoSupporto = {
   icon: "document-text-outline",
   title: "Certificato medico introduttivo (INPS)",
@@ -134,17 +135,20 @@ export const INPS_PRIMA_FASE: PuntoSupporto = {
   },
 };
 
-// Provincia autonoma di Bolzano: terza fase (notizia INPS del 24/02/2026).
-// Il messaggio INPS 1377/2026 non elenca Bolzano: nessuna eccezione indicata.
-export const INPS_TERZA_FASE_BZ: PuntoSupporto = {
+// Provincia autonoma di Bolzano: invalidità civile.
+// Fonti lette il 05/11/2026: (1) notizia INPS del 24/02/2026 «Riforma della disabilità: al via la terza fase
+// sperimentale»: «Per quanto riguarda alla Provincia autonoma di Bolzano, non è previsto l'intervento dell'Istituto
+// nella gestione del procedimento di accertamento della disabilità»; (2) pagina «Invalidità civile» del portale
+// in lingua facile della Provincia (sedi dei servizi di medicina legale aziendale). La pagina della Provincia non
+// riporta la data di aggiornamento. Per l'handicap (legge 104/1992) lo sportello non è indicato: nessuna voce.
+export const PROVINCIA_BZ_INVALIDITA: PuntoSupporto = {
   icon: "document-text-outline",
-  title: "Certificato medico introduttivo (INPS)",
+  title: "Invalidità civile in Alto Adige",
   subtitle:
-    "Il medico di famiglia o un altro medico abilitato compila e invia all'INPS il certificato medico introduttivo. Nella tua provincia la nuova procedura è in corso dal 1° marzo 2026: il certificato avvia la richiesta, senza una domanda separata",
+    "A Bolzano l'INPS non interviene nella gestione dell'accertamento della disabilità. Secondo la Provincia, la domanda di invalidità civile compilata si consegna a un servizio di medicina legale aziendale: Bolzano (via Amba Alagi 33), Merano (via Laurin 22/24), Bressanone (via Dante 26/C), Brunico (via Ospedale 11)",
   action: {
     type: "web",
-    value:
-      "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.certificato-medico-introduttivo---invalidit--civile.html",
+    value: "https://lingua-facile.provincia.bz.it/it/invalidita-civile",
   },
 };
 
