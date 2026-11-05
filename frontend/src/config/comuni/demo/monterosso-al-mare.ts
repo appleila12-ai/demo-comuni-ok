@@ -4,7 +4,7 @@ import { INPS_TERZA_FASE, percorsoAsl5 } from "../percorso";
 // Comune di Monterosso al Mare (SP) — VERSIONE DIMOSTRATIVA (scheda del 05/11/2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Fonti: pagine ufficiali del Comune e dell'ambito sociale, indicate da Ilaria dopo una ricerca del 04/11/2026 (non riletta direttamente): ASL 5, siti dei Comuni, Prefettura della Spezia.
-// Il numero 0187 802233 è scritto nella pagina del Comune per l'ufficio, ma è lo stesso numero di Levanto (capofila dell'ambito): la pagina non dice se è una linea propria. Il giorno di ricevimento (venerdì) viene dalla versione del 30/07/2026 della pagina.
+// Il numero 0187 802233 è il recapito pubblicato dal Comune per l'Ufficio Assistente sociale (non si sa se sia una linea propria), ed è lo stesso numero di Levanto (capofila dell'ambito): la pagina non dice se è una linea propria. Il giorno di ricevimento (venerdì) viene dalla versione del 30/07/2026 della pagina.
 // Da verificare con l'ente: telefono dell'ufficio di Monterosso, associazioni.
 // Dove un dato non è stato trovato su una fonte ufficiale il campo è lasciato vuoto: non va completato da altre fonti.
 export const monterossoAlMare: ComuneConfig = {

@@ -4,7 +4,7 @@ import { INPS_TERZA_FASE, percorsoAsl5 } from "../percorso";
 // Comune di Pignone (SP) — VERSIONE DIMOSTRATIVA (scheda del 05/11/2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Fonti: pagine ufficiali del Comune e dell'ambito sociale, indicate da Ilaria dopo una ricerca del 04/11/2026 (non riletta direttamente): ASL 5, siti dei Comuni, Prefettura della Spezia.
-// L'ufficio è 'Contabilità – Tributi – Servizi sociali' e le sue email sono servizifinanziari@ e tributi@: non sono usate come email di contatto né come destinatario, si usa la PEC generale.
+// L'ufficio è 'Contabilità – Tributi – Servizi sociali' e le sue email sono servizifinanziari@ e tributi@: non sono usate come email di contatto; come destinatario di 'Scrivi al tuo Comune' si usa il contatto generale del Comune (info@, 05/11/2026).
 // Da verificare con l'ente: sede e orari dello Sportello unico sociosanitario (SUSS), email sociale dedicata, associazioni.
 // Dove un dato non è stato trovato su una fonte ufficiale il campo è lasciato vuoto: non va completato da altre fonti.
 export const pignone: ComuneConfig = {

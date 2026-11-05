@@ -4,7 +4,7 @@ import { INPS_TERZA_FASE, percorsoAsl5 } from "../percorso";
 // Comune di Follo (SP) — VERSIONE DIMOSTRATIVA (scheda del 05/11/2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Fonti: pagine ufficiali del Comune e dell'ambito sociale, indicate da Ilaria dopo una ricerca del 04/11/2026 (non riletta direttamente): ASL 5, siti dei Comuni, Prefettura della Spezia.
-// Follo appartiene all'Ambito Sociale n. 61 (capofila Bolano): convenzione prorogata al 30/06/2026 senza conferma successiva, quindi l'ambito non è citato.
+// Follo appartiene all'Ambito Sociale n. 61 (capofila Bolano): la delibera del Consiglio di Calice n. 10 del 29/06/2026 dispone la proroga della convenzione fino alla definizione dei nuovi assetti territoriali (testo integrale non letto): l'ambito non è citato nella scheda.
 // Da verificare con l'ente: associazioni; importi e requisiti dei contributi (il contributo trasporto scolastico aveva scadenza 04/07/2026: non inserito).
 // Dove un dato non è stato trovato su una fonte ufficiale il campo è lasciato vuoto: non va completato da altre fonti.
 export const follo: ComuneConfig = {

@@ -569,7 +569,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "formigine": { email: "comune.formigine@cert.comune.formigine.mo.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
   // ---- aggiunti il 05/11/2026 (Distretto 17 ASL 5, Ambito Carso Giuliano, Distretto Paullese)
   // Beverino (SP)
-  "beverino": { email: "comunebeverino@legalmail.it", tipo: "pec", fonte: "Prefettura della Spezia, elenco PEO e PEC dei Comuni (letto il 04/11/2026); nessuna email ordinaria trovata" },
+  "beverino": { email: "area.amministrativa@comune.beverino.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Beverino, Protocollo e Messi (letto il 05/11/2026)" },
   // Bolano (SP)
   "bolano": { email: "servizisociali@comune.bolano.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Bolano, Ufficio Servizi sociali (letto il 04/11/2026)" },
   // Bonassola (SP)
@@ -591,7 +591,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Monterosso al Mare (SP)
   "monterosso-al-mare": { email: "protocollo@comune.monterosso.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Monterosso al Mare e Prefettura della Spezia, protocollo (letto il 04/11/2026)" },
   // Pignone (SP)
-  "pignone": { email: "comune.pignone@legalmail.it", tipo: "pec", fonte: "Prefettura della Spezia, elenco PEO e PEC dei Comuni (letto il 04/11/2026)" },
+  "pignone": { email: "info@comune.pignone.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Pignone, contatto generale del Comune (letto il 05/11/2026)" },
   // Riomaggiore (SP)
   "riomaggiore": { email: "urp@comune.riomaggiore.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Riomaggiore, Sportello di cittadinanza (letto il 04/11/2026)" },
   // Rocchetta di Vara (SP)
@@ -603,7 +603,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Zignago (SP)
   "zignago": { email: "comune.zignago@legalmail.it", tipo: "pec", fonte: "sito del Comune di Zignago, sede comunale e PEC (letto il 04/11/2026)" },
   // Monrupino (TS)
-  "monrupino": { email: "comune.monrupino@certgov.fvg.it", tipo: "pec", fonte: "sito del Comune di Monrupino, contatti e PEC (letto il 04/11/2026); nessuna email ordinaria trovata" },
+  "monrupino": { email: "segreteria@com-monrupino.regione.fvg.it", tipo: "ordinaria", fonte: "sito del Comune di Monrupino, Segreteria (letto il 05/11/2026)" },
   // Muggia (TS)
   "muggia": { email: "ambito.sociale@comunedimuggia.ts.it", tipo: "ordinaria", fonte: "sito del Comune di Muggia, Ambito Carso Giuliano e contatti dell'ente gestore (letto il 04/11/2026)" },
   // San Dorligo della Valle (TS)

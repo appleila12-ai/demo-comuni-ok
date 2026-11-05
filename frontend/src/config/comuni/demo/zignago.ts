@@ -4,7 +4,7 @@ import { INPS_TERZA_FASE, percorsoAsl5 } from "../percorso";
 // Comune di Zignago (SP) — VERSIONE DIMOSTRATIVA (scheda del 05/11/2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Fonti: pagine ufficiali del Comune e dell'ambito sociale, indicate da Ilaria dopo una ricerca del 04/11/2026 (non riletta direttamente): ASL 5, siti dei Comuni, Prefettura della Spezia.
-// Nessun ufficio sociale proprio nelle fonti trovate: si indica l'Ambito Sociale n. 60. L'unica email comunale trovata è quella dell'Anagrafe e Protocollo, su un dominio diverso: non usata, si usa la PEC.
+// Recapiti di un ufficio sociale locale di Zignago non trovati nelle fonti ufficiali (non vuol dire che non esista): si indica l'Ambito Sociale n. 60. L'unica email comunale ordinaria trovata è quella dell'Anagrafe e Protocollo, su un dominio diverso: non usata, si usa la PEC.
 // Da verificare con l'ente: ufficio sociale locale, orari, associazioni.
 // Dove un dato non è stato trovato su una fonte ufficiale il campo è lasciato vuoto: non va completato da altre fonti.
 export const zignago: ComuneConfig = {

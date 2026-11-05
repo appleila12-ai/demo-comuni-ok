@@ -4,7 +4,7 @@ import { INPS_TERZA_FASE, percorsoAsl5 } from "../percorso";
 // Comune di Brugnato (SP) — VERSIONE DIMOSTRATIVA (scheda del 05/11/2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Fonti: pagine ufficiali del Comune e dell'ambito sociale, indicate da Ilaria dopo una ricerca del 04/11/2026 (non riletta direttamente): ASL 5, siti dei Comuni, Prefettura della Spezia.
-// Brugnato non ha un presidio sociale locale nelle fonti trovate: si indica l'Ambito Sociale n. 60. Il centralino del Comune (0187 894110) non è dato come telefono sociale e non è usato.
+// Recapiti di un presidio sociale locale di Brugnato non trovati nelle fonti ufficiali (non vuol dire che non esista): si indica l'Ambito Sociale n. 60. Il centralino del Comune (0187 894110) non è dato come telefono sociale e non è usato.
 // Da verificare con l'ente: ufficio sociale locale e orari.
 // Dove un dato non è stato trovato su una fonte ufficiale il campo è lasciato vuoto: non va completato da altre fonti.
 export const brugnato: ComuneConfig = {
