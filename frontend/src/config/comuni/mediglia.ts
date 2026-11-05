@@ -9,8 +9,8 @@ import { INPS_TERZA_FASE, percorso } from "./percorso";
 // (sostituiscono il telefono 02 51690251 della prima versione, non ritrovato in fonti ufficiali).
 // Aggiornamento 05/11/2026: orari (la pagina del Comune, aggiornata il 20/05/2026, indica gli assistenti solo su
 // appuntamento: gli orari di accesso libero della prima versione sono tolti), telefono per gli appuntamenti,
-// telefono dell'Ufficio di Piano dalla sua scheda (aggiornata il 02/01/2026; l'avviso del Fondo non autosufficienza
-// 2026-27 indica anche 02 51690257 e 02 51690214) e passi del percorso. Dati indicati da Ilaria dopo una ricerca
+// telefoni dell'Ufficio di Piano 02 516902.57 / 02 516902.14 (avviso pubblico; la sua scheda indica 02 51690595:
+// numero da riconfermare con l'ufficio, mail inviata il 05/11/2026) e passi del percorso. Dati indicati da Ilaria dopo una ricerca
 // del 04/11/2026 sui siti dei Comuni del Distretto (non riletti direttamente).
 // DA VERIFICARE con il Comune prima del pilota: sede e sportello del Distretto
 // sanitario (ASST Melegnano e della Martesana, Distretto Sud Est Milano) usati
@@ -61,8 +61,8 @@ export const mediglia: ComuneConfig = {
       icon: "git-network-outline",
       title: "Distretto Sociale Paullese – Ufficio di Piano",
       subtitle:
-        "Servizi sociali gestiti insieme da Mediglia, Pantigliate, Paullo, Peschiera Borromeo (capofila) e Tribiano · Via XXV Aprile 1, Peschiera Borromeo · Tel. 02 51690595 (l'avviso del Fondo non autosufficienza indica anche 02 51690257 e 02 51690214) · distrettosociale1@comune.peschieraborromeo.mi.it",
-      action: { type: "tel", value: "0251690595" },
+        "Servizi sociali gestiti insieme da Mediglia, Pantigliate, Paullo, Peschiera Borromeo (capofila) e Tribiano · Via XXV Aprile 1, Peschiera Borromeo · Tel. 02 516902.57 / 02 516902.14 · distrettosociale1@comune.peschieraborromeo.mi.it",
+      action: { type: "tel", value: "0251690257" },
     },
     {
       icon: "medkit-outline",
