@@ -2183,7 +2183,7 @@ export const BONUS: Bonus[] = [
     perChi:
       "La persona con disabilità o chi l'ha fiscalmente a carico, intestatario del veicolo. Categorie ammesse: ridotte o impedite capacità motorie permanenti; grave limitazione della deambulazione o pluriamputazioni; disabilità mentale o psichica con handicap grave e accompagnamento; cecità o sordità.",
     cosa:
-      "Esenzione dal bollo per un solo veicolo. Limiti di cilindrata: 2000 cc a benzina, 2800 cc a gasolio. Per le ridotte capacità motorie il veicolo deve avere gli adattamenti necessari; nelle altre categorie no.",
+      "Esenzione dal bollo per un solo veicolo. Limiti: fino a 2.000 cc se benzina o ibrido, fino a 2.800 cc se gasolio o ibrido, fino a 150 kW se elettrico. Per le ridotte capacità motorie il veicolo deve avere gli adattamenti necessari; nelle altre categorie no.",
     stato: "attivo",
     quando: "Misura permanente. Nessuna scadenza indicata.",
     comeSiChiede:
@@ -2192,8 +2192,8 @@ export const BONUS: Bonus[] = [
       label: "Regione Campania · Tassa automobilistica (con tabella ACI delle esenzioni)",
       url: "https://entrate.regione.campania.it/tassa-automobilistica-info",
     },
-    verificatoIl: "02/11/2026",
-    nota: "I documenti cambiano con la categoria: verbale di handicap grave, certificazioni pubbliche di cecità o sordità, patente speciale per le capacità motorie ridotte. Controlla l'elenco sulla pagina. I limiti per alimentazioni diverse da benzina e gasolio non sono nelle fonti lette. La pagina non indica da quando decorre l'esenzione né come si rinnova, e non riporta la data di aggiornamento: per questi punti scrivi alla Regione (tributiregionali@regione.campania.it, PEC tributiregionali@pec.regione.campania.it, tel. 081 796 61 11 o 081 796 91 11).",
+    verificatoIl: "05/11/2026",
+    nota: "I documenti cambiano con la categoria: verbale di handicap grave, certificazioni pubbliche di cecità o sordità, patente speciale per le capacità motorie ridotte. Controlla l'elenco sulla pagina. I limiti per le auto ibride ed elettriche sono nel Tariffario 2026 della Regione Campania (sezione «Esenzioni dal pagamento», voce «Veicoli per disabili (L. 104)»); la pagina «Tassa automobilistica» indica solo benzina e gasolio. Per GPL e metano i limiti non sono indicati. La pagina non indica da quando decorre l'esenzione né come si rinnova, e non riporta la data di aggiornamento: per questi punti scrivi alla Regione (tributiregionali@regione.campania.it, PEC tributiregionali@pec.regione.campania.it, tel. 081 796 61 11 o 081 796 91 11).",
   },
 
   // ------------------------------------------------------------------ MOLISE
