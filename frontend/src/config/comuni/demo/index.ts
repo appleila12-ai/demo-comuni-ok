@@ -336,6 +336,11 @@ import { gragnano } from "./gragnano";
 import { sarno } from "./sarno";
 import { mondragone } from "./mondragone";
 import { fonteNuova } from "./fonte-nuova";
+import { lenola } from "./lenola";
+import { monteSanBiagio } from "./monte-san-biagio";
+import { sperlonga } from "./sperlonga";
+import { sanFeliceCirceo } from "./san-felice-circeo";
+import { campodimele } from "./campodimele";
 import { carmagnola } from "./carmagnola";
 import { garbagnateMilanese } from "./garbagnate-milanese";
 import { abbiategrasso } from "./abbiategrasso";
@@ -710,6 +715,11 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   sarno,
   mondragone,
   fonteNuova,
+  lenola,
+  monteSanBiagio,
+  sperlonga,
+  sanFeliceCirceo,
+  campodimele,
   carmagnola,
   garbagnateMilanese,
   abbiategrasso,

@@ -1730,11 +1730,130 @@ PER_PROVINCIA.AR.volontariato.unshift(
   },
 );
 
+// 05/11/2026: schede con stato VERIFICATO nella ricerca del 04/11/2026 (siti ufficiali degli enti e pagine dei Comuni).
+PER_PROVINCIA.AR.volontariato.push(
+  {
+    nome: "ANMIC Arezzo – Associazione Nazionale Mutilati e Invalidi Civili",
+    cosa: "Sede provinciale di ANMIC: tutela le persone invalide civili e le aiuta con i diritti e le pratiche. Gli orari non sono pubblicati: telefona prima.",
+    dove: "Corso Italia 236, 52100 Arezzo",
+    telefono: "0575 295873",
+    email: "anmic_arezzo@virgilio.it",
+    sito: "https://anmic.org/index.php/area-riservata-sedi-provinciali",
+    comuni: ["arezzo"],
+  },
+  {
+    nome: "ToscanABILE",
+    cosa: "Progetti di inclusione per le persone con disabilità attraverso arte, cultura e turismo. Il contatto telefonico pubblicato sul sito è un numero WhatsApp.",
+    email: "toscanabile@toscanabile.com",
+    whatsapp: "+39 375 8306509",
+    sito: "https://toscanabile.com/",
+    comuni: ["arezzo"],
+  },
+  {
+    nome: "Casa di Elena (Il Casolino)",
+    cosa: "Casa famiglia a San Leo, gestita da Il Casolino e indicata dal Comune di Arezzo tra i servizi attivi, aperta tutti i giorni nelle 24 ore. Per l'accesso il Comune rimanda al Segretariato sociale: 0575 377281, 0575 377289, 0575 377299, segretariatosociale@comune.arezzo.it.",
+    dove: "Via del Casolino 3, San Leo (Arezzo)",
+    sito: "https://comune.arezzo.it/node/22898",
+    comuni: ["arezzo"],
+  },
+);
+
+PER_PROVINCIA.FI.sport.push(
+  {
+    nome: "G.S. Unità Spinale Firenze ONLUS (Palarcobaleno)",
+    cosa: "Gestisce la palestra comunale Palarcobaleno, con attività motoria per persone con disabilità.",
+    dove: "Via Lunga 126/128, Firenze",
+    telefono: "345 7692805",
+    email: "infogsunispifionlus@gmail.com",
+    sito: "https://sport.comune.fi.it/luoghi-dello-sport/palestra-handicap-palarcobaleno",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "Il Ritrovo APS-ASD",
+    cosa: "Associazione di promozione sociale sportiva, nell'elenco degli erogatori della Società della Salute Firenze per la disabilità (provvedimento del 09/10/2026).",
+    dove: "Via San Michele a Rovezzano 10/A, 50136 Firenze (impianto in Viale Malta 8)",
+    telefono: "339 1936542",
+    email: "associazioneilritrovo@gmail.com",
+    comuni: ["firenze"],
+  },
+);
+
+PER_PROVINCIA.GE.volontariato.push({
+  nome: "Auto Mutuo Aiuto Disabili (Recco)",
+  cosa: "Gruppo di auto mutuo aiuto per persone con disabilità, nell'elenco delle associazioni del Comune di Recco. Altri recapiti non sono pubblicati.",
+  telefono: "0185 76147",
+  sito: "https://halleyweb.com/c010047/zf/index.php/associazioni/",
+  comuni: ["recco"],
+});
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",
     cosa: "Ogni provincia ha un CSV che conosce le associazioni del territorio: sul sito trovi quello della tua zona.",
     sito: "https://csvnet.it",
+  },
+  {
+    nome: "FISH – Federazione per i diritti delle persone con disabilità e famiglie",
+    cosa: "Federazione di associazioni che rappresenta le persone con disabilità e le famiglie, con federazioni regionali.",
+    dove: "Via Guidubaldo del Monte 61, 00197 Roma",
+    telefono: "06 78851262",
+    email: "presidenza@fishets.it",
+    sito: "https://fishets.it/contatti/",
+  },
+  {
+    nome: "ENS – Ente Nazionale Sordi",
+    cosa: "Rappresenta le persone sorde e promuove i loro diritti e l'inclusione, con sedi sul territorio.",
+    dove: "Via Gregorio VII 120, 00165 Roma",
+    telefono: "06 398051",
+    email: "protocollo@ens.it",
+    sito: "https://www.ens.it/le-nostre-sedi/",
+  },
+  {
+    nome: "UICI – Unione Italiana dei Ciechi e degli Ipovedenti",
+    cosa: "Sostiene le persone cieche e ipovedenti, anche con altre disabilità: autonomia, accessibilità, mobilità. Ha sezioni regionali e provinciali.",
+    dove: "Via Borgognona 38-42, 00187 Roma",
+    email: "segreteria@uici.it",
+    sito: "https://www.uiciechi.it/organizzazione/regioni/indiceregioni.asp",
+  },
+  {
+    nome: "Anffas – Associazione nazionale famiglie e persone con disabilità intellettive e del neurosviluppo",
+    cosa: "Promuove i diritti e la partecipazione delle persone con disabilità intellettive e relazionali e sostiene le famiglie. Nella pagina \"Dove siamo\" trovi l'associazione locale.",
+    dove: "Via Latina 20, 00179 Roma",
+    telefono: "06 3611524",
+    email: "nazionale@anffas.net",
+    sito: "https://www.anffas.net/it/chi-siamo/dove-siamo/",
+  },
+  {
+    nome: "ANGSA – Associazione Nazionale Genitori perSone con Autismo",
+    cosa: "Difende i diritti delle persone con autismo e delle loro famiglie. Il Telefono Blu (numero gratuito 800 03 18 19) risponde dal lunedì al venerdì dalle 9:30 alle 12:30; email telefonoblu@angsa.it.",
+    dove: "c/o FAIP, Via Filippo Corridoni 13, 00195 Roma",
+    telefono: "800 03 18 19",
+    email: "segreteria@angsa.it",
+    sito: "https://angsa.it/contatti/",
+  },
+  {
+    nome: "AISM – Associazione Italiana Sclerosi Multipla",
+    cosa: "Sostiene le persone con sclerosi multipla e promuove i loro diritti. Il numero verde è 800 803028. Nella pagina \"Dove in Italia\" trovi la sezione più vicina.",
+    dove: "Via Operai 40, 16149 Genova",
+    telefono: "800 803028",
+    email: "aism@aism.it",
+    sito: "https://www.aism.it",
+  },
+  {
+    nome: "UILDM – Unione Italiana Lotta alla Distrofia Muscolare",
+    cosa: "Sostiene le persone con distrofie muscolari e malattie neuromuscolari attraverso le sezioni locali.",
+    dove: "Via Vergerio 19, 35126 Padova",
+    telefono: "049 8021001",
+    email: "direzionenazionale@uildm.it",
+    sito: "https://uildm.org/sezioni/",
+  },
+  {
+    nome: "UNIAMO – Federazione Italiana Malattie Rare",
+    cosa: "Rappresenta le persone con malattia rara e le famiglie; il servizio SAIO offre ascolto, informazione e orientamento.",
+    dove: "Via Nomentana 133, Roma",
+    telefono: "06 4404773",
+    email: "segreteria@uniamo.org",
+    sito: "https://uniamo.org",
   },
 ];
 
