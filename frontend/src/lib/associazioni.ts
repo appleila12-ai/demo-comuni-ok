@@ -89,6 +89,7 @@ const PER_PROVINCIA: Record<string, Elenco> = {
         nome: "Insieme per i diritti dei nostri figli",
         cosa: "Famiglie della Val di Magra che si aiutano e tutelano i diritti dei figli con disabilità (scuola, neuropsichiatria).",
         dove: "Val di Magra (Sarzana, Castelnuovo Magra)",
+        telefono: "327 4549912",
         email: "insiemeperinostrifigli2016@gmail.com",
         comuni: ["sarzana", "arcola"],
       },
