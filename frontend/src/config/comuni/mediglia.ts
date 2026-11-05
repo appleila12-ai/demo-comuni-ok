@@ -9,8 +9,9 @@ import { INPS_TERZA_FASE, percorso } from "./percorso";
 // (sostituiscono il telefono 02 51690251 della prima versione, non ritrovato in fonti ufficiali).
 // Aggiornamento 05/11/2026: orari (la pagina del Comune, aggiornata il 20/05/2026, indica gli assistenti solo su
 // appuntamento: gli orari di accesso libero della prima versione sono tolti), telefono per gli appuntamenti,
-// telefoni dell'Ufficio di Piano 02 516902.57 / 02 516902.14 (avviso pubblico; la sua scheda indica 02 51690595:
-// numero da riconfermare con l'ufficio, mail inviata il 05/11/2026) e passi del percorso. Dati indicati da Ilaria dopo una ricerca
+// telefoni dell'Ufficio di Piano: 02 51690595 (scheda dell'ufficio, aggiornata il 02/01/2026) e 02 516902.57 / .14
+// (avvisi Fondo non autosufficienza 2025 e 2026-27): entrambi pubblicati da fonti ufficiali, nessuno risulta cessato
+// (verifica del 05/11/2026); nessuna fonte dice quale sia la linea generale: da chiedere all'ufficio, e passi del percorso. Dati indicati da Ilaria dopo una ricerca
 // del 04/11/2026 sui siti dei Comuni del Distretto (non riletti direttamente).
 // DA VERIFICARE con il Comune prima del pilota: sede e sportello del Distretto
 // sanitario (ASST Melegnano e della Martesana, Distretto Sud Est Milano) usati
@@ -61,8 +62,8 @@ export const mediglia: ComuneConfig = {
       icon: "git-network-outline",
       title: "Distretto Sociale Paullese – Ufficio di Piano",
       subtitle:
-        "Servizi sociali gestiti insieme da Mediglia, Pantigliate, Paullo, Peschiera Borromeo (capofila) e Tribiano · Via XXV Aprile 1, Peschiera Borromeo · Tel. 02 516902.57 / 02 516902.14 · distrettosociale1@comune.peschieraborromeo.mi.it",
-      action: { type: "tel", value: "0251690257" },
+        "Servizi sociali gestiti insieme da Mediglia, Pantigliate, Paullo, Peschiera Borromeo (capofila) e Tribiano · Via XXV Aprile 1, Peschiera Borromeo · Tel. 02 51690595 / 02 516902.57 / 02 516902.14 · distrettosociale1@comune.peschieraborromeo.mi.it",
+      action: { type: "tel", value: "0251690595" },
     },
     {
       icon: "medkit-outline",

@@ -48,8 +48,8 @@ export const pantigliate: ComuneConfig = {
       icon: "git-network-outline",
       title: "Distretto Sociale Paullese – Ufficio di Piano",
       subtitle:
-        "Servizi sociali gestiti insieme da Mediglia, Pantigliate, Paullo, Peschiera Borromeo (capofila) e Tribiano · Via XXV Aprile 1, Peschiera Borromeo · Tel. 02 516902.57 / 02 516902.14 · distrettosociale1@comune.peschieraborromeo.mi.it",
-      action: { type: "tel", value: "0251690257" },
+        "Servizi sociali gestiti insieme da Mediglia, Pantigliate, Paullo, Peschiera Borromeo (capofila) e Tribiano · Via XXV Aprile 1, Peschiera Borromeo · Tel. 02 51690595 / 02 516902.57 / 02 516902.14 · distrettosociale1@comune.peschieraborromeo.mi.it",
+      action: { type: "tel", value: "0251690595" },
     },
   ],
 
