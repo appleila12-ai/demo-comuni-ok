@@ -5,6 +5,7 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sito del Comune letto il 04/11/2026. Recapiti dell'ufficio in anteprima e senza orari: non inseriti.
 // Distretto socio sanitario LT4 (vedi scheda di Fondi). Coordinate: database ISTAT. Link dell'azienda sanitaria da verificare.
+// Aggiornamento 05/11/2026 (seconda ricerca): sede, telefono e orari dalle pagine del Distretto LT4 e del Comune. Email (di una persona) non inserita.
 export const sanFeliceCirceo: ComuneConfig = {
   slug: "san-felice-circeo",
   tipo: "comune",
@@ -17,10 +18,10 @@ export const sanFeliceCirceo: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
+  indirizzo: "Piazza Luigi Lanzuisi 1, 04017 San Felice Circeo (LT)",
+  telefono: "0773 522332",
   email: "",
-  orari: "",
+  orari: "Assistente sociale: mercoledì e venerdì 10:00–13:00",
   sitoWeb: "https://www.comune.sanfelicecirceo.lt.it/",
 
   logo: null,
@@ -36,8 +37,8 @@ export const sanFeliceCirceo: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.sanfelicecirceo.lt.it/" },
+      subtitle: "Piazza Luigi Lanzuisi 1 · Assistente sociale: mercoledì e venerdì 10–13",
+      action: { type: "tel", value: "0773522332" },
     },
     {
       icon: "business-outline",

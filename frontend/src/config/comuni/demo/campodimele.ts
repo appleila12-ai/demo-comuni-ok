@@ -5,6 +5,7 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sito e PEC generale del Comune letti il 04/11/2026. Nessun recapito specifico dei Servizi Sociali: non inseriti.
 // Distretto socio sanitario LT4 (vedi scheda di Fondi). Coordinate: database ISTAT. Link dell'azienda sanitaria da verificare.
+// Aggiornamento 05/11/2026 (seconda ricerca): sede, telefono, email e orari dalla pagina del Distretto LT4.
 export const campodimele: ComuneConfig = {
   slug: "campodimele",
   tipo: "comune",
@@ -17,11 +18,11 @@ export const campodimele: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
+  indirizzo: "Piazza Municipio 4, 04020 Campodimele (LT)",
+  telefono: "0771 598013",
+  email: "servizisociali@comune.campodimele.lt.it",
   pec: "info@pec.comune.campodimele.lt.it",
-  orari: "",
+  orari: "Assistente sociale: martedì, mercoledì, giovedì e venerdì 9:00–12:00",
   sitoWeb: "https://www.comune.campodimele.lt.it/",
 
   logo: null,
@@ -37,8 +38,8 @@ export const campodimele: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.campodimele.lt.it/" },
+      subtitle: "Piazza Municipio 4 · Centralino 0771 598013, digita 6 per l'assistente sociale · martedì–venerdì 9–12",
+      action: { type: "tel", value: "0771598013" },
     },
     {
       icon: "business-outline",

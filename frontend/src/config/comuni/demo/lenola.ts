@@ -5,6 +5,7 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sito e PEC: sito del Comune letto il 04/11/2026 e IndicePA. Recapiti e orari dei Servizi Sociali: scheda dell'ufficio del 20/11/2023, non confermata, quindi non inseriti.
 // Distretto socio sanitario LT4 (vedi scheda di Fondi). Coordinate: database ISTAT. Link dell'azienda sanitaria da verificare.
+// Aggiornamento 05/11/2026 (seconda ricerca): orari dell'assistente sociale dalla pagina del Distretto LT4. Sede, telefono ed email restano fuori: scheda del Comune del 20/11/2023.
 export const lenola: ComuneConfig = {
   slug: "lenola",
   tipo: "comune",
@@ -21,7 +22,7 @@ export const lenola: ComuneConfig = {
   telefono: "",
   email: "",
   pec: "protocollo@pec.comune.lenola.lt.it",
-  orari: "",
+  orari: "Assistente sociale: lunedì 8:00–13:00; martedì 8:00–13:00 e 13:30–18:30; giovedì 8:00–13:00",
   sitoWeb: "https://comune.lenola.lt.it/home",
 
   logo: null,
@@ -37,7 +38,7 @@ export const lenola: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
+      subtitle: "Assistente sociale: lunedì 8–13, martedì 8–13 e 13:30–18:30, giovedì 8–13. Sede e telefono sono sul sito del Comune",
       action: { type: "web", value: "https://comune.lenola.lt.it/home" },
     },
     {
