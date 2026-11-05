@@ -1288,6 +1288,59 @@ PER_PROVINCIA.MI.volontariato.unshift(
   },
 );
 
+// Aggiornamento 05/11/2026 (ricerca ChatGPT su fonti istituzionali, non riletta direttamente): recapiti dell'associazione,
+// mai di singole persone. Non inseriti: AISA Sarzana, SU' LA TESTA, ARCODILUCE (recapiti di presidenti), Pro Disabili Val di Magra (email personali),
+// A.FA.SO.P. (telefono ed email diversi tra le fonti), Franco Basaglia (scheda del 2022), ANGLAT (sede non confermata), Casa San Giuseppe e Lupo Rosso (non per la disabilità).
+PER_PROVINCIA.TS = PER_PROVINCIA.TS ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.TS.volontariato.unshift(
+  {
+    nome: "Consulta territoriale delle associazioni delle persone con disabilità e delle loro famiglie (Trieste)",
+    cosa: "Coordina le associazioni della provincia di Trieste: informazione, orientamento sui servizi e sui diritti, raccordo con le istituzioni.",
+    dove: "Via Lorenzo Gatteri 24/D, Trieste",
+    telefono: "040 9777300",
+    email: "trieste@consultadisabili.fvg.it",
+    sito: "https://consultadisabili.fvg.it",
+    province: ["TS"],
+  },
+  {
+    nome: "AIAS Trieste",
+    cosa: "Inclusione delle persone con disabilità: fisioterapia, musicoterapia, supporto psicoterapeutico e alla genitorialità, assistenza domiciliare.",
+    dove: "Viale Romolo Gessi 8/1, Trieste",
+    telefono: "040 311222",
+    email: "aias.trieste@libero.it",
+    sito: "https://aiastrieste.org",
+    province: ["TS"],
+  },
+  {
+    nome: "AISM Trieste – Sclerosi multipla",
+    cosa: "Servizi socioassistenziali per le persone con sclerosi multipla e per i familiari.",
+    dove: "Via dei Modiano 5, Trieste",
+    telefono: "040 948001",
+    email: "aismtrieste@aism.it",
+    province: ["TS"],
+  },
+);
+
+PER_PROVINCIA.MI.volontariato.unshift({
+  nome: "AISA Lombardia – Atassie",
+  cosa: "Associazione italiana sindromi atassiche: conoscenza delle atassie, ricerca e aiuto ai pazienti e alle famiglie.",
+  dove: "Via Don Minzoni 2, Peschiera Borromeo",
+  telefono: "338 1632414",
+  email: "sez.lombardia@atassia.it",
+  sito: "https://lombardia.aisaitalia.org",
+  comuni: ["peschiera-borromeo"],
+});
+
+PER_PROVINCIA.SP.volontariato.unshift({
+  nome: "Gi.S.A.L. Ce.A.D.",
+  cosa: "Assistenza sanitaria riabilitativa per persone con disabilità, con attività socioassistenziali e ricreative.",
+  dove: "Casa Santa Marta, Località Le Ghiare, Levanto",
+  telefono: "0187 802605",
+  email: "info@gisal.it",
+  sito: "https://gisal.it",
+  comuni: ["levanto"],
+});
+
 // Torino (TO): dati dal sito dell'associazione (ottobre 2026)
 PER_PROVINCIA.TO = PER_PROVINCIA.TO ?? { volontariato: [], sport: [] };
 PER_PROVINCIA.TO.volontariato.unshift({
