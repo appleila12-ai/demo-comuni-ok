@@ -1973,6 +1973,15 @@ PER_PROVINCIA.PR.volontariato.push(
 );
 
 PER_PROVINCIA.PR = PER_PROVINCIA.PR ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.PR.volontariato.push({
+  nome: "AVES Parma – Emofilia e malattie emorragiche",
+  cosa: "Sostegno alle persone con emofilia e altre malattie emorragiche.",
+  dove: "c/o Azienda Ospedaliera, Via Gramsci 14, Parma",
+  telefono: "335 7558441",
+  email: "info@avesparma.it",
+  sito: "https://avesparma.it",
+  comuni: ["parma"],
+});
 PER_PROVINCIA.PR.sport.push(
   {
     nome: "ASD Sanseverina",
@@ -2042,6 +2051,14 @@ const VOLONTARIATO_NAZIONALI: Associazione[] = [
     telefono: "06 78851262",
     email: "presidenza@fishets.it",
     sito: "https://fishets.it/contatti/",
+  },
+  {
+    nome: "ANMIC – Associazione Nazionale Mutilati e Invalidi Civili",
+    cosa: "Tutela e rappresenta le persone con invalidità civile e le assiste su riconoscimenti, prestazioni e discriminazioni. Ha sedi provinciali: l'elenco è sul sito.",
+    dove: "Via Crescenzio 2, Roma",
+    telefono: "06 76900100",
+    email: "presidenza@anmic.it",
+    sito: "https://anmic.org/index.php/area-riservata-sedi-provinciali",
   },
   {
     nome: "ENS – Ente Nazionale Sordi",
