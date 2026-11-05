@@ -567,4 +567,59 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "limbiate": { email: "comune.limbiate@pec.regione.lombardia.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
   // Formigine (MO)
   "formigine": { email: "comune.formigine@cert.comune.formigine.mo.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (20/10/2026)" },
+  // ---- aggiunti il 05/11/2026 (Distretto 17 ASL 5, Ambito Carso Giuliano, Distretto Paullese)
+  // Beverino (SP)
+  "beverino": { email: "area.amministrativa@comune.beverino.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Beverino, Protocollo e Messi (letto il 05/11/2026)" },
+  // Bolano (SP)
+  "bolano": { email: "servizisociali@comune.bolano.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Bolano, Ufficio Servizi sociali (letto il 04/11/2026)" },
+  // Bonassola (SP)
+  "bonassola": { email: "affarigenerali@comune.bonassola.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Bonassola, scheda Ufficio Servizi sociali (letto il 04/11/2026)" },
+  // Borghetto di Vara (SP)
+  "borghetto-di-vara": { email: "servizisociali@comune.borghettodivara.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Borghetto di Vara, pagina Ambito territoriale sociale n. 60 (letto il 04/11/2026)" },
+  // Brugnato (SP)
+  "brugnato": { email: "affarigenerali@comune.brugnato.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Brugnato, uffici e contatti: il servizio comprende il protocollo (letto il 04/11/2026)" },
+  // Calice al Cornoviglio (SP)
+  "calice-al-cornoviglio": { email: "info@comune.calicealcornoviglio.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Calice al Cornoviglio, avviso contributo trasporto (letto il 04/11/2026)" },
+  // Carrodano (SP)
+  "carrodano": { email: "urp@comune.carrodano.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Carrodano, telefono e posta elettronica: protocollo/URP (letto il 04/11/2026)" },
+  // Deiva Marina (SP)
+  "deiva-marina": { email: "comunedeivamarina@halleycert.it", tipo: "pec", fonte: "sito del Comune di Deiva Marina e Prefettura della Spezia, PEC generale (letto il 04/11/2026); l'email dell'ufficio è condivisa con Tributi e Turismo" },
+  // Follo (SP)
+  "follo": { email: "servizisociali@comune.follo.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Follo, Ufficio Assistenti sociali (letto il 04/11/2026)" },
+  // Framura (SP)
+  "framura": { email: "protocollo@comune.framura.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Framura, scheda Servizi sociali (letto il 04/11/2026)" },
+  // Monterosso al Mare (SP)
+  "monterosso-al-mare": { email: "protocollo@comune.monterosso.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Monterosso al Mare e Prefettura della Spezia, protocollo (letto il 04/11/2026)" },
+  // Pignone (SP)
+  "pignone": { email: "info@comune.pignone.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Pignone, contatto generale del Comune (letto il 05/11/2026)" },
+  // Riomaggiore (SP)
+  "riomaggiore": { email: "urp@comune.riomaggiore.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Riomaggiore, Sportello di cittadinanza (letto il 04/11/2026)" },
+  // Rocchetta di Vara (SP)
+  "rocchetta-di-vara": { email: "protocollo@comune.rocchettadivara.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Rocchetta di Vara, contatti (letto il 04/11/2026)" },
+  // Sesta Godano (SP)
+  "sesta-godano": { email: "protocollo@comune.sestagodano.sp.it", tipo: "ordinaria", fonte: "sito del Comune di Sesta Godano, Ufficio Servizi sociali (letto il 04/11/2026)" },
+  // Vernazza (SP)
+  "vernazza": { email: "protocollo@comune.vernazza.sp.it", tipo: "ordinaria", fonte: "Prefettura della Spezia, elenco PEO e PEC dei Comuni (letto il 04/11/2026)" },
+  // Zignago (SP)
+  "zignago": { email: "comune.zignago@legalmail.it", tipo: "pec", fonte: "sito del Comune di Zignago, sede comunale e PEC (letto il 04/11/2026)" },
+  // Monrupino (TS)
+  "monrupino": { email: "segreteria@com-monrupino.regione.fvg.it", tipo: "ordinaria", fonte: "sito del Comune di Monrupino, Segreteria (letto il 05/11/2026)" },
+  // Muggia (TS)
+  "muggia": { email: "ambito.sociale@comunedimuggia.ts.it", tipo: "ordinaria", fonte: "sito del Comune di Muggia, Ambito Carso Giuliano e contatti dell'ente gestore (letto il 04/11/2026)" },
+  // San Dorligo della Valle (TS)
+  "san-dorligo-della-valle": { email: "protocollo-protokol@sandorligo-dolina.it", tipo: "ordinaria", fonte: "sito del Comune di San Dorligo della Valle, protocollo (letto il 04/11/2026)" },
+  // Sgonico (TS)
+  "sgonico": { email: "protocollo@com-sgonico.regione.fvg.it", tipo: "ordinaria", fonte: "sito del Comune di Sgonico, servizi e protocollo (letto il 04/11/2026)" },
+  // Pantigliate (MI)
+  "pantigliate": { email: "servizisociali@comune.pantigliate.mi.it", tipo: "ordinaria", fonte: "sito del Comune di Pantigliate, Servizi sociali e servizi alla persona (letto il 04/11/2026)" },
+  // Paullo (MI)
+  "paullo": { email: "protocollo@comune.paullo.mi.it", tipo: "ordinaria", fonte: "sito del Comune di Paullo, protocollo (letto il 04/11/2026)" },
+  // Peschiera Borromeo (MI)
+  "peschiera-borromeo": { email: "servizisociali@comune.peschieraborromeo.mi.it", tipo: "ordinaria", fonte: "sito del Comune di Peschiera Borromeo, Servizi sociali e sociosanitari (letto il 04/11/2026)" },
+  // Tribiano (MI)
+  "tribiano": { email: "protocollo@comune.tribiano.mi.it", tipo: "ordinaria", fonte: "sito del Comune di Tribiano, Settore Sociale e Cultura (letto il 04/11/2026)" },
+  // Duino Aurisina (TS)
+  "duino-aurisina": { email: "serviziosociale@comune.duino-aurisina.ts.it", tipo: "ordinaria", fonte: "sito del Comune di Duino Aurisina, Servizi sociali – Ambito Carso Giuliano (letto il 04/11/2026)" },
+  // Mediglia (MI)
+  "mediglia": { email: "servizisociali@comune.mediglia.mi.it", tipo: "ordinaria", fonte: "sito del Comune di Mediglia, elenco uffici e recapiti (letto il 04/11/2026)" },
 };

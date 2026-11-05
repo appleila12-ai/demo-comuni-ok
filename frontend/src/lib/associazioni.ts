@@ -89,6 +89,7 @@ const PER_PROVINCIA: Record<string, Elenco> = {
         nome: "Insieme per i diritti dei nostri figli",
         cosa: "Famiglie della Val di Magra che si aiutano e tutelano i diritti dei figli con disabilità (scuola, neuropsichiatria).",
         dove: "Val di Magra (Sarzana, Castelnuovo Magra)",
+        telefono: "327 4549912",
         email: "insiemeperinostrifigli2016@gmail.com",
         comuni: ["sarzana", "arcola"],
       },
@@ -1261,6 +1262,18 @@ PER_PROVINCIA.SP.sport.push(
     email: "arcieridei3borghi@libero.it",
   },
 );
+
+// Mediglia (MI): associazione dall'elenco "Associazioni" del sito del Comune (indicata da Ilaria il 04/11/2026);
+// pubblicato solo l'indirizzo email, senza telefono né sede. L'associazione AGIAD (dislessia) dello stesso elenco
+// non è inserita: non è un'associazione per la disabilità.
+PER_PROVINCIA.MI = PER_PROVINCIA.MI ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.MI.volontariato.unshift({
+  nome: "GAUDIO – Gruppo Autismo e Disabilità Intellettiva",
+  cosa: "Gruppo Autismo e Disabilità Intellettiva, presente nell'elenco delle associazioni del Comune di Mediglia.",
+  dove: "Mediglia",
+  email: "autismogaudio@outlook.it",
+  comuni: ["mediglia"],
+});
 
 PER_PROVINCIA.MI = PER_PROVINCIA.MI ?? { volontariato: [], sport: [] };
 PER_PROVINCIA.MI.volontariato.unshift(
