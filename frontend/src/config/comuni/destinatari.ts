@@ -115,6 +115,8 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "belluno": { email: "belluno.bl@cert.ip-veneto.net", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Biella (BI)
   "biella": { email: "protocollo@cert.comune.biella.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  // Masserano (BI)
+  "masserano": { email: "comune.masserano.bi@legalmail.it", tipo: "pec", fonte: "sito del Comune di Masserano, pagina Il Municipio (letta il 04/11/2026): PEC dell'ente; il sito non pubblica un'email ordinaria, solo un modulo di contatto" },
   // Bisceglie (BT)
   "bisceglie": { email: "protocollogenerale@cert.comune.bisceglie.bt.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Bitonto (BA)
