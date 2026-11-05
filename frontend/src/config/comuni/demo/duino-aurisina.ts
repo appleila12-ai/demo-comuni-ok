@@ -1,15 +1,12 @@
 import type { ComuneConfig } from "../types";
-import { INPS_PRIMA_FASE } from "../percorso";
-import { percorso } from "../percorso";
+import { INPS_PRIMA_FASE, percorso } from "../percorso";
 
-// Comune di Duino Aurisina (TS) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (4 novembre 2026).
+// Comune di Duino Aurisina (TS) — VERSIONE DIMOSTRATIVA (scheda del 05/11/2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Fonte verificata: pagina "Sistema sociale e sanitario" della Regione Friuli-Venezia Giulia, che indica
-// l'ambito "Carso Giuliano" (Duino Aurisina, Monrupino, Muggia, San Dorligo della Valle, Sgonico),
-// con il Comune di Muggia come ente gestore del Servizio sociale dei Comuni.
-// Nessun recapito del Comune (telefono, email, PEC, orari, sito) è stato verificato: non ne è stato inserito nessuno.
-// Da verificare con l'ente: sito e recapiti dei Servizi sociali di Duino Aurisina, email generica per "Scrivi al tuo Comune",
-// misure e bandi comunali, associazioni locali.
+// Fonti: pagina 'Sistema sociale e sanitario' della Regione FVG (ambito Carso Giuliano, ente gestore il Comune di Muggia), pagine del Servizio Sociale dei Comuni e prospetto sportelli del 02/04/2025; ricerca indicata da Ilaria il 04/11/2026 (non riletta direttamente).
+// Aggiornamento 05/11/2026: recapiti del Servizio sociale (prima la scheda non ne aveva). Giorni e sedi vengono dal prospetto del 02/04/2025: da riconfermare. I nomi degli assistenti (Carta dei servizi 2023) e i numeri 'area disabilità' non sono inseriti perché datati.
+// Da verificare con l'ente: associazioni locali, importi e condizioni aggiornate dei benefici d'ambito, procedura per domotica e digitalizzazione (apertura attuale).
+// Dove un dato non è stato trovato su una fonte ufficiale il campo è lasciato vuoto: non va completato da altre fonti.
 export const duinoAurisina: ComuneConfig = {
   slug: "duino-aurisina",
   tipo: "comune",
@@ -21,11 +18,12 @@ export const duinoAurisina: ComuneConfig = {
   regione: "Friuli-Venezia Giulia",
 
   ente: "Servizio Sociale dei Comuni · Ambito Carso Giuliano",
-  responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
-  orari: "",
+  responsabile: "Servizio sociale professionale",
+  indirizzo: "Borgo San Mauro 124, Sistiana (Duino Aurisina, TS)",
+  telefono: "040 2017389",
+  email: "serviziosociale@comune.duino-aurisina.ts.it",
+  pec: "comune.duinoaurisina@certgov.fvg.it",
+  orari: "Segretariato sociale venerdì 9:00–11:00",
   sitoWeb: "https://www.comune.muggia.ts.it/it/amministrazione-3414/aree-amministrative-49897/ambito-carso-giuliano-servizio-sociale-dei-comuni-64677",
 
   logo: null,
@@ -40,24 +38,36 @@ export const duinoAurisina: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
+      title: "Servizio sociale – sede di Sistiana",
+      subtitle:
+        "Ufficio territoriale Duino Aurisina – Sgonico – Monrupino · Borgo San Mauro 124 · Tel. 040 2017389 · segretariato venerdì 9:00–11:00 · serviziosociale@comune.duino-aurisina.ts.it",
+      action: { type: "tel", value: "0402017389" },
+    },
+    {
+      icon: "business-outline",
       title: "Servizio Sociale dei Comuni · Ambito Carso Giuliano",
       subtitle:
-        "Servizi sociali di Duino Aurisina, Monrupino, Muggia, San Dorligo della Valle e Sgonico, gestiti dal Comune di Muggia: recapiti e orari sono sul sito dell'ambito",
-      action: {
-        type: "web",
-        value: "https://www.comune.muggia.ts.it/it/amministrazione-3414/aree-amministrative-49897/ambito-carso-giuliano-servizio-sociale-dei-comuni-64677",
-      },
+        "Duino Aurisina, Monrupino, Muggia (ente gestore), San Dorligo della Valle e Sgonico · Ufficio Muggia – San Dorligo: tel. 040 3360434 · Ufficio Duino Aurisina – Sgonico – Monrupino: tel. 040 2017389",
+      action: { type: "web", value: "https://www.comune.muggia.ts.it/it/amministrazione-3414/aree-amministrative-49897/ambito-carso-giuliano-servizio-sociale-dei-comuni-64677" },
+    },
+    {
+      icon: "accessibility-outline",
+      title: "Sportello Amministratore di sostegno",
+      subtitle:
+        "Borgo San Mauro 124, Sistiana · mercoledì 11:00–13:00 · Tel. 040 3478751 / 327 0396108 (secondo il prospetto del 02/04/2025)",
+      action: { type: "tel", value: "0403478751" },
     },
     {
       icon: "medkit-outline",
       title: "ASUGI",
-      subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
+      subtitle:
+        "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
       action: { type: "web", value: "https://asugi.sanita.fvg.it" },
     },
   ],
 
   trasporto:
-    "Chiedi al Servizio Sociale dei Comuni dell'ambito quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
+    "Chiedi al Servizio Sociale dei Comuni dell'ambito (040 2017389) quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
     label: "ASUGI · Esenzioni ticket",
@@ -68,6 +78,8 @@ export const duinoAurisina: ComuneConfig = {
   dimostrativo: true,
 };
 
-// Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (04/11/2026).
-duinoAurisina.percorsoTerritorio = percorso(duinoAurisina.puntiSupporto, [0]);
+// Passi di "Come ottenere il riconoscimento": solo voci già in scheda con fonte.
+duinoAurisina.percorsoTerritorio = percorso(duinoAurisina.puntiSupporto, [0, 1]);
+
+// Passo 1: provincia nella prima fase (dal 1° gennaio 2025) della sperimentazione INPS.
 duinoAurisina.percorsoTerritorio = { ...duinoAurisina.percorsoTerritorio, 1: [INPS_PRIMA_FASE] };
