@@ -5,6 +5,7 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sito del Comune letto il 04/11/2026. Recapiti dei Servizi Sociali: pagina in modalità anteprima, non inseriti.
 // Distretto socio sanitario LT4 (vedi scheda di Fondi). Coordinate: database ISTAT. Link dell'azienda sanitaria da verificare.
+// Aggiornamento 05/11/2026 (seconda ricerca): sede, telefoni ed email dalla pagina del Distretto LT4. Orari fuori: fonti discordanti.
 export const sperlonga: ComuneConfig = {
   slug: "sperlonga",
   tipo: "comune",
@@ -17,9 +18,9 @@ export const sperlonga: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
+  indirizzo: "Via Campo delle Monache 5, 04029 Sperlonga (LT)",
+  telefono: "0771 549648",
+  email: "politichesociali@comune.sperlonga.lt.it",
   pec: "protocollo@pec.comune.sperlonga.lt.it",
   orari: "",
   sitoWeb: "https://www.comune.sperlonga.lt.it/",
@@ -37,8 +38,8 @@ export const sperlonga: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.sperlonga.lt.it/" },
+      subtitle: "Via Campo delle Monache 5 · Assistente sociale 0771 549648 · Centralino 0771 557801, digita 8. Gli orari sono sul sito del Comune",
+      action: { type: "tel", value: "0771549648" },
     },
     {
       icon: "business-outline",

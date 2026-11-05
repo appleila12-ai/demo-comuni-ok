@@ -1744,6 +1744,7 @@ PER_PROVINCIA.AR.volontariato.push(
   {
     nome: "ToscanABILE",
     cosa: "Progetti di inclusione per le persone con disabilità attraverso arte, cultura e turismo. Il contatto telefonico pubblicato sul sito è un numero WhatsApp.",
+    dove: "Via G. Marconi 18, 52100 Arezzo",
     email: "toscanabile@toscanabile.com",
     whatsapp: "+39 375 8306509",
     sito: "https://toscanabile.com/",
@@ -1786,6 +1787,248 @@ PER_PROVINCIA.GE.volontariato.push({
   comuni: ["recco"],
 });
 
+// 05/11/2026: schede con stato VERIFICATO nella seconda ricerca (siti ufficiali, schede della Consulta di Firenze, elenchi dei Comuni).
+PER_PROVINCIA.FI = PER_PROVINCIA.FI ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.FI.volontariato.push(
+  {
+    nome: "Davide e Golia (sede di Firenze)",
+    cosa: "Servizi e inclusione per persone con disabilità. Ha una sede operativa anche a Scandicci.",
+    dove: "Via del Pesciolino 11d, 50145 Firenze",
+    telefono: "347 7985190 / 338 8866638",
+    email: "segreteria@davideegoliaonlus.it",
+    sito: "https://www.davideegoliaonlus.it",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "Davide e Golia (sede operativa di Scandicci)",
+    cosa: "Attività e servizi per persone con disabilità. La sede principale è a Firenze.",
+    dove: "Via del Padule 34, Scandicci",
+    telefono: "347 7985190 / 338 8866638",
+    email: "segreteria@davideegoliaonlus.it",
+    sito: "https://davideegoliaonlus.it",
+    comuni: ["scandicci"],
+  },
+  {
+    nome: "A.F.F.S.M. – Associazione Familiari per la Salute Mentale",
+    cosa: "Famiglie e salute mentale.",
+    dove: "Via Enrico Navigatore 17, 50127 Firenze",
+    telefono: "338 9180287",
+    email: "affsm_q5@yahoo.it",
+    sito: "http://www.coordinamentotoscanosalutementale.it/",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "AIABA – Autismo",
+    cosa: "Assistenza e percorsi per persone autistiche.",
+    dove: "Via Desiderio da Settignano 20, 50135 Firenze",
+    telefono: "055 697059",
+    email: "amministrazione@aiaba.it",
+    sito: "http://www.aiaba.it",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "AIAS Firenze",
+    cosa: "Tutela e inclusione delle persone con disabilità.",
+    dove: "Via R. Leoncavallo 20, 50127 Firenze",
+    telefono: "055 3215145",
+    email: "aiasfi02@libero.it",
+    sito: "http://www.aiasfirenze.it/",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "AISLA Firenze",
+    cosa: "Assistenza e sostegno alle persone con SLA e alle famiglie.",
+    dove: "Piazza Elia Dalla Costa 33, 50136 Firenze",
+    telefono: "348 1880933 / 334 7160938",
+    email: "segreteria@aislafirenze.it",
+    sito: "http://www.aislafirenze.it",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "ANMIL Firenze",
+    cosa: "Tutela delle persone con invalidità da lavoro.",
+    dove: "Via Benedetto Marcello 1, 50144 Firenze",
+    telefono: "055 19982720",
+    email: "firenze@anmil.it",
+    sito: "https://www.anmil.it/",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "ATE – Associazione Toscana Emofilici",
+    cosa: "Sostegno alle persone con emofilia e altre malattie emorragiche.",
+    dove: "Via del Campofiore 102, 50136 Firenze",
+    telefono: "375 6641339",
+    email: "info@ateodv.org",
+    sito: "http://www.ateodv.org",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "Autismo Firenze",
+    cosa: "Autonomia e inclusione delle persone autistiche.",
+    dove: "Via Giambologna 14, 50132 Firenze",
+    telefono: "055 4089345 / 349 8712477",
+    email: "info@autismofirenze.org",
+    sito: "http://www.autismofirenze.org",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "ENS Firenze – Ente Nazionale Sordi",
+    cosa: "Tutela e servizi per le persone sorde.",
+    dove: "Via Manzoni 13, 50121 Firenze",
+    telefono: "055 2260045",
+    sito: "https://firenze.ens.it/",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "FIADDA Toscana",
+    cosa: "Famiglie e persone con disabilità uditiva.",
+    dove: "Via delle Porte Nuove 33, 50144 Firenze",
+    telefono: "328 8211260 / 347 2928529",
+    email: "info@fiaddatoscana.org",
+    sito: "http://www.fiaddatoscana.org",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "LINAR",
+    cosa: "Laboratori e inclusione delle persone con disabilità.",
+    dove: "Via Villamagna 150, 50126 Firenze",
+    telefono: "055 6530230",
+    email: "linarfi@libero.it",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "PAMAPI – centro per adulti autistici",
+    cosa: "Cooperativa con centro e servizi per adulti con autismo.",
+    dove: "Via Bolognese 238, 50139 Firenze",
+    telefono: "055 400594 / 347 6762816",
+    email: "segreteria@pamapi-autismo.it",
+    sito: "http://www.pamapi-autismo.it/",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "Trisomia 21 (AT21)",
+    cosa: "Disabilità intellettive e genetiche: autonomia e riabilitazione.",
+    dove: "Viale Alessandro Volta 16/18, 50131 Firenze",
+    telefono: "055 5000458",
+    email: "at21@at21.it",
+    sito: "http://www.at21.it",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "UICI Firenze – Unione Italiana dei Ciechi e degli Ipovedenti",
+    cosa: "Diritti e servizi per ciechi e ipovedenti.",
+    dove: "Via Leonardo Fibonacci 5, 50131 Firenze",
+    telefono: "055 580319",
+    email: "uicfi@uici.it",
+    sito: "http://www.uicifirenze.it",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "UISS",
+    cosa: "Servizi sociali, anche nell'ambito della disabilità.",
+    dove: "Via Vittorio Corcos 15, 50142 Firenze",
+    telefono: "347 8856327 / 055 455273",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "UNMS Toscana – Unione Nazionale Mutilati per Servizio",
+    cosa: "Tutela dei mutilati e degli invalidi per servizio.",
+    dove: "Via Piero Gianfigliazzi 7, 50124 Firenze",
+    telefono: "055 573490",
+    email: "toscana@unms.it",
+    sito: "https://www.unms.it/",
+    comuni: ["firenze"],
+  },
+);
+
+PER_PROVINCIA.PR = PER_PROVINCIA.PR ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.PR.volontariato.push(
+  {
+    nome: "Anffas Parma APS",
+    cosa: "Disabilità intellettive e del neurosviluppo, sostegno alle famiglie.",
+    dove: "Via Rudolf Jacobs 14, 43123 Parma",
+    telefono: "0521 261393",
+    email: "segreteria@anffasparma.it",
+    sito: "https://www.anffasparma.it",
+    comuni: ["parma"],
+  },
+  {
+    nome: "LIFC Emilia – Fibrosi cistica",
+    cosa: "Sostegno alle persone con fibrosi cistica e alle famiglie.",
+    dove: "Via Leonardo da Vinci 32, 43123 Parma",
+    telefono: "0521 775896 / 392 6704837",
+    email: "fibrosicisticaemilia@libero.it",
+    sito: "http://www.fibrosicisticaemilia.it",
+    comuni: ["parma"],
+  },
+  {
+    nome: "Prader-Willi Emilia-Romagna",
+    cosa: "Sostegno alle persone con sindrome di Prader-Willi e alle famiglie.",
+    dove: "Via Borgo Lalatta 3, 43121 Parma",
+    telefono: "329 5948248",
+    email: "info@praderwilliemiliaromagna.it",
+    sito: "http://www.praderwilliemiliaromagna.it",
+    comuni: ["parma"],
+  },
+);
+
+PER_PROVINCIA.PR = PER_PROVINCIA.PR ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.PR.sport.push(
+  {
+    nome: "ASD Sanseverina",
+    cosa: "Sport inclusivo, tra cui nuoto, bocce e calcio.",
+    dove: "Strada Mirandola 50, 43123 Parma",
+    telefono: "339 3020190",
+    email: "info@sanseverina.org",
+    sito: "https://sanseverina.org",
+    comuni: ["parma"],
+  },
+  {
+    nome: "CSI Parma",
+    cosa: "Formazione di operatori per lo sport inclusivo.",
+    dove: "Piazzale Matteotti 9, Parma",
+    telefono: "0521 281226",
+    email: "segreteria@csiparma.it",
+    sito: "https://csiparma.it",
+    comuni: ["parma"],
+  },
+);
+
+PER_PROVINCIA.VT = PER_PROVINCIA.VT ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.VT.volontariato.push(
+  {
+    nome: "Associazione di Solidarietà Falisca",
+    cosa: "Trasporto e sostegno a persone con disabilità. Indicata nell'albo comunale delle associazioni (pagina del 15/02/2026).",
+    dove: "Via Giuseppe Contadini snc, Montefiascone",
+    telefono: "0761 825955 / 320 8772487",
+    email: "solidarieta.falisca@alice.it",
+    comuni: ["montefiascone"],
+  },
+);
+
+PER_PROVINCIA.GE = PER_PROVINCIA.GE ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.GE.sport.push(
+  {
+    nome: "Lega Navale Italiana – Sezione di Camogli",
+    cosa: "Attività nautiche: partecipa alle iniziative inclusive NavigAbile 2026 del Comune di Camogli (31/08/2026).",
+    dove: "Via Scalo 1, 16032 Camogli",
+    telefono: "0185 771472 / 392 5473264",
+    email: "camogli@leganavale.it",
+    comuni: ["camogli"],
+  },
+);
+
+PER_PROVINCIA.GE = PER_PROVINCIA.GE ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.GE.volontariato.push(
+  {
+    nome: "Nuova Ecopsi APS",
+    cosa: "Assistenza alle persone con disabilità; partecipa anche alle attività inclusive del 2026.",
+    dove: "Via XXV Aprile 13/1, Recco",
+    telefono: "339 7283224",
+    comuni: ["recco"],
+  },
+);
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",
@@ -1810,8 +2053,9 @@ const VOLONTARIATO_NAZIONALI: Associazione[] = [
   },
   {
     nome: "UICI – Unione Italiana dei Ciechi e degli Ipovedenti",
-    cosa: "Sostiene le persone cieche e ipovedenti, anche con altre disabilità: autonomia, accessibilità, mobilità. Ha sezioni regionali e provinciali.",
+    cosa: "Sostiene le persone cieche e ipovedenti, anche con altre disabilità: autonomia, accessibilità, mobilità. Numero verde 800 682682, dal lunedì al venerdì dalle 9 alle 13. Ha sezioni regionali e provinciali.",
     dove: "Via Borgognona 38-42, 00187 Roma",
+    telefono: "06 699881",
     email: "segreteria@uici.it",
     sito: "https://www.uiciechi.it/organizzazione/regioni/indiceregioni.asp",
   },
@@ -1841,7 +2085,7 @@ const VOLONTARIATO_NAZIONALI: Associazione[] = [
   },
   {
     nome: "UILDM – Unione Italiana Lotta alla Distrofia Muscolare",
-    cosa: "Sostiene le persone con distrofie muscolari e malattie neuromuscolari attraverso le sezioni locali.",
+    cosa: "Sostiene le persone con distrofie muscolari e malattie neuromuscolari attraverso le sezioni locali. Numero verde Stella: 800 58 97 38.",
     dove: "Via Vergerio 19, 35126 Padova",
     telefono: "049 8021001",
     email: "direzionenazionale@uildm.it",

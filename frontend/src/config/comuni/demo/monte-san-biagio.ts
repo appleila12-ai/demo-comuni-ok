@@ -5,6 +5,7 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sito, sede, telefono ed email dei Servizi Sociali: sito del Comune letto il 04/11/2026. Orari del 2024: non inseriti.
 // Distretto socio sanitario LT4 (vedi scheda di Fondi). Coordinate: database ISTAT. Link dell'azienda sanitaria da verificare.
+// Aggiornamento 05/11/2026 (seconda ricerca): orari confermati dalla pagina dell'ufficio, aggiornata il 19/06/2026.
 export const monteSanBiagio: ComuneConfig = {
   slug: "monte-san-biagio",
   tipo: "comune",
@@ -21,7 +22,7 @@ export const monteSanBiagio: ComuneConfig = {
   telefono: "0771 5689220",
   email: "servizisociali.montesanbiagio@ninfeasociale.it",
   pec: "comune.montesanbiagio@pec.it",
-  orari: "",
+  orari: "Lunedì, mercoledì e venerdì 9:00–13:00; martedì e giovedì 9:00–13:00 e 14:30–17:00, su prenotazione",
   sitoWeb: "https://www.comune.montesanbiagio.lt.it/",
 
   logo: null,
@@ -37,7 +38,7 @@ export const monteSanBiagio: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Via Roma 1 · Gli orari sono sul sito del Comune: chiama prima di andare",
+      subtitle: "Via Roma 1 · Lunedì, mercoledì e venerdì 9–13; martedì e giovedì 9–13 e 14:30–17, su prenotazione",
       action: { type: "tel", value: "07715689220" },
     },
     {
