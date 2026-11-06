@@ -199,6 +199,32 @@ ESENZIONE_ASL.ancona = {
     "AST Ancona · pagine «Esenzione ticket per patologia – Distretto Ancona» e «Richiesta esenzioni per patologia: nuova modalità telematica», indicate dall'URP il 29/10/2026",
 };
 
+// AUSL Reggio Emilia: dati letti il 05/11/2026 sulle pagine ufficiali dell'AUSL (scheda SAUB Santa Maria Nuova,
+// prestazioni «esenzione per patologia» e «esenzione per invalidità») e sulla Guida ai Servizi della Regione Emilia-Romagna.
+// Le schede non riportano una data di aggiornamento: la pagina generale SAUB è aggiornata al 16/10/2026.
+ESENZIONE_ASL["reggio-emilia"] = {
+  asl: "AUSL Reggio Emilia · Sportello SAUB di Santa Maria Nuova",
+  intro:
+    "Lo sportello SAUB di Santa Maria Nuova gestisce la richiesta di inserimento dell'esenzione per invalidità, patologia o reddito. L'accesso è solo su appuntamento.",
+  comeSiPresenta: [
+    "Sportello SAUB, Arcispedale Santa Maria Nuova, Viale Risorgimento 80, Reggio Emilia",
+    "Aperto dalle 8:00 alle 13:00, dal lunedì al venerdì, solo su appuntamento",
+    "Per fissare l'appuntamento puoi chiamare lo 0522 335508 (dalle 8:00 alle 12:30, dal lunedì al venerdì) o scrivere a info.saub@ausl.re.it",
+  ],
+  documenti: [
+    "Per l'esenzione per patologia: la certificazione relativa alla patologia, rilasciata dallo specialista su apposito modulo",
+    "Per l'esenzione per invalidità: la certificazione che documenta lo stato di invalidità e/o i requisiti che danno diritto all'esenzione",
+  ],
+  mail: "info.saub@ausl.re.it",
+  telefoni: [{ etichetta: "SAUB Santa Maria Nuova (8:00 – 12:30, lun–ven)", numero: "0522 335508" }],
+  paginaUrl: "https://www.ausl.re.it/ticket-ed-esenzioni",
+  paginaLabel: "Pagina dell'AUSL su ticket ed esenzioni",
+  manca:
+    "Le pagine non elencano altri documenti oltre alle certificazioni indicate e non indicano i tempi di rilascio. Per gli sportelli degli altri distretti della provincia controlla la pagina dell'AUSL.",
+  fonte:
+    "AUSL Reggio Emilia · scheda «SAUB Santa Maria Nuova» e prestazioni «esenzione per patologia» e «esenzione per invalidità» (lette il 05/11/2026) · Guida ai Servizi, Regione Emilia-Romagna",
+};
+
 // ASST Ovest Milanese: l'URP (Prof. Marcello Crivellini) ha indicato la pagina «Attività Scelta e Revoca»
 // e il documento allegato «Informazioni esenzioni ticket» (letti il 29/10/2026).
 const OVEST_MILANESE: SchedaEsenzioneAsl = {
