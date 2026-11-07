@@ -15,6 +15,7 @@
 // Aggiornamento 26/10/2026: spiagge inclusive di Genova, 8 spiagge, recapiti e prenotazione dalla pagina del Comune (agg. 23/06/2026).
 // Aggiornamento 27/10/2026: elenco libere forme associative di Arezzo.
 // Aggiornamento 27/10/2026: Albo comunale delle associazioni della disabilità di Pisa.
+// Aggiornamento 07/11/2026: Liguria Calcio Non Vedenti (Sanremo), nuova sede e descrizione comunicate dal presidente dell'associazione via email il 07/11/2026.
 // Aggiornamento 25/10/2026: provincia di Genova (Anffas, ANGSA, UICI, Chiossone, AISM, UILDM, ENS, ANGLAT, Asperger,
 // e dall'elenco ASL3 'Comitato Misto Consultivo - Associazioni' agg. 18/06/2025: Consulta disabilità, Alzheimer Liguria,
 // ALFAPP, Parkinson, tutela del malato, AVO).
@@ -1208,8 +1209,8 @@ PER_PROVINCIA.IM.sport.push(
   },
   {
     nome: "Liguria Calcio Non Vedenti",
-    cosa: "Calcio per non vedenti (FISPIC). Società affiliata al CIP Liguria. Disabilità sensoriale (non vedenti).",
-    dove: "c/o Studio Di Malta, Corso Garibaldi 41, 18038 Sanremo",
+    cosa: "Calcio per non vedenti (FISPIC), un'attività svolta da circa 30 anni. Accoglie ragazze e ragazzi con disabilità visiva già dai 10-11 anni, per fare sport come i coetanei. Società affiliata al CIP Liguria.",
+    dove: "Strada San Martino 131, 18038 Sanremo",
     telefono: "0184 570827",
     email: "info@liguriacalcio.it",
     comuni: ["sanremo"],
