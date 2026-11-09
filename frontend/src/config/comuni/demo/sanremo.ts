@@ -34,6 +34,43 @@ export const sanremo: ComuneConfig = {
   },
 
   puntiSupporto: [
+    // Fonti ufficiali ASL1, consultate il 09/11/2026. Recapiti da confermare prima della visita.
+    {
+      icon: "medkit-outline",
+      title: "Sanremo · Neuropsichiatria infantile: prima visita",
+      subtitle: "Palafiori, Corso Garibaldi 1. Per la prima visita serve richiesta del pediatra o del medico di medicina generale. Prenotazioni: 0184 536709, martedì e giovedì 10–12. Attività lun–ven 8:30–17:30. Fonte ASL1.",
+      action: { type: "web", value: "https://www.asl1.liguria.it/territorio/dipartimento-integrato-salute-mentale-e-dipendenze/542-neuropsichiatria-infantile.html" },
+    },
+    {
+      icon: "people-outline",
+      title: "Sanremo · Centro autismo: riferimenti clinici",
+      subtitle: "Palafiori, Corso Garibaldi 1. Responsabile indicato da ASL1: dott. Giuseppe Pili, tel. 0184 536779. Psicologi: Valentina Boeri 0184 536787; Martina Magaglio e Andrea Barbero 0184 536623. Per primo accesso seguire la procedura NPI.",
+      action: { type: "web", value: "https://www.asl1.liguria.it/territorio/dipartimento-integrato-salute-mentale-e-dipendenze/542-neuropsichiatria-infantile.html" },
+    },
+    {
+      icon: "people-outline",
+      title: "ANFFAS Sanremo · associazione famiglie e disabilità",
+      subtitle: "Via Giovanni Borea 57, Sanremo. Tel. 0184 513449 / 335 5812113. Presente nell'elenco ufficiale delle associazioni di volontariato e tutela ASL1; servizi e orari specifici NON VERIFICATI.",
+      action: { type: "web", value: "https://www.asl1.liguria.it/urp/associazioni.html" },
+    },
+    {
+      icon: "people-outline",
+      title: "ALFaPP · famiglie pazienti psichiatrici, Sanremo",
+      subtitle: "Corso Garibaldi 5, Palafiori presso URP Comune. Tel. 0184 580676 / 340 2508894 / 335 6984240. Recapiti pubblicati nella Consulta ASL1; orari e servizi da confermare.",
+      action: { type: "web", value: "https://www.asl1.liguria.it/urp/associazioni.html" },
+    },
+    {
+      icon: "people-outline",
+      title: "Cittadinanzattiva · Tribunale Diritti del Malato Sanremo",
+      subtitle: "Corso Garibaldi 5, Palafiori presso URP Comune. Tel. 347 4565885. Per tutela e orientamento sui diritti del malato; recapito tratto dall'elenco ufficiale ASL1.",
+      action: { type: "web", value: "https://www.asl1.liguria.it/urp/associazioni.html" },
+    },
+    {
+      icon: "people-outline",
+      title: "Centro Promozione Famiglia ODV · Sanremo",
+      subtitle: "Strada Rocca 9, Sanremo. Tel. 327 1412875. Associazione inclusa nell'elenco ASL1; attività, destinatari e orari da verificare con l'associazione.",
+      action: { type: "web", value: "https://www.asl1.liguria.it/urp/associazioni.html" },
+    },
     // Fonte: Comune di Sanremo, pagine istituzionali lette il 09/11/2026.
     {
       icon: "bus-outline",
