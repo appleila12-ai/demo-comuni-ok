@@ -34,7 +34,7 @@ export const sanremo: ComuneConfig = {
   },
 
   puntiSupporto: [
-    // Fonti ufficiali ASL1, consultate il 09/11/2026. Recapiti da confermare prima della visita.
+    // Solo uffici, sportelli e servizi di accesso. Schede da ricollocare archiviate in docs.
     {
       icon: "medkit-outline",
       title: "Sanremo · Neuropsichiatria infantile: prima visita",
@@ -47,62 +47,6 @@ export const sanremo: ComuneConfig = {
       subtitle: "Palafiori, Corso Garibaldi 1. Responsabile indicato da ASL1: dott. Giuseppe Pili, tel. 0184 536779. Psicologi: Valentina Boeri 0184 536787; Martina Magaglio e Andrea Barbero 0184 536623. Per primo accesso seguire la procedura NPI.",
       action: { type: "web", value: "https://www.asl1.liguria.it/territorio/dipartimento-integrato-salute-mentale-e-dipendenze/542-neuropsichiatria-infantile.html" },
     },
-    {
-      icon: "people-outline",
-      title: "ANFFAS Sanremo · associazione famiglie e disabilità",
-      subtitle: "Via Giovanni Borea 57, Sanremo. Tel. 0184 513449 / 335 5812113. Presente nell'elenco ufficiale delle associazioni di volontariato e tutela ASL1; servizi e orari specifici NON VERIFICATI.",
-      action: { type: "web", value: "https://www.asl1.liguria.it/urp/associazioni.html" },
-    },
-    {
-      icon: "people-outline",
-      title: "ALFaPP · famiglie pazienti psichiatrici, Sanremo",
-      subtitle: "Corso Garibaldi 5, Palafiori presso URP Comune. Tel. 0184 580676 / 340 2508894 / 335 6984240. Recapiti pubblicati nella Consulta ASL1; orari e servizi da confermare.",
-      action: { type: "web", value: "https://www.asl1.liguria.it/urp/associazioni.html" },
-    },
-    {
-      icon: "people-outline",
-      title: "Cittadinanzattiva · Tribunale Diritti del Malato Sanremo",
-      subtitle: "Corso Garibaldi 5, Palafiori presso URP Comune. Tel. 347 4565885. Per tutela e orientamento sui diritti del malato; recapito tratto dall'elenco ufficiale ASL1.",
-      action: { type: "web", value: "https://www.asl1.liguria.it/urp/associazioni.html" },
-    },
-    {
-      icon: "people-outline",
-      title: "Centro Promozione Famiglia ODV · Sanremo",
-      subtitle: "Strada Rocca 9, Sanremo. Tel. 327 1412875. Associazione inclusa nell'elenco ASL1; attività, destinatari e orari da verificare con l'associazione.",
-      action: { type: "web", value: "https://www.asl1.liguria.it/urp/associazioni.html" },
-    },
-    // Fonte: Comune di Sanremo, pagine istituzionali lette il 09/11/2026.
-    {
-      icon: "bus-outline",
-      title: "Sanremo · Disability Card per trasporto pubblico gratuito",
-      subtitle: "Dal 2025 Riviera Trasporti riconosce la Carta europea della disabilità per viaggiare gratuitamente nel trasporto pubblico locale, secondo la convenzione comunicata dal Comune. L'avviso comunale indica invalidità almeno del 67%, indipendentemente dal reddito. La carta si richiede all'INPS. Informazioni Servizi Sociali: 0184 529069.",
-      action: { type: "web", value: "https://comune.sanremo.im.it/it/news/104702/attivata-la-disability-card-che-sostituira-gli-abbonamenti-mensili-gratuiti-al-trasporto-pubblico-locale" },
-    },
-    {
-      icon: "people-outline",
-      title: "Sanremo · Tavolo permanente sulla disabilità",
-      subtitle: "Il Comune ha avviato un Tavolo di confronto con associazioni e Terzo settore su bisogni, servizi e Progetti di Vita. L'avviso di candidatura del 2025 è scaduto: questa scheda è informativa, non un invito a presentare domanda. Fonte comunale del 26/08/2025.",
-      action: { type: "web", value: "https://www.comune.sanremo.im.it/it/news/104706/pubblicato-l-avviso-per-individuare-i-soggetti-del-terzo-settore-e-delle-associazioni-del-tavolo-permanente-sulla-disabilita" },
-    },
-    {
-      icon: "home-outline",
-      title: "Sanremo · Welfare di Comunità",
-      subtitle: "Servizio comunale per interventi sociali e integrazione sociosanitaria, con attività collegate a Casa Serena. Responsabile Dario Belmonte; sede Corso Garibaldi 30, tel. 0184 52901. Fonte Comune, aggiornata 01/04/2026.",
-      action: { type: "web", value: "https://www.comune.sanremo.im.it/it/unita_organizzative/minori-famiglie-e-welfare-di-comunita" },
-    },
-    {
-      icon: "cash-outline",
-      title: "Sanremo · Bonus affitti 2026",
-      subtitle: "Il Comune segnala dal 26/10/2026 la procedura online per i contributi affitto. Requisiti, documenti e scadenza vanno verificati nell'avviso dedicato prima della domanda; non è una misura esclusiva per la disabilità.",
-      action: { type: "web", value: "https://www.comune.sanremo.im.it/it/topics/assistenza-sociale" },
-    },
-    {
-      icon: "cash-outline",
-      title: "Sanremo · Carta Dedicata a Te 2026",
-      subtitle: "Dal 03/11/2026 il Comune segnala l'elenco dei beneficiari e le informazioni per il ritiro negli uffici postali. Non è una domanda aperta a tutti: verificare il proprio nominativo e i requisiti sul portale comunale.",
-      action: { type: "web", value: "https://www.comune.sanremo.im.it/it/topics/assistenza-sociale" },
-    },
-    // Approfondimento ASL1 da fonti ufficiali consultate il 09/11/2026.
     {
       icon: "medkit-outline",
       title: "Sanremo · Centro autismo e neuropsichiatria infantile",
@@ -152,18 +96,6 @@ export const sanremo: ComuneConfig = {
       action: { type: "web", value: "https://www.asl1.liguria.it/servizi-dalla-a-alla-z/1498-punto-unico-accesso.html" },
     },
     {
-      icon: "cash-outline",
-      title: "Sanremo · Fondo regionale non autosufficienza",
-      subtitle: "Procedura comunale per accedere al Fondo regionale per la non autosufficienza. Requisiti, documentazione e stato delle domande da verificare nella scheda ufficiale: non indicato come bando automaticamente aperto.",
-      action: { type: "web", value: "https://www.comune.sanremo.im.it/index.php/it/topics/assistenza-agli-invalidi/3" },
-    },
-    {
-      icon: "cash-outline",
-      title: "Sanremo · Fondo regionale gravissime disabilità",
-      subtitle: "Procedura di accesso al Fondo regionale per le gravissime disabilità, distinta dal Fondo non autosufficienza. Consultare la scheda istituzionale per modalità e requisiti.",
-      action: { type: "web", value: "https://www.comune.sanremo.im.it/index.php/it/topics/assistenza-agli-invalidi/3" },
-    },
-    {
       icon: "car-outline",
       title: "Sanremo · trasporto sociale e contrassegno disabili",
       subtitle: "Il Comune pubblica procedure per trasporto di anziani e persone con disabilità e per rilascio/rinnovo del contrassegno permanente o temporaneo. Consultare la scheda specifica.",
@@ -174,18 +106,6 @@ export const sanremo: ComuneConfig = {
       title: "Sanremo · assistenza domiciliare e strutture",
       subtitle: "Procedure comunali per assistenza domiciliare integrata, comunità sociosanitaria (CSS), residenza sanitaria disabili (RSD) e integrazione rette. Verificare requisiti e valutazione.",
       action: { type: "web", value: "https://www.comune.sanremo.im.it/index.php/it/topics/assistenza-agli-invalidi/3" },
-    },
-    {
-      icon: "accessibility-outline",
-      title: "Sanremo · contributi rimozione barriere architettoniche",
-      subtitle: "Il Comune elenca una procedura dedicata ai contributi per eliminare barriere architettoniche. Verificare fondi, scadenze e documenti prima di presentare domanda.",
-      action: { type: "web", value: "https://www.comune.sanremo.im.it/index.php/it/topics/assistenza-agli-invalidi/3" },
-    },
-    {
-      icon: "flash-outline",
-      title: "Sanremo · bonus elettrico per disagio fisico",
-      subtitle: "Procedura comunale per il bonus elettrico legato al disagio fisico. Non confondere con il bonus per disagio economico; verificare condizioni e domanda.",
-      action: { type: "web", value: "https://www.comune.sanremo.im.it/it/topics/assistenza-sociale" },
     },
     {
       icon: "people-outline",
@@ -214,4 +134,4 @@ export const sanremo: ComuneConfig = {
 };
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (29/10/2026).
-sanremo.percorsoTerritorio = percorso(sanremo.puntiSupporto, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
+sanremo.percorsoTerritorio = percorso(sanremo.puntiSupporto, sanremo.puntiSupporto.map((_, i) => i));
