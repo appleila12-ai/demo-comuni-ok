@@ -37,6 +37,37 @@ export const roma: ComuneConfig = {
   },
 
   puntiSupporto: [
+    // Verifica puntuale delle fonti ufficiali il 09/11/2026.
+    {
+      icon: "people-outline",
+      title: "Municipio VII · Progetto disabilità gravissima",
+      subtitle: "Sede Appio, Via Tommaso Fortifiocca 71. Referente assistente sociale Daniela Ferrara, telefono 06 69609405, email daniela2.ferrara@comune.roma.it. Assegno di cura e contributo caregiver con valutazione multidimensionale e disponibilità delle risorse; servizio riservato ai residenti del Municipio VII.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-vii-uffici-e-contatti.page?contentId=UFF513958" },
+    },
+    {
+      icon: "people-outline",
+      title: "Municipio VIII · Segretariato Sociale e PUA",
+      subtitle: "Coordinatrice Rosa Paolella. Telefoni 06 69611670 / 671; famiglie e minori 06 69611690; responsabile 06 69611624. Email pua.mun08@comune.roma.it. Sede e orari da verificare nella pagina istituzionale.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/amministrazione-trasparente-uffici.page?cpz=persone_anziane&mun=municipio_viii" },
+    },
+    {
+      icon: "people-outline",
+      title: "Municipio VIII · Domiciliarità, disabilità gravissima e Dopo di Noi",
+      subtitle: "Referente assistente sociale Federica Cofani, tel. 06 69611623, email federica.cofani@comune.roma.it. Ufficio Assistenza Domiciliare Diretta, Disabilità Gravissima Diretta e Dopo Di Noi.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/amministrazione-trasparente-uffici.page?cpz=persone_anziane&mun=municipio_viii" },
+    },
+    {
+      icon: "document-text-outline",
+      title: "Roma · Disabilità gravissima: domanda in qualsiasi momento",
+      subtitle: "Roma Capitale indica che i nuovi utenti possono presentare domanda al Servizio Sociale o PUA del territorio in qualsiasi momento dell'anno, allegando certificazione specialistica, ISEE e documenti richiesti. Valutazione e assegnazione compatibili con risorse disponibili; i beneficiari già in carico non devono ripresentare automaticamente domanda.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117423&pagina=4" },
+    },
+    {
+      icon: "document-text-outline",
+      title: "Lazio · Dopo di Noi: consulenza notarile gratuita",
+      subtitle: "La Regione Lazio ha attivato uno sportello di consulenza notarile gratuita su trust, vincoli di destinazione e fondi speciali, presso Via Rosa Raimondi Garibaldi 7, Roma, piano 12, stanza 88. Appuntamenti secondo calendario regionale, da richiedere via email al notaio indicato entro il venerdì precedente; verificare le date disponibili.",
+      action: { type: "web", value: "https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/dopo-di-noi" },
+    },
     // Verifica istituzionale 09/11/2026: distinguere misure regionali da bandi municipali.
     {
       icon: "location-outline",
