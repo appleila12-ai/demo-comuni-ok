@@ -37,6 +37,62 @@ export const roma: ComuneConfig = {
   },
 
   puntiSupporto: [
+    // Lazio e Municipi: fonti ufficiali lette il 09/11/2026.
+    // Le misure regionali sono percorsi di accesso, NON bandi automaticamente aperti.
+    {
+      icon: "people-outline",
+      title: "Regione Lazio · riconoscimento del caregiver familiare",
+      subtitle: "Norme, procedura di riconoscimento, modulistica e misure di sostegno; l'accesso alle iniziative concrete dipende dagli avvisi territoriali. Verifica 09/11/2026.",
+      action: { type: "web", value: "https://www.regione.lazio.it/cittadini/sociale-famiglie/caregiver-familiare" },
+    },
+    {
+      icon: "home-outline",
+      title: "Regione Lazio · Vita indipendente (18–64 anni)",
+      subtitle: "Progetti personalizzati per autonomia, assistenza personale, trasporto e soluzioni abitative; domanda e valutazione attraverso PUA e distretti. Non è un bonus a erogazione automatica. Verifica 09/11/2026.",
+      action: { type: "web", value: "https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/vita-indipendente" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "Regione Lazio · disabilità gravissima e assistenza domiciliare",
+      subtitle: "Servizi domiciliari, assegno di cura e contributo di cura secondo valutazione e requisiti; gestione territoriale tramite distretti. Verifica 09/11/2026.",
+      action: { type: "web", value: "https://www.regione.lazio.it/cittadini/sociale-famiglie/disabilita/disabilita-gravissima" },
+    },
+    {
+      icon: "home-outline",
+      title: "Regione Lazio · Dopo di Noi",
+      subtitle: "Accesso agli interventi per persone con disabilità grave prive del sostegno familiare attraverso gli Ambiti territoriali, con valutazione UVM e progetto personalizzato. Verifica 09/11/2026.",
+      action: { type: "web", value: "https://www.regione.lazio.it/cittadini/sociale-famiglie/disabilita/dopo-di-noi" },
+    },
+    {
+      icon: "people-outline",
+      title: "Regione Lazio · sostegno domiciliare per persone con SLA",
+      subtitle: "Interventi e misure economiche o assistenziali gestite territorialmente; consultare condizioni e accesso nella pagina ufficiale. Verifica 09/11/2026.",
+      action: { type: "web", value: "https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/sla" },
+    },
+    {
+      icon: "calendar-outline",
+      title: "Bando Roma 2026 · socializzazione giovani con autismo (scadenza 12 novembre)",
+      subtitle: "Per minori e giovani fino a 21 anni con disturbo dello spettro autistico: 500 euro al mese fino a 12 mensilità, nei limiti delle risorse. Domanda al Municipio di residenza entro il 12/11/2026; non confondere con il distinto bando trattamenti scaduto il 05/11. Da archiviare dopo la scadenza secondo la regola dei 10 giorni. Verifica 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/bando-concorso.page?contentId=BEC1656355" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio I · Segretariato Sociale e PUA",
+      subtitle: "Casa della Comunità Eroi, Via Fra Albenzio 10, lun–ven 8:30–12:30, tel. 06 60105419; email segretariatosociale.mun1@comune.roma.it. Altre sedi e orari sul sito. Verifica 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF30480" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio XIII · Segretariato Sociale",
+      subtitle: "Per orientamento e aiuto con le domande: 06 69618600 / 06 69618604; segretariatosociale.mun13@comune.roma.it. Consultare il sito municipale per appuntamento. Verifica 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/bando-concorso.page?contentId=BEC1656054" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio XV · PUA e bandi sociali",
+      subtitle: "Informazioni PUA: pua.mun15@comune.roma.it. Gli avvisi del Municipio XV, compresi quelli per la disabilità, sono nella pagina ufficiale; verificare la scadenza del singolo avviso. Verifica 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/bandi-e-concorsi.page?mun=municipio_xv&tem=disabilita" },
+    },
     // Fonti ufficiali Roma Capitale, verificate il 09/11/2026. Queste sono misure continuative,
     // non bandi con una scadenza annuale: non indicarle come finanziamenti garantiti.
     {
