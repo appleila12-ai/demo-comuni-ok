@@ -34,6 +34,48 @@ export const monterotondo: ComuneConfig = {
   },
 
   puntiSupporto: [
+    {
+      icon: "people-outline",
+      title: "ASL Roma 5 · Disabilità adulti e pazienti fragili",
+      subtitle: "UOSD Via dell'Aeronautica 53/b, Monterotondo Scalo; uosddisabilitaadulti@aslroma5.it. Valutazioni e progetti riabilitativi, passaggio dai servizi per minori a quelli per adulti, vita indipendente e Dopo di Noi. Per nuovi utenti adulti: richiesta del medico o specialista tramite PUA.",
+      action: { type: "web", value: "https://www.aslroma5.it/strutture/uosd-disabili-adulti-e-pazienti-fragili/" },
+    },
+    {
+      icon: "home-outline",
+      title: "Monterotondo · Assistenza domiciliare comunale",
+      subtitle: "Servizio rivolto a residenti con disabilità, anziani e minori in particolari condizioni. La pagina comunale storica (aggiornata nel 2021) indica domanda al Protocollo con ISEE e documentazione sanitaria; eventuale compartecipazione legata al nucleo familiare. Procedura e contatti attuali DA CONFERMARE.",
+      action: { type: "web", value: "https://old.comune.monterotondo.rm.it/essere/assistenza-sostegno-e-integrazione/assistenza-domiciliare" },
+    },
+    {
+      icon: "bus-outline",
+      title: "Monterotondo · Trasporto sociale: requisiti e domanda",
+      subtitle: "La pagina comunale storica (2021) prevede il servizio per residenti in disagio economico con disabilità, studenti con disabilità fuori dalla scuola dell'obbligo e anziani con difficoltà certificate. Domanda ai Servizi Sociali con ISEE e certificazione sanitaria, dopo colloquio. Attivazione e modulistica attuali DA CONFERMARE.",
+      action: { type: "web", value: "https://old.comune.monterotondo.rm.it/essere/assistenza-sostegno-e-integrazione/assistenza-domiciliare" },
+    },
+    {
+      icon: "call-outline",
+      title: "Monterotondo · Telesoccorso e teleassistenza",
+      subtitle: "Il Comune descrive un servizio per anziani e adulti con disabilità soli o non autosufficienti. La fonte è una pagina comunale storica (2021): disponibilità, requisiti e modalità di accesso attuali NON VERIFICATI.",
+      action: { type: "web", value: "https://old.comune.monterotondo.rm.it/essere/assistenza-sostegno-e-integrazione/assistenza-domiciliare" },
+    },
+    {
+      icon: "people-outline",
+      title: "Distretto RM 5.1 · Servizi vacanza e soggiorni",
+      subtitle: "Il portale del Comune segnala nel 2026 servizi vacanza per minori e adulti con disabilità e disagio psichico. Date, posti e domande NON VERIFICATI: consultare l'avviso ufficiale prima di fare richiesta.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/info/argomenti/006.html" },
+    },
+    {
+      icon: "people-outline",
+      title: "Distretto RM 5.1 · Progetto AUT AUT ET ET",
+      subtitle: "Interventi per persone nello spettro autistico dai 6 anni fino oltre i 65; graduatoria pubblicata nel 2025. Non è un bando 2026 aperto: verificare eventuali nuove annualità.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/info/argomenti/006.html" },
+    },
+    {
+      icon: "document-text-outline",
+      title: "Monterotondo · Contrassegno disabilità",
+      subtitle: "Il Comune pubblica documentazione sul contrassegno e sulla viabilità per persone con disabilità. Requisiti, modulo e ufficio attuale: da confermare nella scheda comunale dedicata.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/info/argomenti/006.html" },
+    },
     // Approfondimento 09/11/2026: avvisi e servizi da fonti istituzionali.
     {
       icon: "calendar-outline",
@@ -135,5 +177,5 @@ export const monterotondo: ComuneConfig = {
 };
 
 // Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
-monterotondo.percorsoTerritorio = percorso(monterotondo.puntiSupporto, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+monterotondo.percorsoTerritorio = percorso(monterotondo.puntiSupporto, monterotondo.puntiSupporto.map((_, i) => i));
 monterotondo.percorsoTerritorio = { ...monterotondo.percorsoTerritorio, 1: [INPS_TERZA_FASE] };
