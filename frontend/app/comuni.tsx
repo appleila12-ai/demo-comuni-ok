@@ -75,6 +75,13 @@ function cercaTutti(query: string): { risultati: Risultato[]; altri: number } {
   if (!MOSTRA_ANAGRAFICA) return { risultati, altri: 0 };
   const { voci, totale } = cercaAnagrafica(query, LIMITE_ELENCO);
   voci.forEach((v) => risultati.push({ comune: schedaDaAnagrafica(v) }));
+  // Se si scrive il nome intero di un Comune (es. "Roma") si mostra solo quel Comune,
+  // non tutti quelli della stessa provincia o con un nome simile.
+  const q = norm(query);
+  const esatti = risultati.filter(
+    (r) => !r.paese && [r.comune.nome, r.comune.nomeBreve, ...(r.comune.nomiPrecedenti ?? [])].some((n) => norm(n) === q),
+  );
+  if (q.length >= 2 && esatti.length > 0) return { risultati: esatti, altri: 0 };
   return { risultati, altri: Math.max(0, totale - voci.length) };
 }
 
