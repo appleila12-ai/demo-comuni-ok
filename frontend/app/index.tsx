@@ -248,8 +248,10 @@ function HomeDelComune() {
             <Text style={styles.demoBannerText}>
               <Text style={styles.demoBannerStrong}>Versione dimostrativa: </Text>
               {comune.tipo === "unione" ? "l'" : "il "}
-              {comune.nome} non ha aderito a TutelApp. I recapiti vengono dal sito
-              ufficiale e potrebbero non essere aggiornati.
+              {comune.nome} non ha aderito a TutelApp.{" "}
+              {comune.soloElenco
+                ? "In questa versione non ci sono ancora i recapiti dei suoi servizi sociali: trovi le informazioni generali valide in tutta Italia."
+                : "I recapiti vengono dal sito ufficiale e potrebbero non essere aggiornati."}
             </Text>
           </View>
         )}
@@ -472,6 +474,11 @@ function HomeDelComune() {
           <Text style={styles.contactTitle}>{comune.ente}</Text>
           {!!comune.responsabile && <Text style={styles.contactText}>{comune.responsabile}</Text>}
           {!!comune.indirizzo && <Text style={styles.contactText}>{comune.indirizzo}</Text>}
+          {!!comune.soloElenco && (
+            <Text style={styles.contactText}>
+              I recapiti dei servizi di questo Comune non sono ancora in TutelApp.
+            </Text>
+          )}
 
           <View style={styles.contactRows}>
             {/* Telefono ed email funzionano: toccandoli si chiama o si scrive */}

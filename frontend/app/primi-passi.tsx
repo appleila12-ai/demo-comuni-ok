@@ -78,7 +78,7 @@ function buildPrimiPassi() {
     id: "sportello",
     icon: "business-outline" as const,
     title: `Sportello sociale ${comune.delEnte}`,
-    body: `${[comune.ente, comune.indirizzo].filter(Boolean).join(" · ")}.${comune.orari ? ` Orari: ${comune.orari}.` : ""} Un primo ascolto gratuito per capire di cosa hai bisogno e quali servizi puoi attivare subito, anche senza verbale.${comune.telefono ? "" : " I recapiti li trovi sul sito del Comune."}`,
+    body: `${[comune.ente, comune.indirizzo].filter(Boolean).join(" · ")}.${comune.orari ? ` Orari: ${comune.orari}.` : ""} Un primo ascolto gratuito per capire di cosa hai bisogno e quali servizi puoi attivare subito, anche senza verbale.${comune.telefono ? "" : comune.soloElenco ? " I recapiti di questo Comune non sono ancora in TutelApp." : " I recapiti li trovi sul sito del Comune."}`,
     link: comune.telefono
       ? { label: `Chiama ${comune.ente} · ${comune.telefono}`, url: `tel:${comune.telefono.replace(/\s+/g, "")}` }
       : { label: "Sito dei servizi sociali", url: comune.sitoWeb },
@@ -157,6 +157,7 @@ export default function PrimiPassiScreen() {
                 {open && !("route" in p) && (
                   <View style={styles.passoBody}>
                     <Text style={styles.passoText}>{p.body}</Text>
+                    {!!p.link.url && (
                     <Pressable
                       onPress={() => Linking.openURL(p.link.url).catch(() => {})}
                       style={styles.passoLink}
@@ -172,6 +173,7 @@ export default function PrimiPassiScreen() {
                         {p.link.label}
                       </Text>
                     </Pressable>
+                    )}
                   </View>
                 )}
               </View>
