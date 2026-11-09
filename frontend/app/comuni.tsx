@@ -3,7 +3,9 @@
 //  - ricerca per nome, provincia o regione (senza badare ad accenti e maiuscole);
 //  - cercando un paese che fa parte di un'Unione (es. "Mombaruzzo") si trova
 //    l'Unione, e il paese viene già impostato come "il tuo Comune";
-//  - elenco raggruppato per regione, in ordine alfabetico.
+//  - elenco raggruppato per regione, in ordine alfabetico;
+//  - scrivendo almeno due lettere si cerca anche tra TUTTI i Comuni italiani (elenco ISTAT):
+//    quelli senza scheda propria si possono scegliere lo stesso, in versione dimostrativa.
 
 import { useMemo, useState } from "react";
 import {
@@ -29,6 +31,8 @@ import {
   setComuneAttivo,
   type ComuneConfig,
 } from "@/src/config/comune";
+import { MOSTRA_ANAGRAFICA } from "@/src/config/comuni";
+import { cercaAnagrafica, schedaDaAnagrafica } from "@/src/config/comuni/anagrafica";
 import { PAESE_KEY, salvaPaese } from "@/src/lib/paese";
 import { colors, fonts, radius, spacing } from "@/src/theme";
 
@@ -62,6 +66,18 @@ function cerca(query: string): Risultato[] {
   return risultati;
 }
 
+/** Quanti Comuni dell'elenco ISTAT (senza scheda propria) si mostrano al massimo in una ricerca. */
+const LIMITE_ELENCO = 60;
+
+/** Cerca tra le schede e, dopo due lettere, anche tra tutti i Comuni italiani. */
+function cercaTutti(query: string): { risultati: Risultato[]; altri: number } {
+  const risultati = cerca(query);
+  if (!MOSTRA_ANAGRAFICA) return { risultati, altri: 0 };
+  const { voci, totale } = cercaAnagrafica(query, LIMITE_ELENCO);
+  voci.forEach((v) => risultati.push({ comune: schedaDaAnagrafica(v) }));
+  return { risultati, altri: Math.max(0, totale - voci.length) };
+}
+
 export default function ScegliComune() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
@@ -70,7 +86,7 @@ export default function ScegliComune() {
   const attivo = primoAccesso ? "" : getComuneAttivo().slug;
   const [query, setQuery] = useState("");
 
-  const risultati = useMemo(() => cerca(query), [query]);
+  const { risultati, altri } = useMemo(() => cercaTutti(query), [query]);
 
   // Raggruppa per regione (in ordine alfabetico)
   const gruppi = useMemo(() => {
@@ -177,7 +193,8 @@ export default function ScegliComune() {
           <Text style={styles.count} testID="comuni-count">
             {query
               ? `${risultati.length} ${risultati.length === 1 ? "risultato" : "risultati"}`
-              : "Elenco degli enti"}
+              : "Comuni con scheda · scrivi il nome per cercare tra tutti i Comuni italiani"}
+            {query && altri > 0 ? ` · altri ${altri} Comuni: scrivi più lettere del nome` : ""}
           </Text>
         </View>
 
@@ -215,7 +232,7 @@ export default function ScegliComune() {
                           : c.tipo === "unione" && c.paesi
                             ? `${c.paesi.length} Comuni · ${c.provincia}`
                             : `Provincia di ${c.provincia}`}
-                        {c.dimostrativo ? " · demo" : ""}
+                        {c.soloElenco ? " · demo, recapiti in arrivo" : c.dimostrativo ? " · demo" : ""}
                       </Text>
                     </View>
                     {selected ? (
@@ -234,17 +251,17 @@ export default function ScegliComune() {
           <View style={styles.empty} testID="comuni-empty">
             <Ionicons name="location-outline" size={22} color={colors.onSurfaceTertiary} />
             <Text style={styles.emptyTitle}>
-              «{query.trim()}» non aderisce ancora a TutelApp
+              Non troviamo «{query.trim()}»
             </Text>
             <Text style={styles.emptyText}>
-              Puoi comunque usare le informazioni generali scegliendo un Comune vicino,
-              oppure chiedere ai Servizi Sociali del tuo Comune di aderire.
+              Controlla come hai scritto il nome del Comune, oppure scegli un Comune vicino:
+              le informazioni generali valgono in tutta Italia.
             </Text>
           </View>
         ) : (
           <Text style={styles.note}>
-            Il tuo Comune non è in elenco? Chiedi ai Servizi Sociali se aderisce a
-            TutelApp.
+            Non vedi il tuo Comune? Scrivi il suo nome nella casella: ci sono tutti i
+            Comuni italiani, quasi tutti in versione dimostrativa.
           </Text>
         )}
 

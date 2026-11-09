@@ -101,4 +101,10 @@ export type ComuneConfig = {
    * L'app mostra ai cittadini l'avviso "Versione dimostrativa".
    */
   dimostrativo?: boolean;
+
+  /**
+   * true = Comune presente solo nell'elenco nazionale ISTAT (anagrafica.ts):
+   * ha nome, provincia e regione, ma nessun recapito né servizio verificato.
+   */
+  soloElenco?: boolean;
 };

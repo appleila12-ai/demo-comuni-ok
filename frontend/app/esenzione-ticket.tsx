@@ -83,7 +83,7 @@ export default function EsenzioneTicket() {
       >
         <Intro>
           Per {comune.nomeBreve} la scheda con l&apos;elenco dei documenti per l&apos;esenzione ticket non è ancora
-          pronta. Qui sotto trovi la pagina ufficiale della tua azienda sanitaria.
+          pronta. Qui sotto trovi la pagina ufficiale della tua {comune.soloElenco ? "Regione" : "azienda sanitaria"}.
         </Intro>
         <Bottone
           label={comune.esenzioneTicket.label}

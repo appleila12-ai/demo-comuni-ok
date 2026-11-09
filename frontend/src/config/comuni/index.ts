@@ -8,6 +8,7 @@ import { vigneEVini } from "./vigne-e-vini";
 import { ventimiglia } from "./ventimiglia";
 import { mediglia } from "./mediglia";
 import { COMUNI_DEMO } from "./demo";
+import { schedaDaAnagrafica, voceDaSlug } from "./anagrafica";
 
 export type { ComuneConfig, Paese, PuntoSupporto } from "./types";
 
@@ -20,6 +21,9 @@ export const COMUNI_ADERENTI: ComuneConfig[] = [sarzana, erba, vigneEVini, venti
  */
 const MOSTRA_DEMO = (process.env.EXPO_PUBLIC_COMUNI_DEMO || "").toLowerCase() !== "no";
 
+/** Anche i Comuni dell'elenco nazionale ISTAT (anagrafica.ts) sono dimostrativi: si nascondono insieme. */
+export const MOSTRA_ANAGRAFICA = MOSTRA_DEMO;
+
 export const COMUNI: ComuneConfig[] = MOSTRA_DEMO
   ? [...COMUNI_ADERENTI, ...COMUNI_DEMO]
   : COMUNI_ADERENTI;
@@ -31,5 +35,10 @@ export const COMUNE_PREDEFINITO =
 export function trovaComune(slug: string | null | undefined): ComuneConfig | undefined {
   if (!slug) return undefined;
   const s = slug.toLowerCase().trim();
-  return COMUNI.find((c) => c.slug === s);
+  const scheda = COMUNI.find((c) => c.slug === s);
+  if (scheda) return scheda;
+  // Nessuna scheda propria: se è un Comune dell'elenco ISTAT, scheda minima (nome, provincia, regione)
+  if (!MOSTRA_ANAGRAFICA) return undefined;
+  const voce = voceDaSlug(s);
+  return voce && !voce.conScheda ? schedaDaAnagrafica(voce) : undefined;
 }
