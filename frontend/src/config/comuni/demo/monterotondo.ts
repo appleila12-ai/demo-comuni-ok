@@ -34,6 +34,19 @@ export const monterotondo: ComuneConfig = {
   },
 
   puntiSupporto: [
+    // Sport inclusivo e autonomia: fonti ufficiali delle organizzazioni, 09/11/2026.
+    {
+      icon: "basketball-outline",
+      title: "ASD Integra Sport 2013 · Sport inclusivo",
+      subtitle: "Associazione con sede legale in Via Monte Pollino 6, Monterotondo. Propone basket e minibasket integrato, calcio integrato, karate integrato, psicomotricità, camp sportivi e soggiorni per persone con e senza disabilità. Contatto pubblicato: segreteriaintegrasport@gmail.com. Sedi delle attività, calendari, quote e posti disponibili DA CONFERMARE con l'associazione.",
+      action: { type: "web", value: "https://www.asdintegrasport2013.com/" },
+    },
+    {
+      icon: "accessibility-outline",
+      title: "Progetto V.O.C.E. · Sportello Vita Indipendente",
+      subtitle: "Via San Martino 21, Monterotondo. Sportello per persone con disabilità fisiche, psichiche e sensoriali dei distretti RM 5.1–5.3; orientamento e accompagnamento all'autonomia, anche attività sportive inclusive. Per appuntamento: 349 9743733 (Francesca Pagliani). Per disabilità visiva: uiclazio@uici.it, oggetto AVI. Avviato maggio 2026 per 12 mesi: confermare prima di recarsi.",
+      action: { type: "web", value: "https://www.uiclazio.it/nella-asl-roma-5-nascono-gli-sportelli-per-la-vita-indipendente-servizi-supporto-e-opportunita-per-le-persone-con-disabilita-fisiche-psichiche-e-sensoriali/" },
+    },
     // Associazioni e servizi sociali: fonti primarie dei gestori, lettura 09/11/2026.
     {
       icon: "people-outline",
