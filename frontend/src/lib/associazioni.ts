@@ -162,6 +162,27 @@ const PER_PROVINCIA: Record<string, Elenco> = {
   },
 };
 
+// Associazioni territoriali: recapiti pubblicati dagli enti e dai gestori (09/11/2026).
+// Le schede senza telefono espongono email o sito, senza inventare numeri.
+PER_PROVINCIA["RM"] = {
+  volontariato: [
+    { nome: "Ascoltami ETS", cosa: "Sostegno alle famiglie di bambini autistici e iniziative di supporto psicologico.", dove: "Via Cavour 39, Monterotondo", sito: "https://ascoltamiets.it/", comuni: ["monterotondo"] },
+    { nome: "Il Tamburo", cosa: "Inclusione e servizi residenziali per persone adulte con disabilità, tra cui Casa Famiglia Domus.", dove: "Via Panaro 15, Monterotondo", telefono: "06 90626515", sito: "https://www.iltamburo.org/cooperativa/casa-famiglia-domus/", comuni: ["monterotondo"] },
+    { nome: "Il Pungiglione", cosa: "Cooperativa sociale: centro diurno Il Funambolo e percorsi abitativi Dopo di Noi.", dove: "Via San Martino 21, Monterotondo", telefono: "06 90622518", sito: "https://ilpungiglione.it/contatti-2/", comuni: ["monterotondo"] },
+    { nome: "Folias", cosa: "Cooperativa sociale: orientamento e percorsi di inclusione lavorativa per persone con disabilità.", dove: "Via Don Milani 1–3, Monterotondo", telefono: "06 9066963", sito: "https://www.folias.it/site/centro-per-lorientamento/", comuni: ["monterotondo"] },
+    { nome: "Riabilmente", cosa: "Attività riabilitative, logopedia, neuropsicomotricità e sostegno a minori e famiglie.", dove: "Viale Fausto Cecconi 6, Monterotondo", telefono: "06 99084435", email: "riabilmente.cm@gmail.com", sito: "https://riabilmente.com/informazioni/", comuni: ["monterotondo"] },
+  ],
+  sport: [
+    { nome: "ASD Integra Sport 2013", cosa: "Basket, calcio, karate e psicomotricità in attività sportive integrate per persone con e senza disabilità.", dove: "Via Monte Pollino 6, Monterotondo (sede legale)", email: "segreteriaintegrasport@gmail.com", sito: "https://www.asdintegrasport2013.com/", comuni: ["monterotondo"] },
+  ],
+};
+PER_PROVINCIA["IM"] = {
+  volontariato: [
+    { nome: "ANFFAS Sanremo", cosa: "Associazione di famiglie e persone con disabilità intellettiva e relazionale.", dove: "Via Giovanni Borea 57, Sanremo", telefono: "0184 513449", comuni: ["sanremo"] },
+  ],
+  sport: [],
+};
+
 // ---------------------------------------------------------------- per regione (sport)
 const SPORT_REGIONE: Record<string, Associazione[]> = {
   Liguria: [
