@@ -11,9 +11,9 @@ import { percorso } from "../percorso";
 export const roma: ComuneConfig = {
   slug: "roma",
   tipo: "comune",
-  nome: "Comune di Roma",
+  nome: "Roma Capitale",
   nomeBreve: "Roma",
-  delEnte: "del Comune di Roma",
+  delEnte: "di Roma Capitale",
   soggetto: "Il Comune",
   provincia: "RM",
   regione: "Lazio",
@@ -37,6 +37,32 @@ export const roma: ComuneConfig = {
   },
 
   puntiSupporto: [
+    // Fonti ufficiali Roma Capitale, verificate il 09/11/2026. Queste sono misure continuative,
+    // non bandi con una scadenza annuale: non indicarle come finanziamenti garantiti.
+    {
+      icon: "cash-outline",
+      title: "Assegno di cura per disabilità gravissima · Roma Capitale",
+      subtitle: "Da 500 a 800 euro mensili secondo ISEE e servizi attivi. Domanda presso Servizi Sociali o PUA del proprio Municipio in qualsiasi momento dell'anno; erogazione secondo requisiti e risorse disponibili. Fonte verificata 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117423" },
+    },
+    {
+      icon: "people-outline",
+      title: "Contributo di cura per caregiver familiare · Roma Capitale",
+      subtitle: "Da 400 a 700 euro mensili per disabilità gravissima assistita dal caregiver, secondo ISEE e servizi attivi. Domanda presso Servizi Sociali o PUA del Municipio durante l'anno; disponibilità subordinata alle risorse. Fonte verificata 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117423&pagina=4" },
+    },
+    {
+      icon: "home-outline",
+      title: "Dopo di Noi · progetto di autonomia abitativa",
+      subtitle: "Percorsi personalizzati per persone con disabilità grave prive di adeguato sostegno familiare. Roma Capitale ha attivato il servizio di domanda online; verificare requisiti e stato della procedura sul portale. Fonte verificata 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF1550524&stem=persone_con_disabilita" },
+    },
+    {
+      icon: "location-outline",
+      title: "Trova il PUA e i Servizi Sociali del tuo Municipio (I–XV)",
+      subtitle: "Roma comprende 15 Municipi: per assegni di cura e assistenza occorre rivolgersi al proprio PUA o Servizio Sociale. La pagina ufficiale elenca i riferimenti municipali. Fonte verificata 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117423&pagina=5" },
+    },
     {
       icon: "people-outline",
       title: "Punto Unico di Accesso (PUA), ASL Roma 1",
