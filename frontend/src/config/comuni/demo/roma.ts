@@ -37,7 +37,7 @@ export const roma: ComuneConfig = {
   },
 
   puntiSupporto: [
-    // Verifica puntuale delle fonti ufficiali il 09/11/2026.
+    // Solo uffici, sportelli e servizi di accesso. Schede da ricollocare archiviate in docs.
     {
       icon: "people-outline",
       title: "Municipio VII · Progetto disabilità gravissima",
@@ -57,55 +57,11 @@ export const roma: ComuneConfig = {
       action: { type: "web", value: "https://www.comune.roma.it/web/it/amministrazione-trasparente-uffici.page?cpz=persone_anziane&mun=municipio_viii" },
     },
     {
-      icon: "document-text-outline",
-      title: "Roma · Disabilità gravissima: domanda in qualsiasi momento",
-      subtitle: "Roma Capitale indica che i nuovi utenti possono presentare domanda al Servizio Sociale o PUA del territorio in qualsiasi momento dell'anno, allegando certificazione specialistica, ISEE e documenti richiesti. Valutazione e assegnazione compatibili con risorse disponibili; i beneficiari già in carico non devono ripresentare automaticamente domanda.",
-      action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117423&pagina=4" },
-    },
-    {
-      icon: "document-text-outline",
-      title: "Lazio · Dopo di Noi: consulenza notarile gratuita",
-      subtitle: "La Regione Lazio ha attivato uno sportello di consulenza notarile gratuita su trust, vincoli di destinazione e fondi speciali, presso Via Rosa Raimondi Garibaldi 7, Roma, piano 12, stanza 88. Appuntamenti secondo calendario regionale, da richiedere via email al notaio indicato entro il venerdì precedente; verificare le date disponibili.",
-      action: { type: "web", value: "https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/dopo-di-noi" },
-    },
-    // Verifica istituzionale 09/11/2026: distinguere misure regionali da bandi municipali.
-    {
       icon: "location-outline",
       title: "Municipio IX · Welfare di accesso, Segretariato Sociale e PUA",
       subtitle: "L'ufficio Welfare di Accesso ai Servizi Sociali e Sociosanitari accoglie persone con disabilità, minori, adulti e anziani, orienta verso Municipio e ASL Roma 2 e fornisce modulistica. Sede, telefoni e orari: verificare nella pagina ufficiale dell'ufficio.",
       action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-ix-uffici-e-contatti.page?contentId=UFF31871" },
     },
-    {
-      icon: "calendar-outline",
-      title: "Municipio IV · Caregiver: misure 2026–2027",
-      subtitle: "Avviso per caregiver residenti nel Municipio IV, formalmente riconosciuti con CardGiver, con servizi di sollievo o rimborso spese. Il Comune ha pubblicato FAQ e proroga il 22/10/2026: controllare la scadenza aggiornata nell'avviso, non utilizzare quella originaria.",
-      action: { type: "web", value: "https://www.comune.roma.it/web/it/bando-concorso.page?contentId=BEC1653936" },
-    },
-    {
-      icon: "home-outline",
-      title: "Regione Lazio · Vita indipendente",
-      subtitle: "Per persone adulte con disabilità dai 18 ai 64 anni: progetti personalizzati che possono comprendere aiuto personale, trasporto, abitare autonomo e domotica. Domande accolte dai PUA territoriali, con valutazione dei bisogni da parte dei servizi e UVM. Pagina regionale verificata 04/03/2026.",
-      action: { type: "web", value: "https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/vita-indipendente" },
-    },
-    {
-      icon: "home-outline",
-      title: "Regione Lazio · Dopo di Noi e progetto personalizzato",
-      subtitle: "Interventi per persone con disabilità grave prive del sostegno familiare: percorsi di autonomia, sostegno alla domiciliarità, soluzioni abitative e sviluppo competenze. Accesso attraverso l'Ambito sovradistrettuale e valutazione multidimensionale. Non è un bonus automatico.",
-      action: { type: "web", value: "https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/dopo-di-noi" },
-    },
-    {
-      icon: "people-outline",
-      title: "Regione Lazio · Riconoscimento caregiver familiare",
-      subtitle: "La Regione pubblica procedure e modulistica per il riconoscimento formale del caregiver e i riferimenti della legge regionale 5/2024. Le misure economiche e i servizi di sollievo dipendono dagli avvisi del territorio: verificare sempre il proprio Municipio o Distretto.",
-      action: { type: "web", value: "https://www.regione.lazio.it/cittadini/sociale-famiglie/caregiver-familiare" },
-    },
-    {
-      icon: "calendar-outline",
-      title: "Roma Capitale · Avvisi disabilità per Municipio",
-      subtitle: "Elenco ufficiale aggiornato di bandi, graduatorie e avvisi per persone con disabilità, filtrabile per Municipio. La pubblicazione di una graduatoria non significa apertura di nuove domande; verificare date e destinatari nel singolo avviso.",
-      action: { type: "web", value: "https://www.comune.roma.it/web/it/bandi-e-concorsi.page?mun=municipio&tem=disabilita" },
-    },
-    // Uffici verificati sul portale istituzionale di Roma Capitale il 09/11/2026.
     {
       icon: "location-outline",
       title: "Municipio II · PUA e Segretariato Sociale",
@@ -137,31 +93,6 @@ export const roma: ComuneConfig = {
       action: { type: "web", value: "https://www.comune.roma.it/web-resources/cms/documents/Newsletter_Spazio_Comune_2_giugno_2025.pdf" },
     },
     {
-      icon: "calendar-outline",
-      title: "Municipio VI · Avviso sollievo caregiver 2026",
-      subtitle: "Avviso pubblicato il 28/10/2026 per caregiver formalmente riconosciuti con CardGiver. Domanda tramite protocollo Municipio VI o PEC, entro il 15° giorno dalla pubblicazione; verificare nel testo dell'avviso il termine effettivo. Documenti: moduli A/B, CardGiver, ISEE, documento identità.",
-      action: { type: "web", value: "https://www.comune.roma.it/web/it/bando-concorso.page?contentId=BEC1663991" },
-    },
-    // Verifica istituzionale 09/11/2026: distinguere i diritti dalle erogazioni effettivamente finanziate.
-    {
-      icon: "people-outline",
-      title: "Lazio · CardGiver e riconoscimento caregiver",
-      subtitle: "Per il riconoscimento dello status di caregiver familiare rivolgersi allo Sportello Caregiver del PUA di residenza. Dopo valutazione UVMD è prevista la CardGiver. Informazioni regionali: 06 99500. Fonte Salute Lazio, letta 09/11/2026.",
-      action: { type: "web", value: "https://salutelazio.it/it/servizi/sostegno-ai-caregiver" },
-    },
-    {
-      icon: "cash-outline",
-      title: "Lazio · budget personale caregiver (fino a 1.000 euro/anno)",
-      subtitle: "La Regione descrive un budget personale di 1.000 euro/anno per caregiver con ISEE inferiore a 24.000 euro, destinato a formazione, tempo libero e cura personale. Per modalità di accesso e disponibilità effettiva rivolgersi al PUA: non è un pagamento automatico. Fonte Salute Lazio, 09/11/2026.",
-      action: { type: "web", value: "https://salutelazio.it/it/servizi/sostegno-ai-caregiver" },
-    },
-    {
-      icon: "home-outline",
-      title: "Lazio · sollievo caregiver e sostituzione temporanea",
-      subtitle: "Rimborso fino a 500 euro/anno, o fino a 600 euro in caso di disabilità complessa, per assistenza sostitutiva programmata; previste anche misure per emergenze. Verificare attivazione e requisiti presso PUA/Sportello Caregiver. Fonte Salute Lazio, 09/11/2026.",
-      action: { type: "web", value: "https://salutelazio.it/it/servizi/sostegno-ai-caregiver" },
-    },
-    {
       icon: "location-outline",
       title: "Municipio XII · Sportello Caregiver",
       subtitle: "Via Fabiola 14, primo piano, stanze 1.18/1.19. Martedì e mercoledì 8:30–13:00 e 14:00–17:00; altri giorni su appuntamento. Offre orientamento e raccoglie le domande di riconoscimento caregiver. Fonte Roma Capitale, 09/11/2026.",
@@ -178,44 +109,6 @@ export const roma: ComuneConfig = {
       title: "Roma · Segretariato Sociale e PUA di tutti i Municipi",
       subtitle: "Indice ufficiale degli uffici dei Municipi I–XV per orientamento, assistenza e domande sociali. I recapiti specifici vanno verificati nella pagina di ciascun ufficio. Fonte Roma Capitale, 09/11/2026.",
       action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF87122" },
-    },
-    // Lazio e Municipi: fonti ufficiali lette il 09/11/2026.
-    // Le misure regionali sono percorsi di accesso, NON bandi automaticamente aperti.
-    {
-      icon: "people-outline",
-      title: "Regione Lazio · riconoscimento del caregiver familiare",
-      subtitle: "Norme, procedura di riconoscimento, modulistica e misure di sostegno; l'accesso alle iniziative concrete dipende dagli avvisi territoriali. Verifica 09/11/2026.",
-      action: { type: "web", value: "https://www.regione.lazio.it/cittadini/sociale-famiglie/caregiver-familiare" },
-    },
-    {
-      icon: "home-outline",
-      title: "Regione Lazio · Vita indipendente (18–64 anni)",
-      subtitle: "Progetti personalizzati per autonomia, assistenza personale, trasporto e soluzioni abitative; domanda e valutazione attraverso PUA e distretti. Non è un bonus a erogazione automatica. Verifica 09/11/2026.",
-      action: { type: "web", value: "https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/vita-indipendente" },
-    },
-    {
-      icon: "medkit-outline",
-      title: "Regione Lazio · disabilità gravissima e assistenza domiciliare",
-      subtitle: "Servizi domiciliari, assegno di cura e contributo di cura secondo valutazione e requisiti; gestione territoriale tramite distretti. Verifica 09/11/2026.",
-      action: { type: "web", value: "https://www.regione.lazio.it/cittadini/sociale-famiglie/disabilita/disabilita-gravissima" },
-    },
-    {
-      icon: "home-outline",
-      title: "Regione Lazio · Dopo di Noi",
-      subtitle: "Accesso agli interventi per persone con disabilità grave prive del sostegno familiare attraverso gli Ambiti territoriali, con valutazione UVM e progetto personalizzato. Verifica 09/11/2026.",
-      action: { type: "web", value: "https://www.regione.lazio.it/cittadini/sociale-famiglie/disabilita/dopo-di-noi" },
-    },
-    {
-      icon: "people-outline",
-      title: "Regione Lazio · sostegno domiciliare per persone con SLA",
-      subtitle: "Interventi e misure economiche o assistenziali gestite territorialmente; consultare condizioni e accesso nella pagina ufficiale. Verifica 09/11/2026.",
-      action: { type: "web", value: "https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/sla" },
-    },
-    {
-      icon: "calendar-outline",
-      title: "Autismo · socializzazione fino a 21 anni (scadenza 12 novembre 2026)",
-      subtitle: "Per minori e giovani fino a 21 anni con disturbo dello spettro autistico: 500 euro al mese fino a 12 mensilità, nei limiti delle risorse. Domanda al Municipio di residenza entro il 12/11/2026; Diverso dall'avviso per trattamenti educativi 0–17 anni scaduto il 05/11/2026. Da archiviare dopo la scadenza secondo la regola dei 10 giorni. Verifica 09/11/2026.",
-      action: { type: "web", value: "https://www.comune.roma.it/web/it/informazione-di-servizio.page?contentId=IDS1655727" },
     },
     {
       icon: "location-outline",
@@ -248,12 +141,6 @@ export const roma: ComuneConfig = {
       action: { type: "web", value: "https://www.comune.roma.it/web-resources/cms/documents/20240808_DIAPOSITIVE_Segretariato_Sociale_PUA.pdf" },
     },
     {
-      icon: "document-text-outline",
-      title: "Roma · Disabilità gravissima: domanda e documenti",
-      subtitle: "Domanda ai Servizi Sociali o PUA del Municipio durante l'anno. Allegare certificazione specialistica pubblica, ISEE ordinario e sociosanitario, documenti di identità, tessera sanitaria, certificazioni invalidità/accompagnamento e L.104 art.3 c.3, secondo la scheda ufficiale. Valutazione multidisciplinare e disponibilità fondi. Fonte Roma Capitale, 09/11/2026.",
-      action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117440" },
-    },
-    {
       icon: "location-outline",
       title: "Municipio XIII · Segretariato Sociale",
       subtitle: "Per orientamento e aiuto con le domande: 06 69618600 / 06 69618604; segretariatosociale.mun13@comune.roma.it. Consultare il sito municipale per appuntamento. Verifica 09/11/2026.",
@@ -264,26 +151,6 @@ export const roma: ComuneConfig = {
       title: "Municipio XV · PUA e bandi sociali",
       subtitle: "Informazioni PUA: pua.mun15@comune.roma.it. Gli avvisi del Municipio XV, compresi quelli per la disabilità, sono nella pagina ufficiale; verificare la scadenza del singolo avviso. Verifica 09/11/2026.",
       action: { type: "web", value: "https://www.comune.roma.it/web/it/bandi-e-concorsi.page?mun=municipio_xv&tem=disabilita" },
-    },
-    // Fonti ufficiali Roma Capitale, verificate il 09/11/2026. Queste sono misure continuative,
-    // non bandi con una scadenza annuale: non indicarle come finanziamenti garantiti.
-    {
-      icon: "cash-outline",
-      title: "Assegno di cura per disabilità gravissima · Roma Capitale",
-      subtitle: "Da 500 a 800 euro mensili secondo ISEE e servizi attivi. Domanda presso Servizi Sociali o PUA del proprio Municipio in qualsiasi momento dell'anno; erogazione secondo requisiti e risorse disponibili. Fonte verificata 09/11/2026.",
-      action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117423" },
-    },
-    {
-      icon: "people-outline",
-      title: "Contributo di cura per caregiver familiare · Roma Capitale",
-      subtitle: "Da 400 a 700 euro mensili per disabilità gravissima assistita dal caregiver, secondo ISEE e servizi attivi. Domanda presso Servizi Sociali o PUA del Municipio durante l'anno; disponibilità subordinata alle risorse. Fonte verificata 09/11/2026.",
-      action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117423&pagina=4" },
-    },
-    {
-      icon: "home-outline",
-      title: "Dopo di Noi · progetto di autonomia abitativa",
-      subtitle: "Percorsi personalizzati per persone con disabilità grave prive di adeguato sostegno familiare. Roma Capitale ha attivato il servizio di domanda online; verificare requisiti e stato della procedura sul portale. Fonte verificata 09/11/2026.",
-      action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF1550524&stem=persone_con_disabilita" },
     },
     {
       icon: "location-outline",
@@ -324,7 +191,7 @@ export const roma: ComuneConfig = {
 };
 
 // Passi 4 e 5: voci già in scheda con fonte. Passo 2 senza voci: la pagina ASL Roma 1 "Invalidità civile" tratta la L. 210/92 e non indica sedi (letta il 28/10/2026).
-roma.percorsoTerritorio = percorso(roma.puntiSupporto, [0, 1]);
+roma.percorsoTerritorio = percorso(roma.puntiSupporto, roma.puntiSupporto.map((_, i) => i));
 
 // Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
 roma.percorsoTerritorio = { ...roma.percorsoTerritorio, 1: [INPS_TERZA_FASE] };
