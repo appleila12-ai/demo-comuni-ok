@@ -76,7 +76,6 @@ export default function Associazioni() {
         Associazioni che si occupano di disabilità nella zona di {comune.nomeBreve}: per avere
         sostegno, conoscere altre famiglie, fare sport o stare insieme.
       </Intro>
-      <Bottone label="Cieco o ipovedente? UICI e radiofari" icon="eye-off-outline" variante="vuoto" onPress={() => router.push("/uici")} testID="associazioni-uici" />
 
       <View style={styles.tabs} accessibilityRole="tablist">
         {TAB.map((t) => {
@@ -107,6 +106,14 @@ export default function Associazioni() {
             </Avviso>
           ) : null}
           <Text style={paginaStili.titoloSezione}>Per trovarne altre</Text>
+          <View style={paginaStili.card} testID="associazioni-uici">
+            <Text style={styles.nome} accessibilityRole="header">UICI – Unione Italiana dei Ciechi e degli Ipovedenti</Text>
+            <Text style={paginaStili.testo}>
+              Ha una sede in quasi tutte le province. Per chi non vede o vede poco: informazioni su diritti, ausili e
+              autonomia. Qui trovi la sede per {comune.nomeBreve} e, se ci sono, i radiofari del progetto LETIsmart.
+            </Text>
+            <Bottone label={`UICI: la sede per ${comune.nomeBreve}`} icon="people-outline" variante="vuoto" onPress={() => router.push("/uici")} />
+          </View>
           {d.volontariatoNazionali.map((a) => <Scheda key={a.nome} a={a} vicina={false} />)}
         </View>
       ) : (
