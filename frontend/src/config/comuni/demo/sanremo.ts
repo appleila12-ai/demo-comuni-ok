@@ -34,6 +34,37 @@ export const sanremo: ComuneConfig = {
   },
 
   puntiSupporto: [
+    // Approfondimento ASL1 da fonti ufficiali consultate il 09/11/2026.
+    {
+      icon: "medkit-outline",
+      title: "Sanremo · Centro autismo e neuropsichiatria infantile",
+      subtitle: "Palafiori, Corso Garibaldi 1: il Distretto sanitario sanremese indica Centro autismo, Neuropsichiatria infantile, Logopedia e Psicologia. Contattare ASL1 per modalità di accesso e prenotazione; orari specifici NON VERIFICATI.",
+      action: { type: "web", value: "https://www.asl1.liguria.it/territorio/distretti-sanitari/distretto-sanitario-sanremese.html" },
+    },
+    {
+      icon: "accessibility-outline",
+      title: "Sanremo · Presidi, protesi e ausili tecnici",
+      subtitle: "Sportello Accoglienza ASL1, Palafiori, Corso Garibaldi 1; tel. 0184 536784; lun–ven 8–13. Per protesi, ortesi, ausili e forniture sanitarie verificare prescrizioni e autorizzazioni con ASL1.",
+      action: { type: "web", value: "https://www.asl1.liguria.it/component/content/article.html?Itemid=101&id=130%3Aerogazione-presidi-ausili-tecnici" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "Sanremo · CUP, ticket e anagrafe sanitaria",
+      subtitle: "Sportello polifunzionale ASL1 al Palafiori, Corso Garibaldi 1, lun–ven 8–13; tel. 0184 536784. Per prenotazioni, pagamento ticket e pratiche anagrafiche sanitarie.",
+      action: { type: "web", value: "https://www.asl1.liguria.it/servizi-dalla-a-alla-z/2243-sportelli-polifunzionali.html" },
+    },
+    {
+      icon: "home-outline",
+      title: "Sanremo · Vita indipendente, caregiver e Dopo di Noi: accesso PUA",
+      subtitle: "Il PUA ASL1 elenca Fondo non autosufficienza, gravissime disabilità, Vita indipendente, contributo caregiver e Dopo di Noi. È il punto di orientamento per l'attivazione delle procedure: non significa che tutti i finanziamenti siano aperti.",
+      action: { type: "web", value: "https://www.asl1.liguria.it/servizi-dalla-a-alla-z/1498-punto-unico-accesso.html" },
+    },
+    {
+      icon: "phone-portrait-outline",
+      title: "Sanremo · Medici Casa della Comunità: recapito regionale",
+      subtitle: "La Regione Liguria indica il numero 0184 534714 per contattare i medici della Casa della Comunità di Sanremo (notizia 04/06/2026). Non è il numero specifico del PUA.",
+      action: { type: "web", value: "https://www.regione.liguria.it/homepage-salute/ultime-dal-canale/item/46570-numeri-medici-case-comunita.html" },
+    },
     {
       icon: "people-outline",
       title: "Ambito Sociale Sanremo · primo accesso",
@@ -115,4 +146,4 @@ export const sanremo: ComuneConfig = {
 };
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (29/10/2026).
-sanremo.percorsoTerritorio = percorso(sanremo.puntiSupporto, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+sanremo.percorsoTerritorio = percorso(sanremo.puntiSupporto, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
