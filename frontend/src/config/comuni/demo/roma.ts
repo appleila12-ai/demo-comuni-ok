@@ -77,9 +77,39 @@ export const roma: ComuneConfig = {
     },
     {
       icon: "location-outline",
-      title: "Municipio I · Segretariato Sociale e PUA",
-      subtitle: "Casa della Comunità Eroi, Via Fra Albenzio 10, lun–ven 8:30–12:30, tel. 06 60105419; email segretariatosociale.mun1@comune.roma.it. Altre sedi e orari sul sito. Verifica 09/11/2026.",
+      title: "Municipio I · PUA Eroi (Prati)",
+      subtitle: "Casa della Comunità Eroi, Via Fra Albenzio 10. Lun–ven 8:30–12:30. Tel. 06 60105419 / 06 60105582 / 06 60105418; messaggi 338 5080024. Email segretariatosociale.mun1@comune.roma.it e pua1@aslroma1.it. Fonte Roma Capitale, 09/11/2026.",
       action: { type: "web", value: "https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF30480" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio I · PUA Nuovo Regina Margherita (Trastevere)",
+      subtitle: "Casa della Comunità Nuovo Regina Margherita, Via Roma Libera 76. Lun–ven 8:30–12:30. Tel. 06 60106473 / 475 / 484 / 485; messaggi 366 6603044. Email pua1@aslroma1.it. Fonte Roma Capitale, 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF30480" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio I · PUA Esquilino (sede in apertura)",
+      subtitle: "Via Luigi Luzzatti 8. La pagina istituzionale riporta martedì e giovedì 8:30–12:30, mercoledì 14:30–17:30, ma indica sede in via di apertura: verificare telefonicamente prima di andare. Fonte Roma Capitale, 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF30480" },
+    },
+    {
+      icon: "people-outline",
+      title: "Municipio I · Segretariato Sociale Petroselli",
+      subtitle: "Via Luigi Petroselli 50, primo piano. Lun/mer/ven 9–13; mar/gio 9–13 e 14–16. Tel. 06 69601665; segretariatosociale.mun1@comune.roma.it. Orientamento, pratiche sociali, agevolazioni tariffarie e richieste sosta disabili. Fonte Roma Capitale, 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF30480" },
+    },
+    {
+      icon: "home-outline",
+      title: "Municipio I · Assistenza domiciliare SAISH e SAISA",
+      subtitle: "SAISH: assistenza domiciliare per persone con disabilità; SAISA: per anziani con autonomia limitata. Il servizio sociale municipale valuta il bisogno insieme alla ASL e definisce il piano individuale. Chiedi accesso al PUA/Segretariato del Municipio I. Fonte Roma Capitale, 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web-resources/cms/documents/20240808_DIAPOSITIVE_Segretariato_Sociale_PUA.pdf" },
+    },
+    {
+      icon: "document-text-outline",
+      title: "Roma · Disabilità gravissima: domanda e documenti",
+      subtitle: "Domanda ai Servizi Sociali o PUA del Municipio durante l'anno. Allegare certificazione specialistica pubblica, ISEE ordinario e sociosanitario, documenti di identità, tessera sanitaria, certificazioni invalidità/accompagnamento e L.104 art.3 c.3, secondo la scheda ufficiale. Valutazione multidisciplinare e disponibilità fondi. Fonte Roma Capitale, 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117440" },
     },
     {
       icon: "location-outline",
