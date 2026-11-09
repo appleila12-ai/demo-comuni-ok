@@ -34,6 +34,49 @@ export const monterotondo: ComuneConfig = {
   },
 
   puntiSupporto: [
+    // Associazioni e partecipazione: schede istituzionali Comune, verifica 09/11/2026.
+    {
+      icon: "musical-notes-outline",
+      title: "Il Tamburo · Musica e inclusione",
+      subtitle: "Associazione censita dal Comune: arti espressive, prevenzione del disagio psicosociale e qualità della vita delle persone con disabilità e delle famiglie. Tel. 3333922534, info@iltamburo.org; orario indicato 9–15. Scheda comunale aggiornata 07/02/2024: confermare attività e orari prima di recarsi.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/vivere/Associazioni~Associazione-3~.html" },
+    },
+    {
+      icon: "people-outline",
+      title: "Primavera 86 · Volontariato",
+      subtitle: "Realtà presente nell'elenco ufficiale delle associazioni comunali. Via Gramsci, Monterotondo; tel. 06 90622342, primavera86@gmail.com. Specifici servizi e modalità di accesso per disabilità: NON VERIFICATI.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/vivere/Associazioni.html" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "Croce Rossa · Comitato di Monterotondo",
+      subtitle: "Associazione presente nell'elenco comunale: tel. 06 90623342, segreteria.monterotondo@crimorlupo.org. Servizi attivi, trasporto accessibile e modalità di richiesta: DA CONFERMARE direttamente al Comitato.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/vivere/Associazioni.html" },
+    },
+    {
+      icon: "people-outline",
+      title: "Monterotondo · Elenco associazioni",
+      subtitle: "Elenco comunale di volontariato, sociale, cultura e protezione civile: include anche Maluba, AVO, Secicas, Spes Pietrara, CAI e altre realtà. Non tutte sono specializzate nella disabilità: verificare la singola attività.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/vivere/Associazioni.html" },
+    },
+    {
+      icon: "football-outline",
+      title: "Monterotondo · Albo associazioni sportive",
+      subtitle: "Il Comune ha pubblicato il 26/01/2026 gli albi delle associazioni sportive, culturali e di volontariato approvati nel 2025. Sono elenchi di enti, NON una conferma di corsi sportivi adattati o gratuiti: contattare le singole associazioni.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/notizie/ALBI-DELLE-ASSOCIAZIONI-CULTURALI--SPORTIVE-E-DI-VOLONTARIATO---.html" },
+    },
+    {
+      icon: "calendar-outline",
+      title: "Monterotondo · Iscrizione albi associazioni 2026",
+      subtitle: "Avviso per associazioni culturali, sportive e di volontariato sociale pubblicato il 27/04/2026, scadenza originaria 26/05/2026; risultano successivi avvisi di riapertura termini. Non è un bonus per cittadini e non va presentato come attualmente aperto.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/notizie/VVISO-PUBBLICO-PER-L-ISCRIZIONE-AGLI-ALBI-DELLE-ASSOCIAZIONI-CULTURALI--SPORTIVE-E-DI-VOLONTARIATO-SOCIALE-DEL-COMUNE-DI-MONTEROTONDO-ANNO-2026.html" },
+    },
+    {
+      icon: "accessibility-outline",
+      title: "Monterotondo · Accessibilità e inclusione PIAO",
+      subtitle: "Consultazione per associazioni rappresentative delle persone con disabilità sugli obiettivi di accessibilità fisica e digitale del PIAO 2027–2029. Scadenza osservazioni 09/10/2026, già trascorsa. Utile come riferimento di partecipazione, non come domanda aperta.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/notizie/PIAO-2027---2029--OBIETTIVI-PER-LA-PIENA-ACCESSIBILITA-FISICA-E-DIGITALE-Avviso-Pubblico-per-il-coinvolgimento-delle-associazioni-rappresentative-delle-persone-con-disabilit-.html" },
+    },
     {
       icon: "people-outline",
       title: "ASL Roma 5 · Disabilità adulti e pazienti fragili",
