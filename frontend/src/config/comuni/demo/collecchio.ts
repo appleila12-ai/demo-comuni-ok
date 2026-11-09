@@ -6,7 +6,7 @@ import { percorso } from "../percorso";
 // Segnalato come interessato da chi promuove TutelApp in provincia di Parma (8/11/2026): non è un'adesione.
 // Sito del Comune: dominio istituzionale trovato nelle pagine ufficiali (9/11/2026). PEC e indirizzo: dalla pagina ufficiale del Comune.
 // 9/11/2026: recapiti dei servizi sociali da schede della Regione Emilia-Romagna e pagine del Comune (fonti istituzionali). Nessuna email personale di operatori; dati discordanti non inseriti.
-// Collecchio: sede dello sportello in Via Aldo Moro 13 (Casa della Comunità, dal 10/8/2026), da avviso ufficiale di Pedemontana Sociale. Orari non inseriti: quelli noti sono precedenti al trasferimento.
+// Collecchio: sede dello sportello in Via Aldo Moro 13 (Casa della Comunità, dal 10/8/2026), da avviso ufficiale di Pedemontana Sociale. Orari dalla pagina ufficiale di Pedemontana Sociale (aggiornata il 15/9/2026).
 // Da fare: coordinate; bonus del Comune, associazioni, sport e tempo libero.
 export const collecchio: ComuneConfig = {
   slug: "collecchio",
@@ -24,7 +24,7 @@ export const collecchio: ComuneConfig = {
   telefono: "0521 301239",
   email: "collecchio@pedemontanasociale.pr.it",
   pec: "protocollo@postacert.comune.collecchio.pr.it",
-  orari: "",
+  orari: "Sportello sociale: lunedì e martedì 9–13, giovedì 9–13 e 15–17",
   sitoWeb: "https://www.comune.collecchio.pr.it",
 
   logo: null,
