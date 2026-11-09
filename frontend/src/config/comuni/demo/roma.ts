@@ -37,6 +37,43 @@ export const roma: ComuneConfig = {
   },
 
   puntiSupporto: [
+    // Uffici verificati sul portale istituzionale di Roma Capitale il 09/11/2026.
+    {
+      icon: "location-outline",
+      title: "Municipio II · PUA e Segretariato Sociale",
+      subtitle: "Ufficio PUA, Segretariato Sociale e Integrazione Socio Sanitaria. Telefoni 06 69602598 / 2605 / 2600 / 2599 e 06 77303708. Email pua.mun02@comune.roma.it. Responsabile indicata: Katia Vitri. Orari e sede operativa da verificare sul portale ufficiale.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/amministrazione-trasparente-uffici.page?cpz=persone_anziane&mun=municipio_ii" },
+    },
+    {
+      icon: "people-outline",
+      title: "Municipio II · Disabilità, SAISH, Dopo di Noi e caregiver",
+      subtitle: "Il Municipio II distingue gli uffici per SAISH e progetti autismo, autonomia/Dopo di Noi e disabilità gravissima/caregiver. Controlla gli uffici e i contatti aggiornati prima di presentare domanda.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-ii-uffici-e-contatti.page" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio III · Segretariato Sociale e prima accoglienza",
+      subtitle: "Via Umberto Fracchia 45, piano terra; telefono 06 69604652 / 653; martedì 8:30–12:30, giovedì 8:30–12:30 e 14–16 (orari da newsletter istituzionale 06/2025: riconfermare). Contatto ufficio Irene Dettori, irene.dettori@comune.roma.it.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/amministrazione-trasparente-uffici.page?cpz=persone_anziane&mun=municipio_iii" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio IV · Segretariato Sociale",
+      subtitle: "Via Tiburtina 1163, ingresso B, piano terra; su appuntamento. Tel. 06 69605430 / 34 / 605; segretariatosociale.mun04@comune.roma.it. Orari dettagliati nella newsletter istituzionale 06/2025: confermarli prima di recarsi.",
+      action: { type: "web", value: "https://www.comune.roma.it/web-resources/cms/documents/Newsletter_Spazio_Comune_2_giugno_2025.pdf" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio V · PUA ASL Roma 2",
+      subtitle: "Casa della Salute S. Caterina della Rosa, Via N. Forteguerri 4; tel. 06 51007426 / 8525; pua.distretto5@aslroma2.it. Orari dalla newsletter istituzionale 06/2025: mar 9–13 e 15–17, gio 9–15, ven 9–13. Confermare prima di recarsi.",
+      action: { type: "web", value: "https://www.comune.roma.it/web-resources/cms/documents/Newsletter_Spazio_Comune_2_giugno_2025.pdf" },
+    },
+    {
+      icon: "calendar-outline",
+      title: "Municipio VI · Avviso sollievo caregiver 2026",
+      subtitle: "Avviso pubblicato il 28/10/2026 per caregiver formalmente riconosciuti con CardGiver. Domanda tramite protocollo Municipio VI o PEC, entro il 15° giorno dalla pubblicazione; verificare nel testo dell'avviso il termine effettivo. Documenti: moduli A/B, CardGiver, ISEE, documento identità.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/bando-concorso.page?contentId=BEC1663991" },
+    },
     // Verifica istituzionale 09/11/2026: distinguere i diritti dalle erogazioni effettivamente finanziate.
     {
       icon: "people-outline",
