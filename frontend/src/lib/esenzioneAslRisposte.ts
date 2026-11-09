@@ -527,26 +527,59 @@ ESENZIONE_ASL.torino = {
 ESENZIONE_ASL.brescia = {
   asl: "ASST Spedali Civili di Brescia",
   intro:
-    "L'ATS di Brescia ha precisato che le esenzioni non sono gestite dall'ATS ma dalle tre ASST del territorio: ASST Spedali Civili, ASST Garda e ASST Franciacorta. Per il Comune di Brescia fa riferimento l'ASST Spedali Civili. Orari e sedi sono sulle pagine delle ASST.",
-  telefoni: [],
+    "L'ATS di Brescia ha precisato che le esenzioni non sono gestite dall'ATS ma dalle tre ASST del territorio: ASST Spedali Civili, ASST Garda e ASST Franciacorta. Per il Comune di Brescia fa riferimento l'ASST Spedali Civili. Secondo la Regione Lombardia, chi ha una patologia cronica presenta la richiesta agli sportelli territoriali «Scelta e Revoca» della ASST.",
+  titoloPassi: "Dove si presenta",
+  comeSiPresenta: [
+    "Di persona allo sportello Scelta e Revoca, nella Casa di Comunità di viale Duca degli Abruzzi 13, Brescia (competente per Brescia e Collebeato)",
+    "Orari: lunedì, martedì, giovedì e venerdì 8:30–13:30; mercoledì 8:30–16:00",
+  ],
+  documenti: [
+    "Tessera sanitaria (TS-CNS)",
+    "Certificazione rilasciata da un medico specialista di una struttura pubblica o privata accreditata",
+  ],
+  importante: "Per diabete e ipertensione la pagina dell'ASST dà precisazioni diverse sui documenti: leggile prima di andare.",
+  mail: "frontoffice.bresciacentro@asst-spedalicivili.it",
+  telefoni: [
+    { etichetta: "Sportello Scelta e Revoca · rispondono lun, mar, gio e ven 14:30–15:30", numero: "030 3333730" },
+    { etichetta: "Sportello Scelta e Revoca · stesso orario", numero: "030 3333731" },
+  ],
   paginaUrl: "https://www.asst-spedalicivili.it/esenzione-dal-pagamento-ticket",
   paginaLabel: "Esenzione dal pagamento del ticket · ASST Spedali Civili",
+  altriLink: [
+    { label: "Ticket ed esenzioni · Regione Lombardia", url: "https://www.regione.lombardia.it/sanita/ticket-ed-esenzioni/ticket-esenzioni-prestazioni-ssr" },
+  ],
   manca:
-    "L'ATS non ha indicato i documenti, il modulo, l'appuntamento né i tempi: trovi contatti, orari e sedi sulla pagina dell'ASST. Per altri Comuni del Bresciano: ASST Garda (asst-garda.it/territori/assistenza-sanitaria-2) e ASST Franciacorta (asst-franciacorta.it, sezione Ticket ed esenzioni).",
-  fonte: "ATS Brescia · risposta scritta dell'Ufficio Pubblica Tutela del 30/10/2026",
+    "La pagina non indica se serve l'appuntamento né i tempi di rilascio: chiedili allo sportello. Per altri Comuni del Bresciano: ASST Garda (asst-garda.it/territori/assistenza-sanitaria-2) e ASST Franciacorta (asst-franciacorta.it, sezione Ticket ed esenzioni).",
+  fonte:
+    "ATS Brescia · risposta scritta dell'Ufficio Pubblica Tutela del 30/10/2026 · ASST Spedali Civili, pagina «Esenzione dal pagamento del ticket» (aggiornata il 21/10/2026, controllata il 05/11/2026) · Regione Lombardia, pagina «Ticket ed esenzioni»",
 };
 
 // ASST Lodi: risposta scritta del Direttore del Distretto Alto Lodigiano (30/10/2026).
 ESENZIONE_ASL.lodi = {
   asl: "ASST di Lodi",
   intro:
-    "L'ASST di Lodi indica che tutte le informazioni su come presentare la domanda di esenzione ticket sono sulla pagina dedicata del suo sito.",
+    "L'ASST di Lodi indica che tutte le informazioni su come presentare la domanda di esenzione ticket sono sulla pagina dedicata del suo sito. Secondo la Regione Lombardia, chi ha una patologia cronica presenta la richiesta agli sportelli territoriali «Scelta e Revoca» della ASST.",
+  titoloPassi: "Dove si presenta",
+  comeSiPresenta: [
+    "Di persona allo sportello Scelta e Revoca, nella Casa di Comunità di viale Savoia, palazzina ex Maternità, a Lodi (la pagina dell'ASST non indica il numero civico)",
+    "Orari: dal lunedì al venerdì 8:30–12:30; il martedì e il giovedì anche 14:00–15:30",
+    "Senza appuntamento: la pagina scrive «Accesso libero agli sportelli di scelta e revoca del medico»",
+  ],
+  documenti: [
+    "Tessera sanitaria",
+    "Certificazione rilasciata da un medico specialista di una struttura pubblica o privata accreditata (elenco della Regione Lombardia)",
+  ],
   telefoni: [],
   paginaUrl: "https://www.asst-lodi.it/esenzioni-ticket",
   paginaLabel: "Esenzioni ticket · ASST di Lodi",
+  altriLink: [
+    { label: "Scelta e revoca · ASST di Lodi", url: "https://www.asst-lodi.it/scelta-revoca" },
+    { label: "Ticket ed esenzioni · Regione Lombardia", url: "https://www.regione.lombardia.it/sanita/ticket-ed-esenzioni/ticket-esenzioni-prestazioni-ssr" },
+  ],
   manca:
-    "L'ASST non ha scritto i passaggi nella risposta, ma rimanda alla sua pagina: documenti, sportelli e tempi sono lì.",
-  fonte: "ASST di Lodi · risposta scritta del Distretto Alto Lodigiano del 30/10/2026",
+    "La pagina dello sportello non indica telefono né e-mail specifici, la data di aggiornamento, eventuali documenti oltre a quelli della Regione né i tempi di rilascio: chiedili all'ASST.",
+  fonte:
+    "ASST di Lodi · risposta scritta del Distretto Alto Lodigiano del 30/10/2026 · pagina «Scelta e revoca» (senza data di aggiornamento, controllata il 05/11/2026) · Regione Lombardia, pagina «Ticket ed esenzioni»",
 };
 
 // Azienda ULSS 2 Marca Trevigiana: risposta scritta dell'URP (29/10/2026).
@@ -1036,4 +1069,42 @@ ESENZIONE_ASL.treviglio = {
     "L'ASST non indica i tempi di rilascio né le regole sulla delega per le esenzioni: chiedili all'Ufficio Scelta e Revoca. L'elenco dei documenti viene dalle pagine di ATS Bergamo e Regione Lombardia.",
   fonte:
     "ASST Bergamo Ovest · risposta scritta dell'URP del 02/11/2026 e pagina ufficiale del Distretto Pianura Occidentale (aggiornata il 13/08/2026) · ATS Bergamo, pagina «Ticket ed esenzioni» (aggiornata il 19/11/2025)",
+};
+
+// Azienda ULSS 9 Scaligera (Verona): pagina «Esenzione per patologia» (datata 18/08/2026) e documento aziendale con gli
+// sportelli amministrativi dei Distretti, controllati il 05/11/2026.
+ESENZIONE_ASL.verona = {
+  asl: "Azienda ULSS 9 Scaligera",
+  intro:
+    "Secondo la pagina dell'ULSS 9: «Per tutte le pratiche relative alla richiesta di esenzione ticket per patologia il punto di riferimento è il distretto socio-sanitario di residenza o di domicilio».",
+  titoloPassi: "Dove si presenta",
+  comeSiPresenta: [
+    "Agli sportelli amministrativi del tuo Distretto. Per Verona città il documento dell'azienda elenca gli sportelli di via Poloni 1, via del Capitel 22 e via Campania 1",
+    "Se la richiesta la presenta un'altra persona, servono il modulo di delega e i documenti d'identità di chi delega e di chi presenta",
+  ],
+  documenti: [
+    "Documento d'identità",
+    "Documentazione sanitaria che attesta la patologia: la pagina ammette diverse forme, comprese certificazioni specialistiche e cartelle cliniche",
+  ],
+  mail: "distretto1@aulss9.veneto.it",
+  telefoni: [],
+  paginaUrl: "https://www.aulss9.veneto.it/per-patologia",
+  paginaLabel: "Esenzione per patologia · ULSS 9 Scaligera",
+  manca:
+    "La pagina non indica gli orari né il telefono degli sportelli per le esenzioni, e non dice se serve l'appuntamento né i tempi di rilascio: chiedili al tuo Distretto. L'e-mail indicata è quella del Distretto 1 (Verona città). Il documento con le sedi è senza data.",
+  fonte:
+    "ULSS 9 Scaligera · pagina «Esenzione per patologia» (18/08/2026) e documento aziendale sugli sportelli dei Distretti, controllati il 05/11/2026",
+};
+
+// ASP Catania: pagina «Esenzione per patologia» dell'Anagrafe (aggiornata il 12/05/2025), controllata il 05/11/2026.
+ESENZIONE_ASL.catania = {
+  asl: "ASP Catania",
+  intro:
+    "Secondo l'ASP di Catania, la pratica va presentata all'Ufficio esenzione ticket del Distretto di residenza o di domicilio. La pagina dell'ASP scrive anche: «Per richiedere l'esenzione ticket per patologia è possibile utilizzare il servizio digitale Asp Con Te».",
+  telefoni: [],
+  paginaUrl: "https://www.aspct.it/azienda/dipartimenti/dipartimenti-sanitari/dipartimento-delle-attivit-territoriali-integrazione-ospedal/anagrafe/patologia.aspx",
+  paginaLabel: "Esenzione per patologia · ASP Catania",
+  manca:
+    "La pagina non indica gli indirizzi degli uffici, gli orari, i telefoni, le e-mail, se serve l'appuntamento né i tempi di rilascio. L'elenco dei documenti da portare non è confermato: chiedilo al Distretto di residenza. Pagina aggiornata il 12/05/2025.",
+  fonte: "ASP Catania · pagina «Esenzione per patologia» dell'Anagrafe (aggiornata il 12/05/2025), controllata il 05/11/2026",
 };
