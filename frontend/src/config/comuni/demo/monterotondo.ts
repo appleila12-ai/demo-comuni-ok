@@ -34,122 +34,18 @@ export const monterotondo: ComuneConfig = {
   },
 
   puntiSupporto: [
-    // Sport inclusivo e autonomia: fonti ufficiali delle organizzazioni, 09/11/2026.
-    {
-      icon: "basketball-outline",
-      title: "ASD Integra Sport 2013 · Sport inclusivo",
-      subtitle: "Associazione con sede legale in Via Monte Pollino 6, Monterotondo. Propone basket e minibasket integrato, calcio integrato, karate integrato, psicomotricità, camp sportivi e soggiorni per persone con e senza disabilità. Contatto pubblicato: segreteriaintegrasport@gmail.com. Sedi delle attività, calendari, quote e posti disponibili DA CONFERMARE con l'associazione.",
-      action: { type: "web", value: "https://www.asdintegrasport2013.com/" },
-    },
+    // Solo sportelli, servizi e uffici di accesso. Altre voci archiviate in docs/monterotondo-ricollocazione-contenuti-2026-11-09.json
     {
       icon: "accessibility-outline",
       title: "Progetto V.O.C.E. · Sportello Vita Indipendente",
       subtitle: "Via San Martino 21, Monterotondo. Sportello per persone con disabilità fisiche, psichiche e sensoriali dei distretti RM 5.1–5.3; orientamento e accompagnamento all'autonomia, anche attività sportive inclusive. Per appuntamento: 349 9743733 (Francesca Pagliani). Per disabilità visiva: uiclazio@uici.it, oggetto AVI. Avviato maggio 2026 per 12 mesi: confermare prima di recarsi.",
       action: { type: "web", value: "https://www.uiclazio.it/nella-asl-roma-5-nascono-gli-sportelli-per-la-vita-indipendente-servizi-supporto-e-opportunita-per-le-persone-con-disabilita-fisiche-psichiche-e-sensoriali/" },
     },
-    // Associazioni e servizi sociali: fonti primarie dei gestori, lettura 09/11/2026.
-    {
-      icon: "people-outline",
-      title: "Ascoltami ETS · Famiglie e autismo",
-      subtitle: "Via Cavour 39, Monterotondo. Associazione a sostegno di famiglie con figli autistici: contributi alle spese di terapie riabilitative e supporto psicologico secondo le iniziative associative. Sul sito è disponibile un modulo contatti; email e telefono NON TROVATI nella pagina ufficiale. Non confondere con il bando comunale autismo.",
-      action: { type: "web", value: "https://ascoltamiets.it/" },
-    },
-    {
-      icon: "home-outline",
-      title: "Il Tamburo · Casa Famiglia Domus",
-      subtitle: "Via Panaro 15, Monterotondo; tel. 06 90626515. Servizio residenziale di 8 posti per persone adulte con disabilità, con sostegno educativo e alla vita comunitaria. Disponibilità posti, costi e accesso NON VERIFICATI: chiedere direttamente al gestore.",
-      action: { type: "web", value: "https://www.iltamburo.org/cooperativa/casa-famiglia-domus/" },
-    },
-    {
-      icon: "people-outline",
-      title: "Il Pungiglione · CSERDI Il Funambolo",
-      subtitle: "Centro socioeducativo riabilitativo diurno intercomunale, Via Don Milani 1–3, Monterotondo. Gestore Il Pungiglione, sede Via San Martino 21, tel. 06 90622518. Orari e modalità di inserimento NON VERIFICATI nella pagina attuale: chiedere al gestore e ai Servizi Sociali.",
-      action: { type: "web", value: "https://ilpungiglione.it/contatti-2/" },
-    },
-    {
-      icon: "home-outline",
-      title: "Il Pungiglione · tra(me) Dopo di Noi",
-      subtitle: "Percorso abitativo Dopo di Noi in Via Tommaso Cellottini 20, Monterotondo. Il gestore conferma la sede sul proprio sito. Requisiti, disponibilità posti e modalità di accesso NON VERIFICATI: rivolgersi al PUA/Servizi Sociali e al gestore.",
-      action: { type: "web", value: "https://ilpungiglione.it/contatti-2/" },
-    },
-    {
-      icon: "briefcase-outline",
-      title: "Folias · Orientamento al lavoro disabilità",
-      subtitle: "Centro per persone con disabilità medio-lieve del Distretto RM 5.1: orientamento, competenze, tirocini e laboratori. Via Don Milani 1–3; tel. 06 9066963, lospazioaperto@libero.it. Accesso previa richiesta ai Servizi Sociali e valutazione GILD. Orari pubblicati nella scheda del gestore, attualità DA CONFERMARE.",
-      action: { type: "web", value: "https://www.folias.it/site/centro-per-lorientamento/" },
-    },
-    {
-      icon: "medkit-outline",
-      title: "Riabilmente · Minori e famiglie",
-      subtitle: "Associazione professionale per interventi riabilitativi: neuropsichiatria infantile, logopedia, neuropsicomotricità, psicologia e supporto agli apprendimenti. Viale Fausto Cecconi 6; tel. 06 99084435, cell. 366 8135401, riabilmente.cm@gmail.com. Orario dichiarato lun–sab 9–19:30; costi e disponibilità DA CONFERMARE.",
-      action: { type: "web", value: "https://riabilmente.com/informazioni/" },
-    },
     {
       icon: "call-outline",
       title: "Folias · Pronto Intervento Sociale RM 5.1",
       subtitle: "Per situazioni di emergenza sociale a Monterotondo, Mentana e Fonte Nuova: numero verde 800 66 82 58, pis@comune.monterotondo.rm.it. Servizio dichiarato dal gestore accessibile 24 ore su 24, 365 giorni l'anno; sede Via di San Matteo 27b/c. Non sostituisce i numeri di emergenza sanitaria o di pubblica sicurezza.",
       action: { type: "web", value: "https://www.folias.it/site/pronto-intervento-sociale-p-i-s/" },
-    },
-    {
-      icon: "briefcase-outline",
-      title: "Folias · POP inclusione lavorativa Lazio",
-      subtitle: "Progetto regionale per persone con disabilità/invalidità fino a 60 anni e giovani NEET: orientamento, formazione e tirocini con indennità di partecipazione. Sede Via Salaria 108/b; tel. 3299830373, progettopoplazio@gmail.com. Accesso su selezione: nuova finestra di candidatura 2026 NON VERIFICATA.",
-      action: { type: "web", value: "https://www.folias.it/site/pop-pari-opportunita-occupazione-partecipazione/" },
-    },
-    {
-      icon: "sunny-outline",
-      title: "Monterotondo · Centri estivi 2026 (SCADUTO)",
-      subtitle: "Avviso comunale per minori residenti di 3–17 anni: sostegno alle attività socioeducative e all'assistenza qualificata per minori con disabilità certificata ai sensi della L.104/1992; rimborso di 150 euro per centri estivi alle famiglie con ISEE minorenni non superiore a 25.000 euro. Scadenza prorogata al 02/07/2026 ore 12:00. NON È APERTO; verificare un eventuale nuovo avviso 2027.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/notizie/centro-estivi.html" },
-    },
-    {
-      icon: "document-text-outline",
-      title: "Monterotondo · Avvisi sociali e graduatorie",
-      subtitle: "Il portale comunale pubblica avvisi per disabilità gravissima, progetti di vita, autismo e servizi sociali. Controllare data e scadenza della singola misura: una graduatoria non equivale all'apertura di nuove domande.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/info/argomenti/007.html" },
-    },
-    // Associazioni e partecipazione: schede istituzionali Comune, verifica 09/11/2026.
-    {
-      icon: "musical-notes-outline",
-      title: "Il Tamburo · Musica e inclusione",
-      subtitle: "Associazione censita dal Comune: arti espressive, prevenzione del disagio psicosociale e qualità della vita delle persone con disabilità e delle famiglie. Tel. 3333922534, info@iltamburo.org; orario indicato 9–15. Scheda comunale aggiornata 07/02/2024: confermare attività e orari prima di recarsi.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/vivere/Associazioni~Associazione-3~.html" },
-    },
-    {
-      icon: "people-outline",
-      title: "Primavera 86 · Volontariato",
-      subtitle: "Realtà presente nell'elenco ufficiale delle associazioni comunali. Via Gramsci, Monterotondo; tel. 06 90622342, primavera86@gmail.com. Specifici servizi e modalità di accesso per disabilità: NON VERIFICATI.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/vivere/Associazioni.html" },
-    },
-    {
-      icon: "medkit-outline",
-      title: "Croce Rossa · Comitato di Monterotondo",
-      subtitle: "Associazione presente nell'elenco comunale: tel. 06 90623342, segreteria.monterotondo@crimorlupo.org. Servizi attivi, trasporto accessibile e modalità di richiesta: DA CONFERMARE direttamente al Comitato.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/vivere/Associazioni.html" },
-    },
-    {
-      icon: "people-outline",
-      title: "Monterotondo · Elenco associazioni",
-      subtitle: "Elenco comunale di volontariato, sociale, cultura e protezione civile: include anche Maluba, AVO, Secicas, Spes Pietrara, CAI e altre realtà. Non tutte sono specializzate nella disabilità: verificare la singola attività.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/vivere/Associazioni.html" },
-    },
-    {
-      icon: "football-outline",
-      title: "Monterotondo · Albo associazioni sportive",
-      subtitle: "Il Comune ha pubblicato il 26/01/2026 gli albi delle associazioni sportive, culturali e di volontariato approvati nel 2025. Sono elenchi di enti, NON una conferma di corsi sportivi adattati o gratuiti: contattare le singole associazioni.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/notizie/ALBI-DELLE-ASSOCIAZIONI-CULTURALI--SPORTIVE-E-DI-VOLONTARIATO---.html" },
-    },
-    {
-      icon: "calendar-outline",
-      title: "Monterotondo · Iscrizione albi associazioni 2026",
-      subtitle: "Avviso per associazioni culturali, sportive e di volontariato sociale pubblicato il 27/04/2026, scadenza originaria 26/05/2026; risultano successivi avvisi di riapertura termini. Non è un bonus per cittadini e non va presentato come attualmente aperto.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/notizie/VVISO-PUBBLICO-PER-L-ISCRIZIONE-AGLI-ALBI-DELLE-ASSOCIAZIONI-CULTURALI--SPORTIVE-E-DI-VOLONTARIATO-SOCIALE-DEL-COMUNE-DI-MONTEROTONDO-ANNO-2026.html" },
-    },
-    {
-      icon: "accessibility-outline",
-      title: "Monterotondo · Accessibilità e inclusione PIAO",
-      subtitle: "Consultazione per associazioni rappresentative delle persone con disabilità sugli obiettivi di accessibilità fisica e digitale del PIAO 2027–2029. Scadenza osservazioni 09/10/2026, già trascorsa. Utile come riferimento di partecipazione, non come domanda aperta.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/notizie/PIAO-2027---2029--OBIETTIVI-PER-LA-PIENA-ACCESSIBILITA-FISICA-E-DIGITALE-Avviso-Pubblico-per-il-coinvolgimento-delle-associazioni-rappresentative-delle-persone-con-disabilit-.html" },
     },
     {
       icon: "people-outline",
@@ -176,49 +72,11 @@ export const monterotondo: ComuneConfig = {
       action: { type: "web", value: "https://old.comune.monterotondo.rm.it/essere/assistenza-sostegno-e-integrazione/assistenza-domiciliare" },
     },
     {
-      icon: "people-outline",
-      title: "Distretto RM 5.1 · Servizi vacanza e soggiorni",
-      subtitle: "Il portale del Comune segnala nel 2026 servizi vacanza per minori e adulti con disabilità e disagio psichico. Date, posti e domande NON VERIFICATI: consultare l'avviso ufficiale prima di fare richiesta.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/info/argomenti/006.html" },
-    },
-    {
-      icon: "people-outline",
-      title: "Distretto RM 5.1 · Progetto AUT AUT ET ET",
-      subtitle: "Interventi per persone nello spettro autistico dai 6 anni fino oltre i 65; graduatoria pubblicata nel 2025. Non è un bando 2026 aperto: verificare eventuali nuove annualità.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/info/argomenti/006.html" },
-    },
-    {
-      icon: "document-text-outline",
-      title: "Monterotondo · Contrassegno disabilità",
-      subtitle: "Il Comune pubblica documentazione sul contrassegno e sulla viabilità per persone con disabilità. Requisiti, modulo e ufficio attuale: da confermare nella scheda comunale dedicata.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/info/argomenti/006.html" },
-    },
-    // Approfondimento 09/11/2026: avvisi e servizi da fonti istituzionali.
-    {
-      icon: "calendar-outline",
-      title: "Distretto RM 5.1 · Contributo autismo minori 2026 (SCADUTO)",
-      subtitle: "Avviso del 22/09/2026 per famiglie di minori con diagnosi di disturbo dello spettro autistico fino a 12 anni, residenti a Monterotondo, Mentana o Fonte Nuova. Rimborso di interventi psicologici, comportamentali ed educativi documentati, fino a 5.000 euro annui per beneficiario e nei limiti delle risorse. SCADENZA 21/10/2026 ore 12:00: NON PRESENTARE COME BANDO APERTO. Fonte Comune verificata 09/11/2026.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/notizie/Bando-Autismo-2026-del-Distretto-RM5.1.html" },
-    },
-    {
       icon: "home-outline",
       title: "Monterotondo · Centro Assistenza Domiciliare ASL Roma 5",
       subtitle: "CAD, Via dell'Aeronautica 53/b, tel. 06 90075918 (infermieri), 06 90075915 (fisioterapisti), 06 90075958 (medici); cad.monterotondo@aslroma5.it. Apertura al pubblico lunedì 9–11; telefonate lun–ven 8–10. Valutazione per ADI e dimissioni protette.",
       action: { type: "web", value: "https://www.aslroma5.it/servizi_distrettuali/centro-assistenza-domiciliare-cad-distretto-di-monterotondo/" },
     },
-    {
-      icon: "document-text-outline",
-      title: "Distretto RM 5.1 · Progetti di vita personalizzati 2026",
-      subtitle: "Il Comune ha pubblicato il 06/03/2026 un avviso per persone con disabilità, anziani parzialmente autosufficienti e non autosufficienti, con modulo di avvio progetto e modulo di continuità per disabilità gravissima. Consultare l'avviso integrale per requisiti e validità; apertura nuove domande NON VERIFICATA.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/notizie/Avviso-Pubblico-Interventi-Disabilit--Gravissima.html" },
-    },
-    {
-      icon: "car-outline",
-      title: "Monterotondo · Contributo vettura per disabilità",
-      subtitle: "Il Comune pubblica un documento denominato 'Contributo vettura disabile' (deliberazione Consiglio comunale n. 125/2006). Requisiti, importi, attuale finanziamento e apertura domande NON VERIFICATI: non considerarlo automaticamente un bonus attivo.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/info/argomenti/006.html" },
-    },
-    // Fonti ufficiali Comune Monterotondo e ASL Roma 5, verifica 09/11/2026.
     {
       icon: "people-outline",
       title: "Monterotondo · Servizi Sociali",
@@ -250,27 +108,9 @@ export const monterotondo: ComuneConfig = {
       action: { type: "web", value: "https://www.aslroma5.it/servizi_distrettuali/uvmd-distretto-monterotondo/" },
     },
     {
-      icon: "calendar-outline",
-      title: "Distretto RM 5.1 · Disabilità gravissima 2026",
-      subtitle: "Il Comune ha pubblicato la graduatoria provvisoria l'11/06/2026 e una rettifica il 19/06/2026. Riguarda Monterotondo, Mentana e Fonte Nuova. È una graduatoria, NON un bando attualmente aperto: verificare la posizione e gli aggiornamenti nell'avviso ufficiale.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/notizie/Pubblicazione-Graduatoria-Interventi-Disabilit--Gravissima-2026.html" },
-    },
-    {
-      icon: "home-outline",
-      title: "Monterotondo · Progetti di Vita e Vita indipendente",
-      subtitle: "La pagina ufficiale dei Servizi Sociali elenca avvisi per progetti di vita individuali e vita indipendente, rivolti anche a persone con disabilità del Distretto RM 5.1. Requisiti e apertura domande 2026: NON VERIFICATI; consultare il singolo avviso.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/amministrazione/uffici/Ufficio-18.html" },
-    },
-    {
       icon: "bus-outline",
       title: "Monterotondo · Trasporto sociale",
       subtitle: "Il Comune documenta una procedura di convenzionamento con associazioni per il trasporto sociale di anziani e persone con disabilità. Modalità di accesso e disponibilità attuale: NON VERIFICATE.",
-      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/amministrazione/uffici/Ufficio-18.html" },
-    },
-    {
-      icon: "people-outline",
-      title: "Monterotondo · Autismo minori e centro diurno",
-      subtitle: "Il Comune elenca interventi per famiglie di minori fino a 12 anni nello spettro autistico e il centro diurno socioeducativo riabilitativo intercomunale CSERDI. Non sono confermate nuove domande aperte: verificare singoli avvisi e modalità.",
       action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/amministrazione/uffici/Ufficio-18.html" },
     },
     {
