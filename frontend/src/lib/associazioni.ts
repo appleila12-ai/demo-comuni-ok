@@ -2113,6 +2113,15 @@ PER_PROVINCIA.PR.volontariato.unshift({
   comuni: ["fornovo-di-taro", "collecchio", "borgo-val-di-taro", "medesano", "langhirano", "lesignano-de-bagni"],
 });
 
+// Special Olympics: contatto provinciale ufficiale (rete Special Olympics Italia), per i Comuni parmensi segnalati (9/11/2026).
+PER_PROVINCIA.PR.sport.unshift({
+  nome: "Special Olympics – Parma",
+  cosa: "Allenamenti e gare per persone con disabilità intellettiva, a ogni livello. Scrivi per sapere quale squadra è più vicina a te.",
+  email: "parma@specialolympics.it",
+  sito: "https://specialolympics.it/la-rete/",
+  comuni: ["fornovo-di-taro", "collecchio", "borgo-val-di-taro", "medesano", "langhirano", "lesignano-de-bagni"],
+});
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",

@@ -2283,6 +2283,26 @@ export const BONUS: Bonus[] = [
     verificatoIl: "02/11/2026",
     nota: "Misura solo del Comune di Matera, non regionale: non vale per il resto della Basilicata. Per eventuali nuove edizioni chiedi ai Servizi sociali del Comune.",
   },
+
+  // ------------------------------------------------------------ COMUNE DI LESIGNANO DE' BAGNI
+  {
+    id: "lesignano-contrassegno-disabili",
+    regione: "Emilia-Romagna",
+    comuni: ["lesignano-de-bagni"],
+    titolo: "Contrassegno disabili (C.U.D.E.) del Comune di Lesignano de' Bagni",
+    perChi:
+      "Residenti a Lesignano de' Bagni con difficoltà motorie o di deambulazione, e ciechi con residuo visivo non superiore a 1/20.",
+    cosa: "Il contrassegno per la sosta e la circolazione agevolata. Nessun contributo in denaro. Il permanente è esente da bollo; il temporaneo richiede una marca da bollo da 16 euro.",
+    stato: "attivo",
+    comeSiChiede:
+      "Si presenta la richiesta in Comune con il modulo \"Richiesta permesso C.U.D.E.\", la certificazione medico-legale, il documento d'identità e 2 fototessere recenti. Per il rinnovo servono il modulo di rinnovo, il contrassegno scaduto, il certificato del medico curante e 2 fototessere.",
+    fonte: {
+      label: "Comune di Lesignano de' Bagni · Contrassegno disabili (pagina aggiornata il 21/09/2026)",
+      url: "https://pagamentipa.comune.lesignano-debagni.pr.it/it/page/tesserini-invalidi",
+    },
+    verificatoIl: "09/11/2026",
+    nota: "Per il temporaneo serve la certificazione dell'Ufficio Medico legale dell'AUSL.",
+  },
 ];
 
 /** Misure che valgono per il Comune attivo, prima quelle del suo territorio. */
