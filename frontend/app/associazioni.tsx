@@ -4,13 +4,13 @@
 import React, { useState } from "react";
 import { Image, Linking, Pressable, StyleSheet, Text, View } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
-import { useLocalSearchParams } from "expo-router";
+import { useLocalSearchParams, useRouter } from "expo-router";
 
 import { colors, radius, spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import { associazioniDelComune, type Associazione } from "@/src/lib/associazioni";
-import { Avviso, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
+import { Avviso, Bottone, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
 
 type Tab = "volontariato" | "sport";
@@ -60,6 +60,7 @@ function Scheda({ a, vicina }: { a: Associazione; vicina: boolean }) {
 
 export default function Associazioni() {
   useSezione("associazioni");
+  const router = useRouter();
   const { tipo } = useLocalSearchParams<{ tipo?: string }>();
   const [scheda, setScheda] = useState<Tab>(tipo === "sport" ? "sport" : "volontariato");
   const d = associazioniDelComune();
@@ -75,6 +76,7 @@ export default function Associazioni() {
         Associazioni che si occupano di disabilità nella zona di {comune.nomeBreve}: per avere
         sostegno, conoscere altre famiglie, fare sport o stare insieme.
       </Intro>
+      <Bottone label="Cieco o ipovedente? UICI e radiofari" icon="eye-off-outline" variante="vuoto" onPress={() => router.push("/uici")} testID="associazioni-uici" />
 
       <View style={styles.tabs} accessibilityRole="tablist">
         {TAB.map((t) => {
