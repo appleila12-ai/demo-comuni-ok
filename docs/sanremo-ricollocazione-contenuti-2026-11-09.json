@@ -1,0 +1,168 @@
+{
+  "source": "frontend/src/config/comuni/demo/sanremo.ts",
+  "reason": "Riorganizzazione: bonus, avvisi e associazioni non appartengono a puntiSupporto. Conservare qui le schede in attesa di trasferimento nella struttura applicativa corretta.",
+  "entries": [
+    {
+      "originalIndex": 0,
+      "title": "Sanremo · Neuropsichiatria infantile: prima visita",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"medkit-outline\",\n      title: \"Sanremo · Neuropsichiatria infantile: prima visita\",\n      subtitle: \"Palafiori, Corso Garibaldi 1. Per la prima visita serve richiesta del pediatra o del medico di medicina generale. Prenotazioni: 0184 536709, martedì e giovedì 10–12. Attività lun–ven 8:30–17:30. Fonte ASL1.\",\n      action: { type: \"web\", value: \"https://www.asl1.liguria.it/territorio/dipartimento-integrato-salute-mentale-e-dipendenze/542-neuropsichiatria-infantile.html\" },\n    },"
+    },
+    {
+      "originalIndex": 1,
+      "title": "Sanremo · Centro autismo: riferimenti clinici",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Sanremo · Centro autismo: riferimenti clinici\",\n      subtitle: \"Palafiori, Corso Garibaldi 1. Responsabile indicato da ASL1: dott. Giuseppe Pili, tel. 0184 536779. Psicologi: Valentina Boeri 0184 536787; Martina Magaglio e Andrea Barbero 0184 536623. Per primo accesso seguire la procedura NPI.\",\n      action: { type: \"web\", value: \"https://www.asl1.liguria.it/territorio/dipartimento-integrato-salute-mentale-e-dipendenze/542-neuropsichiatria-infantile.html\" },\n    },"
+    },
+    {
+      "originalIndex": 2,
+      "title": "ANFFAS Sanremo · associazione famiglie e disabilità",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"ANFFAS Sanremo · associazione famiglie e disabilità\",\n      subtitle: \"Via Giovanni Borea 57, Sanremo. Tel. 0184 513449 / 335 5812113. Presente nell'elenco ufficiale delle associazioni di volontariato e tutela ASL1; servizi e orari specifici NON VERIFICATI.\",\n      action: { type: \"web\", value: \"https://www.asl1.liguria.it/urp/associazioni.html\" },\n    },"
+    },
+    {
+      "originalIndex": 3,
+      "title": "ALFaPP · famiglie pazienti psichiatrici, Sanremo",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"ALFaPP · famiglie pazienti psichiatrici, Sanremo\",\n      subtitle: \"Corso Garibaldi 5, Palafiori presso URP Comune. Tel. 0184 580676 / 340 2508894 / 335 6984240. Recapiti pubblicati nella Consulta ASL1; orari e servizi da confermare.\",\n      action: { type: \"web\", value: \"https://www.asl1.liguria.it/urp/associazioni.html\" },\n    },"
+    },
+    {
+      "originalIndex": 4,
+      "title": "Cittadinanzattiva · Tribunale Diritti del Malato Sanremo",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Cittadinanzattiva · Tribunale Diritti del Malato Sanremo\",\n      subtitle: \"Corso Garibaldi 5, Palafiori presso URP Comune. Tel. 347 4565885. Per tutela e orientamento sui diritti del malato; recapito tratto dall'elenco ufficiale ASL1.\",\n      action: { type: \"web\", value: \"https://www.asl1.liguria.it/urp/associazioni.html\" },\n    },"
+    },
+    {
+      "originalIndex": 5,
+      "title": "Centro Promozione Famiglia ODV · Sanremo",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Centro Promozione Famiglia ODV · Sanremo\",\n      subtitle: \"Strada Rocca 9, Sanremo. Tel. 327 1412875. Associazione inclusa nell'elenco ASL1; attività, destinatari e orari da verificare con l'associazione.\",\n      action: { type: \"web\", value: \"https://www.asl1.liguria.it/urp/associazioni.html\" },\n    },"
+    },
+    {
+      "originalIndex": 6,
+      "title": "Sanremo · Disability Card per trasporto pubblico gratuito",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"bus-outline\",\n      title: \"Sanremo · Disability Card per trasporto pubblico gratuito\",\n      subtitle: \"Dal 2025 Riviera Trasporti riconosce la Carta europea della disabilità per viaggiare gratuitamente nel trasporto pubblico locale, secondo la convenzione comunicata dal Comune. L'avviso comunale indica invalidità almeno del 67%, indipendentemente dal reddito. La carta si richiede all'INPS. Informazioni Servizi Sociali: 0184 529069.\",\n      action: { type: \"web\", value: \"https://comune.sanremo.im.it/it/news/104702/attivata-la-disability-card-che-sostituira-gli-abbonamenti-mensili-gratuiti-al-trasporto-pubblico-locale\" },\n    },"
+    },
+    {
+      "originalIndex": 7,
+      "title": "Sanremo · Tavolo permanente sulla disabilità",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Sanremo · Tavolo permanente sulla disabilità\",\n      subtitle: \"Il Comune ha avviato un Tavolo di confronto con associazioni e Terzo settore su bisogni, servizi e Progetti di Vita. L'avviso di candidatura del 2025 è scaduto: questa scheda è informativa, non un invito a presentare domanda. Fonte comunale del 26/08/2025.\",\n      action: { type: \"web\", value: \"https://www.comune.sanremo.im.it/it/news/104706/pubblicato-l-avviso-per-individuare-i-soggetti-del-terzo-settore-e-delle-associazioni-del-tavolo-permanente-sulla-disabilita\" },\n    },"
+    },
+    {
+      "originalIndex": 8,
+      "title": "Sanremo · Welfare di Comunità",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"home-outline\",\n      title: \"Sanremo · Welfare di Comunità\",\n      subtitle: \"Servizio comunale per interventi sociali e integrazione sociosanitaria, con attività collegate a Casa Serena. Responsabile Dario Belmonte; sede Corso Garibaldi 30, tel. 0184 52901. Fonte Comune, aggiornata 01/04/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.sanremo.im.it/it/unita_organizzative/minori-famiglie-e-welfare-di-comunita\" },\n    },"
+    },
+    {
+      "originalIndex": 9,
+      "title": "Sanremo · Bonus affitti 2026",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"cash-outline\",\n      title: \"Sanremo · Bonus affitti 2026\",\n      subtitle: \"Il Comune segnala dal 26/10/2026 la procedura online per i contributi affitto. Requisiti, documenti e scadenza vanno verificati nell'avviso dedicato prima della domanda; non è una misura esclusiva per la disabilità.\",\n      action: { type: \"web\", value: \"https://www.comune.sanremo.im.it/it/topics/assistenza-sociale\" },\n    },"
+    },
+    {
+      "originalIndex": 10,
+      "title": "Sanremo · Carta Dedicata a Te 2026",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"cash-outline\",\n      title: \"Sanremo · Carta Dedicata a Te 2026\",\n      subtitle: \"Dal 03/11/2026 il Comune segnala l'elenco dei beneficiari e le informazioni per il ritiro negli uffici postali. Non è una domanda aperta a tutti: verificare il proprio nominativo e i requisiti sul portale comunale.\",\n      action: { type: \"web\", value: \"https://www.comune.sanremo.im.it/it/topics/assistenza-sociale\" },\n    },"
+    },
+    {
+      "originalIndex": 11,
+      "title": "Sanremo · Centro autismo e neuropsichiatria infantile",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"medkit-outline\",\n      title: \"Sanremo · Centro autismo e neuropsichiatria infantile\",\n      subtitle: \"Palafiori, Corso Garibaldi 1: il Distretto sanitario sanremese indica Centro autismo, Neuropsichiatria infantile, Logopedia e Psicologia. Contattare ASL1 per modalità di accesso e prenotazione; orari specifici NON VERIFICATI.\",\n      action: { type: \"web\", value: \"https://www.asl1.liguria.it/territorio/distretti-sanitari/distretto-sanitario-sanremese.html\" },\n    },"
+    },
+    {
+      "originalIndex": 12,
+      "title": "Sanremo · Presidi, protesi e ausili tecnici",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"accessibility-outline\",\n      title: \"Sanremo · Presidi, protesi e ausili tecnici\",\n      subtitle: \"Sportello Accoglienza ASL1, Palafiori, Corso Garibaldi 1; tel. 0184 536784; lun–ven 8–13. Per protesi, ortesi, ausili e forniture sanitarie verificare prescrizioni e autorizzazioni con ASL1.\",\n      action: { type: \"web\", value: \"https://www.asl1.liguria.it/component/content/article.html?Itemid=101&id=130%3Aerogazione-presidi-ausili-tecnici\" },\n    },"
+    },
+    {
+      "originalIndex": 13,
+      "title": "Sanremo · CUP, ticket e anagrafe sanitaria",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"medkit-outline\",\n      title: \"Sanremo · CUP, ticket e anagrafe sanitaria\",\n      subtitle: \"Sportello polifunzionale ASL1 al Palafiori, Corso Garibaldi 1, lun–ven 8–13; tel. 0184 536784. Per prenotazioni, pagamento ticket e pratiche anagrafiche sanitarie.\",\n      action: { type: \"web\", value: \"https://www.asl1.liguria.it/servizi-dalla-a-alla-z/2243-sportelli-polifunzionali.html\" },\n    },"
+    },
+    {
+      "originalIndex": 14,
+      "title": "Sanremo · Vita indipendente, caregiver e Dopo di Noi: accesso PUA",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"home-outline\",\n      title: \"Sanremo · Vita indipendente, caregiver e Dopo di Noi: accesso PUA\",\n      subtitle: \"Il PUA ASL1 elenca Fondo non autosufficienza, gravissime disabilità, Vita indipendente, contributo caregiver e Dopo di Noi. È il punto di orientamento per l'attivazione delle procedure: non significa che tutti i finanziamenti siano aperti.\",\n      action: { type: \"web\", value: \"https://www.asl1.liguria.it/servizi-dalla-a-alla-z/1498-punto-unico-accesso.html\" },\n    },"
+    },
+    {
+      "originalIndex": 15,
+      "title": "Sanremo · Medici Casa della Comunità: recapito regionale",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"phone-portrait-outline\",\n      title: \"Sanremo · Medici Casa della Comunità: recapito regionale\",\n      subtitle: \"La Regione Liguria indica il numero 0184 534714 per contattare i medici della Casa della Comunità di Sanremo (notizia 04/06/2026). Non è il numero specifico del PUA.\",\n      action: { type: \"web\", value: \"https://www.regione.liguria.it/homepage-salute/ultime-dal-canale/item/46570-numeri-medici-case-comunita.html\" },\n    },"
+    },
+    {
+      "originalIndex": 16,
+      "title": "Ambito Sociale Sanremo · primo accesso",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Ambito Sociale Sanremo · primo accesso\",\n      subtitle: \"Corso G. Garibaldi 30. Responsabile Simona Donati. Telefoni 0184 52901, 0184 529010 e 0184 529035. Accoglienza, orientamento e presa in carico per minori, adulti, anziani e disabilità. Orari non confermati. Fonte Comune di Sanremo, letta 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.sanremo.im.it/it/unita_organizzative/ambito-sociale\" },\n    },"
+    },
+    {
+      "originalIndex": 17,
+      "title": "Casa della Comunità Sanremo · ASL1",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"medkit-outline\",\n      title: \"Casa della Comunità Sanremo · ASL1\",\n      subtitle: \"Via San Francesco 96, Palasalute, piano 2. Medico di assistenza primaria ad accesso libero 24 ore su 24, 7 giorni su 7; PUA, ambulatori infermieristici, IFoC e ADI. Attenzione: gli orari del PUA sono discordanti tra pagine ASL1; verificare prima di recarsi. Fonte ASL1, aggiornata 31/08/2026.\",\n      action: { type: \"web\", value: \"https://www.asl1.liguria.it/territorio/distretti-sanitari/casa-comunita/casa-comunita-sanremo.html\" },\n    },"
+    },
+    {
+      "originalIndex": 18,
+      "title": "PUA Sanremo · verifica orari prima di andare",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"PUA Sanremo · verifica orari prima di andare\",\n      subtitle: \"Palasalute, Via San Francesco 96. La pagina Casa della Comunità indica lun–ven 8–13; la pagina generale PUA indica lun/mer/ven 8:30–13. Fonti ASL1 in conflitto: orario NON VERIFICATO.\",\n      action: { type: \"web\", value: \"https://www.asl1.liguria.it/servizi-dalla-a-alla-z/1498-punto-unico-accesso.html\" },\n    },"
+    },
+    {
+      "originalIndex": 19,
+      "title": "Sanremo · Fondo regionale non autosufficienza",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"cash-outline\",\n      title: \"Sanremo · Fondo regionale non autosufficienza\",\n      subtitle: \"Procedura comunale per accedere al Fondo regionale per la non autosufficienza. Requisiti, documentazione e stato delle domande da verificare nella scheda ufficiale: non indicato come bando automaticamente aperto.\",\n      action: { type: \"web\", value: \"https://www.comune.sanremo.im.it/index.php/it/topics/assistenza-agli-invalidi/3\" },\n    },"
+    },
+    {
+      "originalIndex": 20,
+      "title": "Sanremo · Fondo regionale gravissime disabilità",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"cash-outline\",\n      title: \"Sanremo · Fondo regionale gravissime disabilità\",\n      subtitle: \"Procedura di accesso al Fondo regionale per le gravissime disabilità, distinta dal Fondo non autosufficienza. Consultare la scheda istituzionale per modalità e requisiti.\",\n      action: { type: \"web\", value: \"https://www.comune.sanremo.im.it/index.php/it/topics/assistenza-agli-invalidi/3\" },\n    },"
+    },
+    {
+      "originalIndex": 21,
+      "title": "Sanremo · trasporto sociale e contrassegno disabili",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"car-outline\",\n      title: \"Sanremo · trasporto sociale e contrassegno disabili\",\n      subtitle: \"Il Comune pubblica procedure per trasporto di anziani e persone con disabilità e per rilascio/rinnovo del contrassegno permanente o temporaneo. Consultare la scheda specifica.\",\n      action: { type: \"web\", value: \"https://www.comune.sanremo.im.it/index.php/it/topics/assistenza-agli-invalidi/3\" },\n    },"
+    },
+    {
+      "originalIndex": 22,
+      "title": "Sanremo · assistenza domiciliare e strutture",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"home-outline\",\n      title: \"Sanremo · assistenza domiciliare e strutture\",\n      subtitle: \"Procedure comunali per assistenza domiciliare integrata, comunità sociosanitaria (CSS), residenza sanitaria disabili (RSD) e integrazione rette. Verificare requisiti e valutazione.\",\n      action: { type: \"web\", value: \"https://www.comune.sanremo.im.it/index.php/it/topics/assistenza-agli-invalidi/3\" },\n    },"
+    },
+    {
+      "originalIndex": 23,
+      "title": "Sanremo · contributi rimozione barriere architettoniche",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"accessibility-outline\",\n      title: \"Sanremo · contributi rimozione barriere architettoniche\",\n      subtitle: \"Il Comune elenca una procedura dedicata ai contributi per eliminare barriere architettoniche. Verificare fondi, scadenze e documenti prima di presentare domanda.\",\n      action: { type: \"web\", value: \"https://www.comune.sanremo.im.it/index.php/it/topics/assistenza-agli-invalidi/3\" },\n    },"
+    },
+    {
+      "originalIndex": 24,
+      "title": "Sanremo · bonus elettrico per disagio fisico",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"flash-outline\",\n      title: \"Sanremo · bonus elettrico per disagio fisico\",\n      subtitle: \"Procedura comunale per il bonus elettrico legato al disagio fisico. Non confondere con il bonus per disagio economico; verificare condizioni e domanda.\",\n      action: { type: \"web\", value: \"https://www.comune.sanremo.im.it/it/topics/assistenza-sociale\" },\n    },"
+    },
+    {
+      "originalIndex": 25,
+      "title": "Sanremo · Ufficio di Prossimità",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Sanremo · Ufficio di Prossimità\",\n      subtitle: \"Corso Garibaldi 30; lunedì 15–17 e giovedì 9:30–12:30. Tel. 0184 52901, email ufficiodiprossimita@comune.sanremo.im.it. Fonte Regione Liguria.\",\n      action: { type: \"web\", value: \"https://ufficiprossimita.regione.liguria.it/uffici-di-prossimita/ufficio-di-prossimita.html?mid=28\" },\n    },"
+    },
+    {
+      "originalIndex": 26,
+      "title": "ASL1 Imperiese · servizi sanitari ed esenzioni",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"medkit-outline\",\n      title: \"ASL1 Imperiese · servizi sanitari ed esenzioni\",\n      subtitle: \"Sito istituzionale per servizi sociosanitari, esenzioni ticket, scelta del medico e assistenza territoriale.\",\n      action: { type: \"web\", value: \"https://www.asl1.liguria.it\" },\n    },"
+    }
+  ]
+}
