@@ -2110,7 +2110,7 @@ PER_PROVINCIA.GE.volontariato.push(
 PER_PROVINCIA.PR.volontariato.unshift({
   ...GAZEBO,
   province: undefined,
-  comuni: ["fornovo-di-taro", "collecchio", "borgo-val-di-taro", "medesano", "langhirano"],
+  comuni: ["fornovo-di-taro", "collecchio", "borgo-val-di-taro", "medesano", "langhirano", "lesignano-de-bagni"],
 });
 
 const VOLONTARIATO_NAZIONALI: Associazione[] = [

@@ -624,4 +624,12 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "mediglia": { email: "servizisociali@comune.mediglia.mi.it", tipo: "ordinaria", fonte: "sito del Comune di Mediglia, elenco uffici e recapiti (letto il 04/11/2026)" },
   // Collecchio (PR)
   "collecchio": { email: "protocollo@postacert.comune.collecchio.pr.it", tipo: "pec", fonte: "sito del Comune di Collecchio, pagina Servizi (PEC istituzionale, letta il 09/11/2026)" },
+  // Fornovo di Taro (PR)
+  "fornovo-di-taro": { email: "protocollo@postacert.comune.fornovo-di-taro.pr.it", tipo: "pec", fonte: "PEC del Comune da fonti istituzionali (Regione Emilia-Romagna, sito del Comune), verificata il 09/11/2026" },
+  // Borgo Val di Taro (PR)
+  "borgo-val-di-taro": { email: "protocollo@postacert.comune.borgo-val-di-taro.pr.it", tipo: "pec", fonte: "PEC del Comune da fonti istituzionali (Regione Emilia-Romagna, sito del Comune), verificata il 09/11/2026" },
+  // Langhirano (PR)
+  "langhirano": { email: "protocollo@postacert.comune.langhirano.pr.it", tipo: "pec", fonte: "PEC del Comune da fonti istituzionali (Regione Emilia-Romagna, sito del Comune), verificata il 09/11/2026" },
+  // Lesignano de' Bagni (PR)
+  "lesignano-de-bagni": { email: "protocollo@postacert.comune.lesignano-debagni.pr.it", tipo: "pec", fonte: "PEC del Comune da fonti istituzionali (Regione Emilia-Romagna, sito del Comune), verificata il 09/11/2026" },
 };

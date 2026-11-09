@@ -5,7 +5,8 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Segnalato come interessato da chi promuove TutelApp in provincia di Parma (8/11/2026): non è un'adesione.
 // Sito del Comune: dominio istituzionale trovato nelle pagine ufficiali (9/11/2026).
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; coordinate; bonus del Comune, associazioni, sport e tempo libero.
+// 9/11/2026: recapiti dei servizi sociali da schede della Regione Emilia-Romagna e pagine del Comune (fonti istituzionali). Nessuna email personale di operatori; dati discordanti non inseriti.
+// Da fare: coordinate; bonus del Comune, associazioni, sport e tempo libero.
 export const borgoValDiTaro: ComuneConfig = {
   slug: "borgo-val-di-taro",
   tipo: "comune",
@@ -18,11 +19,11 @@ export const borgoValDiTaro: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
-  pec: "",
-  orari: "",
+  indirizzo: "Piazza Manara 6, 43043 Borgo Val di Taro (PR)",
+  telefono: "0525 921744",
+  email: "segreteria@comune.borgo-val-di-taro.pr.it",
+  pec: "protocollo@postacert.comune.borgo-val-di-taro.pr.it",
+  orari: "Sportello sociale: lunedì 8.30–12.30 e 15–17, mercoledì e venerdì 9.30–12.30",
   sitoWeb: "https://www.comune.borgo-val-di-taro.pr.it",
 
   logo: null,

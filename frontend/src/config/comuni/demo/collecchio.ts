@@ -5,7 +5,9 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Segnalato come interessato da chi promuove TutelApp in provincia di Parma (8/11/2026): non è un'adesione.
 // Sito del Comune: dominio istituzionale trovato nelle pagine ufficiali (9/11/2026). PEC e indirizzo: dalla pagina ufficiale del Comune.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; coordinate; bonus del Comune, associazioni, sport e tempo libero.
+// 9/11/2026: recapiti dei servizi sociali da schede della Regione Emilia-Romagna e pagine del Comune (fonti istituzionali). Nessuna email personale di operatori; dati discordanti non inseriti.
+// Collecchio: sede dello sportello non inserita (il sito del Comune e quello del gestore indicano indirizzi diversi, da confermare).
+// Da fare: coordinate; bonus del Comune, associazioni, sport e tempo libero.
 export const collecchio: ComuneConfig = {
   slug: "collecchio",
   tipo: "comune",
@@ -18,11 +20,11 @@ export const collecchio: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "Viale Libertà 3, 43044 Collecchio (PR)",
-  telefono: "",
-  email: "",
+  indirizzo: "",
+  telefono: "0521 301239",
+  email: "collecchio@pedemontanasociale.pr.it",
   pec: "protocollo@postacert.comune.collecchio.pr.it",
-  orari: "",
+  orari: "Sportello sociale (Pedemontana Sociale): lunedì, martedì e giovedì 9–13, giovedì anche 15–17",
   sitoWeb: "https://www.comune.collecchio.pr.it",
 
   logo: null,
