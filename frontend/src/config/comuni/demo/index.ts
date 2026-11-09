@@ -414,6 +414,14 @@ import { borgoValDiTaro } from "./borgo-val-di-taro";
 import { medesano } from "./medesano";
 import { langhirano } from "./langhirano";
 import { lesignanoDeBagni } from "./lesignano-de-bagni";
+import { calcata } from "./calcata";
+import { castelSantElia } from "./castel-sant-elia";
+import { corchiano } from "./corchiano";
+import { faleria } from "./faleria";
+import { gallese } from "./gallese";
+import { vallerano } from "./vallerano";
+import { vasanello } from "./vasanello";
+import { vignanello } from "./vignanello";
 
 export const COMUNI_DEMO: ComuneConfig[] = [
   acerra,
@@ -825,4 +833,12 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   medesano,
   langhirano,
   lesignanoDeBagni,
+  calcata,
+  castelSantElia,
+  corchiano,
+  faleria,
+  gallese,
+  vallerano,
+  vasanello,
+  vignanello,
 ];
