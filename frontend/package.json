@@ -12,6 +12,7 @@
     "web": "expo start --web",
     "lint": "expo lint",
     "verifica:ricerca": "node scripts/verifica-ricerca.js",
+    "prova:diario": "node scripts/prova-diario.mjs",
     "verifica:anagrafica": "node scripts/verifica-anagrafica.js"
   },
   "dependencies": {

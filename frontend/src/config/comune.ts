@@ -162,6 +162,8 @@ const CHIAVI_COMUNI = new Set<string>([
   SCELTA_KEY,
   "salutenav:deviceId",
   "salutenav:remoteContent",
+  // Il diario della persona è unico per telefono: non cambia se cambia il Comune scelto
+  "tutelapp:diario",
 ]);
 
 /**

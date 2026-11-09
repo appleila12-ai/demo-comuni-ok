@@ -15,6 +15,7 @@ const CHIAVI_PERSONALI = [
   "tutelapp:progetto",
   "tutelapp:agevolazioni",
   "tutelapp:contatti",
+  "tutelapp:diario",
   "salutenav:reports",
   "salutenav:vaultFiles",
 ] as const;

@@ -1,6 +1,7 @@
-// "I miei contatti utili": la rubrica personale dell'agenda.
-// La persona scrive chi chiamare (medico, assistente sociale, patronato…):
-// i dati restano solo su questo dispositivo.
+// "I miei contatti": la rubrica personale dell'agenda.
+// La persona scrive chi chiamare (medico, assistente sociale, patronato…) e, nella stessa lista,
+// ritrova i recapiti che ha messo da parte con il segnalibro ("I miei salvati", solo lettura:
+// non si spostano né si copiano dati). Tutto resta solo su questo dispositivo.
 
 import { useEffect, useState } from "react";
 import { Linking, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
@@ -9,6 +10,7 @@ import { useRouter } from "expo-router";
 
 import { colors, radius, spacing, topics } from "@/src/theme";
 import { storage } from "@/src/utils/storage";
+import { useSalvati } from "@/src/lib/salvati";
 import {
   CONTATTI_KEY,
   RUOLI,
@@ -23,6 +25,9 @@ import { Bottone, paginaStili } from "@/src/components/Pagina";
 
 export function ContattiUtili() {
   const router = useRouter();
+  const { lista: salvati } = useSalvati();
+  // Recapiti ufficiali messi da parte con il segnalibro (uffici, servizi, associazioni)
+  const recapiti = salvati.filter((x) => x.tel || x.email || x.whatsapp || x.url);
   const [lista, setLista] = useState<Contatto[]>([]);
   const [aperto, setAperto] = useState(false);
   const [ruolo, setRuolo] = useState<RuoloContatto>("medico");
@@ -77,9 +82,10 @@ export function ContattiUtili() {
 
   return (
     <View style={{ marginTop: spacing.md }} testID="contatti-utili">
-      <Text style={paginaStili.titoloSezione}>I miei contatti utili</Text>
+      <Text style={paginaStili.titoloSezione}>I miei contatti</Text>
       <Text style={[paginaStili.piccolo, { marginBottom: spacing.sm }]}>
-        Scrivi qui chi chiamare quando serve: li ritrovi insieme alle tue date. Restano solo su questo telefono.
+        Scrivi qui chi chiamare quando serve: li ritrovi insieme alle tue date. Sotto trovi anche i
+        recapiti che hai salvato con il segnalibro. Restano solo su questo telefono.
       </Text>
 
       {lista.map((c) => {
@@ -188,6 +194,66 @@ export function ContattiUtili() {
         <Bottone label="Aggiungi un contatto" icon="person-add-outline" variante="vuoto" onPress={() => setAperto(true)} testID="contatti-apri" />
       )}
 
+      {recapiti.length > 0 ? (
+        <View style={{ marginTop: spacing.md }} testID="contatti-recapiti-salvati">
+          <Text style={styles.sottoTitolo}>Recapiti che hai salvato</Text>
+          {recapiti.map((r) => (
+            <View key={r.id} style={[paginaStili.card, styles.contatto]}>
+              <Text style={styles.nome}>{r.titolo}</Text>
+              {r.sotto ? (
+                <Text style={paginaStili.piccolo} numberOfLines={2}>
+                  {r.sotto}
+                </Text>
+              ) : null}
+              <View style={styles.azioni}>
+                {r.tel ? (
+                  <Pressable
+                    onPress={() => Linking.openURL(linkChiamata(r.tel!)).catch(() => {})}
+                    style={({ pressed }) => [styles.chiama, pressed && { opacity: 0.85 }]}
+                    accessibilityRole="button"
+                    accessibilityLabel={`Chiama ${r.titolo}`}
+                  >
+                    <Ionicons name="call-outline" size={16} color="#FFFFFF" />
+                    <Text style={styles.chiamaText}>Chiama</Text>
+                  </Pressable>
+                ) : null}
+                {r.email ? (
+                  <Pressable
+                    onPress={() => Linking.openURL(`mailto:${r.email}`).catch(() => {})}
+                    style={styles.togli}
+                    accessibilityRole="button"
+                    accessibilityLabel={`Scrivi una email a ${r.titolo}`}
+                  >
+                    <Ionicons name="mail-outline" size={14} color={colors.brandPrimaryDark} />
+                    <Text style={styles.togliText}>Email</Text>
+                  </Pressable>
+                ) : null}
+                {r.url ? (
+                  <Pressable
+                    onPress={() => Linking.openURL(r.url!).catch(() => {})}
+                    style={styles.togli}
+                    accessibilityRole="link"
+                    accessibilityLabel={`Apri il sito di ${r.titolo}`}
+                  >
+                    <Ionicons name="globe-outline" size={14} color={colors.brandPrimaryDark} />
+                    <Text style={styles.togliText}>Sito</Text>
+                  </Pressable>
+                ) : null}
+              </View>
+            </View>
+          ))}
+          <Pressable
+            onPress={() => router.push("/salvati" as any)}
+            style={styles.comune}
+            accessibilityRole="link"
+            accessibilityLabel="Apri I miei salvati per togliere un recapito"
+          >
+            <Ionicons name="bookmark-outline" size={16} color={colors.brandPrimaryDark} />
+            <Text style={styles.comuneText}>Per togliere un recapito salvato vai in «I miei salvati»</Text>
+          </Pressable>
+        </View>
+      ) : null}
+
       <Pressable
         onPress={() => router.push("/territorio" as any)}
         style={styles.comune}
@@ -206,6 +272,7 @@ const styles = StyleSheet.create({
   contatto: { padding: spacing.md, marginBottom: spacing.sm },
   riga: { flexDirection: "row", gap: spacing.md },
   icona: { width: 38, height: 38, borderRadius: radius.md, alignItems: "center", justifyContent: "center" },
+  sottoTitolo: { fontSize: 14, fontWeight: "800", color: colors.onSurface, marginBottom: spacing.sm },
   ruolo: { fontSize: 12, fontWeight: "800", color: colors.brandPrimaryDark, textTransform: "uppercase", letterSpacing: 0.4 },
   nome: { fontSize: 15, fontWeight: "800", color: colors.onSurface, marginTop: 2 },
   azioni: { flexDirection: "row", alignItems: "center", gap: spacing.md, marginTop: spacing.sm },

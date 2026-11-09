@@ -1,5 +1,5 @@
 // Copia di sicurezza dei dati che esistono SOLO dentro TutelApp: appuntamenti e scadenze,
-// tappe della pratica, dati delle lettere, salvati, Progetto di Vita, elenco documenti.
+// diario degli incontri, tappe della pratica, dati delle lettere, salvati, Progetto di Vita, elenco documenti.
 // I documenti originali NON sono inclusi: restano dove la persona li ha presi
 // (telefono, Foto, File). La copia è un file che la persona conserva dove vuole;
 // TutelApp non la invia a nessuno.
@@ -24,6 +24,7 @@ export const CHIAVI_COPIA = [
   "tutelapp:progetto",
   "tutelapp:agevolazioni",
   "tutelapp:contatti",
+  "tutelapp:diario",
   "tutelapp:hub:momento",
   "tutelapp:promemoria-impostazioni",
   "tutelapp:paese",

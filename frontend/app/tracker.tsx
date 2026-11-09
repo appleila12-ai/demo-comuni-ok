@@ -28,6 +28,7 @@ import { comune } from "@/src/config/comune";
 import { ComuneLogo } from "@/src/components/ComuneLogo";
 import { HeaderComune } from "@/src/components/HeaderComune";
 import { ScadenzeSezione } from "@/src/components/ScadenzeSezione";
+import { DiarioSezione } from "@/src/components/DiarioSezione";
 import { SezioniBar } from "@/src/components/SezioniBar";
 import { VaultSection } from "@/src/components/VaultSection";
 import { listReports, Report } from "@/src/lib/reports";
@@ -774,6 +775,7 @@ export default function Tracker() {
 
         {/* Le mie scadenze: ricorso, revisione, contrassegno, ISEE */}
         <View style={{ marginTop: spacing.lg }}>
+          <DiarioSezione />
           <ScadenzeSezione />
         </View>
 
