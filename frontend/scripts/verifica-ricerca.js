@@ -7,6 +7,9 @@ const path = require("path");
 const ESCLUSE = new Set([
   "+html", "_layout", "index", "[comune]", "cittadino", "contatti",
   "cruscotto", "sentinella", "test-pdf", "per-i-comuni", "risultati",
+  // "La mia pagina" (demo bianca, 09/11/2026): pagina sperimentale senza link dalla Home, si apre solo da /bianca.
+  // Da togliere da qui e collegare alla ricerca se entra nell'app.
+  "bianca",
 ]);
 
 const radice = path.join(__dirname, "..");
