@@ -4,8 +4,13 @@
 // Qui non c'è nulla che non sia scritto in quella scheda o nella risposta scritta dell'URP
 // (30/10/2026): l'URP ha verificato con i Distretti che i dati della pagina sull'anagrafe
 // sanitaria sono corretti e ha indicato quali Comuni fanno capo a ciascun distretto.
+// Il 09/11/2026 la Segreteria della Direzione del Distretto 19 ha risposto per iscritto (riscontro al
+// protocollo ATSL 0418382 del 29/10/2026): modalità di presentazione, PEC, nessun appuntamento, tempi medi.
 // Sedi, orari, telefoni e mail degli sportelli (SPORTELLI_ASL5) vengono dalla pagina ufficiale dell'ASL 5 sull'anagrafe sanitaria, letta il 02/11/2026.
 // Da ricontrollare con l'ASL almeno una volta l'anno.
+
+/** PEC del protocollo generale dell'ASL 5: indicata dalla Direzione del Distretto 19 (09/11/2026) e nel piè di pagina del sito ASL 5 */
+export const PEC_ASL5 = "protocollo.generale@pec.asl5.liguria.it";
 
 export type CasoEsenzione = "io" | "minore" | "tutela";
 
@@ -59,7 +64,7 @@ export const NOTA_DOMICILIO_SANITARIO =
   "Nel modulo c'è una riga da compilare solo se hai il domicilio sanitario presso l'ASL 5: indichi i codici di esenzione per patologia già inseriti presso l'ASL di residenza, con la data da cui valgono e la scadenza.";
 
 export const COME_SI_PRESENTA = [
-  "Da remoto: per mail all'indirizzo del distretto a cui appartieni",
+  "Da remoto: per mail all'indirizzo del distretto a cui appartieni, oppure per PEC al protocollo generale dell'ASL 5 (" + PEC_ASL5 + "), allegando i documenti indicati nel modulo",
   "Di persona: ad accesso libero, nei giorni e negli orari del tuo distretto",
 ];
 
@@ -171,8 +176,32 @@ export const SPORTELLI_ASL5: SportelloAsl5[] = [
   },
 ];
 
+/**
+ * Risposta scritta della Segreteria della Direzione Distretto 19 (Sarzana), 09/11/2026:
+ * non serve l'appuntamento; tempo medio circa 5 giorni lavorativi.
+ * Vale per il Distretto 19: per gli altri distretti l'ASL non l'ha scritto, quindi non lo diciamo.
+ */
+export const NOTA_DISTRETTO_19 = [
+  "Non serve prendere un appuntamento.",
+  "Il tempo medio per la risposta è di circa 5 giorni lavorativi.",
+];
+
+/**
+ * Comuni della provincia della Spezia che NON fanno capo all'ASL 5 ma all'ASL 4 (Chiavarese).
+ * Fonte: risposta scritta dell'URP ASL 5 del 09/11/2026 («appartiene ad ASL 5 solo Ortonovo, mentre i
+ * restanti afferiscono ad ASL 4», riferito a Carro, Maissana, Varese Ligure e Ortonovo).
+ * Per questi Comuni la scheda ASL 5 non vale: l'ASL 4 non ha ancora risposto sugli sportelli.
+ */
+const COMUNI_ASL4_IN_PROVINCIA_SP = ["Carro", "Maissana", "Varese Ligure"];
+
+/** true se il Comune (provincia della Spezia) fa capo all'ASL 5; false per Carro, Maissana e Varese Ligure (ASL 4) */
+export function fattoCapoAsl5(nomeComune: string): boolean {
+  const k = chiave(nomeComune);
+  return !COMUNI_ASL4_IN_PROVINCIA_SP.some((c) => chiave(c) === k);
+}
+
 export const NOTA_SPORTELLI =
   "L'ASL scrive che ci si rivolge al presidio di competenza, individuato in base alla residenza anagrafica (o al domicilio sanitario). Sedi, orari, telefoni e mail sono quelli della pagina dell'ASL 5 sull'anagrafe sanitaria (letta il 02/11/2026; la pagina non indica la data di aggiornamento). L'ufficio relazioni con il pubblico dell'ASL ha confermato il 30/10/2026 che i dati pubblicati lì sono corretti. Se dall'ASL cambia qualcosa, controlla la pagina ufficiale.";
 
 export const FONTE_ESENZIONE =
-  "Scheda ASL 5 · Dipartimento Cure Primarie · Distretti 17-18-19; risposta scritta dell'URP ASL 5 del 30/10/2026";
+  "Scheda ASL 5 · Dipartimento Cure Primarie · Distretti 17-18-19; risposte scritte dell'URP ASL 5 (30/10/2026 e 09/11/2026) e della Direzione del Distretto 19 (09/11/2026)";

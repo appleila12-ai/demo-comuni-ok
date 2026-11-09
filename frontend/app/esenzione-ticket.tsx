@@ -19,6 +19,8 @@ import {
   FONTE_ESENZIONE,
   URL_ANAGRAFE_ASL5,
   distrettoAsl5,
+  fattoCapoAsl5,
+  NOTA_DISTRETTO_19,
   NOTA_DOMICILIO_SANITARIO,
   NOTA_MAIL,
   NOTA_SPORTELLI,
@@ -64,7 +66,8 @@ function Punti({ voci }: { voci: string[] }) {
 export default function EsenzioneTicket() {
   useSezione("esenzione-ticket");
   const [caso, setCaso] = useState<CasoEsenzione | undefined>(undefined);
-  const asl5 = comune.provincia === "SP";
+  // Carro, Maissana e Varese Ligure sono in provincia della Spezia ma fanno capo all'ASL 4 (URP ASL 5, 09/11/2026)
+  const asl5 = comune.provincia === "SP" && fattoCapoAsl5(comune.nomeBreve);
 
   // Genova: scheda dell'ASL 3 Genovese
   if (comune.slug === "genova") return <EsenzioneGenova />;
@@ -169,6 +172,11 @@ export default function EsenzioneTicket() {
           richiesta va fatta allo sportello o all&apos;indirizzo mail del tuo distretto.
         </Text>
       </View>
+      {distrettoAsl5(comune.nomeBreve) === 19 ? (
+        <View style={paginaStili.card} testID="esenzione-distretto-19">
+          <Punti voci={NOTA_DISTRETTO_19} />
+        </View>
+      ) : null}
       {SPORTELLI_ASL5.filter((x) => x.distretto === distrettoAsl5(comune.nomeBreve)).map((x) => (
         <View key={x.localita} style={paginaStili.card} testID={`esenzione-sportello-${x.localita}`}>
           <Text style={paginaStili.titoloSezione} accessibilityRole="header">
