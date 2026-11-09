@@ -2286,6 +2286,24 @@ export const BONUS: Bonus[] = [
 
   // ------------------------------------------------------------ COMUNE DI LESIGNANO DE' BAGNI
   {
+    id: "lesignano-voucher-sportivi-2026-2027",
+    regione: "Emilia-Romagna",
+    comuni: ["lesignano-de-bagni"],
+    titolo: "Voucher sportivi regionali 2026/2027 per minori con disabilità (Lesignano de' Bagni)",
+    perChi:
+      "Famiglie residenti a Lesignano de' Bagni con un minore tra 6 e 17 anni con disabilità certificata dal verbale INPS, oppure in sovrappeso o obesità con complicanze e con indicazione di attività motoria o sportiva del medico. ISEE ordinario non superiore a 30.000 euro. La domanda la presenta chi esercita la potestà genitoriale o la tutela legale.",
+    cosa: "Un contributo fino a 250 euro per ogni minore, per le spese di corsi o attività motorie e sportive della stagione 2026/2027 presso società sportive dilettantistiche iscritte al RASD o enti del Terzo Settore iscritti al RUNTS. Può coprire fino al 100% della spesa: se la spesa è inferiore, il voucher si riduce.",
+    stato: "aperto",
+    quando: "Domande entro il 20/12/2026. Le ricevute mancanti vanno consegnate entro il 31/01/2027, altrimenti si perde il contributo.",
+    comeSiChiede:
+      "Si presenta il modulo allegato all'avviso all'ufficio protocollo del Comune, oppure per PEC a protocollo@postacert.comune.lesignano-debagni.pr.it. Servono: ISEE 2026, verbale INPS (o attestazione del medico per sovrappeso/obesità), iscrizione del minore al corso e la ricevuta di pagamento se già disponibile.",
+    fonte: {
+      label: "Comune di Lesignano de' Bagni · Voucher regionali per attività sportiva (avviso del 06/11/2026)",
+      url: "https://pagamentipa.comune.lesignano-debagni.pr.it/it/news/voucher-regionali-per-attivita-sportiva-minori-disabili-o-obesi-certificati",
+    },
+    verificatoIl: "09/11/2026",
+  },
+  {
     id: "lesignano-contrassegno-disabili",
     regione: "Emilia-Romagna",
     comuni: ["lesignano-de-bagni"],
