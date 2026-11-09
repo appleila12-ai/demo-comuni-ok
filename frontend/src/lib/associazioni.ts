@@ -2105,6 +2105,14 @@ PER_PROVINCIA.GE.volontariato.push(
   },
 );
 
+// APS Gazebo Sanità e Beni Comuni: promuove TutelApp nella provincia di Parma (segnalazione dell'8/11/2026).
+// Per ora solo nei Comuni parmensi segnalati come interessati (9/11/2026), con gli stessi recapiti già in app.
+PER_PROVINCIA.PR.volontariato.unshift({
+  ...GAZEBO,
+  province: undefined,
+  comuni: ["fornovo-di-taro", "collecchio", "borgo-val-di-taro", "medesano", "langhirano"],
+});
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",
