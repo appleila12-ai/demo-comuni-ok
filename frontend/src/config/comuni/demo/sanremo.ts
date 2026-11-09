@@ -19,7 +19,7 @@ export const sanremo: ComuneConfig = {
   responsabile: "Simona Donati",
   indirizzo: "Corso G. Garibaldi 30, 18038 Sanremo",
   telefono: "0184 52901",
-  email: "",
+  email: "sicurezzasociale@comunedisanremo.it",
   pec: "",
   orari: "Orari di ricevimento Ambito Sociale non verificati: contattare l’ufficio",
   sitoWeb: "https://www.comune.sanremo.im.it/it/unita_organizzative/ambito-sociale",
