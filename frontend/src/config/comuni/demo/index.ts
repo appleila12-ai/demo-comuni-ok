@@ -118,6 +118,7 @@ import { cremona } from "./cremona";
 import { crotone } from "./crotone";
 import { cuneo } from "./cuneo";
 import { desio } from "./desio";
+import { duinoAurisina } from "./duino-aurisina";
 import { eboli } from "./eboli";
 import { empoli } from "./empoli";
 import { enna } from "./enna";
@@ -336,6 +337,11 @@ import { gragnano } from "./gragnano";
 import { sarno } from "./sarno";
 import { mondragone } from "./mondragone";
 import { fonteNuova } from "./fonte-nuova";
+import { lenola } from "./lenola";
+import { monteSanBiagio } from "./monte-san-biagio";
+import { sperlonga } from "./sperlonga";
+import { sanFeliceCirceo } from "./san-felice-circeo";
+import { campodimele } from "./campodimele";
 import { carmagnola } from "./carmagnola";
 import { garbagnateMilanese } from "./garbagnate-milanese";
 import { abbiategrasso } from "./abbiategrasso";
@@ -377,6 +383,36 @@ import { viterbo } from "./viterbo";
 import { vittoria } from "./vittoria";
 import { vittorioVeneto } from "./vittorio-veneto";
 import { voghera } from "./voghera";
+import { beverino } from "./beverino";
+import { bolano } from "./bolano";
+import { bonassola } from "./bonassola";
+import { borghettoDiVara } from "./borghetto-di-vara";
+import { brugnato } from "./brugnato";
+import { caliceAlCornoviglio } from "./calice-al-cornoviglio";
+import { carrodano } from "./carrodano";
+import { deivaMarina } from "./deiva-marina";
+import { follo } from "./follo";
+import { framura } from "./framura";
+import { monterossoAlMare } from "./monterosso-al-mare";
+import { pignone } from "./pignone";
+import { riomaggiore } from "./riomaggiore";
+import { rocchettaDiVara } from "./rocchetta-di-vara";
+import { sestaGodano } from "./sesta-godano";
+import { vernazza } from "./vernazza";
+import { zignago } from "./zignago";
+import { monrupino } from "./monrupino";
+import { muggia } from "./muggia";
+import { sanDorligoDellaValle } from "./san-dorligo-della-valle";
+import { sgonico } from "./sgonico";
+import { pantigliate } from "./pantigliate";
+import { paullo } from "./paullo";
+import { peschieraBorromeo } from "./peschiera-borromeo";
+import { tribiano } from "./tribiano";
+import { fornovoDiTaro } from "./fornovo-di-taro";
+import { collecchio } from "./collecchio";
+import { borgoValDiTaro } from "./borgo-val-di-taro";
+import { medesano } from "./medesano";
+import { langhirano } from "./langhirano";
 
 export const COMUNI_DEMO: ComuneConfig[] = [
   acerra,
@@ -492,6 +528,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   crotone,
   cuneo,
   desio,
+  duinoAurisina,
   eboli,
   empoli,
   enna,
@@ -710,6 +747,11 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   sarno,
   mondragone,
   fonteNuova,
+  lenola,
+  monteSanBiagio,
+  sperlonga,
+  sanFeliceCirceo,
+  campodimele,
   carmagnola,
   garbagnateMilanese,
   abbiategrasso,
@@ -751,4 +793,34 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   vittoria,
   vittorioVeneto,
   voghera,
+  beverino,
+  bolano,
+  bonassola,
+  borghettoDiVara,
+  brugnato,
+  caliceAlCornoviglio,
+  carrodano,
+  deivaMarina,
+  follo,
+  framura,
+  monterossoAlMare,
+  pignone,
+  riomaggiore,
+  rocchettaDiVara,
+  sestaGodano,
+  vernazza,
+  zignago,
+  monrupino,
+  muggia,
+  sanDorligoDellaValle,
+  sgonico,
+  pantigliate,
+  paullo,
+  peschieraBorromeo,
+  tribiano,
+  fornovoDiTaro,
+  collecchio,
+  borgoValDiTaro,
+  medesano,
+  langhirano,
 ];

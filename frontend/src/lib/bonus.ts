@@ -2039,7 +2039,7 @@ export const BONUS: Bonus[] = [
     regione: "Sardegna",
     titolo: "Ritornare a casa PLUS (linee 2026-2027)",
     perChi:
-      "Persone non autosufficienti valutate dall'Unità di Valutazione Territoriale (UVT). Serve l'indennità di accompagnamento. In alternativa vanno bene la certificazione dell'allegato 3 del DPCM 159/2013, l'accertamento del D.Lgs. 29/2024 per gli over 70 o quello del D.Lgs. 62/2024. Si può presentare la domanda con riserva di integrare il verbale.",
+      "Persone non autosufficienti valutate dall'Unità di Valutazione Territoriale (UVT). Serve l'indennità di accompagnamento. In alternativa vanno bene la certificazione dell'allegato 3 del DPCM 159/2013, l'accertamento del D.Lgs. 29/2024 per gli over 70 o quello del D.Lgs. 62/2024. Si può presentare la domanda con riserva di integrare il verbale. Servono anche: il verbale di riconoscimento della disabilità (art. 3 della legge 104/1992), la certificazione medica specialistica della condizione sanitaria, l'attestazione ISEE e, per i livelli base A, base B, primo, secondo e terzo, la dichiarazione di non essere beneficiari di un piano personalizzato L. 162/1998 (per i livelli base A e B è ammesso chi ha più di 65 anni con punteggio della scheda salute superiore a 40). Le dimissioni protette sono compatibili con i piani 162/98.",
     cosa:
       "Un progetto personalizzato a domicilio, con un contributo. Importi massimi del progetto: dimissioni protette 1.700 euro (30 giorni, una volta nell'anno); base A 4.000 euro; base B 7.400 euro; primo livello 16.000 euro; secondo livello 16.000 euro più 9.000 di potenziamento; terzo livello 16.000 euro più 27.000 di potenziamento. Importi su 12 mesi. Per chi assiste c'è una quota per il caregiver, compresa nel progetto: al massimo il 50% nei livelli base A e B, al massimo un terzo del solo contributo ordinario nel primo, secondo e terzo livello; non per le dimissioni protette.",
     stato: "attivo",
@@ -2050,7 +2050,7 @@ export const BONUS: Bonus[] = [
       label: "Regione Sardegna · Delibera n. 1/28 del 14/01/2026, Ritornare a casa PLUS, linee d'indirizzo 2026-2027",
       url: "https://delibere.regione.sardegna.it/delibera/116719",
     },
-    verificatoIl: "02/11/2026",
+    verificatoIl: "05/11/2026",
     nota: "L'ISEE sociosanitario riduce il contributo: nessuna riduzione fino a 15.000 euro (base A, base B e primo livello), 25.000 (secondo) e 40.000 (terzo). Oltre queste soglie la riduzione sale per fasce, fino all'80% sopra 80.000, 90.000 e 100.000 euro. Per le dimissioni protette la riduzione parte sopra 50.000 euro (10%, poi 20% e 30%). Gli importi sono massimi di progetto, non un accredito automatico. Il testo completo delle linee è l'allegato alla delibera.",
   },
   {
@@ -2183,7 +2183,7 @@ export const BONUS: Bonus[] = [
     perChi:
       "La persona con disabilità o chi l'ha fiscalmente a carico, intestatario del veicolo. Categorie ammesse: ridotte o impedite capacità motorie permanenti; grave limitazione della deambulazione o pluriamputazioni; disabilità mentale o psichica con handicap grave e accompagnamento; cecità o sordità.",
     cosa:
-      "Esenzione dal bollo per un solo veicolo. Limiti di cilindrata: 2000 cc a benzina, 2800 cc a gasolio. Per le ridotte capacità motorie il veicolo deve avere gli adattamenti necessari; nelle altre categorie no.",
+      "Esenzione dal bollo per un solo veicolo. Limiti: fino a 2.000 cc se benzina o ibrido, fino a 2.800 cc se gasolio o ibrido, fino a 150 kW se elettrico. Per le ridotte capacità motorie il veicolo deve avere gli adattamenti necessari; nelle altre categorie no.",
     stato: "attivo",
     quando: "Misura permanente. Nessuna scadenza indicata.",
     comeSiChiede:
@@ -2192,8 +2192,8 @@ export const BONUS: Bonus[] = [
       label: "Regione Campania · Tassa automobilistica (con tabella ACI delle esenzioni)",
       url: "https://entrate.regione.campania.it/tassa-automobilistica-info",
     },
-    verificatoIl: "02/11/2026",
-    nota: "I documenti cambiano con la categoria: verbale di handicap grave, certificazioni pubbliche di cecità o sordità, patente speciale per le capacità motorie ridotte. Controlla l'elenco sulla pagina. I limiti per alimentazioni diverse da benzina e gasolio non sono nelle fonti lette. La pagina non indica da quando decorre l'esenzione né come si rinnova, e non riporta la data di aggiornamento: per questi punti scrivi alla Regione (tributiregionali@regione.campania.it, PEC tributiregionali@pec.regione.campania.it, tel. 081 796 61 11 o 081 796 91 11).",
+    verificatoIl: "05/11/2026",
+    nota: "I documenti cambiano con la categoria: verbale di handicap grave, certificazioni pubbliche di cecità o sordità, patente speciale per le capacità motorie ridotte. Controlla l'elenco sulla pagina. I limiti per le auto ibride ed elettriche sono nel Tariffario 2026 della Regione Campania (sezione «Esenzioni dal pagamento», voce «Veicoli per disabili (L. 104)»); la pagina «Tassa automobilistica» indica solo benzina e gasolio. Per GPL e metano i limiti non sono indicati. La pagina non indica da quando decorre l'esenzione né come si rinnova, e non riporta la data di aggiornamento: per questi punti scrivi alla Regione (tributiregionali@regione.campania.it, PEC tributiregionali@pec.regione.campania.it, tel. 081 796 61 11 o 081 796 91 11).",
   },
 
   // ------------------------------------------------------------------ MOLISE

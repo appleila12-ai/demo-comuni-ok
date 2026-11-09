@@ -15,6 +15,7 @@
 // Aggiornamento 26/10/2026: spiagge inclusive di Genova, 8 spiagge, recapiti e prenotazione dalla pagina del Comune (agg. 23/06/2026).
 // Aggiornamento 27/10/2026: elenco libere forme associative di Arezzo.
 // Aggiornamento 27/10/2026: Albo comunale delle associazioni della disabilità di Pisa.
+// Aggiornamento 07/11/2026: Liguria Calcio Non Vedenti (Sanremo), nuova sede e descrizione comunicate dal presidente dell'associazione via email il 07/11/2026.
 // Aggiornamento 25/10/2026: provincia di Genova (Anffas, ANGSA, UICI, Chiossone, AISM, UILDM, ENS, ANGLAT, Asperger,
 // e dall'elenco ASL3 'Comitato Misto Consultivo - Associazioni' agg. 18/06/2025: Consulta disabilità, Alzheimer Liguria,
 // ALFAPP, Parkinson, tutela del malato, AVO).
@@ -89,6 +90,7 @@ const PER_PROVINCIA: Record<string, Elenco> = {
         nome: "Insieme per i diritti dei nostri figli",
         cosa: "Famiglie della Val di Magra che si aiutano e tutelano i diritti dei figli con disabilità (scuola, neuropsichiatria).",
         dove: "Val di Magra (Sarzana, Castelnuovo Magra)",
+        telefono: "327 4549912",
         email: "insiemeperinostrifigli2016@gmail.com",
         comuni: ["sarzana", "arcola"],
       },
@@ -1207,8 +1209,8 @@ PER_PROVINCIA.IM.sport.push(
   },
   {
     nome: "Liguria Calcio Non Vedenti",
-    cosa: "Calcio per non vedenti (FISPIC). Società affiliata al CIP Liguria. Disabilità sensoriale (non vedenti).",
-    dove: "c/o Studio Di Malta, Corso Garibaldi 41, 18038 Sanremo",
+    cosa: "Calcio per non vedenti (FISPIC), un'attività svolta da circa 30 anni. Accoglie ragazze e ragazzi con disabilità visiva già dai 10-11 anni, per fare sport come i coetanei. Società affiliata al CIP Liguria.",
+    dove: "Strada San Martino 131, 18038 Sanremo",
     telefono: "0184 570827",
     email: "info@liguriacalcio.it",
     comuni: ["sanremo"],
@@ -1262,6 +1264,18 @@ PER_PROVINCIA.SP.sport.push(
   },
 );
 
+// Mediglia (MI): associazione dall'elenco "Associazioni" del sito del Comune (indicata da Ilaria il 04/11/2026);
+// pubblicato solo l'indirizzo email, senza telefono né sede. L'associazione AGIAD (dislessia) dello stesso elenco
+// non è inserita: non è un'associazione per la disabilità.
+PER_PROVINCIA.MI = PER_PROVINCIA.MI ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.MI.volontariato.unshift({
+  nome: "GAUDIO – Gruppo Autismo e Disabilità Intellettiva",
+  cosa: "Gruppo Autismo e Disabilità Intellettiva, presente nell'elenco delle associazioni del Comune di Mediglia.",
+  dove: "Mediglia",
+  email: "autismogaudio@outlook.it",
+  comuni: ["mediglia"],
+});
+
 PER_PROVINCIA.MI = PER_PROVINCIA.MI ?? { volontariato: [], sport: [] };
 PER_PROVINCIA.MI.volontariato.unshift(
   {
@@ -1274,6 +1288,59 @@ PER_PROVINCIA.MI.volontariato.unshift(
     comuni: ["milano"],
   },
 );
+
+// Aggiornamento 05/11/2026 (ricerca ChatGPT su fonti istituzionali, non riletta direttamente): recapiti dell'associazione,
+// mai di singole persone. Non inseriti: AISA Sarzana, SU' LA TESTA, ARCODILUCE (recapiti di presidenti), Pro Disabili Val di Magra (email personali),
+// A.FA.SO.P. (telefono ed email diversi tra le fonti), Franco Basaglia (scheda del 2022), ANGLAT (sede non confermata), Casa San Giuseppe e Lupo Rosso (non per la disabilità).
+PER_PROVINCIA.TS = PER_PROVINCIA.TS ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.TS.volontariato.unshift(
+  {
+    nome: "Consulta territoriale delle associazioni delle persone con disabilità e delle loro famiglie (Trieste)",
+    cosa: "Coordina le associazioni della provincia di Trieste: informazione, orientamento sui servizi e sui diritti, raccordo con le istituzioni.",
+    dove: "Via Lorenzo Gatteri 24/D, Trieste",
+    telefono: "040 9777300",
+    email: "trieste@consultadisabili.fvg.it",
+    sito: "https://consultadisabili.fvg.it",
+    province: ["TS"],
+  },
+  {
+    nome: "AIAS Trieste",
+    cosa: "Inclusione delle persone con disabilità: fisioterapia, musicoterapia, supporto psicoterapeutico e alla genitorialità, assistenza domiciliare.",
+    dove: "Viale Romolo Gessi 8/1, Trieste",
+    telefono: "040 311222",
+    email: "aias.trieste@libero.it",
+    sito: "https://aiastrieste.org",
+    province: ["TS"],
+  },
+  {
+    nome: "AISM Trieste – Sclerosi multipla",
+    cosa: "Servizi socioassistenziali per le persone con sclerosi multipla e per i familiari.",
+    dove: "Via dei Modiano 5, Trieste",
+    telefono: "040 948001",
+    email: "aismtrieste@aism.it",
+    province: ["TS"],
+  },
+);
+
+PER_PROVINCIA.MI.volontariato.unshift({
+  nome: "AISA Lombardia – Atassie",
+  cosa: "Associazione italiana sindromi atassiche: conoscenza delle atassie, ricerca e aiuto ai pazienti e alle famiglie.",
+  dove: "Via Don Minzoni 2, Peschiera Borromeo",
+  telefono: "338 1632414",
+  email: "sez.lombardia@atassia.it",
+  sito: "https://lombardia.aisaitalia.org",
+  comuni: ["peschiera-borromeo"],
+});
+
+PER_PROVINCIA.SP.volontariato.unshift({
+  nome: "Gi.S.A.L. Ce.A.D.",
+  cosa: "Assistenza sanitaria riabilitativa per persone con disabilità, con attività socioassistenziali e ricreative.",
+  dove: "Casa Santa Marta, Località Le Ghiare, Levanto",
+  telefono: "0187 802605",
+  email: "info@gisal.it",
+  sito: "https://gisal.it",
+  comuni: ["levanto"],
+});
 
 // Torino (TO): dati dal sito dell'associazione (ottobre 2026)
 PER_PROVINCIA.TO = PER_PROVINCIA.TO ?? { volontariato: [], sport: [] };
@@ -1730,11 +1797,399 @@ PER_PROVINCIA.AR.volontariato.unshift(
   },
 );
 
+// 05/11/2026: schede con stato VERIFICATO nella ricerca del 04/11/2026 (siti ufficiali degli enti e pagine dei Comuni).
+PER_PROVINCIA.AR.volontariato.push(
+  {
+    nome: "ANMIC Arezzo – Associazione Nazionale Mutilati e Invalidi Civili",
+    cosa: "Sede provinciale di ANMIC: tutela le persone invalide civili e le aiuta con i diritti e le pratiche. Gli orari non sono pubblicati: telefona prima.",
+    dove: "Corso Italia 236, 52100 Arezzo",
+    telefono: "0575 295873",
+    email: "anmic_arezzo@virgilio.it",
+    sito: "https://anmic.org/index.php/area-riservata-sedi-provinciali",
+    comuni: ["arezzo"],
+  },
+  {
+    nome: "ToscanABILE",
+    cosa: "Progetti di inclusione per le persone con disabilità attraverso arte, cultura e turismo. Il contatto telefonico pubblicato sul sito è un numero WhatsApp.",
+    dove: "Via G. Marconi 18, 52100 Arezzo",
+    email: "toscanabile@toscanabile.com",
+    whatsapp: "+39 375 8306509",
+    sito: "https://toscanabile.com/",
+    comuni: ["arezzo"],
+  },
+  {
+    nome: "Casa di Elena (Il Casolino)",
+    cosa: "Casa famiglia a San Leo, gestita da Il Casolino e indicata dal Comune di Arezzo tra i servizi attivi, aperta tutti i giorni nelle 24 ore. Per l'accesso il Comune rimanda al Segretariato sociale: 0575 377281, 0575 377289, 0575 377299, segretariatosociale@comune.arezzo.it.",
+    dove: "Via del Casolino 3, San Leo (Arezzo)",
+    sito: "https://comune.arezzo.it/node/22898",
+    comuni: ["arezzo"],
+  },
+);
+
+PER_PROVINCIA.FI.sport.push(
+  {
+    nome: "G.S. Unità Spinale Firenze ONLUS (Palarcobaleno)",
+    cosa: "Gestisce la palestra comunale Palarcobaleno, con attività motoria per persone con disabilità.",
+    dove: "Via Lunga 126/128, Firenze",
+    telefono: "345 7692805",
+    email: "infogsunispifionlus@gmail.com",
+    sito: "https://sport.comune.fi.it/luoghi-dello-sport/palestra-handicap-palarcobaleno",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "Il Ritrovo APS-ASD",
+    cosa: "Associazione di promozione sociale sportiva, nell'elenco degli erogatori della Società della Salute Firenze per la disabilità (provvedimento del 09/10/2026).",
+    dove: "Via San Michele a Rovezzano 10/A, 50136 Firenze (impianto in Viale Malta 8)",
+    telefono: "339 1936542",
+    email: "associazioneilritrovo@gmail.com",
+    comuni: ["firenze"],
+  },
+);
+
+PER_PROVINCIA.GE.volontariato.push({
+  nome: "Auto Mutuo Aiuto Disabili (Recco)",
+  cosa: "Gruppo di auto mutuo aiuto per persone con disabilità, nell'elenco delle associazioni del Comune di Recco. Altri recapiti non sono pubblicati.",
+  telefono: "0185 76147",
+  sito: "https://halleyweb.com/c010047/zf/index.php/associazioni/",
+  comuni: ["recco"],
+});
+
+// 05/11/2026: schede con stato VERIFICATO nella seconda ricerca (siti ufficiali, schede della Consulta di Firenze, elenchi dei Comuni).
+PER_PROVINCIA.FI = PER_PROVINCIA.FI ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.FI.volontariato.push(
+  {
+    nome: "Davide e Golia (sede di Firenze)",
+    cosa: "Servizi e inclusione per persone con disabilità. Ha una sede operativa anche a Scandicci.",
+    dove: "Via del Pesciolino 11d, 50145 Firenze",
+    telefono: "347 7985190 / 338 8866638",
+    email: "segreteria@davideegoliaonlus.it",
+    sito: "https://www.davideegoliaonlus.it",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "Davide e Golia (sede operativa di Scandicci)",
+    cosa: "Attività e servizi per persone con disabilità. La sede principale è a Firenze.",
+    dove: "Via del Padule 34, Scandicci",
+    telefono: "347 7985190 / 338 8866638",
+    email: "segreteria@davideegoliaonlus.it",
+    sito: "https://davideegoliaonlus.it",
+    comuni: ["scandicci"],
+  },
+  {
+    nome: "A.F.F.S.M. – Associazione Familiari per la Salute Mentale",
+    cosa: "Famiglie e salute mentale.",
+    dove: "Via Enrico Navigatore 17, 50127 Firenze",
+    telefono: "338 9180287",
+    email: "affsm_q5@yahoo.it",
+    sito: "http://www.coordinamentotoscanosalutementale.it/",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "AIABA – Autismo",
+    cosa: "Assistenza e percorsi per persone autistiche.",
+    dove: "Via Desiderio da Settignano 20, 50135 Firenze",
+    telefono: "055 697059",
+    email: "amministrazione@aiaba.it",
+    sito: "http://www.aiaba.it",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "AIAS Firenze",
+    cosa: "Tutela e inclusione delle persone con disabilità.",
+    dove: "Via R. Leoncavallo 20, 50127 Firenze",
+    telefono: "055 3215145",
+    email: "aiasfi02@libero.it",
+    sito: "http://www.aiasfirenze.it/",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "AISLA Firenze",
+    cosa: "Assistenza e sostegno alle persone con SLA e alle famiglie.",
+    dove: "Piazza Elia Dalla Costa 33, 50136 Firenze",
+    telefono: "348 1880933 / 334 7160938",
+    email: "segreteria@aislafirenze.it",
+    sito: "http://www.aislafirenze.it",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "ANMIL Firenze",
+    cosa: "Tutela delle persone con invalidità da lavoro.",
+    dove: "Via Benedetto Marcello 1, 50144 Firenze",
+    telefono: "055 19982720",
+    email: "firenze@anmil.it",
+    sito: "https://www.anmil.it/",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "ATE – Associazione Toscana Emofilici",
+    cosa: "Sostegno alle persone con emofilia e altre malattie emorragiche.",
+    dove: "Via del Campofiore 102, 50136 Firenze",
+    telefono: "375 6641339",
+    email: "info@ateodv.org",
+    sito: "http://www.ateodv.org",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "Autismo Firenze",
+    cosa: "Autonomia e inclusione delle persone autistiche.",
+    dove: "Via Giambologna 14, 50132 Firenze",
+    telefono: "055 4089345 / 349 8712477",
+    email: "info@autismofirenze.org",
+    sito: "http://www.autismofirenze.org",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "ENS Firenze – Ente Nazionale Sordi",
+    cosa: "Tutela e servizi per le persone sorde.",
+    dove: "Via Manzoni 13, 50121 Firenze",
+    telefono: "055 2260045",
+    sito: "https://firenze.ens.it/",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "FIADDA Toscana",
+    cosa: "Famiglie e persone con disabilità uditiva.",
+    dove: "Via delle Porte Nuove 33, 50144 Firenze",
+    telefono: "328 8211260 / 347 2928529",
+    email: "info@fiaddatoscana.org",
+    sito: "http://www.fiaddatoscana.org",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "LINAR",
+    cosa: "Laboratori e inclusione delle persone con disabilità.",
+    dove: "Via Villamagna 150, 50126 Firenze",
+    telefono: "055 6530230",
+    email: "linarfi@libero.it",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "PAMAPI – centro per adulti autistici",
+    cosa: "Cooperativa con centro e servizi per adulti con autismo.",
+    dove: "Via Bolognese 238, 50139 Firenze",
+    telefono: "055 400594 / 347 6762816",
+    email: "segreteria@pamapi-autismo.it",
+    sito: "http://www.pamapi-autismo.it/",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "Trisomia 21 (AT21)",
+    cosa: "Disabilità intellettive e genetiche: autonomia e riabilitazione.",
+    dove: "Viale Alessandro Volta 16/18, 50131 Firenze",
+    telefono: "055 5000458",
+    email: "at21@at21.it",
+    sito: "http://www.at21.it",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "UICI Firenze – Unione Italiana dei Ciechi e degli Ipovedenti",
+    cosa: "Diritti e servizi per ciechi e ipovedenti.",
+    dove: "Via Leonardo Fibonacci 5, 50131 Firenze",
+    telefono: "055 580319",
+    email: "uicfi@uici.it",
+    sito: "http://www.uicifirenze.it",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "UISS",
+    cosa: "Servizi sociali, anche nell'ambito della disabilità.",
+    dove: "Via Vittorio Corcos 15, 50142 Firenze",
+    telefono: "347 8856327 / 055 455273",
+    comuni: ["firenze"],
+  },
+  {
+    nome: "UNMS Toscana – Unione Nazionale Mutilati per Servizio",
+    cosa: "Tutela dei mutilati e degli invalidi per servizio.",
+    dove: "Via Piero Gianfigliazzi 7, 50124 Firenze",
+    telefono: "055 573490",
+    email: "toscana@unms.it",
+    sito: "https://www.unms.it/",
+    comuni: ["firenze"],
+  },
+);
+
+PER_PROVINCIA.PR = PER_PROVINCIA.PR ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.PR.volontariato.push(
+  {
+    nome: "Anffas Parma APS",
+    cosa: "Disabilità intellettive e del neurosviluppo, sostegno alle famiglie.",
+    dove: "Via Rudolf Jacobs 14, 43123 Parma",
+    telefono: "0521 261393",
+    email: "segreteria@anffasparma.it",
+    sito: "https://www.anffasparma.it",
+    comuni: ["parma"],
+  },
+  {
+    nome: "LIFC Emilia – Fibrosi cistica",
+    cosa: "Sostegno alle persone con fibrosi cistica e alle famiglie.",
+    dove: "Via Leonardo da Vinci 32, 43123 Parma",
+    telefono: "0521 775896 / 392 6704837",
+    email: "fibrosicisticaemilia@libero.it",
+    sito: "http://www.fibrosicisticaemilia.it",
+    comuni: ["parma"],
+  },
+  {
+    nome: "Prader-Willi Emilia-Romagna",
+    cosa: "Sostegno alle persone con sindrome di Prader-Willi e alle famiglie.",
+    dove: "Via Borgo Lalatta 3, 43121 Parma",
+    telefono: "329 5948248",
+    email: "info@praderwilliemiliaromagna.it",
+    sito: "http://www.praderwilliemiliaromagna.it",
+    comuni: ["parma"],
+  },
+);
+
+PER_PROVINCIA.PR = PER_PROVINCIA.PR ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.PR.volontariato.push({
+  nome: "AVES Parma – Emofilia e malattie emorragiche",
+  cosa: "Sostegno alle persone con emofilia e altre malattie emorragiche.",
+  dove: "c/o Azienda Ospedaliera, Via Gramsci 14, Parma",
+  telefono: "335 7558441",
+  email: "info@avesparma.it",
+  sito: "https://avesparma.it",
+  comuni: ["parma"],
+});
+PER_PROVINCIA.PR.sport.push(
+  {
+    nome: "ASD Sanseverina",
+    cosa: "Sport inclusivo, tra cui nuoto, bocce e calcio.",
+    dove: "Strada Mirandola 50, 43123 Parma",
+    telefono: "339 3020190",
+    email: "info@sanseverina.org",
+    sito: "https://sanseverina.org",
+    comuni: ["parma"],
+  },
+  {
+    nome: "CSI Parma",
+    cosa: "Formazione di operatori per lo sport inclusivo.",
+    dove: "Piazzale Matteotti 9, Parma",
+    telefono: "0521 281226",
+    email: "segreteria@csiparma.it",
+    sito: "https://csiparma.it",
+    comuni: ["parma"],
+  },
+);
+
+PER_PROVINCIA.VT = PER_PROVINCIA.VT ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.VT.volontariato.push(
+  {
+    nome: "Associazione di Solidarietà Falisca",
+    cosa: "Trasporto e sostegno a persone con disabilità. Indicata nell'albo comunale delle associazioni (pagina del 15/02/2026).",
+    dove: "Via Giuseppe Contadini snc, Montefiascone",
+    telefono: "0761 825955 / 320 8772487",
+    email: "solidarieta.falisca@alice.it",
+    comuni: ["montefiascone"],
+  },
+);
+
+PER_PROVINCIA.GE = PER_PROVINCIA.GE ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.GE.sport.push(
+  {
+    nome: "Lega Navale Italiana – Sezione di Camogli",
+    cosa: "Attività nautiche: partecipa alle iniziative inclusive NavigAbile 2026 del Comune di Camogli (31/08/2026).",
+    dove: "Via Scalo 1, 16032 Camogli",
+    telefono: "0185 771472 / 392 5473264",
+    email: "camogli@leganavale.it",
+    comuni: ["camogli"],
+  },
+);
+
+PER_PROVINCIA.GE = PER_PROVINCIA.GE ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.GE.volontariato.push(
+  {
+    nome: "Nuova Ecopsi APS",
+    cosa: "Assistenza alle persone con disabilità; partecipa anche alle attività inclusive del 2026.",
+    dove: "Via XXV Aprile 13/1, Recco",
+    telefono: "339 7283224",
+    comuni: ["recco"],
+  },
+);
+
+// APS Gazebo Sanità e Beni Comuni: promuove TutelApp nella provincia di Parma (segnalazione dell'8/11/2026).
+// Per ora solo nei Comuni parmensi segnalati come interessati (9/11/2026), con gli stessi recapiti già in app.
+PER_PROVINCIA.PR.volontariato.unshift({
+  ...GAZEBO,
+  province: undefined,
+  comuni: ["fornovo-di-taro", "collecchio", "borgo-val-di-taro", "medesano", "langhirano"],
+});
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",
     cosa: "Ogni provincia ha un CSV che conosce le associazioni del territorio: sul sito trovi quello della tua zona.",
     sito: "https://csvnet.it",
+  },
+  {
+    nome: "FISH – Federazione per i diritti delle persone con disabilità e famiglie",
+    cosa: "Federazione di associazioni che rappresenta le persone con disabilità e le famiglie, con federazioni regionali.",
+    dove: "Via Guidubaldo del Monte 61, 00197 Roma",
+    telefono: "06 78851262",
+    email: "presidenza@fishets.it",
+    sito: "https://fishets.it/contatti/",
+  },
+  {
+    nome: "ANMIC – Associazione Nazionale Mutilati e Invalidi Civili",
+    cosa: "Tutela e rappresenta le persone con invalidità civile e le assiste su riconoscimenti, prestazioni e discriminazioni. Ha sedi provinciali: l'elenco è sul sito.",
+    dove: "Via Crescenzio 2, Roma",
+    telefono: "06 76900100",
+    email: "presidenza@anmic.it",
+    sito: "https://anmic.org/index.php/area-riservata-sedi-provinciali",
+  },
+  {
+    nome: "ENS – Ente Nazionale Sordi",
+    cosa: "Rappresenta le persone sorde e promuove i loro diritti e l'inclusione, con sedi sul territorio.",
+    dove: "Via Gregorio VII 120, 00165 Roma",
+    telefono: "06 398051",
+    email: "protocollo@ens.it",
+    sito: "https://www.ens.it/le-nostre-sedi/",
+  },
+  {
+    nome: "UICI – Unione Italiana dei Ciechi e degli Ipovedenti",
+    cosa: "Sostiene le persone cieche e ipovedenti, anche con altre disabilità: autonomia, accessibilità, mobilità. Numero verde 800 682682, dal lunedì al venerdì dalle 9 alle 13. Ha sezioni regionali e provinciali.",
+    dove: "Via Borgognona 38-42, 00187 Roma",
+    telefono: "06 699881",
+    email: "segreteria@uici.it",
+    sito: "https://www.uiciechi.it/organizzazione/regioni/indiceregioni.asp",
+  },
+  {
+    nome: "Anffas – Associazione nazionale famiglie e persone con disabilità intellettive e del neurosviluppo",
+    cosa: "Promuove i diritti e la partecipazione delle persone con disabilità intellettive e relazionali e sostiene le famiglie. Nella pagina \"Dove siamo\" trovi l'associazione locale.",
+    dove: "Via Latina 20, 00179 Roma",
+    telefono: "06 3611524",
+    email: "nazionale@anffas.net",
+    sito: "https://www.anffas.net/it/chi-siamo/dove-siamo/",
+  },
+  {
+    nome: "ANGSA – Associazione Nazionale Genitori perSone con Autismo",
+    cosa: "Difende i diritti delle persone con autismo e delle loro famiglie. Il Telefono Blu (numero gratuito 800 03 18 19) risponde dal lunedì al venerdì dalle 9:30 alle 12:30; email telefonoblu@angsa.it.",
+    dove: "c/o FAIP, Via Filippo Corridoni 13, 00195 Roma",
+    telefono: "800 03 18 19",
+    email: "segreteria@angsa.it",
+    sito: "https://angsa.it/contatti/",
+  },
+  {
+    nome: "AISM – Associazione Italiana Sclerosi Multipla",
+    cosa: "Sostiene le persone con sclerosi multipla e promuove i loro diritti. Il numero verde è 800 803028. Nella pagina \"Dove in Italia\" trovi la sezione più vicina.",
+    dove: "Via Operai 40, 16149 Genova",
+    telefono: "800 803028",
+    email: "aism@aism.it",
+    sito: "https://www.aism.it",
+  },
+  {
+    nome: "UILDM – Unione Italiana Lotta alla Distrofia Muscolare",
+    cosa: "Sostiene le persone con distrofie muscolari e malattie neuromuscolari attraverso le sezioni locali. Numero verde Stella: 800 58 97 38.",
+    dove: "Via Vergerio 19, 35126 Padova",
+    telefono: "049 8021001",
+    email: "direzionenazionale@uildm.it",
+    sito: "https://uildm.org/sezioni/",
+  },
+  {
+    nome: "UNIAMO – Federazione Italiana Malattie Rare",
+    cosa: "Rappresenta le persone con malattia rara e le famiglie; il servizio SAIO offre ascolto, informazione e orientamento.",
+    dove: "Via Nomentana 133, Roma",
+    telefono: "06 4404773",
+    email: "segreteria@uniamo.org",
+    sito: "https://uniamo.org",
   },
 ];
 

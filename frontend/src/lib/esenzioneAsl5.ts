@@ -83,6 +83,8 @@ const DISTRETTO_17 = [
   "Calice al Cornoviglio", "Carrodano", "Deiva Marina", "Follo", "Framura",
   "Monterosso", "Monterosso al Mare", "Pignone", "Riccò del Golfo", "Riomaggiore",
   "Rocchetta Vara", "Sesta Godano", "Vernazza", "Zignago",
+  // Grafie ufficiali dei Comuni, diverse da quelle scritte dall'URP ("Borghetto Vara", "Rocchetta Vara")
+  "Borghetto di Vara", "Rocchetta di Vara",
 ];
 const DISTRETTO_18 = ["Portovenere", "La Spezia", "Lerici"];
 
