@@ -1,0 +1,270 @@
+{
+  "source": "frontend/src/config/comuni/demo/roma.ts",
+  "reason": "Riorganizzazione: bonus, avvisi e associazioni non appartengono a puntiSupporto. Conservare qui le schede in attesa di trasferimento nella struttura applicativa corretta.",
+  "entries": [
+    {
+      "originalIndex": 0,
+      "title": "Municipio VII · Progetto disabilità gravissima",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Municipio VII · Progetto disabilità gravissima\",\n      subtitle: \"Sede Appio, Via Tommaso Fortifiocca 71. Referente assistente sociale Daniela Ferrara, telefono 06 69609405, email daniela2.ferrara@comune.roma.it. Assegno di cura e contributo caregiver con valutazione multidimensionale e disponibilità delle risorse; servizio riservato ai residenti del Municipio VII.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/municipio-vii-uffici-e-contatti.page?contentId=UFF513958\" },\n    },"
+    },
+    {
+      "originalIndex": 1,
+      "title": "Municipio VIII · Segretariato Sociale e PUA",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Municipio VIII · Segretariato Sociale e PUA\",\n      subtitle: \"Coordinatrice Rosa Paolella. Telefoni 06 69611670 / 671; famiglie e minori 06 69611690; responsabile 06 69611624. Email pua.mun08@comune.roma.it. Sede e orari da verificare nella pagina istituzionale.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/amministrazione-trasparente-uffici.page?cpz=persone_anziane&mun=municipio_viii\" },\n    },"
+    },
+    {
+      "originalIndex": 2,
+      "title": "Municipio VIII · Domiciliarità, disabilità gravissima e Dopo di Noi",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Municipio VIII · Domiciliarità, disabilità gravissima e Dopo di Noi\",\n      subtitle: \"Referente assistente sociale Federica Cofani, tel. 06 69611623, email federica.cofani@comune.roma.it. Ufficio Assistenza Domiciliare Diretta, Disabilità Gravissima Diretta e Dopo Di Noi.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/amministrazione-trasparente-uffici.page?cpz=persone_anziane&mun=municipio_viii\" },\n    },"
+    },
+    {
+      "originalIndex": 3,
+      "title": "Roma · Disabilità gravissima: domanda in qualsiasi momento",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"document-text-outline\",\n      title: \"Roma · Disabilità gravissima: domanda in qualsiasi momento\",\n      subtitle: \"Roma Capitale indica che i nuovi utenti possono presentare domanda al Servizio Sociale o PUA del territorio in qualsiasi momento dell'anno, allegando certificazione specialistica, ISEE e documenti richiesti. Valutazione e assegnazione compatibili con risorse disponibili; i beneficiari già in carico non devono ripresentare automaticamente domanda.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117423&pagina=4\" },\n    },"
+    },
+    {
+      "originalIndex": 4,
+      "title": "Lazio · Dopo di Noi: consulenza notarile gratuita",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"document-text-outline\",\n      title: \"Lazio · Dopo di Noi: consulenza notarile gratuita\",\n      subtitle: \"La Regione Lazio ha attivato uno sportello di consulenza notarile gratuita su trust, vincoli di destinazione e fondi speciali, presso Via Rosa Raimondi Garibaldi 7, Roma, piano 12, stanza 88. Appuntamenti secondo calendario regionale, da richiedere via email al notaio indicato entro il venerdì precedente; verificare le date disponibili.\",\n      action: { type: \"web\", value: \"https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/dopo-di-noi\" },\n    },"
+    },
+    {
+      "originalIndex": 5,
+      "title": "Municipio IX · Welfare di accesso, Segretariato Sociale e PUA",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"Municipio IX · Welfare di accesso, Segretariato Sociale e PUA\",\n      subtitle: \"L'ufficio Welfare di Accesso ai Servizi Sociali e Sociosanitari accoglie persone con disabilità, minori, adulti e anziani, orienta verso Municipio e ASL Roma 2 e fornisce modulistica. Sede, telefoni e orari: verificare nella pagina ufficiale dell'ufficio.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/municipio-ix-uffici-e-contatti.page?contentId=UFF31871\" },\n    },"
+    },
+    {
+      "originalIndex": 6,
+      "title": "Municipio IV · Caregiver: misure 2026–2027",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"calendar-outline\",\n      title: \"Municipio IV · Caregiver: misure 2026–2027\",\n      subtitle: \"Avviso per caregiver residenti nel Municipio IV, formalmente riconosciuti con CardGiver, con servizi di sollievo o rimborso spese. Il Comune ha pubblicato FAQ e proroga il 22/10/2026: controllare la scadenza aggiornata nell'avviso, non utilizzare quella originaria.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/bando-concorso.page?contentId=BEC1653936\" },\n    },"
+    },
+    {
+      "originalIndex": 7,
+      "title": "Regione Lazio · Vita indipendente",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"home-outline\",\n      title: \"Regione Lazio · Vita indipendente\",\n      subtitle: \"Per persone adulte con disabilità dai 18 ai 64 anni: progetti personalizzati che possono comprendere aiuto personale, trasporto, abitare autonomo e domotica. Domande accolte dai PUA territoriali, con valutazione dei bisogni da parte dei servizi e UVM. Pagina regionale verificata 04/03/2026.\",\n      action: { type: \"web\", value: \"https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/vita-indipendente\" },\n    },"
+    },
+    {
+      "originalIndex": 8,
+      "title": "Regione Lazio · Dopo di Noi e progetto personalizzato",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"home-outline\",\n      title: \"Regione Lazio · Dopo di Noi e progetto personalizzato\",\n      subtitle: \"Interventi per persone con disabilità grave prive del sostegno familiare: percorsi di autonomia, sostegno alla domiciliarità, soluzioni abitative e sviluppo competenze. Accesso attraverso l'Ambito sovradistrettuale e valutazione multidimensionale. Non è un bonus automatico.\",\n      action: { type: \"web\", value: \"https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/dopo-di-noi\" },\n    },"
+    },
+    {
+      "originalIndex": 9,
+      "title": "Regione Lazio · Riconoscimento caregiver familiare",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Regione Lazio · Riconoscimento caregiver familiare\",\n      subtitle: \"La Regione pubblica procedure e modulistica per il riconoscimento formale del caregiver e i riferimenti della legge regionale 5/2024. Le misure economiche e i servizi di sollievo dipendono dagli avvisi del territorio: verificare sempre il proprio Municipio o Distretto.\",\n      action: { type: \"web\", value: \"https://www.regione.lazio.it/cittadini/sociale-famiglie/caregiver-familiare\" },\n    },"
+    },
+    {
+      "originalIndex": 10,
+      "title": "Roma Capitale · Avvisi disabilità per Municipio",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"calendar-outline\",\n      title: \"Roma Capitale · Avvisi disabilità per Municipio\",\n      subtitle: \"Elenco ufficiale aggiornato di bandi, graduatorie e avvisi per persone con disabilità, filtrabile per Municipio. La pubblicazione di una graduatoria non significa apertura di nuove domande; verificare date e destinatari nel singolo avviso.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/bandi-e-concorsi.page?mun=municipio&tem=disabilita\" },\n    },"
+    },
+    {
+      "originalIndex": 11,
+      "title": "Municipio II · PUA e Segretariato Sociale",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"Municipio II · PUA e Segretariato Sociale\",\n      subtitle: \"Ufficio PUA, Segretariato Sociale e Integrazione Socio Sanitaria. Telefoni 06 69602598 / 2605 / 2600 / 2599 e 06 77303708. Email pua.mun02@comune.roma.it. Responsabile indicata: Katia Vitri. Orari e sede operativa da verificare sul portale ufficiale.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/amministrazione-trasparente-uffici.page?cpz=persone_anziane&mun=municipio_ii\" },\n    },"
+    },
+    {
+      "originalIndex": 12,
+      "title": "Municipio II · Disabilità, SAISH, Dopo di Noi e caregiver",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Municipio II · Disabilità, SAISH, Dopo di Noi e caregiver\",\n      subtitle: \"Il Municipio II distingue gli uffici per SAISH e progetti autismo, autonomia/Dopo di Noi e disabilità gravissima/caregiver. Controlla gli uffici e i contatti aggiornati prima di presentare domanda.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/municipio-ii-uffici-e-contatti.page\" },\n    },"
+    },
+    {
+      "originalIndex": 13,
+      "title": "Municipio III · Segretariato Sociale e prima accoglienza",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"Municipio III · Segretariato Sociale e prima accoglienza\",\n      subtitle: \"Via Umberto Fracchia 45, piano terra; telefono 06 69604652 / 653; martedì 8:30–12:30, giovedì 8:30–12:30 e 14–16 (orari da newsletter istituzionale 06/2025: riconfermare). Contatto ufficio Irene Dettori, irene.dettori@comune.roma.it.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/amministrazione-trasparente-uffici.page?cpz=persone_anziane&mun=municipio_iii\" },\n    },"
+    },
+    {
+      "originalIndex": 14,
+      "title": "Municipio IV · Segretariato Sociale",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"Municipio IV · Segretariato Sociale\",\n      subtitle: \"Via Tiburtina 1163, ingresso B, piano terra; su appuntamento. Tel. 06 69605430 / 34 / 605; segretariatosociale.mun04@comune.roma.it. Orari dettagliati nella newsletter istituzionale 06/2025: confermarli prima di recarsi.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web-resources/cms/documents/Newsletter_Spazio_Comune_2_giugno_2025.pdf\" },\n    },"
+    },
+    {
+      "originalIndex": 15,
+      "title": "Municipio V · PUA ASL Roma 2",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"Municipio V · PUA ASL Roma 2\",\n      subtitle: \"Casa della Salute S. Caterina della Rosa, Via N. Forteguerri 4; tel. 06 51007426 / 8525; pua.distretto5@aslroma2.it. Orari dalla newsletter istituzionale 06/2025: mar 9–13 e 15–17, gio 9–15, ven 9–13. Confermare prima di recarsi.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web-resources/cms/documents/Newsletter_Spazio_Comune_2_giugno_2025.pdf\" },\n    },"
+    },
+    {
+      "originalIndex": 16,
+      "title": "Municipio VI · Avviso sollievo caregiver 2026",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"calendar-outline\",\n      title: \"Municipio VI · Avviso sollievo caregiver 2026\",\n      subtitle: \"Avviso pubblicato il 28/10/2026 per caregiver formalmente riconosciuti con CardGiver. Domanda tramite protocollo Municipio VI o PEC, entro il 15° giorno dalla pubblicazione; verificare nel testo dell'avviso il termine effettivo. Documenti: moduli A/B, CardGiver, ISEE, documento identità.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/bando-concorso.page?contentId=BEC1663991\" },\n    },"
+    },
+    {
+      "originalIndex": 17,
+      "title": "Lazio · CardGiver e riconoscimento caregiver",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Lazio · CardGiver e riconoscimento caregiver\",\n      subtitle: \"Per il riconoscimento dello status di caregiver familiare rivolgersi allo Sportello Caregiver del PUA di residenza. Dopo valutazione UVMD è prevista la CardGiver. Informazioni regionali: 06 99500. Fonte Salute Lazio, letta 09/11/2026.\",\n      action: { type: \"web\", value: \"https://salutelazio.it/it/servizi/sostegno-ai-caregiver\" },\n    },"
+    },
+    {
+      "originalIndex": 18,
+      "title": "Lazio · budget personale caregiver (fino a 1.000 euro/anno)",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"cash-outline\",\n      title: \"Lazio · budget personale caregiver (fino a 1.000 euro/anno)\",\n      subtitle: \"La Regione descrive un budget personale di 1.000 euro/anno per caregiver con ISEE inferiore a 24.000 euro, destinato a formazione, tempo libero e cura personale. Per modalità di accesso e disponibilità effettiva rivolgersi al PUA: non è un pagamento automatico. Fonte Salute Lazio, 09/11/2026.\",\n      action: { type: \"web\", value: \"https://salutelazio.it/it/servizi/sostegno-ai-caregiver\" },\n    },"
+    },
+    {
+      "originalIndex": 19,
+      "title": "Lazio · sollievo caregiver e sostituzione temporanea",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"home-outline\",\n      title: \"Lazio · sollievo caregiver e sostituzione temporanea\",\n      subtitle: \"Rimborso fino a 500 euro/anno, o fino a 600 euro in caso di disabilità complessa, per assistenza sostitutiva programmata; previste anche misure per emergenze. Verificare attivazione e requisiti presso PUA/Sportello Caregiver. Fonte Salute Lazio, 09/11/2026.\",\n      action: { type: \"web\", value: \"https://salutelazio.it/it/servizi/sostegno-ai-caregiver\" },\n    },"
+    },
+    {
+      "originalIndex": 20,
+      "title": "Municipio XII · Sportello Caregiver",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"Municipio XII · Sportello Caregiver\",\n      subtitle: \"Via Fabiola 14, primo piano, stanze 1.18/1.19. Martedì e mercoledì 8:30–13:00 e 14:00–17:00; altri giorni su appuntamento. Offre orientamento e raccoglie le domande di riconoscimento caregiver. Fonte Roma Capitale, 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF1037074\" },\n    },"
+    },
+    {
+      "originalIndex": 21,
+      "title": "Municipio VI · Ufficio Settore Disabilità",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Municipio VI · Ufficio Settore Disabilità\",\n      subtitle: \"Viale Duilio Cambellotti 11. Segue SAISH adulti e minori, disabilità gravissima, caregiver, OEPAC, autismo, Dopo di Noi, vita indipendente e centri diurni. Referente: Annalisa Montagnoli, tel. 06 69608946. Fonte Roma Capitale, 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=UFF28713\" },\n    },"
+    },
+    {
+      "originalIndex": 22,
+      "title": "Roma · Segretariato Sociale e PUA di tutti i Municipi",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"Roma · Segretariato Sociale e PUA di tutti i Municipi\",\n      subtitle: \"Indice ufficiale degli uffici dei Municipi I–XV per orientamento, assistenza e domande sociali. I recapiti specifici vanno verificati nella pagina di ciascun ufficio. Fonte Roma Capitale, 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF87122\" },\n    },"
+    },
+    {
+      "originalIndex": 23,
+      "title": "Regione Lazio · riconoscimento del caregiver familiare",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Regione Lazio · riconoscimento del caregiver familiare\",\n      subtitle: \"Norme, procedura di riconoscimento, modulistica e misure di sostegno; l'accesso alle iniziative concrete dipende dagli avvisi territoriali. Verifica 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.regione.lazio.it/cittadini/sociale-famiglie/caregiver-familiare\" },\n    },"
+    },
+    {
+      "originalIndex": 24,
+      "title": "Regione Lazio · Vita indipendente (18–64 anni)",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"home-outline\",\n      title: \"Regione Lazio · Vita indipendente (18–64 anni)\",\n      subtitle: \"Progetti personalizzati per autonomia, assistenza personale, trasporto e soluzioni abitative; domanda e valutazione attraverso PUA e distretti. Non è un bonus a erogazione automatica. Verifica 09/11/2026.\",\n      action: { type: \"web\", value: \"https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/vita-indipendente\" },\n    },"
+    },
+    {
+      "originalIndex": 25,
+      "title": "Regione Lazio · disabilità gravissima e assistenza domiciliare",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"medkit-outline\",\n      title: \"Regione Lazio · disabilità gravissima e assistenza domiciliare\",\n      subtitle: \"Servizi domiciliari, assegno di cura e contributo di cura secondo valutazione e requisiti; gestione territoriale tramite distretti. Verifica 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.regione.lazio.it/cittadini/sociale-famiglie/disabilita/disabilita-gravissima\" },\n    },"
+    },
+    {
+      "originalIndex": 26,
+      "title": "Regione Lazio · Dopo di Noi",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"home-outline\",\n      title: \"Regione Lazio · Dopo di Noi\",\n      subtitle: \"Accesso agli interventi per persone con disabilità grave prive del sostegno familiare attraverso gli Ambiti territoriali, con valutazione UVM e progetto personalizzato. Verifica 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.regione.lazio.it/cittadini/sociale-famiglie/disabilita/dopo-di-noi\" },\n    },"
+    },
+    {
+      "originalIndex": 27,
+      "title": "Regione Lazio · sostegno domiciliare per persone con SLA",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Regione Lazio · sostegno domiciliare per persone con SLA\",\n      subtitle: \"Interventi e misure economiche o assistenziali gestite territorialmente; consultare condizioni e accesso nella pagina ufficiale. Verifica 09/11/2026.\",\n      action: { type: \"web\", value: \"https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/sla\" },\n    },"
+    },
+    {
+      "originalIndex": 28,
+      "title": "Autismo · socializzazione fino a 21 anni (scadenza 12 novembre 2026)",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"calendar-outline\",\n      title: \"Autismo · socializzazione fino a 21 anni (scadenza 12 novembre 2026)\",\n      subtitle: \"Per minori e giovani fino a 21 anni con disturbo dello spettro autistico: 500 euro al mese fino a 12 mensilità, nei limiti delle risorse. Domanda al Municipio di residenza entro il 12/11/2026; Diverso dall'avviso per trattamenti educativi 0–17 anni scaduto il 05/11/2026. Da archiviare dopo la scadenza secondo la regola dei 10 giorni. Verifica 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/informazione-di-servizio.page?contentId=IDS1655727\" },\n    },"
+    },
+    {
+      "originalIndex": 29,
+      "title": "Municipio I · PUA Eroi (Prati)",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"Municipio I · PUA Eroi (Prati)\",\n      subtitle: \"Casa della Comunità Eroi, Via Fra Albenzio 10. Lun–ven 8:30–12:30. Tel. 06 60105419 / 06 60105582 / 06 60105418; messaggi 338 5080024. Email segretariatosociale.mun1@comune.roma.it e pua1@aslroma1.it. Fonte Roma Capitale, 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF30480\" },\n    },"
+    },
+    {
+      "originalIndex": 30,
+      "title": "Municipio I · PUA Nuovo Regina Margherita (Trastevere)",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"Municipio I · PUA Nuovo Regina Margherita (Trastevere)\",\n      subtitle: \"Casa della Comunità Nuovo Regina Margherita, Via Roma Libera 76. Lun–ven 8:30–12:30. Tel. 06 60106473 / 475 / 484 / 485; messaggi 366 6603044. Email pua1@aslroma1.it. Fonte Roma Capitale, 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF30480\" },\n    },"
+    },
+    {
+      "originalIndex": 31,
+      "title": "Municipio I · PUA Esquilino (sede in apertura)",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"Municipio I · PUA Esquilino (sede in apertura)\",\n      subtitle: \"Via Luigi Luzzatti 8. La pagina istituzionale riporta martedì e giovedì 8:30–12:30, mercoledì 14:30–17:30, ma indica sede in via di apertura: verificare telefonicamente prima di andare. Fonte Roma Capitale, 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF30480\" },\n    },"
+    },
+    {
+      "originalIndex": 32,
+      "title": "Municipio I · Segretariato Sociale Petroselli",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Municipio I · Segretariato Sociale Petroselli\",\n      subtitle: \"Via Luigi Petroselli 50, primo piano. Lun/mer/ven 9–13; mar/gio 9–13 e 14–16. Tel. 06 69601665; segretariatosociale.mun1@comune.roma.it. Orientamento, pratiche sociali, agevolazioni tariffarie e richieste sosta disabili. Fonte Roma Capitale, 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF30480\" },\n    },"
+    },
+    {
+      "originalIndex": 33,
+      "title": "Municipio I · Assistenza domiciliare SAISH e SAISA",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"home-outline\",\n      title: \"Municipio I · Assistenza domiciliare SAISH e SAISA\",\n      subtitle: \"SAISH: assistenza domiciliare per persone con disabilità; SAISA: per anziani con autonomia limitata. Il servizio sociale municipale valuta il bisogno insieme alla ASL e definisce il piano individuale. Chiedi accesso al PUA/Segretariato del Municipio I. Fonte Roma Capitale, 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web-resources/cms/documents/20240808_DIAPOSITIVE_Segretariato_Sociale_PUA.pdf\" },\n    },"
+    },
+    {
+      "originalIndex": 34,
+      "title": "Roma · Disabilità gravissima: domanda e documenti",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"document-text-outline\",\n      title: \"Roma · Disabilità gravissima: domanda e documenti\",\n      subtitle: \"Domanda ai Servizi Sociali o PUA del Municipio durante l'anno. Allegare certificazione specialistica pubblica, ISEE ordinario e sociosanitario, documenti di identità, tessera sanitaria, certificazioni invalidità/accompagnamento e L.104 art.3 c.3, secondo la scheda ufficiale. Valutazione multidisciplinare e disponibilità fondi. Fonte Roma Capitale, 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117440\" },\n    },"
+    },
+    {
+      "originalIndex": 35,
+      "title": "Municipio XIII · Segretariato Sociale",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"Municipio XIII · Segretariato Sociale\",\n      subtitle: \"Per orientamento e aiuto con le domande: 06 69618600 / 06 69618604; segretariatosociale.mun13@comune.roma.it. Consultare il sito municipale per appuntamento. Verifica 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/bando-concorso.page?contentId=BEC1656054\" },\n    },"
+    },
+    {
+      "originalIndex": 36,
+      "title": "Municipio XV · PUA e bandi sociali",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"Municipio XV · PUA e bandi sociali\",\n      subtitle: \"Informazioni PUA: pua.mun15@comune.roma.it. Gli avvisi del Municipio XV, compresi quelli per la disabilità, sono nella pagina ufficiale; verificare la scadenza del singolo avviso. Verifica 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/bandi-e-concorsi.page?mun=municipio_xv&tem=disabilita\" },\n    },"
+    },
+    {
+      "originalIndex": 37,
+      "title": "Assegno di cura per disabilità gravissima · Roma Capitale",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"cash-outline\",\n      title: \"Assegno di cura per disabilità gravissima · Roma Capitale\",\n      subtitle: \"Da 500 a 800 euro mensili secondo ISEE e servizi attivi. Domanda presso Servizi Sociali o PUA del proprio Municipio in qualsiasi momento dell'anno; erogazione secondo requisiti e risorse disponibili. Fonte verificata 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117423\" },\n    },"
+    },
+    {
+      "originalIndex": 38,
+      "title": "Contributo di cura per caregiver familiare · Roma Capitale",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Contributo di cura per caregiver familiare · Roma Capitale\",\n      subtitle: \"Da 400 a 700 euro mensili per disabilità gravissima assistita dal caregiver, secondo ISEE e servizi attivi. Domanda presso Servizi Sociali o PUA del Municipio durante l'anno; disponibilità subordinata alle risorse. Fonte verificata 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117423&pagina=4\" },\n    },"
+    },
+    {
+      "originalIndex": 39,
+      "title": "Dopo di Noi · progetto di autonomia abitativa",
+      "status": "da_ricollocare",
+      "original_entry": "    {\n      icon: \"home-outline\",\n      title: \"Dopo di Noi · progetto di autonomia abitativa\",\n      subtitle: \"Percorsi personalizzati per persone con disabilità grave prive di adeguato sostegno familiare. Roma Capitale ha attivato il servizio di domanda online; verificare requisiti e stato della procedura sul portale. Fonte verificata 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF1550524&stem=persone_con_disabilita\" },\n    },"
+    },
+    {
+      "originalIndex": 40,
+      "title": "Trova il PUA e i Servizi Sociali del tuo Municipio (I–XV)",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"location-outline\",\n      title: \"Trova il PUA e i Servizi Sociali del tuo Municipio (I–XV)\",\n      subtitle: \"Roma comprende 15 Municipi: per assegni di cura e assistenza occorre rivolgersi al proprio PUA o Servizio Sociale. La pagina ufficiale elenca i riferimenti municipali. Fonte verificata 09/11/2026.\",\n      action: { type: \"web\", value: \"https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117423&pagina=5\" },\n    },"
+    },
+    {
+      "originalIndex": 41,
+      "title": "Punto Unico di Accesso (PUA), ASL Roma 1",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"people-outline\",\n      title: \"Punto Unico di Accesso (PUA), ASL Roma 1\",\n      subtitle: \"Accoglienza e orientamento ai servizi sociali e sanitari, creato da Distretto e Municipio. Ci si va di persona, con una persona di fiducia, o per telefono e email. Sul sito trovi le sedi dei Distretti 1, 2, 3, 13, 14 e 15 con telefoni e orari\",\n      action: { type: \"web\", value: \"https://www.aslroma1.it/punto-unico-accesso\" },\n    },"
+    },
+    {
+      "originalIndex": 42,
+      "title": "Agenzia per la Vita Indipendente di Roma Capitale",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"home-outline\",\n      title: \"Agenzia per la Vita Indipendente di Roma Capitale\",\n      subtitle: \"Informazioni e consulenze su assistenza, casa, fisco, invalidità, lavoro, mobilità e scuola, con sedi Roma 1, 2 e 3. Roma 1: via Prospero Santacroce 5, tel. 06 98261600 (int. 202) per prenotare un colloquio\",\n      action: { type: \"tel\", value: \"0698261600\" },\n    },"
+    },
+    {
+      "originalIndex": 43,
+      "title": "ASL Roma 1",
+      "status": "resta_in_supporto",
+      "original_entry": "    {\n      icon: \"medkit-outline\",\n      title: \"ASL Roma 1\",\n      subtitle: \"Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio\",\n      action: { type: \"web\", value: \"https://www.aslroma1.it\" },\n    },"
+    }
+  ]
+}
