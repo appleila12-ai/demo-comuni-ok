@@ -80,3 +80,20 @@ export function linkMailto(r: RichiestaComune): string {
   ].join("&");
   return `mailto:${encodeURIComponent(r.a).replace(/%40/g, "@")}?${parametri}`;
 }
+
+/**
+ * Mail già compilata per chiedere a TutelApp di inserire un Comune che ha solo la scheda minima
+ * (nome, provincia, regione). La persona la vede e la invia lei: l'app non manda nulla da sola e
+ * nella mail non ci sono dati personali, solo il Comune.
+ */
+export function linkMailtoInserimentoComune(c: ComuneConfig): string {
+  const oggetto = `Vorrei TutelApp nel Comune di ${c.nomeBreve}`;
+  const testo = [
+    "Buongiorno,",
+    "",
+    `uso TutelApp e vorrei che il Comune di ${c.nomeBreve} (${c.provincia}, ${c.regione}) fosse inserito con i recapiti dei suoi servizi sociali, le agevolazioni e le associazioni del territorio.`,
+    "",
+    "Grazie.",
+  ].join("\r\n");
+  return `mailto:${CONTATTO_TUTELAPP}?subject=${encodeURIComponent(oggetto)}&body=${encodeURIComponent(testo)}`;
+}
