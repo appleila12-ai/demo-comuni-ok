@@ -189,7 +189,8 @@ export const NOTA_DISTRETTO_19 = [
 /**
  * Comuni della provincia della Spezia che NON fanno capo all'ASL 5 ma all'ASL 4 (Chiavarese).
  * Fonte: risposta scritta dell'URP ASL 5 del 09/11/2026 («appartiene ad ASL 5 solo Ortonovo, mentre i
- * restanti afferiscono ad ASL 4», riferito a Carro, Maissana, Varese Ligure e Ortonovo).
+ * restanti afferiscono ad ASL 4», riferito a Carro, Maissana, Varese Ligure e Ortonovo: l'URP usa il
+ * vecchio nome, oggi il Comune si chiama Luni e resta ASL 5).
  * Per questi Comuni la scheda ASL 5 non vale: l'ASL 4 non ha ancora risposto sugli sportelli.
  */
 const COMUNI_ASL4_IN_PROVINCIA_SP = ["Carro", "Maissana", "Varese Ligure"];

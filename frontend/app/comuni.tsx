@@ -55,7 +55,7 @@ function cerca(query: string): Risultato[] {
 
   const risultati: Risultato[] = [];
   for (const c of tutti) {
-    const campi = [c.nome, c.nomeBreve, c.provincia, c.regione].map(norm);
+    const campi = [c.nome, c.nomeBreve, ...(c.nomiPrecedenti ?? []), c.provincia, c.regione].map(norm);
     if (campi.some((f) => f.includes(q))) {
       risultati.push({ comune: c });
       continue;
