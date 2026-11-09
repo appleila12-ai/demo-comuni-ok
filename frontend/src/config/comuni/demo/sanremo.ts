@@ -34,6 +34,37 @@ export const sanremo: ComuneConfig = {
   },
 
   puntiSupporto: [
+    // Fonte: Comune di Sanremo, pagine istituzionali lette il 09/11/2026.
+    {
+      icon: "bus-outline",
+      title: "Sanremo · Disability Card per trasporto pubblico gratuito",
+      subtitle: "Dal 2025 Riviera Trasporti riconosce la Carta europea della disabilità per viaggiare gratuitamente nel trasporto pubblico locale, secondo la convenzione comunicata dal Comune. L'avviso comunale indica invalidità almeno del 67%, indipendentemente dal reddito. La carta si richiede all'INPS. Informazioni Servizi Sociali: 0184 529069.",
+      action: { type: "web", value: "https://comune.sanremo.im.it/it/news/104702/attivata-la-disability-card-che-sostituira-gli-abbonamenti-mensili-gratuiti-al-trasporto-pubblico-locale" },
+    },
+    {
+      icon: "people-outline",
+      title: "Sanremo · Tavolo permanente sulla disabilità",
+      subtitle: "Il Comune ha avviato un Tavolo di confronto con associazioni e Terzo settore su bisogni, servizi e Progetti di Vita. L'avviso di candidatura del 2025 è scaduto: questa scheda è informativa, non un invito a presentare domanda. Fonte comunale del 26/08/2025.",
+      action: { type: "web", value: "https://www.comune.sanremo.im.it/it/news/104706/pubblicato-l-avviso-per-individuare-i-soggetti-del-terzo-settore-e-delle-associazioni-del-tavolo-permanente-sulla-disabilita" },
+    },
+    {
+      icon: "home-outline",
+      title: "Sanremo · Welfare di Comunità",
+      subtitle: "Servizio comunale per interventi sociali e integrazione sociosanitaria, con attività collegate a Casa Serena. Responsabile Dario Belmonte; sede Corso Garibaldi 30, tel. 0184 52901. Fonte Comune, aggiornata 01/04/2026.",
+      action: { type: "web", value: "https://www.comune.sanremo.im.it/it/unita_organizzative/minori-famiglie-e-welfare-di-comunita" },
+    },
+    {
+      icon: "cash-outline",
+      title: "Sanremo · Bonus affitti 2026",
+      subtitle: "Il Comune segnala dal 26/10/2026 la procedura online per i contributi affitto. Requisiti, documenti e scadenza vanno verificati nell'avviso dedicato prima della domanda; non è una misura esclusiva per la disabilità.",
+      action: { type: "web", value: "https://www.comune.sanremo.im.it/it/topics/assistenza-sociale" },
+    },
+    {
+      icon: "cash-outline",
+      title: "Sanremo · Carta Dedicata a Te 2026",
+      subtitle: "Dal 03/11/2026 il Comune segnala l'elenco dei beneficiari e le informazioni per il ritiro negli uffici postali. Non è una domanda aperta a tutti: verificare il proprio nominativo e i requisiti sul portale comunale.",
+      action: { type: "web", value: "https://www.comune.sanremo.im.it/it/topics/assistenza-sociale" },
+    },
     // Approfondimento ASL1 da fonti ufficiali consultate il 09/11/2026.
     {
       icon: "medkit-outline",
