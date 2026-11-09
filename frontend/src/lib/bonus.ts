@@ -64,44 +64,6 @@ export const STATO_BONUS: Record<StatoBonus, { etichetta: string; spiegazione: s
 };
 
 export const BONUS: Bonus[] = [
-  // ------------------------------------------------------------------ LIGURIA
-  {
-    id: "liguria-dopo-di-noi-2026",
-    regione: "Liguria",
-    titolo: "Dopo di Noi (fondi FSE+)",
-    perChi:
-      "Adulti da 18 a 65 anni con disabilità riconosciuta (Legge 104/1992 o nuova certificazione D.Lgs. 62/2024), non dovuta all'invecchiamento, che hanno perso il sostegno familiare o rischiano di perderlo.",
-    cosa: "Interventi per il Dopo di Noi secondo il proprio progetto assistenziale (PAI). Priorità a chi è già stato valutato dall'UVM per il Dopo di Noi.",
-    stato: "chiuso",
-    quando: "Domande raccolte dal 1 maggio al 30 giugno 2026.",
-    comeSiChiede: "Modulo all'Ambito Territoriale Sociale di riferimento, con documento d'identità.",
-    fonte: {
-      label: "Regione Liguria · informativa per i cittadini",
-      url: "https://finale-ligure-api.municipiumapp.it/s3/2788/allegati/informativa-per-cittadini-dopo-di-noi-fse.pdf",
-    },
-    verificatoIl: "06/10/2026",
-    nota: "Chiedi all'Ambito se il bando sarà riaperto.",
-  },
-  {
-    id: "liguria-bonus-badanti-gravissima-2026",
-    regione: "Liguria",
-    titolo: "Bonus badanti, prestazioni per la gravissima disabilità e bonus baby sitter (edizione 2026)",
-    perChi:
-      "Privati cittadini residenti in Liguria. Requisiti, importi e soglie ISEE sono nella deliberazione della Giunta regionale n. 345 del 6 agosto 2026.",
-    cosa:
-      "Tre misure della Regione. Bonus assistenti familiari (badanti): 600 euro al mese per chi non riceve il fondo grave disabilità, 250 euro al mese per chi lo riceve già, con ISEE sociosanitario ordinario fino a 35.000 euro. Prestazioni integrate per la gravissima disabilità: fino a 1.200 euro al mese per chi non riceve il bonus badanti, con ISEE fino a 50.000 euro (65.000 per i minorenni). Bonus baby sitter: 350 euro al mese, per figli fino a 15 anni (18 con disabilità), ISEE fino a 35.000 euro.",
-    stato: "chiuso",
-    quando: "Domande dal 1 settembre 2026 alle ore 17.30 del 15 ottobre 2026. Finanziamento fino a esaurimento dei fondi.",
-    comeSiChiede:
-      "Solo online, con SPID o CIE, sul sistema Bandi on line di Filse. Assistenza informatica: infobandi@filse.it (lunedì–venerdì, 8.30–17.30).",
-    fonte: {
-      label: "Regione Liguria · Bonus badanti, gravissima disabilità e baby sitter 2026",
-      url: "https://www.regione.liguria.it/homepage-bandi-e-avvisi/publiccompetition/4711:bonus-badanti-grave-disabilita-baby-sitter-2026.html",
-    },
-    verificatoIl: "25/10/2026",
-    nota: "Importi dal comunicato della Giunta regionale \"Welfare, 7 milioni di euro per bonus badanti e baby sitter\". Pagina pubblicata dalla Regione il 10/08/2026. Il termine per le domande è scaduto: chiedi al Comune o al Distretto se ci saranno nuove aperture.",
-  },
-
   // ------------------------------------------------------------ COMUNE DI SARZANA
   {
     id: "sarzana-vita-indipendente-dgr-446",
@@ -371,8 +333,6 @@ export const BONUS: Bonus[] = [
     nota: "Il termine è scaduto: chiedi ai Servizi Sociali quando uscirà il prossimo bando.",
   },
 
-  // ------------------------------------------- DISTRETTO SOCIOSANITARIO 18
-
   // ------------------------------------------------------------------ SICILIA
   {
     id: "sicilia-disabilita-gravissima",
@@ -456,26 +416,6 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "30/10/2026",
     nota: "Il 31 ottobre 2026 è un sabato: se devi presentare la prima domanda, non aspettare l'ultimo giorno. Chi rientra tra gli ex \"gravi\" (ex Misura B2) ha un ISEE sociosanitario fino a 25.000 euro (ISEE ordinario fino a 40.000 euro per i minorenni) e presenta la domanda all'Ambito territoriale sociale, con date proprie. Gli importi vengono dalla pagina di Lombardia Facile dedicata alla DGR 6320 del 15/06/2026; la pagina della Regione non scrive gli importi.",
-  },
-  {
-    id: "lombardia-barriere-architettoniche-2026",
-    regione: "Lombardia",
-    titolo: "Contributi per eliminare le barriere architettoniche in casa (Legge 13/1989)",
-    perChi:
-      "Persone con disabilità che devono eliminare barriere architettoniche nell'abitazione in cui vivono. I requisiti precisi sono quelli del bando del tuo Comune.",
-    cosa:
-      "Contributo per i lavori di eliminazione delle barriere architettoniche. La Regione ha stanziato 1,1 milioni di euro per il fabbisogno 2026 (deliberazione n. 6943 del 19 ottobre 2026) e ha trasferito i fondi ai Comuni. La pagina non scrive l'importo per persona.",
-    stato: "chiuso",
-    quando:
-      "Le domande per il 2026 si presentavano al Comune entro febbraio 2026. I fondi sono già stati assegnati ai Comuni.",
-    comeSiChiede:
-      "Si presenta la domanda al Comune di residenza. Il contributo viene pagato dopo la fine dei lavori, con le fatture quietanzate. Se hai già presentato la domanda, chiedi al Comune a che punto è.",
-    fonte: {
-      label: "Regione Lombardia · Contributi per l'eliminazione delle barriere architettoniche",
-      url: "https://www.regione.lombardia.it/politiche-sociali-e-abitative/disabilita/barriere-architettoniche/contributi-eliminazione-barriere-architettoniche",
-    },
-    verificatoIl: "30/10/2026",
-    nota: "Per la prossima finestra chiedi al tuo Comune: non è scritta una data sulla pagina della Regione.",
   },
   {
     id: "lombardia-dopo-di-noi",
@@ -864,48 +804,6 @@ export const BONUS: Bonus[] = [
     verificatoIl: "30/10/2026",
     nota: "Pagina della Regione aggiornata il 09/02/2026. Se cambiano i requisiti, scade il verbale o vendi il veicolo, devi avvisare la Regione entro 60 giorni, altrimenti ci sono sanzioni.",
   },
-  {
-    id: "toscana-mobilita-autonomia-lr-81-2017",
-    regione: "Toscana",
-    titolo: "Contributi per la mobilità individuale e l'autonomia personale (L.R. 81/2017)",
-    perChi:
-      "Persone con disabilità oppure genitori o componenti del nucleo familiare della persona con disabilità, per le spese già sostenute.",
-    cosa:
-      "Contributo economico a copertura delle spese sostenute. L'ultimo avviso riguardava le spese del 2025 (e, per chi non aveva presentato domanda, quelle del 2023). La pagina non scrive gli importi né quali spese sono ammesse.",
-    stato: "chiuso",
-    quando:
-      "Ultimo avviso: domande dal 7 aprile al 7 giugno 2026. Il prossimo avviso, per le spese del 2026, non è ancora stato pubblicato.",
-    comeSiChiede:
-      "All'Azienda USL Toscana Centro, Centro Regionale per l'Accessibilità: per PEC a centroregionale.accessibilita@postacert.toscana.it oppure a mano all'Ufficio Protocollo (Ospedale Santa Maria Nuova, Firenze, lunedì–venerdì 9–13). Conserva le fatture delle spese di quest'anno.",
-    fonte: {
-      label: "Regione Toscana · Contributi per mobilità individuale e autonomia delle persone con disabilità",
-      url: "https://www.regione.toscana.it/-/contributi-per-favorire-la-mobilit%C3%A0-individuale-e-l-autonomia-delle-persone-con-disabilit%C3%A0",
-    },
-    verificatoIl: "30/10/2026",
-    nota: "Pagina della Regione aggiornata il 16/04/2026. Avviso gestito dall'AUSL Toscana Centro (delibera n. 345 del 2 aprile 2026). Per le informazioni: toscana-accessibile.it.",
-  },
-
-  // ------------------------------------------------------------------- PUGLIA
-  {
-    id: "puglia-patto-di-cura-2025-2026",
-    regione: "Puglia",
-    titolo: "Patto di cura 2025-2026 per la disabilità gravissima",
-    perChi:
-      "Persone con disabilità gravissima non autosufficienti, residenti in Puglia, con almeno una delle condizioni cliniche gravi previste dal Decreto FNA 2016. ISEE valido non superiore a 60.000 euro per gli adulti e a 80.000 euro per i minorenni.",
-    cosa:
-      "Un contributo mensile per 16 mesi, da settembre 2025 a dicembre 2026: 1.200 euro al mese se si assume direttamente l'assistente familiare, 1.250 euro al mese se si assume tramite agenzie di lavoro autorizzate e iscritte all'albo nazionale. Vale solo con un'assunzione regolare di personale di assistenza. Non è cumulabile con Sostegno Familiare né con il precedente Patto di Cura 2023-24.",
-    stato: "chiuso",
-    quando:
-      "Domande dalle ore 12:00 del 4 agosto 2025 alle ore 12:00 del 19 settembre 2025. Il contributo copre i mesi fino a dicembre 2026.",
-    comeSiChiede:
-      "La domanda si presentava solo online sulla piattaforma regionale Puglia Sociale (accesso con SPID): https://pugliasociale-spid.regione.puglia.it. Documenti e criteri di selezione sono nell'Avviso completo, non nel comunicato.",
-    fonte: {
-      label: "Regione Puglia · Al via il Patto di cura 2025-2026 (comunicato del 28/07/2025)",
-      url: "https://press.regione.puglia.it/-/al-via-il-patto-di-cura-2025-2026.-stanziati-20-milioni-di-euro-per-le-persone-con-disabilit%C3%80-gravissima",
-    },
-    verificatoIl: "15/10/2026",
-    nota: "La finestra per le domande è finita. Se hai già presentato domanda, chiedi al tuo Ambito sociale a che punto è. Per nuovi avvisi controlla la piattaforma Puglia Sociale.",
-  },
 
   // ------------------------------------------------------------------ VENETO
   {
@@ -931,26 +829,6 @@ export const BONUS: Bonus[] = [
 
   // ----------------------------------------------------------------- PIEMONTE
 
-  {
-    id: "piemonte-buono-domiciliarita-2026",
-    regione: "Piemonte",
-    titolo: "Buono domiciliarità 2026-2027: 700 euro al mese per l'assistenza familiare",
-    perChi:
-      "Persone con disabilità non autosufficienti (o over 65 non autosufficienti) residenti in Piemonte, già valutate dall'UMVD o dall'UVG con punteggio sanitario non inferiore a 5 e punteggio sociale non inferiore a 7. ISEE ordinario o sociosanitario in corso di validità non superiore a 40.000 euro; non è ammesso l'ISEE corrente o con anomalie. Serve un assistente familiare con contratto già in corso alla data della domanda (non può essere il coniuge né un parente o affine fino al secondo grado).",
-    cosa:
-      "Contributo di 700 euro al mese per 12 mesi, che può arrivare a 24 in base alle domande ammissibili, da spendere per un servizio di assistenza familiare: contratto di lavoro domestico (almeno livello CS), contratto con cooperativa o agenzia, o incarico a un assistente libero professionista. Servono 16 ore di assistenza a settimana. Il contratto di lavoro subordinato deve durare almeno 30 giorni. Erogazione trimestrale, dopo la rendicontazione. Il contributo parte dal primo giorno del mese successivo alla comunicazione di assegnazione.",
-    stato: "aperto",
-    quando:
-      "Domande dalle 0:00 del 14 settembre 2026 alle 23:59 del 2 novembre 2026. Assegnato fino a esaurimento delle risorse: prima il punteggio sociale più alto, poi l'ISEE più basso, poi l'ordine di presentazione.",
-    comeSiChiede:
-      "Online su piemontetu.it o sceltasociale.it con SPID, CIE o CNS. La domanda la presenta un delegato (genitore, tutore, coniuge, parente di primo grado, amministratore di sostegno) che non può essere l'assistente. Allegati obbligatori: verbale di valutazione UVG/UMVD (o lettera con il punteggio) e contratto o incarico: senza, la domanda non è ammessa.",
-    fonte: {
-      label: "Regione Piemonte · Avviso Scelta sociale, Buono domiciliarità 2026",
-      url: "https://bandi.regione.piemonte.it/system/files/All.1_AVVISO_DOM_2026.pdf",
-    },
-    verificatoIl: "30/10/2026",
-    nota: "Il termine è lunedì 2 novembre 2026 alle 23:59: non aspettare l'ultimo giorno. Non è compatibile con alcune misure, tra cui gli assegni di cura, i contributi del Fondo caregiver, Home Care Premium e l'accoglienza definitiva in strutture residenziali: leggi l'avviso. Le risorse totali sono 20.193.600 euro, non per persona. Per informazioni: sceltasociale@regione.piemonte.it o numero verde 800 333 444 (lunedì–venerdì, 8–18). Attenzione: la vecchia pagina \"Scelta sociale - Buono per la domiciliarità\" mostra ancora i dati del 2023, che non valgono più.",
-  },
   {
     id: "piemonte-barriere-architettoniche",
     regione: "Piemonte",
@@ -1205,8 +1083,6 @@ export const BONUS: Bonus[] = [
     verificatoIl: "09/10/2026",
   },
 
-  // ------------------------------------------------------------------ ABRUZZO
-
   // ----------------------------------------------------------- L'AQUILA (AQ)
   {
     id: "laquila-caregiver-2026",
@@ -1334,8 +1210,6 @@ export const BONUS: Bonus[] = [
     verificatoIl: "19/10/2026",
     nota: "Pagina del Comune aggiornata il 09/04/2025. La finestra è scaduta il 31/03/2026: chiedi al Segretariato Sociale se è prevista una nuova edizione. Vedi anche la scheda regionale della Misura B2.",
   },
-  // ------------------------------------------------------------------ CATANIA
-
   // ------------------------------------------------------------------ MESSINA
   {
     id: "messina-d26-bonus-caregiver-2026",
@@ -1605,33 +1479,6 @@ export const BONUS: Bonus[] = [
     verificatoIl: "26/10/2026",
     nota: "Pagina aggiornata il 21/08/2026. Per dubbi su requisiti e tempi scrivi all'Ufficio Sociale (affari.sociali@comune.pisa.it).",
   },
-
-  // ------------------------------------------------------------------- UMBRIA
-  {
-    id: "umbria-per-tutti-grave-disabilita",
-    regione: "Umbria",
-    titolo: "Umbria per tutti: contributo per l'assistenza alle persone con grave disabilità",
-    perChi:
-      "Persone residenti in Umbria, minorenni, adulte e anziane, con grave disabilità riconosciuta (Legge 104/1992, art. 3, comma 3). ISEE sociosanitario ristretto fino a 50.000 € per adulti e anziani; ISEE per minorenni fino a 65.000 €.",
-    cosa:
-      "Sostegno di 300 € al mese, fino a 1.200 € per il 2025, da usare per assistenti personali, servizi di assistenza domiciliare, canone di locazione per progetti di vita autonoma o ausili tecnologici.",
-    stato: "chiuso",
-    quando: "Il termine per presentare domanda è stato prorogato al 31 marzo 2026.",
-    comeSiChiede:
-      "Solo per PEC, agli indirizzi indicati negli avvisi pubblici delle USL Umbria 1 e Umbria 2, dove trovi anche moduli e criteri.",
-    fonte: {
-      label: "Regione Umbria · Umbria per tutti: prorogato al 31 marzo 2026 il termine per il contributo",
-      url: "https://insalute.regione.umbria.it/novita/umbria-per-tutti-prorogato-al-31-marzo-2026-il-termine-per-presentare-domanda-di-contributo-per-lassistenza-alle-persone-con-grave-disabilita/",
-    },
-    verificatoIl: "20/10/2026",
-    nota: "Pagina del 30/12/2025 (delibera regionale 1024/2025). Chiedi alla tua USL se il contributo sarà riproposto per il 2026.",
-  },
-
-  // ----------------------------------------------------------------- SARDEGNA
-
-  // ------------------------------------------------------------------- MARCHE
-
-  // ----------------------------------------------------------------- CALABRIA
 
   // ------------------------------------------------------------ COMUNI (20/10/2026)
   {
@@ -1915,25 +1762,6 @@ export const BONUS: Bonus[] = [
     verificatoIl: "20/10/2026",
   },
   {
-    id: "puglia-provi-2026",
-    regione: "Puglia",
-    titolo: "Comunità Pro.V.I.: progetti di vita indipendente (finestra 2026)",
-    perChi:
-      "Persone con disabilità grave (art. 3, comma 3, Legge 104/1992) tra 16 e 66 anni, residenti in Puglia da almeno un anno, che vivono al proprio domicilio e sanno esprimere la propria volontà, anche con un supporto. ISEE socio-sanitario ristretto (o ordinario, se più favorevole) fino a 50.000 euro, 65.000 per i minorenni. Non si può ricevere insieme al Patto di cura o al Sostegno familiare, né avere già un progetto di vita indipendente in corso (salvo quelli in scadenza entro il 31 ottobre 2026).",
-    cosa:
-      "Contributo fino a 15.000 euro per progetto, per un massimo di 12 mesi. Due linee: la linea A per persone con disabilità non legata all'invecchiamento e la linea C per il sostegno alla genitorialità di giovani donne con disabilità che hanno figli minori.",
-    stato: "chiuso",
-    quando:
-      "Le domande della prima finestra erano aperte dal 24 marzo al 24 giugno 2026. La Regione ha approvato la graduatoria il 26 agosto 2026, che resta valida fino all'apertura della prossima finestra, di cui non abbiamo la data.",
-    comeSiChiede:
-      "Domanda online sulla piattaforma regionale con SPID. Contatto: provi@regione.puglia.it.",
-    fonte: {
-      label: "Regione Puglia · Comunità Pro.V.I. – Autonomia, socialità, sport",
-      url: "https://www.regione.puglia.it/web/welfare-diritti-e-cittadinanza/-/comunit%C3%A0-pro.v.i.-autonomia-socialit%C3%A0-sport-nuovo-avviso-pubblico.-domande-a-partire-dal-24-marzo-2026",
-    },
-    verificatoIl: "20/10/2026",
-  },
-  {
     id: "vda-fondo-inclusione-autismo-2026",
     regione: "Valle d'Aosta",
     titolo: "Interventi per persone con autismo e disturbi del neurosviluppo (Fondo per l'inclusione 2025)",
@@ -2070,60 +1898,8 @@ export const BONUS: Bonus[] = [
     verificatoIl: "30/10/2026",
     nota: "Requisiti sanitari, ISEE e compatibilità con Ritornare a casa PLUS dipendono dalle linee attuative e dal livello del progetto: chiedili al Comune.",
   },
-  {
-    id: "sardegna-sine-limes-2-2026",
-    regione: "Sardegna",
-    titolo: "Sine Limes 2 (annualità 2026): buono servizio",
-    perChi:
-      "Residenti in Sardegna con disabilità (art. 3 della legge 104), persone in carico al Centro di salute mentale o alla UONPIA, anziani da 85 anni in su. ISEE ordinario o corrente 2026 fino a 45.000 euro. Esclusi i fruitori di servizi residenziali.",
-    cosa: "Buono fino a 8.000 euro, entro le spese documentate ammissibili.",
-    stato: "chiuso",
-    quando:
-      "Le domande si sono chiuse il 28/10/2026 alle 17:00. Le spese ammissibili vanno dal 01/10/2026 al 31/12/2027 e i rimborsi dal 03/05/2027 al 24/02/2028: queste date non riaprono le domande.",
-    comeSiChiede: "Domanda telematica sul sistema regionale SIL. Termine scaduto.",
-    fonte: {
-      label: "Regione Sardegna · Avviso Sine Limes 2 (annualità 2026)",
-      url: "https://www.regione.sardegna.it/atti-bandi-archivi/atti-amministrativi/bandi/172000098463251",
-    },
-    verificatoIl: "30/10/2026",
-    nota: "Chi ha già presentato domanda segue le istruzioni dell'avviso per spese e rimborsi.",
-  },
 
   // ----------------------------------------------------------------- ABRUZZO
-  {
-    id: "abruzzo-vita-indipendente-2025",
-    regione: "Abruzzo",
-    titolo: "Sostegni ai progetti di Vita indipendente (avviso 2025)",
-    perChi:
-      "Maggiorenni residenti in Abruzzo con disabilità e capacità di autodeterminazione, anche con supporto. Serve la certificazione di gravità (art. 3, comma 3, legge 104). Da 67 anni in su l'ISEE sociosanitario non deve superare 20.000 euro.",
-    cosa:
-      "Sostegno annuo massimo secondo il livello di bisogno, compresi i costi indiretti del 7%: molto alto 12.000 euro; alto 10.000; medio 8.000; basso 6.000.",
-    stato: "chiuso",
-    quando: "Candidature degli enti (ECAD) alla Regione entro il 15/12/2025. Il pagamento dei progetti ammessi prosegue nel 2026, ma non ci sono nuove domande aperte.",
-    comeSiChiede: "La persona presentava la richiesta all'Ente d'Ambito (ECAD), che candidava il progetto alla Regione. Per eventuali nuove edizioni chiedi al tuo Ambito sociale.",
-    fonte: {
-      label: "Regione Abruzzo · Sostegno ai progetti di Vita indipendente, anno 2025",
-      url: "https://coesione.regione.abruzzo.it/avvisi-pubblici/fse/sostegno-ai-progetti-di-vita-indipendente-anno-2025",
-    },
-    verificatoIl: "30/10/2026",
-  },
-  {
-    id: "abruzzo-caregiver-minori-gravissimi-2025",
-    regione: "Abruzzo",
-    titolo: "Contributo ai genitori caregiver di minori con disabilità gravissima (2025)",
-    perChi:
-      "Genitori disoccupati o inoccupati di minori che hanno bisogno di assistenza continua 24 ore su 24, con le malattie rare o croniche gravi indicate nel bando.",
-    cosa: "10.000 euro per famiglia: il 70% all'ammissione e il 30% dopo la relazione semestrale. Non è cumulabile con l'assegno per la disabilità gravissima del Fondo non autosufficienza.",
-    stato: "chiuso",
-    quando: "Domande dal 6 al 30 novembre 2025: scaduto. Non c'è un nuovo bando.",
-    comeSiChiede: "Sportello telematico regionale (chiuso). Per nuove edizioni controlla le notizie della Regione.",
-    fonte: {
-      label: "Regione Abruzzo · Istanze caregiver familiare dal 6 novembre (04/11/2025)",
-      url: "https://www.regione.abruzzo.it/notizie/al-le-istanze-caregiver-famigliare-dal-6-novembre",
-    },
-    verificatoIl: "30/10/2026",
-    nota: "Le verifiche e le concessioni fatte nel 2026 non riaprono il bando.",
-  },
   {
     id: "abruzzo-barriere-casa-legge-13-1989",
     regione: "Abruzzo",
@@ -2194,41 +1970,6 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "05/11/2026",
     nota: "I documenti cambiano con la categoria: verbale di handicap grave, certificazioni pubbliche di cecità o sordità, patente speciale per le capacità motorie ridotte. Controlla l'elenco sulla pagina. I limiti per le auto ibride ed elettriche sono nel Tariffario 2026 della Regione Campania (sezione «Esenzioni dal pagamento», voce «Veicoli per disabili (L. 104)»); la pagina «Tassa automobilistica» indica solo benzina e gasolio. Per GPL e metano i limiti non sono indicati. La pagina non indica da quando decorre l'esenzione né come si rinnova, e non riporta la data di aggiornamento: per questi punti scrivi alla Regione (tributiregionali@regione.campania.it, PEC tributiregionali@pec.regione.campania.it, tel. 081 796 61 11 o 081 796 91 11).",
-  },
-
-  // ------------------------------------------------------------------ MOLISE
-  {
-    id: "molise-caregiver-2025",
-    regione: "Molise",
-    titolo: "Sostegno al ruolo di cura del caregiver familiare (avviso 2025)",
-    perChi: "Caregiver di persone con disabilità gravissima fino a 65 anni, inserite nella graduatoria del Fondo non autosufficienza 2023.",
-    cosa: "Dotazione complessiva di 1.000.000 di euro. L'importo per la singola persona non è indicato.",
-    stato: "chiuso",
-    quando: "Domande entro il 01/12/2025: scaduto.",
-    comeSiChiede: "Era gestito dagli Ambiti territoriali sociali. Per le misure nuove vedi «Caregiver familiare 2026 e 2027».",
-    fonte: {
-      label: "Regione Molise · Misure per il sostegno del ruolo di cura e assistenza al caregiver familiare",
-      url: "https://prfesrfse2127.regione.molise.it/bandi-avvisi/misure-per-il-sostegno-del-ruolo-di-cura-e-assistenza-al-caregiver-familiare/",
-    },
-    verificatoIl: "30/10/2026",
-    nota: "Non è la misura 2026-2027.",
-  },
-  {
-    id: "molise-ti-muovi-2026-2027",
-    regione: "Molise",
-    titolo: "Ti Muovi: agevolazioni per studenti sul trasporto extraurbano (2026-2027)",
-    perChi:
-      "Studenti residenti tra 11 e 26 anni che frequentano corsi ammessi, con ISEE valido. Hanno priorità gli studenti con disabilità certificata dalla legge 104. Contributo annuo non rimborsabile di 15 euro.",
-    cosa: "Rimborso totale o parziale dell'abbonamento, secondo la fascia ISEE. Le percentuali non sono riportate qui. Vale da settembre 2026 a luglio 2027.",
-    stato: "chiuso",
-    quando: "Domande entro il 31/10/2026: scaduto.",
-    comeSiChiede: "Sulla piattaforma regionale Ti Muovi (Servizio Mobilità della Regione).",
-    fonte: {
-      label: "Regione Molise · Ti Muovi, agevolazioni studenti TPL extraurbano",
-      url: "https://www.regione.molise.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/22409",
-    },
-    verificatoIl: "30/10/2026",
-    nota: "Non è una misura solo per la disabilità: la disabilità dà priorità, non la gratuità automatica. Chiedi alla Regione se ci sono riaperture.",
   },
 
   // -------------------------------------------------------------- BASILICATA
