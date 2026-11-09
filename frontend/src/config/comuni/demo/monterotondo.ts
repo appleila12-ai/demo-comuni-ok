@@ -34,6 +34,55 @@ export const monterotondo: ComuneConfig = {
   },
 
   puntiSupporto: [
+    // Associazioni e servizi sociali: fonti primarie dei gestori, lettura 09/11/2026.
+    {
+      icon: "people-outline",
+      title: "Ascoltami ETS · Famiglie e autismo",
+      subtitle: "Via Cavour 39, Monterotondo. Associazione a sostegno di famiglie con figli autistici: contributi alle spese di terapie riabilitative e supporto psicologico secondo le iniziative associative. Sul sito è disponibile un modulo contatti; email e telefono NON TROVATI nella pagina ufficiale. Non confondere con il bando comunale autismo.",
+      action: { type: "web", value: "https://ascoltamiets.it/" },
+    },
+    {
+      icon: "home-outline",
+      title: "Il Tamburo · Casa Famiglia Domus",
+      subtitle: "Via Panaro 15, Monterotondo; tel. 06 90626515. Servizio residenziale di 8 posti per persone adulte con disabilità, con sostegno educativo e alla vita comunitaria. Disponibilità posti, costi e accesso NON VERIFICATI: chiedere direttamente al gestore.",
+      action: { type: "web", value: "https://www.iltamburo.org/cooperativa/casa-famiglia-domus/" },
+    },
+    {
+      icon: "people-outline",
+      title: "Il Pungiglione · CSERDI Il Funambolo",
+      subtitle: "Centro socioeducativo riabilitativo diurno intercomunale, Via Don Milani 1–3, Monterotondo. Gestore Il Pungiglione, sede Via San Martino 21, tel. 06 90622518. Orari e modalità di inserimento NON VERIFICATI nella pagina attuale: chiedere al gestore e ai Servizi Sociali.",
+      action: { type: "web", value: "https://ilpungiglione.it/contatti-2/" },
+    },
+    {
+      icon: "home-outline",
+      title: "Il Pungiglione · tra(me) Dopo di Noi",
+      subtitle: "Percorso abitativo Dopo di Noi in Via Tommaso Cellottini 20, Monterotondo. Il gestore conferma la sede sul proprio sito. Requisiti, disponibilità posti e modalità di accesso NON VERIFICATI: rivolgersi al PUA/Servizi Sociali e al gestore.",
+      action: { type: "web", value: "https://ilpungiglione.it/contatti-2/" },
+    },
+    {
+      icon: "briefcase-outline",
+      title: "Folias · Orientamento al lavoro disabilità",
+      subtitle: "Centro per persone con disabilità medio-lieve del Distretto RM 5.1: orientamento, competenze, tirocini e laboratori. Via Don Milani 1–3; tel. 06 9066963, lospazioaperto@libero.it. Accesso previa richiesta ai Servizi Sociali e valutazione GILD. Orari pubblicati nella scheda del gestore, attualità DA CONFERMARE.",
+      action: { type: "web", value: "https://www.folias.it/site/centro-per-lorientamento/" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "Riabilmente · Minori e famiglie",
+      subtitle: "Associazione professionale per interventi riabilitativi: neuropsichiatria infantile, logopedia, neuropsicomotricità, psicologia e supporto agli apprendimenti. Viale Fausto Cecconi 6; tel. 06 99084435, cell. 366 8135401, riabilmente.cm@gmail.com. Orario dichiarato lun–sab 9–19:30; costi e disponibilità DA CONFERMARE.",
+      action: { type: "web", value: "https://riabilmente.com/informazioni/" },
+    },
+    {
+      icon: "call-outline",
+      title: "Folias · Pronto Intervento Sociale RM 5.1",
+      subtitle: "Per situazioni di emergenza sociale a Monterotondo, Mentana e Fonte Nuova: numero verde 800 66 82 58, pis@comune.monterotondo.rm.it. Servizio dichiarato dal gestore accessibile 24 ore su 24, 365 giorni l'anno; sede Via di San Matteo 27b/c. Non sostituisce i numeri di emergenza sanitaria o di pubblica sicurezza.",
+      action: { type: "web", value: "https://www.folias.it/site/pronto-intervento-sociale-p-i-s/" },
+    },
+    {
+      icon: "briefcase-outline",
+      title: "Folias · POP inclusione lavorativa Lazio",
+      subtitle: "Progetto regionale per persone con disabilità/invalidità fino a 60 anni e giovani NEET: orientamento, formazione e tirocini con indennità di partecipazione. Sede Via Salaria 108/b; tel. 3299830373, progettopoplazio@gmail.com. Accesso su selezione: nuova finestra di candidatura 2026 NON VERIFICATA.",
+      action: { type: "web", value: "https://www.folias.it/site/pop-pari-opportunita-occupazione-partecipazione/" },
+    },
     {
       icon: "sunny-outline",
       title: "Monterotondo · Centri estivi 2026 (SCADUTO)",
