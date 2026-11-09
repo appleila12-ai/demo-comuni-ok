@@ -34,6 +34,18 @@ export const monterotondo: ComuneConfig = {
   },
 
   puntiSupporto: [
+    {
+      icon: "sunny-outline",
+      title: "Monterotondo · Centri estivi 2026 (SCADUTO)",
+      subtitle: "Avviso comunale per minori residenti di 3–17 anni: sostegno alle attività socioeducative e all'assistenza qualificata per minori con disabilità certificata ai sensi della L.104/1992; rimborso di 150 euro per centri estivi alle famiglie con ISEE minorenni non superiore a 25.000 euro. Scadenza prorogata al 02/07/2026 ore 12:00. NON È APERTO; verificare un eventuale nuovo avviso 2027.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/notizie/centro-estivi.html" },
+    },
+    {
+      icon: "document-text-outline",
+      title: "Monterotondo · Avvisi sociali e graduatorie",
+      subtitle: "Il portale comunale pubblica avvisi per disabilità gravissima, progetti di vita, autismo e servizi sociali. Controllare data e scadenza della singola misura: una graduatoria non equivale all'apertura di nuove domande.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/info/argomenti/007.html" },
+    },
     // Associazioni e partecipazione: schede istituzionali Comune, verifica 09/11/2026.
     {
       icon: "musical-notes-outline",
