@@ -34,6 +34,31 @@ export const monterotondo: ComuneConfig = {
   },
 
   puntiSupporto: [
+    // Approfondimento 09/11/2026: avvisi e servizi da fonti istituzionali.
+    {
+      icon: "calendar-outline",
+      title: "Distretto RM 5.1 · Contributo autismo minori 2026 (SCADUTO)",
+      subtitle: "Avviso del 22/09/2026 per famiglie di minori con diagnosi di disturbo dello spettro autistico fino a 12 anni, residenti a Monterotondo, Mentana o Fonte Nuova. Rimborso di interventi psicologici, comportamentali ed educativi documentati, fino a 5.000 euro annui per beneficiario e nei limiti delle risorse. SCADENZA 21/10/2026 ore 12:00: NON PRESENTARE COME BANDO APERTO. Fonte Comune verificata 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/notizie/Bando-Autismo-2026-del-Distretto-RM5.1.html" },
+    },
+    {
+      icon: "home-outline",
+      title: "Monterotondo · Centro Assistenza Domiciliare ASL Roma 5",
+      subtitle: "CAD, Via dell'Aeronautica 53/b, tel. 06 90075918 (infermieri), 06 90075915 (fisioterapisti), 06 90075958 (medici); cad.monterotondo@aslroma5.it. Apertura al pubblico lunedì 9–11; telefonate lun–ven 8–10. Valutazione per ADI e dimissioni protette.",
+      action: { type: "web", value: "https://www.aslroma5.it/servizi_distrettuali/centro-assistenza-domiciliare-cad-distretto-di-monterotondo/" },
+    },
+    {
+      icon: "document-text-outline",
+      title: "Distretto RM 5.1 · Progetti di vita personalizzati 2026",
+      subtitle: "Il Comune ha pubblicato il 06/03/2026 un avviso per persone con disabilità, anziani parzialmente autosufficienti e non autosufficienti, con modulo di avvio progetto e modulo di continuità per disabilità gravissima. Consultare l'avviso integrale per requisiti e validità; apertura nuove domande NON VERIFICATA.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/notizie/Avviso-Pubblico-Interventi-Disabilit--Gravissima.html" },
+    },
+    {
+      icon: "car-outline",
+      title: "Monterotondo · Contributo vettura per disabilità",
+      subtitle: "Il Comune pubblica un documento denominato 'Contributo vettura disabile' (deliberazione Consiglio comunale n. 125/2006). Requisiti, importi, attuale finanziamento e apertura domande NON VERIFICATI: non considerarlo automaticamente un bonus attivo.",
+      action: { type: "web", value: "https://www.comune.monterotondo.rm.it/home/info/argomenti/006.html" },
+    },
     // Fonti ufficiali Comune Monterotondo e ASL Roma 5, verifica 09/11/2026.
     {
       icon: "people-outline",
