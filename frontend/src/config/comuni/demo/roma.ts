@@ -71,9 +71,9 @@ export const roma: ComuneConfig = {
     },
     {
       icon: "calendar-outline",
-      title: "Bando Roma 2026 · socializzazione giovani con autismo (scadenza 12 novembre)",
-      subtitle: "Per minori e giovani fino a 21 anni con disturbo dello spettro autistico: 500 euro al mese fino a 12 mensilità, nei limiti delle risorse. Domanda al Municipio di residenza entro il 12/11/2026; non confondere con il distinto bando trattamenti scaduto il 05/11. Da archiviare dopo la scadenza secondo la regola dei 10 giorni. Verifica 09/11/2026.",
-      action: { type: "web", value: "https://www.comune.roma.it/web/it/bando-concorso.page?contentId=BEC1656355" },
+      title: "Autismo · socializzazione fino a 21 anni (scadenza 12 novembre 2026)",
+      subtitle: "Per minori e giovani fino a 21 anni con disturbo dello spettro autistico: 500 euro al mese fino a 12 mensilità, nei limiti delle risorse. Domanda al Municipio di residenza entro il 12/11/2026; Diverso dall'avviso per trattamenti educativi 0–17 anni scaduto il 05/11/2026. Da archiviare dopo la scadenza secondo la regola dei 10 giorni. Verifica 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/informazione-di-servizio.page?contentId=IDS1655727" },
     },
     {
       icon: "location-outline",
