@@ -5,7 +5,9 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Segnalato come interessato da chi promuove TutelApp in provincia di Parma (8/11/2026): non è un'adesione.
 // Sito del Comune: dominio istituzionale trovato nelle pagine ufficiali (9/11/2026).
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; coordinate; bonus del Comune, associazioni, sport e tempo libero.
+// 9/11/2026: recapiti dei servizi sociali da schede della Regione Emilia-Romagna e pagine del Comune (fonti istituzionali). Nessuna email personale di operatori; dati discordanti non inseriti.
+// Langhirano: sportello sociale dell'Unione Montana Appennino Parma Est. Orari non inseriti (la scheda regionale e l'AUSL riportano orari diversi, da confermare); email dello sportello non inserita (era di un operatore).
+// Da fare: coordinate; bonus del Comune, associazioni, sport e tempo libero.
 export const langhirano: ComuneConfig = {
   slug: "langhirano",
   tipo: "comune",
@@ -18,10 +20,10 @@ export const langhirano: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
+  indirizzo: "Piazza Giacomo Ferrari 5, 43013 Langhirano (PR)",
+  telefono: "0521 354152",
   email: "",
-  pec: "",
+  pec: "protocollo@postacert.comune.langhirano.pr.it",
   orari: "",
   sitoWeb: "https://www.comune.langhirano.pr.it",
 

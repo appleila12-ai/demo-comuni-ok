@@ -413,6 +413,7 @@ import { collecchio } from "./collecchio";
 import { borgoValDiTaro } from "./borgo-val-di-taro";
 import { medesano } from "./medesano";
 import { langhirano } from "./langhirano";
+import { lesignanoDeBagni } from "./lesignano-de-bagni";
 
 export const COMUNI_DEMO: ComuneConfig[] = [
   acerra,
@@ -823,4 +824,5 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   borgoValDiTaro,
   medesano,
   langhirano,
+  lesignanoDeBagni,
 ];

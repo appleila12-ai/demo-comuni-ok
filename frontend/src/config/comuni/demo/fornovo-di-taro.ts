@@ -5,7 +5,8 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Segnalato come interessato da chi promuove TutelApp in provincia di Parma (8/11/2026): non è un'adesione.
 // Sito del Comune: dominio istituzionale trovato nelle pagine ufficiali (9/11/2026).
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; coordinate; bonus del Comune, associazioni, sport e tempo libero.
+// 9/11/2026: recapiti dei servizi sociali da schede della Regione Emilia-Romagna e pagine del Comune (fonti istituzionali). Nessuna email personale di operatori; dati discordanti non inseriti.
+// Da fare: coordinate; bonus del Comune, associazioni, sport e tempo libero.
 export const fornovoDiTaro: ComuneConfig = {
   slug: "fornovo-di-taro",
   tipo: "comune",
@@ -18,11 +19,11 @@ export const fornovoDiTaro: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
-  pec: "",
-  orari: "",
+  indirizzo: "Piazza Libertà 11, 43045 Fornovo di Taro (PR)",
+  telefono: "0525 400638",
+  email: "servsociali@comune.fornovo-di-taro.pr.it",
+  pec: "protocollo@postacert.comune.fornovo-di-taro.pr.it",
+  orari: "Sportello sociale: martedì e giovedì 8–12, martedì anche 15–17",
   sitoWeb: "https://www.comune.fornovo-di-taro.pr.it",
 
   logo: null,
