@@ -407,6 +407,11 @@ import { pantigliate } from "./pantigliate";
 import { paullo } from "./paullo";
 import { peschieraBorromeo } from "./peschiera-borromeo";
 import { tribiano } from "./tribiano";
+import { fornovoDiTaro } from "./fornovo-di-taro";
+import { collecchio } from "./collecchio";
+import { borgoValDiTaro } from "./borgo-val-di-taro";
+import { medesano } from "./medesano";
+import { langhirano } from "./langhirano";
 
 export const COMUNI_DEMO: ComuneConfig[] = [
   acerra,
@@ -811,4 +816,9 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   paullo,
   peschieraBorromeo,
   tribiano,
+  fornovoDiTaro,
+  collecchio,
+  borgoValDiTaro,
+  medesano,
+  langhirano,
 ];

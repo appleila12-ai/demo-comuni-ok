@@ -622,4 +622,6 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "duino-aurisina": { email: "serviziosociale@comune.duino-aurisina.ts.it", tipo: "ordinaria", fonte: "sito del Comune di Duino Aurisina, Servizi sociali – Ambito Carso Giuliano (letto il 04/11/2026)" },
   // Mediglia (MI)
   "mediglia": { email: "servizisociali@comune.mediglia.mi.it", tipo: "ordinaria", fonte: "sito del Comune di Mediglia, elenco uffici e recapiti (letto il 04/11/2026)" },
+  // Collecchio (PR)
+  "collecchio": { email: "protocollo@postacert.comune.collecchio.pr.it", tipo: "pec", fonte: "sito del Comune di Collecchio, pagina Servizi (PEC istituzionale, letta il 09/11/2026)" },
 };
