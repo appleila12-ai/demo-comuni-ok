@@ -37,6 +37,43 @@ export const roma: ComuneConfig = {
   },
 
   puntiSupporto: [
+    // Verifica istituzionale 09/11/2026: distinguere misure regionali da bandi municipali.
+    {
+      icon: "location-outline",
+      title: "Municipio IX · Welfare di accesso, Segretariato Sociale e PUA",
+      subtitle: "L'ufficio Welfare di Accesso ai Servizi Sociali e Sociosanitari accoglie persone con disabilità, minori, adulti e anziani, orienta verso Municipio e ASL Roma 2 e fornisce modulistica. Sede, telefoni e orari: verificare nella pagina ufficiale dell'ufficio.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-ix-uffici-e-contatti.page?contentId=UFF31871" },
+    },
+    {
+      icon: "calendar-outline",
+      title: "Municipio IV · Caregiver: misure 2026–2027",
+      subtitle: "Avviso per caregiver residenti nel Municipio IV, formalmente riconosciuti con CardGiver, con servizi di sollievo o rimborso spese. Il Comune ha pubblicato FAQ e proroga il 22/10/2026: controllare la scadenza aggiornata nell'avviso, non utilizzare quella originaria.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/bando-concorso.page?contentId=BEC1653936" },
+    },
+    {
+      icon: "home-outline",
+      title: "Regione Lazio · Vita indipendente",
+      subtitle: "Per persone adulte con disabilità dai 18 ai 64 anni: progetti personalizzati che possono comprendere aiuto personale, trasporto, abitare autonomo e domotica. Domande accolte dai PUA territoriali, con valutazione dei bisogni da parte dei servizi e UVM. Pagina regionale verificata 04/03/2026.",
+      action: { type: "web", value: "https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/vita-indipendente" },
+    },
+    {
+      icon: "home-outline",
+      title: "Regione Lazio · Dopo di Noi e progetto personalizzato",
+      subtitle: "Interventi per persone con disabilità grave prive del sostegno familiare: percorsi di autonomia, sostegno alla domiciliarità, soluzioni abitative e sviluppo competenze. Accesso attraverso l'Ambito sovradistrettuale e valutazione multidimensionale. Non è un bonus automatico.",
+      action: { type: "web", value: "https://regione.lazio.it/cittadini/sociale-famiglie/disabilita/dopo-di-noi" },
+    },
+    {
+      icon: "people-outline",
+      title: "Regione Lazio · Riconoscimento caregiver familiare",
+      subtitle: "La Regione pubblica procedure e modulistica per il riconoscimento formale del caregiver e i riferimenti della legge regionale 5/2024. Le misure economiche e i servizi di sollievo dipendono dagli avvisi del territorio: verificare sempre il proprio Municipio o Distretto.",
+      action: { type: "web", value: "https://www.regione.lazio.it/cittadini/sociale-famiglie/caregiver-familiare" },
+    },
+    {
+      icon: "calendar-outline",
+      title: "Roma Capitale · Avvisi disabilità per Municipio",
+      subtitle: "Elenco ufficiale aggiornato di bandi, graduatorie e avvisi per persone con disabilità, filtrabile per Municipio. La pubblicazione di una graduatoria non significa apertura di nuove domande; verificare date e destinatari nel singolo avviso.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/bandi-e-concorsi.page?mun=municipio&tem=disabilita" },
+    },
     // Uffici verificati sul portale istituzionale di Roma Capitale il 09/11/2026.
     {
       icon: "location-outline",
