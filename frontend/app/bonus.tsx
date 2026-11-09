@@ -8,7 +8,7 @@ import Ionicons from "@react-native-vector-icons/ionicons";
 import { colors, fonts, radius, spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
-import { bonusDelComune, STATO_BONUS, type Bonus, type StatoBonus } from "@/src/lib/bonus";
+import { bonusDelComune, dataScadenzaLeggibile, GIORNI_SCADUTO_VISIBILE, STATO_BONUS, type Bonus, type StatoBonus } from "@/src/lib/bonus";
 import { Avviso, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
 import { DOVE_CERCARE, PAROLE_GENERALI, PORTALE_NAZIONALE } from "@/src/lib/doveCercare";
@@ -16,6 +16,7 @@ import { DOVE_CERCARE, PAROLE_GENERALI, PORTALE_NAZIONALE } from "@/src/lib/dove
 const apri = (url: string) => Linking.openURL(url).catch(() => {});
 
 const COLORI_STATO: Record<StatoBonus, { fondo: string; testo: string }> = {
+  scaduto: { fondo: colors.errorSoft, testo: colors.onSurface },
   aperto: { fondo: colors.successSoft, testo: colors.onSurface },
   attivo: { fondo: colors.successSoft, testo: colors.onSurface },
   chiuso: { fondo: colors.surfaceTertiary, testo: colors.onSurface },
@@ -42,12 +43,23 @@ function Scheda({ b }: { b: Bonus }) {
         accessibilityLabel={`Stato: ${stato.etichetta}. ${stato.spiegazione}`}
       >
         <Ionicons
-          name={b.stato === "chiuso" ? "lock-closed-outline" : b.stato === "da-verificare" ? "help-circle-outline" : "checkmark-circle-outline"}
+          name={b.stato === "scaduto" ? "alert-circle-outline" : b.stato === "chiuso" ? "lock-closed-outline" : b.stato === "da-verificare" ? "help-circle-outline" : "checkmark-circle-outline"}
           size={16}
           color={c.testo}
         />
-        <Text style={[styles.badgeText, { color: c.testo }]}>{stato.etichetta}</Text>
+        <Text style={[styles.badgeText, { color: c.testo }]}>
+          {b.stato === "scaduto" && b.scade ? `Scaduto il ${dataScadenzaLeggibile(b.scade)}` : stato.etichetta}
+        </Text>
       </View>
+
+      {b.stato === "scaduto" && b.scade ? (
+        <View style={styles.scadutoBox} accessible accessibilityRole="alert">
+          <Text style={styles.scadutoTesto}>
+            Questo bando è scaduto il {dataScadenzaLeggibile(b.scade)}: non si può più chiedere. Lo teniamo qui per
+            {" "}{GIORNI_SCADUTO_VISIBILE} giorni, per aiutare chi ha già presentato domanda a ritrovare le informazioni.
+          </Text>
+        </View>
+      ) : null}
 
       <Text style={styles.titolo} accessibilityRole="header">
         {b.titolo}
@@ -230,6 +242,15 @@ const styles = StyleSheet.create({
     marginBottom: spacing.sm,
   },
   badgeText: { fontSize: 14, fontWeight: "800" },
+  scadutoBox: {
+    backgroundColor: colors.errorSoft,
+    borderWidth: 1.5,
+    borderColor: colors.error,
+    borderRadius: radius.md,
+    padding: spacing.md,
+    marginBottom: spacing.sm,
+  },
+  scadutoTesto: { fontSize: 15, lineHeight: 22, fontWeight: "700", color: colors.onSurface },
   titolo: {
     fontFamily: fonts.serif,
     fontSize: 18,

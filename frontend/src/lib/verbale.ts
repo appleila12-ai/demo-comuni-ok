@@ -112,7 +112,7 @@ function daBonus(v: Verbale, b: Bonus): Diritto {
     esito = r.esito;
     nota = r.nota;
   }
-  const chiuso = b.stato === "chiuso";
+  const chiuso = b.stato === "chiuso" || b.stato === "scaduto";
   return {
     id: `bonus-${b.id}`,
     area: "Bonus regionali e comunali",
