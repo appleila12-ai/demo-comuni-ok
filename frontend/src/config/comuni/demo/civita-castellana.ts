@@ -4,6 +4,9 @@ import { percorso } from "../percorso";
 // Comune di Civita Castellana (VT) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Dati da fonti pubbliche (settembre 2026), da verificare con l'ente. Email non trovata: da inserire.
+// 09/11/2026: aggiunto il distretto sociale VT 5, capofila Consorzio Tineri (Regione Lazio, "Comuni per distretto"; Civita Castellana è tra i Comuni dell'elenco).
+// Recapiti del Consorzio (sede di Nepi, tel. 0761 559006) dal sito del Consorzio Tineri e dai suoi avvisi.
+// Non pubblicati perché non verificati: orari aggiornati, email del servizio, bonus del Comune, associazioni locali (le pagine del Comune non sono consultabili in automatico).
 export const civitaCastellana: ComuneConfig = {
   slug: "civita-castellana",
   tipo: "comune",
@@ -39,6 +42,12 @@ export const civitaCastellana: ComuneConfig = {
       action: { type: "tel", value: "0761590311" },
     },
     {
+      icon: "business-outline",
+      title: "Consorzio Tineri – Distretto sociale VT 5",
+      subtitle: "Il distretto di cui fa parte Civita Castellana (con Calcata, Castel Sant'Elia, Corchiano, Fabrica di Roma, Faleria, Gallese, Nepi, Vallerano, Vasanello e Vignanello) · Piazza dello Spedale 3, Nepi · Tel. 0761 559006",
+      action: { type: "tel", value: "0761559006" },
+    },
+    {
       icon: "medkit-outline",
       title: "ASL Viterbo",
       subtitle: "Esenzione ticket per patologia e invalidità, prenotazioni e distretti sanitari",
@@ -57,5 +66,5 @@ export const civitaCastellana: ComuneConfig = {
   dimostrativo: true,
 };
 
-// Passi 4 e 5: servizi sociali già in scheda con fonte (lotto 18, 02/11/2026). Passi 1-3 vuoti: nessun recapito verificato.
-civitaCastellana.percorsoTerritorio = percorso(civitaCastellana.puntiSupporto, [0]);
+// Passi 4 e 5: servizi sociali (lotto 18, 02/11/2026) e Consorzio Tineri (09/11/2026), con fonte. Passi 1-3 vuoti: nessun recapito verificato.
+civitaCastellana.percorsoTerritorio = percorso(civitaCastellana.puntiSupporto, [0, 1]);
