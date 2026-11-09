@@ -6,7 +6,7 @@ import { percorso } from "../percorso";
 // Segnalato come interessato da chi promuove TutelApp in provincia di Parma (8/11/2026): non è un'adesione.
 // Sito del Comune: dominio istituzionale trovato nelle pagine ufficiali (9/11/2026).
 // 9/11/2026: recapiti dei servizi sociali da schede della Regione Emilia-Romagna e pagine del Comune (fonti istituzionali). Nessuna email personale di operatori; dati discordanti non inseriti.
-// Medesano: PEC non trovata (non inserita).
+// Medesano: PEC da IndicePA (dataset del 6/11/2026).
 // Da fare: coordinate; bonus del Comune, associazioni, sport e tempo libero.
 export const medesano: ComuneConfig = {
   slug: "medesano",
@@ -23,7 +23,7 @@ export const medesano: ComuneConfig = {
   indirizzo: "Piazza G. Marconi, 43014 Medesano (PR)",
   telefono: "0525 422760",
   email: "sportellosociale@comune.medesano.pr.it",
-  pec: "",
+  pec: "protocollo@postacert.comune.medesano.pr.it",
   orari: "Sportello sociale: lunedì 8.30–12.30 e 14–16, mercoledì e giovedì 8.30–12.30",
   sitoWeb: "https://comune.medesano.pr.it",
 

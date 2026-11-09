@@ -632,4 +632,6 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "langhirano": { email: "protocollo@postacert.comune.langhirano.pr.it", tipo: "pec", fonte: "PEC del Comune da fonti istituzionali (Regione Emilia-Romagna, sito del Comune), verificata il 09/11/2026" },
   // Lesignano de' Bagni (PR)
   "lesignano-de-bagni": { email: "protocollo@postacert.comune.lesignano-debagni.pr.it", tipo: "pec", fonte: "PEC del Comune da fonti istituzionali (Regione Emilia-Romagna, sito del Comune), verificata il 09/11/2026" },
+  // Medesano (PR)
+  "medesano": { email: "protocollo@postacert.comune.medesano.pr.it", tipo: "pec", fonte: "IndicePA, PEC del Comune (dataset consultato il 09/11/2026)" },
 };
