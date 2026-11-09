@@ -37,6 +37,43 @@ export const roma: ComuneConfig = {
   },
 
   puntiSupporto: [
+    // Verifica istituzionale 09/11/2026: distinguere i diritti dalle erogazioni effettivamente finanziate.
+    {
+      icon: "people-outline",
+      title: "Lazio · CardGiver e riconoscimento caregiver",
+      subtitle: "Per il riconoscimento dello status di caregiver familiare rivolgersi allo Sportello Caregiver del PUA di residenza. Dopo valutazione UVMD è prevista la CardGiver. Informazioni regionali: 06 99500. Fonte Salute Lazio, letta 09/11/2026.",
+      action: { type: "web", value: "https://salutelazio.it/it/servizi/sostegno-ai-caregiver" },
+    },
+    {
+      icon: "cash-outline",
+      title: "Lazio · budget personale caregiver (fino a 1.000 euro/anno)",
+      subtitle: "La Regione descrive un budget personale di 1.000 euro/anno per caregiver con ISEE inferiore a 24.000 euro, destinato a formazione, tempo libero e cura personale. Per modalità di accesso e disponibilità effettiva rivolgersi al PUA: non è un pagamento automatico. Fonte Salute Lazio, 09/11/2026.",
+      action: { type: "web", value: "https://salutelazio.it/it/servizi/sostegno-ai-caregiver" },
+    },
+    {
+      icon: "home-outline",
+      title: "Lazio · sollievo caregiver e sostituzione temporanea",
+      subtitle: "Rimborso fino a 500 euro/anno, o fino a 600 euro in caso di disabilità complessa, per assistenza sostitutiva programmata; previste anche misure per emergenze. Verificare attivazione e requisiti presso PUA/Sportello Caregiver. Fonte Salute Lazio, 09/11/2026.",
+      action: { type: "web", value: "https://salutelazio.it/it/servizi/sostegno-ai-caregiver" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio XII · Sportello Caregiver",
+      subtitle: "Via Fabiola 14, primo piano, stanze 1.18/1.19. Martedì e mercoledì 8:30–13:00 e 14:00–17:00; altri giorni su appuntamento. Offre orientamento e raccoglie le domande di riconoscimento caregiver. Fonte Roma Capitale, 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF1037074" },
+    },
+    {
+      icon: "people-outline",
+      title: "Municipio VI · Ufficio Settore Disabilità",
+      subtitle: "Viale Duilio Cambellotti 11. Segue SAISH adulti e minori, disabilità gravissima, caregiver, OEPAC, autismo, Dopo di Noi, vita indipendente e centri diurni. Referente: Annalisa Montagnoli, tel. 06 69608946. Fonte Roma Capitale, 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=UFF28713" },
+    },
+    {
+      icon: "location-outline",
+      title: "Roma · Segretariato Sociale e PUA di tutti i Municipi",
+      subtitle: "Indice ufficiale degli uffici dei Municipi I–XV per orientamento, assistenza e domande sociali. I recapiti specifici vanno verificati nella pagina di ciascun ufficio. Fonte Roma Capitale, 09/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF87122" },
+    },
     // Lazio e Municipi: fonti ufficiali lette il 09/11/2026.
     // Le misure regionali sono percorsi di accesso, NON bandi automaticamente aperti.
     {
