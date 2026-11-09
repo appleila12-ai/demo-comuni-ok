@@ -169,6 +169,13 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "chioggia": { email: "chioggia@pec.chioggia.org", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Civita Castellana (VT)
   "civita-castellana": { email: "comune.civitacastellana@legalmail.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  "calcata": { email: "protocollo@pec.comunecalcata.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (19/10/2026)" },
+  "castel-sant-elia": { email: "protocollo@pec.comunecastelsantelia.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (19/10/2026)" },
+  "corchiano": { email: "comunedicorchiano@legalmail.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (19/10/2026)" },
+  "faleria": { email: "protocollo@pec.comunedifaleria.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (19/10/2026)" },
+  "gallese": { email: "comunedigallese@legalmail.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (19/10/2026)" },
+  "vasanello": { email: "comune.vasanello.vt@pec.it", tipo: "pec", fonte: "elenco IPA dei domicili digitali (19/10/2026)" },
+  "vignanello": { email: "protocollo@pec.comunevignanello.eu", tipo: "pec", fonte: "elenco IPA dei domicili digitali (19/10/2026)" },
   // Civitanova Marche (MC)
   "civitanova-marche": { email: "comune.civitanovamarche@pec.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Collegno (TO)
