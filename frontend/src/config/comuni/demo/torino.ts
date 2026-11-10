@@ -20,7 +20,8 @@ export const torino: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "Un servizio sociale per distretto: le sedi sono qui sotto",
-  telefono: "011 4421111",
+  // Dipartimento Servizi Sociali, Sociosanitari e Abitativi: https://www.comune.torino.it/amministrazione/dipartimento-servizi-sociali-socio-sanitari-abitativi (consultata il 10/11/2026; data di aggiornamento non indicata)
+  telefono: "011 011 25520",
   email: "",
   pec: "servizi.sociali@cert.comune.torino.it",
   orari: "Per appuntamento, dal lunedì al venerdì dalle 9:00 alle 13:00",
@@ -36,6 +37,18 @@ export const torino: ComuneConfig = {
   },
 
   puntiSupporto: [
+    {
+      icon: "business-outline",
+      title: "Dipartimento Servizi Sociali, Sociosanitari e Abitativi",
+      subtitle: "Via Carlo Ignazio Giulio 22 · Tel. 011 011 25520 (alternativo 011 011 25111) · Fonte: sito del Comune, consultato il 10/11/2026",
+      action: { type: "tel", value: "01101125520" },
+    },
+    {
+      icon: "information-circle-outline",
+      title: "PIÙ – Punto Informativo Unificato",
+      subtitle: "Per orientarti tra i servizi del Comune · Tel. 011 011 23010 · Numero verde 800 019 531 · piu@comune.torino.it · Pagina aggiornata il 03/09/2026",
+      action: { type: "tel", value: "01101123010" },
+    },
     {
       icon: "people-outline",
       title: "Servizi sociali Circoscrizioni 1 e 8 (via Pio VII 61)",
