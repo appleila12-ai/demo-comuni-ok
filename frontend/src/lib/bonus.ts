@@ -2241,6 +2241,70 @@ export const BONUS: Bonus[] = [
     verificatoIl: "20/10/2026",
   },
 
+  {
+    id: "pescara-trasporto-scolastico-autonomo-2026-2027",
+    regione: "Abruzzo",
+    comuni: ["pescara"],
+    titolo: "Contributo per il trasporto scolastico autonomo di alunni con disabilità a Pescara",
+    perChi:
+      "Residenti a Pescara con legge 104 art. 3 comma 3 che frequentano infanzia, primaria o secondaria di primo grado e non usano il trasporto scolastico comunale. Distanza casa-scuola oltre 500 metri (oltre 100 metri nei casi di grave limitazione della deambulazione); frequenza scolastica almeno del 50%.",
+    cosa:
+      "Contributo una tantum fino a 1.000 euro per l'anno scolastico 2026/2027: l'importo effettivo si decide dopo aver raccolto le domande.",
+    stato: "aperto",
+    quando:
+      "Domande entro il 31/05/2027, ore 13:00.",
+    comeSiChiede:
+      "Domanda online con SPID, dalla pagina del Comune di Pescara indicata come fonte.",
+    fonte: {
+      label: "Comune di Pescara · Contributo una tantum per il trasporto scolastico in autonomia (pagina del 21/10/2026; avviso del 19/10/2026)",
+      url: "https://www.comune.pescara.it/novita/avviso-pubblico-per-lerogazione-di-contributo-economico-una-tantum-per-il-trasporto-scolastico-in-autonomia-di-alunni-con-disabilita/",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. Valgono tutte le condizioni dell'avviso, anche per i fratelli nella stessa scuola.",
+  },
+  {
+    id: "catanzaro-assegno-cura-gravissima-fna-2022",
+    regione: "Calabria",
+    comuni: ["catanzaro"],
+    titolo: "Assegno di cura per la disabilità gravissima a Catanzaro (FNA 2022)",
+    perChi:
+      "Residenti nell'ATS di Catanzaro con disabilità gravissima (DM 26/09/2016), invalidità civile al 100% con accompagnamento e legge 104 art. 3 comma 3. ISEE sociosanitario fino a 50.000 euro, 65.000 euro per i minorenni; altre condizioni e incompatibilità sono nell'avviso.",
+    cosa:
+      "1.000 euro al mese per la dipendenza vitale con assistenza continua nelle 24 ore, 600 euro al mese per le altre condizioni di disabilità gravissima, secondo la valutazione.",
+    stato: "aperto",
+    quando:
+      "Domande entro il 19/11/2026.",
+    comeSiChiede:
+      "Con la modulistica dell'avviso del Comune di Catanzaro, scaricabile dalla pagina indicata come fonte.",
+    fonte: {
+      label: "Comune di Catanzaro · Avviso per il supporto alle persone in condizione di disabilità gravissima (pubblicato il 21/10/2026)",
+      url: "https://www.comune.catanzaro.it/novita/pubblicato-lavviso-per-il-supporto-alle-persone-in-condizione-di-disabilita-gravissima-e-al-nucleo-familiare-di-appartenenza-domande-entro-il-19-novembre/",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "Scade tra pochi giorni: non aspettare l'ultimo giorno. Valgono tutte le condizioni dell'avviso integrale.",
+  },
+  {
+    id: "reggio-calabria-assegno-cura-gravissima-fna-2022",
+    regione: "Calabria",
+    comuni: ["reggio-calabria"],
+    titolo: "Assegno di cura e autonomia per la disabilità gravissima a Reggio Calabria (FNA 2022)",
+    perChi:
+      "Persone con disabilità gravissima secondo il DM 26/09/2016, con valutazione multidimensionale. ISEE sociosanitario fino a 50.000 euro, 65.000 euro per i minorenni. L'elenco completo dei requisiti è nell'allegato dell'avviso.",
+    cosa:
+      "Assegno per 12 mensilità riferite a gennaio-dicembre 2026, entro le risorse disponibili. L'importo individuale non è indicato nella pagina del Comune.",
+    stato: "aperto",
+    quando:
+      "Domande entro il 20/11/2026.",
+    comeSiChiede:
+      "Con la modulistica dell'avviso, trasmessa tramite PEC al Comune.",
+    fonte: {
+      label: "Comune di Reggio Calabria · Avviso assegno di cura e autonomia per la disabilità gravissima (21/10/2026)",
+      url: "https://comune.reggio-calabria.it/Notizie/Details/8681",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "Scade tra pochi giorni: non aspettare l'ultimo giorno. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. Requisiti completi e importo non verificati: leggi l'allegato dell'avviso.",
+  },
+
   // --- Raccolta 30/10/2026: Marche (misure regionali valide per tutta la Regione) ---
   {
     id: "marche-frna-2026",
