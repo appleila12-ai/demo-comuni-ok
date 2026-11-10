@@ -124,6 +124,26 @@ export const BONUS: Bonus[] = [
     nota: "Data di aggiornamento della pagina non indicata. Chiedi ai Servizi Sociali se i fondi sono disponibili.",
   },
   {
+    id: "liguria-ausili-sportivi-2026",
+    regione: "Liguria",
+    titolo: "Contributo per acquistare ausili sportivi (atleti con disabilità)",
+    perChi:
+      "Atleti con disabilità in Liguria, secondo i requisiti dell'avviso regionale (la gestione è della Consulta regionale per la tutela dei diritti della persona con disabilità).",
+    cosa:
+      "Contributo fino a 4.000 euro a persona (IVA esclusa) per l'acquisto di ausili sportivi.",
+    stato: "attivo",
+    quando:
+      "Avviso pubblicato il 14/07/2026, «fino ad esaurimento fondi». Dotazione iniziale: 30.000 euro. La Regione non indica quanti fondi restano.",
+    comeSiChiede:
+      "Con la domanda prevista dall'avviso della Regione Liguria: modalità e moduli sono nella pagina ufficiale.",
+    fonte: {
+      label: "Regione Liguria · Contributi per l'acquisto di ausili sportivi 2026",
+      url: "https://www.regione.liguria.it/homepage-attivita-istituzionale/trasparenza/amministrazione-trasparente/beni-immobili-e-gestione-patrimonio/patrimonio-immobiliare/publiccompetition/4683%3Acontributi-acquisto-ausili-sportivi-2026.html",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: la Regione non ha pubblicato la chiusura né i fondi residui. Prima di preparare la domanda chiedi conferma alla Consulta regionale.",
+  },
+  {
     id: "la-spezia-gravissima-disabilita",
     regione: "Liguria",
     comuni: ["la-spezia"],

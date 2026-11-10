@@ -1187,3 +1187,39 @@ ESENZIONE_ASL.venezia = {
     "La pagina letta non indica i documenti richiesti né gli sportelli fisici, i telefoni, gli orari o i tempi di rilascio: chiedili all'ULSS.",
   fonte: "ULSS 3 Serenissima · Sportello amministrativo online, consultato il 10/11/2026 (data di aggiornamento non indicata)",
 };
+
+// Fiumicino: ASL Roma 3. Pagina «Esenzioni ticket» consultata il 10/11/2026 (data di aggiornamento non indicata).
+ESENZIONE_ASL.fiumicino = {
+  asl: "ASL Roma 3",
+  intro:
+    "Per il rilascio e il rinnovo delle esenzioni dal ticket nel Comune di Fiumicino la ASL Roma 3 indica tre sedi.",
+  comeSiPresenta: [
+    "Fiumicino · via Coni Zugna 173",
+    "Fregene · via della Pineta di Fregene 76",
+    "Palidoro · Casa della Salute, via Aurelia km 30,600",
+  ],
+  documenti: [
+    "Per rinnovare per email l'esenzione da reddito: modulo firmato, codice fiscale e documento d'identità",
+  ],
+  importante:
+    "Gli orari e la procedura online indicati nella pagina valgono per l'esenzione da reddito 2026: non vanno applicati alle esenzioni per patologia o invalidità, che hanno percorsi distinti.",
+  telefoni: [],
+  paginaUrl: "https://www.aslroma3.it/servizi-dalla-a-alla-z/e/esenzioni-ticket/",
+  paginaLabel: "Esenzioni ticket · ASL Roma 3",
+  manca:
+    "La pagina non dà un elenco unico di documenti per patologia e invalidità, né telefoni e orari per queste esenzioni: chiedili allo sportello o all'URP della ASL.",
+  fonte: "ASL Roma 3 · pagina «Esenzioni ticket», consultata il 10/11/2026 (data di aggiornamento non indicata)",
+};
+
+// Ancona: AST Ancona. Pagine consultate il 10/11/2026.
+ESENZIONE_ASL.ancona = {
+  asl: "AST Ancona",
+  intro:
+    "L'AST Ancona indica l'esenzione per patologia come servizio attivo nel Distretto di Ancona e, con comunicazione del 05/11/2026, ha attivato la richiesta online nei Distretti di Ancona e Jesi.",
+  telefoni: [],
+  paginaUrl: "https://www.astancona.marche.it/it/argomenti/ticket-ed-esenzioni",
+  paginaLabel: "Ticket ed esenzioni · AST Ancona",
+  manca:
+    "Le pagine lette non indicano i documenti richiesti, i telefoni, gli sportelli né gli orari: chiedili al Distretto di Ancona o all'URP dell'AST.",
+  fonte: "AST Ancona · «Ticket ed esenzioni» (scheda Distretto Ancona del 25/09/2025; comunicazione del 05/11/2026), consultata il 10/11/2026",
+};
