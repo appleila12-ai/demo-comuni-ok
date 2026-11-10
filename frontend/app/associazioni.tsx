@@ -30,7 +30,10 @@ function Azione({ icon, label, onPress }: { icon: React.ComponentProps<typeof Io
   );
 }
 
+const UICI_NAZIONALE = "UICI – Unione Italiana dei Ciechi e degli Ipovedenti";
+
 function Scheda({ a, vicina }: { a: Associazione; vicina: boolean }) {
+  const router = useRouter();
   return (
     <View style={paginaStili.card} testID={`associazione-${a.nome}`}>
       {vicina ? <Text style={[styles.badge, { color: comune.theme.warmDark, backgroundColor: comune.theme.warmSoft }]}>Vicino a te</Text> : null}
@@ -53,6 +56,9 @@ function Scheda({ a, vicina }: { a: Associazione; vicina: boolean }) {
           elemento={{ id: `associazione:${a.nome}`, titolo: a.nome, sotto: a.cosa, tel: a.telefono, email: a.email, url: a.sito, whatsapp: a.whatsapp, route: "/associazioni" }}
         />
       </View>
+      {a.nome === UICI_NAZIONALE ? (
+        <Bottone label={`UICI: la sede per ${comune.nomeBreve} e i radiofari`} icon="people-outline" variante="vuoto" onPress={() => router.push("/uici")} testID="associazioni-uici" />
+      ) : null}
       {a.verificare ? <Text style={[paginaStili.piccolo, { marginTop: 6 }]}>Recapito da confermare.</Text> : null}
     </View>
   );
@@ -106,14 +112,6 @@ export default function Associazioni() {
             </Avviso>
           ) : null}
           <Text style={paginaStili.titoloSezione}>Per trovarne altre</Text>
-          <View style={paginaStili.card} testID="associazioni-uici">
-            <Text style={styles.nome} accessibilityRole="header">UICI – Unione Italiana dei Ciechi e degli Ipovedenti</Text>
-            <Text style={paginaStili.testo}>
-              Ha una sede in quasi tutte le province. Per chi non vede o vede poco: informazioni su diritti, ausili e
-              autonomia. Qui trovi la sede per {comune.nomeBreve} e, se ci sono, i radiofari del progetto LETIsmart.
-            </Text>
-            <Bottone label={`UICI: la sede per ${comune.nomeBreve}`} icon="people-outline" variante="vuoto" onPress={() => router.push("/uici")} />
-          </View>
           {d.volontariatoNazionali.map((a) => <Scheda key={a.nome} a={a} vicina={false} />)}
         </View>
       ) : (
