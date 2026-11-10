@@ -518,11 +518,20 @@ PER_PROVINCIA.GE.volontariato.unshift(
   {
     nome: "ALFAPP – Associazione Ligure Famiglie Pazienti Psichiatrici",
     cosa: "Accoglienza e consulenza per persone con disagio psichiatrico e famiglie, gruppi di aiuto, laboratori, progetti per lavoro e autonomia abitativa.",
-    dove: "Via Malta, Genova · accoglienza lun–ven 15:00–19:00",
+    dove: "Sede regionale: Via Malta 3/4, Genova · accoglienza lun–ven 15:00–19:00",
     telefono: "010 540740",
     email: "alfapp.genova@gmail.com",
     sito: "https://www.alfapp.it",
     comuni: ["genova"],
+  },
+  // Aggiornamento 10/11/2026: sezione Tigullio, dati inseriti dall'associazione con il modulo "Adesione associazioni" del sito (10/11/2026).
+  {
+    nome: "ALFAPP Tigullio – Associazione Ligure Famiglie Pazienti Psichiatrici",
+    cosa: "Volontari e familiari che affiancano le famiglie dei pazienti psichiatrici nella gestione delle patologie dei loro cari e si attivano perché le leggi statali e regionali siano pienamente applicate.",
+    dove: "Sezione Tigullio: Via Caboto 13/a, Sestri Levante",
+    telefono: "010 540740",
+    email: "alfapp.tigullio@gmail.com",
+    comuni: ["sestri-levante"],
   },
   {
     nome: "Associazione Ligure Parkinson",
