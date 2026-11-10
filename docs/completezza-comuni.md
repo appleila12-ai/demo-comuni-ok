@@ -3,9 +3,9 @@
 Criterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale attivo/aperto + almeno un bonus comunale attivo/aperto + scheda ticket specifica per l'ASL.
 Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
-Comuni con scheda: 420 · completi: 10 · incompleti: 410
+Comuni con scheda: 420 · completi: 11 · incompleti: 409
 
-Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 299 · bonus regionali 83 · servizi sociali (recapiti) 234
+Cosa manca (n. Comuni): bonus comunali 388 · esenzione ticket 299 · bonus regionali 83 · servizi sociali (recapiti) 234
 
 ## Completi
 
@@ -17,6 +17,7 @@ Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 299 · bonus regi
 - Comune di Pisa (PI)
 - Comune di Reggio Emilia (RE)
 - Comune di Torino (TO)
+- Comune di Treviglio (BG)
 - Comune di Venezia (VE)
 - Comune di Verona (VR)
 
@@ -266,7 +267,6 @@ Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 299 · bonus regi
 | Comune di Seregno | MB | Lombardia | bonus comunali, esenzione ticket |
 | Comune di Sesto San Giovanni | MI | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Sondrio | SO | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Treviglio | BG | Lombardia | bonus comunali |
 | Comune di Tribiano | MI | Lombardia | bonus comunali, esenzione ticket |
 | Comune di Valmadrera | LC | Lombardia | bonus comunali, esenzione ticket |
 | Comune di Varese | VA | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
