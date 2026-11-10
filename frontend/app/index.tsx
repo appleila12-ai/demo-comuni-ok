@@ -29,7 +29,7 @@ import { RecuperaDati } from "@/src/components/RecuperaDati";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
 import { RichiestaNome, RichiestaNomeHome } from "@/src/components/RichiestaNome";
 import { useNomeUtente } from "@/src/lib/nomeUtente";
-import { SITO_TUTELAPP } from "@/src/lib/richiestaComune";
+import { SITO_TUTELAPP, linkMailtoInserimentoComune } from "@/src/lib/richiestaComune";
 import { useSalvati } from "@/src/lib/salvati";
 
 const FEATURES = [
@@ -478,6 +478,18 @@ function HomeDelComune() {
             <Text style={styles.contactText}>
               I recapiti dei servizi di questo Comune non sono ancora in TutelApp.
             </Text>
+          )}
+          {!!comune.soloElenco && (
+            <Pressable
+              onPress={() => Linking.openURL(linkMailtoInserimentoComune(comune)).catch(() => {})}
+              style={({ pressed }) => [styles.contactRow, pressed && styles.pressed]}
+              accessibilityRole="button"
+              accessibilityLabel={`Chiedi a TutelApp di inserire il Comune di ${comune.nomeBreve}: apre la mail già compilata`}
+              testID="comune-home-chiedi-inserimento"
+            >
+              <Ionicons name="mail-outline" size={16} color={t.warmDark} />
+              <Text style={[styles.contactValue, styles.contactLink]}>Chiedi di inserire il tuo Comune</Text>
+            </Pressable>
           )}
 
           <View style={styles.contactRows}>
