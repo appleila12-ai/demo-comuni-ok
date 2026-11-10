@@ -3,9 +3,9 @@
 Criterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale attivo/aperto + almeno un bonus comunale attivo/aperto + scheda ticket specifica per l'ASL.
 Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
-Comuni con scheda: 420 · completi: 23 · incompleti: 397
+Comuni con scheda: 420 · completi: 26 · incompleti: 394
 
-Cosa manca (n. Comuni): bonus comunali 383 · esenzione ticket 297 · servizi sociali (recapiti) 233 · bonus regionali 42
+Cosa manca (n. Comuni): bonus comunali 383 · esenzione ticket 294 · servizi sociali (recapiti) 233 · bonus regionali 42
 
 ## Completi
 
@@ -14,8 +14,11 @@ Cosa manca (n. Comuni): bonus comunali 383 · esenzione ticket 297 · servizi so
 - Comune di Arcola (SP)
 - Comune di Bollate (MI)
 - Comune di Brescia (BS)
+- Comune di Fondi (LT)
 - Comune di Genova (GE)
 - Comune di La Spezia (SP)
+- Comune dell'Aquila (AQ)
+- Comune di Latina (LT)
 - Comune di Legnano (MI)
 - Comune di Lerici (SP)
 - Comune di Lodi (LO)
@@ -37,7 +40,6 @@ Cosa manca (n. Comuni): bonus comunali 383 · esenzione ticket 297 · servizi so
 
 | Comune | Prov. | Regione | Manca |
 |---|---|---|---|
-| Comune dell'Aquila | AQ | Abruzzo | esenzione ticket |
 | Comune di Avezzano | AQ | Abruzzo | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Chieti | CH | Abruzzo | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Lanciano | CH | Abruzzo | servizi sociali (recapiti), bonus comunali, esenzione ticket |
@@ -160,7 +162,6 @@ Cosa manca (n. Comuni): bonus comunali 383 · esenzione ticket 297 · servizi so
 | Comune di Faleria | VT | Lazio | bonus comunali, esenzione ticket |
 | Comune di Ferentino | FR | Lazio | bonus comunali, esenzione ticket |
 | Comune di Fiumicino | RM | Lazio | bonus comunali |
-| Comune di Fondi | LT | Lazio | esenzione ticket |
 | Comune di Fonte Nuova | RM | Lazio | servizi sociali (recapiti), bonus comunali |
 | Comune di Formia | LT | Lazio | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Frascati | RM | Lazio | bonus comunali, esenzione ticket |
@@ -168,7 +169,6 @@ Cosa manca (n. Comuni): bonus comunali 383 · esenzione ticket 297 · servizi so
 | Comune di Gallese | VT | Lazio | bonus comunali, esenzione ticket |
 | Comune di Guidonia Montecelio | RM | Lazio | bonus comunali |
 | Comune di Ladispoli | RM | Lazio | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Latina | LT | Lazio | esenzione ticket |
 | Comune di Lenola | LT | Lazio | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Marino | RM | Lazio | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Monte San Biagio | LT | Lazio | bonus comunali, esenzione ticket |

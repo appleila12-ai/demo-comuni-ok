@@ -1095,11 +1095,11 @@ ESENZIONE_ASL.verona = {
     "Documentazione sanitaria che attesta la patologia: la pagina ammette diverse forme, comprese certificazioni specialistiche e cartelle cliniche",
   ],
   mail: "distretto1@aulss9.veneto.it",
-  telefoni: [],
+  telefoni: [{ etichetta: "Distretto 1 · via Campania 1 (scheda del Comune di Verona, solo su appuntamento, lun–ven 8:00–12:30)", numero: "045 8157340" }],
   paginaUrl: "https://www.aulss9.veneto.it/per-patologia",
   paginaLabel: "Esenzione per patologia · ULSS 9 Scaligera",
   manca:
-    "La pagina non indica gli orari né il telefono degli sportelli per le esenzioni, e non dice se serve l'appuntamento né i tempi di rilascio: chiedili al tuo Distretto. L'e-mail indicata è quella del Distretto 1 (Verona città). Il documento con le sedi è senza data.",
+    "La pagina dell'ULSS non indica gli orari né il telefono degli sportelli per le esenzioni; il telefono e l'orario di via Campania 1 vengono dalla scheda del Distretto sul sito del Comune di Verona, che non indica la data né i tempi di rilascio: chiedili al tuo Distretto. L'e-mail indicata è quella del Distretto 1 (Verona città). Il documento con le sedi è senza data.",
   fonte:
     "ULSS 9 Scaligera · pagina «Esenzione per patologia» (18/08/2026) e documento aziendale sugli sportelli dei Distretti, controllati il 05/11/2026",
 };
@@ -1248,4 +1248,57 @@ ESENZIONE_ASL.padova = {
   manca:
     "I documenti da allegare sono indicati solo nelle istruzioni di ogni richiesta, e la guida non chiarisce tutti i casi di invalidità civile. Non ho trovato gli orari degli sportelli fisici: chiedili all'URP.",
   fonte: "ULSS 6 Euganea · guida allo sportello online (aggiornamento non indicato) e Carta di accoglienza del Distretto Padova Bacchiglione (novembre 2025), consultate il 10/11/2026",
+};
+
+// ASL Latina: Carta dei servizi 2026 (rev. 25/03/2026) e pagine dei Distretti 2 (04/12/2025) e 4 (02/12/2025), controllate il 10/11/2026.
+const DOCUMENTI_ASL_LATINA = [
+  "Patologia cronica: certificazione su apposita modulistica di uno specialista pubblico (per diabete e ipertensione la Carta dei servizi ammette anche il medico curante)",
+  "Invalidità civile: verbale di riconoscimento dell'invalidità civile",
+  "Invalidità da lavoro: verbale INAIL con punteggio (sotto il 67% anche l'indicazione della patologia invalidante)",
+  "Invalidità di guerra o di servizio: verbale con la categoria (dalla VI all'VIII anche la patologia invalidante)",
+  "Vittime del dovere o del terrorismo: documentazione che comprova la condizione",
+];
+const FONTE_CARTA_LATINA = "https://www.ausl.latina.it/attachments/article/183/CARTA%20ASL%20Rev.%2011%20%20DEF%202025%20-%20Mod.%202026%20%28Agg.%2025.03.2026%29.pdf";
+
+ESENZIONE_ASL.latina = {
+  asl: "ASL Latina",
+  intro: "L'esenzione dal ticket si chiede all'Ufficio esenzioni del Distretto di residenza. Per Latina è il Distretto 2.",
+  comeSiPresenta: [
+    "Distretto 2 · Piazza Celli 8 / via Cesare Battisti 50, Latina · lunedì–venerdì 8:30–12:30 (indicati per l'esenzione per patologia e per reddito)",
+    "Per il rinnovo per patologia serve una nuova certificazione specialistica o una documentazione sanitaria recente",
+  ],
+  documenti: DOCUMENTI_ASL_LATINA,
+  mail: "sceltamedico.distretto2@ausl.latina.it",
+  telefoni: [{ etichetta: "Segreteria del Distretto 2", numero: "0773 6556022" }],
+  paginaUrl: "https://www.ausl.latina.it/gs-servterritoriali/290-dis2-servizi?tmpl=component",
+  paginaLabel: "Servizi del Distretto 2 · ASL Latina",
+  altriLink: [{ label: "Carta dei servizi ASL Latina 2026 (sezione 3.1.2)", url: FONTE_CARTA_LATINA }],
+  manca:
+    "Non è indicato un telefono dedicato alle esenzioni, né se per l'invalidità valgono lo stesso sportello e lo stesso orario, né come presentare la domanda per email: chiedili al Distretto.",
+  fonte: "ASL Latina · Carta dei servizi 2026 (rev. 25/03/2026) e pagina del Distretto 2 (aggiornata il 04/12/2025), controllate il 10/11/2026",
+};
+
+ESENZIONE_ASL.fondi = {
+  asl: "ASL Latina",
+  intro: "L'esenzione dal ticket si chiede all'Ufficio esenzioni del Distretto di residenza. Per Fondi è il Distretto 4.",
+  documenti: DOCUMENTI_ASL_LATINA,
+  telefoni: [],
+  paginaUrl: "https://www.ausl.latina.it/gs-servterritoriali/294-dis4-servizi",
+  paginaLabel: "Servizi del Distretto 4 · ASL Latina",
+  altriLink: [{ label: "Carta dei servizi ASL Latina 2026 (sezione 3.1.2)", url: FONTE_CARTA_LATINA }],
+  manca:
+    "La pagina del Distretto 4 non indica lo sportello esenzioni di Fondi, né telefono e orari. Elenca un ufficio «Esenzione Ticket» a Terracina (Ospedale Fiorini, via Firenze, 1° piano, 0773 708315, lunedì–venerdì 8:30–12:30), ma non dice che i residenti di Fondi debbano andare lì: chiedi conferma al Distretto.",
+  fonte: "ASL Latina · Carta dei servizi 2026 (rev. 25/03/2026) e pagina del Distretto 4 (aggiornata il 02/12/2025), controllate il 10/11/2026",
+};
+
+ESENZIONE_ASL.laquila = {
+  asl: "ASL 1 Abruzzo",
+  intro: "A L'Aquila lo sportello per la scelta del medico e per le esenzioni ticket è nella sede dell'ex ONPI, Distretto Area L'Aquila.",
+  comeSiPresenta: ["Via Capo Croce 1, L'Aquila · lunedì–venerdì 8:15–13:15"],
+  telefoni: [{ etichetta: "Informazioni · lun–ven 13:00–14:00, anche mar e gio 15:00–17:30", numero: "0862 368937" }],
+  paginaUrl: "https://trasparenza.asl1abruzzo.it/page/40/details/6627/u-o-s-d-cure-primarie-l-aquila.html",
+  paginaLabel: "U.O.S.D. Cure Primarie L'Aquila · ASL 1 Abruzzo",
+  manca:
+    "La pagina non indica i documenti per patologia e per invalidità né se si può presentare la richiesta per email: chiedili allo sportello.",
+  fonte: "ASL 1 Abruzzo · U.O.S.D. Cure Primarie L'Aquila (aggiornata il 28/10/2026), controllata il 10/11/2026",
 };
