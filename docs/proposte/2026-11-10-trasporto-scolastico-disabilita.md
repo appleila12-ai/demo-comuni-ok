@@ -26,3 +26,9 @@
 4. Eseguire `node frontend/scripts/controlla-dati.js --confronta origin/main`, `--classifica`, rapporto completo e controllare anteprima Netlify prima di qualsiasi merge.
 
 Nessuna voce rimossa. Nessuna modifica ai file applicativi.
+
+## Verifica integrativa del 10/11/2026
+- Gallarate, conferma ufficiale dell'avviso e dell'ultimo aggiornamento 16/10/2026 ore 12:54: https://www.comune.gallarate.va.it/novita/bando-per-contributi-per-il-trasporto-scolastico-a-favore-di-alunni-studenti-con-disabilita-anno-scolastico-2026-2027-scuole-dellinfanzia-scuole-primarie-e-scuole-secondarie-di-primo-grado/
+- Ufficio competente Gallarate, Area Disabilità: 0331 754277 / 0331 754240, servsoc@comune.gallarate.va.it. Fonte: https://www.comune.gallarate.va.it/amministrazione/unita_organizzativa/servizi-sociali-area-disabilita/ ; ultimo aggiornamento non indicato.
+- Faenza, la pagina comunale https://old.comune.faenza.ra.it/Guida-ai-servizi/Servizi-per-l-istruzione/Agevolazioni-per-studenti-e-famiglie-borse-di-studio-contributi-esenzioni-ecc./Esenzioni-e-riduzioni-tariffa-trasporto-scolastico conferma esenzione con certificazione L.104/92 e richiesta della famiglia, ma contiene riferimenti ISEE 2021: non attestare la validità della procedura per 2026/27 senza verifica aggiornata.
+- **Non integrare i dati pubblicati finché queste verifiche non sono complete; non unire questa PR documentale come se fosse pubblicazione delle misure.**
