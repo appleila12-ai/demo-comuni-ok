@@ -435,6 +435,26 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "08/10/2026",
   },
+  {
+    id: "palermo-bonus-caregiver-fna-2022",
+    regione: "Sicilia",
+    comuni: ["palermo"],
+    titolo: "Bonus caregiver: contributo una tantum per chi assiste una persona con disabilità grave",
+    perChi:
+      "Caregiver familiari di persone con disabilità grave (art. 3, comma 3, legge 104/1992) o gravissima (D.M. 26 settembre 2016). Il Comune precisa che il riconoscimento deve riferirsi al 2022: sono esclusi i riconoscimenti successivi. Ci sono regole anche per chi assiste più persone e per persone assistite decedute dopo il periodo di riferimento: leggi l'avviso.",
+    cosa:
+      "Contributo economico una tantum a sostegno del ruolo di cura (annualità FNA 2022). L'importo non è fissato nell'avviso: dipende dalle risorse e dalle domande presentate.",
+    stato: "aperto",
+    quando: "Domande entro l'11/11/2026, ore 23:59.",
+    comeSiChiede:
+      "La domanda va al Comune di residenza della persona assistita, online con SPID o CIE sul portale sociale del Comune di Palermo (trovi il link nell'avviso).",
+    fonte: {
+      label: "Comune di Palermo · Avviso pubblico Bonus caregiver (pagina del 03/11/2026)",
+      url: "https://www.comune.palermo.it/novita/avviso-pubblico-bonus-caregiver-contributo-economico-una-tantum-per-il-sostegno-del-ruolo-di-cura-e-di-assistenza-dei-caregiver-familiari-di-persone-con-disabilit-grave-e-persone-con-disabilit-gravi/",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "Scade l'11/11/2026. Controlla i requisiti sull'avviso ufficiale prima di presentare la domanda.",
+  },
 
   // ---------------------------------------------------------------- LOMBARDIA
   {
@@ -1833,6 +1853,26 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "20/10/2026",
     nota: "Avviso del 2025, scaduto. Chiedi al Comune se è previsto un nuovo avviso.",
+  },
+  {
+    id: "ancona-multileva-3-2-rette-residenziali",
+    regione: "Marche",
+    comuni: ["ancona"],
+    titolo: "Multileva 3.2: contributo per le rette delle strutture residenziali",
+    perChi:
+      "Persone ospiti di strutture residenziali autorizzate (aree anziani, disabilità, salute mentale) e loro familiari che pagano la retta. Per i familiari paganti: requisiti di territorio e ISEE ordinario e ISEE sociosanitario residenze non superiori a 25.000 euro. Per gli ospiti che pagano da soli valgono requisiti specifici di residenza e ISEE: leggi l'avviso.",
+    cosa:
+      "Contributo di 250 euro al mese, fino a 12 mensilità e 3.000 euro all'anno, per le rette delle strutture residenziali.",
+    stato: "aperto",
+    quando: "Domande entro il 16/11/2026.",
+    comeSiChiede:
+      "Con l'apposito modulo, per PEC, raccomandata o al protocollo del Comune di Ancona.",
+    fonte: {
+      label: "Comune di Ancona · Rette per strutture residenziali: contributi economici (pagina del 05/11/2026)",
+      url: "https://www.comune.ancona.it/it/page/rette-per-strutture-residenziali-contributi-economici-a-sostegno-delle-famiglie-e-degli-ospiti",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "Scade il 16/11/2026.",
   },
   {
     id: "rimini-mobilita-casa-lavoro-2026",

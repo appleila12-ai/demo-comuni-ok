@@ -21,8 +21,9 @@ export const palermo: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "Area delle Politiche Socio-Sanitarie · Settore Servizi Socio-Assistenziali",
   indirizzo: "Piazza Pretoria 1, 90133 Palermo (PA)",
-  telefono: "091 7401111",
-  email: "",
+  telefono: "091 7404245",
+  // Coordinamento Servizi Sociali: pagina del Comune https://www.comune.palermo.it/amministrazione/unita_organizzativa/uo-coordinamento-servizi-sociali/ (consultata il 10/11/2026; data di aggiornamento non indicata). Altri numeri: 091 7404255, 091 7404246.
+  email: "ssccoordinamento@comune.palermo.it",
   pec: "settoreservizisocioassistenziali@cert.comune.palermo.it",
   orari: "Orari: telefona al centralino o vedi il sito del Comune",
   sitoWeb: "https://www.comune.palermo.it",
