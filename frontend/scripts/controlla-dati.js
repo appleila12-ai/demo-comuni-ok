@@ -195,7 +195,7 @@ function confronta(ref) {
   const modificati = fileModificati(ref);
   // Le rimozioni volute si dichiarano in docs/registro/*.md con una riga «RIMOSSO: chiave1; chiave2»
   const dichiarate = new Set();
-  for (const f of modificati.filter((x) => /^docs\/registro\/.+\.md$/.test(x))) {
+  for (const f of modificati.filter((x) => /^docs\/registro\/.+\.md$/.test(x) && !/\/(README|_[^/]*)\.md$/.test(x))) {
     const p = path.join(L.REPO, f);
     if (!fs.existsSync(p)) continue;
     for (const m of fs.readFileSync(p, "utf8").matchAll(/RIMOSS[OI]\s*:\s*(.+)/gi))
