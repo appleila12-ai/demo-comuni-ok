@@ -218,7 +218,7 @@ function indice(): Voce[] {
   );
   prova("bonus", () => {
     const b = bonusDelComune();
-    [...b.locali, ...b.regionali].forEach((x) =>
+    [...b.locali, ...b.regionali, ...b.nazionali].forEach((x) =>
       voci.push(voce("bonus", `bonus-${x.id}`, x.titolo, breve(x.cosa), "/bonus", "Bonus e contributi", [x.titolo])),
     );
   });
