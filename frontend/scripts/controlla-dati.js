@@ -72,8 +72,8 @@ function controlla(src) {
     let host = null;
     try { host = new URL(url).hostname; } catch { err("bonus", `${idv}: indirizzo della fonte mancante o non valido`, dove); }
     if (host && !/^https:\/\//.test(url)) err("bonus", `${idv}: l'indirizzo della fonte deve iniziare con https://`, dove);
-    if (v.stato && !["aperto", "attivo", "chiuso", "da-verificare"].includes(v.stato)) err("bonus", `${idv}: stato «${v.stato}» non valido`, dove);
-    if (v.regione && !regioni.has(v.regione)) err("bonus", `${idv}: regione «${v.regione}» non valida`, dove);
+    if (v.stato && !["aperto", "attivo", "chiuso", "scaduto", "da-verificare"].includes(v.stato)) err("bonus", `${idv}: stato «${v.stato}» non valido`, dove);
+    if (v.regione && v.regione !== "Italia" && !regioni.has(v.regione)) err("bonus", `${idv}: regione «${v.regione}» non valida`, dove);
     const dv = L.dataIt(v.verificatoIl);
     if (v.verificatoIl && !dv) err("bonus", `${idv}: «verificatoIl» deve essere gg/mm/aaaa (trovato «${v.verificatoIl}»)`, dove);
     else if (dv && dv > OGGI) err("bonus", `${idv}: «verificatoIl» è nel futuro (${v.verificatoIl})`, dove);
