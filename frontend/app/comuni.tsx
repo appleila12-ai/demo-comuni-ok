@@ -31,8 +31,8 @@ import {
   setComuneAttivo,
   type ComuneConfig,
 } from "@/src/config/comune";
-import { MOSTRA_ANAGRAFICA } from "@/src/config/comuni";
-import { cercaAnagrafica, schedaDaAnagrafica } from "@/src/config/comuni/anagrafica";
+import { MOSTRA_ANAGRAFICA, trovaComune } from "@/src/config/comuni";
+import { cercaAnagrafica, piuVicini, schedaDaAnagrafica } from "@/src/config/comuni/anagrafica";
 import { PAESE_KEY, salvaPaese } from "@/src/lib/paese";
 import { colors, fonts, radius, spacing } from "@/src/theme";
 
@@ -92,18 +92,40 @@ export default function ScegliComune() {
   const primoAccesso = !comuneScelto();
   const attivo = primoAccesso ? "" : getComuneAttivo().slug;
   const [query, setQuery] = useState("");
+  // "Usa la mia posizione": solo su richiesta della persona; le coordinate non si salvano né si inviano.
+  const [vicini, setVicini] = useState<Risultato[] | null>(null);
+  const [posizione, setPosizione] = useState<"ferma" | "cerco" | "negata">("ferma");
+  const posizioneDisponibile =
+    MOSTRA_ANAGRAFICA && Platform.OS === "web" && typeof navigator !== "undefined" && !!navigator.geolocation;
+
+  const usaPosizione = () => {
+    setPosizione("cerco");
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const trovati = piuVicini(pos.coords.latitude, pos.coords.longitude, 5).map(({ voce }) => ({
+          comune: trovaComune(voce.slug) ?? schedaDaAnagrafica(voce),
+        }));
+        setQuery("");
+        setVicini(trovati);
+        setPosizione("ferma");
+      },
+      () => setPosizione("negata"),
+      { enableHighAccuracy: false, timeout: 10000, maximumAge: 0 },
+    );
+  };
 
   const { risultati, altri } = useMemo(() => cercaTutti(query), [query]);
 
   // Raggruppa per regione (in ordine alfabetico)
   const gruppi = useMemo(() => {
     const m = new Map<string, Risultato[]>();
-    risultati.forEach((r) => {
+    const sorgente = !query && vicini ? vicini : risultati;
+    sorgente.forEach((r) => {
       const k = r.comune.regione;
       m.set(k, [...(m.get(k) ?? []), r]);
     });
     return [...m.entries()].sort(([a], [b]) => a.localeCompare(b, "it"));
-  }, [risultati]);
+  }, [risultati, vicini, query]);
 
   const scegli = async ({ comune: c, paese }: Risultato) => {
     if (Platform.OS === "web" && typeof window !== "undefined") {
@@ -204,6 +226,39 @@ export default function ScegliComune() {
             {query && altri > 0 ? ` · altri ${altri} Comuni: scrivi più lettere del nome` : ""}
           </Text>
         </View>
+
+        {posizioneDisponibile && (
+          <View style={styles.posizione}>
+            <Pressable
+              onPress={usaPosizione}
+              disabled={posizione === "cerco"}
+              style={({ pressed }) => [styles.posizioneBtn, pressed && { opacity: 0.85 }]}
+              accessibilityRole="button"
+              accessibilityLabel="Usa la mia posizione per trovare il mio Comune"
+              testID="comuni-usa-posizione"
+            >
+              <Ionicons name="locate-outline" size={18} color={colors.brandPrimaryDark} />
+              <Text style={styles.posizioneTesto}>
+                {posizione === "cerco" ? "Cerco la tua posizione…" : "Usa la mia posizione"}
+              </Text>
+            </Pressable>
+            <Text style={styles.count}>
+              Facoltativo. La posizione serve solo a proporti i Comuni vicini: resta sul tuo dispositivo, non viene salvata né inviata.
+            </Text>
+            {posizione === "negata" ? (
+              <Text style={styles.count} testID="comuni-posizione-negata">
+                Non riusciamo a leggere la tua posizione: nessun problema, scrivi il nome del Comune nella casella.
+              </Text>
+            ) : null}
+            {vicini && !query ? (
+              <Pressable onPress={() => setVicini(null)} accessibilityRole="button" accessibilityLabel="Mostra di nuovo tutto l'elenco">
+                <Text style={[styles.count, { textDecorationLine: "underline" }]}>
+                  Questi sono i Comuni più vicini a te. Tocca qui per tornare all'elenco.
+                </Text>
+              </Pressable>
+            ) : null}
+          </View>
+        )}
 
         {gruppi.map(([regione, voci]) => (
           <View key={regione} style={styles.group}>
@@ -336,6 +391,19 @@ const styles = StyleSheet.create({
   },
   searchInput: { flex: 1, fontSize: 16, color: colors.onSurface, paddingVertical: 10 },
   count: { fontSize: 11, color: colors.onSurfaceTertiary, marginTop: spacing.sm, marginLeft: 4 },
+  posizione: { marginTop: spacing.sm },
+  posizioneBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.sm,
+    minHeight: 48,
+    paddingHorizontal: spacing.lg,
+    borderRadius: radius.pill,
+    borderWidth: 1.5,
+    borderColor: colors.brandPrimaryDark,
+    alignSelf: "flex-start",
+  },
+  posizioneTesto: { fontSize: 15, fontWeight: "600", color: colors.brandPrimaryDark },
   group: { marginTop: spacing.md },
   groupLabel: {
     fontSize: 10,

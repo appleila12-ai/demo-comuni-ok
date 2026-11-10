@@ -36,6 +36,15 @@ for (const v of dati) {
   if (scheda !== 0 && scheda !== 1) err(`Campo scheda non valido: ${nome}`);
 }
 
+// ---- coordinate uguali in province diverse (di solito è un errore del file di partenza)
+const perPunto = new Map();
+for (const v of dati) {
+  const k = v[4].toFixed(2) + "," + v[5].toFixed(2);
+  const prec = perPunto.get(k);
+  if (prec && prec[2] !== v[2]) err(`Stesse coordinate in province diverse: ${prec[1]} (${prec[2]}) e ${v[1]} (${v[2]})`);
+  else perPunto.set(k, v);
+}
+
 // ---- schede esistenti: ognuna (tranne le Unioni) deve essere collegata a un Comune dell'elenco
 const base = path.join(radice, "src/config/comuni");
 const file = ["sarzana", "erba", "vigne-e-vini", "ventimiglia", "mediglia"].map((f) => path.join(base, f + ".ts"))

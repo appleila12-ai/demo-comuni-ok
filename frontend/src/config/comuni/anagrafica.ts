@@ -174,3 +174,22 @@ export function schedaDaAnagrafica(v: VoceAnagrafica): ComuneConfig {
   schede.set(v.slug, scheda);
   return scheda;
 }
+
+/** Distanza in linea d'aria (km) tra due punti, formula di Haversine. */
+function kmTra(lat1: number, lon1: number, lat2: number, lon2: number): number {
+  const q = Math.PI / 180;
+  const dl = (lat2 - lat1) * q;
+  const dn = (lon2 - lon1) * q;
+  const h = Math.sin(dl / 2) ** 2 + Math.cos(lat1 * q) * Math.cos(lat2 * q) * Math.sin(dn / 2) ** 2;
+  return 2 * 6371 * Math.asin(Math.sqrt(h));
+}
+
+/**
+ * I Comuni più vicini a un punto (di norma la posizione indicata dalla persona, che resta sul
+ * suo dispositivo). Le distanze sono dal municipio: servono a proporre il Comune, non a misurare.
+ */
+export function piuVicini(lat: number, lon: number, quanti = 5): { voce: VoceAnagrafica; km: number }[] {
+  const lista = anagrafica().map((voce) => ({ voce, km: kmTra(lat, lon, voce.lat, voce.lon) }));
+  lista.sort((a, b) => a.km - b.km);
+  return lista.slice(0, quanti);
+}

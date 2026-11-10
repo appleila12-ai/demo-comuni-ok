@@ -67,6 +67,16 @@ const REGIONI_VALIDE = new Set([
 ]);
 
 const righe = leggiCsv(fs.readFileSync(sorgente, "utf8"));
+// Coordinate sbagliate nel file di partenza che i controlli automatici non vedono (il punto cade in un altro
+// Comune): corrette a mano e controllate sui Comuni confinanti.
+const CORREZIONI_COORDINATE = {
+  // nel file ha le coordinate di Roma; il Comune (LT) sta accanto a Castelforte (41.299, 13.824)
+  "059026": { lat: 41.275, long: 13.85, nota: "Santi Cosma e Damiano (LT): aveva le coordinate di Roma" },
+};
+for (const r of righe) {
+  const c = CORREZIONI_COORDINATE[r.pro_com_t];
+  if (c) { r.lat = String(c.lat); r.long = String(c.long); }
+}
 const rapporto = { coordinateCorrette: [], coordinateDaControllare: [] };
 
 // ---------- 1. codici ----------
