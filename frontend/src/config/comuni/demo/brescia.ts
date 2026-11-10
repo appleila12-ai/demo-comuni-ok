@@ -20,8 +20,9 @@ export const brescia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "030 29771",
-  email: "",
+  // Settore Servizi Sociali: https://www.comune.brescia.it/it/unita_organizzative/31063 (pagina del 03/07/2026, consultata il 10/11/2026). Altri numeri: 030 2978966, 030 2978950.
+  telefono: "030 2977750",
+  email: "servizisociali@comune.brescia.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.brescia.it/it/page/139587?fromService=1",

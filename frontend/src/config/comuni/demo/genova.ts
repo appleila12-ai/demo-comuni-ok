@@ -141,7 +141,8 @@ export const genova: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "010 1010",
-  email: "",
+  // Settore Servizi Sociali Territoriali: https://www.comune.genova.it/amministrazione/settore/settore-servizi-sociali-territoriali (pagina del 13/02/2026, consultata il 10/11/2026); telefono del settore non indicato nella pagina
+  email: "servsociali@comune.genova.it",
   pec: "",
   orari: "Numero unico del Comune 010 1010, numero verde URP 800 085 324. Ascolto per telefono: martedì 9:00–12:30 e giovedì 14:00–16:30 (si prenota al telefono). Sportelli senza prenotazione: orari diversi per ogni sede",
   sitoWeb: "https://www.comune.genova.it/tutti-gli-argomenti/questioni-sociali",

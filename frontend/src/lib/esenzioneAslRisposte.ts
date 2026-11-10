@@ -1143,3 +1143,47 @@ ESENZIONE_ASL.pisa = {
     "Le pagine lette non indicano gli indirizzi degli uffici, gli orari, i telefoni, le e-mail, se serve l'appuntamento né i tempi di rilascio: chiedili all'ufficio anagrafe della tua zona.",
   fonte: "Azienda USL Toscana nord ovest · pagine «Esenzioni» consultate il 10/11/2026 (data di aggiornamento non indicata)",
 };
+
+// Massa e Pietrasanta: stessa Azienda USL Toscana nord ovest di Pisa. Pagina «Esenzioni per patologia cronica o invalidante»
+// (https://www.uslnordovest.toscana.it/come-fare-per/esenzioni/esenzioni-per-patologia-cronica-o-invalidante), consultata il 10/11/2026.
+// Sportelli locali di Massa e Pietrasanta non trovati: la scheda lo dice.
+for (const slug of ["massa", "pietrasanta"]) ESENZIONE_ASL[slug] = ESENZIONE_ASL.pisa;
+
+// Firenze: Azienda USL Toscana centro. Sportelli e procedura dalle pagine dell'azienda (consultate il 10/11/2026;
+// pagina sportelli aggiornata il 10/07/2026, pagina procedura senza data).
+ESENZIONE_ASL.firenze = {
+  asl: "Azienda USL Toscana centro",
+  intro:
+    "L'esenzione per patologia cronica si chiede all'ASL, con la certificazione della malattia rilasciata da una struttura del Servizio sanitario nazionale.",
+  comeSiPresenta: [
+    "Agli sportelli dell'ASL di Firenze (elenco qui sotto), dal lunedì al venerdì dalle 8:00 alle 12:30",
+    "Via Chiusi 4/2 · via D'Annunzio 29 · viale Europa 207/E · via Chiantigiana 37 · via dell'Osteria 18 · lungarno Santa Rosa 15",
+  ],
+  documenti: ["Certificazione della malattia rilasciata da una struttura del Servizio sanitario nazionale"],
+  telefoni: [],
+  paginaUrl: "https://www.uslcentro.toscana.it/guida-ai-servizi/servizi-amministrativi/esenzione-ticket/esenzioni-dal-ticket-per-patologia/zona-firenze",
+  paginaLabel: "Sportelli dell'ASL Toscana centro a Firenze",
+  altriLink: [
+    {
+      label: "Come richiedere l'esenzione",
+      url: "https://www.uslcentro.toscana.it/guida-ai-servizi/servizi-amministrativi/esenzione-ticket/esenzioni-dal-ticket-per-patologia/come-richiedere-l-esenzione",
+    },
+  ],
+  manca:
+    "Le pagine lette non indicano se serve l'appuntamento, i tempi di rilascio né i telefoni degli sportelli, e non descrivono l'esenzione per invalidità: chiedili allo sportello.",
+  fonte: "Azienda USL Toscana centro · pagine «Esenzioni dal ticket per patologia» (sportelli: aggiornata il 10/07/2026), consultate il 10/11/2026",
+};
+
+// Venezia: ULSS 3 Serenissima. Sportello amministrativo online, pagina consultata il 10/11/2026 (data di aggiornamento non indicata).
+ESENZIONE_ASL.venezia = {
+  asl: "ULSS 3 Serenissima",
+  intro:
+    "Per registrare l'esenzione per patologia o per invalidità civile l'ULSS 3 Serenissima mette a disposizione lo Sportello amministrativo online.",
+  comeSiPresenta: ["Online, dallo Sportello amministrativo dell'ULSS 3, con la funzione «Richiesta registrazione esenzione per patologia o per invalidità civile»"],
+  telefoni: [],
+  paginaUrl: "https://www.aulss3.veneto.it/home/servizi-al-cittadino/sportello-amministrativo-online",
+  paginaLabel: "Sportello amministrativo online · ULSS 3 Serenissima",
+  manca:
+    "La pagina letta non indica i documenti richiesti né gli sportelli fisici, i telefoni, gli orari o i tempi di rilascio: chiedili all'ULSS.",
+  fonte: "ULSS 3 Serenissima · Sportello amministrativo online, consultato il 10/11/2026 (data di aggiornamento non indicata)",
+};
