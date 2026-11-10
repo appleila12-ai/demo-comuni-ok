@@ -32,6 +32,7 @@ export const ESEMPI = [
   "Aiuto in casa per un anziano",
   "Bonus bollette",
   "Prenotare una visita",
+  "Sono cieco, chi può aiutarmi?",
 ];
 
 /**
