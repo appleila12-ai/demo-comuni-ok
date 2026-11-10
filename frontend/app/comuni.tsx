@@ -213,8 +213,8 @@ export default function ScegliComune() {
           <View key={regione} style={styles.group}>
             <Text style={styles.groupLabel}>{regione.toUpperCase()}</Text>
             {[
-              { id: "complete", titolo: "Scheda completa", voci: tutte.filter((r) => !r.paese && SCHEDE_COMPLETE.has(r.comune.slug)) },
-              { id: "preparazione", titolo: "Scheda in preparazione", voci: tutte.filter((r) => r.paese || !SCHEDE_COMPLETE.has(r.comune.slug)) },
+              { id: "tutte-sezioni", titolo: "Scheda con tutte le sezioni", voci: tutte.filter((r) => !r.paese && SCHEDE_COMPLETE.has(r.comune.slug)) },
+              { id: "sezioni-in-arrivo", titolo: "Scheda con sezioni in arrivo", voci: tutte.filter((r) => r.paese || !SCHEDE_COMPLETE.has(r.comune.slug)) },
             ]
               .filter((blocco) => blocco.voci.length > 0)
               .map(({ id, titolo, voci }) => (
