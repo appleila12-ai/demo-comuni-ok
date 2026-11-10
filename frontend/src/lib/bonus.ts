@@ -1590,8 +1590,9 @@ export const BONUS: Bonus[] = [
       "Anziani non autosufficienti e adulti con disabilità. Servono un PAI valido (per le prestazioni sociosanitarie) oppure la SVS (per quelle socioassistenziali) e un ISEE ordinario entro 40.000 euro. Per le prestazioni non residenziali serve anche l'ISEE ristretto: entro 10.000 euro per gli adulti con disabilità e entro 20.000 euro per gli anziani non autosufficienti.",
     cosa:
       "Buoni per pagare servizi a ciclo diurno e servizi a casa. La seconda finestra riguarda prestazioni dal 1° gennaio al 30 giugno 2027, fino a sei mesi.",
-    stato: "aperto",
-    scade: "2026-11-30",
+    stato: "da-verificare",
+    // Scadenza proposta da verificare sul PDF ufficiale prima di attivare lo stato aperto.
+    // scade: "2026-11-30",
     quando:
       "Seconda finestra: dalle 12:00 del 30 ottobre alle 12:00 del 30 novembre 2026 (art. 8 dell'avviso). Controlla sulla piattaforma eventuali aggiornamenti.",
     comeSiChiede:
