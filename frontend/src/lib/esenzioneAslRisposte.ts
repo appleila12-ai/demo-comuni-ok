@@ -1223,3 +1223,21 @@ ESENZIONE_ASL.ancona = {
     "Le pagine lette non indicano i documenti richiesti, i telefoni, gli sportelli né gli orari: chiedili al Distretto di Ancona o all'URP dell'AST.",
   fonte: "AST Ancona · «Ticket ed esenzioni» (scheda Distretto Ancona del 25/09/2025; comunicazione del 05/11/2026), consultata il 10/11/2026",
 };
+
+// Padova: ULSS 6 Euganea. Documenti della ULSS consultati il 10/11/2026 (aggiornamento della guida non indicato).
+ESENZIONE_ASL.padova = {
+  asl: "ULSS 6 Euganea",
+  intro:
+    "Per richiedere le esenzioni dal ticket l'ULSS 6 Euganea indica lo Sportello Amministrativo Distrettuale Online, con accesso SPID. Restano possibili gli sportelli fisici.",
+  comeSiPresenta: [
+    "Online, dallo Sportello Amministrativo Distrettuale, con SPID",
+    "Tra i servizi online ci sono l'esenzione per patologia e per malattia rara",
+    "Per le invalidità la guida elenca quelle sul lavoro, di servizio, di guerra e altre categorie specifiche",
+  ],
+  telefoni: [{ etichetta: "URP · lunedì–venerdì 8:30–14:00", numero: "800 201 301" }],
+  paginaUrl: "https://www.aulss6.veneto.it/Sportello-amministrativo-distrettuale",
+  paginaLabel: "Sportello amministrativo distrettuale · ULSS 6 Euganea",
+  manca:
+    "I documenti da allegare sono indicati solo nelle istruzioni di ogni richiesta, e la guida non chiarisce tutti i casi di invalidità civile. Non ho trovato gli orari degli sportelli fisici: chiedili all'URP.",
+  fonte: "ULSS 6 Euganea · guida allo sportello online (aggiornamento non indicato) e Carta di accoglienza del Distretto Padova Bacchiglione (novembre 2025), consultate il 10/11/2026",
+};
