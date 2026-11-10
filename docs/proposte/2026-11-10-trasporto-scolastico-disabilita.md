@@ -32,3 +32,17 @@ Nessuna voce rimossa. Nessuna modifica ai file applicativi.
 - Ufficio competente Gallarate, Area Disabilità: 0331 754277 / 0331 754240, servsoc@comune.gallarate.va.it. Fonte: https://www.comune.gallarate.va.it/amministrazione/unita_organizzativa/servizi-sociali-area-disabilita/ ; ultimo aggiornamento non indicato.
 - Faenza, la pagina comunale https://old.comune.faenza.ra.it/Guida-ai-servizi/Servizi-per-l-istruzione/Agevolazioni-per-studenti-e-famiglie-borse-di-studio-contributi-esenzioni-ecc./Esenzioni-e-riduzioni-tariffa-trasporto-scolastico conferma esenzione con certificazione L.104/92 e richiesta della famiglia, ma contiene riferimenti ISEE 2021: non attestare la validità della procedura per 2026/27 senza verifica aggiornata.
 - **Non integrare i dati pubblicati finché queste verifiche non sono complete; non unire questa PR documentale come se fosse pubblicazione delle misure.**
+
+## Gallarate — Misura Servizi FNA 2026 (verifica aggiuntiva 10/11/2026)
+- Fonte comunale: https://www.comune.gallarate.va.it/novita/apertura-bandi-misura-servizio-e-misura-sostegno/ (pubblicata 10/09/2026, aggiornata 14/09/2026 ore 08:26).
+- Misura Servizi: domande dal 10/09/2026 **fino a esaurimento delle risorse**, presso il Servizio Sociale del Comune di residenza. Disponibilità residua fondi **NON INDICATA**; non garantire l'accoglimento.
+- Beneficiari: persone con disabilità con necessità di sostegno intensivo elevato e persone anziane non autosufficienti a basso bisogno assistenziale, assistite al domicilio. ISEE sociosanitario adulti/anziani fino a 25.000 euro, ISEE ordinario minorenni fino a 40.000 euro, in base a https://www.regione.lombardia.it/politiche-sociali-e-abitative/disabilita/politiche-e-misure-per-la-disabilita/sostegno-per-la-disabilit-misura-servizi (consultata 10/11/2026).
+- La **Misura Sostegno, nuove domande** è invece scaduta il 09/10/2026: NON confondere le finestre.
+- Importo individuale: **NON INDICATO** nelle pagine esaminate.
+- Per l'integrazione definitiva: leggere l'allegato 'Avviso Misura Servizi' del Comune e controllare risorse disponibili al momento della pubblicazione.
+
+## Gallarate — dettagli della domanda trasporto scolastico (verifica 10/11/2026)
+- Portale ufficiale https://gallarate-online.e-pal.it/portal/web/guest/w/bando-per-contributi-per-il-trasporto-scolastico-a-favore-di-studenti-con-disabilita-anno-scolastico-2026-2027 (aggiornamento 19/10/2026).
+- Residenti a Gallarate, figli iscritti a scuola infanzia/primaria/secondaria I grado (anche paritaria), trasporto con mezzi propri o di terzi. Per il minore: verbale L.104/92 art. 3 c.1 o c.3 in corso di validità **oppure** riconoscimento invalidità civile con indennità di accompagnamento o di frequenza.
+- Accesso online SPID/CIE o tramite delegato; altre modalità di presentazione non ammesse. Contributo una tantum via IBAN; importo individuale NON INDICATO nella pagina; telefono informazioni 0331 754210.
+- Domande fino al 13/11/2026 ore 12:00. Verificare la data al merge.
