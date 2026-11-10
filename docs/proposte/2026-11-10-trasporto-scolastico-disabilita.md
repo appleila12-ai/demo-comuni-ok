@@ -46,3 +46,9 @@ Nessuna voce rimossa. Nessuna modifica ai file applicativi.
 - Residenti a Gallarate, figli iscritti a scuola infanzia/primaria/secondaria I grado (anche paritaria), trasporto con mezzi propri o di terzi. Per il minore: verbale L.104/92 art. 3 c.1 o c.3 in corso di validità **oppure** riconoscimento invalidità civile con indennità di accompagnamento o di frequenza.
 - Accesso online SPID/CIE o tramite delegato; altre modalità di presentazione non ammesse. Contributo una tantum via IBAN; importo individuale NON INDICATO nella pagina; telefono informazioni 0331 754210.
 - Domande fino al 13/11/2026 ore 12:00. Verificare la data al merge.
+
+## Controllo finale delle finestre (10/11/2026)
+- Fonte diretta del Comune per il trasporto scolastico: https://www.comune.gallarate.va.it/novita/bando-per-contributi-per-il-trasporto-scolastico-a-favore-di-alunni-studenti-con-disabilita-anno-scolastico-2026-2027-scuole-dellinfanzia-scuole-primarie-e-scuole-secondarie-di-primo-grado/ . Scadenza cittadini 13/11/2026 ore 12:00; evitare di mostrare 'aperto' dopo tale termine.
+- Fonte diretta per FNA Misura Servizi: https://www.comune.gallarate.va.it/novita/apertura-bandi-misura-servizio-e-misura-sostegno/ . La disponibilità residua delle risorse non è dichiarata; mostrare avvertenza di verifica presso il Servizio Sociale.
+- Fonte regionale dei requisiti: https://www.regione.lombardia.it/politiche-sociali-e-abitative/disabilita/politiche-e-misure-per-la-disabilita/sostegno-per-la-disabilit-misura-servizi . Non confondere le procedure per bisogni assistenziali molto elevati con quelle per bisogno elevato.
+- Stato integrazione: ancora NON applicata al frontend. Il conflitto di lavoro con PR #214 impedisce una modifica sicura di bonus.ts finché non si coordina la modifica.
