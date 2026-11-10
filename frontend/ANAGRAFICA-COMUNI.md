@@ -17,7 +17,7 @@ Dal 9/11/2026 TutelApp conosce **tutti i Comuni italiani** (elenco ISTAT), oltre
 
 ## Fonte e limiti
 - File `main.csv` del repository opendatasicilia/comuni-italiani (codici ISTAT, centroide del municipio), copia del 25/10/2025. **Va confrontato con l'elenco ISTAT più recente** (fusioni e cambi di sigla successivi non ci sono).
-- 11 coordinate del file originale avevano perso il punto decimale (Premia, Olgiate Olona, Gombito, Gazzo, Montegridolfo, Lucignano, Carovilli, Telese Terme, Dasà, Vazzano, Arzana): sono state ripristinate e controllate rispetto alla provincia (vedi il rapporto dello script).
+- 11 coordinate del file originale avevano perso il punto decimale (Premia, Olgiate Olona, Gombito, Gazzo, Montegridolfo, Lucignano, Carovilli, Telese Terme, Dasà, Vazzano, Arzana) e Santi Cosma e Damiano (LT) aveva le coordinate di Roma: sono state corrette e controllate sui Comuni confinanti o sulla provincia. Lo script segnala anche punti uguali in province diverse.
 - Le coordinate sono quelle del municipio, non della sede di un'associazione.
 
 ## Come si aggiorna
