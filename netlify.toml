@@ -3,7 +3,9 @@
 # viene usato frontend/netlify.toml, con lo stesso contenuto.
 [build]
   base = "frontend"
-  command = "yarn build"
+  # Prima del build si controllano i dati (bonus, Comuni, destinatari, associazioni): se c'è un errore
+  # strutturale il build si ferma e il sito resta sull'ultima versione buona. Vedi CHATGPT_WORKFLOW.md.
+  command = "node scripts/controlla-dati.js --bloccante && yarn build"
   publish = "dist"
 
 [build.environment]

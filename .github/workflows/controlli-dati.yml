@@ -1,0 +1,52 @@
+name: Controlli dati TutelApp
+
+# Esegue gli stessi controlli che si possono lanciare a mano (node frontend/scripts/controlla-dati.js).
+# Solo Node: nessuna installazione, nessun segreto, nessun costo (repository pubblico).
+# Il risultato compare nel riepilogo di ogni esecuzione e come segno verde/rosso sulla PR.
+# Non modifica nulla e non pubblica nulla.
+
+on:
+  pull_request:
+    paths:
+      - "frontend/src/**"
+      - "frontend/app/**"
+      - "frontend/public/**"
+      - "frontend/scripts/**"
+      - "docs/**"
+      - "netlify.toml"
+      - "frontend/netlify.toml"
+      - ".github/workflows/**"
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 5 * * 1" # ogni lunedì, 05:17 UTC: rapporto di copertura e coda di lavoro
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  controlli:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Rapporto completo (errori, copertura, coda di lavoro)
+        run: node frontend/scripts/controlla-dati.js --max 25 >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Confronto con il ramo di destinazione (solo PR)
+        if: github.event_name == 'pull_request'
+        env:
+          BASE: ${{ github.base_ref }}
+        run: |
+          {
+            node frontend/scripts/controlla-dati.js --confronta "origin/$BASE"
+            echo
+            node frontend/scripts/controlla-dati.js --classifica "origin/$BASE"
+          } >> "$GITHUB_STEP_SUMMARY"
