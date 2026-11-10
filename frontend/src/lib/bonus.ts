@@ -30,7 +30,7 @@
 
 import { comune } from "@/src/config/comune";
 
-export type StatoBonus = "aperto" | "attivo" | "chiuso" | "da-verificare";
+export type StatoBonus = "aperto" | "attivo" | "chiuso" | "scaduto" | "da-verificare";
 
 export type Bonus = {
   id: string;
@@ -46,6 +46,12 @@ export type Bonus = {
   /** Cosa si ottiene. Solo ciò che è scritto nella fonte. */
   cosa: string;
   stato: StatoBonus;
+  /**
+   * Ultimo giorno utile per i CITTADINI (AAAA-MM-GG), solo se la fonte scrive una scadenza.
+   * Dal giorno dopo la scheda passa a "scaduto" (visibile con avviso per 10 giorni), poi sparisce da sola.
+   * Se la fonte non indica una scadenza NON si scrive: la scheda non diventa mai scaduta da sola.
+   */
+  scade?: string;
   /** Date e scadenze, come scritte nella fonte */
   quando?: string;
   comeSiChiede: string;
@@ -60,8 +66,42 @@ export const STATO_BONUS: Record<StatoBonus, { etichetta: string; spiegazione: s
   aperto: { etichetta: "Aperto", spiegazione: "Si può presentare domanda adesso" },
   attivo: { etichetta: "Attivo", spiegazione: "Misura in corso: controlla le date con l'ente" },
   chiuso: { etichetta: "Chiuso", spiegazione: "La finestra per le domande è finita" },
+  scaduto: { etichetta: "Scaduto", spiegazione: "Non si può più chiedere: lo vedi ancora per pochi giorni" },
   "da-verificare": { etichetta: "Da confermare con l'ente", spiegazione: "Informazioni incomplete o non recenti" },
 };
+
+/** Giorni in cui una misura scaduta resta visibile, con l'avviso «scaduto». Dall'undicesimo giorno non compare più. */
+export const GIORNI_SCADUTO_VISIBILE = 10;
+
+const MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"];
+
+/** "2026-11-02" → "2 novembre 2026" */
+export function dataScadenzaLeggibile(scade: string): string {
+  const [y, m, d] = scade.split("-").map(Number);
+  return `${d} ${MESI[m - 1]} ${y}`;
+}
+
+function giorniDallaScadenza(scade: string, oggi: Date): number {
+  const [y, m, d] = scade.split("-").map(Number);
+  const fine = Date.UTC(y, m - 1, d);
+  const adesso = Date.UTC(oggi.getFullYear(), oggi.getMonth(), oggi.getDate());
+  return Math.round((adesso - fine) / 86400000);
+}
+
+/**
+ * Applica la regola dei dieci giorni:
+ *  - fino al giorno della scadenza: la scheda resta com'è
+ *  - dal giorno dopo, per 10 giorni: stato "scaduto" (si vede, con l'avviso)
+ *  - dall'undicesimo giorno: null (non compare più negli elenchi)
+ * Senza `scade` la scheda non cambia mai.
+ */
+export function conScadenza(b: Bonus, oggi: Date = new Date()): Bonus | null {
+  if (!b.scade) return b;
+  const g = giorniDallaScadenza(b.scade, oggi);
+  if (g <= 0) return b;
+  if (g > GIORNI_SCADUTO_VISIBILE) return null;
+  return { ...b, stato: "scaduto" };
+}
 
 export const BONUS: Bonus[] = [
   // ------------------------------------------------------------------ LIGURIA
@@ -404,6 +444,7 @@ export const BONUS: Bonus[] = [
     cosa:
       "Un bonus per le spese di riscaldamento. Il bando non scrive l'importo: dice che il bonus è pagato nei limiti delle risorse del Bilancio 2026/2028.",
     stato: "aperto",
+    scade: "2026-11-26",
     quando: "Domande dal 26 ottobre al 26 novembre 2026.",
     comeSiChiede:
       "Solo online sul Portale del cittadino del Comune (Servizi on line, voce Servizi sociali), con SPID, CIE o CNS. A fine domanda si annota il numero di protocollo. Le domande incomplete sono escluse. Sportello di facilitazione digitale all'ufficio Servizi sociali (secondo piano, palazzina della Polizia locale), lunedì, mercoledì e venerdì 9:00–12:00, su appuntamento al 0584 795275.",
@@ -2591,15 +2632,39 @@ export const BONUS: Bonus[] = [
     verificatoIl: "09/11/2026",
     nota: "Per il temporaneo serve la certificazione dell'Ufficio Medico legale dell'AUSL.",
   },
-];
+
+  {
+    id: "inps-home-care-premium-2025-2028",
+    regione: "Italia",
+    titolo: "Home Care Premium (INPS) 2025-2028",
+    perChi:
+      "Dipendenti e pensionati pubblici iscritti alla Gestione unitaria delle prestazioni creditizie e sociali INPS, e i loro familiari (coniugi, uniti civilmente e parenti di primo grado, anche non conviventi) con disabilità prevista dalla tabella del bando, maggiorenni o minorenni. Fratelli, sorelle e affini di primo grado solo se il titolare è il loro tutore o curatore. L'accesso dipende dall'iscrizione alla Gestione.",
+    cosa:
+      "Assistenza domiciliare per persone non autosufficienti, con un progetto valido dal 1° luglio 2025 al 30 giugno 2028. Le prestazioni integrative dipendono dal territorio degli enti convenzionati.",
+    stato: "attivo",
+    scade: "2028-01-31",
+    quando: "Il bando scade il 31 gennaio 2028. Il progetto vale dal 1° luglio 2025 al 30 giugno 2028.",
+    comeSiChiede:
+      "Il titolare compila la domanda online sul sito INPS (Prestazioni Welfare, Gestione domanda, Home Care Premium) con SPID, CIE o CNS. Se beneficiario e titolare sono persone diverse, il beneficiario conferma e invia con le proprie credenziali. Ci si può far aiutare da un patronato o dal Contact Center INPS.",
+    fonte: {
+      label: "INPS · Bando Home Care Premium 2025-2028 (PDF)",
+      url: "https://www.inps.it/content/dam/inps-site/it/scorporati/welfare-bandi/2025/03/Bando_121/Allegati/790_Bando-HCP-2025-2028-Assistenza-domiciliare.pdf",
+    },
+    verificatoIl: "09/11/2026",
+  },];
+
+/** Valore di `regione` per le misure nazionali: valgono in tutti i Comuni. */
+export const REGIONE_NAZIONALE = "Italia";
 
 /** Misure che valgono per il Comune attivo, prima quelle del suo territorio. */
-export function bonusDelComune(): { locali: Bonus[]; regionali: Bonus[]; regione: string } {
+export function bonusDelComune(): { locali: Bonus[]; regionali: Bonus[]; nazionali: Bonus[]; regione: string } {
   const regione = comune.regione;
-  const deLaRegione = BONUS.filter((b) => b.regione === regione);
+  const vive = (l: Bonus[]) => l.map((b) => conScadenza(b)).filter((b): b is Bonus => b !== null);
+  const deLaRegione = vive(BONUS.filter((b) => b.regione === regione));
+  const nazionali = vive(BONUS.filter((b) => b.regione === REGIONE_NAZIONALE));
   const locali = deLaRegione.filter((b) => b.comuni?.includes(comune.slug));
   const regionali = deLaRegione.filter((b) => !b.comuni);
-  const ordine: Record<StatoBonus, number> = { aperto: 0, attivo: 1, "da-verificare": 2, chiuso: 3 };
+  const ordine: Record<StatoBonus, number> = { aperto: 0, attivo: 1, "da-verificare": 2, scaduto: 3, chiuso: 4 };
   const ordina = (l: Bonus[]) => [...l].sort((a, b) => ordine[a.stato] - ordine[b.stato]);
-  return { locali: ordina(locali), regionali: ordina(regionali), regione };
+  return { locali: ordina(locali), regionali: ordina(regionali), nazionali: ordina(nazionali), regione };
 }
