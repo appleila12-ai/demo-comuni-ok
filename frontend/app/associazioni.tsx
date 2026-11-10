@@ -4,13 +4,14 @@
 import React, { useState } from "react";
 import { Image, Linking, Pressable, StyleSheet, Text, View } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
-import { useLocalSearchParams } from "expo-router";
+import { useLocalSearchParams, useRouter } from "expo-router";
 
 import { colors, radius, spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import { associazioniDelComune, type Associazione } from "@/src/lib/associazioni";
-import { Avviso, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
+import { nomeSede, sediDelComune } from "@/src/lib/uici";
+import { Avviso, Bottone, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
 
 type Tab = "volontariato" | "sport";
@@ -30,7 +31,27 @@ function Azione({ icon, label, onPress }: { icon: React.ComponentProps<typeof Io
   );
 }
 
-function Scheda({ a, vicina }: { a: Associazione; vicina: boolean }) {
+// Logo UICI: da mettere in public/associazioni/uici.png solo dopo l'ok scritto di UICI (poi scrivere qui il percorso).
+const LOGO_UICI: string | undefined = undefined;
+const eUici = (a: Associazione) => /^UICI\b/.test(a.nome);
+
+/** Le sedi UICI del Comune (dal censimento ufficiale UICI), come schede dell'elenco. */
+function schedeUici(): Associazione[] {
+  const { principali, regionale, nazionale } = sediDelComune();
+  const sedi = principali.length ? principali : [regionale ?? nazionale].filter(Boolean);
+  return sedi.map((x) => ({
+    nome: nomeSede(x!),
+    cosa: "Per chi non vede o vede poco: informazioni su diritti, ausili e autonomia.",
+    dove: x!.ind,
+    telefono: x!.tel?.[0],
+    email: x!.email?.[0],
+    sito: x!.sito,
+    logo: LOGO_UICI,
+  }));
+}
+
+function Scheda({ a, vicina, conUici }: { a: Associazione; vicina: boolean; conUici?: boolean }) {
+  const router = useRouter();
   return (
     <View style={paginaStili.card} testID={`associazione-${a.nome}`}>
       {vicina ? <Text style={[styles.badge, { color: comune.theme.warmDark, backgroundColor: comune.theme.warmSoft }]}>Vicino a te</Text> : null}
@@ -53,6 +74,9 @@ function Scheda({ a, vicina }: { a: Associazione; vicina: boolean }) {
           elemento={{ id: `associazione:${a.nome}`, titolo: a.nome, sotto: a.cosa, tel: a.telefono, email: a.email, url: a.sito, whatsapp: a.whatsapp, route: "/associazioni" }}
         />
       </View>
+      {conUici ? (
+        <Bottone label={`UICI: tutte le sedi e i radiofari per ${comune.nomeBreve}`} icon="people-outline" variante="vuoto" onPress={() => router.push("/uici")} testID="associazioni-uici" />
+      ) : null}
       {a.verificare ? <Text style={[paginaStili.piccolo, { marginTop: 6 }]}>Recapito da confermare.</Text> : null}
     </View>
   );
@@ -60,9 +84,13 @@ function Scheda({ a, vicina }: { a: Associazione; vicina: boolean }) {
 
 export default function Associazioni() {
   useSezione("associazioni");
+  const router = useRouter();
   const { tipo } = useLocalSearchParams<{ tipo?: string }>();
   const [scheda, setScheda] = useState<Tab>(tipo === "sport" ? "sport" : "volontariato");
   const d = associazioniDelComune();
+  const uici = schedeUici();
+  const altre = d.volontariato.filter((a) => !eUici(a));
+  const altreNazionali = d.volontariatoNazionali.filter((a) => !eUici(a));
 
   const TAB: { id: Tab; label: string; icon: React.ComponentProps<typeof Ionicons>["name"] }[] = [
     { id: "volontariato", label: "Volontariato e famiglie", icon: "people-outline" },
@@ -97,15 +125,16 @@ export default function Associazioni() {
 
       {scheda === "volontariato" ? (
         <View testID="associazioni-volontariato">
-          {d.volontariato.map((a) => <Scheda key={a.nome} a={a} vicina={d.vicina(a)} />)}
-          {d.volontariatoLocali === 0 ? (
+          {uici.map((a, i) => <Scheda key={a.nome} a={a} vicina={false} conUici={i === 0} />)}
+          {altre.map((a) => <Scheda key={a.nome} a={a} vicina={d.vicina(a)} />)}
+          {altre.filter((a) => !a.province).length === 0 ? (
             <Avviso>
               Stiamo raccogliendo le associazioni della tua zona. Intanto chiedi ai {comune.ente}{" "}
               {comune.delEnte}: conoscono quelle attive sul territorio.
             </Avviso>
           ) : null}
           <Text style={paginaStili.titoloSezione}>Per trovarne altre</Text>
-          {d.volontariatoNazionali.map((a) => <Scheda key={a.nome} a={a} vicina={false} />)}
+          {altreNazionali.map((a) => <Scheda key={a.nome} a={a} vicina={false} />)}
         </View>
       ) : (
         <View testID="associazioni-sport">
