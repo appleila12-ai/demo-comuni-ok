@@ -21,7 +21,8 @@ export const pignone: ComuneConfig = {
   responsabile: "Ufficio Servizi sociali",
   indirizzo: "Via Casale 89, Pignone (SP)",
   telefono: "0187 887002",
-  email: "",
+  // Email: pagina Ufficio Contabilità-Tributi-Servizi Sociali, https://servizi.comune.pignone.sp.it/amministrazione/uffici/ufficio_7.html (aggiornata il 05/11/2025, consultata il 10/11/2026)
+  email: "servizifinanziari@comune.pignone.sp.it",
   pec: "comune.pignone@legalmail.it",
   orari: "Martedì e venerdì 9:00–13:00 su prenotazione",
   sitoWeb: "https://servizi.comune.pignone.sp.it/amministrazione/uffici/ufficio_7.html",
