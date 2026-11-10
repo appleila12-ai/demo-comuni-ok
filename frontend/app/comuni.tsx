@@ -23,6 +23,7 @@ import { useRouter } from "expo-router";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
 import { Wordmark } from "@/src/components/Brand";
+import COMPLETI from "@/src/content/completezza-comuni.json";
 import {
   COMUNI,
   chiavePerComune,
@@ -84,6 +85,9 @@ function cercaTutti(query: string): { risultati: Risultato[]; altri: number } {
   if (q.length >= 2 && esatti.length > 0) return { risultati: esatti, altri: 0 };
   return { risultati, altri: Math.max(0, totale - voci.length) };
 }
+
+/** Schede complete: servizi sociali, bonus regionali e comunali, esenzione ticket (elenco in src/content/completezza-comuni.json). */
+const SCHEDE_COMPLETE = new Set<string>(COMPLETI);
 
 export default function ScegliComune() {
   const router = useRouter();
@@ -205,9 +209,19 @@ export default function ScegliComune() {
           </Text>
         </View>
 
-        {gruppi.map(([regione, voci]) => (
+        {gruppi.map(([regione, tutte]) => (
           <View key={regione} style={styles.group}>
             <Text style={styles.groupLabel}>{regione.toUpperCase()}</Text>
+            {[
+              { id: "tutte-sezioni", titolo: "Scheda con tutte le sezioni", voci: tutte.filter((r) => !r.paese && SCHEDE_COMPLETE.has(r.comune.slug)) },
+              { id: "sezioni-in-arrivo", titolo: "Scheda con sezioni in arrivo", voci: tutte.filter((r) => r.paese || !SCHEDE_COMPLETE.has(r.comune.slug)) },
+            ]
+              .filter((blocco) => blocco.voci.length > 0)
+              .map(({ id, titolo, voci }) => (
+            <View key={id} testID={`comuni-${id}-${regione}`}>
+              {SCHEDE_COMPLETE.size > 0 && tutte.some((r) => SCHEDE_COMPLETE.has(r.comune.slug)) ? (
+                <Text style={styles.sottoGruppo} accessibilityRole="header">{titolo}</Text>
+              ) : null}
             <View style={styles.list}>
               {voci.map((r) => {
                 const c = r.comune;
@@ -251,6 +265,8 @@ export default function ScegliComune() {
                 );
               })}
             </View>
+            </View>
+              ))}
           </View>
         ))}
 
@@ -344,6 +360,7 @@ const styles = StyleSheet.create({
     color: colors.onSurfaceTertiary,
     marginBottom: spacing.sm,
   },
+  sottoGruppo: { fontSize: 13, fontWeight: "700", color: colors.onSurfaceSecondary, marginTop: spacing.sm, marginBottom: spacing.sm },
   list: { gap: spacing.sm },
   card: {
     flexDirection: "row",
