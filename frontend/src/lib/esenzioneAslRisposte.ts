@@ -282,6 +282,14 @@ ESENZIONE_ASL.siracusa = {
   asl: "ASP Siracusa · Distretto di Siracusa",
   intro: "L'URP dell'ASP di Siracusa indica questo indirizzo e-mail per le esenzioni ticket per patologia del Distretto di Siracusa.",
   mail: "ticketpatologia.distrettosiracusa@asp.sr.it",
+  comeSiPresenta: [
+    "Di persona allo sportello del Distretto Ancona (Poli2000, palazzina 23, viale Cristoforo Colombo 106), il mercoledì e il giovedì",
+    "Per email, oppure con il servizio telematico",
+  ],
+  documenti: ["Documentazione sanitaria che attesta la patologia"],
+  mail: "pua.ancona.ast.an@sanita.marche.it",
+  importante:
+    "Gli orari dello sportello non sono certi: la guida dell'AST indica 8:30–11:30, un comunicato dell'AST indica 9:00–12:00. Scrivi o chiedi conferma prima di andare.",
   telefoni: [],
   manca:
     "L'ASP non ha indicato i documenti, se serve l'appuntamento né i tempi di rilascio: chiedili all'indirizzo qui sopra.",
@@ -1220,8 +1228,8 @@ ESENZIONE_ASL.ancona = {
   paginaUrl: "https://www.astancona.marche.it/it/argomenti/ticket-ed-esenzioni",
   paginaLabel: "Ticket ed esenzioni · AST Ancona",
   manca:
-    "Le pagine lette non indicano i documenti richiesti, i telefoni, gli sportelli né gli orari: chiedili al Distretto di Ancona o all'URP dell'AST.",
-  fonte: "AST Ancona · «Ticket ed esenzioni» (scheda Distretto Ancona del 25/09/2025; comunicazione del 05/11/2026), consultata il 10/11/2026",
+    "Non è indicato un telefono dedicato, e non ho potuto leggere le istruzioni della richiesta online del 05/11/2026: chiedile al Distretto.",
+  fonte: "AST Ancona · guida «Esenzione per patologia» e «Ticket ed esenzioni» (scheda Distretto Ancona del 25/09/2025), consultate il 10/11/2026 (data di aggiornamento della guida non indicata)",
 };
 
 // Padova: ULSS 6 Euganea. Documenti della ULSS consultati il 10/11/2026 (aggiornamento della guida non indicato).
