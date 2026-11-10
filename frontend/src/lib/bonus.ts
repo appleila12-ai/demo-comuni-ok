@@ -1417,6 +1417,27 @@ export const BONUS: Bonus[] = [
 
   // ------------------------------------------------------------- MONZA
   {
+    id: "treviglio-misura-b2-fna-2026-2027",
+    regione: "Lombardia",
+    comuni: ["treviglio"],
+    titolo: "Misura B2 (Fondo Nazionale Non Autosufficienze) 2026/2027 del Comune di Treviglio",
+    perChi:
+      "Persone con disabilità con necessità di sostegno intensivo elevato e anziani non autosufficienti con basso bisogno assistenziale.",
+    cosa:
+      "Misura B2 del Fondo Nazionale Non Autosufficienze. L'importo non è indicato nella pagina del Comune: leggi l'avviso integrale.",
+    stato: "aperto",
+    quando:
+      "Nuove domande e rivalutazioni dal 15/09/2026 al 30/10/2027. Il bando può chiudere prima se le risorse finiscono. La prosecuzione per i beneficiari 2025 è scaduta il 15/10/2026.",
+    comeSiChiede:
+      "Le modalità e i requisiti economici sono nell'avviso del Comune di Treviglio, nella pagina indicata come fonte.",
+    fonte: {
+      label: "Comune di Treviglio · Misura B2 FNA 2026/2027 (notizia del 08/10/2026)",
+      url: "https://comune.treviglio.bg.it/it/news/misura-b2-fna-2026-2027-aperto-il-bando-per-persone-con-disabilita-e-anziani-non-autosufficienti?type=1",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma ai Servizi Sociali prima di preparare la domanda. Requisiti economici e importo non verificati.",
+  },
+  {
     id: "monza-misura-b2-2025-2026",
     regione: "Lombardia",
     comuni: ["monza"],
