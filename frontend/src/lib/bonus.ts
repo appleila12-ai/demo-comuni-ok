@@ -1417,6 +1417,132 @@ export const BONUS: Bonus[] = [
 
   // ------------------------------------------------------------- MONZA
   {
+    id: "bollate-trasporto-scolastico-disabilita-2026-2027",
+    regione: "Lombardia",
+    comuni: ["bollate"],
+    titolo: "Trasporto scolastico per alunni con disabilità grave 2026/2027 a Bollate",
+    perChi:
+      "Minori residenti con disabilità grave (art. 3, comma 3, legge 104/1992) che frequentano scuola dell'infanzia, primaria o secondaria di primo grado e non usano il trasporto comunale.",
+    cosa:
+      "Contributo per il trasporto scolastico. L'importo non è indicato nell'avviso consultato.",
+    stato: "aperto",
+    quando:
+      "Domande entro il 22/11/2026, ore 12:00.",
+    comeSiChiede:
+      "Le modalità sono nell'avviso del Comune di Bollate, nella pagina indicata come fonte.",
+    fonte: {
+      label: "Comune di Bollate · Trasporto scolastico 2026/2027 (aggiornata il 19/10/2026)",
+      url: "https://www.comune.bollate.mi.it/it/news/2056751",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "Requisiti riassunti: valgono tutte le condizioni dell'avviso integrale.",
+  },
+  {
+    id: "legnano-contributo-trasporto-scolastico-2025-2026",
+    regione: "Lombardia",
+    comuni: ["legnano"],
+    titolo: "Contributo per il trasporto scolastico di alunni con disabilità a Legnano",
+    perChi:
+      "Residenti nel periodo interessato che frequentano la scuola primaria o secondaria di primo grado, con certificazione della legge 104 oppure invalidità con accompagnamento o frequenza.",
+    cosa:
+      "Contributo da 350 a 4.383,66 euro, con possibile superamento della soglia alle condizioni del bando.",
+    stato: "aperto",
+    quando:
+      "Domande entro il 15/11/2026.",
+    comeSiChiede:
+      "Le modalità sono nell'avviso del Comune di Legnano, nella pagina indicata come fonte.",
+    fonte: {
+      label: "Comune di Legnano · Contributo trasporto scolastico (aggiornata il 30/09/2026)",
+      url: "https://comune.legnano.mi.it/notizie/3654974/richiesta-contributo-trasporto-scolastico",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "Il bando è per l'anno scolastico 2025/26 e scade tra pochi giorni: non aspettare l'ultimo giorno. Requisiti riassunti: valgono tutte le condizioni dell'avviso.",
+  },
+  {
+    id: "magenta-misura-sostegno-servizi-2026-2027",
+    regione: "Lombardia",
+    comuni: ["magenta"],
+    titolo: "Misura Sostegno e Misura Servizi 2026/2027 (ex Misura B2) nell'Ambito Magentino",
+    perChi:
+      "Residenti nell'Ambito che restano a domicilio e hanno la certificazione prevista. ISEE sociosanitario fino a 25.000 euro per adulti e anziani, ISEE ordinario fino a 40.000 euro per i minori.",
+    cosa:
+      "Caregiver familiare: 100 euro al mese. Assistente personale assunto: 400, 700 o 800 euro al mese secondo il contratto.",
+    stato: "aperto",
+    quando:
+      "Domande entro il 04/12/2026, ore 12:00.",
+    comeSiChiede:
+      "Le modalità sono nell'avviso dell'Ambito di Magenta, nella pagina indicata come fonte.",
+    fonte: {
+      label: "Ambito Magentino · Misura Sostegno e Misura Servizi, avviso 2026/2027 (aggiornata il 10/11/2026)",
+      url: "https://pdzmagentino.comune.magenta.mi.it/novita/notizia/misura-sostegno-e-misura-servizi-ex-misura-b2-avviso-pubblico-2026-2027/",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "Requisiti riassunti: valgono tutte le condizioni dell'avviso integrale.",
+  },
+  {
+    id: "lodi-misura-sostegno-servizi-2026-2027",
+    regione: "Lombardia",
+    comuni: ["lodi"],
+    titolo: "Misura Sostegno e Misura Servizi 2026/2027 nell'Ambito di Lodi",
+    perChi:
+      "Residenti nell'Ambito; le persone con disabilità devono avere al massimo 70 anni e le condizioni certificate indicate dall'avviso. ISEE sociosanitario fino a 25.000 euro, ISEE ordinario fino a 40.000 euro per i minori.",
+    cosa:
+      "Contributo della Misura Sostegno e Misura Servizi (ex Misura B2). Gli importi non sono stati verificati: leggi l'avviso integrale.",
+    stato: "aperto",
+    quando:
+      "Domande entro il 31/10/2027, ore 12:00.",
+    comeSiChiede:
+      "Le modalità sono nell'avviso integrale, tra gli allegati della pagina indicata come fonte.",
+    fonte: {
+      label: "Ufficio di Piano di Lodi · Misura Sostegno e Misura Servizi (aggiornamento non indicato)",
+      url: "https://www.ufficiodipiano.lodi.it/attivita-dettaglio.php?id=162",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+  {
+    id: "parabiago-misura-sostegno-servizi-2026-2027",
+    regione: "Lombardia",
+    comuni: ["parabiago"],
+    titolo: "Misura Sostegno e Misura Servizi 2026/2027 a Parabiago",
+    perChi:
+      "Persone con disabilità con necessità di sostegno intensivo elevato e anziani non autosufficienti.",
+    cosa:
+      "Misura Sostegno e Misura Servizi. Importi e soglie ISEE non sono indicati nella pagina del Comune: leggi l'avviso.",
+    stato: "aperto",
+    quando:
+      "Domande entro il 20/11/2026, ore 12:00.",
+    comeSiChiede:
+      "Prima si fa il protocollo online sulla piattaforma SO.LE., poi si prende appuntamento con l'assistente sociale.",
+    fonte: {
+      label: "Comune di Parabiago · Misura Sostegno e Misura Servizi (pubblicata il 12/10/2026)",
+      url: "https://www.comune.parabiago.mi.it/area_letturaNotizia/638594/pagsistema.html",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "Scade tra pochi giorni: non aspettare l'ultimo giorno.",
+  },
+  {
+    id: "parabiago-rimborso-trasporto-studenti-superiori-2026",
+    regione: "Lombardia",
+    comuni: ["parabiago"],
+    titolo: "Rimborso del trasporto per studenti con disabilità delle superiori a Parabiago",
+    perChi:
+      "Studenti con disabilità delle scuole superiori e dei percorsi IeFP che non sono autonomi nel tragitto, con certificazione e diagnosi funzionale o profilo di funzionamento.",
+    cosa:
+      "Rimborso delle spese di trasporto. L'importo non è indicato nella pagina del Comune.",
+    stato: "aperto",
+    quando:
+      "Domande entro il 28/05/2027, ore 17:00.",
+    comeSiChiede:
+      "Le modalità sono nella pagina del Comune indicata come fonte.",
+    fonte: {
+      label: "Comune di Parabiago · Rimborso trasporto studenti con disabilità (pubblicata il 17/09/2026)",
+      url: "https://www.comune.parabiago.mi.it/area_letturaNotizia/638023/pagsistema.html",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+  {
     id: "treviglio-misura-b2-fna-2026-2027",
     regione: "Lombardia",
     comuni: ["treviglio"],
