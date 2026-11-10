@@ -144,7 +144,7 @@ function DoveCercareRiquadro({ regione, nessuna }: { regione: string; nessuna: b
 export default function Bonus() {
   useSezione("bonus");
   const { locali, regionali, nazionali, regione } = bonusDelComune();
-  const nessuna = locali.length + regionali.length === 0;
+  const nessuna = locali.length + regionali.length + nazionali.length === 0;
 
   return (
     <Pagina titolo="Bonus e contributi" testID="bonus-screen" sottotitoloSalvato="Misure della Regione e del territorio">
