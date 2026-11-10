@@ -1581,17 +1581,61 @@ export const BONUS: Bonus[] = [
     verificatoIl: "09/11/2026",
     nota: "Per il temporaneo serve la certificazione dell'Ufficio Medico legale dell'AUSL.",
   },
+  // --- Raccolta 10/11/2026: Puglia (Buoni Servizio) e misura nazionale INPS (testi forniti da fonti ufficiali, letti da Ilaria) ---
+  {
+    id: "puglia-buoni-servizio-2026-2027",
+    regione: "Puglia",
+    titolo: "Buoni Servizio per anziani e persone con disabilità 2026/2027",
+    perChi:
+      "Anziani non autosufficienti e adulti con disabilità. Servono un PAI valido (per le prestazioni sociosanitarie) oppure la SVS (per quelle socioassistenziali) e un ISEE ordinario entro 40.000 euro. Per le prestazioni non residenziali serve anche l'ISEE ristretto: entro 10.000 euro per gli adulti con disabilità e entro 20.000 euro per gli anziani non autosufficienti.",
+    cosa:
+      "Buoni per pagare servizi a ciclo diurno e servizi a casa. La seconda finestra riguarda prestazioni dal 1° gennaio al 30 giugno 2027, fino a sei mesi.",
+    stato: "aperto",
+    scade: "2026-11-30",
+    quando:
+      "Seconda finestra: dalle 12:00 del 30 ottobre alle 12:00 del 30 novembre 2026 (art. 8 dell'avviso). Controlla sulla piattaforma eventuali aggiornamenti.",
+    comeSiChiede:
+      "Online su PugliaSociale. La domanda la presenta la persona interessata, un familiare di riferimento o un delegato. Poi il gestore del servizio abbina la persona al servizio.",
+    fonte: {
+      label: "Regione Puglia · Buoni Servizio per anziani e persone con disabilità",
+      url: "https://www.regione.puglia.it/web/welfare-diritti-e-cittadinanza/-/buoni-servizio-per-anziani-e-persone-con-disabilit%C3%A0-domande-dal-15-maggio-2025",
+    },
+    verificatoIl: "09/11/2026",
+    nota: "Pagina regionale non leggibile da noi in automatico: requisiti e date riportati dall'avviso ufficiale (PDF di 39 pagine, art. 8).",
+  },
+  {
+    id: "inps-home-care-premium-2025-2028",
+    regione: "Italia",
+    titolo: "Home Care Premium (INPS) 2025-2028",
+    perChi:
+      "Dipendenti e pensionati pubblici iscritti alla Gestione unitaria delle prestazioni creditizie e sociali INPS, e i loro familiari (coniugi, uniti civilmente e parenti di primo grado, anche non conviventi) con disabilità prevista dalla tabella del bando, maggiorenni o minorenni. Fratelli, sorelle e affini di primo grado solo se il titolare è il loro tutore o curatore. L'accesso dipende dall'iscrizione alla Gestione.",
+    cosa:
+      "Assistenza domiciliare per persone non autosufficienti, con un progetto valido dal 1° luglio 2025 al 30 giugno 2028. Le prestazioni integrative dipendono dal territorio degli enti convenzionati.",
+    stato: "attivo",
+    scade: "2028-01-31",
+    quando: "Il bando scade il 31 gennaio 2028. Il progetto vale dal 1° luglio 2025 al 30 giugno 2028.",
+    comeSiChiede:
+      "Il titolare compila la domanda online sul sito INPS (Prestazioni Welfare, Gestione domanda, Home Care Premium) con SPID, CIE o CNS. Se beneficiario e titolare sono persone diverse, il beneficiario conferma e invia con le proprie credenziali. Ci si può far aiutare da un patronato o dal Contact Center INPS.",
+    fonte: {
+      label: "INPS · Bando Home Care Premium 2025-2028 (PDF)",
+      url: "https://www.inps.it/content/dam/inps-site/it/scorporati/welfare-bandi/2025/03/Bando_121/Allegati/790_Bando-HCP-2025-2028-Assistenza-domiciliare.pdf",
+    },
+    verificatoIl: "09/11/2026",
+  },
 ];
 
+/** Valore di `regione` per le misure nazionali: valgono in tutti i Comuni. */
+export const REGIONE_NAZIONALE = "Italia";
+
 /** Misure che valgono per il Comune attivo, prima quelle del suo territorio. */
-export function bonusDelComune(): { locali: Bonus[]; regionali: Bonus[]; regione: string } {
+export function bonusDelComune(): { locali: Bonus[]; regionali: Bonus[]; nazionali: Bonus[]; regione: string } {
   const regione = comune.regione;
-  const deLaRegione = BONUS.filter((b) => b.regione === regione)
-    .map((b) => conScadenza(b))
-    .filter((b): b is Bonus => b !== null);
+  const vive = (l: Bonus[]) => l.map((b) => conScadenza(b)).filter((b): b is Bonus => b !== null);
+  const deLaRegione = vive(BONUS.filter((b) => b.regione === regione));
+  const nazionali = vive(BONUS.filter((b) => b.regione === REGIONE_NAZIONALE));
   const locali = deLaRegione.filter((b) => b.comuni?.includes(comune.slug));
   const regionali = deLaRegione.filter((b) => !b.comuni);
   const ordine: Record<StatoBonus, number> = { aperto: 0, attivo: 1, "da-verificare": 2, scaduto: 3, chiuso: 4 };
   const ordina = (l: Bonus[]) => [...l].sort((a, b) => ordine[a.stato] - ordine[b.stato]);
-  return { locali: ordina(locali), regionali: ordina(regionali), regione };
+  return { locali: ordina(locali), regionali: ordina(regionali), nazionali: ordina(nazionali), regione };
 }

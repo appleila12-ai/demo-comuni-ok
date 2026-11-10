@@ -143,7 +143,7 @@ function DoveCercareRiquadro({ regione, nessuna }: { regione: string; nessuna: b
 
 export default function Bonus() {
   useSezione("bonus");
-  const { locali, regionali, regione } = bonusDelComune();
+  const { locali, regionali, nazionali, regione } = bonusDelComune();
   const nessuna = locali.length + regionali.length === 0;
 
   return (
@@ -213,6 +213,17 @@ export default function Bonus() {
             Regione {regione}
           </Text>
           {regionali.map((b) => (
+            <Scheda key={b.id} b={b} />
+          ))}
+        </>
+      ) : null}
+
+      {nazionali.length > 0 ? (
+        <>
+          <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+            In tutta Italia
+          </Text>
+          {nazionali.map((b) => (
             <Scheda key={b.id} b={b} />
           ))}
         </>
