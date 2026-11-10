@@ -3,13 +3,15 @@
 Criterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale attivo/aperto + almeno un bonus comunale attivo/aperto + scheda ticket specifica per l'ASL.
 Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
-Comuni con scheda: 420 · completi: 3 · incompleti: 417
+Comuni con scheda: 420 · completi: 5 · incompleti: 415
 
-Cosa manca (n. Comuni): bonus comunali 391 · esenzione ticket 304 · bonus regionali 83 · servizi sociali (recapiti) 237
+Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 303 · bonus regionali 83 · servizi sociali (recapiti) 237
 
 ## Completi
 
+- Comune di Ancona (AN)
 - Comune di Palermo (PA)
+- Comune di Pisa (PI)
 - Comune di Torino (TO)
 - Comune di Verona (VR)
 
@@ -190,7 +192,7 @@ Cosa manca (n. Comuni): bonus comunali 391 · esenzione ticket 304 · bonus regi
 | Comune di Framura | SP | Liguria | bonus regionali, bonus comunali |
 | Comune di Genova | GE | Liguria | servizi sociali (recapiti), bonus regionali |
 | Comune di Imperia | IM | Liguria | servizi sociali (recapiti), bonus regionali, bonus comunali, esenzione ticket |
-| Comune di La Spezia | SP | Liguria | bonus regionali, bonus comunali |
+| Comune di La Spezia | SP | Liguria | bonus regionali |
 | Comune di Lerici | SP | Liguria | bonus regionali |
 | Comune di Levanto | SP | Liguria | bonus regionali, bonus comunali |
 | Comune di Luni | SP | Liguria | bonus regionali |
@@ -268,7 +270,6 @@ Cosa manca (n. Comuni): bonus comunali 391 · esenzione ticket 304 · bonus regi
 | Comune di Vigevano | PV | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Vimercate | MB | Lombardia | bonus comunali, esenzione ticket |
 | Comune di Voghera | PV | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Ancona | AN | Marche | bonus comunali |
 | Comune di Ascoli Piceno | AP | Marche | bonus comunali, esenzione ticket |
 | Comune di Civitanova Marche | MC | Marche | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Fano | PU | Marche | bonus comunali, esenzione ticket |
@@ -394,7 +395,6 @@ Cosa manca (n. Comuni): bonus comunali 391 · esenzione ticket 304 · bonus regi
 | Comune di Massa | MS | Toscana | esenzione ticket |
 | Comune di Pietrasanta | LU | Toscana | esenzione ticket |
 | Comune di Piombino | LI | Toscana | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Pisa | PI | Toscana | esenzione ticket |
 | Comune di Pistoia | PT | Toscana | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Pontedera | PI | Toscana | bonus comunali, esenzione ticket |
 | Comune di Prato | PO | Toscana | servizi sociali (recapiti), bonus comunali, esenzione ticket |
