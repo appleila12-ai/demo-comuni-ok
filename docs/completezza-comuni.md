@@ -3,23 +3,28 @@
 Criterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale attivo/aperto + almeno un bonus comunale attivo/aperto + scheda ticket specifica per l'ASL.
 Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
-Comuni con scheda: 420 · completi: 18 · incompleti: 402
+Comuni con scheda: 420 · completi: 23 · incompleti: 397
 
-Cosa manca (n. Comuni): bonus comunali 388 · esenzione ticket 297 · servizi sociali (recapiti) 234 · bonus regionali 42
+Cosa manca (n. Comuni): bonus comunali 383 · esenzione ticket 297 · servizi sociali (recapiti) 233 · bonus regionali 42
 
 ## Completi
 
 - Comune di Sarzana (SP)
 - Comune di Ancona (AN)
 - Comune di Arcola (SP)
+- Comune di Bollate (MI)
 - Comune di Brescia (BS)
 - Comune di Genova (GE)
 - Comune di La Spezia (SP)
+- Comune di Legnano (MI)
 - Comune di Lerici (SP)
+- Comune di Lodi (LO)
 - Comune di Luni (SP)
+- Comune di Magenta (MI)
 - Comune di Massa (MS)
 - Comune di Padova (PD)
 - Comune di Palermo (PA)
+- Comune di Parabiago (MI)
 - Comune di Pietrasanta (LU)
 - Comune di Pisa (PI)
 - Comune di Reggio Emilia (RE)
@@ -122,7 +127,7 @@ Cosa manca (n. Comuni): bonus comunali 388 · esenzione ticket 297 · servizi so
 | Comune di Podenzano | PC | Emilia-Romagna | bonus comunali, esenzione ticket |
 | Comune di Ravenna | RA | Emilia-Romagna | servizi sociali (recapiti), bonus comunali |
 | Comune di Riccione | RN | Emilia-Romagna | servizi sociali (recapiti), bonus comunali |
-| Comune di Rimini | RN | Emilia-Romagna | servizi sociali (recapiti), bonus comunali |
+| Comune di Rimini | RN | Emilia-Romagna | bonus comunali |
 | Comune di Rottofreno | PC | Emilia-Romagna | bonus comunali, esenzione ticket |
 | Comune di San Lazzaro di Savena | BO | Emilia-Romagna | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Sassuolo | MO | Emilia-Romagna | servizi sociali (recapiti), bonus comunali, esenzione ticket |
@@ -222,7 +227,6 @@ Cosa manca (n. Comuni): bonus comunali 388 · esenzione ticket 297 · servizi so
 | Comune di Zignago | SP | Liguria | bonus comunali |
 | Comune di Abbiategrasso | MI | Lombardia | servizi sociali (recapiti), bonus comunali |
 | Comune di Bergamo | BG | Lombardia | bonus comunali |
-| Comune di Bollate | MI | Lombardia | bonus comunali |
 | Comune di Brugherio | MB | Lombardia | bonus comunali, esenzione ticket |
 | Comune di Busto Arsizio | VA | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Calolziocorte | LC | Lombardia | bonus comunali, esenzione ticket |
@@ -242,11 +246,8 @@ Cosa manca (n. Comuni): bonus comunali 388 · esenzione ticket 297 · servizi so
 | Comune di Gallarate | VA | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Garbagnate Milanese | MI | Lombardia | servizi sociali (recapiti), bonus comunali |
 | Comune di Lecco | LC | Lombardia | bonus comunali |
-| Comune di Legnano | MI | Lombardia | bonus comunali |
 | Comune di Limbiate | MB | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Lissone | MB | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Lodi | LO | Lombardia | bonus comunali |
-| Comune di Magenta | MI | Lombardia | bonus comunali |
 | Comune di Mantova | MN | Lombardia | bonus comunali, esenzione ticket |
 | Comune di Mediglia | MI | Lombardia | bonus comunali, esenzione ticket |
 | Comune di Merate | LC | Lombardia | bonus comunali, esenzione ticket |
@@ -254,7 +255,6 @@ Cosa manca (n. Comuni): bonus comunali 388 · esenzione ticket 297 · servizi so
 | Comune di Monza | MB | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Paderno Dugnano | MI | Lombardia | bonus comunali, esenzione ticket |
 | Comune di Pantigliate | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Parabiago | MI | Lombardia | bonus comunali |
 | Comune di Paullo | MI | Lombardia | bonus comunali, esenzione ticket |
 | Comune di Pavia | PV | Lombardia | bonus comunali, esenzione ticket |
 | Comune di Peschiera Borromeo | MI | Lombardia | bonus comunali, esenzione ticket |
