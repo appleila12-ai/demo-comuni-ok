@@ -19,6 +19,7 @@ for (const m of t.matchAll(/for \(const slug of \[([^\]]*)\]\)\s*ESENZIONE_ASL\[
 const ASL4 = ["carro", "maissana", "varese-ligure"];
 const bonusComunali = {}, bonusRegionali = {};
 for (const v of bonus.voci) {
+  if (!["attivo", "aperto"].includes(v.stato)) continue; // contano solo le misure attive o aperte, non quelle chiuse
   if (v.comuni && v.comuni.length) for (const c of v.comuni) bonusComunali[c] = (bonusComunali[c] || 0) + 1;
   else bonusRegionali[v.regione] = (bonusRegionali[v.regione] || 0) + 1;
 }
@@ -38,7 +39,7 @@ if (process.argv.includes("--scrivi")) {
   const completi = righe.filter((r) => r.completa).map((r) => r.slug).sort();
   fs.writeFileSync(path.join(repo, "frontend/src/content/completezza-comuni.json"), JSON.stringify(completi) + "\n");
   const per = {}; for (const r of righe) for (const m of r.mancano) per[m] = (per[m] || 0) + 1;
-  let md = "# Completezza delle schede dei Comuni\n\nCriterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale + almeno un bonus comunale + scheda ticket specifica per l'ASL.\nGenerato da `docs/strumenti/completezza-comuni.js --scrivi`.\n\n";
+  let md = "# Completezza delle schede dei Comuni\n\nCriterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale attivo/aperto + almeno un bonus comunale attivo/aperto + scheda ticket specifica per l'ASL.\nGenerato da `docs/strumenti/completezza-comuni.js --scrivi`.\n\n";
   md += `Comuni con scheda: ${righe.length} · completi: ${completi.length} · incompleti: ${righe.length - completi.length}\n\n`;
   md += "Cosa manca (n. Comuni): " + Object.entries(per).map(([k, v]) => `${k} ${v}`).join(" · ") + "\n\n## Completi\n\n" + righe.filter((r) => r.completa).map((r) => `- ${r.nome} (${r.provincia})`).join("\n") + "\n\n## Incompleti (cosa manca)\n\n| Comune | Prov. | Regione | Manca |\n|---|---|---|---|\n";
   md += righe.filter((r) => !r.completa).sort((a, b) => a.regione.localeCompare(b.regione) || a.nome.localeCompare(b.nome)).map((r) => `| ${r.nome} | ${r.provincia} | ${r.regione} | ${r.mancano.join(", ")} |`).join("\n") + "\n";
