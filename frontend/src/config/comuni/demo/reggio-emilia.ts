@@ -18,8 +18,9 @@ export const reggioEmilia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0522 4561",
-  email: "",
+  // Sportello Sociale dei Poli Sociali (lun-ven 8:30-12:30): https://www.comune.reggioemilia.it/servizi/salute-benessere-e-assistenza/accedere-ai-poli-sociali (data pagina non indicata, consultata il 10/11/2026)
+  telefono: "0522 585472",
+  email: "appuntamentosportellosociale@comune.re.it",
   pec: "comune.reggioemilia@pec.municipio.re.it",
   orari: "",
   sitoWeb: "https://www.comune.reggioemilia.it",
