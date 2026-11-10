@@ -18,8 +18,9 @@ export const viboValentia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0963 599111",
-  email: "",
+  // Pagina Servizi Sociali del Comune, consultata il 10/11/2026. Il documento contatti, senza data, indica invece 0963 599500: da confermare.
+  telefono: "0963 599398",
+  email: "servizisociali@comune.vibovalentia.vv.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.vibovalentia.vv.it/servizi/salute-benessere-e-assistenza/servizi-sociali",

@@ -5,7 +5,7 @@ Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
 Comuni con scheda: 420 · completi: 26 · incompleti: 394
 
-Cosa manca (n. Comuni): bonus comunali 383 · esenzione ticket 294 · servizi sociali (recapiti) 233 · bonus regionali 42
+Cosa manca (n. Comuni): bonus comunali 383 · esenzione ticket 294 · servizi sociali (recapiti) 228 · bonus regionali 42
 
 ## Completi
 
@@ -41,7 +41,7 @@ Cosa manca (n. Comuni): bonus comunali 383 · esenzione ticket 294 · servizi so
 | Comune | Prov. | Regione | Manca |
 |---|---|---|---|
 | Comune di Avezzano | AQ | Abruzzo | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Chieti | CH | Abruzzo | servizi sociali (recapiti), bonus comunali, esenzione ticket |
+| Comune di Chieti | CH | Abruzzo | bonus comunali, esenzione ticket |
 | Comune di Lanciano | CH | Abruzzo | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Montesilvano | PE | Abruzzo | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Ocre | AQ | Abruzzo | bonus comunali, esenzione ticket |
@@ -49,16 +49,16 @@ Cosa manca (n. Comuni): bonus comunali 383 · esenzione ticket 294 · servizi so
 | Comune di Pescara | PE | Abruzzo | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Teramo | TE | Abruzzo | bonus comunali, esenzione ticket |
 | Comune di Vasto | CH | Abruzzo | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Matera | MT | Basilicata | servizi sociali (recapiti), bonus comunali, esenzione ticket |
+| Comune di Matera | MT | Basilicata | bonus comunali, esenzione ticket |
 | Comune di Potenza | PZ | Basilicata | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Catanzaro | CZ | Calabria | servizi sociali (recapiti), bonus comunali |
+| Comune di Catanzaro | CZ | Calabria | bonus comunali |
 | Comune di Corigliano-Rossano | CS | Calabria | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Cosenza | CS | Calabria | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Crotone | KR | Calabria | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Lamezia Terme | CZ | Calabria | servizi sociali (recapiti), bonus comunali |
-| Comune di Reggio Calabria | RC | Calabria | servizi sociali (recapiti), bonus comunali |
+| Comune di Reggio Calabria | RC | Calabria | bonus comunali |
 | Comune di Rende | CS | Calabria | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Vibo Valentia | VV | Calabria | servizi sociali (recapiti), bonus comunali |
+| Comune di Vibo Valentia | VV | Calabria | bonus comunali |
 | Comune di Acerra | NA | Campania | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Afragola | NA | Campania | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Angri | SA | Campania | servizi sociali (recapiti), bonus comunali |
