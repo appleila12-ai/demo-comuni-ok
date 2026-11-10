@@ -3,9 +3,9 @@
 Criterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale attivo/aperto + almeno un bonus comunale attivo/aperto + scheda ticket specifica per l'ASL.
 Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
-Comuni con scheda: 420 · completi: 16 · incompleti: 404
+Comuni con scheda: 420 · completi: 18 · incompleti: 402
 
-Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 298 · servizi sociali (recapiti) 234 · bonus regionali 42
+Cosa manca (n. Comuni): bonus comunali 388 · esenzione ticket 297 · servizi sociali (recapiti) 234 · bonus regionali 42
 
 ## Completi
 
@@ -18,6 +18,7 @@ Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 298 · servizi so
 - Comune di Lerici (SP)
 - Comune di Luni (SP)
 - Comune di Massa (MS)
+- Comune di Padova (PD)
 - Comune di Palermo (PA)
 - Comune di Pietrasanta (LU)
 - Comune di Pisa (PI)
@@ -425,7 +426,6 @@ Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 298 · servizi so
 | Comune di Mira | VE | Veneto | bonus comunali, esenzione ticket |
 | Comune di Mirano | VE | Veneto | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Montebelluna | TV | Veneto | servizi sociali (recapiti), bonus comunali |
-| Comune di Padova | PD | Veneto | esenzione ticket |
 | Comune di Rovigo | RO | Veneto | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di San Bonifacio | VR | Veneto | bonus comunali, esenzione ticket |
 | Comune di San Donà di Piave | VE | Veneto | servizi sociali (recapiti), bonus comunali, esenzione ticket |
