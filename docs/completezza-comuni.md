@@ -3,16 +3,21 @@
 Criterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale attivo/aperto + almeno un bonus comunale attivo/aperto + scheda ticket specifica per l'ASL.
 Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
-Comuni con scheda: 420 · completi: 5 · incompleti: 415
+Comuni con scheda: 420 · completi: 10 · incompleti: 410
 
-Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 303 · bonus regionali 83 · servizi sociali (recapiti) 237
+Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 299 · bonus regionali 83 · servizi sociali (recapiti) 234
 
 ## Completi
 
 - Comune di Ancona (AN)
+- Comune di Brescia (BS)
+- Comune di Massa (MS)
 - Comune di Palermo (PA)
+- Comune di Pietrasanta (LU)
 - Comune di Pisa (PI)
+- Comune di Reggio Emilia (RE)
 - Comune di Torino (TO)
+- Comune di Venezia (VE)
 - Comune di Verona (VR)
 
 ## Incompleti (cosa manca)
@@ -108,7 +113,6 @@ Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 303 · bonus regi
 | Comune di Piacenza | PC | Emilia-Romagna | bonus comunali, esenzione ticket |
 | Comune di Podenzano | PC | Emilia-Romagna | bonus comunali, esenzione ticket |
 | Comune di Ravenna | RA | Emilia-Romagna | servizi sociali (recapiti), bonus comunali |
-| Comune di Reggio Emilia | RE | Emilia-Romagna | servizi sociali (recapiti) |
 | Comune di Riccione | RN | Emilia-Romagna | servizi sociali (recapiti), bonus comunali |
 | Comune di Rimini | RN | Emilia-Romagna | servizi sociali (recapiti), bonus comunali |
 | Comune di Rottofreno | PC | Emilia-Romagna | bonus comunali, esenzione ticket |
@@ -190,7 +194,7 @@ Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 303 · bonus regi
 | Comune di Deiva Marina | SP | Liguria | bonus regionali, bonus comunali |
 | Comune di Follo | SP | Liguria | bonus regionali, bonus comunali |
 | Comune di Framura | SP | Liguria | bonus regionali, bonus comunali |
-| Comune di Genova | GE | Liguria | servizi sociali (recapiti), bonus regionali |
+| Comune di Genova | GE | Liguria | bonus regionali |
 | Comune di Imperia | IM | Liguria | servizi sociali (recapiti), bonus regionali, bonus comunali, esenzione ticket |
 | Comune di La Spezia | SP | Liguria | bonus regionali |
 | Comune di Lerici | SP | Liguria | bonus regionali |
@@ -217,7 +221,6 @@ Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 303 · bonus regi
 | Comune di Abbiategrasso | MI | Lombardia | servizi sociali (recapiti), bonus comunali |
 | Comune di Bergamo | BG | Lombardia | bonus comunali |
 | Comune di Bollate | MI | Lombardia | bonus comunali |
-| Comune di Brescia | BS | Lombardia | servizi sociali (recapiti) |
 | Comune di Brugherio | MB | Lombardia | bonus comunali, esenzione ticket |
 | Comune di Busto Arsizio | VA | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Calolziocorte | LC | Lombardia | bonus comunali, esenzione ticket |
@@ -388,12 +391,10 @@ Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 303 · bonus regi
 | Comune di Carrara | MS | Toscana | bonus comunali, esenzione ticket |
 | Comune di Cascina | PI | Toscana | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Empoli | FI | Toscana | bonus comunali, esenzione ticket |
-| Comune di Firenze | FI | Toscana | bonus comunali, esenzione ticket |
+| Comune di Firenze | FI | Toscana | bonus comunali |
 | Comune di Grosseto | GR | Toscana | servizi sociali (recapiti), bonus comunali |
 | Comune di Livorno | LI | Toscana | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Lucca | LU | Toscana | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Massa | MS | Toscana | esenzione ticket |
-| Comune di Pietrasanta | LU | Toscana | esenzione ticket |
 | Comune di Piombino | LI | Toscana | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Pistoia | PT | Toscana | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Pontedera | PI | Toscana | bonus comunali, esenzione ticket |
@@ -431,6 +432,5 @@ Cosa manca (n. Comuni): bonus comunali 389 · esenzione ticket 303 · bonus regi
 | Comune di Schio | VI | Veneto | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Spinea | VE | Veneto | bonus comunali, esenzione ticket |
 | Comune di Treviso | TV | Veneto | bonus comunali |
-| Comune di Venezia | VE | Veneto | esenzione ticket |
 | Comune di Vicenza | VI | Veneto | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Vittorio Veneto | TV | Veneto | servizi sociali (recapiti), bonus comunali |
