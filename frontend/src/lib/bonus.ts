@@ -102,6 +102,49 @@ export const BONUS: Bonus[] = [
     nota: "Importi dal comunicato della Giunta regionale \"Welfare, 7 milioni di euro per bonus badanti e baby sitter\". Pagina pubblicata dalla Regione il 10/08/2026. Il termine per le domande è scaduto: chiedi al Comune o al Distretto se ci saranno nuove aperture.",
   },
 
+  {
+    id: "la-spezia-grave-disabilita",
+    regione: "Liguria",
+    comuni: ["la-spezia"],
+    titolo: "Grave disabilità: contributo per i servizi di assistenza",
+    perChi:
+      "Persone non autosufficienti: anziani da 65 anni e persone con disabilità fino a 64 anni. Per le persone con disabilità servono invalidità civile 100% con accompagnamento e legge 104 art. 3 comma 3, domicilio a La Spezia, ISEE sociosanitario inferiore a 14.000 euro e i requisiti di cittadinanza e soggiorno indicati dal Comune.",
+    cosa:
+      "350 euro al mese per servizi assistenziali approvati dall'équipe. Il contributo dipende da graduatoria e fondi disponibili.",
+    stato: "attivo",
+    quando:
+      "Servizio presentato come attivo dal Comune, senza scadenza per le domande. Una finestra specifica per il 2026 non è indicata. Il procedimento si conclude entro 60 giorni.",
+    comeSiChiede:
+      "Domanda online o con il modulo del Comune, con ISEE, verbali e documenti richiesti: i dettagli sono nella pagina del Comune.",
+    fonte: {
+      label: "Comune della Spezia · Contributi non autosufficienza (grave disabilità)",
+      url: "https://www.comune.laspezia.it/servizi/salute-benessere-e-assistenza/contributi-non-autosufficienza",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "Data di aggiornamento della pagina non indicata. Chiedi ai Servizi Sociali se i fondi sono disponibili.",
+  },
+  {
+    id: "la-spezia-gravissima-disabilita",
+    regione: "Liguria",
+    comuni: ["la-spezia"],
+    titolo: "Gravissima disabilità: contributo per l'assistenza a casa",
+    perChi:
+      "Residenti in Liguria che vivono al proprio domicilio, con invalidità civile 100% e accompagnamento e valutazione di gravissima disabilità secondo la DGR 1289/2016. ISEE sociosanitario fino a 50.000 euro, elevato a 65.000 euro per i minorenni.",
+    cosa:
+      "Fino a 1.200 euro al mese per l'assistenza domiciliare prevista dal piano assistenziale individuale, con rendicontazione.",
+    stato: "attivo",
+    quando:
+      "Servizio presentato come attivo dal Comune, senza scadenza per le domande. Una finestra specifica per il 2026 non è indicata. Il procedimento si conclude entro 60 giorni.",
+    comeSiChiede:
+      "Domanda online o con il modulo del Comune, con ISEE, verbali e documento del rappresentante, se serve: i dettagli sono nella pagina del Comune.",
+    fonte: {
+      label: "Comune della Spezia · Gravissima disabilità (pagina del 22/10/2024)",
+      url: "https://www.comune.laspezia.it/servizi/salute-benessere-e-assistenza/gravissima-disabilita",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "Pagina del Comune non aggiornata dal 22/10/2024: chiedi ai Servizi Sociali se importi e requisiti sono ancora questi.",
+  },
+
   // ------------------------------------------------------------ COMUNE DI SARZANA
   {
     id: "sarzana-vita-indipendente-dgr-446",
@@ -826,6 +869,26 @@ export const BONUS: Bonus[] = [
   },
 
   // ------------------------------------------------------------------ TOSCANA
+  {
+    id: "pisa-trasporto-scolastico-autonomo-2026",
+    regione: "Toscana",
+    comuni: ["pisa"],
+    titolo: "Contributo per il trasporto scolastico organizzato dalla famiglia (alunni con disabilità, 3-14 anni)",
+    perChi:
+      "Famiglie di minori residenti a Pisa con certificazione legge 104/1992 art. 3, comma 1 o 3, che nel 2026 hanno frequentato la scuola dell'infanzia, primaria o secondaria di primo grado. Sono esclusi chi ha usato il trasporto scolastico comunale o il trasporto sociale della Società della Salute Zona Pisana negli anni scolastici interessati.",
+    cosa:
+      "Contributo fino a 2.000 euro all'anno per ogni beneficiario; l'importo effettivo si stabilisce dopo l'esame delle domande (risorse complessive: 97.317,60 euro).",
+    stato: "aperto",
+    quando: "Domande entro il 27/11/2026, ore 23:59.",
+    comeSiChiede:
+      "Domanda online sul portale del Comune, una per ogni figlio con disabilità. Serve il certificato di invalidità e, se serve, la delega.",
+    fonte: {
+      label: "Comune di Pisa · Contributi per il trasporto scolastico degli alunni con disabilità (pagina del 30/10/2026)",
+      url: "https://www.comune.pisa.it/Servizi/Contributi-per-nuclei-familiari-che-organizzano-in-autonomia-il-trasporto-scolastico-degli-alunni-con-disabilita-dai-3-ai-14-anni",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "Scade il 27/11/2026. Avviso approvato con determina n. 1806 del 30/10/2026.",
+  },
   {
     id: "toscana-centro-ascolto-caregiver",
     regione: "Toscana",

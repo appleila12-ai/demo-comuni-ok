@@ -1108,3 +1108,38 @@ ESENZIONE_ASL.catania = {
     "La pagina non indica gli indirizzi degli uffici, gli orari, i telefoni, le e-mail, se serve l'appuntamento né i tempi di rilascio. L'elenco dei documenti da portare non è confermato: chiedilo al Distretto di residenza. Pagina aggiornata il 12/05/2025.",
   fonte: "ASP Catania · pagina «Esenzione per patologia» dell'Anagrafe (aggiornata il 12/05/2025), controllata il 05/11/2026",
 };
+
+// Pisa: Azienda USL Toscana nord ovest. Contenuti dalle pagine ufficiali dell'azienda (consultate il 10/11/2026,
+// data di aggiornamento non indicata). Nessun indirizzo di ufficio o e-mail indicati nelle pagine lette: non inseriti.
+ESENZIONE_ASL.pisa = {
+  asl: "Azienda USL Toscana nord ovest",
+  intro:
+    "L'esenzione per patologia cronica o invalidante si chiede all'Azienda USL Toscana nord ovest. Per l'invalidità serve il riconoscimento INPS.",
+  titoloPassi: "Come si chiede",
+  comeSiPresenta: [
+    "Esenzione per patologia: agli uffici anagrafe dell'azienda, con documento d'identità e tessera sanitaria; oppure per e-mail, con il documento e la certificazione medica",
+    "Esenzione per invalidità: allo sportello, oppure per e-mail con il modulo dell'azienda; serve il riconoscimento dell'invalidità da parte dell'INPS",
+  ],
+  documenti: [
+    "Documento d'identità",
+    "Tessera sanitaria",
+    "Certificazione medica della patologia (per l'esenzione per patologia)",
+    "Riconoscimento INPS dell'invalidità e modulo dell'azienda (per l'esenzione per invalidità)",
+  ],
+  telefoni: [],
+  paginaUrl: "https://www.uslnordovest.toscana.it/come-fare-per/esenzioni-dal-pagamento-del-ticket",
+  paginaLabel: "Esenzioni dal pagamento del ticket · Azienda USL Toscana nord ovest",
+  altriLink: [
+    {
+      label: "Esenzione per patologia cronica o invalidante",
+      url: "https://www.uslnordovest.toscana.it/come-fare-per/312-esenzioni/14290-esenzioni-per-patologia-cronica-o-invalidante",
+    },
+    {
+      label: "Esenzione per invalidità",
+      url: "https://www.uslnordovest.toscana.it/come-fare-per/esenzioni/esenzioni-per-invalidita",
+    },
+  ],
+  manca:
+    "Le pagine lette non indicano gli indirizzi degli uffici, gli orari, i telefoni, le e-mail, se serve l'appuntamento né i tempi di rilascio: chiedili all'ufficio anagrafe della tua zona.",
+  fonte: "Azienda USL Toscana nord ovest · pagine «Esenzioni» consultate il 10/11/2026 (data di aggiornamento non indicata)",
+};
