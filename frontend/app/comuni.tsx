@@ -204,7 +204,9 @@ export default function ScegliComune() {
           <Text style={styles.count} testID="comuni-count">
             {query
               ? `${risultati.length} ${risultati.length === 1 ? "risultato" : "risultati"}`
-              : "Comuni con scheda · scrivi il nome per cercare tra tutti i Comuni italiani"}
+              : MOSTRA_ANAGRAFICA
+                ? "Qui vedi i Comuni con scheda. Scrivi almeno 2 lettere per cercare anche tutti gli altri Comuni italiani (versione dimostrativa)."
+                : "Qui vedi i Comuni disponibili in questa versione."}
             {query && altri > 0 ? ` · altri ${altri} Comuni: scrivi più lettere del nome` : ""}
           </Text>
         </View>
