@@ -7,6 +7,7 @@ import { percorso } from "../percorso";
 // Sito del Comune: dominio istituzionale trovato nelle pagine ufficiali (9/11/2026).
 // 9/11/2026: recapiti dei servizi sociali da schede della Regione Emilia-Romagna e pagine del Comune (fonti istituzionali). Nessuna email personale di operatori; dati discordanti non inseriti.
 // Lesignano de' Bagni: i servizi sociali sono gestiti dall'Unione Montana Appennino Parma Est (sede di Langhirano). Indirizzo di ricevimento e email non inseriti (sede locale non trovata; le email sono di operatori). Non unire sedi e orari delle due schede regionali.
+// 11/11/2026: l'URP del Comune conferma per email lo Sportello Sociale 0521 354152; precisa che ogni assistente sociale ha numero ed email propri, quindi nessun numero singolo è inserito come generale. Rimossi 0521 354149 (discordante con l'URP) e gli orari del mercoledì (non confermati).
 // Da fare: coordinate; bonus del Comune, associazioni, sport e tempo libero.
 export const lesignanoDeBagni: ComuneConfig = {
   slug: "lesignano-de-bagni",
@@ -21,10 +22,10 @@ export const lesignanoDeBagni: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0521 354149",
+  telefono: "0521 354152",
   email: "",
   pec: "protocollo@postacert.comune.lesignano-debagni.pr.it",
-  orari: "Su appuntamento telefonico. Servizi sociali per minori, adulti e famiglie: 0521 354149; anziani: 0521 354139 (mercoledì 9.30–12.30, previo appuntamento)",
+  orari: "Su appuntamento telefonico, con l'assistente sociale competente in base al bisogno. Per informazioni: Sportello Sociale 0521 354152",
   sitoWeb: "https://www.comune.lesignano-debagni.pr.it",
 
   logo: null,
