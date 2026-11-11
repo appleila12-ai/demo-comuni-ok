@@ -145,7 +145,7 @@ export const BONUS: Bonus[] = [
       url: "https://www.regione.liguria.it/homepage-attivita-istituzionale/trasparenza/amministrazione-trasparente/beni-immobili-e-gestione-patrimonio/patrimonio-immobiliare/publiccompetition/4683%3Acontributi-acquisto-ausili-sportivi-2026.html",
     },
     verificatoIl: "10/11/2026",
-    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: la Regione non ha pubblicato la chiusura né i fondi residui. Prima di preparare la domanda chiedi conferma alla Consulta regionale (consulta@regione.liguria.it, 010 5484892, via Fieschi 15, Genova).",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: la Regione non ha pubblicato la chiusura né i fondi residui. Prima di preparare la domanda chiedi conferma alla Consulta regionale (consulta@regione.liguria.it, 010 5484892, via Fieschi 15, Genova). Se i fondi sono in esaurimento, la segreteria della Consulta può inserirti nella sua lista e contattarti quando esce il prossimo bando (risposta della Consulta del 10 e 11/11/2026).",
   },
   {
     id: "la-spezia-gravissima-disabilita",
