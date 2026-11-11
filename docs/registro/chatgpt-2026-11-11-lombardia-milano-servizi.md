@@ -3,7 +3,7 @@
 - Data: 11/11/2026
 - Autore: ChatGPT
 - Ramo: dati/2026-11-11-chatgpt-lombardia-milano-servizi
-- PR: da assegnare
+- PR: https://github.com/appleila12-ai/demo-comuni-ok/pull/243
 - Classe: A (solo dati)
 
 ## Coordinamento e priorità
@@ -39,7 +39,8 @@ Nessuna voce di archivio rimossa. Tolti soltanto homepage ATS come destinazione 
 - Prima del push main è avanzato a 91d46b4 (documentazione audit e trasporto): ramo aggiornato con rebase, senza conflitti. Controlli ripetuti sulla nuova base prima del push.
 - Completezza, sola lettura: 420 Comuni, 26 completi, 394 incompleti; ticket mancanti da 294 a 293. Il generatore NON è stato eseguito con --scrivi perché i suoi file sono impegnati dalla PR #239.
 - Comuni portati a scheda completa in questo intervento: **0**. Milano ha una nuova scheda ticket ma richiede ancora verifica dei servizi sociali e di un bonus comunale attualmente accessibile.
-- Anteprima e controllo GitHub: da verificare dopo apertura PR.
+- Controllo GitHub: Controlli dati TutelApp, esecuzione 42985474292, completata con esito success sul commit 3109e361d09225cc2e8b4bed31eb083146c72a4d.
+- Netlify: deploy 6af423e716d7fa48a1ff898d, stato ready; anteprima aperta e verificata nel browser: https://deploy-preview-243--tutelappcomuni.netlify.app/esenzione-ticket?comune=milano . Intestazione Milano, testo, documenti e tre pulsanti telefonici presenti e leggibili. Nessuna prova su telefono o con lettore di schermo.
 
 ## Cosa manca: dato, ricerca, ufficio competente
 
@@ -71,7 +72,7 @@ Fondatrice di TutelApp
 
 ## Bozza email a Niguarda — non inviata
 
-Destinatario: URP ASST Niguarda; recapito da verificare nella pagina istituzionale prima dell'invio. Non inviare ai due indirizzi discordanti.
+Destinatario: urp@ospedaleniguarda.it — URP ASST Niguarda. Fonte aperta https://www.ospedaleniguarda.it/servizi-al-paziente/numeri-utili , aggiornata il 28/10/2026, letta l'11/11/2026. Non inviare ai due indirizzi discordanti.
 
 Oggetto: Conferma email Scelta e Revoca per informazioni sulle esenzioni ticket
 
