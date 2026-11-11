@@ -1564,19 +1564,20 @@ export const BONUS: Bonus[] = [
     comuni: ["bolzano", "merano"],
     titolo: "Assegno di cura (Provincia autonoma di Bolzano)",
     perChi:
-      "Persone non autosufficienti. Non dipende dal reddito né dall'età: conta il bisogno di cura e assistenza, accertato con una valutazione che colloca la persona in uno dei quattro livelli di non autosufficienza. Non serve il riconoscimento di invalidità civile, ma alla domanda va allegato un certificato medico.",
+      "Persone non autosufficienti. Non dipende dal reddito né dall'età: conta il bisogno di cura e assistenza, accertato con una valutazione che colloca la persona in uno dei quattro livelli di non autosufficienza. Serve la residenza ininterrotta in provincia di Bolzano da almeno 5 anni (oppure 15 anni di residenza storica, di cui almeno l'ultimo anno senza interruzioni); per i minorenni valgono i requisiti dei genitori. Non si può avere insieme all'indennità di accompagnamento. Non serve il riconoscimento di invalidità civile, ma alla domanda va allegato un certificato medico.",
     cosa:
-      "Un sostegno economico mensile, che può essere dato anche come buoni di servizio per l'assistenza a domicilio. Il pagamento parte dal mese successivo alla domanda. Per le malattie in stadio avanzato e per la demenza il livello viene assegnato d'ufficio sulla base dei documenti medici. Gli importi dei quattro livelli non sono indicati nella notizia che abbiamo letto: li trovi sul portale della Provincia.",
+      "Un sostegno economico mensile, che può essere dato anche come buoni di servizio per l'assistenza a domicilio. Il pagamento parte dal mese successivo alla domanda. Per le malattie in stadio avanzato e per la demenza il livello viene assegnato d'ufficio sulla base dei documenti medici. Importi mensili 2026 per livello: 599 euro (livello 1, oltre 60 e fino a 120 ore di assistenza al mese), 900 euro (livello 2, oltre 120 e fino a 180 ore), 1.350 euro (livello 3, oltre 180 e fino a 240 ore), 1.800 euro (livello 4, oltre 240 ore). Il primo pagamento arriva entro due mesi dal riconoscimento del fabbisogno ed è retroattivo al mese dopo la domanda.",
     stato: "attivo",
     quando:
       "L'assegno è di norma a tempo indeterminato. Se la situazione peggiora si può fare una nuova domanda quando sono passati almeno sei mesi dall'ultima valutazione. Contro l'esito della valutazione si può fare ricorso entro 45 giorni.",
     comeSiChiede:
-      "Si presenta la domanda con il certificato medico. Per informazioni ci sono gli sportelli unici per l'assistenza e la cura nei Distretti sociali e il numero verde Pronto Assistenza 848 800 277, dal lunedì al mercoledì dalle 9 alle 12. Il punto preciso dove consegnare la domanda va confermato con la Provincia.",
+      "Si presenta la domanda di inquadramento della non autosufficienza con il certificato medico: il pagamento parte poi in automatico, senza domanda all'Agenzia ASSE (Agenzia per lo sviluppo sociale ed economico, tel. 0471 41 83 00). Per informazioni ci sono gli sportelli unici per l'assistenza e la cura nei Distretti sociali e il numero verde Pronto Assistenza 848 800 277, dal lunedì al mercoledì dalle 9 alle 12. Il punto preciso dove consegnare la domanda va confermato con la Provincia.",
     fonte: {
       label: "Provincia autonoma di Bolzano · Tutte le informazioni utili sull'assegno di cura (24/06/2026)",
       url: "https://news.provincia.bz.it/it/news/tutte-le-informazioni-utili-sull-assegno-di-cura",
     },
-    verificatoIl: "20/10/2026",
+    verificatoIl: "11/11/2026",
+    nota: "Importi 2026 letti sulla pagina «Pagamento dell'assegno di cura» della Provincia. Novità di settembre 2026: per il primo livello, chi ha almeno 70 anni e un riconoscimento definitivo della legge 104 (art. 3, comma 3), non soggetto a revisione, ha una procedura semplificata: per le domande prima del 1° ottobre 2026 serve una richiesta scritta, per quelle successive, con i requisiti, il livello è assegnato d'ufficio.",
   },
   {
     id: "vda-fondo-inclusione-autismo-2026",
@@ -1947,6 +1948,87 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "10/11/2026",
     nota: "Il documento collegato dalla pagina (allegato 119841) oggi non si apre (errore 404): per i dettagli chiedi all'Ufficio.",
+  },
+  // --- Raccolta 11/11/2026 (2): verifiche istituzionali dell'11 novembre ---
+  {
+    id: "puglia-dopo-di-noi-linea-b-2026",
+    regione: "Puglia",
+    titolo: "Dopo di Noi, Linea B: progetti personalizzati (dal 16 novembre 2026)",
+    perChi:
+      "Persone con disabilità grave (legge 104, art. 3, comma 3) prive del sostegno familiare, da 18 a 64 anni (oltre i 64 solo per chi è già beneficiario), residenti in Puglia da almeno un anno, nelle condizioni familiari previste dall'art. 2 dell'avviso. È incompatibile con Pro.V.I. (linee A e C), Patto di cura e Sostegno familiare. Serve l'ISEE ordinario; la soglia non è indicata nella fonte.",
+    cosa: "Un budget fino a 15.000 euro per un progetto personalizzato, per un massimo di 12 mesi.",
+    stato: "attivo",
+    scade: "2026-12-16",
+    quando:
+      "Le domande si aprono alle 12:00 del 16 novembre 2026 e si chiudono alle 12:00 del 16 dicembre 2026 (art. 7 dell'avviso). Finora non è aperto.",
+    comeSiChiede:
+      "Online sulla piattaforma regionale PugliaSociale con SPID, CIE o CNS. La domanda la presenta la persona, un familiare di riferimento o un delegato.",
+    fonte: {
+      label: "Regione Puglia · Avviso Dopo di Noi (testo pubblicato dal Comune di Altamura, 06/11/2026)",
+      url: "https://www.comune.altamura.ba.it/it/news/avviso-pubblico-dei-progetti-personalizzati-dopo-di-noi-linea-b",
+    },
+    verificatoIl: "11/11/2026",
+    nota: "Fondi dell'annualità 2024, determina n. 1722 del 03/11/2026. Chi ha rinunciato alla graduatoria Linea A o ha un progetto Dopo di Noi attivo ha condizioni particolari: leggi l'art. 2. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+  {
+    id: "veneto-icd-caregiver-familiare",
+    regione: "Veneto",
+    titolo: "Impegnative di cura domiciliare: interventi a favore del caregiver familiare",
+    perChi:
+      "Caregiver familiari di persone assistite a casa, dopo la valutazione dell'équipe (UVMD). Per le tipologie CGA e CGB Plus serve l'ISEE sociosanitario sotto 50.000 euro per gli adulti e sotto 65.000 euro per i minorenni; per CGB e CGM, in alcuni casi, l'ISEE fino a 16.700 euro (il tipo di ISEE non è indicato). Età e residenza minima non sono indicate.",
+    cosa:
+      "Un contributo mensile: 800 euro (CGA); da 400 a 600 euro (CGB e CGM); 400 euro (CGB Plus e CGMgs). La durata non è indicata.",
+    stato: "attivo",
+    quando: "Si può chiedere in qualsiasi momento. Pagina aggiornata il 14 maggio 2026.",
+    comeSiChiede:
+      "Agli sportelli sociali del Comune o dell'ATS, oppure al Distretto, dalla persona, da un suo rappresentante legale o da un familiare. Poi ci sono la valutazione e la graduatoria.",
+    fonte: {
+      label: "Regione Veneto · Domiciliarità (ICD): interventi a favore del caregiver familiare",
+      url: "https://salute.regione.veneto.it/organizzazione-sssr/il-servizio-socio-sanitario-regionale/assistenza-distrettuale/assistenza-sociosanitaria/anziani-non-autosufficienti/domiciliarit%C3%A0-%28icd%29---interventi-a-favore-del-caregiver-familiare",
+    },
+    verificatoIl: "11/11/2026",
+    nota: "Essere idonei non garantisce il pagamento: dipende dallo scorrimento della graduatoria. La pagina richiama atti del 2021-2024 e non riguarda il nuovo fondo nazionale per i caregiver.",
+  },
+  {
+    id: "prato-vita-indipendente-chi-fa-da-se",
+    regione: "Toscana",
+    comuni: ["prato"],
+    titolo: "Progetti di vita indipendente «Chi fa da sé» (Zona pratese)",
+    perChi:
+      "Persone con disabilità e grave limitazione dell'autonomia, residenti nella Zona pratese, con la legge 104 (art. 3, comma 3), maggiori di 18 anni e capaci di autodeterminazione, anche con un sostegno. Soglia e tipo di ISEE non sono indicati nella fonte.",
+    cosa:
+      "Da 800 a 2.000 euro al mese (si possono chiedere importi più bassi) a rimborso delle spese rendicontate. Il progetto dura almeno 6 mesi e deve finire entro il 31 dicembre 2027.",
+    stato: "aperto",
+    scade: "2027-05-31",
+    quando:
+      "Avviso riaperto dal 1° aprile 2025 al 31 maggio 2027, nei limiti delle risorse e salvo un termine diverso comunicato dall'ente (art. 7 dell'avviso).",
+    comeSiChiede:
+      "Per PEC alla Società della Salute Area Pratese (sdsareapratese@legalmail.it), con gli allegati A e B e, se c'è una delega all'invio, l'allegato C. Può inviarla la persona o un suo delegato.",
+    fonte: {
+      label: "Società della Salute Area Pratese · Avviso progetti di Vita Indipendente «Chi fa da sé»",
+      url: "https://www.sds.prato.it/it/bacheca/bandi-avvisi/attivi/progetti-vita-indipendente/pagina1182.html",
+    },
+    verificatoIl: "11/11/2026",
+    nota: "Pagina della Società della Salute aggiornata il 04/08/2025. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+  {
+    id: "piemonte-esenzione-bollo-disabilita",
+    regione: "Piemonte",
+    titolo: "Esenzione dal bollo auto per persone con disabilità",
+    perChi:
+      "Persone con disabilità nelle categorie elencate dalla Regione e, nei casi previsti, i familiari a carico. I requisiti sanitari cambiano da categoria a categoria: non basta una generica invalidità. Si esenta un solo veicolo, fino a 2.000 cc a benzina o 2.800 cc diesel. L'ISEE non è indicato.",
+    cosa: "L'esenzione dal bollo. Si rinnova da sola finché restano le condizioni.",
+    stato: "attivo",
+    quando:
+      "Non è un bando annuale: la domanda va fatta entro 90 giorni dalla scadenza ordinaria del pagamento annuale.",
+    comeSiChiede:
+      "Sul portale Tassa Auto Piemonte; la pagina indica anche gli intermediari abilitati e gli URP. La domanda la presenta chi ha diritto.",
+    fonte: {
+      label: "Regione Piemonte · Esenzioni dalla tassa automobilistica per persone con disabilità",
+      url: "https://www.regione.piemonte.it/web/temi/tributi/tassa-automobilistica-bollo-auto/esenzioni-dalla-tassa-automobilistica-per-persone-disabilita",
+    },
+    verificatoIl: "11/11/2026",
+    nota: "Controlla la tua categoria sanitaria sulla pagina prima di applicare i limiti al tuo caso.",
   },
 ];
 
