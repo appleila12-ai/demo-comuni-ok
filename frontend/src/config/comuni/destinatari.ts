@@ -675,4 +675,8 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "cisterna-di-latina": { email: "mail@pec.comune.cisterna.latina.it", tipo: "pec", fonte: "PEC dell'Ente indicata nell'avviso del Comune di Cisterna di Latina, sito del Comune (letta l'11/11/2026)" },
   // Fonte Nuova (RM)
   "fonte-nuova": { email: "protocollo@cert.fonte-nuova.it", tipo: "pec", fonte: "PEC di protocollo indicata nei documenti dei Servizi Sociali del Comune di Fonte Nuova e nell'avviso TED del Comune (letta l'11/11/2026)" },
+  // Marigliano (NA)
+  "marigliano": { email: "protocollo@pec.comunemarigliano.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi dei Servizi Sociali, sito del Comune di Marigliano (letta l'11/11/2026)" },
+  // Villaricca (NA)
+  "villaricca": { email: "protocollo.villaricca@asmepec.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi del Comune di Villaricca (settore Servizi Socio-Assistenziali), sito del Comune (letta l'11/11/2026)" },
 };
