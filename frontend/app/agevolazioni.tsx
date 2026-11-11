@@ -131,7 +131,7 @@ export default function Agevolazioni() {
         <Avviso style={{ marginTop: spacing.md }}>
           Questo elenco è un orientamento, non una valutazione ufficiale. Per la conferma
           rivolgiti ai {comune.ente} {comune.delEnte}, a un patronato o a un CAF: sono
-          gratuiti.
+          gratuiti.{"\n\n"}Le regole nazionali sono state controllate a settembre 2026 e le riguardiamo a gennaio 2027.
         </Avviso>
         {!!comune.telefono && (
           <Bottone
