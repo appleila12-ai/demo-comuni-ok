@@ -1618,27 +1618,6 @@ export const BONUS: Bonus[] = [
     verificatoIl: "20/10/2026",
   },
 
-  // --- Raccolta 30/10/2026: Marche (misure regionali valide per tutta la Regione) ---
-  {
-    id: "marche-frna-2026",
-    regione: "Marche",
-    titolo: "Fondo regionale per la non autosufficienza 2026: disabilità gravissima e assegni di cura",
-    perChi:
-      "Persone con disabilità gravissima che vivono stabilmente al proprio domicilio, e anziani non autosufficienti assistiti a casa dalla famiglia. Le misure sono gestite dagli Ambiti Territoriali Sociali (ATS).",
-    cosa:
-      "Disabilità gravissima: contributo una tantum, con l'importo pieno per chi vive stabilmente a casa e riduzioni per chi frequenta percorsi educativi, riabilitativi o centri diurni (3 milioni di euro in totale). Anziani non autosufficienti: assegno di cura di 200 euro al mese per dodici mesi alle famiglie che assistono la persona a domicilio, e rafforzamento del servizio di assistenza domiciliare (SAD), che parte con la presa in carico sociale e sociosanitaria e un Piano assistenziale individualizzato.",
-    stato: "da-verificare",
-    quando:
-      "La Giunta regionale ha approvato il programma il 28 maggio 2026 (5,5 milioni di euro); lo schema era ancora all'esame del Consiglio delle Autonomie Locali. Il comunicato non indica scadenze né date degli avvisi.",
-    comeSiChiede:
-      "Per l'assegno di cura si risponde all'avviso pubblico del proprio ATS, con graduatoria in base a ISEE e valutazione del bisogno assistenziale. Il comunicato non spiega come chiedere il contributo per la disabilità gravissima: chiedi al Servizio sociale del tuo Comune o dell'ATS.",
-    fonte: {
-      label: "Regione Marche · Non autosufficienza, 5,5 milioni per assistenza domiciliare e sostegni alle famiglie (28/05/2026)",
-      url: "https://www.regione.marche.it/Regione-Utile/Sociale/News-ed-eventi/post/115496",
-    },
-    verificatoIl: "30/10/2026",
-    nota: "Gli avvisi degli ATS possono avere requisiti e scadenze propri: controllali sul sito del tuo Ambito.",
-  },
   // --- Raccolta 30/10/2026: Molise (misura regionale valida per tutta la Regione) ---
   {
     id: "molise-caregiver-2026-2027",
