@@ -22,7 +22,7 @@ export const COME_SI_PRESENTA_AUSILI_ASL5 =
   "La prescrizione, scritta sul modulo apposito (allegato 5 al DPCM 12 gennaio 2017), va inviata per mail al servizio protesica dell'ASL 5, all'indirizzo dedicato alla tua zona.";
 
 export const SENZA_MAIL_AUSILI_ASL5 =
-  "Se non riesci a inviare la mail, puoi andare di persona in uno di questi sportelli dei Distretti socio sanitari, senza bisogno di appuntamento:";
+  "Se non riesci a inviare la mail, puoi andare di persona in uno di questi sportelli dei Distretti socio sanitari, senza bisogno di appuntamento. Gli orari sono quelli comunicati dall'ASL a novembre 2026 e possono cambiare: prima di andare chiedi conferma all'Ufficio Relazioni con il Pubblico dell'ASL 5:";
 
 export const SPORTELLI_AUSILI_ASL5: { luogo: string; quando: string }[] = [
   { luogo: "La Spezia · Via Leopardi 71", quando: "lunedì, mercoledì e venerdì dalle 8:00 alle 12:30" },
