@@ -643,4 +643,36 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "lesignano-de-bagni": { email: "protocollo@postacert.comune.lesignano-debagni.pr.it", tipo: "pec", fonte: "PEC del Comune da fonti istituzionali (Regione Emilia-Romagna, sito del Comune), verificata il 09/11/2026" },
   // Medesano (PR)
   "medesano": { email: "protocollo@postacert.comune.medesano.pr.it", tipo: "pec", fonte: "IndicePA, PEC del Comune (dataset consultato il 09/11/2026)" },
+  // Carrara (MS)
+  "carrara": { email: "comune.carrara@postecert.it", tipo: "pec", fonte: "PEC del Comune di Carrara indicata negli avvisi del Settore 8 Servizi Sociali, sito del Comune (letta l'11/11/2026)" },
+  // Fiumicino (RM)
+  "fiumicino": { email: "protocollo.generale@pec.comune.fiumicino.rm.it", tipo: "pec", fonte: "PEC di protocollo generale indicata negli avvisi dell'Area Welfare e Servizi Sociali, sito del Comune di Fiumicino (letta l'11/11/2026)" },
+  // Velletri (RM)
+  "velletri": { email: "ufficio.servizisociali@pec.comune.velletri.rm.it", tipo: "pec", fonte: "Regione Lazio, indirizzario Progetto di Vita, distretto RM 6.5 capofila Velletri (letto l'11/11/2026)" },
+  // Spoleto (PG)
+  "spoleto": { email: "comune.spoleto@postacert.umbria.it", tipo: "pec", fonte: "PEC del Comune di Spoleto indicata negli avvisi pubblicati sul sito del Comune (letta l'11/11/2026)" },
+  // Jesi (AN)
+  "jesi": { email: "protocollo.comune.jesi@legalmail.it", tipo: "pec", fonte: "PEC di protocollo indicata nell'informativa ai cittadini, sito del Comune di Jesi (letta l'11/11/2026)" },
+  // Crema (CR)
+  "crema": { email: "protocollo@comunecrema.telecompost.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi pubblicati sul sito del Comune di Crema (letta l'11/11/2026)" },
+  // Tivoli (RM)
+  "tivoli": { email: "info@pec.comune.tivoli.rm.it", tipo: "pec", fonte: "Regione Lazio, indirizzario Progetto di Vita, distretto RM 5.3 capofila Tivoli (letto l'11/11/2026)" },
+  // Abbiategrasso (MI)
+  "abbiategrasso": { email: "protocollo@comune.abbiategrasso.mi.it", tipo: "ordinaria", fonte: "indirizzo di protocollo indicato negli avvisi pubblicati sul sito del Comune di Abbiategrasso (letto l'11/11/2026)" },
+  // Albano Laziale (RM)
+  "albano-laziale": { email: "distrettorm6.2@comune.albanolaziale.rm.it", tipo: "ordinaria", fonte: "indirizzo del Distretto RM 6.2, Gestione associata dei Servizi Sociali, capofila Albano Laziale, indicato negli avvisi pubblici (letto l'11/11/2026)" },
+  // Brugherio (MB)
+  "brugherio": { email: "protocollo.brugherio@legalmail.it", tipo: "pec", fonte: "PEC del Comune di Brugherio indicata negli avvisi di gara del Comune (Gazzetta ufficiale UE, TED), letta l'11/11/2026" },
+  // Carmagnola (TO)
+  "carmagnola": { email: "protocollo@pec.cisa31.it", tipo: "pec", fonte: "Regione Piemonte, indirizzario degli enti gestori socio-assistenziali: C.I.S.A. 31 di Carmagnola (letto l'11/11/2026)" },
+  // Cassino (FR)
+  "cassino": { email: "servizio.protocollo@comunecassino.telecompost.it", tipo: "pec", fonte: "PEC del Comune di Cassino indicata negli avvisi sul sito del Comune (letta l'11/11/2026)" },
+  // Chieri (TO)
+  "chieri": { email: "protocollo@comune.chieri.to.it", tipo: "ordinaria", fonte: "indirizzo di protocollo indicato negli avvisi del Servizio Politiche Sociali, sito del Comune di Chieri (letto l'11/11/2026)" },
+  // Ciampino (RM)
+  "ciampino": { email: "protocollo@pec.comune.ciampino.roma.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi del Settore Servizi alla Persona, sito del Comune di Ciampino; riceve anche da mail semplice (letta l'11/11/2026)" },
+  // Cisterna di Latina (LT)
+  "cisterna-di-latina": { email: "mail@pec.comune.cisterna.latina.it", tipo: "pec", fonte: "PEC dell'Ente indicata nell'avviso del Comune di Cisterna di Latina, sito del Comune (letta l'11/11/2026)" },
+  // Fonte Nuova (RM)
+  "fonte-nuova": { email: "protocollo@cert.fonte-nuova.it", tipo: "pec", fonte: "PEC di protocollo indicata nei documenti dei Servizi Sociali del Comune di Fonte Nuova e nell'avviso TED del Comune (letta l'11/11/2026)" },
 };
