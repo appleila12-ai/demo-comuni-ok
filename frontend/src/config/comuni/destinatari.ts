@@ -671,4 +671,8 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "chieri": { email: "protocollo@comune.chieri.to.it", tipo: "ordinaria", fonte: "indirizzo di protocollo indicato negli avvisi del Servizio Politiche Sociali, sito del Comune di Chieri (letto l'11/11/2026)" },
   // Ciampino (RM)
   "ciampino": { email: "protocollo@pec.comune.ciampino.roma.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi del Settore Servizi alla Persona, sito del Comune di Ciampino; riceve anche da mail semplice (letta l'11/11/2026)" },
+  // Cisterna di Latina (LT)
+  "cisterna-di-latina": { email: "mail@pec.comune.cisterna.latina.it", tipo: "pec", fonte: "PEC dell'Ente indicata nell'avviso del Comune di Cisterna di Latina, sito del Comune (letta l'11/11/2026)" },
+  // Fonte Nuova (RM)
+  "fonte-nuova": { email: "protocollo@cert.fonte-nuova.it", tipo: "pec", fonte: "PEC di protocollo indicata nei documenti dei Servizi Sociali del Comune di Fonte Nuova e nell'avviso TED del Comune (letta l'11/11/2026)" },
 };

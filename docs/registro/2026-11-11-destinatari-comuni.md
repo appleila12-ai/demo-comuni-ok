@@ -1,4 +1,4 @@
-# Destinatari «Scrivi al tuo Comune»: primo gruppo (14 Comuni)
+# Destinatari «Scrivi al tuo Comune»: primo gruppo (16 Comuni)
 
 - Data: 11/11/2026
 - Autore: Claude
@@ -30,5 +30,8 @@ nessuna
 
 ## Cosa manca
 
-1. Indirizzo «Scrivi al tuo Comune» per: casalecchio-di-reno, cisterna-di-latina, fonte-nuova, garbagnate-milanese, gragnano, grugliasco, lenola, maddaloni, marigliano, modugno, mola-di-bari, mondragone, portovenere, quarto, san-felice-circeo, san-giuliano-milanese, sarno, treviglio, villaricca · dove cercarlo: sito del Comune (piè di pagina, avvisi), IndicePA · a chi chiederlo: URP o protocollo del Comune.
+1. Indirizzo «Scrivi al tuo Comune» per: casalecchio-di-reno, garbagnate-milanese, gragnano, grugliasco, lenola, maddaloni, marigliano, modugno, mola-di-bari, mondragone, portovenere, quarto, san-felice-circeo, san-giuliano-milanese, sarno, treviglio, villaricca · dove cercarlo: sito del Comune (piè di pagina, avvisi), IndicePA · a chi chiederlo: URP o protocollo del Comune.
 2. Portovenere e Casalecchio: trovati solo su siti non istituzionali o fonti vecchie, quindi non inseriti.
+
+
+Aggiunti in seguito (11/11/2026): cisterna-di-latina (mail@pec.comune.cisterna.latina.it, avviso del Comune), fonte-nuova (protocollo@cert.fonte-nuova.it, documenti del Comune e avviso TED). Esclusi per sola fonte non istituzionale: gragnano, maddaloni.
