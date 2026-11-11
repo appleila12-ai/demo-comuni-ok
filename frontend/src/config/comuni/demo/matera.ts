@@ -18,8 +18,9 @@ export const matera: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0835 2411",
-  email: "",
+  // Servizi alla persona, sito del Comune (data non indicata), consultato il 10/11/2026. Altro numero: 0835 241384.
+  telefono: "0835 241340",
+  email: "serviziallapersona@comune.mt.it",
   pec: "",
   orari: "",
   sitoWeb: "https://comune.matera.it/servizi-categoria/salute-benessere-e-assistenza/",
