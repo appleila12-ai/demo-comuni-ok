@@ -2030,6 +2030,81 @@ export const BONUS: Bonus[] = [
     verificatoIl: "11/11/2026",
     nota: "Controlla la tua categoria sanitaria sulla pagina prima di applicare i limiti al tuo caso.",
   },
+  // --- Raccolta 11/11/2026 (3): bandi comunali con scadenza dopo il 10 novembre ---
+  {
+    id: "sassari-trasporto-scolastico-autonomo-2026",
+    regione: "Sardegna",
+    comuni: ["sassari"],
+    titolo: "Rimborso del trasporto scolastico organizzato dalla famiglia (2026)",
+    perChi:
+      "Famiglie di alunni di 3-14 anni residenti a Sassari, con disabilità grave (legge 104, art. 3, comma 3), che frequentano l'infanzia, la primaria o la secondaria di primo grado e non usano il trasporto scolastico comunale. L'ISEE decide la priorità: senza ISEE o con ISEE irregolare la domanda va in coda.",
+    cosa: "Un rimborso calcolato a 0,55 euro per chilometro, secondo il percorso e i limiti dell'avviso. Non è un importo fisso per famiglia.",
+    stato: "aperto",
+    scade: "2026-11-23",
+    quando: "Domande entro le 23:59 del 23 novembre 2026. Pagina del Comune aggiornata il 03/11/2026.",
+    comeSiChiede: "Con il modulo dell'avviso del Comune di Sassari: leggi la pagina e il PDF dell'avviso per i documenti e il modo di consegna.",
+    fonte: {
+      label: "Comune di Sassari · Voucher per il servizio di trasporto scolastico per studenti con disabilità, anno 2026",
+      url: "https://www.comune.sassari.it/it/amministrazione/documenti-dati/documento-pubblico/Voucher-per-il-servizio-di-trasporto-scolastico-in-favore-di-studenti-disabili-frequentanti-il-primo-ciclo-di-studi-residenti-nel-Comune-di-Sassari-anno-2026/",
+    },
+    verificatoIl: "11/11/2026",
+  },
+  {
+    id: "sassari-piani-162-98-nuove-domande-2026",
+    regione: "Sardegna",
+    comuni: ["sassari"],
+    titolo: "Piani personalizzati L. 162/98: nuove domande 2026 (misura regionale gestita dal Comune)",
+    perChi:
+      "Persone con disabilità grave (legge 104, art. 3, comma 3, anche con certificazione provvisoria) residenti a Sassari. Servono la scheda salute, i documenti richiesti e l'ISEE adatto: senza ISEE il finanziamento è ridotto dell'80%. Ci sono incompatibilità, con eccezioni per «Ritornare a casa».",
+    cosa: "Un piano personalizzato di sostegno. L'importo non è indicato nell'avviso di riapertura: dipende dal piano e dalle risorse.",
+    stato: "aperto",
+    scade: "2026-11-16",
+    quando: "Nuove domande entro il 16 novembre 2026. Le domande sono accolte in ordine cronologico, fino a esaurimento delle risorse. Pagina aggiornata il 29/06/2026.",
+    comeSiChiede: "Secondo l'avviso di riapertura del Comune di Sassari (pagina e PDF).",
+    fonte: {
+      label: "Comune di Sassari · Bando 2026 L. 162/98, avviso per le nuove domande",
+      url: "https://www.comune.sassari.it/it/amministrazione/documenti-dati/documento-pubblico/Bando-annualita-2026-L.162-98-piani-personalizzati-in-favore-di-persone-con-disabilita-grave-avviso-presentazione-nuove-domande/",
+    },
+    verificatoIl: "11/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+  {
+    id: "trapani-tessere-atm-2027",
+    regione: "Sicilia",
+    comuni: ["trapani"],
+    titolo: "Tessere ATM 2027 per persone con disabilità",
+    perChi:
+      "Residenti a Trapani con certificazione della legge 104 oppure invalidità civile di almeno il 66%. Il PDF indica un limite di ISE (non ISEE): 10.200 euro per una persona sola, 20.400 euro per due o più componenti. La pagina chiede anche l'attestazione ISEE da allegare.",
+    cosa: "Il Comune contribuisce con 20 euro al mese; la quota a carico dell'utente è di 5 euro al mese, più le eventuali spese di prima emissione.",
+    stato: "aperto",
+    scade: "2026-11-20",
+    quando: "Domande entro il 20 novembre 2026. Pagina aggiornata il 01/10/2026.",
+    comeSiChiede: "Secondo l'avviso del Comune di Trapani (pagina e PDF): leggi i documenti da allegare.",
+    fonte: {
+      label: "Comune di Trapani · Tessere ATM 2027, aperte le domande",
+      url: "https://comune.trapani.it/novita/tessere-atm-2027-aperte-le-domande-per-gli-aventi-diritto/",
+    },
+    verificatoIl: "11/11/2026",
+  },
+  {
+    id: "ragusa-tessere-ast-2027-2028",
+    regione: "Sicilia",
+    comuni: ["ragusa"],
+    titolo: "Tessera AST di libera circolazione extraurbana (marzo 2027 - febbraio 2028)",
+    perChi:
+      "Persone con disabilità con invalidità di almeno il 67% o equiparate (art. 21 L.R. 68/81 e art. 2 L.R. 9/92). Altre condizioni e costi sono nell'allegato dell'avviso, che non abbiamo potuto leggere: chiedi al Comune.",
+    cosa: "La tessera di libera circolazione sui mezzi AST extraurbani. Nessun contributo in denaro indicato.",
+    stato: "aperto",
+    scade: "2026-11-16",
+    quando: "Domande entro le 12:00 del 16 novembre 2026. Pagina del Comune aggiornata il 14/10/2026.",
+    comeSiChiede: "Secondo l'avviso del Comune di Ragusa (PDF allegato alla pagina).",
+    fonte: {
+      label: "Comune di Ragusa · Rilascio tessera di libera circolazione extraurbana AST, marzo 2027 - febbraio 2028",
+      url: "https://comune.ragusa.it/en/news/rilascio-tessera-di-libera-circolazione-extraurbana-sui-mezzi-a-s-t-marzo-2027-febbraio-2028-per-soggetti-disabili-art21-l-r-68-81-e-art-2-l-r-9-92-con-invalidita-non-inferiore-al-67-o-equiparati",
+    },
+    verificatoIl: "11/11/2026",
+    nota: "Pagina letta nella versione inglese del sito del Comune. Il PDF dell'avviso non si legge: controlla requisiti e documenti con l'ufficio prima di preparare la domanda.",
+  },
 ];
 
 /** Valore di `regione` per le misure nazionali: valgono in tutti i Comuni. */
