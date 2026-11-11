@@ -396,8 +396,13 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "pisa": { email: "comune.pisa@postacert.toscana.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Pistoia (PT)
   "pistoia": { email: "comune.pistoia@postacert.toscana.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  // Genzano di Roma (RM)
+  "genzano-di-roma": { email: "protocollo@comunegenzanodiromapec.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi pubblici del Comune di Genzano di Roma (2024-2026), letta l'11/11/2026" },
+
   // Pomezia (RM)
   "pomezia": { email: "protocollo@pec.comune.pomezia.rm.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  // Pompei (NA)
+  "pompei": { email: "protocollo@pec.comune.pompei.na.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi pubblici del Comune di Pompei (2026), letta l'11/11/2026" },
   // Pordenone (PN)
   "pordenone": { email: "comune.pordenone@certgov.fvg.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Portici (NA)

@@ -146,6 +146,7 @@ import { frosinone } from "./frosinone";
 import { galbiate } from "./galbiate";
 import { gallarate } from "./gallarate";
 import { gela } from "./gela";
+import { genzanoDiRoma } from "./genzano-di-roma";
 import { genova } from "./genova";
 import { giudicarie } from "./giudicarie";
 import { giuglianoInCampania } from "./giugliano-in-campania";
@@ -262,6 +263,7 @@ import { pisa } from "./pisa";
 import { pistoia } from "./pistoia";
 import { podenzano } from "./podenzano";
 import { pomezia } from "./pomezia";
+import { pompei } from "./pompei";
 import { pomiglianoDArco } from "./pomigliano-d-arco";
 import { pontedera } from "./pontedera";
 import { pordenone } from "./pordenone";
@@ -566,6 +568,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   gallarate,
   gela,
   genova,
+  genzanoDiRoma,
   giudicarie,
   giuglianoInCampania,
   gorizia,
@@ -681,6 +684,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   pistoia,
   podenzano,
   pomezia,
+  pompei,
   pomiglianoDArco,
   pontedera,
   pordenone,
