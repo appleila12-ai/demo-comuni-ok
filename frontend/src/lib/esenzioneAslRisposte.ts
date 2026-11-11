@@ -510,25 +510,37 @@ const ASL_BARI: SchedaEsenzioneAsl = {
 };
 for (const slug of ["bari", "altamura", "bitonto", "corato", "gravina-in-puglia", "modugno", "mola-di-bari", "molfetta", "monopoli"]) ESENZIONE_ASL[slug] = ASL_BARI;
 
-// ASL Città di Torino: risposta scritta dell'URP (29/10/2026) e pagina ufficiale dell'ASL «Richiedere l'esenzione ticket» (aggiornata il 16/06/2026, letta il 02/11/2026).
+// ASL Città di Torino: https://www.aslcittaditorino.it/sportelli-per-pratiche-amministrative/ (aggiornata 04/09/2026, controllata 11/11/2026).
 ESENZIONE_ASL.torino = {
   asl: "ASL Città di Torino",
   intro:
     "L'ASL Città di Torino indica che l'esenzione ticket per patologia (malattie croniche, malattie rare, malattie invalidanti, patologie oncologiche, attesa di trapianto) si chiede presso gli sportelli amministrativi del Distretto di competenza territoriale.",
   titoloPassi: "Come si chiede",
-  comeSiPresenta: ["Agli sportelli amministrativi del Distretto di competenza per la tua residenza"],
+  comeSiPresenta: [
+    "Agli sportelli amministrativi del Distretto di competenza per la tua residenza. Orario lun-ven 8:00-14:00, ultimo numero alle 13:30. Via Botticelli apre alle 10:00",
+    "Circoscrizione 1: via Juvarra 19 (Presidio Oftalmico). Circoscrizione 8: corso Corsica 55",
+    "Circoscrizione 2: via Farinelli 25 e via Gorizia 114. Circoscrizione 3: via Monginevro 130",
+    "Circoscrizione 4: via Pacchiotti 4. Circoscrizione 5: Casa di Comunità Marco Antonetto, via Luzzatti 50",
+    "Circoscrizione 6: via Montanaro 60, via Borgo Ticino 7 e via Botticelli 130 (10:00-14:00; ultimo numero 13:30)",
+    "Circoscrizione 7: via Cigna 74, Lungo Dora Savona 26 e via Cavezzale 6",
+  ],
   documenti: [
-    "Documentazione medica che attesti la patologia",
+    "Per patologia: documentazione medica che attesti la patologia",
+    "Per invalidità: verbale di invalidità",
     "Copia del codice fiscale / tessera sanitaria",
     "Copia del documento di identità",
   ],
   mail: "urp@aslcittaditorino.it",
   telefoni: [],
-  paginaUrl: "https://www.aslcittaditorino.it/come-fare-per/richiedere-lesenzione-ticket/",
-  paginaLabel: "Richiedere l'esenzione ticket · ASL Città di Torino",
+  paginaUrl: "https://www.aslcittaditorino.it/sportelli-per-pratiche-amministrative/",
+  paginaLabel: "Sedi e orari degli sportelli · ASL Città di Torino",
+  altriLink: [
+    { label: "Esenzione per patologia", url: "https://www.aslcittaditorino.it/prestazioni/esenzione-ticket-per-patologia-malattia/" },
+    { label: "Esenzione per invalidità", url: "https://www.aslcittaditorino.it/prestazioni/esenzione-per-invalidita/" },
+  ],
   manca:
-    "La pagina non indica sedi e orari degli sportelli, se serve l'appuntamento, se si può inviare per mail né i tempi di rilascio: chiedili al tuo Distretto o all'URP (urp@aslcittaditorino.it).",
-  fonte: "ASL Città di Torino · pagina ufficiale sull'esenzione ticket (aggiornata il 16/06/2026) e risposta scritta dell'URP del 29/10/2026",
+    "Le pagine non indicano se serve l'appuntamento, se si può inviare la domanda per email né i tempi di rilascio. Chiedi informazioni al Distretto o all'URP (urp@aslcittaditorino.it); questo indirizzo è per informazioni, non è indicato per presentare la domanda.",
+  fonte: "ASL Città di Torino · sportelli per pratiche amministrative (aggiornata il 04/09/2026), pagine esenzione per patologia e invalidità; controllate il 11/11/2026. Risposta scritta URP del 29/10/2026",
 };
 
 // ATS Brescia: l'esenzione non è gestita dall'ATS ma dalle tre ASST (risposta scritta del 30/10/2026).
