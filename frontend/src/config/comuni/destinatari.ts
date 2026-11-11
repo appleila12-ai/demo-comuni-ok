@@ -77,6 +77,9 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "alcamo": { email: "comunedialcamo.protocollo@pec.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Alessandria (AL)
   "alessandria": { email: "protocollo@pec.comune.alessandria.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  // Agropoli (SA)
+  "agropoli": { email: "protocollo@pec.comune.agropoli.sa.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi pubblicati sul sito del Comune di Agropoli (2023-2025), letta l'11/11/2026" },
+
   // Alghero (SS)
   "alghero": { email: "protocollo@pec.comune.alghero.ss.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Altamura (BA)
@@ -246,6 +249,9 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "livorno": { email: "comune.livorno@postacert.toscana.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Lucca (LU)
   "lucca": { email: "comune.lucca@postacert.toscana.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  // Ariano Irpino (AV)
+  "ariano-irpino": { email: "protocollo.arianoirpino@asmepec.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi pubblici del Comune di Ariano Irpino (2025-2026), letta l'11/11/2026" },
+
   // Arezzo (AR)
   "arezzo": { email: "comune.arezzo@postacert.toscana.it", tipo: "pec", fonte: "pagina Protocollo e Archivio del Comune (PEC)" },
   // Firenze (FI)

@@ -9,6 +9,7 @@ import { acerra } from "./acerra";
 import { acireale } from "./acireale";
 import { adrano } from "./adrano";
 import { afragola } from "./afragola";
+import { agropoli } from "./agropoli";
 import { agrigento } from "./agrigento";
 import { alba } from "./alba";
 import { albanoLaziale } from "./albano-laziale";
@@ -27,6 +28,7 @@ import { aprilia } from "./aprilia";
 import { arcola } from "./arcola";
 import { ardea } from "./ardea";
 import { arezzo } from "./arezzo";
+import { arianoIrpino } from "./ariano-irpino";
 import { arzano } from "./arzano";
 import { ascoliPiceno } from "./ascoli-piceno";
 import { asti } from "./asti";
@@ -431,6 +433,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   adrano,
   afragola,
   agrigento,
+  agropoli,
   alba,
   albanoLaziale,
   albenga,
@@ -448,6 +451,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   arcola,
   ardea,
   arezzo,
+  arianoIrpino,
   arzano,
   ascoliPiceno,
   asti,
