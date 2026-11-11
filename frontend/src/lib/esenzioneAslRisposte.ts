@@ -215,6 +215,8 @@ ESENZIONE_ASL["reggio-emilia"] = {
     "Per l'esenzione per patologia: la certificazione relativa alla patologia, rilasciata dallo specialista su apposito modulo",
     "Per l'esenzione per invalidità: la certificazione che documenta lo stato di invalidità e/o i requisiti che danno diritto all'esenzione",
   ],
+  importante:
+    "L'attestato di esenzione per patologia lo rilascia l'Azienda USL, non la Regione (risposta del Settore Assistenza territoriale della Regione Emilia-Romagna, 11/11/2026). Le modalità di richiesta dipendono dall'AUSL: quelle di questa scheda valgono per Reggio Emilia.",
   mail: "info.saub@ausl.re.it",
   telefoni: [{ etichetta: "SAUB Santa Maria Nuova (8:00 – 12:30, lun–ven)", numero: "0522 335508" }],
   paginaUrl: "https://www.ausl.re.it/ticket-ed-esenzioni",
