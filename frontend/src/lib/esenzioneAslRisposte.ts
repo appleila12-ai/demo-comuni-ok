@@ -1302,3 +1302,37 @@ ESENZIONE_ASL.laquila = {
     "La pagina non indica i documenti per patologia e per invalidità né se si può presentare la richiesta per email: chiedili allo sportello.",
   fonte: "ASL 1 Abruzzo · U.O.S.D. Cure Primarie L'Aquila (aggiornata il 28/10/2026), controllata il 10/11/2026",
 };
+
+// Milano — portale condiviso dalle tre ASST, per tutti i nove Municipi.
+// Fonti istituzionali e limiti: docs/registro/chatgpt-2026-11-11-lombardia-milano-servizi.md.
+ESENZIONE_ASL.milano = {
+  asl: "ASST di Milano · sportello online condiviso",
+  intro:
+    "A Milano puoi chiedere il rilascio o il rinnovo dell'esenzione dal ticket sul portale condiviso da Fatebenefratelli Sacco, Santi Paolo e Carlo e Niguarda. Il servizio copre tutti i nove Municipi; per le esenzioni occorre essere residenti in Lombardia.",
+  comeSiPresenta: [
+    "Apri lo sportello online qui sotto. Servono un indirizzo email personale, un cellulare per il codice di sicurezza ricevuto via SMS e i documenti scansionati in PDF.",
+    "Se non puoi fare la pratica online, prenota un appuntamento: Fatebenefratelli Sacco, 02 6363 4729 o 02 6363 4446 (lun–ven 14:00–15:30); Santi Paolo e Carlo, 02 8184 7900 (lun–ven 13:30–15:30).",
+  ],
+  documenti: [
+    "Documento d'identità e tessera sanitaria, fronte e retro, per la richiesta online.",
+    "Patologia cronica: certificazione dello specialista di una struttura pubblica o privata accreditata. Malattia rara: certificazione sul modulo del presidio abilitato alla diagnosi.",
+    "Invalidità civile: verbale che attesta l'invalidità. Il verbale della legge 104 da solo non permette il rilascio dell'esenzione per invalidità.",
+  ],
+  telefoni: [
+    { etichetta: "Fatebenefratelli Sacco · appuntamenti lun–ven 14:00–15:30", numero: "02 6363 4729" },
+    { etichetta: "Santi Paolo e Carlo · appuntamenti lun–ven 13:30–15:30", numero: "02 8184 7900" },
+    { etichetta: "Niguarda · appuntamenti lun–ven 13:30–15:15", numero: "02 6444 5743" },
+  ],
+  paginaUrl: "https://sr.asst-fbf-sacco.it/",
+  paginaLabel: "Sportello online delle tre ASST di Milano",
+  altriLink: [
+    { label: "Fatebenefratelli Sacco · esenzioni e sportelli", url: "https://www.asst-fbf-sacco.it/servizi-territoriali/ticket-ed-esenzioni-8" },
+    { label: "Santi Paolo e Carlo · sportello Monreale, via Monreale 13", url: "https://www.asst-santipaolocarlo.it/strutture/casa-comunita-monreale" },
+    { label: "Niguarda · appuntamento allo sportello", url: "https://sportellovirtuale.ospedaleniguarda.it/#/queue/home" },
+    { label: "Regione Lombardia · documenti e tipi di esenzione", url: "https://www.regione.lombardia.it/sanita/ticket-ed-esenzioni/ticket-esenzioni-prestazioni-ssr" },
+  ],
+  manca:
+    "Per informazioni: sceltarevoca.info@asst-fbf-sacco.it (Fatebenefratelli Sacco) oppure sceltarevoca.bandenere@asst-santipaolocarlo.it (Santi Paolo e Carlo). Questi indirizzi sono per informazioni: presenta la pratica sullo sportello online o all'appuntamento.",
+  fonte:
+    "Portale delle tre ASST di Milano; pagine Fatebenefratelli Sacco, Monreale (aggiornata 08/10/2026), Regione Lombardia e volantino Scelta e Revoca (novembre 2025), letti l'11/11/2026. PDF: https://www.asst-santipaolocarlo.it/system/files/struttura/files/14466/36715/VOLANTINO%20SCELTA%20REVOCA%20con%20QRCode%20NOVEMBRE%202025.pdf",
+};
