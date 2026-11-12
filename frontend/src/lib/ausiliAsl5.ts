@@ -54,3 +54,17 @@ export const TEMPI_AUSILI_ASL5 = [
 
 export const RIPARAZIONE_AUSILI_ASL5 =
   "Per riparare un ausilio del «banca protesi» serve la richiesta del medico curante sul ricettario rosso, da presentare nelle stesse modalità.";
+
+// Trasporto per visite, esami e terapie: l'URP dell'ASL 5 ha risposto sugli ausili ma non su questo
+// (domande 7, 8 e 9 della richiesta del 30/10/2026). Finché non risponde, in app si dice chiaramente che
+// il dato manca, perché, e a chi si può chiedere. Contatti dell'URP: firma della sua risposta scritta.
+export const TRASPORTO_ASL5_MANCA = {
+  titolo: "Trasporto per visite, esami e terapie: mancano ancora i dati",
+  testo:
+    "Abbiamo chiesto all'ASL 5, per iscritto, il 30 ottobre 2026, se organizza o autorizza il trasporto (per esempio per dialisi o riabilitazione), per chi, a chi si chiede e con quanto anticipo. L'ASL ha risposto sugli ausili ma non ancora sul trasporto. Per ora non pubblichiamo nulla che non sia confermato per iscritto: appena arriva la risposta la scriviamo qui.",
+  invito:
+    "Se questa informazione serve anche a te, puoi chiederla direttamente all'Ufficio Relazioni con il Pubblico dell'ASL 5: più richieste arrivano, più è chiaro che serve. Se ricevi una risposta, scrivici a info@tutelapp.it e la aggiungiamo.",
+  mail: "urp@asl5.liguria.it",
+  telefono: "0187 533915",
+  telefonoVerde: "800 240 042",
+};
