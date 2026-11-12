@@ -14,6 +14,7 @@ import {
   COME_SI_PRESENTA_AUSILI_ASL5,
   DOCUMENTI_AUSILI_ASL5,
   FONTE_AUSILI_ASL5,
+  PAGINA_AUSILI_ASL5,
   RIPARAZIONE_AUSILI_ASL5,
   TRASPORTO_ASL5_MANCA,
   SENZA_MAIL_AUSILI_ASL5,
@@ -78,6 +79,14 @@ function AusiliAsl5() {
         Dove presentare la richiesta (ASL 5)
       </Text>
       <Text style={[paginaStili.testo, st.nota]}>{COME_SI_PRESENTA_AUSILI_ASL5}</Text>
+      <Bottone
+        label={PAGINA_AUSILI_ASL5.label}
+        icon="open-outline"
+        variante="vuoto"
+        onPress={() => apri(PAGINA_AUSILI_ASL5.url)}
+        testID="ausili-asl5-pagina"
+      />
+      <Text style={[paginaStili.testo, st.nota]}>{PAGINA_AUSILI_ASL5.nota}</Text>
       <Text style={[paginaStili.testo, st.nota]}>Per {zona}:</Text>
       <Bottone
         label={`Scrivi a ${mail}`}

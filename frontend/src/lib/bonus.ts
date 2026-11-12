@@ -145,7 +145,7 @@ export const BONUS: Bonus[] = [
       url: "https://www.regione.liguria.it/homepage-attivita-istituzionale/trasparenza/amministrazione-trasparente/beni-immobili-e-gestione-patrimonio/patrimonio-immobiliare/publiccompetition/4683%3Acontributi-acquisto-ausili-sportivi-2026.html",
     },
     verificatoIl: "10/11/2026",
-    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: la Regione non ha pubblicato la chiusura né i fondi residui. Prima di preparare la domanda chiedi conferma alla Consulta regionale (consulta@regione.liguria.it, 010 5484892, via Fieschi 15, Genova).",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: la Regione non ha pubblicato la chiusura né i fondi residui. Prima di preparare la domanda chiedi conferma alla Consulta regionale (consulta@regione.liguria.it, 010 5484892, via Fieschi 15, Genova). Se i fondi sono in esaurimento, la segreteria della Consulta può inserirti nella sua lista e contattarti quando esce il prossimo bando (risposta della Consulta del 10 e 11/11/2026).",
   },
   {
     id: "la-spezia-gravissima-disabilita",
@@ -2160,15 +2160,15 @@ export const BONUS: Bonus[] = [
       "Contributo fino a 250 euro a minore per le attività sportive. Le risorse sono 1.750 euro in tutto, quindi bastano per al massimo sette contributi.",
     stato: "aperto",
     quando:
-      "Domande entro mercoledì 2 dicembre 2026, ore 13:00. La graduatoria si fa per ISEE crescente. Le ricevute di pagamento e l'attestazione di avvio delle attività vanno consegnate entro il 15 gennaio 2027.",
+      "Domande entro il 2 dicembre 2026, ore 13:00 (la notizia del Comune scrive «martedì», ma il 2 dicembre 2026 è un mercoledì: conferma la scadenza all'ufficio). La graduatoria si fa per ISEE crescente. Le ricevute di pagamento e l'attestazione di avvio delle attività vanno consegnate entro il 15 gennaio 2027.",
     comeSiChiede:
-      "Con il modulo del Comune e la documentazione richiesta, a mano all'Ufficio Protocollo oppure per PEC all'indirizzo protocollo@postacert.comune.collecchio.pr.it. Il modulo completo è sulla pagina dei bandi del Comune: se non lo trovi, chiedilo all'Ufficio Protocollo.",
+      "Con il modulo del Comune e la documentazione richiesta, a mano all'Ufficio Protocollo oppure per PEC all'indirizzo protocollo@postacert.comune.collecchio.pr.it. Il modulo e il bando completo sono sulla pagina dei bandi del Comune: se non li trovi, chiedili all'Ufficio Protocollo. Per informazioni: Ufficio Sport, telefono 0521 301226, sport@comune.collecchio.pr.it.",
     fonte: {
-      label: "Comune di Collecchio · Voucher sportivi 2026 (notizia del 02/11/2026, aggiornata il 09/11/2026)",
+      label: "Comune di Collecchio · Voucher sportivi 2026 (notizia del 02/11/2026, aggiornata il 03/11/2026)",
       url: "https://www.comune.collecchio.pr.it/novita/notizie/voucher-sportivi-2026/",
     },
     verificatoIl: "11/11/2026",
-    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. Valgono tutte le condizioni del bando.",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. Valgono tutte le condizioni del bando. Dati letti dalla notizia del Comune: il bando integrale e il modulo non sono stati consultati, quindi importi, requisiti e certificazioni richieste vanno controllati nel bando.",
   },
 ];
 
