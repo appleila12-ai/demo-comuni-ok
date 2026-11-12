@@ -58,7 +58,11 @@ Seconda mail, inviata il 10/11/2026 nella stessa conversazione: ringraziamento; 
 2. Indirizzo giusto per Lerici, Portovenere, Levanto e la Riviera · ASL 5 · domanda aperta nella mail del 10/11/2026. Fino alla risposta, in app questi Comuni vedono l'indirizzo di La Spezia, Val di Vara e Riviera.
 3. Telefono del servizio protesica e calendario di Ceparana e Levanto · non indicati · si possono chiedere nello stesso scambio.
 4. Sollecito: se l'URP non risponde, decide la dott.ssa Baudone quando e come scriverle di nuovo.
-5. Aggiornare il tracker contatti (Excel sul suo computer) con queste due mail.
+5. Tracker contatti: aggiornato il 12/11/2026 sul Drive (foglio «TutelApp – Tracker contatti enti») con queste due mail.
+
+## Stato della scheda (regola di chiusura del 12/11/2026)
+
+ASL 5 Spezzino, ausili e protesi: **verifica conclusa — informazioni richieste ma non fornite** (voci 1, 2 e 3 qui sopra). Non significa che il servizio non esista: l'ASL è stata interpellata il 30/10/2026 e il 10/11/2026 e in app è scritto che le informazioni sono attese. Quando l'URP risponde, la scheda si riapre e si aggiorna.
 
 ## Mail da inviare (bozze)
 
