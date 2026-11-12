@@ -23,6 +23,10 @@ for (const v of bonus.voci) {
   if (v.comuni && v.comuni.length) for (const c of v.comuni) bonusComunali[c] = (bonusComunali[c] || 0) + 1;
   else bonusRegionali[v.regione] = (bonusRegionali[v.regione] || 0) + 1;
 }
+// «in validazione»: dati che mancano e che stiamo chiedendo all'ente; il Comune si chiude con una nota in app e il dato va in docs/informazioni-mancanti.md
+const IV = JSON.parse(fs.readFileSync(path.join(repo, "frontend/src/content/in-validazione.json"), "utf8"));
+const NOMI_IV = { "bonus-comunali": "bonus comunali", "servizi-sociali": "servizi sociali (recapiti)", "esenzione-ticket": "esenzione ticket" };
+const inValidazione = (slug, cosa) => Object.entries(NOMI_IV).some(([k, v]) => v === cosa && IV[slug] && IV[slug][k]);
 const righe = [];
 for (const s of sch.schede.filter((s) => s.tipo === "comune")) {
   const mancano = [];
@@ -32,7 +36,9 @@ for (const s of sch.schede.filter((s) => s.tipo === "comune")) {
   if (!bonusComunali[s.slug]) mancano.push("bonus comunali");
   const asl5 = s.provincia === "SP" && !ASL4.includes(s.slug);
   if (!(ticket.has(s.slug) || asl5)) mancano.push("esenzione ticket");
-  righe.push({ slug: s.slug, nome: s.nome, provincia: s.provincia, regione: s.regione, completa: mancano.length === 0, mancano });
+  const inVal = mancano.filter((m) => inValidazione(s.slug, m));
+  const restano = mancano.filter((m) => !inVal.includes(m));
+  righe.push({ slug: s.slug, nome: s.nome, provincia: s.provincia, regione: s.regione, completa: restano.length === 0, mancano: restano, inValidazione: inVal });
 }
 if (process.argv.includes("--scrivi")) {
   // elenco dei soli slug completi, letto dall'app (elenco Comuni); il resto è nel registro in docs/
@@ -44,6 +50,10 @@ if (process.argv.includes("--scrivi")) {
   md += "Cosa manca (n. Comuni): " + Object.entries(per).map(([k, v]) => `${k} ${v}`).join(" · ") + "\n\n## Completi\n\n" + righe.filter((r) => r.completa).map((r) => `- ${r.nome} (${r.provincia})`).join("\n") + "\n\n## Incompleti (cosa manca)\n\n| Comune | Prov. | Regione | Manca |\n|---|---|---|---|\n";
   md += righe.filter((r) => !r.completa).sort((a, b) => a.regione.localeCompare(b.regione) || a.nome.localeCompare(b.nome)).map((r) => `| ${r.nome} | ${r.provincia} | ${r.regione} | ${r.mancano.join(", ")} |`).join("\n") + "\n";
   fs.writeFileSync(path.join(repo, "docs/completezza-comuni.md"), md);
+  // file delle informazioni mancanti (da smarcare man mano che arrivano le risposte)
+  let im = "# Informazioni in validazione\n\nComuni chiusi con la nota «informazione in validazione»: il dato manca, lo stiamo chiedendo all'ente. Quando arriva la risposta: inserire il dato, togliere la voce da `frontend/src/content/in-validazione.json`, registrare la risposta.\nGenerato da `docs/strumenti/completezza-comuni.js . --scrivi`.\n\n| Comune | Prov. | Regione | Dato mancante | Chiesto a | Stato richiesta | Dal |\n|---|---|---|---|---|---|---|\n";
+  for (const r of righe.filter((r) => r.inValidazione.length)) for (const k of Object.keys(NOMI_IV)) if (IV[r.slug] && IV[r.slug][k]) im += `| ${r.nome} | ${r.provincia} | ${r.regione} | ${NOMI_IV[k]} | ${IV[r.slug][k].chiesto} | ${IV[r.slug][k].stato} | ${IV[r.slug][k].dal} |\n`;
+  fs.writeFileSync(path.join(repo, "docs/informazioni-mancanti.md"), im);
 }
 if (process.argv.includes("--json")) console.log(JSON.stringify(righe, null, 1));
 else {

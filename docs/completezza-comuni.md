@@ -3,39 +3,63 @@
 Criterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale attivo/aperto + almeno un bonus comunale attivo/aperto + scheda ticket specifica per l'ASL.
 Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
-Comuni con scheda: 424 · completi: 27 · incompleti: 397
+Comuni con scheda: 424 · completi: 51 · incompleti: 373
 
-Cosa manca (n. Comuni): bonus comunali 379 · esenzione ticket 296 · servizi sociali (recapiti) 231 · bonus regionali 16
+Cosa manca (n. Comuni): bonus comunali 355 · esenzione ticket 296 · servizi sociali (recapiti) 231 · bonus regionali 16
 
 ## Completi
 
 - Comune di Sarzana (SP)
+- Comune di Ameglia (SP)
 - Comune di Arcola (SP)
+- Comune di Beverino (SP)
+- Comune di Bolano (SP)
 - Comune di Bollate (MI)
+- Comune di Bonassola (SP)
+- Comune di Borghetto di Vara (SP)
 - Comune di Brescia (BS)
+- Comune di Brugnato (SP)
+- Comune di Calice al Cornoviglio (SP)
+- Comune di Carrodano (SP)
+- Comune di Castelnuovo Magra (SP)
 - Comune di Catanzaro (CZ)
+- Comune di Deiva Marina (SP)
+- Comune di Follo (SP)
 - Comune di Fondi (LT)
+- Comune di Framura (SP)
 - Comune di Genova (GE)
 - Comune di La Spezia (SP)
 - Comune dell'Aquila (AQ)
 - Comune di Latina (LT)
 - Comune di Legnano (MI)
 - Comune di Lerici (SP)
+- Comune di Levanto (SP)
 - Comune di Lodi (LO)
 - Comune di Luni (SP)
 - Comune di Magenta (MI)
 - Comune di Massa (MS)
+- Comune di Monterosso al Mare (SP)
 - Comune di Padova (PD)
 - Comune di Palermo (PA)
 - Comune di Parabiago (MI)
 - Comune di Pietrasanta (LU)
+- Comune di Pignone (SP)
 - Comune di Pisa (PI)
+- Comune di Porto Venere (SP)
 - Comune di Reggio Calabria (RC)
 - Comune di Reggio Emilia (RE)
+- Comune di Riccò del Golfo di Spezia (SP)
+- Comune di Riomaggiore (SP)
+- Comune di Rocchetta di Vara (SP)
+- Comune di Santo Stefano di Magra (SP)
+- Comune di Sesta Godano (SP)
 - Comune di Torino (TO)
 - Comune di Treviglio (BG)
 - Comune di Venezia (VE)
+- Comune di Vernazza (SP)
 - Comune di Verona (VR)
+- Comune di Vezzano Ligure (SP)
+- Comune di Zignago (SP)
 
 ## Incompleti (cosa manca)
 
@@ -194,40 +218,16 @@ Cosa manca (n. Comuni): bonus comunali 379 · esenzione ticket 296 · servizi so
 | Comune di Viterbo | VT | Lazio | bonus comunali, esenzione ticket |
 | Roma Capitale | RM | Lazio | servizi sociali (recapiti), esenzione ticket |
 | Comune di Albenga | SV | Liguria | bonus comunali, esenzione ticket |
-| Comune di Ameglia | SP | Liguria | bonus comunali |
 | Comune di Arenzano | GE | Liguria | bonus comunali, esenzione ticket |
-| Comune di Beverino | SP | Liguria | bonus comunali |
-| Comune di Bolano | SP | Liguria | bonus comunali |
-| Comune di Bonassola | SP | Liguria | bonus comunali |
-| Comune di Borghetto di Vara | SP | Liguria | bonus comunali |
-| Comune di Brugnato | SP | Liguria | bonus comunali |
-| Comune di Calice al Cornoviglio | SP | Liguria | bonus comunali |
 | Comune di Camogli | GE | Liguria | bonus comunali, esenzione ticket |
-| Comune di Carrodano | SP | Liguria | bonus comunali |
-| Comune di Castelnuovo Magra | SP | Liguria | bonus comunali |
 | Comune di Chiavari | GE | Liguria | bonus comunali, esenzione ticket |
-| Comune di Deiva Marina | SP | Liguria | bonus comunali |
-| Comune di Follo | SP | Liguria | bonus comunali |
-| Comune di Framura | SP | Liguria | bonus comunali |
 | Comune di Imperia | IM | Liguria | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Levanto | SP | Liguria | bonus comunali |
-| Comune di Monterosso al Mare | SP | Liguria | bonus comunali |
-| Comune di Pignone | SP | Liguria | bonus comunali |
-| Comune di Porto Venere | SP | Liguria | bonus comunali |
 | Comune di Rapallo | GE | Liguria | bonus comunali, esenzione ticket |
 | Comune di Recco | GE | Liguria | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Riccò del Golfo di Spezia | SP | Liguria | bonus comunali |
-| Comune di Riomaggiore | SP | Liguria | bonus comunali |
-| Comune di Rocchetta di Vara | SP | Liguria | bonus comunali |
 | Comune di Sanremo | IM | Liguria | bonus comunali, esenzione ticket |
-| Comune di Santo Stefano di Magra | SP | Liguria | bonus comunali |
 | Comune di Savona | SV | Liguria | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Sesta Godano | SP | Liguria | bonus comunali |
 | Comune di Sestri Levante | GE | Liguria | bonus comunali, esenzione ticket |
 | Comune di Ventimiglia | IM | Liguria | bonus comunali, esenzione ticket |
-| Comune di Vernazza | SP | Liguria | bonus comunali |
-| Comune di Vezzano Ligure | SP | Liguria | bonus comunali |
-| Comune di Zignago | SP | Liguria | bonus comunali |
 | Comune di Abbiategrasso | MI | Lombardia | servizi sociali (recapiti), bonus comunali |
 | Comune di Bergamo | BG | Lombardia | bonus comunali |
 | Comune di Brugherio | MB | Lombardia | bonus comunali, esenzione ticket |
