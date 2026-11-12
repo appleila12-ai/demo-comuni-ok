@@ -14,6 +14,10 @@ import { BottoneSalva } from "@/src/components/BottoneSalva";
 import IN_VALIDAZIONE from "@/src/content/in-validazione.json";
 import { DOVE_CERCARE, PAROLE_GENERALI, PORTALE_NAZIONALE } from "@/src/lib/doveCercare";
 
+type RichiestaIV = { stato?: string; dal?: string; chiesto?: string };
+const richiestaBonusComunali = (slug: string): RichiestaIV | undefined =>
+  (IN_VALIDAZIONE as Record<string, Record<string, RichiestaIV>>)[slug]?.["bonus-comunali"];
+
 const apri = (url: string) => Linking.openURL(url).catch(() => {});
 
 const COLORI_STATO: Record<StatoBonus, { fondo: string; testo: string }> = {
@@ -197,10 +201,14 @@ export default function Bonus() {
         </View>
       ) : null}
 
-      {locali.length === 0 && (IN_VALIDAZIONE as Record<string, Record<string, unknown>>)[comune.slug]?.["bonus-comunali"] ? (
+      {locali.length === 0 && richiestaBonusComunali(comune.slug) ? (
         <Avviso>
           Informazione in validazione: stiamo verificando con il Comune se esistono contributi propri per le persone con
-          disabilità. Nel frattempo chiedi ai Servizi Sociali: possono indicarti anche le misure dell'ambito sociale.
+          disabilità.
+          {richiestaBonusComunali(comune.slug)?.stato === "chiesto" && richiestaBonusComunali(comune.slug)?.dal
+            ? ` Lo abbiamo chiesto ai ${richiestaBonusComunali(comune.slug)?.chiesto ?? "Servizi Sociali del Comune"} il ${dataScadenzaLeggibile(richiestaBonusComunali(comune.slug)?.dal ?? "")} e non abbiamo ancora ricevuto risposta.`
+            : ""}{" "}
+          Nel frattempo chiedi ai Servizi Sociali: possono indicarti anche le misure dell'ambito sociale.
         </Avviso>
       ) : null}
 
