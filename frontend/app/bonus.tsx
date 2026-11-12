@@ -11,6 +11,7 @@ import { useSezione } from "@/src/lib/statistiche";
 import { bonusDelComune, dataScadenzaLeggibile, GIORNI_SCADUTO_VISIBILE, STATO_BONUS, type Bonus, type StatoBonus } from "@/src/lib/bonus";
 import { Avviso, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
+import IN_VALIDAZIONE from "@/src/content/in-validazione.json";
 import { DOVE_CERCARE, PAROLE_GENERALI, PORTALE_NAZIONALE } from "@/src/lib/doveCercare";
 
 const apri = (url: string) => Linking.openURL(url).catch(() => {});
@@ -194,6 +195,13 @@ export default function Bonus() {
             </Pressable>
           )}
         </View>
+      ) : null}
+
+      {locali.length === 0 && (IN_VALIDAZIONE as Record<string, Record<string, unknown>>)[comune.slug]?.["bonus-comunali"] ? (
+        <Avviso>
+          Informazione in validazione: stiamo verificando con il Comune se esistono contributi propri per le persone con
+          disabilità. Nel frattempo chiedi ai Servizi Sociali: possono indicarti anche le misure dell'ambito sociale.
+        </Avviso>
       ) : null}
 
       {locali.length > 0 ? (
