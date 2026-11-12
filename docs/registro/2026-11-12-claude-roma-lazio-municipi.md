@@ -15,6 +15,14 @@ Come sono stati letti i dati: le pagine indicate da ChatGPT non si potevano apri
 | demo/roma.ts | Municipio XII · Segretariato Sociale e PUA (Via Panfilo Castaldi 28/B) | aggiunta, con avviso «orari indicativi» | https://www.comune.roma.it/web/it/municipio-xii-uffici-e-contatti.page?contentId=UFF29748 | 12/11/2026 | verificato su una sola pagina |
 | demo/roma.ts | Municipio XIV · Segretariato Sociale e PUA (Padiglione 1) | aggiunta | https://www.comune.roma.it/web/it/informazione-di-servizio.page?contentId=IDS1598149 e https://www.comune.roma.it/web/it/municipio-xiv-uffici-e-contatti.page?contentId=UFF30684 | 12/11/2026 | verificato su due pagine |
 
+## Aggiunte dopo l'invio delle mail (12/11/2026, pomeriggio)
+
+Inviate da Ilaria Baudone (tutelappcomuni@gmail.com) tre richieste di conferma, senza risposta al momento della PR:
+- Municipio X → segretariatosociale.mun10@comune.roma.it: sedi, giorni e orari, chiusura di Via Passeroni 24, telefono, sportello caregiver.
+- Municipio XI → pua.mun11@comune.roma.it: orari di sportello e di telefono, altre sedi.
+- Municipio XII → pua.mun12@comune.roma.it: orari di Via Panfilo Castaldi, stato e orari di Via Longhena 98 e Via Ramazzini (civico), servizi per sede.
+In app: nuova voce «Municipio X» con nota su cosa manca e data della richiesta; note aggiornate su XI e XII. Nessun dato non verificato è stato pubblicato.
+
 ## Rimozioni
 
 nessuna

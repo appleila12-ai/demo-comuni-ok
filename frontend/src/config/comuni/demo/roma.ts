@@ -142,14 +142,19 @@ export const roma: ComuneConfig = {
     },
     {
       icon: "location-outline",
+      title: "Municipio X · Segretariato Sociale e PUA",
+      subtitle: "Mancano sedi, giorni e orari confermati: sul sito di Roma Capitale le informazioni sono discordanti e una sede (Via Passeroni 24) risulta in chiusura. Li abbiamo chiesti il 12/11/2026 a segretariatosociale.mun10@comune.roma.it: puoi chiederli anche tu allo stesso indirizzo.",
+    },
+    {
+      icon: "location-outline",
       title: "Municipio XI · Segretariato Sociale e PUA",
-      subtitle: "Via della Magliana 296, primo piano. Tel. 06 69615669 / 06 69615678 / 06 69615507; pua.mun11@comune.roma.it. Orari di sportello: il sito del Comune ne riporta versioni diverse, quindi non li indichiamo; chiedi conferma all'ufficio prima di andare. Fonte Roma Capitale, 12/11/2026.",
+      subtitle: "Via della Magliana 296, primo piano. Tel. 06 69615669 / 06 69615678 / 06 69615507; pua.mun11@comune.roma.it. Orari di sportello: il sito del Comune ne riporta versioni diverse, quindi non li indichiamo. Li abbiamo chiesti il 12/11/2026 a pua.mun11@comune.roma.it: puoi chiederli anche tu allo stesso indirizzo. Fonte Roma Capitale, 12/11/2026.",
       action: { type: "web", value: "https://www.comune.roma.it/web/it/informazione-di-servizio.page?contentId=IDS549187" },
     },
     {
       icon: "location-outline",
       title: "Municipio XII · Segretariato Sociale e PUA",
-      subtitle: "Via Panfilo Castaldi 28/B, piano terra. Lun e mer 8:30–13:00; mar e gio 8:30–17:00. Tel. 06 69616606 / 607 / 608; pua.mun12@comune.roma.it. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte Roma Capitale, 12/11/2026.",
+      subtitle: "Via Panfilo Castaldi 28/B, piano terra. Lun e mer 8:30–13:00; mar e gio 8:30–17:00. Tel. 06 69616606 / 607 / 608; pua.mun12@comune.roma.it. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Mancano le altre sedi (Via Longhena 98 e Via Ramazzini): sedi e orari non sono chiari sul sito e li abbiamo chiesti il 12/11/2026 a pua.mun12@comune.roma.it, a cui puoi scrivere anche tu. Fonte Roma Capitale, 12/11/2026.",
       action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-xii-uffici-e-contatti.page?contentId=UFF29748" },
     },
     {
