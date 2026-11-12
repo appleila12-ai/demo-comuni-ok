@@ -222,7 +222,9 @@ ESENZIONE_ASL.ancona = {
   comeSiPresenta: [
     "Online: entra nella piattaforma dell'AST Ancona, registrati (con SPID, CIE o email, con successivo cambio password), compila la domanda e carica i documenti",
     "In presenza: vai in uno dei presìdi del Distretto nei giorni e negli orari indicati qui sotto",
+    "Puoi fare la richiesta per te o per un'altra persona, che deve essere residente in un Comune del Distretto di Ancona o di Jesi",
     "Il medico valuta la documentazione e, se l'esito è positivo, ti invia o consegna la copia della tessera sanitaria cartacea con il codice della patologia",
+    "Se manca un documento, le richieste di integrazione arrivano direttamente nella piattaforma",
     "Poliambulatorio 2000 Ancona (Viale C. Colombo 106, palazzina 23, primo piano): mercoledì e giovedì 8:30 – 11:30",
     "Casa di Comunità «Giulia Bonarelli» (Largo Cappelli 1, Ancona): lunedì e venerdì 9:00 – 12:00",
     "Poliambulatorio di Falconara (Via F.lli Rosselli 11): martedì 9:30 – 12:30",
@@ -239,9 +241,9 @@ ESENZIONE_ASL.ancona = {
   paginaUrl: "https://teknecloud.it/SIOC-ASTANCONA/",
   paginaLabel: "Piattaforma per inviare la richiesta online",
   manca:
-    "L'AST non indica i tempi di rilascio né l'elenco dettagliato dei documenti da allegare oltre alla certificazione. Gli orari possono cambiare: controlla la pagina ufficiale del Distretto.",
+    "L'AST non indica i tempi di rilascio né un telefono dedicato alla richiesta online. Gli orari possono cambiare: controlla la pagina ufficiale del Distretto.",
   fonte:
-    "AST Ancona · pagine «Esenzione ticket per patologia – Distretto Ancona» e «Richiesta esenzioni per patologia: nuova modalità telematica», indicate dall'URP il 29/10/2026",
+    "AST Ancona · pagine «Esenzione ticket per patologia – Distretto Ancona» e «Richiesta esenzioni per patologia: nuova modalità telematica», indicate dall'URP il 29/10/2026; risposta scritta di U.O.C. Comunicazione Formazione e URP del 12/11/2026 (orario del Poliambulatorio 2000 e passi della richiesta online)",
 };
 
 // AUSL Reggio Emilia: dati letti il 05/11/2026 sulle pagine ufficiali dell'AUSL (scheda SAUB Santa Maria Nuova,
@@ -1278,19 +1280,6 @@ ESENZIONE_ASL.fiumicino = {
   fonte: "ASL Roma 3 · pagina «Esenzioni ticket», consultata il 10/11/2026 (data di aggiornamento non indicata)",
 };
 
-// Ancona: AST Ancona. Pagine consultate il 10/11/2026.
-ESENZIONE_ASL.ancona = {
-  asl: "AST Ancona",
-  intro:
-    "L'AST Ancona indica l'esenzione per patologia come servizio attivo nel Distretto di Ancona e, con comunicazione del 05/11/2026, ha attivato la richiesta online nei Distretti di Ancona e Jesi.",
-  telefoni: [],
-  paginaUrl: "https://www.astancona.marche.it/it/argomenti/ticket-ed-esenzioni",
-  paginaLabel: "Ticket ed esenzioni · AST Ancona",
-  manca:
-    "Non è indicato un telefono dedicato, e non ho potuto leggere le istruzioni della richiesta online del 05/11/2026: chiedile al Distretto.",
-  fonte: "AST Ancona · guida «Esenzione per patologia» e «Ticket ed esenzioni» (scheda Distretto Ancona del 25/09/2025), consultate il 10/11/2026 (data di aggiornamento della guida non indicata)",
-};
-
 // Padova: ULSS 6 Euganea. Documenti della ULSS consultati il 10/11/2026 (aggiornamento della guida non indicato).
 ESENZIONE_ASL.padova = {
   asl: "ULSS 6 Euganea",
@@ -1395,3 +1384,23 @@ ESENZIONE_ASL.milano = {
   fonte:
     "Portale delle tre ASST di Milano; pagine Fatebenefratelli Sacco, Monreale (aggiornata 08/10/2026), Regione Lombardia e volantino Scelta e Revoca (novembre 2025), letti l'11/11/2026. PDF: https://www.asst-santipaolocarlo.it/system/files/struttura/files/14466/36715/VOLANTINO%20SCELTA%20REVOCA%20con%20QRCode%20NOVEMBRE%202025.pdf",
 };
+
+// ATS Liguria · ASL 4: Carro, Maissana e Varese Ligure (in provincia della Spezia) fanno capo al Distretto 16 (Sestri Levante).
+// Risposta scritta dell'Ufficio Anagrafe Sanitaria dell'ASL 4 del 12/11/2026 (in copia l'URP).
+const ASL4_DISTRETTO16: SchedaEsenzioneAsl = {
+  asl: "ASL 4 Liguria · Anagrafe Sanitaria del Distretto 16 (Sestri Levante)",
+  intro:
+    "I residenti di Carro, Maissana e Varese Ligure fanno capo al Distretto 16 di Sestri Levante: l'ufficio di Anagrafe Sanitaria di Sestri Levante è quello di riferimento.",
+  comeSiPresenta: [
+    "Di persona all'ufficio di Anagrafe Sanitaria, in Via Terzi 43 a Sestri Levante: non serve l'appuntamento",
+    "Oppure per e-mail, inviando tutta la documentazione all'indirizzo dell'ufficio",
+    "Le pratiche vengono espletate, se possibile, entro 5 giorni",
+    "A Varese Ligure c'è lo sportello di Anagrafe Sanitaria il martedì dalle 9:00 alle 13:00 (salvo modifiche)",
+  ],
+  mail: "anagrafe.ds16@asl4.liguria.it",
+  telefoni: [{ etichetta: "Anagrafe Sanitaria Distretto 16 · lunedì–venerdì 8:00–14:00", numero: "0185 329815" }],
+  manca:
+    "L'ASL non ha indicato l'elenco dei documenti da allegare né un modulo ufficiale: chiedili all'ufficio. Gli orari possono cambiare: conferma all'ufficio prima di andare.",
+  fonte: "ASL 4 · Ufficio Anagrafe Sanitaria, risposta scritta del 12/11/2026 (in copia URP Chiavari)",
+};
+for (const slug of ["carro", "maissana", "varese-ligure"]) ESENZIONE_ASL[slug] = ASL4_DISTRETTO16;
