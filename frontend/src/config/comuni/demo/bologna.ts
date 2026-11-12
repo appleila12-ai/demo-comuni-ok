@@ -1,4 +1,4 @@
-import type { ComuneConfig } from "../types";
+import type { ComuneConfig, PuntoSupporto } from "../types";
 import { INPS_TERZA_FASE } from "../percorso";
 import { percorso } from "../percorso";
 
@@ -67,4 +67,27 @@ export const bologna: ComuneConfig = {
 bologna.percorsoTerritorio = percorso(bologna.puntiSupporto, [0]);
 
 // Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
-bologna.percorsoTerritorio = { ...bologna.percorsoTerritorio, 1: [INPS_TERZA_FASE] };
+// 12/11/2026: due voci locali sotto quella generale, da fonti AUSL Bologna (notizia del 02/03/2026) e INPS (notizia del 27/05/2026, in vigore dal 01/06/2026).
+// Non inseriti sede, telefono e orari della commissione: non indicati nelle fonti consultate; la scheda «Medicina legale» dell'AUSL non era leggibile.
+const BOLOGNA_INVALIDITA_AUSL: PuntoSupporto = {
+  icon: "information-circle-outline",
+  title: "Invalidità civile a Bologna: chi fa la visita",
+  subtitle:
+    "Dal 1° marzo 2026 il certificato del medico avvia il percorso e poi aspetti la convocazione dell'INPS: le visite le fa l'INPS provinciale di Bologna. L'AUSL porta a termine solo le domande presentate fino al 28 febbraio 2026, convocando gli interessati nei propri ambulatori. Sede e orari della commissione non risultano nelle fonti consultate: chiedili all'INPS o a un patronato",
+  action: {
+    type: "web",
+    value:
+      "https://www.ausl.bologna.it/news/archivio-2026/invalidita-civile-dal-primo-marzo-per-chiederla-bastera-il-certificato-del-medico-curante-e-le-visite-saranno-svolte-esclusivamente-dall2019inps-provinciale-di-bologna",
+  },
+};
+const BOLOGNA_INVALIDITA_70: PuntoSupporto = {
+  icon: "information-circle-outline",
+  title: "Se hai almeno 70 anni",
+  subtitle:
+    "Dal 1° giugno 2026 il medico indica nel sistema se hai patologie croniche e una progressiva perdita di autonomia. Se ci sono entrambe, serve anche la domanda amministrativa all'INPS entro 90 giorni (online o tramite un patronato). Altrimenti il certificato avvia direttamente la procedura",
+  action: {
+    type: "web",
+    value: "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.05.disabilit-over-70-le-novit-dal-1-giugno.html",
+  },
+};
+bologna.percorsoTerritorio = { ...bologna.percorsoTerritorio, 1: [INPS_TERZA_FASE, BOLOGNA_INVALIDITA_AUSL, BOLOGNA_INVALIDITA_70] };

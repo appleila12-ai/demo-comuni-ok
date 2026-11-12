@@ -14,7 +14,9 @@ import {
   COME_SI_PRESENTA_AUSILI_ASL5,
   DOCUMENTI_AUSILI_ASL5,
   FONTE_AUSILI_ASL5,
+  PAGINA_AUSILI_ASL5,
   RIPARAZIONE_AUSILI_ASL5,
+  TRASPORTO_ASL5_MANCA,
   SENZA_MAIL_AUSILI_ASL5,
   SPORTELLI_AUSILI_ASL5,
   TEMPI_AUSILI_ASL5,
@@ -77,6 +79,14 @@ function AusiliAsl5() {
         Dove presentare la richiesta (ASL 5)
       </Text>
       <Text style={[paginaStili.testo, st.nota]}>{COME_SI_PRESENTA_AUSILI_ASL5}</Text>
+      <Bottone
+        label={PAGINA_AUSILI_ASL5.label}
+        icon="open-outline"
+        variante="vuoto"
+        onPress={() => apri(PAGINA_AUSILI_ASL5.url)}
+        testID="ausili-asl5-pagina"
+      />
+      <Text style={[paginaStili.testo, st.nota]}>{PAGINA_AUSILI_ASL5.nota}</Text>
       <Text style={[paginaStili.testo, st.nota]}>Per {zona}:</Text>
       <Bottone
         label={`Scrivi a ${mail}`}
@@ -103,6 +113,29 @@ function AusiliAsl5() {
       </Text>
       <Elenco voci={TEMPI_AUSILI_ASL5} />
       <Text style={[paginaStili.testo, st.nota]}>{RIPARAZIONE_AUSILI_ASL5}</Text>
+
+      <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+        {TRASPORTO_ASL5_MANCA.titolo}
+      </Text>
+      <Avviso>{TRASPORTO_ASL5_MANCA.testo}</Avviso>
+      <Text style={[paginaStili.testo, st.nota]}>{TRASPORTO_ASL5_MANCA.invito}</Text>
+      <Bottone
+        label={`Scrivi all'URP dell'ASL 5 · ${TRASPORTO_ASL5_MANCA.mail}`}
+        icon="mail-outline"
+        variante="vuoto"
+        onPress={() => apri(`mailto:${TRASPORTO_ASL5_MANCA.mail}`)}
+        testID="ausili-asl5-trasporto-mail"
+      />
+      <Bottone
+        label={`Chiama l'URP · ${TRASPORTO_ASL5_MANCA.telefono}`}
+        icon="call-outline"
+        variante="vuoto"
+        onPress={() => apri(`tel:${TRASPORTO_ASL5_MANCA.telefono.replace(/\s+/g, "")}`)}
+        testID="ausili-asl5-trasporto-tel"
+      />
+      <Text style={[paginaStili.testo, st.nota]}>
+        Dal telefono fisso si può chiamare anche il numero verde {TRASPORTO_ASL5_MANCA.telefonoVerde}.
+      </Text>
       <Text style={[paginaStili.testo, st.fonte]}>Fonte: {FONTE_AUSILI_ASL5}</Text>
     </View>
   );
