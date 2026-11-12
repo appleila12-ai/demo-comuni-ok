@@ -5,7 +5,7 @@ Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
 Comuni con scheda: 424 · completi: 27 · incompleti: 397
 
-Cosa manca (n. Comuni): bonus comunali 380 · esenzione ticket 297 · servizi sociali (recapiti) 231 · bonus regionali 19
+Cosa manca (n. Comuni): bonus comunali 379 · esenzione ticket 296 · servizi sociali (recapiti) 231 · bonus regionali 16
 
 ## Completi
 
@@ -113,7 +113,7 @@ Cosa manca (n. Comuni): bonus comunali 380 · esenzione ticket 297 · servizi so
 | Comune di Castelfranco Emilia | MO | Emilia-Romagna | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Cento | FE | Emilia-Romagna | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Cesena | FC | Emilia-Romagna | bonus comunali |
-| Comune di Collecchio | PR | Emilia-Romagna | bonus comunali, esenzione ticket |
+| Comune di Collecchio | PR | Emilia-Romagna | esenzione ticket |
 | Comune di Cortemaggiore | PC | Emilia-Romagna | bonus comunali, esenzione ticket |
 | Comune di Faenza | RA | Emilia-Romagna | bonus comunali |
 | Comune di Ferrara | FE | Emilia-Romagna | servizi sociali (recapiti), bonus comunali |
@@ -289,9 +289,9 @@ Cosa manca (n. Comuni): bonus comunali 380 · esenzione ticket 297 · servizi so
 | Comune di San Benedetto del Tronto | AP | Marche | servizi sociali (recapiti), bonus regionali, bonus comunali, esenzione ticket |
 | Comune di Senigallia | AN | Marche | bonus regionali, bonus comunali, esenzione ticket |
 | Comune di Urbino | PU | Marche | servizi sociali (recapiti), bonus regionali, bonus comunali, esenzione ticket |
-| Comune di Campobasso | CB | Molise | servizi sociali (recapiti), bonus regionali, bonus comunali |
-| Comune di Isernia | IS | Molise | bonus regionali, bonus comunali, esenzione ticket |
-| Comune di Termoli | CB | Molise | servizi sociali (recapiti), bonus regionali, bonus comunali, esenzione ticket |
+| Comune di Campobasso | CB | Molise | servizi sociali (recapiti), bonus comunali |
+| Comune di Isernia | IS | Molise | bonus comunali, esenzione ticket |
+| Comune di Termoli | CB | Molise | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Alba | CN | Piemonte | bonus comunali, esenzione ticket |
 | Comune di Alessandria | AL | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Asti | AT | Piemonte | bonus comunali, esenzione ticket |
@@ -352,7 +352,7 @@ Cosa manca (n. Comuni): bonus comunali 380 · esenzione ticket 297 · servizi so
 | Comune di Oristano | OR | Sardegna | bonus comunali, esenzione ticket |
 | Comune di Quartu Sant'Elena | CA | Sardegna | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Sanluri | SU | Sardegna | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Sassari | SS | Sardegna | servizi sociali (recapiti), esenzione ticket |
+| Comune di Sassari | SS | Sardegna | servizi sociali (recapiti) |
 | Comune di Tempio Pausania | SS | Sardegna | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Tortolì | NU | Sardegna | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Villacidro | SU | Sardegna | servizi sociali (recapiti), bonus comunali, esenzione ticket |

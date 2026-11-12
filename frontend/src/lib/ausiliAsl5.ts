@@ -1,14 +1,22 @@
 // Ausili, protesi e ortesi: parte locale dell'ASL 5 Spezzino.
 // Fonte unica: risposta scritta dell'URP dell'ASL 5 (ATS Liguria, Area Sociosanitaria Locale 5),
 // ricevuta a novembre 2026 alla richiesta inviata il 30/10/2026. Qui non c'è nulla che non sia
-// scritto in quella risposta. L'URP non ha risposto sul trasporto per visite e terapie e non ha
-// indicato l'indirizzo della pagina del sito: per questo la pagina non è citata con un link.
+// scritto in quella risposta, più la pagina «Fornitura di ausili e protesi» del sito dell'ASL 5
+// (indirizzo esatto verificato il 12/11/2026, data di aggiornamento della pagina non indicata).
+// L'URP non ha risposto sul trasporto per visite e terapie.
 // Da ricontrollare con l'ASL almeno una volta l'anno.
 
 import { distrettoAsl5, type DistrettoAsl5 } from "@/src/lib/esenzioneAsl5";
 
 export const FONTE_AUSILI_ASL5 =
   "Risposta scritta dell'Ufficio Relazioni con il Pubblico dell'ASL 5 Spezzino (novembre 2026). I moduli sono nella sezione «Fornitura Ausili e Protesi» del sito dell'ASL 5.";
+
+/** Pagina ufficiale dell'ASL 5 sulla fornitura di ausili e protesi (aperta e letta il 12/11/2026; nessuna data di aggiornamento indicata). */
+export const PAGINA_AUSILI_ASL5 = {
+  label: "Apri la pagina dell'ASL 5: Fornitura di ausili e protesi",
+  url: "https://www.asl5.liguria.it/PerilCittadino/Serviziterritoriali/CurePrimarieeAttivit%C3%A0Distrettuali/Fornituraausilieprotesi.aspx",
+  nota: "Sul sito dell'ASL 5 la pagina distingue gli invalidi civili, di guerra o per servizio e i minori con patologie che possono determinare invalidità dagli invalidi per lavoro, per i quali richiama la fornitura INAIL.",
+};
 
 /** Indirizzo dedicato a cui inviare la prescrizione, in base al distretto del Comune */
 export function mailProtesicaAsl5(nomeComune: string): { mail: string; zona: string } {

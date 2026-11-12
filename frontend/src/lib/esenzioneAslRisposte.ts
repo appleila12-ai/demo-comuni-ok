@@ -146,29 +146,45 @@ ESENZIONE_ASL.grosseto = sudest("zona Grossetana", "anagrafe.grossetana@uslsudes
 ESENZIONE_ASL.sassari = {
   asl: "ASL Sassari",
   intro:
-    "A Sassari l'esenzione per patologia e per invalidità si richiede allo sportello Scelta e Revoca dell'ASL, che rilascia l'attestato.",
-  titoloPassi: "Come si presenta la richiesta",
+    "A Sassari l'esenzione per patologia e per invalidità si richiede allo sportello Scelta e Revoca dell'ASL, che rilascia l'attestato. Gli sportelli sono undici, in tutto il territorio dell'ASL: sotto trovi sede, giorni e telefono di ciascuno.",
+  titoloPassi: "Dove e quando",
   comeSiPresenta: [
-    "Sportello di Sassari: via Tempio 5, piano terra. Per patologia e invalidità è aperto il giovedì dalle 8:30 alle 12:30",
-    "Informazioni per telefono dal lunedì al venerdì, dalle 12:30 alle 13:30",
-    "Fuori Sassari ci sono altri sportelli (per esempio Alghero, Ozieri, Castelsardo, Porto Torres, Sorso): orari e sedi sono sulla pagina dell'ASL qui sotto",
+    "Sassari, via Tempio 5, piano terra: per patologia e invalidità è aperto il giovedì dalle 8:30 alle 12:30 (telefono 079 2062469; informazioni per telefono dal lunedì al venerdì, dalle 12:30 alle 13:30)",
+    "Alghero, Poliambulatorio, via degli Orti 93: lunedì–venerdì 8:30–12:30; martedì e giovedì anche 15:00–17:00. Telefono 079 9951678 / 079 9951618 / 079 9951605",
+    "Bonorva, Poliambulatorio Manai, via Vittorio Emanuele III 138: lunedì–venerdì 8:15–12:15. Telefono 079 8659016",
+    "Ittiri, Presidio sanitario, via Ospedale: lunedì–venerdì 8:30–12:30; martedì e giovedì anche 16:00–17:30. Telefono 079 4453138",
+    "Thiesi, Presidio sanitario, viale Madonna di Seunis: lunedì–mercoledì 8:30–12:30. Telefono 079 8849423",
+    "Ozieri, via Colle Cappuccini, palazzina amministrativi, piano terra: lunedì–venerdì 8:30–12:00; martedì anche 15:00–17:00. Telefono 079 779125",
+    "Castelsardo, via Colombo 6: lunedì–venerdì 8:30–12:30; lunedì anche 15:00–17:00. Telefono 079 470375",
+    "Nulvi, via Sassari: giovedì 9:00–13:00. Telefono 079 577048",
+    "Perfugas, via Toti: lunedì–venerdì 8:30–12:30; lunedì e mercoledì anche 15:00–16:30. Telefono 079 564340",
+    "Porto Torres, Regione Andreolu: lunedì–venerdì 8:00–12:30; martedì e giovedì anche 14:00–16:30. Telefono 079 5049611. Attenzione: la Carta dei servizi dell'ASL scrive «Località Andriolu» e indica solo il martedì pomeriggio. Le due versioni non coincidono: chiedi conferma all'ufficio",
+    "Sorso, via Dessì: lunedì–venerdì 8:30–12:30; martedì e giovedì anche 15:00–16:30. Telefono 079 3550009. Attenzione: la Carta dei servizi dell'ASL indica solo il giovedì pomeriggio. Le due versioni non coincidono: chiedi conferma all'ufficio",
   ],
   documenti: [
-    "Fotocopia della carta d'identità e tessera sanitaria",
-    "Per la patologia: certificato di un presidio pubblico del Servizio sanitario nazionale che attesti la malattia. L'ASL accetta anche, tra gli altri, la cartella clinica di un ospedale pubblico e il verbale di invalidità",
-    "Per l'invalidità: la certificazione che documenta l'invalidità riconosciuta (l'ASL non pubblica un elenco separato di documenti)",
+    "Fotocopia della carta d'identità, tessera sanitaria ed eventuali certificati",
+    "Per la patologia: certificato di un presidio pubblico del Servizio sanitario nazionale che attesti la malattia. L'ASL accetta anche, tra gli altri, la copia della cartella clinica di un ospedale pubblico, la copia del verbale di invalidità e le certificazioni sanitarie pubbliche dell'Unione europea",
+    "Per l'invalidità: la pagina dell'ASL non elenca gli allegati per la relativa esenzione. Chiedi allo sportello quale certificazione portare",
+    "Sono le indicazioni generali dell'ASL: non risultano elenchi diversi per ogni sportello",
   ],
   importante:
-    "Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. L'orario di via Tempio è quello dell'avviso dell'ASL del 6 giugno 2025.",
-  telefoni: [{ etichetta: "Sportello di via Tempio (informazioni)", numero: "079 2062469" }],
+    "Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Gli orari vengono dalla pagina dell'ASL modificata l'ultima volta il 1 giugno 2023; quello di via Tempio dall'avviso del 6 giugno 2025.",
+  telefoni: [
+    { etichetta: "Sportello di via Tempio (informazioni)", numero: "079 2062469" },
+    { etichetta: "URP dell'ASL (informazioni e segnalazioni, non rilascia le esenzioni)", numero: "079 2084477" },
+    { etichetta: "URP dell'ASL (secondo numero)", numero: "079 2084490" },
+  ],
   paginaUrl: "https://www.asl1sassari.it/gli-orari-degli-sportelli-di-scelta-e-revoca-dedicati-alle-esenzioni/",
   paginaLabel: "Pagina dell'ASL Sassari con gli orari degli sportelli",
   altriLink: [
     { label: "ASL Sassari · Le esenzioni: chi ne ha diritto e come richiederle", url: "https://www.asl1sassari.it/le-esenzioni-chi-ne-ha-diritto-e-come-richiederla/" },
+    { label: "ASL Sassari · Avviso sull'orario dell'ufficio di via Tempio (06/06/2025)", url: "https://www.asl1sassari.it/ufficio-amministrativi-di-via-tempiomodifica-dellorario-di-apertura/" },
+    { label: "ASL Sassari · Ufficio Relazioni con il Pubblico (via Enrico Costa 57)", url: "https://www.asl1sassari.it/azienda/ufficio-relazioni-con-il-pubblico-urp/" },
+    { label: "ASL Sassari · Carta dei servizi (PDF)", url: "https://www.asl1sassari.it/wp-content/uploads/2024/09/PDEL-1303-Carta-dei-servizi-assl-ss-n.-1216-allegato.pdf" },
   ],
   manca:
-    "L'ASL non pubblica un indirizzo e-mail dello sportello né i tempi di rilascio. La pagina degli sportelli risulta modificata l'ultima volta il 1 giugno 2023.",
-  fonte: "ASL Sassari · pagine ufficiali (esenzioni, orari sportelli, avviso di via Tempio del 06/06/2025) · lette l'11/11/2026",
+    "L'ASL non pubblica un indirizzo e-mail degli sportelli (nella pagina è nascosto) né i tempi di rilascio. Per Porto Torres e Sorso la pagina del 2023 e la Carta dei servizi (di cui non è indicata la data di aggiornamento) non coincidono. Nessuna conferma diretta degli orari da parte dell'ufficio.",
+  fonte: "ASL Sassari · pagine ufficiali (esenzioni, orari sportelli, avviso di via Tempio del 06/06/2025) lette l'11/11/2026; telefoni, pagina URP (ultima modifica 29/06/2026) e Carta dei servizi riletti il 12/11/2026",
 };
 
 ESENZIONE_ASL.olbia = {
