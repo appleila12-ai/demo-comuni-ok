@@ -457,16 +457,17 @@ export const BONUS: Bonus[] = [
       "Caregiver familiari di persone con disabilità grave (art. 3, comma 3, legge 104/1992) o gravissima (D.M. 26 settembre 2016). Il Comune precisa che il riconoscimento deve riferirsi al 2022: sono esclusi i riconoscimenti successivi. Ci sono regole anche per chi assiste più persone e per persone assistite decedute dopo il periodo di riferimento: leggi l'avviso.",
     cosa:
       "Contributo economico una tantum a sostegno del ruolo di cura (annualità FNA 2022). L'importo non è fissato nell'avviso: dipende dalle risorse e dalle domande presentate.",
-    stato: "aperto",
-    quando: "Domande entro l'11/11/2026, ore 23:59.",
+    stato: "scaduto",
+    scade: "2026-11-11",
+    quando: "Domande dalle 8:00 del 27/10/2026 alle 23:59 dell'11/11/2026: il portale è chiuso.",
     comeSiChiede:
       "La domanda va al Comune di residenza della persona assistita, online con SPID o CIE sul portale sociale del Comune di Palermo (trovi il link nell'avviso).",
     fonte: {
       label: "Comune di Palermo · Avviso pubblico Bonus caregiver (pagina del 03/11/2026)",
       url: "https://www.comune.palermo.it/novita/avviso-pubblico-bonus-caregiver-contributo-economico-una-tantum-per-il-sostegno-del-ruolo-di-cura-e-di-assistenza-dei-caregiver-familiari-di-persone-con-disabilit-grave-e-persone-con-disabilit-gravi/",
     },
-    verificatoIl: "10/11/2026",
-    nota: "Scade l'11/11/2026. Controlla i requisiti sull'avviso ufficiale prima di presentare la domanda.",
+    verificatoIl: "12/11/2026",
+    nota: "Il termine è scaduto l'11/11/2026. Nelle pagine del Comune non risulta una proroga: se ne esce una, la pagina dell'avviso la riporta. Chiedi conferma ai Servizi sociali del Comune di Palermo.",
   },
 
   // ---------------------------------------------------------------- LOMBARDIA
