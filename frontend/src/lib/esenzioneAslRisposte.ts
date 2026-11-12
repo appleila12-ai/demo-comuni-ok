@@ -142,6 +142,35 @@ ESENZIONE_ASL.arezzo = sudest("zona Aretina", "anagrafe.aretina@uslsudest.toscan
 ESENZIONE_ASL.grosseto = sudest("zona Grossetana", "anagrafe.grossetana@uslsudest.toscana.it");
 
 // ASL Gallura, Distretto di Olbia: risposta scritta dell'Ufficio Scelte e Revoche (29/10/2026).
+// ASL Sassari (aggiunto il 12/11/2026): solo da pagine ufficiali dell'ASL (vedi "fonte"); nessuna risposta scritta dell'URP.
+ESENZIONE_ASL.sassari = {
+  asl: "ASL Sassari",
+  intro:
+    "A Sassari l'esenzione per patologia e per invalidità si richiede allo sportello Scelta e Revoca dell'ASL, che rilascia l'attestato.",
+  titoloPassi: "Come si presenta la richiesta",
+  comeSiPresenta: [
+    "Sportello di Sassari: via Tempio 5, piano terra. Per patologia e invalidità è aperto il giovedì dalle 8:30 alle 12:30",
+    "Informazioni per telefono dal lunedì al venerdì, dalle 12:30 alle 13:30",
+    "Fuori Sassari ci sono altri sportelli (per esempio Alghero, Ozieri, Castelsardo, Porto Torres, Sorso): orari e sedi sono sulla pagina dell'ASL qui sotto",
+  ],
+  documenti: [
+    "Fotocopia della carta d'identità e tessera sanitaria",
+    "Per la patologia: certificato di un presidio pubblico del Servizio sanitario nazionale che attesti la malattia. L'ASL accetta anche, tra gli altri, la cartella clinica di un ospedale pubblico e il verbale di invalidità",
+    "Per l'invalidità: la certificazione che documenta l'invalidità riconosciuta (l'ASL non pubblica un elenco separato di documenti)",
+  ],
+  importante:
+    "Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. L'orario di via Tempio è quello dell'avviso dell'ASL del 6 giugno 2025.",
+  telefoni: [{ etichetta: "Sportello di via Tempio (informazioni)", numero: "079 2062469" }],
+  paginaUrl: "https://www.asl1sassari.it/gli-orari-degli-sportelli-di-scelta-e-revoca-dedicati-alle-esenzioni/",
+  paginaLabel: "Pagina dell'ASL Sassari con gli orari degli sportelli",
+  altriLink: [
+    { label: "ASL Sassari · Le esenzioni: chi ne ha diritto e come richiederle", url: "https://www.asl1sassari.it/le-esenzioni-chi-ne-ha-diritto-e-come-richiederla/" },
+  ],
+  manca:
+    "L'ASL non pubblica un indirizzo e-mail dello sportello né i tempi di rilascio. La pagina degli sportelli risulta modificata l'ultima volta il 1 giugno 2023.",
+  fonte: "ASL Sassari · pagine ufficiali (esenzioni, orari sportelli, avviso di via Tempio del 06/06/2025) · lette l'11/11/2026",
+};
+
 ESENZIONE_ASL.olbia = {
   asl: "ASL Gallura · Distretto di Olbia",
   intro:

@@ -2147,6 +2147,29 @@ export const BONUS: Bonus[] = [
     verificatoIl: "11/11/2026",
     nota: "Pagina letta nella versione inglese del sito del Comune. Il PDF dell'avviso non si legge: controlla requisiti e documenti con l'ufficio prima di preparare la domanda.",
   },
+
+  // --- 12/11/2026: Emilia-Romagna, Collecchio (notizia del Comune letta l'11/11/2026) ---
+  {
+    id: "collecchio-voucher-sportivi-2026-2027",
+    regione: "Emilia-Romagna",
+    comuni: ["collecchio"],
+    titolo: "Voucher sportivi 2026/2027 per minori con disabilità o sovrappeso a Collecchio",
+    perChi:
+      "Minori da 6 a 17 anni residenti a Collecchio, con disabilità oppure in sovrappeso o obesità con complicanze. ISEE ordinario in corso di validità non superiore a 30.000 euro. La domanda la presenta il genitore o il tutore.",
+    cosa:
+      "Contributo fino a 250 euro a minore per le attività sportive. Le risorse sono 1.750 euro in tutto, quindi bastano per al massimo sette contributi.",
+    stato: "aperto",
+    quando:
+      "Domande entro mercoledì 2 dicembre 2026, ore 13:00. La graduatoria si fa per ISEE crescente. Le ricevute di pagamento e l'attestazione di avvio delle attività vanno consegnate entro il 15 gennaio 2027.",
+    comeSiChiede:
+      "Con il modulo del Comune e la documentazione richiesta, a mano all'Ufficio Protocollo oppure per PEC all'indirizzo protocollo@postacert.comune.collecchio.pr.it. Il modulo completo è sulla pagina dei bandi del Comune: se non lo trovi, chiedilo all'Ufficio Protocollo.",
+    fonte: {
+      label: "Comune di Collecchio · Voucher sportivi 2026 (notizia del 02/11/2026, aggiornata il 09/11/2026)",
+      url: "https://www.comune.collecchio.pr.it/novita/notizie/voucher-sportivi-2026/",
+    },
+    verificatoIl: "11/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. Valgono tutte le condizioni del bando.",
+  },
 ];
 
 /** Valore di `regione` per le misure nazionali: valgono in tutti i Comuni. */
