@@ -3,9 +3,10 @@ import { percorso } from "../percorso";
 
 // Comune di Lenola (LT) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (5 novembre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Sito e PEC: sito del Comune letto il 04/11/2026 e IndicePA. Recapiti e orari dei Servizi Sociali: scheda dell'ufficio del 20/11/2023, non confermata, quindi non inseriti.
+// Sito e PEC: sito del Comune letto il 04/11/2026 e IndicePA. Recapiti dei Servizi Sociali: vedi riga sotto (13/11/2026).
 // Distretto socio sanitario LT4 (vedi scheda di Fondi). Coordinate: database ISTAT. Link dell'azienda sanitaria da verificare.
-// Aggiornamento 05/11/2026 (seconda ricerca): orari dell'assistente sociale dalla pagina del Distretto LT4. Sede, telefono ed email restano fuori: scheda del Comune del 20/11/2023.
+// Aggiornamento 05/11/2026 (seconda ricerca): orari dell'assistente sociale dalla pagina del Distretto LT4. 
+// Recapiti Servizi Sociali: Scheda Ufficio Servizi Sociali e Scolastico-Educativi del Comune di Lenola (verificata il 13/11/2026).
 export const lenola: ComuneConfig = {
   slug: "lenola",
   tipo: "comune",
@@ -18,10 +19,10 @@ export const lenola: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
-  pec: "protocollo@pec.comune.lenola.lt.it",
+  indirizzo: "Via Municipio 8",
+  telefono: "0771 595044",
+  email: "servizisociali@comune.lenola.lt.it",
+  pec: "servizisociali@pec.comune.lenola.lt.it",
   orari: "Assistente sociale: lunedì 8:00–13:00; martedì 8:00–13:00 e 13:30–18:30; giovedì 8:00–13:00",
   sitoWeb: "https://comune.lenola.lt.it/home",
 
