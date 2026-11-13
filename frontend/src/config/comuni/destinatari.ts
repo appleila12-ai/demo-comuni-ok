@@ -692,4 +692,6 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "villaricca": { email: "protocollo.villaricca@asmepec.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi del Comune di Villaricca (settore Servizi Socio-Assistenziali), sito del Comune (letta l'11/11/2026)" },
   // Mondragone (CE)
   "mondragone": { email: "protocollo@pec.comune.mondragone.ce.it", tipo: "pec", fonte: "PEC di protocollo del Comune di Mondragone indicata nell'avviso TED del 07/04/2026 (letta l'11/11/2026)" },
+  // Casalecchio di Reno (BO)
+  "casalecchio-di-reno": { email: "welfare@comune.casalecchio.bo.it", tipo: "ordinaria", fonte: "sito del Comune di Casalecchio di Reno, pagina Politiche Sociali (indirizzo riferito dalla dott.ssa Baudone il 13/11/2026; pagina non aperta dall'assistente perché il sito blocca la lettura automatica)" },
 };
