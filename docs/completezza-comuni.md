@@ -3,40 +3,76 @@
 Criterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale attivo/aperto + almeno un bonus comunale attivo/aperto + scheda ticket specifica per l'ASL.
 Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
-Comuni con scheda: 424 · completi: 65 · incompleti: 359
+Comuni con scheda: 424 · completi: 131 · incompleti: 293
 
-Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 296 · servizi sociali (recapiti) 231 · bonus regionali 16
+Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi sociali (recapiti) 231 · bonus regionali 16
 
 ## Completi
 
 - Comune di Sarzana (SP)
+- Comune di Ventimiglia (IM)
+- Comune di Agropoli (SA)
+- Comune di Albenga (SV)
 - Comune di Ameglia (SP)
 - Comune di Arcola (SP)
+- Comune di Arenzano (GE)
 - Comune di Arezzo (AR)
+- Comune di Aulla (MS)
 - Comune di Battipaglia (SA)
 - Comune di Beverino (SP)
 - Comune di Bolano (SP)
 - Comune di Bollate (MI)
 - Comune di Bonassola (SP)
 - Comune di Borghetto di Vara (SP)
+- Comune di Borgo Val di Taro (PR)
 - Comune di Brescia (BS)
 - Comune di Brugnato (SP)
+- Comune di Calcata (VT)
 - Comune di Calice al Cornoviglio (SP)
+- Comune di Camogli (GE)
+- Comune di Campodimele (LT)
+- Comune di Caprarola (VT)
+- Comune di Carbonia (SU)
+- Comune di Carpi (MO)
+- Comune di Carrara (MS)
 - Comune di Carrodano (SP)
+- Comune di Castel San Giovanni (PC)
+- Comune di Castel Sant'Elia (VT)
 - Comune di Castelnuovo Magra (SP)
 - Comune di Catanzaro (CZ)
+- Comune di Cerveteri (RM)
 - Comune di Cesena (FC)
+- Comune di Chiavari (GE)
+- Comune di Chieti (CH)
+- Comune di Ciampino (RM)
 - Comune di Città di Castello (PG)
+- Comune di Civita Castellana (VT)
+- Comune di Civitavecchia (RM)
+- Comune di Collecchio (PR)
+- Comune di Corchiano (VT)
+- Comune di Cortemaggiore (PC)
 - Comune di Deiva Marina (SP)
+- Comune di Empoli (FI)
+- Comune di Fabrica di Roma (VT)
 - Comune di Faenza (RA)
+- Comune di Faleria (VT)
+- Comune di Ferentino (FR)
+- Comune di Fiorenzuola d'Arda (PC)
 - Comune di Firenze (FI)
 - Comune di Fiumicino (RM)
 - Comune di Follo (SP)
 - Comune di Fondi (LT)
+- Comune di Fornovo di Taro (PR)
 - Comune di Framura (SP)
+- Comune di Frascati (RM)
+- Comune di Frosinone (FR)
+- Comune di Gallese (VT)
 - Comune di Genova (GE)
 - Comune di Guidonia Montecelio (RM)
+- Comune di Imola (BO)
+- Comune di Isernia (IS)
 - Comune di La Spezia (SP)
+- Comune di Langhirano (PR)
 - Comune dell'Aquila (AQ)
 - Comune di Latina (LT)
 - Comune di Legnano (MI)
@@ -45,129 +81,138 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 296 · servizi so
 - Comune di Lodi (LO)
 - Comune di Luni (SP)
 - Comune di Magenta (MI)
+- Comune di Marsala (TP)
 - Comune di Massa (MS)
+- Comune di Matera (MT)
+- Comune di Medesano (PR)
+- Comune di Monte San Biagio (LT)
+- Comune di Montefiascone (VT)
 - Comune di Monterosso al Mare (SP)
 - Comune di Monterotondo (RM)
+- Comune di Napoli (NA)
+- Comune di Nepi (VT)
 - Comune di Nuoro (NU)
+- Comune di Ocre (AQ)
 - Comune di Olbia (SS)
+- Comune di Oristano (OR)
+- Comune di Ortona (CH)
 - Comune di Padova (PD)
 - Comune di Palermo (PA)
 - Comune di Parabiago (MI)
+- Comune di Parma (PR)
+- Comune di Piacenza (PC)
 - Comune di Pietrasanta (LU)
 - Comune di Pignone (SP)
 - Comune di Pisa (PI)
+- Comune di Podenzano (PC)
+- Comune di Pontedera (PI)
 - Comune di Porto Venere (SP)
+- Comune di Rapallo (GE)
 - Comune di Reggio Calabria (RC)
 - Comune di Reggio Emilia (RE)
 - Comune di Riccò del Golfo di Spezia (SP)
 - Comune di Rimini (RN)
 - Comune di Riomaggiore (SP)
 - Comune di Rocchetta di Vara (SP)
+- Comune di Rottofreno (PC)
+- Comune di San Felice Circeo (LT)
+- Comune di Sanremo (IM)
 - Comune di Santo Stefano di Magra (SP)
+- Comune di Scandicci (FI)
 - Comune di Sesta Godano (SP)
+- Comune di Sestri Levante (GE)
+- Comune di Sperlonga (LT)
+- Comune di Tarquinia (VT)
+- Comune di Teramo (TE)
 - Comune di Tivoli (RM)
 - Comune di Torino (TO)
 - Comune di Treviglio (BG)
+- Comune di Vallerano (VT)
+- Comune di Vasanello (VT)
+- Comune di Velletri (RM)
 - Comune di Venezia (VE)
 - Comune di Vernazza (SP)
 - Comune di Verona (VR)
+- Comune di Vetralla (VT)
 - Comune di Vezzano Ligure (SP)
+- Comune di Viareggio (LU)
 - Comune di Vibo Valentia (VV)
+- Comune di Vignanello (VT)
+- Comune di Viterbo (VT)
 - Comune di Zignago (SP)
 
 ## Incompleti (cosa manca)
 
 | Comune | Prov. | Regione | Manca |
 |---|---|---|---|
-| Comune di Avezzano | AQ | Abruzzo | servizi sociali (recapiti), esenzione ticket |
-| Comune di Chieti | CH | Abruzzo | esenzione ticket |
-| Comune di Lanciano | CH | Abruzzo | servizi sociali (recapiti), esenzione ticket |
-| Comune di Montesilvano | PE | Abruzzo | servizi sociali (recapiti), esenzione ticket |
-| Comune di Ocre | AQ | Abruzzo | esenzione ticket |
-| Comune di Ortona | CH | Abruzzo | esenzione ticket |
-| Comune di Pescara | PE | Abruzzo | servizi sociali (recapiti), esenzione ticket |
-| Comune di Teramo | TE | Abruzzo | esenzione ticket |
-| Comune di Vasto | CH | Abruzzo | servizi sociali (recapiti), esenzione ticket |
-| Comune di Matera | MT | Basilicata | esenzione ticket |
-| Comune di Potenza | PZ | Basilicata | servizi sociali (recapiti), esenzione ticket |
-| Comune di Corigliano-Rossano | CS | Calabria | servizi sociali (recapiti), esenzione ticket |
-| Comune di Cosenza | CS | Calabria | servizi sociali (recapiti), esenzione ticket |
-| Comune di Crotone | KR | Calabria | servizi sociali (recapiti), esenzione ticket |
+| Comune di Avezzano | AQ | Abruzzo | servizi sociali (recapiti) |
+| Comune di Lanciano | CH | Abruzzo | servizi sociali (recapiti) |
+| Comune di Montesilvano | PE | Abruzzo | servizi sociali (recapiti) |
+| Comune di Pescara | PE | Abruzzo | servizi sociali (recapiti) |
+| Comune di Vasto | CH | Abruzzo | servizi sociali (recapiti) |
+| Comune di Potenza | PZ | Basilicata | servizi sociali (recapiti) |
+| Comune di Corigliano-Rossano | CS | Calabria | servizi sociali (recapiti) |
+| Comune di Cosenza | CS | Calabria | servizi sociali (recapiti) |
+| Comune di Crotone | KR | Calabria | servizi sociali (recapiti) |
 | Comune di Lamezia Terme | CZ | Calabria | servizi sociali (recapiti) |
-| Comune di Rende | CS | Calabria | servizi sociali (recapiti), esenzione ticket |
-| Comune di Acerra | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Afragola | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Agropoli | SA | Campania | esenzione ticket |
+| Comune di Rende | CS | Calabria | servizi sociali (recapiti) |
+| Comune di Acerra | NA | Campania | servizi sociali (recapiti) |
+| Comune di Afragola | NA | Campania | servizi sociali (recapiti) |
 | Comune di Angri | SA | Campania | servizi sociali (recapiti) |
-| Comune di Ariano Irpino | AV | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Arzano | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Avellino | AV | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Aversa | CE | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Benevento | BN | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Caivano | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Casalnuovo di Napoli | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Caserta | CE | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Casoria | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Castellammare di Stabia | NA | Campania | servizi sociali (recapiti), esenzione ticket |
+| Comune di Ariano Irpino | AV | Campania | servizi sociali (recapiti) |
+| Comune di Arzano | NA | Campania | servizi sociali (recapiti) |
+| Comune di Avellino | AV | Campania | servizi sociali (recapiti) |
+| Comune di Aversa | CE | Campania | servizi sociali (recapiti) |
+| Comune di Benevento | BN | Campania | servizi sociali (recapiti) |
+| Comune di Caivano | NA | Campania | servizi sociali (recapiti) |
+| Comune di Casalnuovo di Napoli | NA | Campania | servizi sociali (recapiti) |
+| Comune di Caserta | CE | Campania | servizi sociali (recapiti) |
+| Comune di Casoria | NA | Campania | servizi sociali (recapiti) |
+| Comune di Castellammare di Stabia | NA | Campania | servizi sociali (recapiti) |
 | Comune di Cava de' Tirreni | SA | Campania | servizi sociali (recapiti) |
 | Comune di Eboli | SA | Campania | servizi sociali (recapiti) |
-| Comune di Ercolano | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Frattamaggiore | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Giugliano in Campania | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Gragnano | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Maddaloni | CE | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Marano di Napoli | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Marcianise | CE | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Marigliano | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Melito di Napoli | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Mondragone | CE | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Mugnano di Napoli | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Napoli | NA | Campania | esenzione ticket |
+| Comune di Ercolano | NA | Campania | servizi sociali (recapiti) |
+| Comune di Frattamaggiore | NA | Campania | servizi sociali (recapiti) |
+| Comune di Giugliano in Campania | NA | Campania | servizi sociali (recapiti) |
+| Comune di Gragnano | NA | Campania | servizi sociali (recapiti) |
+| Comune di Maddaloni | CE | Campania | servizi sociali (recapiti) |
+| Comune di Marano di Napoli | NA | Campania | servizi sociali (recapiti) |
+| Comune di Marcianise | CE | Campania | servizi sociali (recapiti) |
+| Comune di Marigliano | NA | Campania | servizi sociali (recapiti) |
+| Comune di Melito di Napoli | NA | Campania | servizi sociali (recapiti) |
+| Comune di Mondragone | CE | Campania | servizi sociali (recapiti) |
+| Comune di Mugnano di Napoli | NA | Campania | servizi sociali (recapiti) |
 | Comune di Nocera Inferiore | SA | Campania | servizi sociali (recapiti) |
-| Comune di Nola | NA | Campania | servizi sociali (recapiti), esenzione ticket |
+| Comune di Nola | NA | Campania | servizi sociali (recapiti) |
 | Comune di Pagani | SA | Campania | servizi sociali (recapiti) |
-| Comune di Pomigliano d'Arco | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Pompei | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Portici | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Pozzuoli | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Quarto | NA | Campania | servizi sociali (recapiti), esenzione ticket |
+| Comune di Pomigliano d'Arco | NA | Campania | servizi sociali (recapiti) |
+| Comune di Pompei | NA | Campania | servizi sociali (recapiti) |
+| Comune di Portici | NA | Campania | servizi sociali (recapiti) |
+| Comune di Pozzuoli | NA | Campania | servizi sociali (recapiti) |
+| Comune di Quarto | NA | Campania | servizi sociali (recapiti) |
 | Comune di Salerno | SA | Campania | servizi sociali (recapiti) |
-| Comune di San Giorgio a Cremano | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Sant'Antimo | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Santa Maria Capua Vetere | CE | Campania | servizi sociali (recapiti), esenzione ticket |
+| Comune di San Giorgio a Cremano | NA | Campania | servizi sociali (recapiti) |
+| Comune di Sant'Antimo | NA | Campania | servizi sociali (recapiti) |
+| Comune di Santa Maria Capua Vetere | CE | Campania | servizi sociali (recapiti) |
 | Comune di Sarno | SA | Campania | servizi sociali (recapiti) |
 | Comune di Scafati | SA | Campania | servizi sociali (recapiti) |
-| Comune di Somma Vesuviana | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Torre Annunziata | NA | Campania | servizi sociali (recapiti), esenzione ticket |
-| Comune di Torre del Greco | NA | Campania | servizi sociali (recapiti), esenzione ticket |
+| Comune di Somma Vesuviana | NA | Campania | servizi sociali (recapiti) |
+| Comune di Torre Annunziata | NA | Campania | servizi sociali (recapiti) |
+| Comune di Torre del Greco | NA | Campania | servizi sociali (recapiti) |
 | Comune di Villaricca | NA | Campania | servizi sociali (recapiti) |
-| Comune di Bologna | BO | Emilia-Romagna | servizi sociali (recapiti), esenzione ticket |
-| Comune di Borgo Val di Taro | PR | Emilia-Romagna | esenzione ticket |
-| Comune di Carpi | MO | Emilia-Romagna | esenzione ticket |
-| Comune di Casalecchio di Reno | BO | Emilia-Romagna | servizi sociali (recapiti), esenzione ticket |
-| Comune di Castel San Giovanni | PC | Emilia-Romagna | esenzione ticket |
-| Comune di Castelfranco Emilia | MO | Emilia-Romagna | servizi sociali (recapiti), esenzione ticket |
-| Comune di Cento | FE | Emilia-Romagna | servizi sociali (recapiti), esenzione ticket |
-| Comune di Collecchio | PR | Emilia-Romagna | esenzione ticket |
-| Comune di Cortemaggiore | PC | Emilia-Romagna | esenzione ticket |
+| Comune di Bologna | BO | Emilia-Romagna | servizi sociali (recapiti) |
+| Comune di Casalecchio di Reno | BO | Emilia-Romagna | servizi sociali (recapiti) |
+| Comune di Castelfranco Emilia | MO | Emilia-Romagna | servizi sociali (recapiti) |
+| Comune di Cento | FE | Emilia-Romagna | servizi sociali (recapiti) |
 | Comune di Ferrara | FE | Emilia-Romagna | servizi sociali (recapiti) |
-| Comune di Fiorenzuola d'Arda | PC | Emilia-Romagna | esenzione ticket |
 | Comune di Forlì | FC | Emilia-Romagna | servizi sociali (recapiti) |
-| Comune di Formigine | MO | Emilia-Romagna | servizi sociali (recapiti), esenzione ticket |
-| Comune di Fornovo di Taro | PR | Emilia-Romagna | esenzione ticket |
-| Comune di Imola | BO | Emilia-Romagna | esenzione ticket |
-| Comune di Langhirano | PR | Emilia-Romagna | esenzione ticket |
-| Comune di Lesignano de' Bagni | PR | Emilia-Romagna | servizi sociali (recapiti), esenzione ticket |
-| Comune di Medesano | PR | Emilia-Romagna | esenzione ticket |
-| Comune di Modena | MO | Emilia-Romagna | servizi sociali (recapiti), esenzione ticket |
-| Comune di Parma | PR | Emilia-Romagna | esenzione ticket |
-| Comune di Piacenza | PC | Emilia-Romagna | esenzione ticket |
-| Comune di Podenzano | PC | Emilia-Romagna | esenzione ticket |
+| Comune di Formigine | MO | Emilia-Romagna | servizi sociali (recapiti) |
+| Comune di Lesignano de' Bagni | PR | Emilia-Romagna | servizi sociali (recapiti) |
+| Comune di Modena | MO | Emilia-Romagna | servizi sociali (recapiti) |
 | Comune di Ravenna | RA | Emilia-Romagna | servizi sociali (recapiti) |
 | Comune di Riccione | RN | Emilia-Romagna | servizi sociali (recapiti) |
-| Comune di Rottofreno | PC | Emilia-Romagna | esenzione ticket |
-| Comune di San Lazzaro di Savena | BO | Emilia-Romagna | servizi sociali (recapiti), esenzione ticket |
-| Comune di Sassuolo | MO | Emilia-Romagna | servizi sociali (recapiti), esenzione ticket |
+| Comune di San Lazzaro di Savena | BO | Emilia-Romagna | servizi sociali (recapiti) |
+| Comune di Sassuolo | MO | Emilia-Romagna | servizi sociali (recapiti) |
 | Comune di Duino Aurisina | TS | Friuli-Venezia Giulia | bonus comunali, esenzione ticket |
 | Comune di Gorizia | GO | Friuli-Venezia Giulia | servizi sociali (recapiti), bonus comunali |
 | Comune di Monfalcone | GO | Friuli-Venezia Giulia | servizi sociali (recapiti), bonus comunali |
@@ -178,61 +223,26 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 296 · servizi so
 | Comune di Sgonico | TS | Friuli-Venezia Giulia | bonus comunali, esenzione ticket |
 | Comune di Trieste | TS | Friuli-Venezia Giulia | servizi sociali (recapiti), bonus comunali |
 | Comune di Udine | UD | Friuli-Venezia Giulia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Albano Laziale | RM | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Anzio | RM | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Aprilia | LT | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Ardea | RM | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Calcata | VT | Lazio | esenzione ticket |
-| Comune di Campodimele | LT | Lazio | esenzione ticket |
-| Comune di Caprarola | VT | Lazio | esenzione ticket |
-| Comune di Cassino | FR | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Castel Sant'Elia | VT | Lazio | esenzione ticket |
-| Comune di Cerveteri | RM | Lazio | esenzione ticket |
-| Comune di Ciampino | RM | Lazio | esenzione ticket |
-| Comune di Cisterna di Latina | LT | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Civita Castellana | VT | Lazio | esenzione ticket |
-| Comune di Civitavecchia | RM | Lazio | esenzione ticket |
-| Comune di Corchiano | VT | Lazio | esenzione ticket |
-| Comune di Fabrica di Roma | VT | Lazio | esenzione ticket |
-| Comune di Faleria | VT | Lazio | esenzione ticket |
-| Comune di Ferentino | FR | Lazio | esenzione ticket |
+| Comune di Albano Laziale | RM | Lazio | servizi sociali (recapiti) |
+| Comune di Anzio | RM | Lazio | servizi sociali (recapiti) |
+| Comune di Aprilia | LT | Lazio | servizi sociali (recapiti) |
+| Comune di Ardea | RM | Lazio | servizi sociali (recapiti) |
+| Comune di Cassino | FR | Lazio | servizi sociali (recapiti) |
+| Comune di Cisterna di Latina | LT | Lazio | servizi sociali (recapiti) |
 | Comune di Fonte Nuova | RM | Lazio | servizi sociali (recapiti) |
-| Comune di Formia | LT | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Frascati | RM | Lazio | esenzione ticket |
-| Comune di Frosinone | FR | Lazio | esenzione ticket |
-| Comune di Gallese | VT | Lazio | esenzione ticket |
-| Comune di Genzano di Roma | RM | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Ladispoli | RM | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Lenola | LT | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Marino | RM | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Monte San Biagio | LT | Lazio | esenzione ticket |
-| Comune di Montefiascone | VT | Lazio | esenzione ticket |
-| Comune di Nepi | VT | Lazio | esenzione ticket |
-| Comune di Nettuno | RM | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Pomezia | RM | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Rieti | RI | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di San Felice Circeo | LT | Lazio | esenzione ticket |
-| Comune di Sperlonga | LT | Lazio | esenzione ticket |
-| Comune di Tarquinia | VT | Lazio | esenzione ticket |
-| Comune di Terracina | LT | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Vallerano | VT | Lazio | esenzione ticket |
-| Comune di Vasanello | VT | Lazio | esenzione ticket |
-| Comune di Velletri | RM | Lazio | esenzione ticket |
-| Comune di Vetralla | VT | Lazio | esenzione ticket |
-| Comune di Vignanello | VT | Lazio | esenzione ticket |
-| Comune di Viterbo | VT | Lazio | esenzione ticket |
-| Roma Capitale | RM | Lazio | servizi sociali (recapiti), esenzione ticket |
-| Comune di Albenga | SV | Liguria | esenzione ticket |
-| Comune di Arenzano | GE | Liguria | esenzione ticket |
-| Comune di Camogli | GE | Liguria | esenzione ticket |
-| Comune di Chiavari | GE | Liguria | esenzione ticket |
-| Comune di Imperia | IM | Liguria | servizi sociali (recapiti), esenzione ticket |
-| Comune di Rapallo | GE | Liguria | esenzione ticket |
-| Comune di Recco | GE | Liguria | servizi sociali (recapiti), esenzione ticket |
-| Comune di Sanremo | IM | Liguria | esenzione ticket |
-| Comune di Savona | SV | Liguria | servizi sociali (recapiti), esenzione ticket |
-| Comune di Sestri Levante | GE | Liguria | esenzione ticket |
-| Comune di Ventimiglia | IM | Liguria | esenzione ticket |
+| Comune di Formia | LT | Lazio | servizi sociali (recapiti) |
+| Comune di Genzano di Roma | RM | Lazio | servizi sociali (recapiti) |
+| Comune di Ladispoli | RM | Lazio | servizi sociali (recapiti) |
+| Comune di Lenola | LT | Lazio | servizi sociali (recapiti) |
+| Comune di Marino | RM | Lazio | servizi sociali (recapiti) |
+| Comune di Nettuno | RM | Lazio | servizi sociali (recapiti) |
+| Comune di Pomezia | RM | Lazio | servizi sociali (recapiti) |
+| Comune di Rieti | RI | Lazio | servizi sociali (recapiti) |
+| Comune di Terracina | LT | Lazio | servizi sociali (recapiti) |
+| Roma Capitale | RM | Lazio | servizi sociali (recapiti) |
+| Comune di Imperia | IM | Liguria | servizi sociali (recapiti) |
+| Comune di Recco | GE | Liguria | servizi sociali (recapiti) |
+| Comune di Savona | SV | Liguria | servizi sociali (recapiti) |
 | Comune di Abbiategrasso | MI | Lombardia | servizi sociali (recapiti), bonus comunali |
 | Comune di Bergamo | BG | Lombardia | bonus comunali |
 | Comune di Brugherio | MB | Lombardia | bonus comunali, esenzione ticket |
@@ -283,20 +293,19 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 296 · servizi so
 | Comune di Vimercate | MB | Lombardia | bonus comunali, esenzione ticket |
 | Comune di Voghera | PV | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Ancona | AN | Marche | bonus regionali |
-| Comune di Ascoli Piceno | AP | Marche | bonus regionali, esenzione ticket |
-| Comune di Civitanova Marche | MC | Marche | servizi sociali (recapiti), bonus regionali, esenzione ticket |
-| Comune di Fano | PU | Marche | bonus regionali, esenzione ticket |
-| Comune di Fermo | FM | Marche | bonus regionali, esenzione ticket |
-| Comune di Jesi | AN | Marche | servizi sociali (recapiti), bonus regionali, esenzione ticket |
-| Comune di Macerata | MC | Marche | servizi sociali (recapiti), bonus regionali, esenzione ticket |
-| Comune di Osimo | AN | Marche | bonus regionali, esenzione ticket |
-| Comune di Pesaro | PU | Marche | bonus regionali, esenzione ticket |
-| Comune di San Benedetto del Tronto | AP | Marche | servizi sociali (recapiti), bonus regionali, esenzione ticket |
-| Comune di Senigallia | AN | Marche | bonus regionali, esenzione ticket |
-| Comune di Urbino | PU | Marche | servizi sociali (recapiti), bonus regionali, esenzione ticket |
+| Comune di Ascoli Piceno | AP | Marche | bonus regionali |
+| Comune di Civitanova Marche | MC | Marche | servizi sociali (recapiti), bonus regionali |
+| Comune di Fano | PU | Marche | bonus regionali |
+| Comune di Fermo | FM | Marche | bonus regionali |
+| Comune di Jesi | AN | Marche | servizi sociali (recapiti), bonus regionali |
+| Comune di Macerata | MC | Marche | servizi sociali (recapiti), bonus regionali |
+| Comune di Osimo | AN | Marche | bonus regionali |
+| Comune di Pesaro | PU | Marche | bonus regionali |
+| Comune di San Benedetto del Tronto | AP | Marche | servizi sociali (recapiti), bonus regionali |
+| Comune di Senigallia | AN | Marche | bonus regionali |
+| Comune di Urbino | PU | Marche | servizi sociali (recapiti), bonus regionali |
 | Comune di Campobasso | CB | Molise | servizi sociali (recapiti) |
-| Comune di Isernia | IS | Molise | esenzione ticket |
-| Comune di Termoli | CB | Molise | servizi sociali (recapiti), esenzione ticket |
+| Comune di Termoli | CB | Molise | servizi sociali (recapiti) |
 | Comune di Alba | CN | Piemonte | bonus comunali, esenzione ticket |
 | Comune di Alessandria | AL | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Asti | AT | Piemonte | bonus comunali, esenzione ticket |
@@ -347,78 +356,69 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 296 · servizi so
 | Comune di San Severo | FG | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Taranto | TA | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Trani | BT | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Alghero | SS | Sardegna | servizi sociali (recapiti), esenzione ticket |
+| Comune di Alghero | SS | Sardegna | servizi sociali (recapiti) |
 | Comune di Cagliari | CA | Sardegna | servizi sociali (recapiti) |
-| Comune di Carbonia | SU | Sardegna | esenzione ticket |
-| Comune di Iglesias | SU | Sardegna | servizi sociali (recapiti), esenzione ticket |
-| Comune di Lanusei | NU | Sardegna | servizi sociali (recapiti), esenzione ticket |
-| Comune di Oristano | OR | Sardegna | esenzione ticket |
-| Comune di Quartu Sant'Elena | CA | Sardegna | servizi sociali (recapiti), esenzione ticket |
-| Comune di Sanluri | SU | Sardegna | servizi sociali (recapiti), esenzione ticket |
+| Comune di Iglesias | SU | Sardegna | servizi sociali (recapiti) |
+| Comune di Lanusei | NU | Sardegna | servizi sociali (recapiti) |
+| Comune di Quartu Sant'Elena | CA | Sardegna | servizi sociali (recapiti) |
+| Comune di Sanluri | SU | Sardegna | servizi sociali (recapiti) |
 | Comune di Sassari | SS | Sardegna | servizi sociali (recapiti) |
-| Comune di Tempio Pausania | SS | Sardegna | servizi sociali (recapiti), esenzione ticket |
-| Comune di Tortolì | NU | Sardegna | servizi sociali (recapiti), esenzione ticket |
-| Comune di Villacidro | SU | Sardegna | servizi sociali (recapiti), esenzione ticket |
+| Comune di Tempio Pausania | SS | Sardegna | servizi sociali (recapiti) |
+| Comune di Tortolì | NU | Sardegna | servizi sociali (recapiti) |
+| Comune di Villacidro | SU | Sardegna | servizi sociali (recapiti) |
 | Comune di Acireale | CT | Sicilia | servizi sociali (recapiti) |
 | Comune di Adrano | CT | Sicilia | servizi sociali (recapiti) |
 | Comune di Agrigento | AG | Sicilia | servizi sociali (recapiti) |
-| Comune di Alcamo | TP | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Augusta | SR | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Avola | SR | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Bagheria | PA | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Barcellona Pozzo di Gotto | ME | Sicilia | servizi sociali (recapiti), esenzione ticket |
+| Comune di Alcamo | TP | Sicilia | servizi sociali (recapiti) |
+| Comune di Augusta | SR | Sicilia | servizi sociali (recapiti) |
+| Comune di Avola | SR | Sicilia | servizi sociali (recapiti) |
+| Comune di Bagheria | PA | Sicilia | servizi sociali (recapiti) |
+| Comune di Barcellona Pozzo di Gotto | ME | Sicilia | servizi sociali (recapiti) |
 | Comune di Caltagirone | CT | Sicilia | servizi sociali (recapiti) |
-| Comune di Caltanissetta | CL | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Canicattì | AG | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Carini | PA | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Castelvetrano | TP | Sicilia | servizi sociali (recapiti), esenzione ticket |
+| Comune di Caltanissetta | CL | Sicilia | servizi sociali (recapiti) |
+| Comune di Canicattì | AG | Sicilia | servizi sociali (recapiti) |
+| Comune di Carini | PA | Sicilia | servizi sociali (recapiti) |
+| Comune di Castelvetrano | TP | Sicilia | servizi sociali (recapiti) |
 | Comune di Catania | CT | Sicilia | servizi sociali (recapiti) |
-| Comune di Enna | EN | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Favara | AG | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Gela | CL | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Licata | AG | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Marsala | TP | Sicilia | esenzione ticket |
+| Comune di Enna | EN | Sicilia | servizi sociali (recapiti) |
+| Comune di Favara | AG | Sicilia | servizi sociali (recapiti) |
+| Comune di Gela | CL | Sicilia | servizi sociali (recapiti) |
+| Comune di Licata | AG | Sicilia | servizi sociali (recapiti) |
 | Comune di Mascalucia | CT | Sicilia | servizi sociali (recapiti) |
-| Comune di Mazara del Vallo | TP | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Messina | ME | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Milazzo | ME | Sicilia | servizi sociali (recapiti), esenzione ticket |
+| Comune di Mazara del Vallo | TP | Sicilia | servizi sociali (recapiti) |
+| Comune di Messina | ME | Sicilia | servizi sociali (recapiti) |
+| Comune di Milazzo | ME | Sicilia | servizi sociali (recapiti) |
 | Comune di Misterbianco | CT | Sicilia | servizi sociali (recapiti) |
-| Comune di Modica | RG | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Monreale | PA | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Partinico | PA | Sicilia | servizi sociali (recapiti), esenzione ticket |
+| Comune di Modica | RG | Sicilia | servizi sociali (recapiti) |
+| Comune di Monreale | PA | Sicilia | servizi sociali (recapiti) |
+| Comune di Partinico | PA | Sicilia | servizi sociali (recapiti) |
 | Comune di Paternò | CT | Sicilia | servizi sociali (recapiti) |
-| Comune di Ragusa | RG | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Sciacca | AG | Sicilia | servizi sociali (recapiti), esenzione ticket |
+| Comune di Ragusa | RG | Sicilia | servizi sociali (recapiti) |
+| Comune di Sciacca | AG | Sicilia | servizi sociali (recapiti) |
 | Comune di Siracusa | SR | Sicilia | servizi sociali (recapiti) |
-| Comune di Trapani | TP | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Vittoria | RG | Sicilia | servizi sociali (recapiti), esenzione ticket |
-| Comune di Aulla | MS | Toscana | esenzione ticket |
-| Comune di Campi Bisenzio | FI | Toscana | servizi sociali (recapiti), esenzione ticket |
-| Comune di Capannori | LU | Toscana | servizi sociali (recapiti), esenzione ticket |
-| Comune di Carrara | MS | Toscana | esenzione ticket |
-| Comune di Cascina | PI | Toscana | servizi sociali (recapiti), esenzione ticket |
-| Comune di Empoli | FI | Toscana | esenzione ticket |
+| Comune di Trapani | TP | Sicilia | servizi sociali (recapiti) |
+| Comune di Vittoria | RG | Sicilia | servizi sociali (recapiti) |
+| Comune di Campi Bisenzio | FI | Toscana | servizi sociali (recapiti) |
+| Comune di Capannori | LU | Toscana | servizi sociali (recapiti) |
+| Comune di Cascina | PI | Toscana | servizi sociali (recapiti) |
 | Comune di Grosseto | GR | Toscana | servizi sociali (recapiti) |
-| Comune di Livorno | LI | Toscana | servizi sociali (recapiti), esenzione ticket |
-| Comune di Lucca | LU | Toscana | servizi sociali (recapiti), esenzione ticket |
-| Comune di Piombino | LI | Toscana | servizi sociali (recapiti), esenzione ticket |
-| Comune di Pistoia | PT | Toscana | servizi sociali (recapiti), esenzione ticket |
-| Comune di Pontedera | PI | Toscana | esenzione ticket |
-| Comune di Prato | PO | Toscana | servizi sociali (recapiti), esenzione ticket |
-| Comune di Rosignano Marittimo | LI | Toscana | servizi sociali (recapiti), esenzione ticket |
-| Comune di Scandicci | FI | Toscana | esenzione ticket |
-| Comune di Sesto Fiorentino | FI | Toscana | servizi sociali (recapiti), esenzione ticket |
+| Comune di Livorno | LI | Toscana | servizi sociali (recapiti) |
+| Comune di Lucca | LU | Toscana | servizi sociali (recapiti) |
+| Comune di Piombino | LI | Toscana | servizi sociali (recapiti) |
+| Comune di Pistoia | PT | Toscana | servizi sociali (recapiti) |
+| Comune di Prato | PO | Toscana | servizi sociali (recapiti) |
+| Comune di Rosignano Marittimo | LI | Toscana | servizi sociali (recapiti) |
+| Comune di Sesto Fiorentino | FI | Toscana | servizi sociali (recapiti) |
 | Comune di Siena | SI | Toscana | servizi sociali (recapiti) |
-| Comune di Viareggio | LU | Toscana | esenzione ticket |
 | Comune di Bolzano | BZ | Trentino-Alto Adige | servizi sociali (recapiti), bonus regionali, esenzione ticket |
 | Comune di Merano | BZ | Trentino-Alto Adige | servizi sociali (recapiti), bonus regionali, esenzione ticket |
 | Comune di Rovereto | TN | Trentino-Alto Adige | bonus regionali, esenzione ticket |
 | Comune di Trento | TN | Trentino-Alto Adige | servizi sociali (recapiti), bonus regionali, esenzione ticket |
-| Comune di Foligno | PG | Umbria | servizi sociali (recapiti), esenzione ticket |
+| Comune di Foligno | PG | Umbria | servizi sociali (recapiti) |
 | Comune di Gubbio | PG | Umbria | servizi sociali (recapiti) |
 | Comune di Perugia | PG | Umbria | servizi sociali (recapiti) |
-| Comune di Spoleto | PG | Umbria | servizi sociali (recapiti), esenzione ticket |
-| Comune di Terni | TR | Umbria | servizi sociali (recapiti), esenzione ticket |
+| Comune di Spoleto | PG | Umbria | servizi sociali (recapiti) |
+| Comune di Terni | TR | Umbria | servizi sociali (recapiti) |
 | Comune di Aosta | AO | Valle d'Aosta | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Bassano del Grappa | VI | Veneto | bonus comunali, esenzione ticket |
 | Comune di Belluno | BL | Veneto | servizi sociali (recapiti), bonus comunali, esenzione ticket |
