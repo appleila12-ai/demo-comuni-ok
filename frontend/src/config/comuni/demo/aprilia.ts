@@ -4,7 +4,8 @@ import { percorso } from "../percorso";
 // Comune di Aprilia (LT) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Pagina "Salute, benessere e assistenza" del sito del Comune (controllata il 14 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: Avviso del Comune di Aprilia del 21/08/2026 (trasferimento temporaneo uffici) e scheda Segretariato Sociale; indirizzo non indicato in modo univoco: sede temporanea, da confermare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const aprilia: ComuneConfig = {
   slug: "aprilia",
   tipo: "comune",
@@ -18,10 +19,10 @@ export const aprilia: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "06 928641",
-  email: "",
-  pec: "",
-  orari: "",
+  telefono: "06 92018626",
+  email: "servizisociali@comune.aprilia.lt.it",
+  pec: "servizisociali@pec.comune.aprilia.lt.it",
+  orari: "Solo su appuntamento. Segretariato sociale: puac@comune.aprilia.lt.it, tel. 376 2992516. Il Comune ha pubblicato orari diversi in due pagine (con o senza mercoledì mattina) e la sede è temporanea. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.aprilia.lt.it/servizi/salute-benessere-e-assistenza",
 
   logo: null,

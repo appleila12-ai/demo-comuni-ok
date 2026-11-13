@@ -4,7 +4,8 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Comune di Albano Laziale (RM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sito del Comune e pagina dei servizi sociali aperti e controllati il 19 ottobre 2026. Il link dell'azienda sanitaria è ripreso dalle schede dei Comuni vicini: da verificare. Categoria "Salute, benessere e assistenza" del sito del Comune; il sito indica il Consorzio dei Laghi come ente che gestisce i servizi sociali del Distretto RM 6.2.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: Scheda «Servizio II – Politiche Sociali» e Settore III del Comune di Albano Laziale (13/11/2026).
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const albanoLaziale: ComuneConfig = {
   slug: "albano-laziale",
   tipo: "comune",
@@ -17,11 +18,11 @@ export const albanoLaziale: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
-  pec: "protocollo@cert.comune.albanolaziale.rm.it",
-  orari: "",
+  indirizzo: "Via San Francesco 8–10",
+  telefono: "06 93295430",
+  email: "servizisociali@comune.albanolaziale.rm.it",
+  pec: "servizi.sociali@pec.comune.albanolaziale.rm.it",
+  orari: "Previo appuntamento. Lunedì e giovedì 15:30–17:30; martedì, mercoledì e venerdì 8:30–11. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://comune.albanolaziale.rm.it",
 
   logo: null,

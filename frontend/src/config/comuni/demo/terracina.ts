@@ -4,7 +4,8 @@ import { percorso } from "../percorso";
 // Comune di Terracina (LT) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (15 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Pagina "Salute, benessere e assistenza" del sito del Comune (controllata il 15 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: Scheda «Servizio Sociale» del Comune di Terracina (13/11/2026). PEC generale del Comune; email del servizio non indicata.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const terracina: ComuneConfig = {
   slug: "terracina",
   tipo: "comune",
@@ -17,11 +18,11 @@ export const terracina: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0773 7071",
+  indirizzo: "Via Giacomo Leopardi 73",
+  telefono: "0773 707409",
   email: "",
-  pec: "",
-  orari: "",
+  pec: "posta@pec.comune.terracina.lt.it",
+  orari: "Lunedì e mercoledì 11–13:30; giovedì 16–17:30. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://comune.terracina.lt.it/servizi/categoria-servizi/2703112",
 
   logo: null,

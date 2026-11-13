@@ -4,7 +4,8 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Comune di Pomezia (RM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Argomento "Assistenza sociale" del sito del Comune (controllato il 14 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: Pagina «Assistente sociale – Segretariato sociale» del Comune di Pomezia (13/11/2026). PEC generale del Comune.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const pomezia: ComuneConfig = {
   slug: "pomezia",
   tipo: "comune",
@@ -17,11 +18,11 @@ export const pomezia: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "06 911461",
-  email: "",
-  pec: "",
-  orari: "",
+  indirizzo: "Via Pier Crescenzi 1",
+  telefono: "06 91146212",
+  email: "segretariato.sociale@comune.pomezia.rm.it",
+  pec: "protocollo@pec.comune.pomezia.rm.it",
+  orari: "Segretariato sociale, su appuntamento (allo sportello o con l'app TuPassi): lunedì–venerdì 9–12; martedì anche 15–17. Il Comune riporta in un'altra pagina orari diversi. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.pomezia.rm.it/it/topics/7",
 
   logo: null,

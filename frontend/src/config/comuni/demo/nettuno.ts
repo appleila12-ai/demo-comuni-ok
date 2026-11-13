@@ -4,7 +4,8 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Comune di Nettuno (RM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: Scheda «Servizi Sociali» del Comune di Nettuno (13/11/2026).
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const nettuno: ComuneConfig = {
   slug: "nettuno",
   tipo: "comune",
@@ -17,11 +18,11 @@ export const nettuno: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "06 988891",
-  email: "",
-  pec: "",
-  orari: "",
+  indirizzo: "Viale della Vittoria 2",
+  telefono: "06 98889555",
+  email: "segretariatosociale.pua@comune.nettuno.roma.it",
+  pec: "protocollogenerale@pec.comune.nettuno.roma.it",
+  orari: "Sportello PUA: lunedì–venerdì 9–12; martedì e giovedì anche 15–17. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.nettuno.rm.it",
 
   logo: null,
