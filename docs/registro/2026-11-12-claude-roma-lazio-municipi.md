@@ -65,4 +65,4 @@ Nota: Canino e ASL Viterbo sono per persone con disabilità (art. 1); Frosinone 
 ## Risposta del Municipio X (13/11/2026)
 
 Risposta dell'Ufficio PUA (Direzione Socio Educativa Municipio X) alla mail del 12/11/2026, ore 8:33 (thread Gmail 1a1cf43995edabc0). Inseriti in app giorni, orari e sedi (Via Passeroni 24; Lungomare Toscanelli 230; Via di Casal Bernocchi 73, non 61) e le due email di contatto. Via Passeroni 24 risulta attiva.
-Ancora mancante: numero di telefono (non indicato nella risposta); da chiedere nella mail di ringraziamento, che non è ancora partita. PEC del Municipio X: protocollo.municipioroma10@pec.comune.roma.it (non serve inviare la PEC).
+Ancora mancante: numero di telefono (non indicato nella risposta); chiesto il 13/11/2026 nella mail di ringraziamento (risposta nello stesso thread). PEC del Municipio X: protocollo.municipioroma10@pec.comune.roma.it (non serve inviare la PEC).
