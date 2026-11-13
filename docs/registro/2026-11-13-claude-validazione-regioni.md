@@ -7,3 +7,8 @@ Esteso `frontend/src/content/in-validazione.json` ai Comuni con scheda delle Reg
 - Nessun dato inventato: lo stato «da chiedere» dice solo che manca e che verrà chiesto; quando l'ente risponde si aggiorna lo stato e poi si inserisce il dato.
 - Completi dopo la modifica: 65 (erano 51). Regioni ChatGPT non toccate.
 - Rigenerati `docs/completezza-comuni.md`, `docs/informazioni-mancanti.md`, `frontend/src/content/completezza-comuni.json` con `docs/strumenti/completezza-comuni.js . --scrivi`.
+
+## Seguito: esenzione ticket (stesso giorno)
+- Aggiunta la nota «informazione in validazione» nella pagina Esenzione ticket (`frontend/app/esenzione-ticket.tsx`), nel ramo dei Comuni senza scheda specifica dell'azienda sanitaria.
+- 195 voci `esenzione-ticket` in `in-validazione.json` per i Comuni delle Regioni Claude senza scheda ticket, stato «da chiedere», URP dell'azienda sanitaria, data 13/11/2026.
+- Completi: 131 (65 con la sola nota sui bonus comunali). Restano aperti i recapiti dei Servizi Sociali (nota non ancora in app).
