@@ -64,8 +64,8 @@ export const perugia: ComuneConfig = {
     {
       icon: "medkit-outline",
       title: "USL Umbria 1",
-      subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
-      action: { type: "web", value: "https://www.uslumbria1.it" },
+      subtitle: "Esenzione ticket per patologia e invalidità: il medico di famiglia chiede la visita specialistica, poi il certificato si porta agli sportelli dell'Anagrafe assistibili (email sportello.anagrafepg@uslumbria1.it, indirizzo sulla pagina del servizio). Orari degli sportelli indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte USL Umbria 1, letta il 12/11/2026.",
+      action: { type: "web", value: "https://www.uslumbria1.it/servizio/esenzione-ticket-per-patologia-o-condizione/" },
     },
   ],
 
@@ -73,8 +73,8 @@ export const perugia: ComuneConfig = {
     "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
-    label: "USL Umbria 1 · Esenzioni ticket",
-    url: "https://www.uslumbria1.it",
+    label: "USL Umbria 1 · Esenzione ticket per patologia o condizione",
+    url: "https://www.uslumbria1.it/servizio/esenzione-ticket-per-patologia-o-condizione/",
   },
 
   daVerificare: true,

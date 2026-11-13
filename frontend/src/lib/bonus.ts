@@ -1934,6 +1934,28 @@ export const BONUS: Bonus[] = [
     nota: "Il 6 novembre la Regione ha comunicato altri finanziamenti per non autosufficienza e vita indipendente assegnati alle USL e alle Zone sociali: sono fondi per gli enti, non un nuovo bando per le persone.",
   },
   {
+    id: "perugia-vita-indipendente-2026",
+    regione: "Umbria",
+    comuni: ["perugia"],
+    titolo: "Vita indipendente 2026: contributo per progetti personali (Zona sociale 2: Perugia, Corciano, Torgiano)",
+    perChi:
+      "Persone con disabilità grave (legge 104/1992, art. 3 comma 3), tra 18 e 64 anni, residenti a Perugia, Corciano o Torgiano, con i requisiti dell'avviso. Serve l'ISEE in corso di validità.",
+    cosa:
+      "Contributo per un progetto personale: assistente personale con contratto regolare, sostegno all'affitto di un alloggio, ausili tecnologici per l'autonomia. Fino a 18.000 euro per 18 mesi; riconosciuto al 100% con ISEE fino a 25.000 euro e al 60% oltre quella soglia (le fasce successive sono nell'avviso).",
+    stato: "scaduto",
+    scade: "2026-04-13",
+    quando:
+      "Domande dal 13 marzo al 13 aprile 2026: l'avviso è chiuso. Le graduatorie sono state approvate il 22/07/2026 e rettificate il 05/08/2026. L'avviso viene ripubblicato periodicamente.",
+    comeSiChiede:
+      "Quando l'avviso è aperto: domanda con modulo e allegati per PEC a comune.perugia@postacert.umbria.it o con raccomandata al Dirigente U.O. Servizi Sociali, Corte delle Clarisse snc, 06122 Perugia. Informazioni: Servizi sociali del Comune di Perugia, tel. 075 5773865 o 075 5773818.",
+    fonte: {
+      label: "Comune di Perugia · Servizi sociali, Vita indipendente",
+      url: "https://www.comune.perugia.it/servizio/servizi-sociali-vita-indipendente/",
+    },
+    verificatoIl: "12/11/2026",
+    nota: "Pagine del Comune lette il 12/11/2026. Un nuovo avviso non risulta pubblicato: controlla la pagina del servizio o chiedi ai Servizi sociali.",
+  },
+  {
     id: "puglia-buoni-servizio-2026-2027",
     regione: "Puglia",
     titolo: "Buoni Servizio per anziani e persone con disabilità 2026/2027 (seconda finestra)",
