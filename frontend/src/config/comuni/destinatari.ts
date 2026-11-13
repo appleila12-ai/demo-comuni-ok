@@ -694,4 +694,6 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "mondragone": { email: "protocollo@pec.comune.mondragone.ce.it", tipo: "pec", fonte: "PEC di protocollo del Comune di Mondragone indicata nell'avviso TED del 07/04/2026 (letta l'11/11/2026)" },
   // Casalecchio di Reno (BO)
   "casalecchio-di-reno": { email: "welfare@comune.casalecchio.bo.it", tipo: "ordinaria", fonte: "sito del Comune di Casalecchio di Reno, pagina Politiche Sociali (indirizzo riferito dalla dott.ssa Baudone il 13/11/2026; pagina non aperta dall'assistente perché il sito blocca la lettura automatica)" },
+  // Lenola (LT)
+  "lenola": { email: "servizisociali@comune.lenola.lt.it", tipo: "ordinaria", fonte: "sito del Comune di Lenola, pagina Area Affari generali, demografici e scolastico-educativi, voce Ufficio Servizi Sociali e Scolastico-Educativi (pagina aggiornata il 12/10/2023, letta il 13/11/2026)" },
 };
