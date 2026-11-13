@@ -61,3 +61,15 @@ Nota: Canino e ASL Viterbo sono per persone con disabilità (art. 1); Frosinone 
 4. Municipio I: comunicazione del 09/10/2026 e stato sede Esquilino · pagina notizia indicata da ChatGPT.
 5. Avvisi Lazio: allegati (requisiti, documenti, modalità) dei tre avvisi e date ASL Viterbo · regione.lazio.it/documenti/91209, 91441 e pagina Frosinone.
 6. Esenzioni ticket per le ASL di Roma (Roma 1, 2, 3, 5, 6), Vita indipendente, Dopo di Noi, disabilità gravissima, caregiver regionali: NON ESEGUITO in questo intervento.
+
+## Risposta del Municipio X (13/11/2026)
+
+Risposta dell'Ufficio PUA (Direzione Socio Educativa Municipio X) alla mail del 12/11/2026, ore 8:33 (thread Gmail 1a1cf43995edabc0). Inseriti in app giorni, orari e sedi (Via Passeroni 24; Lungomare Toscanelli 230; Via di Casal Bernocchi 73, non 61) e le due email di contatto. Via Passeroni 24 risulta attiva.
+Ancora mancante: numero di telefono (non indicato nella risposta); chiesto il 13/11/2026 nella mail di ringraziamento (risposta nello stesso thread). PEC del Municipio X: protocollo.municipioroma10@pec.comune.roma.it (non serve inviare la PEC).
+
+## PEC del 13/11/2026 (16:30 e 16:31)
+
+Reinviate via PEC, dalla casella PEC di Ilaria (Aruba), le richieste già inviate per email il 12/11/2026:
+- Municipio XI → protocollo.municipioroma11@pec.comune.roma.it (giorni e orari, altre sedi)
+- Municipio XII → protocollo.municipioroma12@pec.comune.roma.it (orari Via Panfilo Castaldi, sedi Via Longhena 98 e Via Ramazzini)
+Ricevute di accettazione presenti in casella. Indirizzi PEC da: Roma Capitale, pagina «Indirizzi PEC dei Municipi».
