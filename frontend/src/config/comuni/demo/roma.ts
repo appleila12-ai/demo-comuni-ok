@@ -143,7 +143,7 @@ export const roma: ComuneConfig = {
     {
       icon: "location-outline",
       title: "Municipio X · Segretariato Sociale e PUA",
-      subtitle: "Mancano sedi, giorni e orari confermati: sul sito di Roma Capitale le informazioni sono discordanti e una sede (Via Passeroni 24) risulta in chiusura. Li abbiamo chiesti il 12/11/2026 a segretariatosociale.mun10@comune.roma.it: puoi chiederli anche tu allo stesso indirizzo.",
+      subtitle: "Lunedì 9–12 e martedì 9–12 e 15–17: Via G. C. Passeroni 24 (sede dei Servizi Sociali del Municipio). Giovedì 9–12 e 15–17: Lungomare P. Toscanelli 230 (Casa della Salute di Ostia). Venerdì 9–12: Sportello Caregiver in Via Passeroni 24 e sportello generico in Via di Casal Bernocchi 73 (Casa di Comunità). Mercoledì: sportello LGBTQIA+ a Lungomare Toscanelli 230. Scrivi a segretariatosociale.mun10@comune.roma.it o a segretariato.pua10@gmail.com. Il numero di telefono non ci è stato indicato: l'abbiamo chiesto il 13/11/2026 e, finché manca, usa l'email. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte: risposta dell'Ufficio PUA del Municipio X, 13/11/2026.",
     },
     {
       icon: "location-outline",
