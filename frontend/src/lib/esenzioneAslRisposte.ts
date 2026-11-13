@@ -1397,10 +1397,16 @@ const ASL4_DISTRETTO16: SchedaEsenzioneAsl = {
     "Le pratiche vengono espletate, se possibile, entro 5 giorni",
     "A Varese Ligure c'è lo sportello di Anagrafe Sanitaria il martedì dalle 9:00 alle 13:00 (salvo modifiche)",
   ],
+  documenti: [
+    "Certificato medico (modulo «Esenzione ticket per patologia» dell'ASL 4) compilato dal medico specialista di una struttura pubblica (ospedale), con i dati dell'assistito, il codice dell'esenzione, timbro e firma del medico",
+    "Documento d'identità dell'assistito",
+    "Se la documentazione è inviata da un indirizzo e-mail non personale, oppure se a presentarla è un'altra persona: il modulo di delega e i documenti d'identità di chi delega e di chi è delegato",
+    "Gli stessi documenti servono se ti presenti allo sportello dell'Anagrafe Sanitaria",
+  ],
   mail: "anagrafe.ds16@asl4.liguria.it",
   telefoni: [{ etichetta: "Anagrafe Sanitaria Distretto 16 · lunedì–venerdì 8:00–14:00", numero: "0185 329815" }],
   manca:
-    "L'ASL non ha indicato l'elenco dei documenti da allegare né un modulo ufficiale: chiedili all'ufficio. Gli orari possono cambiare: conferma all'ufficio prima di andare.",
-  fonte: "ASL 4 · Ufficio Anagrafe Sanitaria, risposta scritta del 12/11/2026 (in copia URP Chiavari)",
+    "Il modulo del certificato e quello di delega sono sulla pagina della modulistica dell'ASL 4 (indicata dall'ufficio): in app non c'è ancora il collegamento diretto. Gli orari possono cambiare: conferma all'ufficio prima di andare.",
+  fonte: "ASL 4 · Ufficio Anagrafe Sanitaria, risposte scritte del 12/11/2026 (in copia URP Chiavari), con i moduli allegati (certificato «Esenzione ticket per patologia» e delega)",
 };
 for (const slug of ["carro", "maissana", "varese-ligure"]) ESENZIONE_ASL[slug] = ASL4_DISTRETTO16;
