@@ -19,6 +19,7 @@ import { MonoImage } from "@/src/components/MonoImage";
 import { ComuneLogo } from "@/src/components/ComuneLogo";
 import { PaeseCard } from "@/src/components/PaeseCard";
 import { comune, comuneScelto } from "@/src/config/comune";
+import IN_VALIDAZIONE from "@/src/content/in-validazione.json";
 import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
@@ -255,6 +256,17 @@ function HomeDelComune() {
             </Text>
           </View>
         )}
+
+        {(IN_VALIDAZIONE as Record<string, Record<string, unknown>>)[comune.slug]?.["servizi-sociali"] ? (
+          <View style={styles.demoBanner} testID="comune-home-servizi-in-validazione">
+            <Ionicons name="information-circle-outline" size={16} color="#6B4E16" />
+            <Text style={styles.demoBannerText}>
+              <Text style={styles.demoBannerStrong}>Informazione in validazione: </Text>
+              i recapiti completi dei Servizi Sociali (telefono, email, orari) non sono ancora verificati. Li stiamo
+              chiedendo al Comune. Nel frattempo chiedi al centralino del Comune e segnalaci cosa non torna.
+            </Text>
+          </View>
+        ) : null}
 
         {/* Per gli enti: contatto con TutelApp, in forma compatta. La richiesta ai Comuni è la finestra che si apre al ritorno nella Home */}
         <Pressable
