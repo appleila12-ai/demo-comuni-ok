@@ -205,8 +205,8 @@ export const roma: ComuneConfig = {
     "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
-    label: "ASL Roma 1 · Esenzioni ticket",
-    url: "https://www.aslroma1.it",
+    label: "ASL Roma 1 · Esenzione ticket: tesserino via email dal Distretto o di persona",
+    url: "https://www.aslroma1.it/esenzione-ticket-per-malattie-croniche-e-o-invalidanti",
   },
 
   daVerificare: true,
