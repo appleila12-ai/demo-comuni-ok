@@ -8,6 +8,7 @@ import Ionicons from "@react-native-vector-icons/ionicons";
 
 import { colors, spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
+import IN_VALIDAZIONE from "@/src/content/in-validazione.json";
 import { useSezione } from "@/src/lib/statistiche";
 import { ASL5_CENTRALINO, ASL5_ESENZIONE } from "@/src/config/comuni/percorso";
 import {
@@ -88,6 +89,15 @@ export default function EsenzioneTicket() {
           Per {comune.nomeBreve} la scheda con l&apos;elenco dei documenti per l&apos;esenzione ticket non è ancora
           pronta. Qui sotto trovi la pagina ufficiale della tua {comune.soloElenco ? "Regione" : "azienda sanitaria"}.
         </Intro>
+        {(IN_VALIDAZIONE as Record<string, Record<string, { stato?: string; dal?: string; chiesto?: string }>>)[comune.slug]?.[
+          "esenzione-ticket"
+        ] ? (
+          <Avviso>
+            Informazione in validazione: stiamo verificando con l&apos;azienda sanitaria dove e con quali documenti si
+            presenta la domanda di esenzione. Per ora ti rimandiamo alla pagina ufficiale qui sotto; se hai dubbi, chiedi
+            allo sportello dell&apos;azienda sanitaria prima di andare.
+          </Avviso>
+        ) : null}
         <Bottone
           label={comune.esenzioneTicket.label}
           icon="open-outline"
