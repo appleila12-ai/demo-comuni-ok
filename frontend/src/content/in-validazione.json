@@ -856,11 +856,6 @@
       "dal": "2026-11-13",
       "chiesto": "URP dell'azienda sanitaria",
       "stato": "da chiedere"
-    },
-    "servizi-sociali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
     }
   },
   "castel-san-giovanni": {
@@ -971,11 +966,6 @@
     "esenzione-ticket": {
       "dal": "2026-11-13",
       "chiesto": "URP dell'azienda sanitaria",
-      "stato": "da chiedere"
-    },
-    "servizi-sociali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
     }
   },
@@ -1122,11 +1112,6 @@
     "esenzione-ticket": {
       "dal": "2026-11-13",
       "chiesto": "URP dell'azienda sanitaria",
-      "stato": "da chiedere"
-    },
-    "servizi-sociali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
     }
   },
@@ -1291,11 +1276,6 @@
   },
   "ferrara": {
     "bonus-comunali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
-    "servizi-sociali": {
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
