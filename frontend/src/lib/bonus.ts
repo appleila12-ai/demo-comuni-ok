@@ -768,13 +768,13 @@ export const BONUS: Bonus[] = [
     stato: "attivo",
     quando: "Dal 2026, senza nuova domanda.",
     comeSiChiede:
-      "Basta avere l'ISEE aggiornato e segnalare al Comune eventuali cambiamenti. Per chi non lo riceve ancora, chiedi al Servizio Politiche Sociali del Comune come fare.",
+      "Chi già lo riceve: basta avere l'ISEE 2026 in corso di validità e segnalare al Comune i cambiamenti. Nuove domande: i termini restano sempre aperti e la domanda si presenta al Punto Unico di Accesso (PUA) del Distretto, in via Olivella km 1, telefono 06 93275285, email pua.dh2@aslroma6.it. Servizi Sociali del Comune: 06 93295440 (interno 422), email servizisociali@comune.albanolaziale.rm.it.",
     fonte: {
       label: "Comune di Albano Laziale · Novità, «Disabilità gravissima – annualità 2026»",
       url: "https://comune.albanolaziale.rm.it/novita/",
     },
     verificatoIl: "14/11/2026",
-    nota: "Il Comune non indica gli importi nella pagina delle novità: chiedili al Servizio Politiche Sociali.",
+    nota: "Gli importi non sono indicati nell'informativa 2026 (rimanda alla graduatoria individuale) e requisiti sanitari e soglia ISEE per le nuove domande non risultano: chiedili al PUA.",
   },
   {
     id: "cisterna-di-latina-rimborso-nido-privati-2026-2027",
@@ -787,13 +787,14 @@ export const BONUS: Bonus[] = [
     stato: "aperto",
     scade: "2026-11-20",
     quando: "Domande entro le 23:59 del 20 novembre 2026.",
-    comeSiChiede: "Le modalità e i requisiti sono nell'avviso sul sito del Comune, nella sezione Servizi Sociali.",
+    comeSiChiede:
+      "Per i bambini da 3 a 36 mesi iscritti a un nido privato autorizzato dal Comune, con famiglia residente a Cisterna e ISEE valido non superiore a 50.000 euro. Domanda solo per posta elettronica certificata o email al Comune (indirizzo welfare nel sito, sezione Servizi Sociali). Si allegano: documento d'identità e codice fiscale di chi fa la domanda, permesso di soggiorno se straniero, documenti che provano l'iscrizione al nido e l'importo della retta. Il rimborso non può superare la spesa pagata.",
     fonte: {
       label: "Comune di Cisterna di Latina · Avvisi Servizi Sociali (avviso del 17/10/2026)",
       url: "https://www.comune.cisterna.latina.it/it/news-category/147381",
     },
     verificatoIl: "14/11/2026",
-    nota: "Dalla pagina delle novità si legge solo il titolo e la scadenza: leggi l'avviso completo o chiedi all'ufficio prima di preparare la domanda. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi.",
+    nota: "L'importo massimo del rimborso non risulta indicato nell'avviso: chiedilo all'ufficio. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda."
   },
   {
     id: "aprilia-assistenza-economica-straordinaria",
@@ -812,6 +813,28 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "14/11/2026",
     nota: "La pagina del Comune non è stata aggiornata di recente: i fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+
+  // ------------------------------------------------------------ MARINO E CIAMPINO (14/11/2026)
+  {
+    id: "marino-ciampino-autismo-minori-2026",
+    regione: "Lazio",
+    comuni: ["marino", "ciampino"],
+    titolo: "Sostegno economico alle famiglie di minori con disturbo dello spettro autistico, 2026 (Distretto RM 6.3)",
+    perChi:
+      "Famiglie di minori fino a 12 anni con disturbo dello spettro autistico, residenti nei Comuni di Marino e Ciampino (Distretto socio sanitario RM 6.3).",
+    cosa: "Un contributo economico a sostegno delle spese delle famiglie. I requisiti e gli importi sono nell'avviso del Distretto.",
+    stato: "aperto",
+    scade: "2026-11-30",
+    quando: "Domande entro il 30 novembre 2026.",
+    comeSiChiede:
+      "Con il modulo di domanda di sostegno economico pubblicato dal Comune di Marino, Distretto RM 6.3. Per i dettagli chiedi ai Servizi Sociali del tuo Comune.",
+    fonte: {
+      label: "Comune di Marino · Avviso minori con disturbo dello spettro autistico 2026, Distretto RM 6.3 (avviso del 02/11/2026)",
+      url: "https://www.comune.marino.rm.it/novita/avvisi/novita_3106.html",
+    },
+    verificatoIl: "14/11/2026",
+    nota: "La scadenza del 30 novembre risulta dall'avviso come riportato da una ricerca e non è stata riletta sulla pagina: conferma all'ufficio. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
   },
 
   // ------------------------------------------------------------ COMUNE DI LATINA

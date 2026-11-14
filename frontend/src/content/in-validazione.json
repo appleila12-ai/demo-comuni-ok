@@ -326,11 +326,6 @@
       "dal": "2026-11-14",
       "chiesto": "ASL Roma 6 (mail del 14/11/2026)",
       "stato": "chiesto"
-    },
-    "servizi-sociali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
     }
   },
   "arenzano": {
@@ -998,13 +993,6 @@
       "stato": "da chiedere"
     }
   },
-  "ciampino": {
-    "bonus-comunali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    }
-  },
   "citta-di-castello": {
     "bonus-comunali": {
       "dal": "2026-11-13",
@@ -1305,11 +1293,6 @@
   },
   "fonte-nuova": {
     "bonus-comunali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
-    "servizi-sociali": {
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
@@ -1804,19 +1787,9 @@
     }
   },
   "marino": {
-    "bonus-comunali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
     "esenzione-ticket": {
       "dal": "2026-11-13",
       "chiesto": "URP dell'azienda sanitaria",
-      "stato": "da chiedere"
-    },
-    "servizi-sociali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
     }
   },

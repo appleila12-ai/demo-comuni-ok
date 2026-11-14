@@ -32,7 +32,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Angri | SA | Campania | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Anzio | RM | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Ardea | RM | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Ardea | RM | Lazio | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Ardea | RM | Lazio | esenzione ticket | ASL Roma 6 (mail del 14/11/2026) | chiesto | 2026-11-14 |
 | Comune di Arenzano | GE | Liguria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Arenzano | GE | Liguria | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
@@ -156,7 +155,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Chiavari | GE | Liguria | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Chieti | CH | Abruzzo | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Chieti | CH | Abruzzo | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
-| Comune di Ciampino | RM | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Città di Castello | PG | Umbria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Civita Castellana | VT | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Civita Castellana | VT | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
@@ -211,7 +209,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Foligno | PG | Umbria | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Follo | SP | Liguria | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-09 |
 | Comune di Fonte Nuova | RM | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Fonte Nuova | RM | Lazio | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Forlì | FC | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Formia | LT | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Formia | LT | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
@@ -300,8 +297,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Marigliano | NA | Campania | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Marigliano | NA | Campania | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Marigliano | NA | Campania | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
-| Comune di Marino | RM | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Marino | RM | Lazio | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Marino | RM | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Marsala | TP | Sicilia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Marsala | TP | Sicilia | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
