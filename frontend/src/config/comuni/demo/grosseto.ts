@@ -4,7 +4,8 @@ import { percorso } from "../percorso";
 // Comune di Grosseto (GR) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Il sito del Comune non si è letto in automatico: la pagina dei servizi sociali va cercata e confermata.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: pagina «Ufficio Servizi Sociali» del Comune di Grosseto (https://www.comune.grosseto.it/amministrazione/unita_organizzativa/ufficio-servizi-sociali/), riferiti dalla dott.ssa Baudone il 14/11/2026 da una ricerca assistita; pagina non aperta dall'assistente e senza data di aggiornamento: da ricontrollare.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const grosseto: ComuneConfig = {
   slug: "grosseto",
   tipo: "comune",
@@ -17,11 +18,11 @@ export const grosseto: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0564 488111",
-  email: "",
+  indirizzo: "Via degli Apostoli 11",
+  telefono: "0564 488862",
+  email: "servizi.sociali@comune.grosseto.it",
   pec: "",
-  orari: "",
+  orari: "Sportello: lunedì, martedì, giovedì e venerdì 10–12:30; martedì e giovedì anche 15–17. Telefono: dal lunedì al venerdì 9–13; martedì e giovedì anche 14:30–17. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.grosseto.it",
 
   logo: null,
