@@ -19,7 +19,7 @@ export const fonteNuova: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "Via Niccolò Machiavelli 1, Hub servizi, 1° piano",
-  telefono: "06 905522437 (responsabile dei Servizi Sociali)",
+  telefono: "06 905522437 (responsabile dei Servizi Sociali); Segretariato sociale 06 905522440 / 06 905522446",
   email: "sociale@fonte-nuova.it",
   pec: "protocollo@cert.fonte-nuova.it",
   orari: "",
