@@ -5,7 +5,8 @@ import { percorso } from "../percorso";
 // Comune di Cassino (FR) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // L'indirizzo del sito del Comune è preso dalla scheda del Comune su tuttitalia.it (collegamento al sito istituzionale); lo stesso indirizzo compare nei documenti ufficiali trovati con la ricerca: il sito non è stato aperto in questo giro, quindi indirizzo e pagina dei servizi sociali sono da verificare. Azienda sanitaria non indicata: da cercare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: pagina «Servizi Sociali, Politiche per la Famiglia» del Comune di Cassino (aggiornata il 21/01/2026); sede non inserita perché le pagine del sito danno indirizzi diversi, letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const cassino: ComuneConfig = {
   slug: "cassino",
   tipo: "comune",
@@ -19,10 +20,10 @@ export const cassino: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
-  email: "",
+  telefono: "0776 298304",
+  email: "politiche.sociali@comunecassino.it",
   pec: "servizio.protocollo@comunecassino.telecompost.it",
-  orari: "",
+  orari: "Dal lunedì al venerdì 9–12. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.cassino.fr.it",
 
   logo: null,

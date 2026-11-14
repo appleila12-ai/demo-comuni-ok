@@ -133,7 +133,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Casoria | NA | Campania | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Casoria | NA | Campania | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Cassino | FR | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Cassino | FR | Lazio | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Cassino | FR | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Castel San Giovanni | PC | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Castel San Giovanni | PC | Emilia-Romagna | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
@@ -154,7 +153,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Cava de' Tirreni | SA | Campania | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Cava de' Tirreni | SA | Campania | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Cento | FE | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Cento | FE | Emilia-Romagna | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Cento | FE | Emilia-Romagna | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Cerveteri | RM | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Cerveteri | RM | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
@@ -183,7 +181,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Cortemaggiore | PC | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Cortemaggiore | PC | Emilia-Romagna | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Cosenza | CS | Calabria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Cosenza | CS | Calabria | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Cosenza | CS | Calabria | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Crotone | KR | Calabria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Crotone | KR | Calabria | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
@@ -214,7 +211,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Fermo | FM | Marche | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Fermo | FM | Marche | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Ferrara | FE | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Ferrara | FE | Emilia-Romagna | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Fiorenzuola d'Arda | PC | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Fiorenzuola d'Arda | PC | Emilia-Romagna | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Firenze | FI | Toscana | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
