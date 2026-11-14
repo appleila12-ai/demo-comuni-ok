@@ -1493,7 +1493,7 @@ ESENZIONE_ASL.ciampino = {
   ],
   paginaUrl: "https://www.aslroma6.it/distretti/dh3-ciampino/uos-cure-primarie",
   paginaLabel: "Cure Primarie · Distretto 3 Ciampino · ASL Roma 6",
-  manca: "La pagina non indica l'elenco dei documenti né la data di aggiornamento. L'orario dello sportello per le esenzioni non è indicato: l'orario che si legge è quello della segreteria, chiedi conferma.",
+  manca: "La pagina non indica gli orari degli sportelli né la data di aggiornamento: l'orario che si legge è quello della segreteria, chiedi conferma prima di andare.",
   fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 3, testo della pagina verificato il 14/11/2026 (data di aggiornamento non indicata)",
 };
 
@@ -1516,7 +1516,7 @@ ESENZIONE_ASL["albano-laziale"] = {
   paginaUrl: "https://www.aslroma6.it/distretti/dh2-albano-laziale/uos-cure-primarie",
   paginaLabel: "Cure Primarie · Distretto 2 Albano Laziale · ASL Roma 6",
   manca:
-    "La pagina non indica l'indirizzo preciso, un telefono né l'elenco dei documenti, e non è aggiornata di recente: conferma tutto con l'ufficio.",
+    "La pagina non indica l'indirizzo preciso né un telefono, e non è aggiornata di recente: conferma tutto con l'ufficio. L'elenco dei documenti è quello generale dell'ASL Roma 6.",
   fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 2, controllata il 14/11/2026 (pagina datata)",
 };
 
