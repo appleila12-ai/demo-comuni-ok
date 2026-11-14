@@ -261,11 +261,6 @@
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
-    },
-    "esenzione-ticket": {
-      "dal": "2026-11-13",
-      "chiesto": "URP dell'azienda sanitaria",
-      "stato": "da chiedere"
     }
   },
   "albenga": {
@@ -326,22 +321,12 @@
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
-    },
-    "esenzione-ticket": {
-      "dal": "2026-11-13",
-      "chiesto": "URP dell'azienda sanitaria",
-      "stato": "da chiedere"
     }
   },
   "aprilia": {
     "bonus-comunali": {
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
-    "esenzione-ticket": {
-      "dal": "2026-11-13",
-      "chiesto": "URP dell'azienda sanitaria",
       "stato": "da chiedere"
     }
   },
@@ -1042,22 +1027,12 @@
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
-    },
-    "esenzione-ticket": {
-      "dal": "2026-11-13",
-      "chiesto": "URP dell'azienda sanitaria",
-      "stato": "da chiedere"
     }
   },
   "cisterna-di-latina": {
     "bonus-comunali": {
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
-    "esenzione-ticket": {
-      "dal": "2026-11-13",
-      "chiesto": "URP dell'azienda sanitaria",
       "stato": "da chiedere"
     }
   },
@@ -1094,13 +1069,6 @@
     "servizi-sociali": {
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    }
-  },
-  "civitavecchia": {
-    "esenzione-ticket": {
-      "dal": "2026-11-13",
-      "chiesto": "URP dell'azienda sanitaria",
       "stato": "da chiedere"
     }
   },

@@ -1410,3 +1410,115 @@ const ASL4_DISTRETTO16: SchedaEsenzioneAsl = {
   fonte: "ASL 4 · Ufficio Anagrafe Sanitaria, risposte scritte del 12/11/2026 (in copia URP Chiavari), con i moduli allegati (certificato «Esenzione ticket per patologia» e delega)",
 };
 for (const slug of ["carro", "maissana", "varese-ligure"]) ESENZIONE_ASL[slug] = ASL4_DISTRETTO16;
+
+// Lazio · ASL Latina Distretto 1 (Aprilia, Cisterna), ASL Roma 4 (Civitavecchia), ASL Roma 6 (Albano, Anzio, Ciampino).
+// Pagine dei siti delle ASL, controllate il 14/11/2026. Orari spesso non aggiornati o su pagine datate: avviso fisso in app.
+const AVVISO_ORARI = "Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.";
+
+ESENZIONE_ASL.aprilia = {
+  asl: "ASL Latina · Distretto 1 (Aprilia)",
+  intro: "L'esenzione per patologia si chiede allo sportello del Distretto 1 ad Aprilia, nella sede di via Giustiniano.",
+  comeSiPresenta: [
+    "Via Giustiniano snc, Aprilia · martedì e giovedì 8:30–12:00, su appuntamento",
+    "Per l'appuntamento scrivi all'indirizzo dello sportello o chiama il centralino della sede",
+    AVVISO_ORARI,
+  ],
+  mail: "d5.distretto1@ausl.latina.it",
+  telefoni: [{ etichetta: "Centralino della sede di Aprilia", numero: "06 9286341" }],
+  paginaUrl: "https://www.ausl.latina.it/gs-servterritoriali/288-dis1-servizi",
+  paginaLabel: "Servizi del Distretto 1 · ASL Latina",
+  altriLink: [{ label: "Carta dei servizi ASL Latina 2026", url: FONTE_CARTA_LATINA }],
+  manca:
+    "La pagina non indica un telefono diretto dello sportello esenzioni né i documenti da portare. Per i documenti vedi la Carta dei servizi o chiedi al Distretto.",
+  fonte: "ASL Latina · pagina «Servizi – Distretto 1» (ultima modifica 29/09/2026), controllata il 14/11/2026",
+};
+
+ESENZIONE_ASL["cisterna-di-latina"] = {
+  asl: "ASL Latina · Distretto 1 (Cisterna di Latina)",
+  intro: "A Cisterna lo sportello del Distretto 1 si occupa di esenzione ticket e di tessere sanitarie.",
+  comeSiPresenta: [
+    "Cisterna di Latina · dal lunedì al venerdì 8:30–12:30",
+    "La pagina scrive solo «Esenzione Ticket», senza distinguere tra patologia e reddito: chiedi allo sportello",
+    AVVISO_ORARI,
+  ],
+  mail: "sceltamedico.cisterna@ausl.latina.it",
+  telefoni: [{ etichetta: "Sportello Distretto 1 · Cisterna", numero: "06 96025305" }],
+  paginaUrl: "https://www.ausl.latina.it/gs-servterritoriali/288-dis1-servizi",
+  paginaLabel: "Servizi del Distretto 1 · ASL Latina",
+  altriLink: [{ label: "Carta dei servizi ASL Latina 2026", url: FONTE_CARTA_LATINA }],
+  manca:
+    "La pagina non indica l'indirizzo preciso dello sportello né i documenti da portare. Chiedi al Distretto o vedi la Carta dei servizi.",
+  fonte: "ASL Latina · pagina «Servizi – Distretto 1» (ultima modifica 29/09/2026), controllata il 14/11/2026",
+};
+
+ESENZIONE_ASL.civitavecchia = {
+  asl: "ASL Roma 4 · Casa della Comunità di Civitavecchia",
+  intro: "A Civitavecchia le esenzioni per reddito e per patologia si chiedono alla Casa della Comunità, in viale Lazio.",
+  comeSiPresenta: [
+    "Viale Lazio 34/B, Civitavecchia · dal lunedì al venerdì 8:30–11:30 e 14:30–16:30 (per italiani e stranieri)",
+    AVVISO_ORARI,
+  ],
+  telefoni: [
+    { etichetta: "Casa della Comunità di Civitavecchia", numero: "06 96669377" },
+    { etichetta: "PUA (Punto Unico di Accesso)", numero: "06 96669353" },
+  ],
+  paginaUrl: "https://www.aslroma4.it/strutture-sanitarie/case-della-comunita/casa-della-comunita-civitavecchia",
+  paginaLabel: "Casa della Comunità di Civitavecchia · ASL Roma 4",
+  altriLink: [{ label: "Esenzione ticket · ASL Roma 4", url: "https://www.aslroma4.it/come-fare-per/come-fare-per-ticket-ed-esenzioni/esenzione-ticket" }],
+  manca:
+    "L'elenco dei documenti e la data di aggiornamento della pagina non sono indicati nella pagina della sede: vedi la pagina «Esenzione ticket» dell'ASL Roma 4 o chiedi allo sportello.",
+  fonte: "ASL Roma 4 · pagina della Casa della Comunità di Civitavecchia, controllata il 14/11/2026",
+};
+
+ESENZIONE_ASL.ciampino = {
+  asl: "ASL Roma 6 · Distretto 3 (Ciampino)",
+  intro: "A Ciampino le esenzioni diverse da quelle per reddito si chiedono alla segreteria Cure Primarie del Distretto, in via Mario Calò 5.",
+  comeSiPresenta: [
+    "Via Mario Calò 5, Ciampino · martedì e giovedì 9:30–12:30",
+    "Sulla pagina del Distretto c'è il modulo per la richiesta di esenzione per patologia cronica e/o invalidità",
+    AVVISO_ORARI,
+  ],
+  mail: "cure.primarie.dh3@aslroma6.it",
+  telefoni: [
+    { etichetta: "Cure Primarie · Distretto 3", numero: "06 9327 2943" },
+    { etichetta: "Cure Primarie · Distretto 3", numero: "06 9327 5423" },
+    { etichetta: "Cure Primarie · Distretto 3", numero: "06 9327 5415" },
+  ],
+  paginaUrl: "https://www.aslroma6.it/distretti/dh3-ciampino/uos-cure-primarie",
+  paginaLabel: "Cure Primarie · Distretto 3 Ciampino · ASL Roma 6",
+  manca: "La pagina non indica l'elenco dei documenti né la data di aggiornamento: chiedili alla segreteria.",
+  fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 3, controllata il 14/11/2026 (data di aggiornamento non indicata)",
+};
+
+ESENZIONE_ASL["albano-laziale"] = {
+  asl: "ASL Roma 6 · Distretto 2 (Albano Laziale)",
+  intro: "Ad Albano Laziale le esenzioni si chiedono al Distretto 2; si possono presentare anche per email, con tutta la documentazione.",
+  comeSiPresenta: [
+    "Sportelli 4-5-6 al piano terra del Distretto · lunedì–venerdì 8:00–11:00; martedì e giovedì 14:30–16:00 (pagina non recente, il pomeriggio è a numero limitato)",
+    "Oppure per email, allegando la documentazione richiesta",
+    AVVISO_ORARI,
+  ],
+  mail: "esenzioni.dh2@aslroma6.it",
+  telefoni: [],
+  paginaUrl: "https://www.aslroma6.it/distretti/dh2-albano-laziale/uos-cure-primarie",
+  paginaLabel: "Cure Primarie · Distretto 2 Albano Laziale · ASL Roma 6",
+  manca:
+    "La pagina non indica l'indirizzo preciso, un telefono né l'elenco dei documenti, e non è aggiornata di recente: conferma tutto con l'ufficio.",
+  fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 2, controllata il 14/11/2026 (pagina datata)",
+};
+
+ESENZIONE_ASL.anzio = {
+  asl: "ASL Roma 6 · Distretto 6 (Anzio e Nettuno)",
+  intro: "Ad Anzio le esenzioni per patologia sono indicate solo per le nuove richieste; per l'esenzione per reddito si va al Poliambulatorio Barberini di Nettuno.",
+  comeSiPresenta: [
+    "Esenzione per reddito: accesso diretto al Poliambulatorio Barberini, Nettuno · lunedì–venerdì 8:00–13:00; martedì e giovedì 14:30–16:30",
+    "Esenzione per patologia (nuove richieste): la pagina non indica lo sportello, chiedi al Distretto",
+    AVVISO_ORARI,
+  ],
+  telefoni: [],
+  paginaUrl: "https://www.aslroma6.it/distretti/dh6-anzio/uos-cure-primarie",
+  paginaLabel: "Cure Primarie · Distretto 6 Anzio · ASL Roma 6",
+  manca:
+    "La pagina non indica dove e quando presentare la richiesta per patologia, né telefono, email e documenti: chiedili al Distretto.",
+  fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 6, controllata il 14/11/2026 (pagina datata)",
+};
