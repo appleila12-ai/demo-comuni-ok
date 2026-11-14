@@ -1153,11 +1153,6 @@
     }
   },
   "civitavecchia": {
-    "bonus-comunali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
     "esenzione-ticket": {
       "dal": "2026-11-13",
       "chiesto": "URP dell'azienda sanitaria",

@@ -714,6 +714,29 @@ export const BONUS: Bonus[] = [
     nota: "Pagina della Regione aggiornata il 04/03/2026. La pagina non indica soglie ISEE né scadenze: chiedile al Distretto.",
   },
 
+  // ------------------------------------------------------------ CIVITAVECCHIA (14/11/2026)
+  {
+    id: "civitavecchia-voucher-natalizi-2026",
+    regione: "Lazio",
+    comuni: ["civitavecchia"],
+    titolo: "Voucher sociali natalizi 2026 (buono spesa per famiglie in difficoltà economica)",
+    perChi:
+      "Famiglie residenti a Civitavecchia in difficoltà economica e sociale, con ISEE ordinario o corrente 2026 entro la soglia per numero di componenti: 1 persona 6.000 euro, 2 persone 9.420, 3 persone 12.240, 4 persone 14.760, 5 persone 17.100, 6 persone 19.200, 7 persone 21.300, 8 persone 23.400, oltre 8 persone 25.500. Una sola domanda per famiglia. Non è una misura riservata alle persone con disabilità. Cittadini non UE: permesso di soggiorno valido da allegare.",
+    cosa:
+      "Un buono spesa per generi alimentari di prima necessità: 50 euro per una persona, 100 euro per famiglie fino a 2 persone, 200 euro per famiglie con 3 persone o più. Chi riceve altri sostegni pubblici può partecipare, ma ha priorità chi non ne ha.",
+    stato: "aperto",
+    scade: "2026-11-18",
+    quando: "Domande dalle 8:00 del 2 novembre alle 13:00 del 18 novembre 2026.",
+    comeSiChiede:
+      "Solo online, con SPID o CIE, dal modulo indicato nella pagina del Comune. Se l'ISEE non è ancora pronto si può presentare con la DSU 2026 già trasmessa. Informazioni per telefono: PUA 334 6195660 (lun-ven 13:00-14:00); Servizi Sociali 0766 590792 (martedì 15:00-18:00, venerdì 9:00-13:00).",
+    fonte: {
+      label: "Comune di Civitavecchia · Voucher sociali natalizi 2026 (avviso del 30/10/2026)",
+      url: "https://www.comune.civitavecchia.rm.it/it/news/2071495",
+    },
+    verificatoIl: "14/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda: l'avviso scrive che il voucher viene dato solo se ci sono risorse disponibili.",
+  },
+
   // ------------------------------------------------------------ COMUNE DI LATINA
   // Fonti: pagine dei servizi del Comune di Latina, lette il 26/10/2026.
   {
