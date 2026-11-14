@@ -238,7 +238,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Gragnano | NA | Campania | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Gragnano | NA | Campania | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Grosseto | GR | Toscana | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Grosseto | GR | Toscana | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Gubbio | PG | Umbria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Gubbio | PG | Umbria | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Guidonia Montecelio | RM | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
