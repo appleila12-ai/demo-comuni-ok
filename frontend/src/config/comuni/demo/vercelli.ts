@@ -4,7 +4,7 @@ import { percorso } from "../percorso";
 // Comune di Vercelli (VC) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Verificato solo il sito del Comune (link ufficiale). Pagina "Salute, benessere e assistenza" del sito del Comune (controllato il 14 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Sportello sociale verificato il 14/11/2026; da fare: bonus comunali, associazioni, sport e tempo libero, procedura ticket ASL VC.
 export const vercelli: ComuneConfig = {
   slug: "vercelli",
   tipo: "comune",
@@ -17,11 +17,11 @@ export const vercelli: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0161 5961",
-  email: "",
+  indirizzo: "Via Alessandro Manzoni 8, 13100 Vercelli",
+  telefono: "0161 596512",
+  email: "segreteria.polsoc@comune.vercelli.it",
   pec: "",
-  orari: "",
+  orari: "Sportello Politiche Sociali: lunedì, mercoledì e giovedì 09:00-12:00; martedì e venerdì chiuso.",
   sitoWeb: "https://www.comune.vercelli.it/servizi/salute-benessere-assistenza",
 
   logo: null,
@@ -37,8 +37,8 @@ export const vercelli: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.vercelli.it/servizi/salute-benessere-assistenza" },
+      subtitle: "Via Alessandro Manzoni 8 · 0161 596512 · segreteria.polsoc@comune.vercelli.it",
+      action: { type: "web", value: "https://www.comune.vercelli.it/amministrazione/sportello-settore-politiche-sociali" },
     },
     {
       icon: "medkit-outline",
