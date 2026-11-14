@@ -35,7 +35,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Aprilia | LT | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Ardea | RM | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Ardea | RM | Lazio | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Ardea | RM | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
+| Comune di Ardea | RM | Lazio | esenzione ticket | ASL Roma 6 (mail del 14/11/2026) | chiesto | 2026-11-14 |
 | Comune di Arenzano | GE | Liguria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Arenzano | GE | Liguria | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Arezzo | AR | Toscana | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
@@ -154,7 +154,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Cento | FE | Emilia-Romagna | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Cento | FE | Emilia-Romagna | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Cerveteri | RM | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Cerveteri | RM | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
+| Comune di Cerveteri | RM | Lazio | esenzione ticket | ASL Roma 4 · Distretto 2 (mail del 14/11/2026) | chiesto | 2026-11-14 |
 | Comune di Cesena | FC | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Chiavari | GE | Liguria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Chiavari | GE | Liguria | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
