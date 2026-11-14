@@ -696,4 +696,8 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "casalecchio-di-reno": { email: "welfare@comune.casalecchio.bo.it", tipo: "ordinaria", fonte: "sito del Comune di Casalecchio di Reno, pagina Politiche Sociali (indirizzo riferito dalla dott.ssa Baudone il 13/11/2026; pagina non aperta dall'assistente perché il sito blocca la lettura automatica)" },
   // Lenola (LT)
   "lenola": { email: "servizisociali@comune.lenola.lt.it", tipo: "ordinaria", fonte: "sito del Comune di Lenola, pagina Area Affari generali, demografici e scolastico-educativi, voce Ufficio Servizi Sociali e Scolastico-Educativi (pagina aggiornata il 12/10/2023, letta il 13/11/2026)" },
+  // Gragnano (NA), Quarto (NA), Maddaloni (CE): casella generale del Comune (nessuna casella dei Servizi Sociali sul sito)
+  "gragnano": { email: "protocollo@comune.gragnano.na.it", tipo: "ordinaria", fonte: "sito del Comune di Gragnano, sezione Contatti: casella generale di protocollo (letta il 14/11/2026)" },
+  "quarto": { email: "protocollogenerale@pec.comune.quarto.na.it", tipo: "pec", fonte: "sito del Comune di Quarto, sezione Contatti: PEC generale di protocollo (letta il 14/11/2026)" },
+  "maddaloni": { email: "protocollo@comune.maddaloni.ce.it", tipo: "ordinaria", fonte: "sito del Comune di Maddaloni, sezione Contatti: casella generale di protocollo (letta il 14/11/2026)" },
 };
