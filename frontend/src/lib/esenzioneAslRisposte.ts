@@ -1472,10 +1472,10 @@ ESENZIONE_ASL.civitavecchia = {
 
 ESENZIONE_ASL.ciampino = {
   asl: "ASL Roma 6 · Distretto 3 (Ciampino)",
-  intro: "A Ciampino le esenzioni diverse da quelle per reddito si chiedono alla segreteria Cure Primarie del Distretto, in via Mario Calò 5.",
+  intro: "A Ciampino le esenzioni per patologia cronica, invalidità e malattie rare si chiedono alla segreteria Cure Primarie del Distretto, in via Mario Calò 5.",
   comeSiPresenta: [
-    "Via Mario Calò 5, Ciampino · martedì e giovedì 9:30–12:30",
-    "Sulla pagina del Distretto c'è il modulo per la richiesta di esenzione per patologia cronica e/o invalidità",
+    "Via Mario Calò 5, Ciampino, 1° piano, stanza 9 / 12 · segreteria martedì, mercoledì e giovedì 8:00–10:00",
+    "Nella sezione «Modulistica» della pagina del Distretto c'è il modulo per la richiesta di esenzione per patologia cronica e/o invalidità",
     AVVISO_ORARI,
   ],
   mail: "cure.primarie.dh3@aslroma6.it",
@@ -1486,8 +1486,8 @@ ESENZIONE_ASL.ciampino = {
   ],
   paginaUrl: "https://www.aslroma6.it/distretti/dh3-ciampino/uos-cure-primarie",
   paginaLabel: "Cure Primarie · Distretto 3 Ciampino · ASL Roma 6",
-  manca: "La pagina non indica l'elenco dei documenti né la data di aggiornamento: chiedili alla segreteria.",
-  fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 3, controllata il 14/11/2026 (data di aggiornamento non indicata)",
+  manca: "La pagina non indica l'elenco dei documenti né la data di aggiornamento. L'orario è quello della segreteria: la pagina non dice se vale anche per le esenzioni, chiedilo alla segreteria.",
+  fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 3, testo della pagina verificato il 14/11/2026 (data di aggiornamento non indicata)",
 };
 
 ESENZIONE_ASL["albano-laziale"] = {
