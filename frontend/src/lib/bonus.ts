@@ -713,6 +713,24 @@ export const BONUS: Bonus[] = [
     verificatoIl: "21/10/2026",
     nota: "Pagina della Regione aggiornata il 04/03/2026. La pagina non indica soglie ISEE né scadenze: chiedile al Distretto.",
   },
+  {
+    id: "lazio-dopo-di-noi",
+    regione: "Lazio",
+    titolo: "Dopo di Noi (legge 112/2016): progetti per persone con disabilità grave senza il sostegno dei familiari",
+    perChi:
+      "Persone con disabilità grave, di norma maggiorenni, senza un adeguato sostegno familiare. La legge dà priorità a chi non ha più i genitori e non ha risorse economiche; a chi ha genitori che per l'età o per la loro disabilità non possono più garantire il sostegno necessario; a chi vive in strutture molto lontane da una casa familiare.",
+    cosa:
+      "Un progetto personalizzato, deciso dopo una valutazione multidimensionale, con interventi per l'autonomia, l'abitare e la vita indipendente. Il budget dipende dal progetto. Per il 2026 la Giunta regionale ha destinato 23 milioni di euro al Dopo di Noi e alle case famiglia (47,5 milioni nel biennio 2025-2026). Gli importi per la singola persona non sono scritti nelle pagine della Regione.",
+    stato: "attivo",
+    comeSiChiede:
+      "Le pagine della Regione non indicano una domanda da presentare in una data: l'accesso passa dalla valutazione dei servizi sociali e sanitari del tuo Distretto. Chiedi al Segretariato Sociale del tuo Comune o al PUA del tuo Distretto. Informazioni: Numero Unico Regionale 06 99 500 (lun-ven 8:00-17:30).",
+    fonte: {
+      label: "Regione Lazio · DGR n. 453 dell'11/06/2026 (BURL n. 48 del 16/06/2026), programmazione Dopo di Noi",
+      url: "https://www.regione.lazio.it/sites/default/files/documentazione/2026/POS-DGR-453-11-06-2026.pdf",
+    },
+    verificatoIl: "13/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda. Requisiti, documenti e soglie ISEE non sono nelle pagine lette: chiedili al Distretto.",
+  },
 
   // ------------------------------------------------------------ COMUNE DI LATINA
   // Fonti: pagine dei servizi del Comune di Latina, lette il 26/10/2026.
