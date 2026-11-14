@@ -737,6 +737,83 @@ export const BONUS: Bonus[] = [
     nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda: l'avviso scrive che il voucher viene dato solo se ci sono risorse disponibili.",
   },
 
+  // ------------------------------------------------------------ ALBANO LAZIALE, APRILIA, CISTERNA (14/11/2026)
+  {
+    id: "albano-laziale-rimborso-nido-privati-2026",
+    regione: "Lazio",
+    comuni: ["albano-laziale"],
+    titolo: "Rimborso delle rette degli asili nido privati, anno 2026",
+    perChi:
+      "Famiglie residenti ad Albano Laziale con figli minori a carico (anche adottati o affidati conviventi) che hanno pagato rette di asili nido privati autorizzati tra gennaio e dicembre 2026. Non è una misura riservata alle persone con disabilità.",
+    cosa: "Un contributo a rimborso delle rette pagate nel 2026 per l'asilo nido privato autorizzato.",
+    stato: "aperto",
+    scade: "2026-12-31",
+    quando: "Domande entro e non oltre il 31 dicembre 2026.",
+    comeSiChiede:
+      "Solo online, con SPID o CIE, dal modulo nella sezione Servizi del sito del Comune. Servono: documento d'identità, permesso di soggiorno se extra UE, fattura dell'asilo nido intestata a chi fa la domanda con le mensilità 2026 di frequenza.",
+    fonte: {
+      label: "Comune di Albano Laziale · Voucher / contributi economici asilo nido 2026",
+      url: "https://comune.albanolaziale.rm.it/servizio/voucher-contributi-economici-per-il-rimborsi-del-pagamento-delle-rette-degli-asili-nido-privati-in-favore-dei-minori-residenti-nel-comune-di-albano-laziale/",
+    },
+    verificatoIl: "14/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+  {
+    id: "albano-laziale-disabilita-gravissima-2026",
+    regione: "Lazio",
+    comuni: ["albano-laziale"],
+    titolo: "Contributo per disabilità gravissima, annualità 2026",
+    perChi: "Persone che già ricevono il contributo per disabilità gravissima dal Comune di Albano Laziale.",
+    cosa: "Dal 2026 per continuare a ricevere il contributo non serve presentare una nuova domanda.",
+    stato: "attivo",
+    quando: "Dal 2026, senza nuova domanda.",
+    comeSiChiede:
+      "Basta avere l'ISEE aggiornato e segnalare al Comune eventuali cambiamenti. Per chi non lo riceve ancora, chiedi al Servizio Politiche Sociali del Comune come fare.",
+    fonte: {
+      label: "Comune di Albano Laziale · Novità, «Disabilità gravissima – annualità 2026»",
+      url: "https://comune.albanolaziale.rm.it/novita/",
+    },
+    verificatoIl: "14/11/2026",
+    nota: "Il Comune non indica gli importi nella pagina delle novità: chiedili al Servizio Politiche Sociali.",
+  },
+  {
+    id: "cisterna-di-latina-rimborso-nido-privati-2026-2027",
+    regione: "Lazio",
+    comuni: ["cisterna-di-latina"],
+    titolo: "Rimborso per figli iscritti ad asili nido privati autorizzati, anno scolastico 2026-2027",
+    perChi:
+      "Famiglie con figli iscritti ad asili nido privati regolarmente autorizzati dal Comune di Cisterna di Latina. Non è una misura riservata alle persone con disabilità.",
+    cosa: "Un rimborso delle rette dell'asilo nido privato per l'anno scolastico 2026-2027.",
+    stato: "aperto",
+    scade: "2026-11-20",
+    quando: "Domande entro le 23:59 del 20 novembre 2026.",
+    comeSiChiede: "Le modalità e i requisiti sono nell'avviso sul sito del Comune, nella sezione Servizi Sociali.",
+    fonte: {
+      label: "Comune di Cisterna di Latina · Avvisi Servizi Sociali (avviso del 17/10/2026)",
+      url: "https://www.comune.cisterna.latina.it/it/news-category/147381",
+    },
+    verificatoIl: "14/11/2026",
+    nota: "Dalla pagina delle novità si legge solo il titolo e la scadenza: leggi l'avviso completo o chiedi all'ufficio prima di preparare la domanda. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi.",
+  },
+  {
+    id: "aprilia-assistenza-economica-straordinaria",
+    regione: "Lazio",
+    comuni: ["aprilia"],
+    titolo: "Assistenza economica straordinaria",
+    perChi:
+      "Persone residenti ad Aprilia con ISEE in corso di validità non superiore a 8.000 euro, che non hanno rifiutato né lasciato volontariamente misure nazionali di contrasto alla povertà (salvo situazioni valutate dai Servizi Sociali). Non è una misura riservata alle persone con disabilità.",
+    cosa: "Un contributo economico per i bisogni primari di chi è in difficoltà economica. Le spese devono riferirsi all'anno in corso.",
+    stato: "attivo",
+    quando: "Nessuna scadenza: la domanda si presenta a sportello.",
+    comeSiChiede: "Con il modulo «richiesta contributi economici straordinari» da consegnare ai Servizi Sociali del Comune.",
+    fonte: {
+      label: "Comune di Aprilia · Assistenza economica-sociale straordinaria",
+      url: "https://www.comune.aprilia.lt.it/servizi/assistenza-economica-sociale-straordinaria",
+    },
+    verificatoIl: "14/11/2026",
+    nota: "La pagina del Comune non è stata aggiornata di recente: i fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+
   // ------------------------------------------------------------ COMUNE DI LATINA
   // Fonti: pagine dei servizi del Comune di Latina, lette il 26/10/2026.
   {
