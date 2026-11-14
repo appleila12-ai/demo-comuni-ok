@@ -4,7 +4,8 @@ import { INPS_PRIMA_FASE } from "../percorso";
 // Comune di Foligno (PG) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (18 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sito ufficiale e pagina "Assistenza sociale" verificati il 18/10/2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: pagina «Area Servizi Sociali e Scolastici» del Comune di Foligno (aggiornata il 04/03/2026), testo della pagina incollato dalla dott.ssa Baudone il 14/11/2026; email non inserita (sulla pagina c'è solo quella personale della dirigente), orari non indicati.
+// Da fare: email e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
 export const foligno: ComuneConfig = {
   slug: "foligno",
   tipo: "comune",
@@ -17,8 +18,8 @@ export const foligno: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
+  indirizzo: "Via Guglielmo Oberdan 119",
+  telefono: "0742 346040",
   email: "",
   pec: "",
   orari: "",

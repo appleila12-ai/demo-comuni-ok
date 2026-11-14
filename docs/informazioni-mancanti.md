@@ -205,7 +205,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Firenze | FI | Toscana | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Fiumicino | RM | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Foligno | PG | Umbria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Foligno | PG | Umbria | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Foligno | PG | Umbria | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Follo | SP | Liguria | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-09 |
 | Comune di Fonte Nuova | RM | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
