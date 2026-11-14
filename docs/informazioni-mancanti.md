@@ -216,7 +216,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Fonte Nuova | RM | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Fonte Nuova | RM | Lazio | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Forlì | FC | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Forlì | FC | Emilia-Romagna | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Formia | LT | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Formia | LT | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Formigine | MO | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
@@ -256,7 +255,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Imola | BO | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Imola | BO | Emilia-Romagna | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Imperia | IM | Liguria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Imperia | IM | Liguria | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Imperia | IM | Liguria | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Isernia | IS | Molise | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Isernia | IS | Molise | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |

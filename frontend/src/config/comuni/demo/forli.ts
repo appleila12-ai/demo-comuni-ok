@@ -5,7 +5,8 @@ import { percorso } from "../percorso";
 // Comune di Forlì (FC) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // È verificato solo l'indirizzo web indicato in sitoWeb.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: pagina «Sportello Sociale» del Comune di Forlì (aggiornata il 20/01/2026), letta il 14/11/2026.
+// Da fare: sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
 export const forli: ComuneConfig = {
   slug: "forli",
   tipo: "comune",
@@ -18,11 +19,11 @@ export const forli: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0543 712111",
-  email: "",
+  indirizzo: "Palazzina ex Ramilli, Via Guglielmo Oberdan 11",
+  telefono: "0543 712888",
+  email: "sportellosociale@comune.forli.fc.it",
   pec: "",
-  orari: "",
+  orari: "Telefono: lunedì, mercoledì e venerdì 8:30–13:30; martedì e giovedì 8:30–18. Ricevimento su appuntamento: lunedì, mercoledì e venerdì 8:30–13:30; martedì 14–18; giovedì 8:30–18. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.forli.fc.it",
 
   logo: null,

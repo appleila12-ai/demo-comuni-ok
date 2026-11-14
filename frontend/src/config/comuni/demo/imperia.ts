@@ -4,7 +4,8 @@ import { percorso } from "../percorso";
 // Comune di Imperia (IM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Verificato solo il sito del Comune (link ufficiale). Pagina dell'Assessorato alla Comunità Solidale del sito del Comune. Il sito dell'azienda sanitaria non è stato controllato.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: scheda «Servizi Sociali ATS 11» del Comune di Imperia (aggiornata il 10/03/2025); orari non indicati, letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const imperia: ComuneConfig = {
   slug: "imperia",
   tipo: "comune",
@@ -17,9 +18,9 @@ export const imperia: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0183 7011",
-  email: "",
+  indirizzo: "Piazza Dante 4 (ex Palazzo Comunale)",
+  telefono: "0183 701401",
+  email: "sportelloalpubblico_servizisociali@comune.imperia.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.imperia.it/it/page/146987",
