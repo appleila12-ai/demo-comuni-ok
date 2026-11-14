@@ -4,7 +4,8 @@ import { INPS_SPERIMENTAZIONE } from "../percorso";
 // Comune di Carini (PA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Link ai Servizi Sociali: Argomento "Assistenza sociale" sul sito ufficiale (controllato il 19 ottobre 2026). Link dell'azienda sanitaria controllato sul sito dell'azienda il 19 ottobre 2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: scheda «Ripartizione III» del Comune di Carini (aggiornata il 01/07/2024), letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const carini: ComuneConfig = {
   slug: "carini",
   tipo: "comune",
@@ -17,11 +18,11 @@ export const carini: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
+  indirizzo: "Via Nazionale 312 (ufficio distaccato Promozione umana)",
+  telefono: "091 8611341",
   email: "",
   pec: "",
-  orari: "",
+  orari: "Lunedì 9:30–11:30; martedì 15:30–17:30; venerdì 9:30–11:30. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.carini.pa.it",
 
   logo: null,

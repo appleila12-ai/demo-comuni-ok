@@ -4,7 +4,8 @@ import { percorso } from "../percorso";
 // Comune di Canicattì (AG) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sito ufficiale del Comune controllato il 19 ottobre 2026: una pagina dedicata ai Servizi Sociali non è stata trovata, quindi il link porta alla home del sito (da cercare). Link dell'azienda sanitaria controllato sul sito dell'azienda il 19 ottobre 2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: scheda «Servizi Sociali» del Comune di Canicattì (aggiornata il 17/06/2025), letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const canicatti: ComuneConfig = {
   slug: "canicatti",
   tipo: "comune",
@@ -17,10 +18,10 @@ export const canicatti: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
+  indirizzo: "Centro Culturale San Domenico, Piazza Dante",
+  telefono: "0922 667205",
   email: "",
-  pec: "",
+  pec: "solidarietasociale@pec.comune.canicatti.ag.it",
   orari: "",
   sitoWeb: "https://www.comune.canicatti.ag.it",
 
