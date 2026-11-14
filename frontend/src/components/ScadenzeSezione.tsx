@@ -4,6 +4,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
+import { useRouter } from "expo-router";
 
 import { colors, radius, spacing, topics } from "@/src/theme";
 import { storage } from "@/src/utils/storage";
@@ -29,6 +30,8 @@ import { ContattiUtili } from "@/src/components/ContattiUtili";
 import { PromemoriaSezione } from "@/src/components/PromemoriaSezione";
 import { InvitoCopia } from "@/src/components/CopiaSicurezza";
 import { aggiornaPromemoria } from "@/src/lib/promemoriaApp";
+import { caricaDiario, togliDataPasso } from "@/src/lib/diario";
+import { passoDaScadenza } from "@/src/lib/diarioCore";
 
 const KEY = SCADENZE_KEY;
 
@@ -43,6 +46,13 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
   const [messaggio, setMessaggio] = useState("");
   const [conferma, setConferma] = useState("");
   const [invito, setInvito] = useState(false);
+  const router = useRouter();
+  // Incontri per cui la persona ha già scritto "Com'è andato?"
+  const [raccontati, setRaccontati] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    caricaDiario().then((d) => setRaccontati(new Set(d.voci.map((v) => v.appuntamentoId).filter(Boolean) as string[])));
+  }, []);
 
   useEffect(() => {
     (async () => {
@@ -119,7 +129,12 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
 
   const togli = (idEvento: string) => {
     const idScadenza = lista.find((s) => idEvento.startsWith(s.id))?.id;
-    if (idScadenza) salva(lista.filter((s) => s.id !== idScadenza));
+    if (idScadenza) {
+      salva(lista.filter((s) => s.id !== idScadenza));
+      // se la data nasceva da un passo del diario, il passo resta ma senza data
+      const passo = passoDaScadenza(idScadenza);
+      if (passo) togliDataPasso(passo);
+    }
   };
 
   const esporta = async () => {
@@ -174,6 +189,21 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
                   </View>
                 </View>
                 <Text style={paginaStili.piccolo}>{e.spiegazione}</Text>
+                {e.incontro && e.portare?.length ? (
+                  <Text style={paginaStili.piccolo}>Cosa porto: {e.portare.join(", ")}</Text>
+                ) : null}
+                {e.incontro && e.chiedere?.length ? (
+                  <Text style={paginaStili.piccolo}>Cosa chiedo: {e.chiedere.join(" · ")}</Text>
+                ) : null}
+                {e.incontro && passata && e.scadenzaId && !raccontati.has(e.scadenzaId) ? (
+                  <Bottone
+                    label="Com'è andato?"
+                    icon="create-outline"
+                    variante="vuoto"
+                    onPress={() => router.push(`/dopo-incontro?id=${encodeURIComponent(e.scadenzaId!)}` as any)}
+                    testID={`scadenze-come-${e.id}`}
+                  />
+                ) : null}
                 <Pressable onPress={() => togli(e.id)} hitSlop={8} style={styles.togli}>
                   <Ionicons name="trash-outline" size={14} color={colors.onSurfaceSecondary} />
                   <Text style={styles.togliText}>Togli</Text>
@@ -197,6 +227,13 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
         </Text>
       ) : null}
       {invito ? <InvitoCopia onCalendario={esporta} onChiudi={() => setInvito(false)} /> : null}
+      <Bottone
+        label="Preparo un incontro"
+        icon="clipboard-outline"
+        variante="vuoto"
+        onPress={() => router.push("/prepara-incontro" as any)}
+        testID="scadenze-prepara"
+      />
       <Text style={paginaStili.titoloSezione}>
         {eventi.length > 0 ? "Aggiungi un'altra data" : "Cosa vuoi ricordare?"}
       </Text>
