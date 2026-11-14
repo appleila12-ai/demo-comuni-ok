@@ -5,7 +5,8 @@ import { percorso } from "../percorso";
 // Comune di Caltanissetta (CL) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Verificato solo il sito del Comune (link ufficiale). Pagina "Salute, benessere e assistenza" del sito del Comune (controllato il 14 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: scheda «Politiche Sociali e Socio-Sanitarie» del Comune di Caltanissetta (aggiornata il 31/03/2026), letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const caltanissetta: ComuneConfig = {
   slug: "caltanissetta",
   tipo: "comune",
@@ -18,10 +19,10 @@ export const caltanissetta: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
+  indirizzo: "Palazzo del Carmine, Corso Umberto I 134",
   telefono: "0934 74111",
   email: "",
-  pec: "",
+  pec: "direzione.politiche.sociali@pec.comune.caltanissetta.it",
   orari: "",
   sitoWeb: "https://www.comune.caltanissetta.it/it/page/salute-benessere-e-assistenza?fromService=1",
 
