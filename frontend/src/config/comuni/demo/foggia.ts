@@ -3,7 +3,7 @@ import { percorso } from "../percorso";
 
 // Comune di Foggia (FG) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// È verificato solo l'indirizzo web indicato in sitoWeb.
+// Recapiti verificati 11/11/2026: https://comune.foggia.it/it/unita_organizzative/sociale-e-prevenzione-categorie-disagiate-e-minori-disabilita-dipendenze-immigrazione
 // Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
 export const foggia: ComuneConfig = {
   slug: "foggia",
@@ -17,11 +17,11 @@ export const foggia: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0881 792111",
-  email: "",
+  indirizzo: "Via Alfredo Petrucci SNC - Centro Polifunzionale di Quartiere Don Michele De Paolis, Foggia",
+  telefono: "0881 792832",
+  email: "servizisociali@comune.foggia.it",
   pec: "",
-  orari: "",
+  orari: "Lunedì-venerdì 09:00-12:00; martedì e giovedì 15:30-17:00",
   sitoWeb: "https://ambitoterritoriale.comune.foggia.it",
 
   logo: null,
@@ -37,8 +37,8 @@ export const foggia: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://ambitoterritoriale.comune.foggia.it" },
+      subtitle: "Contatti e orari verificati sul sito istituzionale",
+      action: { type: "web", value: "https://comune.foggia.it/it/unita_organizzative/sociale-e-prevenzione-categorie-disagiate-e-minori-disabilita-dipendenze-immigrazione" },
     },
   ],
 
