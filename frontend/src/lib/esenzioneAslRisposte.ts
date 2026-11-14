@@ -1472,11 +1472,18 @@ ESENZIONE_ASL.civitavecchia = {
 
 ESENZIONE_ASL.ciampino = {
   asl: "ASL Roma 6 · Distretto 3 (Ciampino)",
-  intro: "A Ciampino le esenzioni diverse da quelle per reddito si chiedono alla segreteria Cure Primarie del Distretto, in via Mario Calò 5.",
+  intro: "A Ciampino le esenzioni per patologia cronica, invalidità e malattie rare si chiedono agli sportelli Scelta e revoca del medico del Distretto, in via Mario Calò 5.",
   comeSiPresenta: [
-    "Via Mario Calò 5, Ciampino · martedì e giovedì 9:30–12:30",
-    "Sulla pagina del Distretto c'è il modulo per la richiesta di esenzione per patologia cronica e/o invalidità",
+    "Sportelli Scelta e revoca del medico: via Mario Calò 5, Ciampino, 1° piano, stanze 20-21 · gli orari degli sportelli non sono indicati sulla pagina",
+    "La segreteria Cure Primarie (1° piano, stanza 9 / 12) risponde martedì, mercoledì e giovedì 8:00–10:00",
+    "Nella sezione «Modulistica» della pagina del Distretto c'è il modulo per la richiesta di esenzione per patologia cronica e/o invalidità",
     AVVISO_ORARI,
+  ],
+  documenti: [
+    "Certificato dello specialista di struttura pubblica o accreditata, con diagnosi, codice della malattia, timbro e firma",
+    "Documento d'identità in corso di validità e tessera sanitaria (anche in fotocopia)",
+    "Per il rinnovo: attestato di esenzione in scadenza e certificato con data di rilascio non oltre 6 mesi prima",
+    "Se va un'altra persona: delega firmata, con documento e codice fiscale di chi delega e di chi ritira",
   ],
   mail: "cure.primarie.dh3@aslroma6.it",
   telefoni: [
@@ -1486,8 +1493,8 @@ ESENZIONE_ASL.ciampino = {
   ],
   paginaUrl: "https://www.aslroma6.it/distretti/dh3-ciampino/uos-cure-primarie",
   paginaLabel: "Cure Primarie · Distretto 3 Ciampino · ASL Roma 6",
-  manca: "La pagina non indica l'elenco dei documenti né la data di aggiornamento: chiedili alla segreteria.",
-  fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 3, controllata il 14/11/2026 (data di aggiornamento non indicata)",
+  manca: "La pagina non indica gli orari degli sportelli né la data di aggiornamento: l'orario che si legge è quello della segreteria, chiedi conferma prima di andare.",
+  fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 3, testo della pagina verificato il 14/11/2026 (data di aggiornamento non indicata)",
 };
 
 ESENZIONE_ASL["albano-laziale"] = {
@@ -1498,12 +1505,18 @@ ESENZIONE_ASL["albano-laziale"] = {
     "Oppure per email, allegando la documentazione richiesta",
     AVVISO_ORARI,
   ],
+  documenti: [
+    "Certificato dello specialista di struttura pubblica o accreditata, con diagnosi, codice della malattia, timbro e firma",
+    "Documento d'identità in corso di validità e tessera sanitaria (anche in fotocopia)",
+    "Per il rinnovo: attestato di esenzione in scadenza e certificato con data di rilascio non oltre 6 mesi prima",
+    "Se va un'altra persona: delega firmata, con documento e codice fiscale di chi delega e di chi ritira",
+  ],
   mail: "esenzioni.dh2@aslroma6.it",
   telefoni: [],
   paginaUrl: "https://www.aslroma6.it/distretti/dh2-albano-laziale/uos-cure-primarie",
   paginaLabel: "Cure Primarie · Distretto 2 Albano Laziale · ASL Roma 6",
   manca:
-    "La pagina non indica l'indirizzo preciso, un telefono né l'elenco dei documenti, e non è aggiornata di recente: conferma tutto con l'ufficio.",
+    "La pagina non indica l'indirizzo preciso né un telefono, e non è aggiornata di recente: conferma tutto con l'ufficio. L'elenco dei documenti è quello generale dell'ASL Roma 6.",
   fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 2, controllata il 14/11/2026 (pagina datata)",
 };
 
@@ -1512,13 +1525,20 @@ ESENZIONE_ASL.anzio = {
   intro: "Ad Anzio le esenzioni per patologia sono indicate solo per le nuove richieste; per l'esenzione per reddito si va al Poliambulatorio Barberini di Nettuno.",
   comeSiPresenta: [
     "Esenzione per reddito: accesso diretto al Poliambulatorio Barberini, Nettuno · lunedì–venerdì 8:00–13:00; martedì e giovedì 14:30–16:30",
-    "Esenzione per patologia (nuove richieste): la pagina non indica lo sportello, chiedi al Distretto",
+    "Esenzione per patologia (nuove richieste): per email a scelta.revoca@aslroma6.it oppure agli sportelli del Poliambulatorio Barberini, Nettuno, con gli stessi orari",
     AVVISO_ORARI,
   ],
-  telefoni: [],
+  documenti: [
+    "Certificato dello specialista di struttura pubblica o accreditata, con diagnosi, codice della malattia, timbro e firma",
+    "Documento d'identità in corso di validità e tessera sanitaria (anche in fotocopia)",
+    "Per il rinnovo: attestato di esenzione in scadenza e certificato con data di rilascio non oltre 6 mesi prima",
+    "Se va un'altra persona: delega firmata, con documento e codice fiscale di chi delega e di chi ritira",
+  ],
+  mail: "scelta.revoca@aslroma6.it",
+  telefoni: [{ etichetta: "Esenzioni ticket · Distretto 6", numero: "06 9327 2756" }],
   paginaUrl: "https://www.aslroma6.it/distretti/dh6-anzio/uos-cure-primarie",
   paginaLabel: "Cure Primarie · Distretto 6 Anzio · ASL Roma 6",
   manca:
-    "La pagina non indica dove e quando presentare la richiesta per patologia, né telefono, email e documenti: chiedili al Distretto.",
+    "L'elenco dei documenti è quello generale dell'ASL Roma 6: conferma con il Distretto prima di andare.",
   fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 6, controllata il 14/11/2026 (pagina datata)",
 };
