@@ -3,8 +3,8 @@ import { percorso } from "../percorso";
 
 // Comune di Novara (NO) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// È verificato solo l'indirizzo web indicato in sitoWeb.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Sportello sociale verificati su fonte istituzionale il 14/11/2026.
+// Da fare: esenzione ticket ASL NO, bonus comunali, associazioni, sport e tempo libero.
 export const novara: ComuneConfig = {
   slug: "novara",
   tipo: "comune",
@@ -17,11 +17,11 @@ export const novara: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0321 3701",
-  email: "",
+  indirizzo: "Corso Felice Cavallotti 23, 28100 Novara",
+  telefono: "0321 3703501",
+  email: "sportellosociale@comune.novara.it",
   pec: "",
-  orari: "",
+  orari: "Sportello: lunedì e mercoledì 14:30-16:30; martedì, giovedì e venerdì 09:00-11:00. Accesso al servizio sociale tramite prenotazione.",
   sitoWeb: "https://www.comune.novara.it",
 
   logo: null,
@@ -37,8 +37,8 @@ export const novara: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.novara.it" },
+      subtitle: "Corso Felice Cavallotti 23 · 0321 3703501 · sportellosociale@comune.novara.it",
+      action: { type: "web", value: "https://www.comune.novara.it/amministrazione/sportello-sociale" },
     },
   ],
 
