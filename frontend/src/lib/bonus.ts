@@ -310,9 +310,9 @@ export const BONUS: Bonus[] = [
     titolo: "Contributi per l'affitto (Fondo sociale affitti 2026)",
     perChi: "Residenti a Luni che pagano un affitto, secondo il bando del Comune (Legge 431/1998, art. 11).",
     cosa: "Un contributo per le spese di affitto. Importi e requisiti sono nel bando e nel modulo di domanda sul sito del Comune.",
-    stato: "aperto",
+    stato: "chiuso",
     scade: "2026-11-12",
-    quando: "Domande dal 12/10/2026 alle ore 12:00 del 12/11/2026.",
+    quando: "Domande dal 12/10/2026 alle ore 12:00 del 12/11/2026. Termine scaduto.",
     comeSiChiede:
       "Si presenta il modulo di domanda allegato al bando, pubblicato sul sito del Comune insieme alla scheda di monitoraggio. Per informazioni: Servizio 6 – Servizi socio-educativi, tel. 0187 690111.",
     fonte: {
@@ -1609,7 +1609,7 @@ export const BONUS: Bonus[] = [
       "Contributo mensile per dodici mensilità: fino a 1.000 euro al mese per la dipendenza vitale con assistenza continua nelle 24 ore (per esempio ventilazione assistita, nutrizione artificiale, stato vegetativo), 600 euro al mese per le altre condizioni di disabilità gravissima. Per l'assistenza acquistata (assistenti con contratto, servizi accreditati, strutture semiresidenziali) c'è il rimborso della spesa documentata; per il familiare che assiste a casa basta un'autocertificazione. Le risorse sono 14,78 milioni di euro dal Fondo nazionale per le non autosufficienze.",
     stato: "attivo",
     quando:
-      "Notizia dell'8 ottobre 2026. La Regione non indica una scadenza: i termini sono nei singoli avvisi degli Ambiti territoriali sociali, che erano in fase di completamento. Per esempio l'Ambito di Rosarno (ATS n. 2: Gioia Tauro, Melicuccà, Palmi, Rizziconi, Rosarno, San Ferdinando, Seminara) ha un avviso aperto fino al 23 novembre 2026 (pagina del Comune di San Ferdinando del 05/11/2026).",
+      "Notizia dell'8 ottobre 2026. La Regione non indica una scadenza: i termini sono nei singoli avvisi degli Ambiti territoriali sociali, che erano in fase di completamento. Per esempio l'Ambito di Rosarno (ATS n. 2: Gioia Tauro, Melicuccà, Palmi, Rizziconi, Rosarno, San Ferdinando, Seminara) ha un avviso aperto fino al 23/11/2026 (pagina del Comune di San Ferdinando del 05/11/2026).",
     comeSiChiede:
       "La domanda si presenta all'Ambito territoriale sociale di residenza, di norma via PEC, secondo l'avviso dell'Ambito. La valutazione e la graduatoria sono fatte dall'Unità di valutazione multidimensionale con l'Azienda sanitaria provinciale. Moduli e avvisi si chiedono all'Ufficio di Piano del tuo Ambito.",
     fonte: {
@@ -2106,7 +2106,7 @@ export const BONUS: Bonus[] = [
     cosa: "Un rimborso calcolato a 0,55 euro per chilometro, secondo il percorso e i limiti dell'avviso. Non è un importo fisso per famiglia.",
     stato: "aperto",
     scade: "2026-11-23",
-    quando: "Domande entro le 23:59 del 23 novembre 2026. Pagina del Comune aggiornata il 03/11/2026.",
+    quando: "Domande entro le 23:59 del 23/11/2026. Pagina del Comune aggiornata il 03/11/2026.",
     comeSiChiede: "Con il modulo dell'avviso del Comune di Sassari: leggi la pagina e il PDF dell'avviso per i documenti e il modo di consegna.",
     fonte: {
       label: "Comune di Sassari · Voucher per il servizio di trasporto scolastico per studenti con disabilità, anno 2026",
@@ -2124,7 +2124,7 @@ export const BONUS: Bonus[] = [
     cosa: "Un piano personalizzato di sostegno. L'importo non è indicato nell'avviso di riapertura: dipende dal piano e dalle risorse.",
     stato: "aperto",
     scade: "2026-11-16",
-    quando: "Nuove domande entro il 16 novembre 2026. Le domande sono accolte in ordine cronologico, fino a esaurimento delle risorse. Pagina aggiornata il 29/06/2026.",
+    quando: "Nuove domande entro il 16/11/2026. Le domande sono accolte in ordine cronologico, fino a esaurimento delle risorse. Pagina aggiornata il 29/06/2026.",
     comeSiChiede: "Secondo l'avviso di riapertura del Comune di Sassari (pagina e PDF).",
     fonte: {
       label: "Comune di Sassari · Bando 2026 L. 162/98, avviso per le nuove domande",
@@ -2143,7 +2143,7 @@ export const BONUS: Bonus[] = [
     cosa: "Il Comune contribuisce con 20 euro al mese; la quota a carico dell'utente è di 5 euro al mese, più le eventuali spese di prima emissione.",
     stato: "aperto",
     scade: "2026-11-20",
-    quando: "Domande entro il 20 novembre 2026. Pagina aggiornata il 01/10/2026.",
+    quando: "Domande entro il 20/11/2026. Pagina aggiornata il 01/10/2026.",
     comeSiChiede: "Secondo l'avviso del Comune di Trapani (pagina e PDF): leggi i documenti da allegare.",
     fonte: {
       label: "Comune di Trapani · Tessere ATM 2027, aperte le domande",
@@ -2161,7 +2161,7 @@ export const BONUS: Bonus[] = [
     cosa: "La tessera di libera circolazione sui mezzi AST extraurbani. Nessun contributo in denaro indicato.",
     stato: "aperto",
     scade: "2026-11-16",
-    quando: "Domande entro le 12:00 del 16 novembre 2026. Pagina del Comune aggiornata il 14/10/2026.",
+    quando: "Domande entro le 12:00 del 16/11/2026. Pagina del Comune aggiornata il 14/10/2026.",
     comeSiChiede: "Secondo l'avviso del Comune di Ragusa (PDF allegato alla pagina).",
     fonte: {
       label: "Comune di Ragusa · Rilascio tessera di libera circolazione extraurbana AST, marzo 2027 - febbraio 2028",
