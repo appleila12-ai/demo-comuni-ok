@@ -1542,3 +1542,24 @@ ESENZIONE_ASL.anzio = {
     "L'elenco dei documenti è quello generale dell'ASL Roma 6: conferma con il Distretto prima di andare.",
   fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 6, controllata il 14/11/2026 (pagina datata)",
 };
+
+// Lazio · ASL Latina Distretto 4 (Campodimele). Pagine «Servizi – Distretto 4» e «Distretti» dell'ASL Latina, controllate il 14/11/2026.
+ESENZIONE_ASL.campodimele = {
+  asl: "ASL Latina · Distretto 4 (Campodimele)",
+  intro:
+    "Campodimele fa parte del Distretto 4 dell'ASL Latina, con Terracina, Fondi, Monte San Biagio, San Felice Circeo, Lenola e Sperlonga. L'esenzione ticket si chiede agli uffici del Distretto.",
+  comeSiPresenta: [
+    "Ufficio Esenzione ticket di Terracina · Ospedale «A. Fiorini», via Firenze, 1° piano · dal lunedì al venerdì 8:30–12:30",
+    "Lo sportello di Fondi (Ospedale «S. Giovanni di Dio», via S. Magno, 4° piano) pubblica gli orari della scelta e revoca del medico: per le esenzioni chiedi prima di andare",
+    AVVISO_ORARI,
+  ],
+  telefoni: [
+    { etichetta: "Esenzione ticket · Terracina", numero: "0773 708315" },
+    { etichetta: "Scelta e revoca medico · Fondi", numero: "0771 505808" },
+  ],
+  paginaUrl: "https://www.ausl.latina.it/gs-servterritoriali/294-dis4-servizi",
+  paginaLabel: "Servizi del Distretto 4 · ASL Latina",
+  manca:
+    "L'ASL non indica se i residenti di Campodimele devono andare a Terracina o a Fondi, né quali documenti portare per l'esenzione per patologia: chiedilo al numero di Terracina qui sopra. In attesa della risposta, controlla anche la pagina «Esenzioni» dell'ASL Latina.",
+  fonte: "ASL Latina · pagina «Servizi – Distretto 4» e pagina «Distretti», controllate il 14/11/2026",
+};

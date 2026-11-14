@@ -794,7 +794,7 @@ export const BONUS: Bonus[] = [
       url: "https://www.comune.cisterna.latina.it/it/news-category/147381",
     },
     verificatoIl: "14/11/2026",
-    nota: "L'importo massimo del rimborso non risulta indicato nell'avviso: chiedilo all'ufficio. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda."
+    nota: "L'importo massimo del rimborso non risulta indicato nell'avviso: chiedilo all'ufficio. Se i fondi non bastano, i rimborsi si riducono tutti nella stessa percentuale, tranne per i nuclei con ISEE inferiore a 10.480 euro (dato dell'avviso riportato da una ricerca, non riletto sul documento). I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda."
   },
   {
     id: "aprilia-assistenza-economica-straordinaria",
@@ -835,6 +835,27 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "14/11/2026",
     nota: "La scadenza del 30 novembre risulta dall'avviso come riportato da una ricerca e non è stata riletta sulla pagina: conferma all'ufficio. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+
+  {
+    id: "marino-ciampino-caregiver-2026",
+    regione: "Lazio",
+    comuni: ["marino", "ciampino"],
+    titolo: "Interventi a favore dei caregiver familiari riconosciuti, 2026 (Distretto RM 6.3)",
+    perChi:
+      "Caregiver familiari riconosciuti formalmente (o con la Card del Caregiver familiare) di persone residenti a Marino o Ciampino, con ISEE ordinario non superiore a 24.000 euro per il budget personale e il supporto psicologico. Cittadini italiani o dell'Unione europea; per i cittadini di Paesi terzi serve il permesso di soggiorno CE per soggiornanti di lungo periodo.",
+    cosa: "Tre interventi: un budget personale di 1.000 euro una tantum; il rimborso del supporto psicologico, 50 euro per intervento fino a 500 euro l'anno; il sollievo domiciliare, fino a 500 euro l'anno (600 euro se la persona assistita ha una disabilità complessa ad alta intensità assistenziale, valutata dall'UVMD).",
+    stato: "aperto",
+    scade: "2026-12-10",
+    quando: "Domande entro il 10 dicembre 2026.",
+    comeSiChiede:
+      "Con l'Allegato A (domanda di sostegno economico) consegnato a mano all'ufficio protocollo del tuo Comune oppure inviato per PEC: Marino protocollo@pec.comune.marino.rm.it, Ciampino protocollo@pec.comune.ciampino.roma.it. L'avviso è del Distretto, con Marino capofila.",
+    fonte: {
+      label: "Comune di Marino · Avviso pubblico caregiver 2026, versione rettificata (pagina aggiornata l'11/11/2026)",
+      url: "https://www.comune.marino.rm.it/halley//ht/eg176/2026_DD_1446_AVVISO_PUBBLICO_CAREGIVER_2026_rett.pdf",
+    },
+    verificatoIl: "14/11/2026",
+    nota: "Gli importi e la scadenza del 10 dicembre risultano dall'avviso rettificato come riportato da una ricerca e non sono stati riletti sul documento: conferma all'ufficio. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
   },
 
   // ------------------------------------------------------------ COMUNE DI LATINA

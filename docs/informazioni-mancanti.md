@@ -94,7 +94,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Campobasso | CB | Molise | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Campobasso | CB | Molise | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Campodimele | LT | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Campodimele | LT | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Canicattì | AG | Sicilia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Canicattì | AG | Sicilia | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Capannori | LU | Toscana | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
@@ -254,7 +253,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Jesi | AN | Marche | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Jesi | AN | Marche | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Ladispoli | RM | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Ladispoli | RM | Lazio | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Ladispoli | RM | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Lamezia Terme | CZ | Calabria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Lamezia Terme | CZ | Calabria | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
