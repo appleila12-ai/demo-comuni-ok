@@ -19,3 +19,12 @@ Buongiorno, sono la fondatrice di TutelApp, applicazione gratuita che accompagna
 
 ## Controlli
 Modifica limitata a due schede demo e questo registro; nessun test Node locale eseguito; attendere CI GitHub e anteprima Netlify. Non pubblicare senza verifiche.
+
+
+## Aggiornamento 16/11/2026 — Novara, collegamento esenzioni ticket
+
+- **Intervento applicato nella stessa PR #296:** il campo `esenzioneTicket.url` di `frontend/src/config/comuni/demo/novara.ts` punta ora alla pagina ufficiale ASL Novara dedicata al rilascio/rinnovo delle esenzioni, anziché alla homepage del Comune. Etichetta aggiornata per distinguere patologia, invalidità e malattie rare.
+- **Fonte istituzionale verificata il 16/11/2026:** https://www.asl.novara.it/it/come-fare-per/richiedere-rilasciorinnovo-esenzione-dal-pagamento-ticket — pagina ASL Novara, con allegati separati «Esenzione per patologia», «Esenzione per invalidità» ed «Esenzione per malattie rare»; data di aggiornamento della pagina **NON INDICATA**.
+- **Avvertenza:** il testo della pagina cita un rinnovo automatico delle esenzioni per reddito fino al 31/03/2024; non riportare tale scadenza come valida nel 2026. Gli allegati e le modalità attuali vanno ancora verificati singolarmente.
+- **Stato Novara:** PARZIALE, non completo. Mancano verifica completa delle procedure ticket, bonus comunali e dell'Ambito, bonus regionali, destinatario «Scrivi al tuo Comune» e avviso di incompletezza visibile in UI. Nessuna email inviata; nessun merge/deploy autorizzato.
+- **Test:** controlli Node locali non eseguiti in questa sessione; CI e anteprima Netlify da ricontrollare dopo il commit.
