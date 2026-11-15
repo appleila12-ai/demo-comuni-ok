@@ -4,7 +4,7 @@ import { percorso } from "../percorso";
 // Comune di Novara (NO) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Recapiti Sportello sociale verificati su fonte istituzionale il 14/11/2026.
-// Da fare: esenzione ticket ASL NO, bonus comunali, associazioni, sport e tempo libero.
+// Da fare: verificare allegati ticket ASL NO e informazioni 2026, bonus comunali, associazioni, sport e tempo libero.
 export const novara: ComuneConfig = {
   slug: "novara",
   tipo: "comune",
@@ -46,8 +46,8 @@ export const novara: ComuneConfig = {
     "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
-    label: "Esenzioni ticket · chiedi alla tua azienda sanitaria",
-    url: "https://www.comune.novara.it",
+    label: "ASL Novara · esenzione ticket per patologia, invalidità e malattie rare",
+    url: "https://www.asl.novara.it/it/come-fare-per/richiedere-rilasciorinnovo-esenzione-dal-pagamento-ticket",
   },
 
   daVerificare: true,
