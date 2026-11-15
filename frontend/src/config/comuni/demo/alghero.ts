@@ -5,7 +5,8 @@ import { percorso } from "../percorso";
 // Comune di Alghero (SS) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Pagina "Salute, benessere e assistenza" del sito del Comune (controllata il 14 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Telefono dell'area servizi sociali (15/11/2026): pagina «Benessere della persona, delle famiglie e della comunità» del sito del Comune (aggiornata il 30/06/2026). Indirizzo dell'ufficio, email e orari non indicati con certezza, non inseriti.
+// Da fare: email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
 export const alghero: ComuneConfig = {
   slug: "alghero",
   tipo: "comune",
@@ -19,7 +20,7 @@ export const alghero: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "079 997800",
+  telefono: "079 9978570",
   email: "",
   pec: "",
   orari: "",
