@@ -479,17 +479,17 @@ export const BONUS: Bonus[] = [
       "Persone con disabilità con necessità di sostegno intensivo molto elevato e anziani non autosufficienti con alto bisogno assistenziale, residenti in Lombardia e assistiti a casa. Servono l'indennità di accompagnamento (o la non autosufficienza riconosciuta) e un ISEE sociosanitario fino a 50.000 euro (ISEE ordinario fino a 65.000 euro per i minori). La condizione va attestata da un medico specialista.",
     cosa:
       "Misura Sostegno: contributo mensile da 565 a 1.300 euro, secondo la situazione (per esempio 565 euro con il solo caregiver familiare, 900 euro con un assistente regolarmente assunto da 10 ore a settimana, 1.200 euro a tempo pieno). Assegno di autonomia: fino a 800 euro al mese per chi ha un assistente personale e non ha un caregiver familiare. Misura Servizi: interventi sociali e voucher sociosanitari, senza importi scritti nella fonte.",
-    stato: "da-verificare",
+    stato: "attivo",
     quando:
-      "Le nuove domande alle ASST erano aperte dal 22 giugno al 31 ottobre 2026 (chiuse). Chi è già in carico non deve ripresentare la domanda e prosegue fino al 31 dicembre 2026.",
+      "Le nuove domande alle ASST erano aperte dal 22 giugno al 31 ottobre 2026 (chiuse). Chi è già in carico non deve ripresentare la domanda e prosegue fino al 31 dicembre 2026, se restano i requisiti. Sulla pagina della Regione non risultano proroghe.",
     comeSiChiede:
       "Si presenta l'istanza di valutazione alla propria ASST, con le sue modalità. Per informazioni: ATS e ASST di competenza o lo Spazio Disabilità di Regione Lombardia (sportello informativo gratuito).",
     fonte: {
       label: "Regione Lombardia · Misura Sostegno (ex B1)",
       url: "https://www.regione.lombardia.it/politiche-sociali-e-abitative/disabilita/politiche-e-misure-per-la-disabilita/sostegno-per-la-disabilit--gravissima-misura-sostegno",
     },
-    verificatoIl: "30/10/2026",
-    nota: "Chi rientra tra gli ex \"gravi\" (ex Misura B2) ha un ISEE sociosanitario fino a 25.000 euro (ISEE ordinario fino a 40.000 euro per i minorenni) e presenta la domanda all'Ambito territoriale sociale, con date proprie. Gli importi vengono dalla pagina di Lombardia Facile dedicata alla DGR 6320 del 15/06/2026; la pagina della Regione non scrive gli importi.",
+    verificatoIl: "16/11/2026",
+    nota: "Pagina della Regione aggiornata il 21/07/2026 (DGR 6320 del 15/06/2026). Chi rientra tra gli ex \"gravi\" (ex Misura B2) ha un ISEE sociosanitario fino a 25.000 euro (ISEE ordinario fino a 40.000 euro per i minorenni) e presenta la domanda all'Ambito territoriale sociale, con date proprie. Gli importi vengono dalla pagina di Lombardia Facile dedicata alla DGR 6320 del 15/06/2026; la pagina della Regione non scrive gli importi.",
   },
   {
     id: "lombardia-dopo-di-noi",
@@ -512,44 +512,6 @@ export const BONUS: Bonus[] = [
 
   // ------------------------------------------------------------ COMUNE DI GENOVA
   // Fonti: pagine dei servizi del Comune di Genova, lette il 25/10/2026.
-  {
-    id: "genova-gravissima-disabilita-asl3",
-    regione: "Liguria",
-    comuni: ["genova"],
-    titolo: "Gravissima disabilità: contributo per restare a casa (anche SLA)",
-    perChi:
-      "Adulti, anziani e minori che a casa hanno bisogno di assistenza continua nelle 24 ore. Servono: invalidità civile al 100% con indennità di accompagnamento, un quadro clinico tra quelli della DGR 1289/2016, ISEE sociosanitario fino a 50.000 euro (per i minori ISEE per prestazioni ai minorenni fino a 65.000 euro).",
-    cosa:
-      "Un contributo mensile per l'assistenza a casa. L'importo lo decide l'Unità di Valutazione Multidimensionale (UVM) nel Piano di Assistenza Individualizzato (PAI); una parte riconosce il lavoro di cura del familiare, il resto si rendiconta. È compatibile con il centro diurno. Non si può avere insieme al contributo \"Grave disabilità\", all'indennità di frequenza o al ricovero definitivo in struttura.",
-    stato: "da-verificare",
-    comeSiChiede:
-      "Si compila il modulo \"Gravissima disabilità\" e si allegano: verbale dell'indennità di accompagnamento, ISEE e documento d'identità di chi firma. La domanda si consegna al PUA o allo Sportello unico del tuo Distretto ASL3 (trovi telefoni e orari nella scheda del Comune, alla voce Distretti). Poi c'è la valutazione dell'UVM.",
-    fonte: {
-      label: "ASL3 · Fondo gravissima disabilità e SLA",
-      url: "https://www.asl3.liguria.it/territorio/servizi/disabili/4981-fondo-gravissima-disabilita-sla.html",
-    },
-    verificatoIl: "25/10/2026",
-    nota: "La pagina ASL3 è aggiornata al 23/10/2024 e il 26/10/2026 non è stato possibile rileggerla: chiedi conferma al PUA o allo Sportello unico del tuo Distretto. Che la misura sia attiva nel 2026, con gli stessi requisiti, lo conferma la scheda \"Gravissime disabilità (GD) – Servizio attivo\" del Comune di Rapallo (Distretto 14), controllata il 25/10/2026.",
-  },
-  {
-    id: "genova-vita-indipendente-asl3",
-    regione: "Liguria",
-    comuni: ["genova"],
-    titolo: "Progetti di vita indipendente",
-    perChi:
-      "Persone con disabilità motoria (Legge 104, art. 3 comma 3) o intellettiva (Legge 104, art. 3 comma 1), dai 18 ai 65 anni, capaci di esprimere la propria volontà, anche tramite amministratore di sostegno. ISEE sociosanitario fino a 25.000 euro.",
-    cosa:
-      "Un contributo fino a 1.200 euro al mese, secondo il Piano individuale (PIA) scritto insieme alla persona, da rendicontare ogni tre mesi. Serve per l'autonomia: andare a vivere da soli, il lavoro, un assistente personale, attività che favoriscono l'autonomia in famiglia; per ausili, domotica e barriere architettoniche è un rimborso fino a 350 euro al mese. Non si può avere insieme alla gravissima disabilità, al contributo caregiver per chi assiste la persona o al ricovero in struttura.",
-    stato: "da-verificare",
-    comeSiChiede:
-      "Si compila la domanda indicando come si vuole usare il contributo, con la certificazione della Legge 104, l'ISEE sociosanitario e il documento d'identità. La domanda si consegna al PUA o allo Sportello unico del tuo Distretto ASL3. Prima c'è una valutazione sanitaria sull'autodeterminazione, poi l'équipe (assistente sociale e medico ASL) scrive il progetto con te.",
-    fonte: {
-      label: "ASL3 · Progetti di vita indipendente",
-      url: "https://www.asl3.liguria.it/territorio/servizi/disabili/1102-progetti-di-vita-indipendente.html",
-    },
-    verificatoIl: "25/10/2026",
-    nota: "La pagina ASL3 è aggiornata al 23/10/2024 e il 26/10/2026 non è stato possibile rileggerla: chiedi conferma al PUA o allo Sportello unico del tuo Distretto. Importo, ISEE e stato \"attivo\" sono confermati nel 2026 dalle schede dei Comuni di Sarzana e di Rapallo, controllate a ottobre 2026.",
-  },
   {
     id: "genova-doge-domiciliarita-disabili",
     regione: "Liguria",
@@ -971,7 +933,7 @@ export const BONUS: Bonus[] = [
       "Persone adulte con disabilità e certificazione di gravità (Legge 104/1992), residenti nella Zona distretto del progetto, in grado di esprimere la propria volontà, anche con supporto, e di gestire le proprie scelte. I requisiti vanno posseduti alla data della domanda.",
     cosa:
       "Finanziamento di progetti individuali di vita indipendente. La pagina non scrive quanto spetta a ogni persona: indica 46 milioni di euro per il triennio 2024-2026 per i progetti ammessi e, per il 2026-2027, quasi 6,25 milioni assegnati dalla Giunta il 27/04/2026 per ridurre le liste d'attesa e avviare nuovi progetti dal 1° luglio 2026.",
-    stato: "da-verificare",
+    stato: "attivo",
     quando:
       "Il bando per gli enti era aperto dall'1 al 16 agosto 2024. Nuovi progetti dal 1° luglio 2026 con i fondi assegnati ad aprile 2026. La pagina non indica una nuova finestra per le domande.",
     comeSiChiede:
@@ -980,8 +942,8 @@ export const BONUS: Bonus[] = [
       label: "Regione Toscana · Disabilità e grave limitazione dell'autonomia: finanziamenti per vita indipendente e inclusione",
       url: "https://www.regione.toscana.it/it/-/disabilit%C3%A0-e-grave-limitazione-dell-autonomia-finanziamenti-per-sostenere-vita-indipendente-e-inclusione",
     },
-    verificatoIl: "30/10/2026",
-    nota: "Pagina della Regione aggiornata il 22/06/2026. Il 16/06/2026 la Regione ha impegnato altri 4,8 milioni di euro per ridurre le liste d'attesa (decreto n. 13481). Importo per persona, requisiti ISEE e tempi vanno chiesti alla Società della Salute. Domande e informazioni sul bando: vitaindipendentefse@regione.toscana.it.",
+    verificatoIl: "16/11/2026",
+    nota: "Pagina della Regione aggiornata il 22/06/2026, nessun atto successivo. Il cittadino accede con gli avvisi delle singole Società della Salute o Zone distretto. Il 16/06/2026 la Regione ha impegnato altri 4,8 milioni di euro per ridurre le liste d'attesa (decreto n. 13481). Importo per persona, requisiti ISEE e tempi vanno chiesti alla Società della Salute. Domande e informazioni sul bando: vitaindipendentefse@regione.toscana.it.",
   },
   {
     id: "toscana-esenzione-bollo-disabilita",
