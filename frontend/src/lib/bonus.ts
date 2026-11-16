@@ -1579,6 +1579,24 @@ export const BONUS: Bonus[] = [
   // ----------------------------------------------------------------- SARDEGNA
 
   // ------------------------------------------------------------------- MARCHE
+  {
+    id: "marche-vita-indipendente-regionale",
+    regione: "Marche",
+    titolo: "Progetti regionali di Vita indipendente per persone con disabilità grave",
+    perChi:
+      "Persone con disabilità con certificazione di gravità (Legge 104/1992, art. 3, comma 3). Chi assume direttamente l'assistente personale diventa datore di lavoro, con diritti e doveri.",
+    cosa:
+      "Contributo per assumere un assistente personale che affianca la persona nelle funzioni essenziali della vita: cura della persona, mobilità in casa e al lavoro, autonomia e inclusione sociale. L'importo dipende dal Piano personalizzato; la Carta dei Servizi non scrive cifre.",
+    stato: "attivo",
+    comeSiChiede:
+      "Il beneficiario invia il Piano personalizzato di Vita indipendente, scritto d'intesa con l'UMEA o il Dipartimento di Salute Mentale, sulla piattaforma regionale ProcediMarche. Per i progetti già attivi si invia la conferma di continuità con il contratto dell'assistente. Settore Contrasto al disagio della Regione: tel. 071 8064026, settore.contrastodisagio@regione.marche.it. Il servizio non ha costi per l'utente.",
+    fonte: {
+      label: "Regione Marche · Carta dei Servizi 2026, Progetti regionali di Vita indipendente",
+      url: "https://www.regione.marche.it/DesktopModules/CartaServizi/DownloadCartaServizi.ashx?IdErogazione=137&AnnoCarta=2026",
+    },
+    verificatoIl: "16/11/2026",
+    nota: "La Carta dei Servizi non indica scadenze per le domande: conferma tempi e importi con il Settore Contrasto al disagio.",
+  },
 
   // ----------------------------------------------------------------- CALABRIA
 
