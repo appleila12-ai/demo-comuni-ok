@@ -2338,6 +2338,28 @@ export const BONUS: Bonus[] = [
     verificatoIl: "16/11/2026",
     nota: "Pagina aggiornata il 02/10/2024: conferma requisiti e importi con il Servizio Assistenza Sociale.",
   },
+
+  // --- 16/11/2026: Lazio, Distretto 4.2 Cerveteri (capofila) e Ladispoli ---
+  {
+    id: "cerveteri-ladispoli-disabilita-sostegno-intensivo",
+    regione: "Lazio",
+    comuni: ["cerveteri", "ladispoli"],
+    titolo: "Assegno di cura e contributo di cura per persone con disabilità che hanno bisogno di sostegno intensivo (Distretto 4.2)",
+    perChi:
+      "Persone con disabilità che hanno bisogno di sostegno intensivo e integrato a casa, residenti nei Comuni di Cerveteri e Ladispoli (Distretto socio sanitario 4.2). Gli altri requisiti sono nel bando: la pagina del Comune non li elenca. Chi già riceve il contributo o è stato riconosciuto idoneo e in lista d'attesa non deve ripresentare la domanda completa.",
+    cosa:
+      "Assegno di cura o contributo di cura, pagato ogni mese. Per il contributo di cura serve un'autocertificazione e vanno conservate le ricevute per i controlli. Il Piano di Assistenza Individuale è fatto dall'Unità di Valutazione Multidimensionale. Gli importi non sono scritti sulla pagina del Comune: sono nel bando.",
+    stato: "attivo",
+    quando: "La pagina del Comune scrive che i termini sono aperti e non indica una data di chiusura.",
+    comeSiChiede:
+      "Con il modulo «disabilità gravissima» e il bando che trovi sulla pagina del Comune di Cerveteri (capofila del Distretto), consegnati al Protocollo o per PEC a comunecerveteri@pec.it. Informazioni: URP di Cerveteri, tel. 06 896301, urp@comune.cerveteri.rm.it.",
+    fonte: {
+      label: "Comune di Cerveteri · Avviso per interventi a favore di persone con disabilità che necessitano di sostegno intensivo ed integrato (pubblicato l'11/02/2025, aggiornato il 28/02/2025)",
+      url: "https://www.comune.cerveteri.rm.it/novita/avviso-pubblico-la-realizzazione-di-interventi-favore-di-persone-con-disabilita-che",
+    },
+    verificatoIl: "16/11/2026",
+    nota: "La pagina è del 2025 e non ha una scadenza: chiedi conferma all'ufficio che l'avviso sia ancora aperto. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
 ];
 
 /** Valore di `regione` per le misure nazionali: valgono in tutti i Comuni. */
