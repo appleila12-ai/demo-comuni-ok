@@ -5,6 +5,7 @@
 
 import type { ComuneConfig } from "@/src/config/comune";
 import { DESTINATARI } from "@/src/config/comuni/destinatari";
+import { riferimentiComune } from "@/src/config/comuni/anagrafica";
 
 export const CONTATTO_TUTELAPP = "info@tutelapp.it";
 export const SITO_TUTELAPP = "www.tutelapp.it";
@@ -29,7 +30,7 @@ export function costruisciRichiesta(c: ComuneConfig): RichiestaComune {
   const ilNostroEnte = unione ? "la nostra Unione" : "il nostro Comune";
   // Prima la mail dei Servizi Sociali in scheda, poi l'elenco dei destinatari, infine la PEC
   const elenco = DESTINATARI[c.slug];
-  const a = (c.email || elenco?.email || c.pec || "").trim();
+  const a = (c.email || elenco?.email || c.pec || (c.soloElenco ? riferimentiComune(c.slug)?.email : "") || "").trim();
 
   const oggetto = unione
     ? "Chiediamo di mantenere e far crescere TutelApp nel nostro territorio"
