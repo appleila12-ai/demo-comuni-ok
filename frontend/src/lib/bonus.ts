@@ -752,11 +752,11 @@ export const BONUS: Bonus[] = [
     comeSiChiede:
       "Per i bambini da 3 a 36 mesi iscritti a un nido privato autorizzato dal Comune, con famiglia residente a Cisterna e ISEE valido non superiore a 50.000 euro. Domanda solo per posta elettronica certificata o email al Comune (indirizzo welfare nel sito, sezione Servizi Sociali). Si allegano: documento d'identità e codice fiscale di chi fa la domanda, permesso di soggiorno se straniero, documenti che provano l'iscrizione al nido e l'importo della retta. Il rimborso non può superare la spesa pagata.",
     fonte: {
-      label: "Comune di Cisterna di Latina · Avvisi Servizi Sociali (avviso del 17/10/2026)",
-      url: "https://www.comune.cisterna.latina.it/it/news-category/147381",
+      label: "Comune di Cisterna di Latina · Avviso integrale rimborso rette nido privati (pubblicato il 17/10/2026), articolo 4",
+      url: "https://www.comune.cisterna.latina.it/s3/2139/allegati/servizi-sociali/asili-nido-rimborso-rette-avviso.pdf",
     },
-    verificatoIl: "14/11/2026",
-    nota: "L'importo massimo del rimborso non risulta indicato nell'avviso: chiedilo all'ufficio. Se i fondi non bastano, i rimborsi si riducono tutti nella stessa percentuale, tranne per i nuclei con ISEE inferiore a 10.480 euro (dato dell'avviso riportato da una ricerca, non riletto sul documento). I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda."
+    verificatoIl: "16/11/2026",
+    nota: "L'avviso (articolo 4) non indica un importo massimo per bambino né una tabella per fasce ISEE: il rimborso è la spesa effettiva, meno il bonus INPS spettante e ogni altro contributo sulle stesse spese. Se i fondi non bastano, i rimborsi si riducono tutti nella stessa percentuale, tranne per i nuclei con ISEE inferiore a 10.480 euro. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda."
   },
   {
     id: "aprilia-assistenza-economica-straordinaria",
@@ -795,8 +795,8 @@ export const BONUS: Bonus[] = [
       label: "Comune di Marino · Avviso minori con disturbo dello spettro autistico 2026, Distretto RM 6.3 (avviso del 02/11/2026)",
       url: "https://www.comune.marino.rm.it/novita/avvisi/novita_3106.html",
     },
-    verificatoIl: "14/11/2026",
-    nota: "La scadenza del 30 novembre risulta dall'avviso come riportato da una ricerca e non è stata riletta sulla pagina: conferma all'ufficio. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+    verificatoIl: "16/11/2026",
+    nota: "Scadenza del 30 novembre confermata sulla pagina del Comune di Marino (avviso pubblicato e aggiornato il 02/11/2026; la stessa pagina vale per Marino e Ciampino). I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
   },
 
   {
@@ -816,8 +816,28 @@ export const BONUS: Bonus[] = [
       label: "Comune di Marino · Avviso pubblico caregiver 2026, versione rettificata (pagina aggiornata l'11/11/2026)",
       url: "https://www.comune.marino.rm.it/halley//ht/eg176/2026_DD_1446_AVVISO_PUBBLICO_CAREGIVER_2026_rett.pdf",
     },
+    verificatoIl: "16/11/2026",
+    nota: "Scadenza del 10 dicembre confermata dagli avvisi dei Comuni di Marino e di Ciampino (pubblicati il 09/11/2026, aggiornati l'11/11/2026). Gli importi risultano dall'avviso rettificato e non sono stati riletti sul documento: conferma all'ufficio. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+
+  {
+    id: "marino-sostegno-socioeconomico",
+    regione: "Lazio",
+    comuni: ["marino"],
+    titolo: "Interventi di sostegno socioeconomico: contributi temporanei e straordinari (Marino)",
+    perChi:
+      "Residenti a Marino: i requisiti sono nella scheda del servizio sul sito del Comune. Non è una misura riservata alle persone con disabilità.",
+    cosa: "Contributi economici temporanei e straordinari. L'importo non è indicato nella scheda che abbiamo letto.",
+    stato: "attivo",
+    quando:
+      "Per i contributi temporanei e straordinari si può presentare domanda in ogni momento dell'anno in corso. I contributi continuativi hanno invece una finestra, dal 28 febbraio al 31 marzo.",
+    comeSiChiede: "Ai Servizi Sociali del Comune di Marino, con le modalità indicate nella scheda del servizio.",
+    fonte: {
+      label: "Comune di Marino · Interventi di sostegno socio economico (scheda aggiornata il 14/04/2025)",
+      url: "https://www.comune.marino.rm.it/servizi/salute_benessere_e_assistenza/servizio_95.html",
+    },
     verificatoIl: "14/11/2026",
-    nota: "Gli importi e la scadenza del 10 dicembre risultano dall'avviso rettificato come riportato da una ricerca e non sono stati riletti sul documento: conferma all'ufficio. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+    nota: "La scheda del Comune è stata aggiornata l'ultima volta il 14/04/2025: i fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
   },
 
   // ------------------------------------------------------------ COMUNE DI LATINA

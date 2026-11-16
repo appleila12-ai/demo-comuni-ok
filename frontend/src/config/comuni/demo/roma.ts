@@ -45,6 +45,12 @@ export const roma: ComuneConfig = {
       action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-vii-uffici-e-contatti.page?contentId=UFF513958" },
     },
     {
+      icon: "location-outline",
+      title: "Municipio VII · Segretariato Sociale (Tuscolano e Appio)",
+      subtitle: "Sede Tuscolano: Via Tuscolana 950, 4° piano, Poliambulatorio San Raffaele; tel. 339 4632505; segretariatosocialetuscolano.mun07@comune.roma.it. Sede Appio: Via Tommaso Fortifiocca 71; tel. 06 69609650; segretariatosocialeappio.mun07@comune.roma.it. Per entrambe: lun, mar e gio 9–16, mer 9–13. La scheda del Comune è stata aggiornata il 02/04/2025: conferma orari e sede prima di recarti. Fonte Roma Capitale, letta il 14/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF24521" },
+    },
+    {
       icon: "people-outline",
       title: "Municipio VIII · Segretariato Sociale e PUA",
       subtitle: "Coordinatrice Rosa Paolella. Telefoni 06 69611670 / 671; famiglie e minori 06 69611690; responsabile 06 69611624. Email pua.mun08@comune.roma.it. Sede e orari da verificare nella pagina istituzionale.",
