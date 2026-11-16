@@ -2355,6 +2355,28 @@ export const BONUS: Bonus[] = [
     verificatoIl: "11/11/2026",
     nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. Valgono tutte le condizioni del bando. Dati letti dalla notizia del Comune: il bando integrale e il modulo non sono stati consultati, quindi importi, requisiti e certificazioni richieste vanno controllati nel bando.",
   },
+
+  // --- 16/11/2026: Liguria, Luni (pagina del Comune, ultimo aggiornamento 02/10/2024) ---
+  {
+    id: "luni-frna-contributo-non-autosufficienza",
+    regione: "Liguria",
+    comuni: ["luni"],
+    titolo: "Fondo regionale per la non autosufficienza (FRNA) a Luni",
+    perChi:
+      "Cittadini italiani o stranieri con carta di soggiorno, con ISEE familiare fino a 40.000 euro, che hanno compiuto 65 anni e sono invalidi al 100% con accompagnamento (o hanno presentato domanda all'ASL), oppure hanno un handicap grave (Legge 104/1992). Serve l'accertamento della non autosufficienza dell'Unità di Valutazione Multidimensionale dell'ASL, un Piano Individualizzato di Assistenza e un Patto Assistenziale con la famiglia, che si impegna all'assistenza a domicilio.",
+    cosa:
+      "Contributo mensile del fondo della Regione Liguria per mantenere a casa la persona non autosufficiente, calcolato sull'ISEE. La pagina non scrive le cifre. Non si somma all'Assegno Servizi: se già lo si riceve, viene revocato.",
+    stato: "attivo",
+    quando: "La pagina del Comune scrive: non è prevista alcuna scadenza.",
+    comeSiChiede:
+      "Con il modulo del Comune (la pagina non dice dove trovarlo), con scheda regionale del medico di famiglia, verbale di invalidità o handicap (o domanda all'ASL), ISEE e, per gli stranieri, carta di soggiorno. Servizio 6 - Assistenza Sociale, Via Castagno 61: tel. 0187 690143 o 0187 690128.",
+    fonte: {
+      label: "Comune di Luni · Fondo per le non autosufficienze (FNA)",
+      url: "https://www.comune.luni.sp.it/en-us/servizi/salute-benessere-e-assistenza/fondo-per-le-non-autosufficienze-fna-714-54994-1-c8c7deb0ce76eba59d295e7b6404697d",
+    },
+    verificatoIl: "16/11/2026",
+    nota: "Pagina aggiornata il 02/10/2024: conferma requisiti e importi con il Servizio Assistenza Sociale.",
+  },
 ];
 
 /** Valore di `regione` per le misure nazionali: valgono in tutti i Comuni. */
