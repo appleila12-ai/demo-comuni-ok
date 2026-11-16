@@ -374,7 +374,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Pescara | PE | Abruzzo | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Pescara | PE | Abruzzo | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Piacenza | PC | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Piacenza | PC | Emilia-Romagna | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Pignone | SP | Liguria | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-12 |
 | Comune di Piombino | LI | Toscana | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Piombino | LI | Toscana | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
