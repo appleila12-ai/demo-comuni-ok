@@ -448,6 +448,67 @@ function SediPuglia() {
   );
 }
 
+// ---------- Sede INAIL della Spezia (controllata il 16/11/2026) ----------
+// Indirizzo e PEC: allegato «Sedi» dell'Avviso pubblico ISI 2021 pubblicato su inail.it.
+// Telefono ed email: atto del Comune della Spezia con intestazione INAIL, sede di La Spezia.
+// Gli orari NON sono indicati: le fonti trovate non sono istituzionali, si chiedono alla sede.
+const FONTE_SEDE_SP_INDIRIZZO = {
+  label: "INAIL · Avviso pubblico ISI 2021, allegato Sedi",
+  url: "https://www.inail.it/content/dam/inail-hub-site/documenti/2021/12/Allegato_SEDI_ISI2021_end.pdf",
+};
+const FONTE_SEDE_SP_TELEFONO = {
+  label: "Comune della Spezia · atto con intestazione INAIL, sede di La Spezia",
+  url: "https://trasparenza.spezianet.it/web/trasparenza/determinazioni",
+};
+const SEDE_SP_CONTROLLATA_IL = "16/11/2026";
+
+function SedeLaSpezia() {
+  return (
+    <View testID="infortunio-sede-la-spezia">
+      <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+        La sede INAIL della Spezia
+      </Text>
+      <View style={paginaStili.card}>
+        <Text style={styles.titolo} accessibilityRole="header">
+          INAIL · sede di La Spezia
+        </Text>
+        <Text style={styles.testo}>Corso Nazionale 326, 19125 La Spezia</Text>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>Email</Text>
+          <Text style={styles.testo}>laspezia@inail.it</Text>
+        </View>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>PEC</Text>
+          <Text style={styles.testo}>laspezia@postacert.inail.it</Text>
+        </View>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>Orari</Text>
+          <Text style={styles.testo}>
+            Gli orari non sono ancora confermati dall'INAIL: chiama prima di andare. Per sapere se questa è la sede
+            competente per te, chiedilo alla sede.
+          </Text>
+        </View>
+        <View style={styles.piede}>
+          <Pressable
+            onPress={() => apri("tel:+3901875421")}
+            style={({ pressed }) => [styles.chiama, pressed && { opacity: 0.85 }]}
+            accessibilityRole="button"
+            accessibilityLabel="Chiama la sede INAIL della Spezia, 0187 5421"
+            testID="infortunio-chiama-la-spezia"
+          >
+            <Ionicons name="call-outline" size={18} color={colors.onSurface} />
+            <Text style={styles.chiamaTesto}>Chiama 0187 5421</Text>
+          </Pressable>
+        </View>
+        <Text style={styles.controllo}>
+          Indirizzo e PEC: {FONTE_SEDE_SP_INDIRIZZO.label}. Telefono ed email: {FONTE_SEDE_SP_TELEFONO.label}.
+          Controllato il {SEDE_SP_CONTROLLATA_IL}.
+        </Text>
+      </View>
+    </View>
+  );
+}
+
 export default function InfortunioLavoro() {
   return (
     <Pagina titolo="Mi sono fatto male al lavoro" testID="infortunio-lavoro-screen" sottotitoloSalvato="INAIL: a chi chiedere">
@@ -471,6 +532,7 @@ export default function InfortunioLavoro() {
       <Importi />
 
       {comune.regione === "Puglia" ? <SediPuglia /> : null}
+      {comune.provincia === "SP" ? <SedeLaSpezia /> : null}
 
       <Avviso>
         TutelApp non sostituisce l'INAIL, il patronato o il medico. Ti aiuta a capire dove andare: per la tua
