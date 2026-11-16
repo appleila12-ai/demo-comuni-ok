@@ -1579,6 +1579,6 @@ ESENZIONE_ASL.campodimele = {
   paginaUrl: "https://www.ausl.latina.it/gs-servterritoriali/294-dis4-servizi",
   paginaLabel: "Servizi del Distretto 4 · ASL Latina",
   manca:
-    "L'ASL non indica se i residenti di Campodimele devono andare a Terracina o a Fondi, né quali documenti portare per l'esenzione per patologia: chiedilo al numero di Terracina qui sopra. In attesa della risposta, controlla anche la pagina «Esenzioni» dell'ASL Latina.",
-  fonte: "ASL Latina · pagina «Servizi – Distretto 4» e pagina «Distretti», controllate il 14/11/2026",
+    "L'ASL non indica se i residenti di Campodimele devono andare a Terracina o a Fondi, né l'elenco completo dei documenti da portare per l'esenzione per patologia: chiedilo al numero di Terracina qui sopra. Per una patologia cronica la Carta dei servizi ASL (par. 3.1.2, revisione del 25/03/2026) chiede la «certificazione rilasciata, su apposita modulistica, da un Medico Specialista pubblico», oppure quella del medico curante solo nei casi di diabete o ipertensione. In attesa della risposta, controlla anche la pagina «Esenzioni» dell'ASL Latina.",
+  fonte: "ASL Latina · pagina «Servizi – Distretto 4» (ultima modifica 02/12/2025) e Carta dei servizi (revisione 25/03/2026), letti il 14/11/2026",
 };
