@@ -251,7 +251,7 @@ function HomeDelComune() {
               {comune.tipo === "unione" ? "l'" : "il "}
               {comune.nome} non ha aderito a TutelApp.{" "}
               {comune.soloElenco
-                ? "In questa versione non ci sono ancora i recapiti dei suoi servizi sociali: trovi le informazioni generali valide in tutta Italia."
+                ? "In questa versione non ci sono ancora i recapiti dei suoi servizi sociali: trovi le informazioni generali valide in tutta Italia. Sito e PEC del Comune: Indice PA (AgID), licenza CC BY 4.0."
                 : "I recapiti vengono dal sito ufficiale e potrebbero non essere aggiornati."}
             </Text>
           </View>
