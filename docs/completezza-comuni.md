@@ -3,9 +3,9 @@
 Criterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale attivo/aperto + almeno un bonus comunale attivo/aperto + scheda ticket specifica per l'ASL.
 Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
-Comuni con scheda: 424 · completi: 279 · incompleti: 145
+Comuni con scheda: 424 · completi: 291 · incompleti: 133
 
-Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi sociali (recapiti) 77 · bonus regionali 16
+Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi sociali (recapiti) 77 · bonus regionali 4
 
 ## Completi
 
@@ -22,6 +22,7 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 - Comune di Alcamo (TP)
 - Comune di Alghero (SS)
 - Comune di Ameglia (SP)
+- Comune di Ancona (AN)
 - Comune di Angri (SA)
 - Comune di Anzio (RM)
 - Comune di Aprilia (LT)
@@ -31,6 +32,7 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 - Comune di Arezzo (AR)
 - Comune di Ariano Irpino (AV)
 - Comune di Arzano (NA)
+- Comune di Ascoli Piceno (AP)
 - Comune di Augusta (SR)
 - Comune di Aulla (MS)
 - Comune di Avellino (AV)
@@ -92,6 +94,7 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 - Comune di Cisterna di Latina (LT)
 - Comune di Città di Castello (PG)
 - Comune di Civita Castellana (VT)
+- Comune di Civitanova Marche (MC)
 - Comune di Civitavecchia (RM)
 - Comune di Collecchio (PR)
 - Comune di Corchiano (VT)
@@ -107,8 +110,10 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 - Comune di Fabrica di Roma (VT)
 - Comune di Faenza (RA)
 - Comune di Faleria (VT)
+- Comune di Fano (PU)
 - Comune di Favara (AG)
 - Comune di Ferentino (FR)
+- Comune di Fermo (FM)
 - Comune di Ferrara (FE)
 - Comune di Fiorenzuola d'Arda (PC)
 - Comune di Firenze (FI)
@@ -138,6 +143,7 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 - Comune di Imola (BO)
 - Comune di Imperia (IM)
 - Comune di Isernia (IS)
+- Comune di Jesi (AN)
 - Comune di La Spezia (SP)
 - Comune di Ladispoli (RM)
 - Comune di Lamezia Terme (CZ)
@@ -155,6 +161,7 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 - Comune di Livorno (LI)
 - Comune di Lodi (LO)
 - Comune di Lucca (LU)
+- Comune di Macerata (MC)
 - Comune di Maddaloni (CE)
 - Comune di Magenta (MI)
 - Comune di Marano di Napoli (NA)
@@ -191,6 +198,7 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 - Comune di Olbia (SS)
 - Comune di Oristano (OR)
 - Comune di Ortona (CH)
+- Comune di Osimo (AN)
 - Comune di Padova (PD)
 - Comune di Pagani (SA)
 - Comune di Palermo (PA)
@@ -199,6 +207,7 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 - Comune di Partinico (PA)
 - Comune di Paternò (CT)
 - Comune di Perugia (PG)
+- Comune di Pesaro (PU)
 - Comune di Pescara (PE)
 - Comune di Piacenza (PC)
 - Comune di Pietrasanta (LU)
@@ -235,6 +244,7 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 - Comune di Rosignano Marittimo (LI)
 - Comune di Rottofreno (PC)
 - Comune di Salerno (SA)
+- Comune di San Benedetto del Tronto (AP)
 - Comune di San Felice Circeo (LT)
 - Comune di San Giorgio a Cremano (NA)
 - Comune di San Lazzaro di Savena (BO)
@@ -250,6 +260,7 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 - Comune di Scafati (SA)
 - Comune di Scandicci (FI)
 - Comune di Sciacca (AG)
+- Comune di Senigallia (AN)
 - Comune di Sesta Godano (SP)
 - Comune di Sesto Fiorentino (FI)
 - Comune di Sestri Levante (GE)
@@ -271,6 +282,7 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 - Comune di Tortolì (NU)
 - Comune di Trapani (TP)
 - Comune di Treviglio (BG)
+- Comune di Urbino (PU)
 - Comune di Vallerano (VT)
 - Comune di Vasanello (VT)
 - Comune di Vasto (CH)
@@ -353,18 +365,6 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 | Comune di Vigevano | PV | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Vimercate | MB | Lombardia | bonus comunali, esenzione ticket |
 | Comune di Voghera | PV | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Ancona | AN | Marche | bonus regionali |
-| Comune di Ascoli Piceno | AP | Marche | bonus regionali |
-| Comune di Civitanova Marche | MC | Marche | bonus regionali |
-| Comune di Fano | PU | Marche | bonus regionali |
-| Comune di Fermo | FM | Marche | bonus regionali |
-| Comune di Jesi | AN | Marche | bonus regionali |
-| Comune di Macerata | MC | Marche | bonus regionali |
-| Comune di Osimo | AN | Marche | bonus regionali |
-| Comune di Pesaro | PU | Marche | bonus regionali |
-| Comune di San Benedetto del Tronto | AP | Marche | bonus regionali |
-| Comune di Senigallia | AN | Marche | bonus regionali |
-| Comune di Urbino | PU | Marche | bonus regionali |
 | Comune di Alba | CN | Piemonte | bonus comunali, esenzione ticket |
 | Comune di Alessandria | AL | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Asti | AT | Piemonte | bonus comunali, esenzione ticket |
