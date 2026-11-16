@@ -105,6 +105,18 @@ export const roma: ComuneConfig = {
       action: { type: "web", value: "https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF1037074" },
     },
     {
+      icon: "location-outline",
+      title: "Municipio X · Punti Unici di Accesso (PUA)",
+      subtitle: "Accesso libero, senza appuntamento. Sede Passeroni, Via Gian Carlo Passeroni 24: lunedì 9–12; tel. 06 69613519 / 345 7478064. Sede Toscanelli, Casa della Salute, Lungomare Paolo Toscanelli 230: martedì e giovedì 9–12 e 15–17; tel. 06 56483982 / 345 7478064. Sede Casal Bernocchi, Via Casal Bernocchi 61: venerdì 9–12; tel. 345 7478064. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte Roma Capitale, avviso del 16/04/2026, letto il 16/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/informazione-di-servizio.page?contentId=IDS1565312" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio XI · Segretariato Sociale e PUA",
+      subtitle: "Via della Magliana 296. Email pua.mun11@comune.roma.it. Per i servizi sociali per anziani, persone con disabilità e famiglie: tel. 06 69615669 / 06 69615678 / 06 69615507, lunedì e mercoledì 8:30–12:00 (altre fasce: vedi pagina). L'accesso agli uffici è su appuntamento. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte Roma Capitale, letta il 16/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-xi-uffici-e-contatti.page?contentId=UFF1137046" },
+    },
+    {
       icon: "people-outline",
       title: "Municipio VI · Ufficio Settore Disabilità",
       subtitle: "Viale Duilio Cambellotti 11. Segue SAISH adulti e minori, disabilità gravissima, caregiver, OEPAC, autismo, Dopo di Noi, vita indipendente e centri diurni. Referente: Annalisa Montagnoli, tel. 06 69608946. Fonte Roma Capitale, 09/11/2026.",
