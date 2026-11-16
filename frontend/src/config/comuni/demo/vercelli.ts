@@ -41,6 +41,12 @@ export const vercelli: ComuneConfig = {
       action: { type: "web", value: "https://www.comune.vercelli.it/amministrazione/sportello-settore-politiche-sociali" },
     },
     {
+      icon: "people-outline",
+      title: "Punto Unico di Accesso (PUA) ASL VC e Comune",
+      subtitle: "CUP, corso Mario Abbiate, Vercelli · 0161 593560 · 334 1021870 · pua.vercelli@aslvc.piemonte.it · informazioni e domande per valutazioni UVG/UMVD",
+      action: { type: "web", value: "https://aslvc.piemonte.it/dal-1-luglio-si-amplia-lorario-del-pua-e-gestira-anche-le-domande-per-valutazioni-uvg-e-umvd/" },
+    },
+    {
       icon: "medkit-outline",
       title: "ASL VC",
       subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
