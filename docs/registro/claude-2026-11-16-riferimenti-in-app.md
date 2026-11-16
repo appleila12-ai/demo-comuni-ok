@@ -19,3 +19,9 @@ Nessuna.
 
 1. Telefono, indirizzo e orari dei Servizi Sociali · tutti i Comuni minimi · sito del Comune · Servizi Sociali.
 2. 111 Comuni senza riferimenti nell'Indice PA · elenco in `claude-2026-11-16-riferimenti-comuni-ipa.md`.
+
+## Correzione prima della pubblicazione (16/11/2026)
+
+- «Scrivi al tuo Comune»: per le schede minime l'email generica dell'Indice PA ha ora la precedenza sulla PEC (prima la PEC passava davanti all'email); la PEC resta come ultima scelta. Motivo: molte PEC rifiutano la posta da caselle normali. L'avviso «è una PEC» compare solo quando il destinatario è davvero una PEC.
+- `frontend/ANAGRAFICA-COMUNI.md`: aggiornata la riga sul sito dei Comuni (ora dall'Indice PA).
+- Limite noto: nelle schede minime il link al sito è quello del Comune (non dei Servizi Sociali) ma alcune schermate lo chiamano «Sito dei servizi sociali»: da riallineare in una PR a parte.

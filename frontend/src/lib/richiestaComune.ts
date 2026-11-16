@@ -28,9 +28,11 @@ export type RichiestaComune = {
 export function costruisciRichiesta(c: ComuneConfig): RichiestaComune {
   const unione = c.tipo === "unione";
   const ilNostroEnte = unione ? "la nostra Unione" : "il nostro Comune";
-  // Prima la mail dei Servizi Sociali in scheda, poi l'elenco dei destinatari, infine la PEC
+  // Prima la mail dei Servizi Sociali in scheda, poi l'elenco dei destinatari, poi l'email generica
+  // dell'Indice PA (solo schede minime) e per ultima la PEC: molte PEC rifiutano la posta normale.
   const elenco = DESTINATARI[c.slug];
-  const a = (c.email || elenco?.email || c.pec || (c.soloElenco ? riferimentiComune(c.slug)?.email : "") || "").trim();
+  const emailIpa = c.soloElenco ? riferimentiComune(c.slug)?.email ?? "" : "";
+  const a = (c.email || elenco?.email || emailIpa || c.pec || "").trim();
 
   const oggetto = unione
     ? "Chiediamo di mantenere e far crescere TutelApp nel nostro territorio"
@@ -67,7 +69,7 @@ export function costruisciRichiesta(c: ComuneConfig): RichiestaComune {
     oggetto,
     testo,
     daControllare: !a || !!c.daVerificare || (!c.email && !!elenco),
-    isPec: !!a && ((!c.email && elenco?.tipo === "pec") || (!c.email && !elenco && !!c.pec)),
+    isPec: !!a && ((!c.email && elenco?.tipo === "pec") || (!c.email && !elenco && !emailIpa && !!c.pec)),
   };
 }
 
