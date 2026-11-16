@@ -16,6 +16,7 @@
 // Aggiornamento 27/10/2026: elenco libere forme associative di Arezzo.
 // Aggiornamento 27/10/2026: Albo comunale delle associazioni della disabilità di Pisa.
 // Aggiornamento 07/11/2026: Liguria Calcio Non Vedenti (Sanremo), nuova sede e descrizione comunicate dal presidente dell'associazione via email il 07/11/2026; telefono fisso tolto (non più attivo), 09/11/2026.
+// Aggiornamento 16/11/2026: A.I.S.EA ETS (malattia rara, associazione nazionale) tra le nazionali, dal sito aiseaets.org; senza logo.
 // Aggiornamento 25/10/2026: provincia di Genova (Anffas, ANGSA, UICI, Chiossone, AISM, UILDM, ENS, ANGLAT, Asperger,
 // e dall'elenco ASL3 'Comitato Misto Consultivo - Associazioni' agg. 18/06/2025: Consulta disabilità, Alzheimer Liguria,
 // ALFAPP, Parkinson, tutela del malato, AVO).
@@ -2228,6 +2229,14 @@ const VOLONTARIATO_NAZIONALI: Associazione[] = [
     telefono: "06 4404773",
     email: "segreteria@uniamo.org",
     sito: "https://uniamo.org",
+  },
+  {
+    nome: "A.I.S.EA ETS – Associazione Italiana Sindrome di Emiplegia Alternante",
+    cosa: "Associazione nazionale formata da famiglie con figli che hanno l'emiplegia alternante, una malattia rara. Aiuta le famiglie nella vita di ogni giorno, fa conoscere la malattia e sostiene la ricerca. Dal sito: per i soci c'è un servizio di consulenza medica; per altri servizi o per le persone non socie scrivi all'email indicata. Non sono pubblicati orari di apertura né sedi locali: non li abbiamo inseriti perché non verificati (al 16/11/2026 non sono ancora stati chiesti all'associazione: puoi chiederli tu a info@aiseaets.org). Recapiti letti sul sito dell'associazione il 16/11/2026 (la pagina dei contatti non riporta la data).",
+    dove: "Sede legale: Via Giorgio Politeo 20, 00139 Roma",
+    telefono: "327 9276116",
+    email: "info@aiseaets.org",
+    sito: "https://www.aiseaets.org",
   },
 ];
 
