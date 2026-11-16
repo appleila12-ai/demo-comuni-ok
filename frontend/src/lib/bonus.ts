@@ -2348,9 +2348,9 @@ export const BONUS: Bonus[] = [
     perChi:
       "Persone con disabilità che hanno bisogno di sostegno intensivo e integrato a casa, residenti nei Comuni di Cerveteri e Ladispoli (Distretto socio sanitario 4.2). Gli altri requisiti sono nel bando: la pagina del Comune non li elenca. Chi già riceve il contributo o è stato riconosciuto idoneo e in lista d'attesa non deve ripresentare la domanda completa.",
     cosa:
-      "Assegno di cura o contributo di cura, pagato ogni mese. Per il contributo di cura serve un'autocertificazione e vanno conservate le ricevute per i controlli. Il Piano di Assistenza Individuale è fatto dall'Unità di Valutazione Multidimensionale. Gli importi non sono scritti sulla pagina del Comune: sono nel bando.",
+      "Assegno di cura o contributo di cura, pagato ogni mese. Per il contributo di cura serve un'autocertificazione e vanno conservate le ricevute per i controlli. Il Piano di Assistenza Individuale è fatto dall'Unità di Valutazione Multidimensionale. Secondo il bando (art. 5): assegno di cura da 500 a 1.200 euro al mese e contributo di cura da 400 a 1.000 euro al mese, per 12 mensilità; l'importo dipende da un punteggio (servizi già attivi e ISEE sociosanitario). Il bando parla anche di soglie ISEE alte (oltre 50.000 euro per gli adulti, oltre 65.000 per i minori) in modo non chiaro: chiedi all'Ufficio di Piano come si applicano.",
     stato: "attivo",
-    quando: "La pagina del Comune scrive che i termini sono aperti e non indica una data di chiusura.",
+    quando: "Il bando (art. 3) dice che si può presentare domanda in qualsiasi momento; la pagina del Comune non indica una data di chiusura.",
     comeSiChiede:
       "Con il modulo «disabilità gravissima» e il bando che trovi sulla pagina del Comune di Cerveteri (capofila del Distretto), consegnati al Protocollo o per PEC a comunecerveteri@pec.it. Informazioni: URP di Cerveteri, tel. 06 896301, urp@comune.cerveteri.rm.it.",
     fonte: {
