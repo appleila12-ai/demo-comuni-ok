@@ -460,6 +460,10 @@ const FONTE_SEDE_SP_TELEFONO = {
   label: "Comune della Spezia · atto con intestazione INAIL, sede di La Spezia",
   url: "https://trasparenza.spezianet.it/web/trasparenza/determinazioni",
 };
+const FONTE_SEDE_COMPETENTE = {
+  label: "INAIL · FAQ «Qual è la sede INAIL competente alla gestione dell'infortunio?»",
+  url: "https://www.inail.it/portale/it/supporto/faq.html?categoria=Infortunio+sul+lavoro&page=1",
+};
 const SEDE_SP_CONTROLLATA_IL = "16/11/2026";
 
 function SedeLaSpezia() {
@@ -483,9 +487,14 @@ function SedeLaSpezia() {
         </View>
         <View style={styles.voce}>
           <Text style={styles.voceTitolo}>Orari</Text>
+          <Text style={styles.testo}>Gli orari non sono ancora confermati dall'INAIL: chiama prima di andare.</Text>
+        </View>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>Qual è la tua sede</Text>
           <Text style={styles.testo}>
-            Gli orari non sono ancora confermati dall'INAIL: chiama prima di andare. Per sapere se questa è la sede
-            competente per te, chiedilo alla sede.
+            La sede INAIL competente è quella del territorio dove hai il domicilio, cioè di solito dove abiti, non
+            quella del posto di lavoro. Per sapere quale è la tua, entra in MyINAIL (servizi online) e guarda «Sede
+            INAIL di riferimento». Se abiti in un Comune della provincia della Spezia, chiedi alla sede se è questa.
           </Text>
         </View>
         <View style={styles.piede}>
@@ -501,8 +510,8 @@ function SedeLaSpezia() {
           </Pressable>
         </View>
         <Text style={styles.controllo}>
-          Indirizzo e PEC: {FONTE_SEDE_SP_INDIRIZZO.label}. Telefono ed email: {FONTE_SEDE_SP_TELEFONO.label}.
-          Controllato il {SEDE_SP_CONTROLLATA_IL}.
+          Indirizzo e PEC: {FONTE_SEDE_SP_INDIRIZZO.label}. Telefono ed email: {FONTE_SEDE_SP_TELEFONO.label}. Sede
+          competente: {FONTE_SEDE_COMPETENTE.label}. Controllato il {SEDE_SP_CONTROLLATA_IL}.
         </Text>
       </View>
     </View>
