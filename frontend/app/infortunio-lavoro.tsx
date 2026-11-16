@@ -494,7 +494,8 @@ function SedeLaSpezia() {
           <Text style={styles.testo}>
             La sede INAIL competente è quella del territorio dove hai il domicilio, cioè di solito dove abiti, non
             quella del posto di lavoro. Per sapere quale è la tua, entra in MyINAIL (servizi online) e guarda «Sede
-            INAIL di riferimento». Se abiti in un Comune della provincia della Spezia, chiedi alla sede se è questa.
+            INAIL di riferimento». Nell'elenco ufficiale delle sedi INAIL (2021) in provincia della Spezia c'è solo
+            questa sede: se abiti in un Comune della provincia, chiedi comunque alla sede se è la tua.
           </Text>
         </View>
         <View style={styles.piede}>
@@ -512,6 +513,49 @@ function SedeLaSpezia() {
         <Text style={styles.controllo}>
           Indirizzo e PEC: {FONTE_SEDE_SP_INDIRIZZO.label}. Telefono ed email: {FONTE_SEDE_SP_TELEFONO.label}. Sede
           competente: {FONTE_SEDE_COMPETENTE.label}. Controllato il {SEDE_SP_CONTROLLATA_IL}.
+        </Text>
+      </View>
+    </View>
+  );
+}
+
+// ---------- Sede INAIL di Carrara, per la provincia di Massa-Carrara (controllata il 16/11/2026) ----------
+// Indirizzo e PEC: allegato «Sedi» dell'Avviso pubblico ISI 2021 su inail.it (unica sede della provincia nell'elenco).
+// Telefono e orari NON indicati: non letti su una fonte INAIL recente.
+function SedeCarrara() {
+  return (
+    <View testID="infortunio-sede-carrara">
+      <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+        La sede INAIL di Carrara
+      </Text>
+      <View style={paginaStili.card}>
+        <Text style={styles.titolo} accessibilityRole="header">
+          INAIL · sede di Carrara
+        </Text>
+        <Text style={styles.testo}>Via Don Minzoni 5, 54033 Carrara (MS)</Text>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>PEC</Text>
+          <Text style={styles.testo}>carrara@postacert.inail.it</Text>
+        </View>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>Telefono e orari</Text>
+          <Text style={styles.testo}>
+            Non ancora confermati dall'INAIL: li trovi nella pagina delle sedi del portale INAIL, scegliendo la
+            Toscana.
+          </Text>
+        </View>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>Qual è la tua sede</Text>
+          <Text style={styles.testo}>
+            La sede INAIL competente è quella del territorio dove hai il domicilio, cioè di solito dove abiti, non
+            quella del posto di lavoro. Per sapere quale è la tua, entra in MyINAIL (servizi online) e guarda «Sede
+            INAIL di riferimento». Nell'elenco ufficiale delle sedi INAIL (2021) in provincia di Massa-Carrara c'è
+            solo questa sede: se abiti in un Comune della provincia, chiedi comunque alla sede se è la tua.
+          </Text>
+        </View>
+        <Text style={styles.controllo}>
+          Indirizzo e PEC: {FONTE_SEDE_SP_INDIRIZZO.label}. Sede competente: {FONTE_SEDE_COMPETENTE.label}.
+          Controllato il {SEDE_SP_CONTROLLATA_IL}.
         </Text>
       </View>
     </View>
@@ -542,6 +586,7 @@ export default function InfortunioLavoro() {
 
       {comune.regione === "Puglia" ? <SediPuglia /> : null}
       {comune.provincia === "SP" ? <SedeLaSpezia /> : null}
+      {comune.provincia === "MS" ? <SedeCarrara /> : null}
 
       <Avviso>
         TutelApp non sostituisce l'INAIL, il patronato o il medico. Ti aiuta a capire dove andare: per la tua
