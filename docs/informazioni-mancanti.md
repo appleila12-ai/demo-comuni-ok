@@ -351,7 +351,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Nola | NA | Campania | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Nuoro | NU | Sardegna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Ocre | AQ | Abruzzo | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Ocre | AQ | Abruzzo | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Olbia | SS | Sardegna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Oristano | OR | Sardegna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Oristano | OR | Sardegna | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
