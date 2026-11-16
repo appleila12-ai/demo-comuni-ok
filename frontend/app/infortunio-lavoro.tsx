@@ -448,6 +448,120 @@ function SediPuglia() {
   );
 }
 
+// ---------- Sede INAIL della Spezia (controllata il 16/11/2026) ----------
+// Indirizzo e PEC: allegato «Sedi» dell'Avviso pubblico ISI 2021 pubblicato su inail.it.
+// Telefono ed email: atto del Comune della Spezia con intestazione INAIL, sede di La Spezia.
+// Gli orari NON sono indicati: le fonti trovate non sono istituzionali, si chiedono alla sede.
+const FONTE_SEDE_SP_INDIRIZZO = {
+  label: "INAIL · Avviso pubblico ISI 2021, allegato Sedi",
+  url: "https://www.inail.it/content/dam/inail-hub-site/documenti/2021/12/Allegato_SEDI_ISI2021_end.pdf",
+};
+const FONTE_SEDE_SP_TELEFONO = {
+  label: "Comune della Spezia · atto con intestazione INAIL, sede di La Spezia",
+  url: "https://trasparenza.spezianet.it/web/trasparenza/determinazioni",
+};
+const FONTE_SEDE_COMPETENTE = {
+  label: "INAIL · FAQ «Qual è la sede INAIL competente alla gestione dell'infortunio?»",
+  url: "https://www.inail.it/portale/it/supporto/faq.html?categoria=Infortunio+sul+lavoro&page=1",
+};
+const SEDE_SP_CONTROLLATA_IL = "16/11/2026";
+
+function SedeLaSpezia() {
+  return (
+    <View testID="infortunio-sede-la-spezia">
+      <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+        La sede INAIL della Spezia
+      </Text>
+      <View style={paginaStili.card}>
+        <Text style={styles.titolo} accessibilityRole="header">
+          INAIL · sede di La Spezia
+        </Text>
+        <Text style={styles.testo}>Corso Nazionale 326, 19125 La Spezia</Text>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>Email</Text>
+          <Text style={styles.testo}>laspezia@inail.it</Text>
+        </View>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>PEC</Text>
+          <Text style={styles.testo}>laspezia@postacert.inail.it</Text>
+        </View>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>Orari</Text>
+          <Text style={styles.testo}>Gli orari non sono ancora confermati dall'INAIL: chiama prima di andare.</Text>
+        </View>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>Qual è la tua sede</Text>
+          <Text style={styles.testo}>
+            La sede INAIL competente è quella del territorio dove hai il domicilio, cioè di solito dove abiti, non
+            quella del posto di lavoro. Per sapere quale è la tua, entra in MyINAIL (servizi online) e guarda «Sede
+            INAIL di riferimento». Nell'elenco ufficiale delle sedi INAIL (2021) in provincia della Spezia c'è solo
+            questa sede: se abiti in un Comune della provincia, chiedi comunque alla sede se è la tua.
+          </Text>
+        </View>
+        <View style={styles.piede}>
+          <Pressable
+            onPress={() => apri("tel:+3901875421")}
+            style={({ pressed }) => [styles.chiama, pressed && { opacity: 0.85 }]}
+            accessibilityRole="button"
+            accessibilityLabel="Chiama la sede INAIL della Spezia, 0187 5421"
+            testID="infortunio-chiama-la-spezia"
+          >
+            <Ionicons name="call-outline" size={18} color={colors.onSurface} />
+            <Text style={styles.chiamaTesto}>Chiama 0187 5421</Text>
+          </Pressable>
+        </View>
+        <Text style={styles.controllo}>
+          Indirizzo e PEC: {FONTE_SEDE_SP_INDIRIZZO.label}. Telefono ed email: {FONTE_SEDE_SP_TELEFONO.label}. Sede
+          competente: {FONTE_SEDE_COMPETENTE.label}. Controllato il {SEDE_SP_CONTROLLATA_IL}.
+        </Text>
+      </View>
+    </View>
+  );
+}
+
+// ---------- Sede INAIL di Carrara, per la provincia di Massa-Carrara (controllata il 16/11/2026) ----------
+// Indirizzo e PEC: allegato «Sedi» dell'Avviso pubblico ISI 2021 su inail.it (unica sede della provincia nell'elenco).
+// Telefono e orari NON indicati: non letti su una fonte INAIL recente.
+function SedeCarrara() {
+  return (
+    <View testID="infortunio-sede-carrara">
+      <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+        La sede INAIL di Carrara
+      </Text>
+      <View style={paginaStili.card}>
+        <Text style={styles.titolo} accessibilityRole="header">
+          INAIL · sede di Carrara
+        </Text>
+        <Text style={styles.testo}>Via Don Minzoni 5, 54033 Carrara (MS)</Text>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>PEC</Text>
+          <Text style={styles.testo}>carrara@postacert.inail.it</Text>
+        </View>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>Telefono e orari</Text>
+          <Text style={styles.testo}>
+            Non ancora confermati dall'INAIL: li trovi nella pagina delle sedi del portale INAIL, scegliendo la
+            Toscana.
+          </Text>
+        </View>
+        <View style={styles.voce}>
+          <Text style={styles.voceTitolo}>Qual è la tua sede</Text>
+          <Text style={styles.testo}>
+            La sede INAIL competente è quella del territorio dove hai il domicilio, cioè di solito dove abiti, non
+            quella del posto di lavoro. Per sapere quale è la tua, entra in MyINAIL (servizi online) e guarda «Sede
+            INAIL di riferimento». Nell'elenco ufficiale delle sedi INAIL (2021) in provincia di Massa-Carrara c'è
+            solo questa sede: se abiti in un Comune della provincia, chiedi comunque alla sede se è la tua.
+          </Text>
+        </View>
+        <Text style={styles.controllo}>
+          Indirizzo e PEC: {FONTE_SEDE_SP_INDIRIZZO.label}. Sede competente: {FONTE_SEDE_COMPETENTE.label}.
+          Controllato il {SEDE_SP_CONTROLLATA_IL}.
+        </Text>
+      </View>
+    </View>
+  );
+}
+
 export default function InfortunioLavoro() {
   return (
     <Pagina titolo="Mi sono fatto male al lavoro" testID="infortunio-lavoro-screen" sottotitoloSalvato="INAIL: a chi chiedere">
@@ -471,6 +585,8 @@ export default function InfortunioLavoro() {
       <Importi />
 
       {comune.regione === "Puglia" ? <SediPuglia /> : null}
+      {comune.provincia === "SP" ? <SedeLaSpezia /> : null}
+      {comune.provincia === "MS" ? <SedeCarrara /> : null}
 
       <Avviso>
         TutelApp non sostituisce l'INAIL, il patronato o il medico. Ti aiuta a capire dove andare: per la tua
