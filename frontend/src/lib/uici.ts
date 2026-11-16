@@ -9,6 +9,7 @@
 
 import SEDI_JSON from "@/src/content/uici-sedi.json";
 import LETI_JSON from "@/src/content/letismart.json";
+import LETI_INST_JSON from "@/src/content/letismart-installazioni.json";
 import { comune } from "@/src/config/comune";
 
 export type SedeUici = {
@@ -46,6 +47,12 @@ const LETI = LETI_JSON as unknown as {
   altriLuoghi: LuogoAltro[];
 };
 
+const LETI_INST = LETI_INST_JSON as unknown as {
+  data: string;
+  fonte: string;
+  comuni: { comune: string; totale: number; categorie: Record<string, number> }[];
+};
+
 const MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"];
 
 /** "2026-11-09" → "9 novembre 2026" */
@@ -58,6 +65,9 @@ export function dataLeggibile(iso: string): string {
 export const DATA_UICI = dataLeggibile(CONSULTAZIONE_UICI);
 export const DATA_LETISMART = dataLeggibile(LETI.consultazione);
 export const URL_MAPPA_LETISMART = LETI.fonte;
+export const DATA_ELENCO_LETISMART = dataLeggibile(LETI_INST.data);
+/** Logo "U.I.C.I. LETIsmart": uso autorizzato per iscritto da SCEN S.r.l. il 16/11/2026 (rif. CO261116), nome e logo indicati da SCEN. */
+export const LOGO_UICI_LETISMART = "/associazioni/uici-letismart.png";
 export const URL_UICI_NAZIONALE = "https://www.uiciechi.it/";
 export const CONTATTI_LETISMART = { email: "info@letismart.it", telefono: "040 231778" };
 
@@ -152,6 +162,11 @@ const ALIAS: Record<string, string[]> = {
   reggiocalabria: ["reggiodicalabria"],
   reggioemilia: ["reggionellemilia"],
   monterusciello: ["pozzuoli"],
+  aquila: ["laquila"],
+  caltanisetta: ["caltanissetta"],
+  svitoaltagliamento: ["sanvitoaltagliamento"],
+  sestosgiovanni: ["sestosangiovanni"],
+  cortina: ["cortinadampezzo"],
 };
 
 const chiaviCitta = (nome: string) => [norm(nome), ...(ALIAS[norm(nome)] ?? [])];
@@ -165,6 +180,8 @@ export type RadiofariDelComune = {
   voci: { citta: string; stato: Exclude<StatoLeti, "non_verificato"> }[];
   /** installazioni documentate in pagine ufficiali LETIsmart (non è un elenco completo dei radiofari) */
   luoghi: Luogo[];
+  /** radiofari dell'elenco ufficiale inviato da SCEN (numero per tipo di luogo), se il Comune c'è */
+  installazioni: { totale: number; categorie: [string, number][] } | null;
   /** nessuna informazione verificata per il Comune */
   vuoto: boolean;
 };
@@ -177,10 +194,23 @@ export function radiofariDelComune(): RadiofariDelComune {
     ...voci.flatMap((c) => c.luoghi ?? []),
     ...LETI.altriLuoghi.filter((l) => mio(l.citta)),
   ];
+  const righe = LETI_INST.comuni.filter((c) => mio(c.comune));
+  const installazioni = righe.length
+    ? {
+        totale: righe.reduce((t, c) => t + c.totale, 0),
+        categorie: Object.entries(
+          righe.reduce<Record<string, number>>((acc, c) => {
+            for (const [k, n] of Object.entries(c.categorie)) acc[k] = (acc[k] || 0) + n;
+            return acc;
+          }, {}),
+        ).sort((a, b) => b[1] - a[1]) as [string, number][],
+      }
+    : null;
   return {
+    installazioni,
     voci: voci.map((c) => ({ citta: c.citta, stato: c.stato as Exclude<StatoLeti, "non_verificato"> })),
     luoghi,
-    vuoto: voci.length === 0 && luoghi.length === 0,
+    vuoto: voci.length === 0 && luoghi.length === 0 && !installazioni,
   };
 }
 

@@ -1,0 +1,617 @@
+{
+ "data": "2026-11-16",
+ "fonte": "Elenco installazioni inviato da SCEN S.r.l. (LETIsmart) il 16 novembre 2026",
+ "comuni": [
+  {
+   "comune": "Alessandria",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Alghero",
+   "totale": 4,
+   "categorie": {
+    "musei e parchi": 4
+   }
+  },
+  {
+   "comune": "Aquila",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Arezzo",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Armeno",
+   "totale": 5,
+   "categorie": {
+    "punti di interesse del Comune (smart city)": 2,
+    "musei e parchi": 2,
+    "chiese e luoghi di culto": 1
+   }
+  },
+  {
+   "comune": "Avezzano",
+   "totale": 2,
+   "categorie": {
+    "punti di interesse del Comune (smart city)": 2
+   }
+  },
+  {
+   "comune": "Bari",
+   "totale": 60,
+   "categorie": {
+    "semafori sonori": 58,
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Barletta",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Belluno",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Biella",
+   "totale": 52,
+   "categorie": {
+    "sezioni UICI": 2,
+    "trasporto pubblico su strada (linea e direzione)": 50
+   }
+  },
+  {
+   "comune": "Bologna",
+   "totale": 8,
+   "categorie": {
+    "sezioni UICI": 4,
+    "semafori sonori": 4
+   }
+  },
+  {
+   "comune": "Brescia",
+   "totale": 3,
+   "categorie": {
+    "sezioni UICI": 2,
+    "punti di interesse del Comune (smart city)": 1
+   }
+  },
+  {
+   "comune": "Brindisi",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Caltanisetta",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Campobasso",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Casali del Manco",
+   "totale": 3,
+   "categorie": {
+    "biblioteche e archivi": 3
+   }
+  },
+  {
+   "comune": "Caserta",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Casoria",
+   "totale": 6,
+   "categorie": {
+    "aziende ospedaliere": 6
+   }
+  },
+  {
+   "comune": "Catania",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Catanzaro",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Chiavari",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Chieti",
+   "totale": 23,
+   "categorie": {
+    "sezioni UICI": 2,
+    "attività commerciali": 21
+   }
+  },
+  {
+   "comune": "Como",
+   "totale": 102,
+   "categorie": {
+    "trasporto pubblico su strada (linea e direzione)": 71,
+    "musei e parchi": 28,
+    "sezioni UICI": 3
+   }
+  },
+  {
+   "comune": "Cortina",
+   "totale": 30,
+   "categorie": {
+    "trasporto pubblico su strada (linea e direzione)": 30
+   }
+  },
+  {
+   "comune": "Cosenza",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Ferrara",
+   "totale": 8,
+   "categorie": {
+    "sezioni UICI": 8
+   }
+  },
+  {
+   "comune": "Firenze",
+   "totale": 16,
+   "categorie": {
+    "punti di interesse del Comune (smart city)": 14,
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Foggia",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Forlì",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Genova",
+   "totale": 6,
+   "categorie": {
+    "sezioni UICI": 2,
+    "stabilimenti balneari": 4
+   }
+  },
+  {
+   "comune": "Giulianova",
+   "totale": 60,
+   "categorie": {
+    "punti di interesse del Comune (smart city)": 60
+   }
+  },
+  {
+   "comune": "Gorizia",
+   "totale": 94,
+   "categorie": {
+    "sezioni UICI": 2,
+    "trasporto pubblico su strada (linea e direzione)": 92
+   }
+  },
+  {
+   "comune": "Lecce",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Lucca",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Mantova",
+   "totale": 43,
+   "categorie": {
+    "punti di interesse del Comune (smart city)": 36,
+    "attività commerciali": 4,
+    "sezioni UICI": 2,
+    "biblioteche e archivi": 1
+   }
+  },
+  {
+   "comune": "Matera",
+   "totale": 181,
+   "categorie": {
+    "semafori sonori": 136,
+    "biblioteche e archivi": 15,
+    "punti di interesse del Comune (smart city)": 23,
+    "sezioni UICI": 2,
+    "attività commerciali": 5
+   }
+  },
+  {
+   "comune": "Milano",
+   "totale": 605,
+   "categorie": {
+    "punti di interesse del Comune (smart city)": 27,
+    "sezioni UICI": 4,
+    "semafori sonori": 491,
+    "università e scuole": 83
+   }
+  },
+  {
+   "comune": "Monterusciello",
+   "totale": 7,
+   "categorie": {
+    "aziende ospedaliere": 7
+   }
+  },
+  {
+   "comune": "Monza",
+   "totale": 4,
+   "categorie": {
+    "biblioteche e archivi": 2,
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Napoli",
+   "totale": 12,
+   "categorie": {
+    "chiese e luoghi di culto": 10,
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Novara",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Nuoro",
+   "totale": 40,
+   "categorie": {
+    "sezioni UICI": 2,
+    "trasporto pubblico su strada (linea e direzione)": 38
+   }
+  },
+  {
+   "comune": "Oristano",
+   "totale": 12,
+   "categorie": {
+    "sezioni UICI": 2,
+    "punti di interesse del Comune (smart city)": 10
+   }
+  },
+  {
+   "comune": "Padova",
+   "totale": 120,
+   "categorie": {
+    "semafori sonori": 36,
+    "centrali di controllo dei semafori": 36,
+    "sezioni UICI": 2,
+    "punti di interesse del Comune (smart city)": 46
+   }
+  },
+  {
+   "comune": "Paestum",
+   "totale": 12,
+   "categorie": {
+    "musei e parchi": 6,
+    "stabilimenti balneari": 6
+   }
+  },
+  {
+   "comune": "Parma",
+   "totale": 4,
+   "categorie": {
+    "sezioni UICI": 2,
+    "punti di interesse del Comune (smart city)": 2
+   }
+  },
+  {
+   "comune": "Pavia",
+   "totale": 11,
+   "categorie": {
+    "punti di interesse del Comune (smart city)": 10,
+    "attività commerciali": 1
+   }
+  },
+  {
+   "comune": "Pertosa",
+   "totale": 5,
+   "categorie": {
+    "musei e parchi": 5
+   }
+  },
+  {
+   "comune": "Pescara",
+   "totale": 102,
+   "categorie": {
+    "sezioni UICI": 2,
+    "trasporto pubblico su strada (linea e direzione)": 100
+   }
+  },
+  {
+   "comune": "Pescina",
+   "totale": 1,
+   "categorie": {
+    "punti di interesse del Comune (smart city)": 1
+   }
+  },
+  {
+   "comune": "Pordenone",
+   "totale": 106,
+   "categorie": {
+    "sezioni UICI": 2,
+    "semafori sonori": 12,
+    "centrali di controllo dei semafori": 1,
+    "trasporto pubblico su strada (linea e direzione)": 91
+   }
+  },
+  {
+   "comune": "Potenza",
+   "totale": 73,
+   "categorie": {
+    "sezioni UICI": 2,
+    "punti di interesse del Comune (smart city)": 6,
+    "aziende ospedaliere": 65
+   }
+  },
+  {
+   "comune": "Pozzuoli",
+   "totale": 7,
+   "categorie": {
+    "aziende ospedaliere": 7
+   }
+  },
+  {
+   "comune": "Prato",
+   "totale": 16,
+   "categorie": {
+    "sezioni UICI": 2,
+    "punti di interesse del Comune (smart city)": 8,
+    "università e scuole": 1,
+    "chiese e luoghi di culto": 2,
+    "aziende ospedaliere": 2,
+    "attività commerciali": 1
+   }
+  },
+  {
+   "comune": "Ragusa",
+   "totale": 20,
+   "categorie": {
+    "attività commerciali": 20
+   }
+  },
+  {
+   "comune": "Reggio Calabria",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Reggio Emilia",
+   "totale": 56,
+   "categorie": {
+    "sezioni UICI": 18,
+    "trasporto pubblico su strada (linea e direzione)": 33,
+    "punti di interesse del Comune (smart city)": 5
+   }
+  },
+  {
+   "comune": "Resiutta",
+   "totale": 5,
+   "categorie": {
+    "musei e parchi": 5
+   }
+  },
+  {
+   "comune": "Roma",
+   "totale": 42,
+   "categorie": {
+    "attività commerciali": 42
+   }
+  },
+  {
+   "comune": "Rovigo",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "S. Vito al Tagliamento",
+   "totale": 13,
+   "categorie": {
+    "musei e parchi": 8,
+    "università e scuole": 5
+   }
+  },
+  {
+   "comune": "Sabbioneta",
+   "totale": 23,
+   "categorie": {
+    "punti di interesse del Comune (smart city)": 16,
+    "attività commerciali": 7
+   }
+  },
+  {
+   "comune": "Salerno",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "SantaTeresaGallura",
+   "totale": 30,
+   "categorie": {
+    "stabilimenti balneari": 30
+   }
+  },
+  {
+   "comune": "Sassari",
+   "totale": 45,
+   "categorie": {
+    "sezioni UICI": 2,
+    "biblioteche e archivi": 43
+   }
+  },
+  {
+   "comune": "Savona",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Sesto S. Giovanni",
+   "totale": 4,
+   "categorie": {
+    "semafori sonori": 4
+   }
+  },
+  {
+   "comune": "Siena",
+   "totale": 60,
+   "categorie": {
+    "università e scuole": 22,
+    "aziende ospedaliere": 38
+   }
+  },
+  {
+   "comune": "Siracusa",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Taranto",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Teramo",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Torino",
+   "totale": 12,
+   "categorie": {
+    "trasporto pubblico su rotaia": 2,
+    "sezioni UICI": 2,
+    "punti di interesse del Comune (smart city)": 2,
+    "semafori sonori": 6
+   }
+  },
+  {
+   "comune": "Trieste",
+   "totale": 731,
+   "categorie": {
+    "punti di interesse del Comune (smart city)": 40,
+    "sezioni UICI": 36,
+    "trasporto pubblico su strada (prossimità fermata)": 3,
+    "semafori sonori": 198,
+    "centrali di controllo dei semafori": 2,
+    "teatri ed eventi": 8,
+    "trasporto pubblico su strada (linea e direzione)": 353,
+    "trasporto pubblico su rotaia": 3,
+    "università e scuole": 31,
+    "musei e parchi": 57
+   }
+  },
+  {
+   "comune": "Udine",
+   "totale": 242,
+   "categorie": {
+    "punti di interesse del Comune (smart city)": 4,
+    "sezioni UICI": 2,
+    "trasporto pubblico su strada (linea e direzione)": 236
+   }
+  },
+  {
+   "comune": "Venezia",
+   "totale": 14,
+   "categorie": {
+    "trasporto pubblico su strada (linea e direzione)": 3,
+    "stabilimenti balneari": 9,
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Verona",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Vibo Valentia",
+   "totale": 2,
+   "categorie": {
+    "sezioni UICI": 2
+   }
+  },
+  {
+   "comune": "Vigonza",
+   "totale": 9,
+   "categorie": {
+    "musei e parchi": 9
+   }
+  }
+ ]
+}
