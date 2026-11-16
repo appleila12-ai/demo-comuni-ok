@@ -28,6 +28,7 @@ import { RiprendiHome } from "@/src/components/RiprendiHome";
 import { InvitoSalvataggio } from "@/src/components/InvitoSalvataggio";
 import { RecuperaDati } from "@/src/components/RecuperaDati";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
+import { apriMail as apriProgrammaPosta } from "@/src/lib/apriMail";
 import { RichiestaNome, RichiestaNomeHome } from "@/src/components/RichiestaNome";
 import { useNomeUtente } from "@/src/lib/nomeUtente";
 import { SITO_TUTELAPP, linkMailtoInserimentoComune } from "@/src/lib/richiestaComune";
@@ -493,7 +494,7 @@ function HomeDelComune() {
           )}
           {!!comune.soloElenco && (
             <Pressable
-              onPress={() => Linking.openURL(linkMailtoInserimentoComune(comune)).catch(() => {})}
+              onPress={() => apriProgrammaPosta(linkMailtoInserimentoComune(comune)).catch(() => {})}
               style={({ pressed }) => [styles.contactRow, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel={`Chiedi a TutelApp di inserire il Comune di ${comune.nomeBreve}: apre la mail già compilata`}
@@ -502,6 +503,11 @@ function HomeDelComune() {
               <Ionicons name="mail-outline" size={16} color={t.warmDark} />
               <Text style={[styles.contactValue, styles.contactLink]}>Chiedi di inserire il tuo Comune</Text>
             </Pressable>
+          )}
+          {!!comune.soloElenco && (
+            <Text style={styles.contactText} selectable>
+              Se non si apre la posta, scrivi a info@tutelapp.it indicando il tuo Comune.
+            </Text>
           )}
 
           <View style={styles.contactRows}>
