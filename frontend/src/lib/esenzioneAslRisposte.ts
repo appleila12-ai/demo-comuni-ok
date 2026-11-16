@@ -1348,6 +1348,8 @@ ESENZIONE_ASL.laquila = {
     "Vai allo sportello «Scelta e Revoca del Medico», Via Capocroce 1, L'Aquila, dal lunedì al venerdì dalle 8:15 alle 13:00, senza appuntamento",
     "Oppure scrivi a sceltadelmedicoaq@asl1abruzzo.it allegando i documenti qui sotto, più documento d'identità e tessera sanitaria",
     "Per ristampare il tesserino di esenzione usa il portale Sanità Regione Abruzzo (link qui sotto)",
+    "Non c'è un modulo da compilare: basta presentare la certificazione indicata qui sotto. Allo sportello la tessera si rilascia subito; se scrivi per email, i tempi sono da 3 a 5 giorni lavorativi",
+    "I residenti a Ocre possono rivolgersi allo stesso sportello di Via Capocroce",
   ],
   documenti: [
     "Esenzione per patologia: certificato di «malattia cronico invalidante» con codice e sottocodice della patologia, rilasciato dal medico specialista ospedaliero o da una struttura sanitaria convenzionata",
@@ -1363,9 +1365,7 @@ ESENZIONE_ASL.laquila = {
   paginaUrl: "https://trasparenza.asl1abruzzo.it/page/40/details/6627/u-o-s-d-cure-primarie-l-aquila.html",
   paginaLabel: "U.O.S.D. Cure Primarie L'Aquila · ASL 1 Abruzzo",
   altriLink: [{ label: "Ristampa del tesserino di esenzione · Sanità Regione Abruzzo", url: "https://sanitaonline.regione.abruzzo.it/portaleservizi/#/pages/listaservizi" }],
-  manca:
-    "L'URP non ha risposto su un modulo o modalità online per la richiesta (a parte l'email) né sui tempi di rilascio: chiedili allo sportello.",
-  fonte: "ASL 1 Abruzzo · risposta scritta dell'URP del 16/11/2026 (richiesta del 10/11/2026) e pagina U.O.S.D. Cure Primarie L'Aquila (aggiornata il 28/10/2026)",
+  fonte: "ASL 1 Abruzzo · risposte scritte dell'URP e dello sportello Scelta e Revoca del Medico del 16/11/2026 (richiesta del 10/11/2026) e pagina U.O.S.D. Cure Primarie L'Aquila (aggiornata il 28/10/2026)",
 };
 
 ESENZIONE_ASL.ocre = ESENZIONE_ASL.laquila;
