@@ -1582,3 +1582,39 @@ ESENZIONE_ASL.campodimele = {
     "L'ASL non indica se i residenti di Campodimele devono andare a Terracina o a Fondi, né l'elenco completo dei documenti da portare per l'esenzione per patologia: chiedilo al numero di Terracina qui sopra. Per una patologia cronica la Carta dei servizi ASL (par. 3.1.2, revisione del 25/03/2026) chiede la «certificazione rilasciata, su apposita modulistica, da un Medico Specialista pubblico», oppure quella del medico curante solo nei casi di diabete o ipertensione. In attesa della risposta, controlla anche la pagina «Esenzioni» dell'ASL Latina.",
   fonte: "ASL Latina · pagina «Servizi – Distretto 4» (ultima modifica 02/12/2025) e Carta dei servizi (revisione 25/03/2026), letti il 14/11/2026",
 };
+
+// Emilia-Romagna · AUSL di Piacenza. Risposta dell'URP del 16/11/2026 (con il link alla pagina ufficiale) e pagine ufficiali dell'AUSL.
+ESENZIONE_ASL.piacenza = {
+  asl: "AUSL di Piacenza",
+  intro:
+    "A Piacenza l'esenzione per patologia (malattie croniche e invalidanti, malattie rare) si chiede agli Sportelli unici dell'Azienda USL, con la certificazione di uno specialista di una struttura pubblica.",
+  titoloPassi: "Come si fa",
+  comeSiPresenta: [
+    "Vai a uno degli Sportelli unici aziendali con la documentazione che attesta la malattia",
+    "Allo Sportello unico di Piazzale Milano 2, Piacenza (Casa della Salute) serve prenotare l'appuntamento con Zerocoda; lo sportello è aperto dal lunedì al venerdì",
+    "Se ti ha già codificato la malattia un reparto di una struttura pubblica, l'esenzione si registra subito allo sportello",
+    "Puoi mandare una persona di fiducia con la delega e le copie dei documenti d'identità di chi delega e di chi ritira",
+    "Se hai il Fascicolo sanitario elettronico non devi ripresentarti all'AUSL",
+  ],
+  documenti: [
+    "Certificazione dello specialista di una struttura pubblica, con la malattia e il suo codice",
+    "Oppure lettere di dimissioni, cartelle cliniche e simili, in fotocopia: l'AUSL non trattiene gli originali, ma un medico dell'Azienda valuta i documenti e la registrazione avviene dopo",
+    "Se va un'altra persona: modulo di delega e copie dei documenti d'identità",
+  ],
+  importante:
+    "Se i documenti vanno valutati da un medico, l'esenzione si ritira al punto informativo dopo una settimana dalla consegna. Se sei residente fuori regione ma hai il medico a Piacenza, registra prima l'esenzione nella tua AUSL di residenza. Per usarla, il medico deve scrivere il codice della malattia sull'impegnativa.",
+  telefoni: [
+    { etichetta: "Centralino unico AUSL di Piacenza", numero: "0523 301111" },
+    { etichetta: "URP AUSL di Piacenza · dalle 8:30 alle 12:30", numero: "0523 404616" },
+  ],
+  paginaUrl: "https://www.ausl.pc.it/it/come-fare-per/esenzioni-e-contributi/esenzione-per-patologia",
+  paginaLabel: "Esenzione per patologia · AUSL di Piacenza",
+  altriLink: [
+    { label: "Prenotare allo Sportello unico di Piazzale Milano · Zerocoda", url: "https://auslpiacenza.zerocoda.it/" },
+    { label: "Sportelli unici aziendali · AUSL di Piacenza", url: "https://www.ausl.pc.it/it/prestazioni-e-percorsi-di-cura/rete-territoriale/sportello-unico" },
+  ],
+  manca:
+    "L'URP ha risposto solo con il link alla pagina ufficiale: gli orari degli sportelli non sono pubblicati sulla pagina (si vedono in Zerocoda), né l'indirizzo di posta o PEC per mandare la richiesta a distanza né un modulo ufficiale. Chiedi all'URP, tel. 0523 404616.",
+  fonte:
+    "AUSL di Piacenza · risposta dell'URP del 16/11/2026, pagina «Esenzione per patologia» (aggiornata il 15/04/2025) e pagina Sportello unico di Piazzale Milano (aggiornata il 21/08/2026), controllate il 16/11/2026",
+};
