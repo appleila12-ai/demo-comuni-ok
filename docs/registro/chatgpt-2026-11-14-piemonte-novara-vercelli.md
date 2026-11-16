@@ -28,3 +28,11 @@ Modifica limitata a due schede demo e questo registro; nessun test Node locale e
 - **Avvertenza:** il testo della pagina cita un rinnovo automatico delle esenzioni per reddito fino al 31/03/2024; non riportare tale scadenza come valida nel 2026. Gli allegati e le modalità attuali vanno ancora verificati singolarmente.
 - **Stato Novara:** PARZIALE, non completo. Mancano verifica completa delle procedure ticket, bonus comunali e dell'Ambito, bonus regionali, destinatario «Scrivi al tuo Comune» e avviso di incompletezza visibile in UI. Nessuna email inviata; nessun merge/deploy autorizzato.
 - **Test:** controlli Node locali non eseguiti in questa sessione; CI e anteprima Netlify da ricontrollare dopo il commit.
+
+## Aggiornamento 16/11/2026 — Vercelli, PUA ASL e Comune
+
+- **Aggiunto alla scheda** un punto di supporto distinto dallo Sportello comunale: Punto Unico di Accesso (PUA), presso i locali CUP di corso Mario Abbiate, Vercelli, con telefoni 0161 593560 e 334 1021870, email pua.vercelli@aslvc.piemonte.it e link alla pagina ASL.
+- **Fonte istituzionale:** https://aslvc.piemonte.it/dal-1-luglio-si-amplia-lorario-del-pua-e-gestira-anche-le-domande-per-valutazioni-uvg-e-umvd/ — notizia ASL Vercelli pubblicata il 30/06/2025, ricontrollata il 16/11/2026. Dal 01/07/2025 il PUA riceve anche domande di valutazione UVG/UMVD. Orari riportati dalla fonte: lun 09:00–12:00 e 13:00–15:00, mar 09:00–12:00, mer 14:00–16:00 solo su appuntamento, gio e ven 09:00–12:00. Non confondere questi orari con quelli dello Sportello comunale.
+- **Non modificato** il campo esenzione ticket: la pagina PUA NON documenta la procedura per il rilascio dell'esenzione; la homepage ASL è ancora un collegamento generico. Non usare le vecchie indicazioni UVG/UMVD di altre pagine senza risolvere il conflitto.
+- **Stato:** PARZIALE, non completo. Mancano procedura ticket, bonus regionali/comunali e Ambito, destinatario «Scrivi al tuo Comune», verifica avviso visibile in UI e archivio email Drive. Nessuna richiesta email inviata, quindi NON «chiuso in attesa».
+- **Controlli:** commit dati sulla PR #296; Node locale non disponibile (clone GitHub non raggiungibile dal container). CI GitHub e anteprima Netlify non verificate visivamente. Non pubblicare senza autorizzazione.
