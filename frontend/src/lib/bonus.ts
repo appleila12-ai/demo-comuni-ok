@@ -899,11 +899,11 @@ export const BONUS: Bonus[] = [
     comeSiChiede:
       "Solo online, sul portale Rete del Sociale (fondi.retedelsociale.it) con SPID. Allegati obbligatori: documento d'identità della persona assistita, codice fiscale o tessera sanitaria, ISEE ordinario in corso di validità del nucleo, verbale di invalidità civile, verbale ai sensi dell'art. 3 comma 3 della Legge 104/1992. La domanda vale solo se, dopo \"Spedisci\", passa da \"Bozza\" a \"Presentata\" con numero di protocollo; dopo l'invio non si può correggere. Per aiuto: PUA distrettuale di Fondi o di Terracina, oppure l'Ufficio Servizi Sociali del Comune di residenza.",
     fonte: {
-      label: "Distretto LT4 · Avviso pubblico per il riconoscimento del caregiver familiare",
-      url: "https://fondi.retedelsociale.it/upload/File/AllegatiNews/21.pdf",
+      label: "Comune di Terracina · Riconoscimento formale, valorizzazione sociale e promozione di interventi a sostegno del caregiver familiare (Distretto LT4, pagina aggiornata il 25/06/2025)",
+      url: "https://comune.terracina.lt.it/notizie/3418166/riconoscimento-formale-valorizzazione-sociale",
     },
-    verificatoIl: "26/10/2026",
-    nota: "L'avviso è datato 30/05/2025 e la pagina del portale che lo richiama è del 12/10/2026. L'avviso non indica telefoni né orari: chiedili al PUA o al Comune.",
+    verificatoIl: "16/11/2026",
+    nota: "La pagina del Comune di Terracina conferma che l'avviso è aperto, senza termini di scadenza, e che la domanda si fa solo online con SPID sulla piattaforma «Rete del Sociale» del Distretto, con aiuto al PUA di Fondi o di Terracina o all'Ufficio Servizi Sociali del Comune. Il nome «Card Giver», il ruolo dell'UVMD e i 90 giorni vengono dall'avviso del 30/05/2025 e non compaiono in quella pagina: conferma al PUA o al Comune. L'avviso non indica telefoni né orari.",
   },
 
   // ------------------------------------------------------------------ TOSCANA
@@ -1147,27 +1147,6 @@ export const BONUS: Bonus[] = [
   // ------------------------------------------------------------------ ABRUZZO
 
   // ----------------------------------------------------------- L'AQUILA (AQ)
-  {
-    id: "laquila-caregiver-2026",
-    regione: "Abruzzo",
-    comuni: ["laquila"],
-    titolo: "Fondo per il sostegno del caregiver familiare (2026)",
-    perChi:
-      "Caregiver familiari residenti all'Aquila che assistono un parente convivente (anagraficamente) in condizione di disabilità gravissima. ISEE ordinario familiare del caregiver non superiore a 36.000 euro.",
-    cosa:
-      "Contributo di sollievo per l'assistenza continuativa e, quando serve, per interventi di sostituzione nella cura o ricoveri temporanei di sollievo. L'importo non è indicato nelle fonti che abbiamo letto: dipende dall'intensità del bisogno, dalla rete di aiuto disponibile e dall'ISEE.",
-    stato: "aperto",
-    scade: "2026-11-02",
-    quando: "Domande entro le ore 23:59 del 2 novembre 2026.",
-    comeSiChiede:
-      "Solo online sulla piattaforma bandisocialescuola.comune.laquila.it. Per chi ha difficoltà c'è il Punto Digitale del Servizio Politiche Sociali (via Filomusi Guelfi 6/c, Villa Gioia), lo Sportello Unificato e il Servizio Sociale – Ufficio Disabilità, non autosufficienza e integrazione socio-sanitaria.",
-    fonte: {
-      label: "ReteAbruzzo · Comune dell'Aquila, avviso caregiver familiari (10/10/2026)",
-      url: "https://www.reteabruzzo.com/2026/10/10/comune-dellaquila-avviso-per-sostegno-ai-caregiver-familiari-domande-fino-al-2-novembre/",
-    },
-    verificatoIl: "12/10/2026",
-    nota: "La scadenza era il 2 novembre 2026. L'elenco dei documenti non è nella fonte: leggi l'avviso sul sito del Comune.",
-  },
 
   // ------------------------------------------------------------- OCRE (AQ)
 
