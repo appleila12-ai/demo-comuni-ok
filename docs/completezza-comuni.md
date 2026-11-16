@@ -3,9 +3,9 @@
 Criterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale attivo/aperto + almeno un bonus comunale attivo/aperto + scheda ticket specifica per l'ASL.
 Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
-Comuni con scheda: 424 · completi: 291 · incompleti: 133
+Comuni con scheda: 424 · completi: 292 · incompleti: 132
 
-Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi sociali (recapiti) 77 · bonus regionali 4
+Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi sociali (recapiti) 77 · bonus regionali 4
 
 ## Completi
 
@@ -161,6 +161,7 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 - Comune di Livorno (LI)
 - Comune di Lodi (LO)
 - Comune di Lucca (LU)
+- Comune di Luni (SP)
 - Comune di Macerata (MC)
 - Comune di Maddaloni (CE)
 - Comune di Magenta (MI)
@@ -315,7 +316,6 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 | Comune di Sgonico | TS | Friuli-Venezia Giulia | bonus comunali, esenzione ticket |
 | Comune di Trieste | TS | Friuli-Venezia Giulia | servizi sociali (recapiti), bonus comunali |
 | Comune di Udine | UD | Friuli-Venezia Giulia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Luni | SP | Liguria | bonus comunali |
 | Comune di Abbiategrasso | MI | Lombardia | servizi sociali (recapiti), bonus comunali |
 | Comune di Bergamo | BG | Lombardia | bonus comunali |
 | Comune di Brugherio | MB | Lombardia | bonus comunali, esenzione ticket |
