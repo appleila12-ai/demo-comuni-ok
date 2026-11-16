@@ -1341,15 +1341,34 @@ ESENZIONE_ASL.fondi = {
 
 ESENZIONE_ASL.laquila = {
   asl: "ASL 1 Abruzzo",
-  intro: "A L'Aquila lo sportello per la scelta del medico e per le esenzioni ticket è nella sede dell'ex ONPI, Distretto Area L'Aquila.",
-  comeSiPresenta: ["Via Capo Croce 1, L'Aquila · lunedì–venerdì 8:15–13:15"],
-  telefoni: [{ etichetta: "Informazioni · lun–ven 13:00–14:00, anche mar e gio 15:00–17:30", numero: "0862 368937" }],
+  intro:
+    "A L'Aquila (e per i cittadini di Ocre, a cui l'URP ha risposto nella stessa mail) l'esenzione per patologia o per invalidità si attiva allo sportello «Scelta e Revoca del Medico», senza appuntamento.",
+  titoloPassi: "Come si fa",
+  comeSiPresenta: [
+    "Vai allo sportello «Scelta e Revoca del Medico», Via Capocroce 1, L'Aquila, dal lunedì al venerdì dalle 8:15 alle 13:00, senza appuntamento",
+    "Oppure scrivi a sceltadelmedicoaq@asl1abruzzo.it allegando i documenti qui sotto, più documento d'identità e tessera sanitaria",
+    "Per ristampare il tesserino di esenzione usa il portale Sanità Regione Abruzzo (link qui sotto)",
+  ],
+  documenti: [
+    "Esenzione per patologia: certificato di «malattia cronico invalidante» con codice e sottocodice della patologia, rilasciato dal medico specialista ospedaliero o da una struttura sanitaria convenzionata",
+    "Esenzione per invalidità: verbale INPS (invalidità civile)",
+    "Se scrivi per email: anche documento d'identità e tessera sanitaria",
+  ],
+  importante: "Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
+  mail: "sceltadelmedicoaq@asl1abruzzo.it",
+  telefoni: [
+    { etichetta: "URP ASL 1 Abruzzo · lun–ven 8:30–13:30", numero: "0863 499943" },
+    { etichetta: "Informazioni sportello · lun–ven 13:00–14:00, anche mar e gio 15:00–17:30", numero: "0862 368937" },
+  ],
   paginaUrl: "https://trasparenza.asl1abruzzo.it/page/40/details/6627/u-o-s-d-cure-primarie-l-aquila.html",
   paginaLabel: "U.O.S.D. Cure Primarie L'Aquila · ASL 1 Abruzzo",
+  altriLink: [{ label: "Ristampa del tesserino di esenzione · Sanità Regione Abruzzo", url: "https://sanitaonline.regione.abruzzo.it/portaleservizi/#/pages/listaservizi" }],
   manca:
-    "La pagina non indica i documenti per patologia e per invalidità né se si può presentare la richiesta per email: chiedili allo sportello.",
-  fonte: "ASL 1 Abruzzo · U.O.S.D. Cure Primarie L'Aquila (aggiornata il 28/10/2026), controllata il 10/11/2026",
+    "L'URP non ha risposto su un modulo o modalità online per la richiesta (a parte l'email) né sui tempi di rilascio: chiedili allo sportello.",
+  fonte: "ASL 1 Abruzzo · risposta scritta dell'URP del 16/11/2026 (richiesta del 10/11/2026) e pagina U.O.S.D. Cure Primarie L'Aquila (aggiornata il 28/10/2026)",
 };
+
+ESENZIONE_ASL.ocre = ESENZIONE_ASL.laquila;
 
 // Milano — portale condiviso dalle tre ASST, per tutti i nove Municipi.
 // Fonti istituzionali e limiti: docs/registro/chatgpt-2026-11-11-lombardia-milano-servizi.md.
