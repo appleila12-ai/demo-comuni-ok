@@ -28,3 +28,9 @@ nessuna
 1. Pagina per chi ha una malattia oncologica (accertamento, tempi, tutele): da scrivere solo con fonti INPS e ministero.
 2. Pagina scuola e sostegno per l'autismo.
 3. Le associazioni dei singoli Comuni si trovano solo dal nome.
+
+## Aggiunta: elenco di 200 parole fornito da Ilaria (17/11/2026)
+
+- Prova su tutte le 200 parole: 28 non trovavano nulla, ora 0; altre ~25 portavano alla pagina sbagliata (es. «Caregiver familiare» all'ISEE, «Disabilità» a Lavoro) e sono state corrette.
+- Solo collegamenti a pagine esistenti: nessun testo nuovo.
+- Limite: per scuola (PEI, insegnante di sostegno, DSA), salute mentale, riabilitazione e accessibilità non c'è una pagina dedicata: la ricerca porta alla pagina più vicina (diritti, servizi del Comune, salute).
