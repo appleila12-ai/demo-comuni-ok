@@ -3,8 +3,9 @@ import { percorso } from "../percorso";
 
 // Comune di Cremona (CR) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Pagina "Salute, benessere e assistenza" del sito del Comune, controllata il 14 ottobre 2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// POIS, accesso ai servizi sociali: fonte Comune aggiornata 30/09/2025, consultata il 17/11/2026.
+// https://www.comune.cremona.it/amministrazione/pois-porta-informativa-dei-servizi-sociali-porta-unitaria-accesso
+// Da completare: bonus regionali/comunali e Ambito, ticket specifico, destinatario Scrivi al Comune, avviso UI e associazioni.
 export const cremona: ComuneConfig = {
   slug: "cremona",
   tipo: "comune",
@@ -15,14 +16,14 @@ export const cremona: ComuneConfig = {
   provincia: "CR",
   regione: "Lombardia",
 
-  ente: "Servizi Sociali",
+  ente: "POIS - Porta Informativa dei Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0372 4071",
-  email: "",
+  indirizzo: "Corso Vittorio Emanuele II 42, 26100 Cremona (CR)",
+  telefono: "334 1043608",
+  email: "pois@comune.cremona.it",
   pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.cremona.it/servizi/salute-benessere-assistenza",
+  orari: "Sportello lun–ven 8:30–13:00; informazioni telefoniche lun–ven 8:30–12:30",
+  sitoWeb: "https://www.comune.cremona.it/amministrazione/pois-porta-informativa-dei-servizi-sociali-porta-unitaria-accesso",
 
   logo: null,
 
@@ -36,9 +37,9 @@ export const cremona: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.cremona.it/servizi/salute-benessere-assistenza" },
+      title: "POIS - Accesso ai Servizi Sociali",
+      subtitle: "Corso Vittorio Emanuele II 42 · 334 1043608 · Lun–Ven 8:30–13:00",
+      action: { type: "tel", value: "3341043608" },
     },
     {
       icon: "medkit-outline",
