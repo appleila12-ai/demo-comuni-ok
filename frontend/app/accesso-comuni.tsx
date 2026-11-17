@@ -99,6 +99,26 @@ async function chiama(
   return { stato: r.status, corpo };
 }
 
+const EMAIL_TUTELAPP = "info@tutelapp.it";
+
+/** Avviso in evidenza: non c'è una notifica automatica, quindi il Comune ci scrive quando è pronto. */
+function ScriviciQuandoPronti({ comune }: { comune: string }) {
+  const apriPosta = () => {
+    if (Platform.OS === "web") {
+      window.location.href = `mailto:${EMAIL_TUTELAPP}?subject=${encodeURIComponent("Modulo TutelApp pronto: " + comune)}`;
+    }
+  };
+  return (
+    <Avviso>
+      Quando avete finito, o quando volete che guardiamo il lavoro fatto, scriveteci a{" "}
+      <Text style={stili.link} onPress={apriPosta} accessibilityRole="link">
+        {EMAIL_TUTELAPP}
+      </Text>
+      . Noi non riceviamo un avviso quando salvate il modulo.
+    </Avviso>
+  );
+}
+
 export default function AccessoComuni() {
   const { comune: parametro } = useLocalSearchParams<{ comune?: string }>();
   const router = useRouter();
@@ -286,6 +306,7 @@ export default function AccessoComuni() {
           Quello che scrivi non compare subito nell'app: TutelApp lo controlla prima.
         </Intro>
         <Avviso>Non scrivere dati personali o sanitari di cittadini: il modulo serve solo per i dati degli uffici.</Avviso>
+        <ScriviciQuandoPronti comune={config.nome} />
         <Text style={stili.etichetta}>Password del Comune</Text>
         <TextInput
           value={password}
@@ -366,6 +387,7 @@ export default function AccessoComuni() {
         {config.nome}. {config.nota || ""} Quello che scrivi si salva solo quando premi «Salva»: puoi fermarti e riprendere in
         un'altra sessione. L'app pubblica non cambia da sola.
       </Intro>
+      <ScriviciQuandoPronti comune={config.nome} />
       {ruolo === "admin" && (
         <Avviso>
           Accesso TutelApp. Comune aperto: {config.nome}.{" "}

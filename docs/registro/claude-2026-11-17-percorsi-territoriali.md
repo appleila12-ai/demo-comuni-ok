@@ -43,3 +43,9 @@ Nessun dato di Comuni, bonus o destinatari modificato (Lombardia è in quota Cha
 - Il modulo parte con i valori solo se per quel Comune non esiste ancora un salvataggio.
 - Prova: funzione `precompila` eseguita con i dati reali (Mediglia 19 campi, Sarzana 14). Schermata non provata dal vivo.
 - Cosa manca: percorso del cittadino (passaggi), norme, documenti, moduli: dati che solo il Comune conosce. Le altre sezioni (anziani, famiglie, bonus, bandi...) non hanno un dato corrispondente nella scheda e restano vuote.
+
+## Aggiornamento 17/11/2026 (ore 16:30): associazioni e avviso «scriveteci»
+- Il modulo riporta anche le associazioni e le realtà sportive legate in modo esplicito al Comune nell'elenco già in app (solo il campo `comuni`, non l'elenco di provincia): Mediglia 1 (GAUDIO), Sarzana varie. Nuova funzione `associazioniLegateAlComune` in `lib/associazioni.ts` (solo lettura).
+- Non collegati, perché non ci sono dati per Comune: INAIL (importi nazionali, competenza per Mediglia non verificata), bonus comunali, ASST. Restano vuoti.
+- Decisione di Ilaria: nessun avviso automatico quando il Comune salva; il Comune scrive a info@tutelapp.it quando è pronto. L'indirizzo è in evidenza nel modulo (schermata di accesso e modulo), nella guida e nelle mail.
+- Prova: `precompila` eseguita con i dati reali (Mediglia 20 campi, Sarzana 16); controllo dati senza errori. Schermata non provata dal vivo.

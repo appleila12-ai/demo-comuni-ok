@@ -2308,3 +2308,15 @@ export function associazioniDelComune() {
 }
 
 // 21/10/2026: tolte le associazioni con recapito non confermato (regola: nessuna informazione dubbia in app).
+
+/**
+ * Associazioni e realtà sportive legate in modo esplicito a un Comune (campo `comuni`), senza l'elenco di provincia.
+ * Serve al modulo riservato ai Comuni (percorsi/comuni.ts), che deve mostrare ciò che TutelApp ha già per quel Comune.
+ */
+export function associazioniLegateAlComune(slug: string): { volontariato: Associazione[]; sport: Associazione[] } {
+  const tutte = (tipo: "volontariato" | "sport") =>
+    Object.values(PER_PROVINCIA)
+      .flatMap((e) => e[tipo])
+      .filter((a) => a.comuni?.includes(slug));
+  return { volontariato: tutte("volontariato"), sport: tutte("sport") };
+}

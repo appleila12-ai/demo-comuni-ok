@@ -7,6 +7,7 @@ import { mediglia } from "@/src/config/comuni/mediglia";
 import { sarzana } from "@/src/config/comuni/sarzana";
 import type { ComuneConfig } from "@/src/config/comuni/types";
 
+import { associazioniLegateAlComune, type Associazione } from "@/src/lib/associazioni";
 import { idCampoSezione, type DatiModulo, type GruppoDati } from "./schema";
 
 export type ComunePercorsi = {
@@ -89,7 +90,15 @@ export function precompila(slug: string): DatiModulo {
       .map((x) => `${x.title}${x.subtitle ? " – " + x.subtitle : ""}`)
       .join("\n");
     metti("supporto", "note", punti);
-    for (const sezione of ["servizi-sociali", "trasporto", "esenzioni", "supporto"]) {
+    // Associazioni e sport: solo quelle legate al Comune nell'elenco già in app (non l'elenco di provincia)
+    const riga = (a: Associazione) =>
+      [a.nome, a.cosa && `– ${a.cosa}`, [a.dove, a.telefono, a.email, a.sito].filter(Boolean).join(" · ") && `(${[a.dove, a.telefono, a.email, a.sito].filter(Boolean).join(" · ")})`]
+        .filter(Boolean)
+        .join(" ");
+    const assoc = associazioniLegateAlComune(slug);
+    metti("associazioni", "note", assoc.volontariato.map(riga).join("\n"));
+    metti("sport", "note", assoc.sport.map(riga).join("\n"));
+    for (const sezione of ["servizi-sociali", "trasporto", "esenzioni", "supporto", "associazioni", "sport"]) {
       const ha = Object.keys(campi).some((k) => k.startsWith(sezione + "."));
       if (ha) gruppi[sezione] = { stato: "da-verificare", fonte: FONTE_PRECOMPILATO, data: "", nota: "" };
     }
