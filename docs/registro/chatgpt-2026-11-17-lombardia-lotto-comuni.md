@@ -36,3 +36,10 @@ Scheda `frontend/src/config/comuni/demo/voghera.ts` aggiornata **PARZIALMENTE**:
 - Ambito Lomellina, misura sostegno disabilità e anziani: termine domande 15/10/2026 **scaduto**, non presentare come aperto. Fonte 15/09/2026: https://comune.vigevano.pv.it/novita/misura-sostegno-per-persone-con-disabilita-e-persone-anziane-ex-b2-presentazione-nuove-domande/ ; graduatorie pubblicate 16/11/2026: https://comune.vigevano.pv.it/novita/fondo-non-autosufficienze-2025-pubblicazione-graduatorie-misura-sostegno-e-servizi/
 
 **Mancano:** verifica ticket ASST pertinente, bonus regionali complessivi, destinatario Scrivi al Comune (email generica protocollo@comune.voghera.pv.it verificata nel piè pagina ufficiale), verifica archivio Drive, avviso UI #270 e associazioni. Non segnare completo né chiuso in attesa. Nessuna email inviata. Nessuna voce rimossa. Controlli Node/CI/Netlify non eseguiti per questa integrazione; esiti precedenti del lotto non si estendono a questo commit.
+
+## Ticket ASST Pavia — integrazione 17/11/2026
+**Schede aggiornate realmente:** Voghera e Vigevano, entrambe ancora **PARZIALI**. Fonte istituzionale letta il 17/11/2026: https://asst-pavia.it/servizio/rilascio-rinnovo-esenzioni-per-patologia-cronica-o-malattia-rara-status-invalidita-reddito/ . La pagina ASST descrive rilascio/rinnovo esenzioni per patologia cronica, malattia rara, invalidità e reddito e riporta gli sportelli:
+- Voghera: viale Repubblica 88, lun–ven 8:10–13:00.
+- Vigevano: viale Montegrappa 5, lun–ven 8:10–13:00.
+- Numero unico provinciale 0382 1958050, lun–ven 13:30–15:00.
+Il link di ticket generico è stato sostituito con la procedura ASST specifica, e i recapiti sono visibili nella scheda. Nessun altro Comune del lotto è dichiarato verificato per analogia. Mancano ancora verifica bonus regionali e Ambiti, destinatari e avviso visibile UI #270; non dichiarare completamento. Nessuna email, merge o pubblicazione. Node/CI/anteprima Netlify non verificati dopo questi commit.
