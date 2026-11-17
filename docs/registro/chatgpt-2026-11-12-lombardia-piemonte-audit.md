@@ -22,3 +22,11 @@
 - Non eseguiti i tre controlli Node: GitHub connector non offre shell per questo repository; controllare GitHub Actions quando sarà possibile applicare una modifica ai dati.
 - Non modificati i record applicativi, non inviati messaggi, non eseguiti merge o deploy.
 - La classificazione preliminare delle fonti individua il dominio non istituzionale `www.reteabruzzo.com` per L'Aquila; compete a Claude e richiede la fonte ufficiale. La verifica di ogni URL e di tutti i requisiti/importi dei record restanti **non è ancora stata eseguita**.
+
+## Pavia — aggiornamento dati applicativi 17/11/2026
+- **Modificato** `frontend/src/config/comuni/demo/pavia.ts`: sede Servizio Coordinamento ed Interventi Sociali Corso Garibaldi 69, telefono 0382 399546, email già presente confermata; aggiornati punto di supporto e telefono nel testo trasporto. Orari non pubblicati nella fonte: campo vuoto, nessuna supposizione.
+- **Modificato** collegamento ULSS/ASST nel punto di supporto e `esenzioneTicket.url` dalla homepage generica alla pagina ufficiale della procedura per patologia cronica, malattia rara, invalidità e reddito. Gli orari specifici dello sportello sono nella fonte, non aggiunti arbitrariamente a orari comunali.
+- Fonte Comune: https://www.comune.pavia.it/amministrazione/servizio-coordinamento-interventi-sociali — ultima modifica 12/03/2026; consultata 17/11/2026.
+- Fonte ASST: https://asst-pavia.it/servizio/rilascio-rinnovo-esenzioni-per-patologia-cronica-o-malattia-rara-status-invalidita-reddito/ — ultima modifica 11/02/2026; consultata 17/11/2026.
+- **Stato PARZIALE**: bonus regionali, bonus comunali/ATS, destinatario «Scrivi al tuo Comune» e avviso UI non ancora verificati; non dichiarare completo o «chiuso in attesa».
+- Controlli Node non eseguibili via connettore GitHub; CI e anteprima Netlify da verificare. Nessuna email inviata, nessun merge o deploy. Commit applicativo `8a09fd0`.
