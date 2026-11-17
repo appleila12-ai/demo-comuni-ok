@@ -34,3 +34,9 @@ nessuna
 - Prova su tutte le 200 parole: 28 non trovavano nulla, ora 0; altre ~25 portavano alla pagina sbagliata (es. «Caregiver familiare» all'ISEE, «Disabilità» a Lavoro) e sono state corrette.
 - Solo collegamenti a pagine esistenti: nessun testo nuovo.
 - Limite: per scuola (PEI, insegnante di sostegno, DSA), salute mentale, riabilitazione e accessibilità non c'è una pagina dedicata: la ricerca porta alla pagina più vicina (diritti, servizi del Comune, salute).
+
+## Aggiunta: seconda lista di 200 parole e frasi (17/11/2026)
+
+- Prova sulle voci 201-400 (malattie, domande dei cittadini, scuola, agevolazioni, ricerche con errori): 34 non trovavano nulla, ora 0; circa 40 portavano alla pagina sbagliata e sono state corrette (es. «Mio figlio ha compiuto 18 anni» portava a «Ho più di 70 anni»: ora all'amministratore di sostegno).
+- Solo collegamenti a pagine già esistenti: nessun testo nuovo.
+- Limiti: per maggiore età, scuola e sostegno, pensione anticipata (APE sociale, Opzione Donna), comunità alloggio e assistenza in aeroporto/stazione non c'è una pagina dedicata: la ricerca porta alla pagina più vicina.
