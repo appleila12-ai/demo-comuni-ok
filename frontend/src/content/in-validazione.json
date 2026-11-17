@@ -3276,5 +3276,12 @@
       "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
     }
+  },
+  "laquila": {
+    "bonus-comunali": {
+      "dal": "2026-11-10",
+      "chiesto": "Sportello Unificato del Comune",
+      "stato": "chiesto"
+    }
   }
 }

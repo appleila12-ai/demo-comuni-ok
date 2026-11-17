@@ -264,6 +264,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Lanusei | NU | Sardegna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Lanusei | NU | Sardegna | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Lanusei | NU | Sardegna | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
+| Comune dell'Aquila | AQ | Abruzzo | bonus comunali | Sportello Unificato del Comune | chiesto | 2026-11-10 |
 | Comune di Lenola | LT | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Lenola | LT | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Lesignano de' Bagni | PR | Emilia-Romagna | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
