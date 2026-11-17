@@ -1,3 +1,4 @@
+// Recapiti controllati il 17/11/2026. Fonte: https://www.comune.trani.bt.it/it/unita_organizzative/servizio-sociale-professionale ; aggiornamento fonte: 26/11/2025.
 import type { ComuneConfig } from "../types";
 import { percorso } from "../percorso";
 
@@ -15,14 +16,14 @@ export const trani: ComuneConfig = {
   provincia: "BT",
   regione: "Puglia",
 
-  ente: "Servizi Sociali",
+  ente: "URP - riferimento pubblicato nella pagina del Servizio Sociale Professionale",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0883 581111",
-  email: "",
+  indirizzo: "Via Tenente Luigi Morrico 2, Trani",
+  telefono: "0883 581331",
+  email: "urp@comune.trani.bt.it",
   pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.trani.bt.it",
+  orari: "I recapiti indicati sono dell’URP, pubblicati nella pagina del Servizio Sociale Professionale. Orari dello sportello sociale non verificati.",
+  sitoWeb: "https://www.comune.trani.bt.it/it/unita_organizzative/servizio-sociale-professionale",
 
   logo: null,
 
@@ -36,9 +37,9 @@ export const trani: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.trani.bt.it" },
+      title: "URP - riferimento pubblicato nella pagina del Servizio Sociale Professionale",
+      subtitle: "Recapiti istituzionali nella scheda; controllati il 17/11/2026",
+      action: { type: "web", value: "https://www.comune.trani.bt.it/it/unita_organizzative/servizio-sociale-professionale" },
     },
     {
       icon: "medkit-outline",

@@ -1,3 +1,4 @@
+// Recapiti controllati il 17/11/2026. Fonte: https://www.comune.brindisi.it/servizio/iscrizione-asilo-nido/ ; aggiornamento fonte: 10/09/2025.
 import type { ComuneConfig } from "../types";
 import { INPS_TERZA_FASE } from "../percorso";
 import { percorso } from "../percorso";
@@ -18,12 +19,12 @@ export const brindisi: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "Settore Servizi alla Persona – Consorzio Sociale ATS BR1",
-  indirizzo: "Via Grazia Balsamo 4, 72100 Brindisi (BR)",
+  indirizzo: "Via Grazia Balsamo 4, Brindisi",
   telefono: "0831 229820",
-  email: "servizisociali@pec.comune.brindisi.it",
+  email: "serv.sociali@comune.brindisi.it",
   pec: "servizisociali@pec.comune.brindisi.it",
-  orari: "Orari: vedi il sito del Comune o telefona",
-  sitoWeb: "https://www.comune.brindisi.it/amministrazione/unita_organizzativa/servizi-alla-persona/",
+  orari: "La pagina comunale indica per il Servizio Sociale Professionale: lunedì-venerdì 09:00-13:00; giovedì anche 16:00-18:00. Telefona prima di andare.",
+  sitoWeb: "https://www.comune.brindisi.it/servizio/iscrizione-asilo-nido/",
 
   logo: null,
 
@@ -37,8 +38,8 @@ export const brindisi: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali – Brindisi",
-      subtitle: "Settore Servizi alla Persona – Consorzio Sociale ATS BR1 · Via Grazia Balsamo 4, 72100 Brindisi (BR) · Tel. 0831 229820",
+      title: "Servizi Sociali del Comune",
+      subtitle: "Recapiti istituzionali nella scheda; controllati il 17/11/2026",
       action: { type: "tel", value: "0831229820" },
     },
     {

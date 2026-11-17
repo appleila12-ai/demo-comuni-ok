@@ -1,3 +1,4 @@
+// Recapiti controllati il 17/11/2026. Fonte: https://comune.ragusa.it/en/organizational_unit/settore-07-servizi-alla-persona-politiche-dell-istruzione ; aggiornamento fonte: 13/11/2024.
 import type { ComuneConfig } from "../types";
 import { percorso } from "../percorso";
 
@@ -17,12 +18,12 @@ export const ragusa: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0932 676111",
-  email: "",
+  indirizzo: "Via Ing. Mario Spadola 56, Ragusa",
+  telefono: "0932 676851",
+  email: "servizi.sociali@comune.ragusa.it",
   pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.ragusa.it/it/topics/7",
+  orari: "Altro telefono del Settore Servizi alla persona: 0932 676852. Orari non indicati nella pagina consultata.",
+  sitoWeb: "https://comune.ragusa.it/en/organizational_unit/settore-07-servizi-alla-persona-politiche-dell-istruzione",
 
   logo: null,
 
@@ -37,8 +38,8 @@ export const ragusa: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.ragusa.it/it/topics/7" },
+      subtitle: "Recapiti istituzionali nella scheda; controllati il 17/11/2026",
+      action: { type: "web", value: "https://comune.ragusa.it/en/organizational_unit/settore-07-servizi-alla-persona-politiche-dell-istruzione" },
     },
     {
       icon: "medkit-outline",

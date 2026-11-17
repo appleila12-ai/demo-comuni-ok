@@ -1,3 +1,4 @@
+// Recapiti controllati il 17/11/2026. Fonte: https://www.comune.olbia.ot.it/it/page/ufficio-provvidenze-regionali-ed-autorizzazioni-per ; aggiornamento fonte: 29/04/2026.
 import type { ComuneConfig } from "../types";
 import { percorso } from "../percorso";
 
@@ -18,10 +19,10 @@ export const olbia: ComuneConfig = {
   responsabile: "Settore Servizi alla Persona",
   indirizzo: "Via Perugia 3, 07026 Olbia (SS)",
   telefono: "0789 52172",
-  email: "servizi.alla.persona@pec.comuneolbia.it",
-  pec: "protocollo@pec.comuneolbia.it",
-  orari: "Lun–Ven 9:30–12:30 · Lun–Gio 15:00–17:00",
-  sitoWeb: "https://www.comune.olbia.ot.it/it/page/14793",
+  email: "",
+  pec: "servizi.alla.persona@pec.comuneolbia.it",
+  orari: "Front office: 0789 52172 e 0789 52177, per informazioni e appuntamenti. Ufficio Provvidenze regionali e mobilità disabili, via Perugia 3: lunedì-venerdì 09:30-12:30; martedì e giovedì anche 15:00-17:00. Email ordinaria generale non verificata; la casella indicata come PEC va usata da una PEC.",
+  sitoWeb: "https://www.comune.olbia.ot.it/it/page/ufficio-provvidenze-regionali-ed-autorizzazioni-per",
 
   logo: null,
 
@@ -35,8 +36,8 @@ export const olbia: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali – Olbia",
-      subtitle: "Settore Servizi alla Persona · Via Perugia 3, 07026 Olbia (SS) · Tel. 0789 52172",
+      title: "Servizi Sociali del Comune",
+      subtitle: "Recapiti istituzionali nella scheda; controllati il 17/11/2026",
       action: { type: "tel", value: "078952172" },
     },
     {
