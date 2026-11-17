@@ -3,8 +3,8 @@ import { INPS_TERZA_FASE } from "../percorso";
 
 // Comune di Vigevano (PV) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Argomento "Assistenza sociale" del sito del Comune (controllato il 14 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Verifica 17/11/2026: https://comune.vigevano.pv.it/servizio/segretariato-sociale/ (aggiornata 02/02/2026).
+// Restano da verificare: ticket, bonus, associazioni e completezza del percorso.
 export const vigevano: ComuneConfig = {
   slug: "vigevano",
   tipo: "comune",
@@ -17,12 +17,12 @@ export const vigevano: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0381 2991",
-  email: "",
+  indirizzo: "Palazzo Esposizioni, Piazza Calzolaio d’Italia 1, 27029 Vigevano (PV)",
+  telefono: "0381 299888",
+  email: "segretariatosociale@comune.vigevano.pv.it",
   pec: "protocollovigevano@pec.it",
-  orari: "",
-  sitoWeb: "https://comune.vigevano.pv.it/argomento/assistenza-sociale/",
+  orari: "Sportello informazioni e appuntamenti: lun–ven 10:30–13:00; lun anche 14:30–17:30; gio anche 15:30–17:30. Orari indicativi, possono cambiare: conferma all’ufficio prima di andare.",
+  sitoWeb: "https://comune.vigevano.pv.it/servizio/segretariato-sociale/",
 
   logo: null,
 
@@ -37,8 +37,8 @@ export const vigevano: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://comune.vigevano.pv.it/argomento/assistenza-sociale/" },
+      subtitle: "Segretariato Sociale · Piazza Calzolaio d’Italia 1 · Informazioni e appuntamenti: 0381 299888",
+      action: { type: "tel", value: "0381299888" },
     },
     {
       icon: "medkit-outline",
