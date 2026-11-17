@@ -13,6 +13,7 @@
 | frontend/netlify/functions/percorsi.mjs | accesso con password per Comune, gettone firmato, salvataggio con storico (Netlify Blobs) | nuovo | - | logica provata con archivio simulato |
 | frontend/src/percorsi/ | schema del modulo (22 sezioni, 4 percorsi), configurazioni Mediglia e Sarzana | nuovo | scheda pubblicata del Comune | da provare in anteprima |
 | frontend/app/accesso-comuni.tsx | pagina riservata (solo web), non collegata a nessun menu | nuovo | - | non provata nel browser |
+| frontend/scripts/verifica-ricerca.js | «accesso-comuni» aggiunta alle schermate tecniche escluse dalla ricerca (una parola, file protetto, ok di classe C) | modifica | - | controllo dati: zero errori |
 | docs/percorsi-territoriali/ | attivazione, guida di una pagina, scheda progetto, bozze email (non inviate) | nuovo | - | - |
 
 Nessun dato di Comuni, bonus o destinatari modificato (Lombardia è in quota ChatGPT). Nessuna voce tolta.
@@ -21,7 +22,7 @@ Nessun dato di Comuni, bonus o destinatari modificato (Lombardia è in quota Cha
 
 - Prova della funzione server con archivio simulato: login, blocco dopo 5 tentativi, password corta rifiutata, gettone alterato, isolamento tra Comuni, stati (il Comune non può validare né pubblicare), conflitto di versione, storico: tutti superati. Non provata la scadenza del gettone.
 - Sintassi dei file .ts/.tsx controllata. **Non eseguiti**: build dell'app, test nel browser, accessibilità, telefono, stampa (mancano le librerie e la rete in questa sessione).
-- `controlla-dati.js`: vedi PR.
+- `controlla-dati.js`: zero errori dopo l'aggiunta di «accesso-comuni» alle schermate escluse dalla ricerca (la prima prova su GitHub aveva dato 1 errore per questo).
 
 ## Cosa manca
 
