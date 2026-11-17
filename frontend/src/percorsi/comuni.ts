@@ -90,6 +90,12 @@ export function precompila(slug: string): DatiModulo {
       .map((x) => `${x.title}${x.subtitle ? " – " + x.subtitle : ""}`)
       .join("\n");
     metti("supporto", "note", punti);
+    // Modulistica: il link ai moduli del Comune già in app (voce «Modulistica» dei punti di supporto)
+    const moduli = (s.puntiSupporto ?? []).find((x) => /modulistica/i.test(x.title) && x.action?.type === "web");
+    if (moduli) {
+      metti("modulistica", "modulistica", moduli.action.value);
+      metti("modulistica", "cosa", moduli.subtitle);
+    }
     // Associazioni e sport: solo quelle legate al Comune nell'elenco già in app (non l'elenco di provincia)
     const riga = (a: Associazione) =>
       [a.nome, a.cosa && `– ${a.cosa}`, [a.dove, a.telefono, a.email, a.sito].filter(Boolean).join(" · ") && `(${[a.dove, a.telefono, a.email, a.sito].filter(Boolean).join(" · ")})`]
@@ -98,7 +104,7 @@ export function precompila(slug: string): DatiModulo {
     const assoc = associazioniLegateAlComune(slug);
     metti("associazioni", "note", assoc.volontariato.map(riga).join("\n"));
     metti("sport", "note", assoc.sport.map(riga).join("\n"));
-    for (const sezione of ["servizi-sociali", "trasporto", "esenzioni", "supporto", "associazioni", "sport"]) {
+    for (const sezione of ["servizi-sociali", "trasporto", "esenzioni", "supporto", "modulistica", "associazioni", "sport"]) {
       const ha = Object.keys(campi).some((k) => k.startsWith(sezione + "."));
       if (ha) gruppi[sezione] = { stato: "da-verificare", fonte: FONTE_PRECOMPILATO, data: "", nota: "" };
     }

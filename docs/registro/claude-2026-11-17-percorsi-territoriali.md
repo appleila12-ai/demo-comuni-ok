@@ -49,3 +49,9 @@ Nessun dato di Comuni, bonus o destinatari modificato (Lombardia è in quota Cha
 - Non collegati, perché non ci sono dati per Comune: INAIL (importi nazionali, competenza per Mediglia non verificata), bonus comunali, ASST. Restano vuoti.
 - Decisione di Ilaria: nessun avviso automatico quando il Comune salva; il Comune scrive a info@tutelapp.it quando è pronto. L'indirizzo è in evidenza nel modulo (schermata di accesso e modulo), nella guida e nelle mail.
 - Prova: `precompila` eseguita con i dati reali (Mediglia 20 campi, Sarzana 16); controllo dati senza errori. Schermata non provata dal vivo.
+
+## Aggiornamento 17/11/2026 (ore 16:45): «Da dove iniziare» e Modulistica
+- Richiesta di Ilaria: il modulo è troppo lungo per un referente; spiegare che si può compilare poco alla volta; la Modulistica la inseriamo noi.
+- Aggiunto riquadro «Da dove iniziare» (tre cose: Dati del Comune e Referenti, Servizi sociali, un solo percorso «Dopo una diagnosi»); il resto è facoltativo.
+- La sezione Modulistica si precompila col link «Modulistica» già in app, dove esiste (Mediglia sì, Sarzana nessuna voce: resta vuota).
+- Prova: `precompila` con dati reali. Schermata non provata dal vivo.
