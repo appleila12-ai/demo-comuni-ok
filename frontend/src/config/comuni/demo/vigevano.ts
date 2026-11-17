@@ -4,7 +4,8 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Comune di Vigevano (PV) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Verifica 17/11/2026: https://comune.vigevano.pv.it/servizio/segretariato-sociale/ (aggiornata 02/02/2026).
-// Restano da verificare: ticket, bonus, associazioni e completezza del percorso.
+// Ticket ASST Pavia verificato 17/11/2026: https://asst-pavia.it/servizio/rilascio-rinnovo-esenzioni-per-patologia-cronica-o-malattia-rara-status-invalidita-reddito/
+// Restano da verificare: bonus, destinatario, associazioni e completezza del percorso.
 export const vigevano: ComuneConfig = {
   slug: "vigevano",
   tipo: "comune",
@@ -42,9 +43,9 @@ export const vigevano: ComuneConfig = {
     },
     {
       icon: "medkit-outline",
-      title: "ASST Pavia",
-      subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
-      action: { type: "web", value: "https://www.asst-pavia.it" },
+      title: "ASST Pavia · Esenzioni ticket",
+      subtitle: "Viale Montegrappa 5 · Lun–Ven 8:10–13:00 · Info 0382 1958050 (13:30–15:00)",
+      action: { type: "web", value: "https://asst-pavia.it/servizio/rilascio-rinnovo-esenzioni-per-patologia-cronica-o-malattia-rara-status-invalidita-reddito/" },
     },
   ],
 
@@ -52,8 +53,8 @@ export const vigevano: ComuneConfig = {
     "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
-    label: "ASST Pavia · Esenzioni ticket",
-    url: "https://www.asst-pavia.it",
+    label: "ASST Pavia · Esenzioni per patologia, malattia rara, invalidità e reddito",
+    url: "https://asst-pavia.it/servizio/rilascio-rinnovo-esenzioni-per-patologia-cronica-o-malattia-rara-status-invalidita-reddito/",
   },
 
   daVerificare: true,
