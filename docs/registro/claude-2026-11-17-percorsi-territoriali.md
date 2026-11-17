@@ -34,3 +34,5 @@ Nessun dato di Comuni, bonus o destinatari modificato (Lombardia è in quota Cha
 5. Pagina pubblica del percorso con link diretto e QR code: serve una seconda libreria e dati verificati dal Comune.
 6. Referenti di Sarzana (nome e ruolo istituzionale da fonte ufficiale) e conferma del referente di Mediglia.
 7. Soggetto proponente (TutelApp o PED) e condizioni economiche uniche, prima di inviare le email.
+
+- 17/11/2026 13:20: variabili Netlify (PERCORSI_*) impostate da Ilaria nel progetto; anteprima ricostruita per la prova di accesso e salvataggio.
