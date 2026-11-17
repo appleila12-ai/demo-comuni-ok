@@ -24,7 +24,7 @@ import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
 import { CasellaRicerca } from "@/src/components/CasellaRicerca";
-import { RiprendiHome } from "@/src/components/RiprendiHome";
+import { OggiHome } from "@/src/components/OggiHome";
 import { InvitoSalvataggio } from "@/src/components/InvitoSalvataggio";
 import { RecuperaDati } from "@/src/components/RecuperaDati";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
@@ -326,11 +326,11 @@ function HomeDelComune() {
         {/* Prima ci si presenta (solo se manca il nome), poi si dice di cosa si ha bisogno */}
         {!nome ? <RichiestaNomeHome /> : null}
 
+        {/* Un solo punto di ripresa: legge date e pratica già salvate, senza duplicarle. */}
+        <OggiHome />
+
         {/* Il centro della Home: scrivi cosa ti serve, la risposta arriva subito */}
         <CasellaRicerca testID="home-ricerca" />
-
-        {/* Subito sotto: chi è già a metà strada riparte da qui (compare solo se ci sono dati salvati) */}
-        <RiprendiHome />
 
         {/* Scorciatoia ai salvati, solo se c'è qualcosa */}
         {salvati.length > 0 && (
