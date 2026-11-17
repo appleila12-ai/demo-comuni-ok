@@ -5,7 +5,9 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // POIS, accesso ai servizi sociali: fonte Comune aggiornata 30/09/2025, consultata il 17/11/2026.
 // https://www.comune.cremona.it/amministrazione/pois-porta-informativa-dei-servizi-sociali-porta-unitaria-accesso
-// Da completare: bonus regionali/comunali e Ambito, ticket specifico, destinatario Scrivi al Comune, avviso UI e associazioni.
+// Ticket: fonte ASST Cremona aggiornata 12/08/2025, consultata 17/11/2026.
+// https://www.asst-cremona.it/strutture/gestione-cronicita-cremona-ex-cure-primarie
+// Da completare: bonus regionali/comunali e Ambito, destinatario Scrivi al Comune, avviso UI e associazioni.
 export const cremona: ComuneConfig = {
   slug: "cremona",
   tipo: "comune",
@@ -44,8 +46,8 @@ export const cremona: ComuneConfig = {
     {
       icon: "medkit-outline",
       title: "ASST Cremona",
-      subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
-      action: { type: "web", value: "https://www.asst-cremona.it" },
+      subtitle: "Esenzioni ticket per reddito, patologia cronica o rara e invalidità: sportelli Scelta e Revoca",
+      action: { type: "web", value: "https://www.asst-cremona.it/strutture/gestione-cronicita-cremona-ex-cure-primarie" },
     },
   ],
 
@@ -54,7 +56,7 @@ export const cremona: ComuneConfig = {
 
   esenzioneTicket: {
     label: "ASST Cremona · Esenzioni ticket",
-    url: "https://www.asst-cremona.it",
+    url: "https://www.asst-cremona.it/strutture/gestione-cronicita-cremona-ex-cure-primarie",
   },
 
   daVerificare: true,
