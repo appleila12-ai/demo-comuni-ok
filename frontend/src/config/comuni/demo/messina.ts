@@ -22,8 +22,8 @@ export const messina: ComuneConfig = {
   telefono: "090 7721",
   email: "",
   pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.messina.it/it/page/salute-benessere-e-assistenza-194",
+  orari: "Il numero indicato è il centralino del Comune. La pagina del Servizio Sociale Professionale pubblica il Protocollo generale: non è una casella dedicata del servizio. Email dedicata e orari dello sportello sociale non verificati. Controllo 17/11/2026; aggiornamento della pagina non indicato.",
+  sitoWeb: "https://www.comune.messina.it/Amministrazione/Uffici/Sociale-professionale",
 
   logo: null,
 
@@ -38,14 +38,20 @@ export const messina: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.messina.it/it/page/salute-benessere-e-assistenza-194" },
+      subtitle: "Pagina del Servizio Sociale Professionale. I contatti pubblicati sono generali del Comune; sportello dedicato e orari non verificati (17/11/2026).",
+      action: { type: "web", value: "https://www.comune.messina.it/Amministrazione/Uffici/Sociale-professionale" },
     },
     {
       icon: "medkit-outline",
       title: "ASP Messina",
       subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
       action: { type: "web", value: "https://www.asp.messina.it" },
+    },
+    {
+      icon: "people-outline",
+      title: "Protocollo generale del Comune di Messina",
+      subtitle: "protocollogenerale@comune.messina.it · centralino 090 7721. Contatto generale, non email dedicata dei Servizi Sociali. Fonte: pagina comunale Sociale professionale, letta il 17/11/2026; aggiornamento non indicato.",
+      action: { type: "web", value: "https://www.comune.messina.it/Amministrazione/Uffici/Sociale-professionale" },
     },
   ],
 
@@ -62,7 +68,7 @@ export const messina: ComuneConfig = {
 };
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (28/10/2026).
-messina.percorsoTerritorio = percorso(messina.puntiSupporto, [0]);
+messina.percorsoTerritorio = percorso(messina.puntiSupporto, [0, 2]);
 
 // Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
 messina.percorsoTerritorio = { ...messina.percorsoTerritorio, 1: [INPS_TERZA_FASE] };
