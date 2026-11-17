@@ -16,7 +16,7 @@ export const trani: ComuneConfig = {
   provincia: "BT",
   regione: "Puglia",
 
-  ente: "URP - riferimento pubblicato nella pagina del Servizio Sociale Professionale",
+  ente: "URP",
   responsabile: "",
   indirizzo: "Via Tenente Luigi Morrico 2, Trani",
   telefono: "0883 581331",
@@ -37,7 +37,7 @@ export const trani: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "URP - riferimento pubblicato nella pagina del Servizio Sociale Professionale",
+      title: "URP",
       subtitle: "Recapiti istituzionali nella scheda; controllati il 17/11/2026",
       action: { type: "web", value: "https://www.comune.trani.bt.it/it/unita_organizzative/servizio-sociale-professionale" },
     },
