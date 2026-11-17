@@ -36,3 +36,10 @@ Nessun dato di Comuni, bonus o destinatari modificato (Lombardia è in quota Cha
 7. Soggetto proponente (TutelApp o PED) e condizioni economiche uniche, prima di inviare le email.
 
 - 17/11/2026 13:20: variabili Netlify (PERCORSI_*) impostate da Ilaria nel progetto; anteprima ricostruita per la prova di accesso e salvataggio.
+
+## Aggiornamento 17/11/2026 (ore 16): precompilazione estesa
+- Richiesta di Ilaria: i Comuni a cui scriviamo sono già in app, quindi non devono reinserire i dati che TutelApp ha già.
+- Il modulo ora riporta dalla scheda già pubblicata: Dati del Comune (anche ambito e capofila per Mediglia), recapiti e orari dei Servizi sociali, testo sul trasporto, ASL/ATS per le esenzioni, elenco dei punti di supporto. Tutto in stato «da verificare»; non si salva da solo.
+- Il modulo parte con i valori solo se per quel Comune non esiste ancora un salvataggio.
+- Prova: funzione `precompila` eseguita con i dati reali (Mediglia 19 campi, Sarzana 14). Schermata non provata dal vivo.
+- Cosa manca: percorso del cittadino (passaggi), norme, documenti, moduli: dati che solo il Comune conosce. Le altre sezioni (anziani, famiglie, bonus, bandi...) non hanno un dato corrispondente nella scheda e restano vuote.
