@@ -45,9 +45,9 @@ export const voghera: ComuneConfig = {
     },
     {
       icon: "medkit-outline",
-      title: "ATS Pavia",
-      subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
-      action: { type: "web", value: "https://www.ats-pavia.it" },
+      title: "ASST Pavia · Esenzioni ticket",
+      subtitle: "Viale Repubblica 88 · Lun–Ven 8:10–13:00 · Info 0382 1958050 (13:30–15:00)",
+      action: { type: "web", value: "https://asst-pavia.it/servizio/rilascio-rinnovo-esenzioni-per-patologia-cronica-o-malattia-rara-status-invalidita-reddito/" },
     },
   ],
 
@@ -55,8 +55,8 @@ export const voghera: ComuneConfig = {
     "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
-    label: "ATS Pavia · Esenzioni ticket",
-    url: "https://www.ats-pavia.it",
+    label: "ASST Pavia · Esenzioni per patologia, malattia rara, invalidità e reddito",
+    url: "https://asst-pavia.it/servizio/rilascio-rinnovo-esenzioni-per-patologia-cronica-o-malattia-rara-status-invalidita-reddito/",
   },
 
   daVerificare: true,
