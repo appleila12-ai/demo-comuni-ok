@@ -987,6 +987,40 @@ export const BONUS: Bonus[] = [
   },
 
   // ------------------------------------------------------------------- PUGLIA
+  {
+    id: "puglia-sostegno-familiare-2027-2028",
+    regione: "Puglia",
+    titolo: "Sostegno Familiare 2027-2028",
+    perChi: "Persone con disabilità gravissima e non autosufficienza, con accompagnamento o nelle condizioni alternative dell'Allegato 3 del DPCM 159/2013. Persona assistita e caregiver devono essere residenti in Puglia. Serve la valutazione UVM e un bisogno assistenziale inserito nel PAI. ISEE adulti fino a 60.000 euro (sociosanitario ristretto oppure ordinario se più favorevole); minorenni fino a 80.000 euro (ISEE minorenni).",
+    cosa: "700 euro mensili per 24 mesi, dal 1° gennaio 2027 al 31 dicembre 2028, per sostenere l'assistenza del caregiver familiare.",
+    stato: "aperto",
+    scade: "2026-12-17",
+    quando: "Domande dalle ore 12:00 del 17/11/2026 alle ore 12:00 del 17/12/2026.",
+    comeSiChiede: "Online su https://bandi.pugliasociale.regione.puglia.it. Occorrono la dichiarazione e l'impegno firmato del caregiver, con documento d'identità; seguono verifica dell'Ambito e valutazione UVM. Non si può richiedere anche Patto di Cura 2027-2029; esclusi i beneficiari PRO.V.I. e PRO.V.I. Dopo di Noi.",
+    fonte: {
+      label: "Regione Puglia · Determinazione 1747 del 09/11/2026 e avviso (PDF sul sito del Comune di Trani)",
+      url: "https://www.comune.trani.bt.it/s3/7382/allegati/determina-regionale-avviso.pdf",
+    },
+    verificatoIl: "17/11/2026",
+    nota: "Misura regionale. Fondi limitati: l'ammissione dipende dalla graduatoria e dalle risorse disponibili. Non è un contributo automatico.",
+  },
+  {
+    id: "puglia-patto-di-cura-2027-2029",
+    regione: "Puglia",
+    titolo: "Patto di Cura 2027-2029",
+    perChi: "Residenti in Puglia con disabilità gravissima e non autosufficienza, accompagnamento o condizioni alternative dell'Allegato 3 del DPCM 159/2013. ISEE fino a 60.000 euro per adulti (sociosanitario ristretto oppure ordinario se più favorevole), 80.000 euro per minorenni (ISEE minorenni). Non ammessi i destinatari finanziati PRO.V.I./Dopo di Noi né i richiedenti Sostegno Familiare 2027-2028.",
+    cosa: "Fino a 1.290 euro mensili con assunzione diretta, oppure 1.340 euro tramite agenzia autorizzata; massimo 27 mensilità, dal gennaio 2027 al marzo 2029. La decorrenza dipende anche dall'efficacia del contratto e dall'ammissione.",
+    stato: "aperto",
+    scade: "2026-12-17",
+    quando: "Domande dalle ore 12:00 del 17/11/2026 alle ore 12:00 del 17/12/2026.",
+    comeSiChiede: "Online su https://bandi.pugliasociale.regione.puglia.it con SPID livello 2, CIE o CNS. Serve assistenza domiciliare con contratto di almeno 12 mesi: minimo 104 ore mensili per personale non convivente, 143 per convivente, con inquadramento previsto dall'avviso. L'Ambito istruisce la domanda con il Distretto e l'UVM.",
+    fonte: {
+      label: "Regione Puglia · Determinazione 1749 del 09/11/2026 e avviso (PDF sul sito del Comune di Trani)",
+      url: "https://www.comune.trani.bt.it/s3/7382/allegati/determina-patto-di-cura-2027-2028-2029.pdf",
+    },
+    verificatoIl: "17/11/2026",
+    nota: "Misura regionale, con fondi limitati e selezione delle domande. Vietato finanziare lo stesso contratto con altri contributi pubblici.",
+  },
 
   // ------------------------------------------------------------------ VENETO
   {

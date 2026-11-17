@@ -18,10 +18,10 @@ export const nuoro: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "Centro Polifunzionale, via Brigata Sassari 20/21, 08100 Nuoro",
-  telefono: "0784 216985",
-  email: "",
+  telefono: "0784 216984",
+  email: "segreteria.ada@comune.nuoro.it",
   pec: "servizi.sociali@pec.comune.nuoro.it",
-  orari: "Segreteria area anziani e disabili. Secondo numero: 0784 216984. Orari non pubblicati sulla pagina",
+  orari: "Segreteria area anziani e disabili. Altro numero pubblicato dal PLUS: 0784 985986. Orari non indicati. Recapiti controllati il 17/11/2026 su https://plusnuoro.it/contatti-uffici-servizi-sociali-comuni-del-distretto/ (data di aggiornamento non indicata).",
   sitoWeb: "https://www.comune.nuoro.it/it/struttura/segreteria-area-anziani-e-disabili",
 
   logo: null,
@@ -38,7 +38,7 @@ export const nuoro: ComuneConfig = {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
       subtitle: "Segreteria area anziani e disabili: recapiti in questa scheda e sul sito del Comune",
-      action: { type: "tel", value: "0784216985" },
+      action: { type: "tel", value: "0784216984" },
     },
     {
       icon: "medkit-outline",
