@@ -1,3 +1,4 @@
+// Recapiti controllati il 17/11/2026. Fonte: https://servizi.comune.barletta.bt.it/siaweb/cms/prestazioni/660.asp ; aggiornamento fonte: 07/07/2026.
 import type { ComuneConfig } from "../types";
 import { percorso } from "../percorso";
 
@@ -15,14 +16,14 @@ export const barletta: ComuneConfig = {
   provincia: "BT",
   regione: "Puglia",
 
-  ente: "Servizi Sociali",
+  ente: "Segretariato Sociale",
   responsabile: "",
   indirizzo: "",
-  telefono: "0883 578111",
-  email: "",
+  telefono: "0883 516743",
+  email: "segretariatosociale@comune.barletta.bt.it",
   pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.barletta.bt.it",
+  orari: "Altri telefoni del Segretariato Sociale: 0883 516758 e 0883 516726. Orari non indicati nella fonte consultata.",
+  sitoWeb: "https://servizi.comune.barletta.bt.it/siaweb/cms/prestazioni/660.asp",
 
   logo: null,
 
@@ -36,9 +37,9 @@ export const barletta: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.barletta.bt.it" },
+      title: "Segretariato Sociale",
+      subtitle: "Recapiti istituzionali nella scheda; controllati il 17/11/2026",
+      action: { type: "web", value: "https://servizi.comune.barletta.bt.it/siaweb/cms/prestazioni/660.asp" },
     },
     {
       icon: "medkit-outline",

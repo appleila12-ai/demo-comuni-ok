@@ -1,3 +1,4 @@
+// Recapiti controllati il 17/11/2026. Fonte: https://comune.andria.bt.it/it/unita_organizzative/welfare ; aggiornamento fonte: 17/02/2025.
 import type { ComuneConfig } from "../types";
 import { percorso } from "../percorso";
 
@@ -17,12 +18,12 @@ export const andria: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0883 290111",
+  indirizzo: "Piazza Trieste e Trento, Andria",
+  telefono: "0883 290610",
   email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.andria.bt.it/it/page/125819?fromService=1",
+  pec: "sociosanitario@cert.comune.andria.bt.it",
+  orari: "Servizio sociale: 0883 290610. Porta Unica di Accesso: 0883 299814. Email ordinaria generale non verificata.",
+  sitoWeb: "https://comune.andria.bt.it/it/unita_organizzative/welfare",
 
   logo: null,
 
@@ -37,8 +38,8 @@ export const andria: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.andria.bt.it/it/page/125819?fromService=1" },
+      subtitle: "Recapiti istituzionali nella scheda; controllati il 17/11/2026",
+      action: { type: "web", value: "https://comune.andria.bt.it/it/unita_organizzative/welfare" },
     },
     {
       icon: "medkit-outline",

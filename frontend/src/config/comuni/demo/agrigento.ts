@@ -1,3 +1,4 @@
+// Recapiti controllati il 17/11/2026. Fonte: https://comune.agrigento.it/amministrazione/unita_organizzativa/ii-settore-servizi-alla-persona/ ; aggiornamento fonte: 11/06/2026.
 import type { ComuneConfig } from "../types";
 import { percorso } from "../percorso";
 
@@ -22,8 +23,8 @@ export const agrigento: ComuneConfig = {
   telefono: "0922 590111",
   email: "posta.settore2@comune.agrigento.it",
   pec: "",
-  orari: "",
-  sitoWeb: "https://comune.agrigento.it/distretto-socio-sanitario-d1/",
+  orari: "Email del II Settore Servizi alla Persona. Il telefono principale è il centralino comunale; recapito telefonico diretto dei Servizi Sociali non verificato.",
+  sitoWeb: "https://comune.agrigento.it/amministrazione/unita_organizzativa/ii-settore-servizi-alla-persona/",
 
   logo: null,
 
@@ -38,8 +39,8 @@ export const agrigento: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://comune.agrigento.it/distretto-socio-sanitario-d1/" },
+      subtitle: "Recapiti istituzionali nella scheda; controllati il 17/11/2026",
+      action: { type: "web", value: "https://comune.agrigento.it/amministrazione/unita_organizzativa/ii-settore-servizi-alla-persona/" },
     },
     {
       icon: "medkit-outline",
