@@ -50,9 +50,9 @@
   },
   "carrodano": {
     "bonus-comunali": {
-      "dal": "2026-11-12",
+      "dal": "2026-11-17",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
+      "stato": "chiesto"
     }
   },
   "castelnuovo-magra": {
@@ -113,9 +113,9 @@
   },
   "ricco-del-golfo": {
     "bonus-comunali": {
-      "dal": "2026-11-12",
+      "dal": "2026-11-17",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
+      "stato": "chiesto"
     }
   },
   "riomaggiore": {
