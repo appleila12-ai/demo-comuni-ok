@@ -4,7 +4,8 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Comune di Abbiategrasso (MI) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (27 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Servizi sociali verificati il 17/11/2026: https://comune.abbiategrasso.mi.it/it/unita_organizzative/politiche-sociali (aggiornata 06/03/2026).
-// Restano da verificare: ticket, bonus, associazioni e completezza del percorso.
+// Ticket: sportello virtuale esenzioni ASST verificato 17/11/2026: https://www.asst-ovestmi.it/attivita-scelta-e-revoca.
+// Restano da verificare: bonus, associazioni, destinatario Scrivi al Comune e avviso visibile.
 export const abbiategrasso: ComuneConfig = {
   slug: "abbiategrasso",
   tipo: "comune",
@@ -43,8 +44,8 @@ export const abbiategrasso: ComuneConfig = {
     {
       icon: "medkit-outline",
       title: "ASST Ovest Milanese",
-      subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
-      action: { type: "web", value: "https://www.asst-ovestmi.it" },
+      subtitle: "Richiesta e rinnovo esenzioni tramite sportello virtuale ASST Ovest Milanese",
+      action: { type: "web", value: "https://www.asst-ovestmi.it/attivita-scelta-e-revoca" },
     },
   ],
 
@@ -52,8 +53,8 @@ export const abbiategrasso: ComuneConfig = {
     "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
-    label: "ASST Ovest Milanese · Esenzioni ticket",
-    url: "https://www.asst-ovestmi.it",
+    label: "ASST Ovest Milanese · Richiesta e rinnovo esenzioni ticket",
+    url: "https://www.asst-ovestmi.it/attivita-scelta-e-revoca",
   },
 
   daVerificare: true,
