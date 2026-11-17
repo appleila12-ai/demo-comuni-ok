@@ -3,9 +3,9 @@
 Criterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale attivo/aperto + almeno un bonus comunale attivo/aperto + scheda ticket specifica per l'ASL.
 Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
-Comuni con scheda: 424 · completi: 291 · incompleti: 133
+Comuni con scheda: 424 · completi: 292 · incompleti: 132
 
-Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi sociali (recapiti) 77 · bonus regionali 4
+Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi sociali (recapiti) 77 · bonus regionali 4
 
 ## Completi
 
@@ -150,6 +150,7 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 - Comune di Lanciano (CH)
 - Comune di Langhirano (PR)
 - Comune di Lanusei (NU)
+- Comune dell'Aquila (AQ)
 - Comune di Latina (LT)
 - Comune di Legnano (MI)
 - Comune di Lenola (LT)
@@ -305,7 +306,6 @@ Cosa manca (n. Comuni): bonus comunali 129 · esenzione ticket 101 · servizi so
 
 | Comune | Prov. | Regione | Manca |
 |---|---|---|---|
-| Comune dell'Aquila | AQ | Abruzzo | bonus comunali |
 | Comune di Duino Aurisina | TS | Friuli-Venezia Giulia | bonus comunali, esenzione ticket |
 | Comune di Gorizia | GO | Friuli-Venezia Giulia | servizi sociali (recapiti), bonus comunali |
 | Comune di Monfalcone | GO | Friuli-Venezia Giulia | servizi sociali (recapiti), bonus comunali |
