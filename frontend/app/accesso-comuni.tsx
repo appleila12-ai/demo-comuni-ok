@@ -271,7 +271,7 @@ export default function AccessoComuni() {
 
   if (!config) {
     return (
-      <Pagina titolo="Area riservata ai Comuni" testID="accesso-comuni-non-valido">
+      <Pagina salvabile={false} titolo="Area riservata ai Comuni" testID="accesso-comuni-non-valido">
         <Avviso>Indirizzo non valido. Usa il link che ti ha inviato TutelApp.</Avviso>
       </Pagina>
     );
@@ -279,7 +279,7 @@ export default function AccessoComuni() {
 
   if (!gettone || !dati) {
     return (
-      <Pagina titolo={config.titolo} testID="accesso-comuni-login">
+      <Pagina salvabile={false} titolo={config.titolo} testID="accesso-comuni-login">
         <Intro>
           Area riservata a {config.nome}. Qui si compila, in più sessioni, il modulo con i servizi del Comune e i percorsi
           che il cittadino segue. Quello che scrivi non compare subito nell'app: TutelApp lo controlla prima.
@@ -360,7 +360,7 @@ export default function AccessoComuni() {
   };
 
   return (
-    <Pagina titolo={config.titolo} testID="accesso-comuni-modulo">
+    <Pagina salvabile={false} titolo={config.titolo} testID="accesso-comuni-modulo">
       <Intro>
         {config.nome}. {config.nota || ""} Quello che scrivi si salva solo quando premi «Salva»: puoi fermarti e riprendere in
         un'altra sessione. L'app pubblica non cambia da sola.
