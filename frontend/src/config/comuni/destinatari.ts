@@ -77,6 +77,9 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "alcamo": { email: "comunedialcamo.protocollo@pec.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Alessandria (AL)
   "alessandria": { email: "protocollo@pec.comune.alessandria.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  // Agropoli (SA)
+  "agropoli": { email: "protocollo@pec.comune.agropoli.sa.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi pubblicati sul sito del Comune di Agropoli (2023-2025), letta l'11/11/2026" },
+
   // Alghero (SS)
   "alghero": { email: "protocollo@pec.comune.alghero.ss.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Altamura (BA)
@@ -246,6 +249,9 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "livorno": { email: "comune.livorno@postacert.toscana.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Lucca (LU)
   "lucca": { email: "comune.lucca@postacert.toscana.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  // Ariano Irpino (AV)
+  "ariano-irpino": { email: "protocollo.arianoirpino@asmepec.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi pubblici del Comune di Ariano Irpino (2025-2026), letta l'11/11/2026" },
+
   // Arezzo (AR)
   "arezzo": { email: "comune.arezzo@postacert.toscana.it", tipo: "pec", fonte: "pagina Protocollo e Archivio del Comune (PEC)" },
   // Firenze (FI)
@@ -396,8 +402,13 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "pisa": { email: "comune.pisa@postacert.toscana.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Pistoia (PT)
   "pistoia": { email: "comune.pistoia@postacert.toscana.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  // Genzano di Roma (RM)
+  "genzano-di-roma": { email: "protocollo@comunegenzanodiromapec.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi pubblici del Comune di Genzano di Roma (2024-2026), letta l'11/11/2026" },
+
   // Pomezia (RM)
   "pomezia": { email: "protocollo@pec.comune.pomezia.rm.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  // Pompei (NA)
+  "pompei": { email: "protocollo@pec.comune.pompei.na.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi pubblici del Comune di Pompei (2026), letta l'11/11/2026" },
   // Pordenone (PN)
   "pordenone": { email: "comune.pordenone@certgov.fvg.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Portici (NA)
@@ -643,4 +654,50 @@ export const DESTINATARI: Record<string, Destinatario> = {
   "lesignano-de-bagni": { email: "protocollo@postacert.comune.lesignano-debagni.pr.it", tipo: "pec", fonte: "PEC del Comune da fonti istituzionali (Regione Emilia-Romagna, sito del Comune), verificata il 09/11/2026" },
   // Medesano (PR)
   "medesano": { email: "protocollo@postacert.comune.medesano.pr.it", tipo: "pec", fonte: "IndicePA, PEC del Comune (dataset consultato il 09/11/2026)" },
+  // Carrara (MS)
+  "carrara": { email: "comune.carrara@postecert.it", tipo: "pec", fonte: "PEC del Comune di Carrara indicata negli avvisi del Settore 8 Servizi Sociali, sito del Comune (letta l'11/11/2026)" },
+  // Fiumicino (RM)
+  "fiumicino": { email: "protocollo.generale@pec.comune.fiumicino.rm.it", tipo: "pec", fonte: "PEC di protocollo generale indicata negli avvisi dell'Area Welfare e Servizi Sociali, sito del Comune di Fiumicino (letta l'11/11/2026)" },
+  // Velletri (RM)
+  "velletri": { email: "ufficio.servizisociali@pec.comune.velletri.rm.it", tipo: "pec", fonte: "Regione Lazio, indirizzario Progetto di Vita, distretto RM 6.5 capofila Velletri (letto l'11/11/2026)" },
+  // Spoleto (PG)
+  "spoleto": { email: "comune.spoleto@postacert.umbria.it", tipo: "pec", fonte: "PEC del Comune di Spoleto indicata negli avvisi pubblicati sul sito del Comune (letta l'11/11/2026)" },
+  // Jesi (AN)
+  "jesi": { email: "protocollo.comune.jesi@legalmail.it", tipo: "pec", fonte: "PEC di protocollo indicata nell'informativa ai cittadini, sito del Comune di Jesi (letta l'11/11/2026)" },
+  // Crema (CR)
+  "crema": { email: "protocollo@comunecrema.telecompost.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi pubblicati sul sito del Comune di Crema (letta l'11/11/2026)" },
+  // Tivoli (RM)
+  "tivoli": { email: "info@pec.comune.tivoli.rm.it", tipo: "pec", fonte: "Regione Lazio, indirizzario Progetto di Vita, distretto RM 5.3 capofila Tivoli (letto l'11/11/2026)" },
+  // Abbiategrasso (MI)
+  "abbiategrasso": { email: "protocollo@comune.abbiategrasso.mi.it", tipo: "ordinaria", fonte: "indirizzo di protocollo indicato negli avvisi pubblicati sul sito del Comune di Abbiategrasso (letto l'11/11/2026)" },
+  // Albano Laziale (RM)
+  "albano-laziale": { email: "distrettorm6.2@comune.albanolaziale.rm.it", tipo: "ordinaria", fonte: "indirizzo del Distretto RM 6.2, Gestione associata dei Servizi Sociali, capofila Albano Laziale, indicato negli avvisi pubblici (letto l'11/11/2026)" },
+  // Brugherio (MB)
+  "brugherio": { email: "protocollo.brugherio@legalmail.it", tipo: "pec", fonte: "PEC del Comune di Brugherio indicata negli avvisi di gara del Comune (Gazzetta ufficiale UE, TED), letta l'11/11/2026" },
+  // Carmagnola (TO)
+  "carmagnola": { email: "protocollo@pec.cisa31.it", tipo: "pec", fonte: "Regione Piemonte, indirizzario degli enti gestori socio-assistenziali: C.I.S.A. 31 di Carmagnola (letto l'11/11/2026)" },
+  // Cassino (FR)
+  "cassino": { email: "servizio.protocollo@comunecassino.telecompost.it", tipo: "pec", fonte: "PEC del Comune di Cassino indicata negli avvisi sul sito del Comune (letta l'11/11/2026)" },
+  // Chieri (TO)
+  "chieri": { email: "protocollo@comune.chieri.to.it", tipo: "ordinaria", fonte: "indirizzo di protocollo indicato negli avvisi del Servizio Politiche Sociali, sito del Comune di Chieri (letto l'11/11/2026)" },
+  // Ciampino (RM)
+  "ciampino": { email: "protocollo@pec.comune.ciampino.roma.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi del Settore Servizi alla Persona, sito del Comune di Ciampino; riceve anche da mail semplice (letta l'11/11/2026)" },
+  // Cisterna di Latina (LT)
+  "cisterna-di-latina": { email: "mail@pec.comune.cisterna.latina.it", tipo: "pec", fonte: "PEC dell'Ente indicata nell'avviso del Comune di Cisterna di Latina, sito del Comune (letta l'11/11/2026)" },
+  // Fonte Nuova (RM)
+  "fonte-nuova": { email: "protocollo@cert.fonte-nuova.it", tipo: "pec", fonte: "PEC di protocollo indicata nei documenti dei Servizi Sociali del Comune di Fonte Nuova e nell'avviso TED del Comune (letta l'11/11/2026)" },
+  // Marigliano (NA)
+  "marigliano": { email: "protocollo@pec.comunemarigliano.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi dei Servizi Sociali, sito del Comune di Marigliano (letta l'11/11/2026)" },
+  // Villaricca (NA)
+  "villaricca": { email: "protocollo.villaricca@asmepec.it", tipo: "pec", fonte: "PEC di protocollo indicata negli avvisi del Comune di Villaricca (settore Servizi Socio-Assistenziali), sito del Comune (letta l'11/11/2026)" },
+  // Mondragone (CE)
+  "mondragone": { email: "protocollo@pec.comune.mondragone.ce.it", tipo: "pec", fonte: "PEC di protocollo del Comune di Mondragone indicata nell'avviso TED del 07/04/2026 (letta l'11/11/2026)" },
+  // Casalecchio di Reno (BO)
+  "casalecchio-di-reno": { email: "welfare@comune.casalecchio.bo.it", tipo: "ordinaria", fonte: "sito del Comune di Casalecchio di Reno, pagina Politiche Sociali (indirizzo riferito dalla dott.ssa Baudone il 13/11/2026; pagina non aperta dall'assistente perché il sito blocca la lettura automatica)" },
+  // Lenola (LT)
+  "lenola": { email: "servizisociali@comune.lenola.lt.it", tipo: "ordinaria", fonte: "sito del Comune di Lenola, pagina Area Affari generali, demografici e scolastico-educativi, voce Ufficio Servizi Sociali e Scolastico-Educativi (pagina aggiornata il 12/10/2023, letta il 13/11/2026)" },
+  // Gragnano (NA), Quarto (NA), Maddaloni (CE): casella generale del Comune (nessuna casella dei Servizi Sociali sul sito)
+  "gragnano": { email: "protocollo@comune.gragnano.na.it", tipo: "ordinaria", fonte: "sito del Comune di Gragnano, sezione Contatti: casella generale di protocollo (letta il 14/11/2026)" },
+  "quarto": { email: "protocollogenerale@pec.comune.quarto.na.it", tipo: "pec", fonte: "sito del Comune di Quarto, sezione Contatti: PEC generale di protocollo (letta il 14/11/2026)" },
+  "maddaloni": { email: "protocollo@comune.maddaloni.ce.it", tipo: "ordinaria", fonte: "sito del Comune di Maddaloni, sezione Contatti: casella generale di protocollo (letta il 14/11/2026)" },
 };

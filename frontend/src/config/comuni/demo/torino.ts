@@ -6,7 +6,9 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Fonti (pagine ufficiali del Comune, controllate il 13 ottobre 2026): "Assistenza domiciliare", "Progetti di Vita", scheda di via Pio VII.
 // Un servizio sociale per ogni distretto (4 distretti, 8 Circoscrizioni), per appuntamento. Il centralino del Comune è 011 011 999.
-// Da fare: sedi e orari di Informadisabilità, PUA e UVG; bonus comunali con importi; sport e tempo libero.
+// Informadisabilità: https://www.comune.torino.it/amministrazione/informadisabilita (aggiornata 19/11/2025, controllata 11/11/2026).
+// Distretti: https://www.comune.torino.it/servizi/valutazione-della-disabilita (aggiornata 25/03/2026, controllata 11/11/2026).
+// Da fare: PUA e UVG; bonus comunali con importi; sport e tempo libero.
 export const torino: ComuneConfig = {
   slug: "torino",
   tipo: "comune",
@@ -17,15 +19,14 @@ export const torino: ComuneConfig = {
   provincia: "TO",
   regione: "Piemonte",
 
-  ente: "Servizi Sociali",
+  ente: "Informadisabilità · orientamento ai Servizi Sociali",
   responsabile: "",
-  indirizzo: "Un servizio sociale per distretto: le sedi sono qui sotto",
-  // Dipartimento Servizi Sociali, Sociosanitari e Abitativi: https://www.comune.torino.it/amministrazione/dipartimento-servizi-sociali-socio-sanitari-abitativi (consultata il 10/11/2026; data di aggiornamento non indicata)
-  telefono: "011 011 25520",
-  email: "",
+  indirizzo: "Corso Unione Sovietica 228/D, 10134 Torino",
+  telefono: "011 011 21631",
+  email: "informadisabilita@comune.torino.it",
   pec: "servizi.sociali@cert.comune.torino.it",
-  orari: "Per appuntamento, dal lunedì al venerdì dalle 9:00 alle 13:00",
-  sitoWeb: "https://www.comune.torino.it/servizi/salute-benessere-assistenza",
+  orari: "Lun-ven 9:00-12:30; anche mar e gio 14:00-16:00. Informazioni per telefono e email; in presenza su appuntamento",
+  sitoWeb: "https://www.comune.torino.it/amministrazione/informadisabilita",
 
   logo: null,
 
@@ -52,7 +53,8 @@ export const torino: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi sociali Circoscrizioni 1 e 8 (via Pio VII 61)",
-      subtitle: "Equipe Disabili, per appuntamento lun-ven 9:00-13:00. Per le Circoscrizioni 1 e 8 c'è anche la sede di via Vado: tel. 011 011 37922",
+      // https://www.comune.torino.it/vivere-comune/luoghi/servizi-sociali-via-pio-vii (aggiornata 10/11/2026, controllata 11/11/2026). Discordanza sugli orari nel registro.
+      subtitle: "Equipe Disabili. Per informazioni e appuntamenti: s.socialedistrettosudest@comune.torino.it · Tel. 011 011 30100",
       action: { type: "tel", value: "01101130100" },
     },
     {
@@ -70,7 +72,7 @@ export const torino: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi sociali Circoscrizioni 6 e 7 (Lungo Dora Savona)",
-      subtitle: "Per appuntamento, lun-ven 9:00-13:00",
+      subtitle: "Per appuntamento, lun-ven 9:00-13:00. Email distretto nord est: s.socialedistrettonordest@comune.torino.it",
       action: { type: "tel", value: "01101134511" },
     },
     {
@@ -85,6 +87,12 @@ export const torino: ComuneConfig = {
       subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
       action: { type: "web", value: "https://www.aslcittaditorino.it" },
     },
+    {
+      icon: "information-circle-outline",
+      title: "Informadisabilità · ascolto e orientamento",
+      subtitle: "Corso Unione Sovietica 228/D · informadisabilita@comune.torino.it · Lun-ven 9:00-12:30; mar e gio anche 14:00-16:00. Per venire in sede concorda un appuntamento. Per l'interpretariato LIS: serviziolis@comune.torino.it · Fonte: Comune, controllata 11/11/2026",
+      action: { type: "tel", value: "01101121631" },
+    },
   ],
 
   trasporto:
@@ -92,7 +100,7 @@ export const torino: ComuneConfig = {
 
   esenzioneTicket: {
     label: "ASL Città di Torino · Esenzioni ticket",
-    url: "https://www.aslcittaditorino.it",
+    url: "https://www.aslcittaditorino.it/sportelli-per-pratiche-amministrative/",
   },
 
   daVerificare: true,
@@ -112,7 +120,7 @@ const COMMISSIONE_ASL_TORINO: PuntoSupporto = {
   },
 };
 // Passo 4: servizi sociali delle Circoscrizioni; passo 5: Progetti di Vita del Comune.
-torino.percorsoTerritorio = percorso(torino.puntiSupporto, [0, 1, 2, 3], [COMMISSIONE_ASL_TORINO], [], [4]);
+torino.percorsoTerritorio = percorso(torino.puntiSupporto, [8, 2, 3, 4, 5], [COMMISSIONE_ASL_TORINO], [], [6]);
 
 // Passo 1: provincia nella terza fase della sperimentazione INPS (dal 1° marzo 2026).
 torino.percorsoTerritorio = { ...torino.percorsoTerritorio, 1: [INPS_TERZA_FASE] };

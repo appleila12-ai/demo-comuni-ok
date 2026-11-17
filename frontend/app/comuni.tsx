@@ -89,6 +89,25 @@ function cercaTutti(query: string): { risultati: Risultato[]; altri: number } {
 /** Schede complete: servizi sociali, bonus regionali e comunali, esenzione ticket (elenco in src/content/completezza-comuni.json). */
 const SCHEDE_COMPLETE = new Set<string>(COMPLETI);
 
+/**
+ * Semaforo della scheda, mostrato come pallino accanto al Comune (una sola lista, senza sezioni):
+ *  - verde: scheda completa, con almeno un indirizzo o un'email dei Servizi Sociali;
+ *  - giallo: scheda in lavorazione (ci sono dei dati, ma non tutte le sezioni);
+ *  - rosso: solo l'ingresso (nome, provincia e Regione), nessun servizio verificato.
+ * Il colore non basta da solo: ogni stato ha anche una parola, letta dagli screen reader.
+ */
+type StatoScheda = "verde" | "giallo" | "rosso";
+const STATI: Record<StatoScheda, { colore: string; etichetta: string }> = {
+  verde: { colore: colors.success, etichetta: "Scheda completa" },
+  giallo: { colore: colors.warning, etichetta: "In lavorazione" },
+  rosso: { colore: colors.error, etichetta: "Pochi dati" },
+};
+function statoScheda(c: ComuneConfig): StatoScheda {
+  if (c.soloElenco) return "rosso";
+  if (SCHEDE_COMPLETE.has(c.slug) && (c.indirizzo || c.email)) return "verde";
+  return "giallo";
+}
+
 export default function ScegliComune() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
@@ -209,25 +228,25 @@ export default function ScegliComune() {
                 : "Qui vedi i Comuni disponibili in questa versione."}
             {query && altri > 0 ? ` · altri ${altri} Comuni: scrivi più lettere del nome` : ""}
           </Text>
+          <View style={styles.legenda} testID="comuni-legenda">
+            {(["verde", "giallo", "rosso"] as const).map((k) => (
+              <View key={k} style={styles.legendaVoce}>
+                <View style={[styles.semaforo, { backgroundColor: STATI[k].colore }]} />
+                <Text style={styles.legendaTesto}>{STATI[k].etichetta}</Text>
+              </View>
+            ))}
+          </View>
         </View>
 
         {gruppi.map(([regione, tutte]) => (
           <View key={regione} style={styles.group}>
             <Text style={styles.groupLabel}>{regione.toUpperCase()}</Text>
-            {[
-              { id: "tutte-sezioni", titolo: "Scheda con tutte le sezioni", voci: tutte.filter((r) => !r.paese && SCHEDE_COMPLETE.has(r.comune.slug)) },
-              { id: "sezioni-in-arrivo", titolo: "Scheda con sezioni in arrivo", voci: tutte.filter((r) => r.paese || !SCHEDE_COMPLETE.has(r.comune.slug)) },
-            ]
-              .filter((blocco) => blocco.voci.length > 0)
-              .map(({ id, titolo, voci }) => (
-            <View key={id} testID={`comuni-${id}-${regione}`}>
-              {SCHEDE_COMPLETE.size > 0 && tutte.some((r) => SCHEDE_COMPLETE.has(r.comune.slug)) ? (
-                <Text style={styles.sottoGruppo} accessibilityRole="header">{titolo}</Text>
-              ) : null}
+            <View testID={`comuni-lista-${regione}`}>
             <View style={styles.list}>
-              {voci.map((r) => {
+              {[...tutte].sort((a, b) => a.comune.nomeBreve.localeCompare(b.comune.nomeBreve, "it")).map((r) => {
                 const c = r.comune;
                 const selected = c.slug === attivo;
+                const stato = STATI[statoScheda(c)];
                 return (
                   <Pressable
                     key={c.slug}
@@ -239,7 +258,7 @@ export default function ScegliComune() {
                     ]}
                     accessibilityRole="button"
                     accessibilityState={{ selected }}
-                    accessibilityLabel={`Scegli ${c.nome}${r.paese ? `, comune di ${r.paese}` : ""}`}
+                    accessibilityLabel={`Scegli ${c.nome}${r.paese ? `, comune di ${r.paese}` : ""}. ${stato.etichetta}`}
                     testID={`comuni-item-${c.slug}`}
                   >
                     <View style={[styles.dot, { backgroundColor: c.theme.warmSoft, borderColor: c.theme.warm }]}>
@@ -258,6 +277,12 @@ export default function ScegliComune() {
                         {c.soloElenco ? " · demo, recapiti in arrivo" : c.dimostrativo ? " · demo" : ""}
                       </Text>
                     </View>
+                    <View
+                      style={[styles.semaforo, { backgroundColor: stato.colore }]}
+                      accessibilityElementsHidden
+                      importantForAccessibility="no"
+                      testID={`comuni-stato-${c.slug}`}
+                    />
                     {selected ? (
                       <Ionicons name="checkmark-circle" size={22} color={c.theme.warmDark} />
                     ) : (
@@ -268,7 +293,6 @@ export default function ScegliComune() {
               })}
             </View>
             </View>
-              ))}
           </View>
         ))}
 
@@ -362,7 +386,10 @@ const styles = StyleSheet.create({
     color: colors.onSurfaceTertiary,
     marginBottom: spacing.sm,
   },
-  sottoGruppo: { fontSize: 13, fontWeight: "700", color: colors.onSurfaceSecondary, marginTop: spacing.sm, marginBottom: spacing.sm },
+  semaforo: { width: 12, height: 12, borderRadius: 6 },
+  legenda: { flexDirection: "row", flexWrap: "wrap", gap: spacing.md, marginTop: spacing.sm, marginLeft: 4 },
+  legendaVoce: { flexDirection: "row", alignItems: "center", gap: 6 },
+  legendaTesto: { fontSize: 11, color: colors.onSurfaceSecondary },
   list: { gap: spacing.sm },
   card: {
     flexDirection: "row",

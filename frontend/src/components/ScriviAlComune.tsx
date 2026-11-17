@@ -6,13 +6,14 @@
 //    ogni volta che si torna nella Home (non alla prima apertura)
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Linking, Modal, Pressable, StyleSheet, Text, View } from "react-native";
+import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
 import { useFocusEffect } from "expo-router";
 import * as Clipboard from "expo-clipboard";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
 import { Bottone } from "@/src/components/Pagina";
 import { comune } from "@/src/config/comune";
+import { apriMail as apriProgrammaPosta } from "@/src/lib/apriMail";
 import { costruisciRichiesta, linkMailto } from "@/src/lib/richiestaComune";
 import { colors, fonts, radius, spacing } from "@/src/theme";
 import { storage } from "@/src/utils/storage";
@@ -36,7 +37,7 @@ function useRichiestaComune() {
   };
 
   const apriMail = () => {
-    Linking.openURL(linkMailto(richiesta)).catch(() => {
+    apriProgrammaPosta(linkMailto(richiesta)).catch(() => {
       // Nessun programma di posta configurato: resta la copia del testo
       copia();
     });

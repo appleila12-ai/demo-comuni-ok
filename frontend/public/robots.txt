@@ -1,0 +1,8 @@
+# TutelApp: tutti i motori di ricerca sono i benvenuti, tranne le aree riservate agli operatori
+User-agent: *
+Allow: /
+Disallow: /cruscotto
+Disallow: /sentinella
+Disallow: /test-pdf
+
+Sitemap: https://tutelapp.it/sitemap.xml

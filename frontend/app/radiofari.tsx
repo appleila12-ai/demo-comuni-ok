@@ -5,7 +5,7 @@
 // Accessibilità: nessuna mappa (solo testo), testi da 14 in su, aree toccabili da almeno 48.
 
 import React, { useState } from "react";
-import { Linking, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Linking, Pressable, StyleSheet, Text, View } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
 import { useRouter } from "expo-router";
 
@@ -14,7 +14,9 @@ import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import {
   CONTATTI_LETISMART,
+  DATA_ELENCO_LETISMART,
   DATA_LETISMART,
+  LOGO_UICI_LETISMART,
   NESSUN_RADIOFARO,
   TESTO_STATO,
   URL_MAPPA_LETISMART,
@@ -64,14 +66,20 @@ function Elenco({ titolo, citta }: { titolo: string; citta: string[] }) {
 export default function Radiofari() {
   useSezione("radiofari");
   const router = useRouter();
-  const { voci, luoghi, vuoto } = radiofariDelComune();
+  const { voci, luoghi, vuoto, installazioni } = radiofariDelComune();
   const [apertoElenco, setApertoElenco] = useState(false);
   const nazionale = cittaPerStato();
 
   return (
     <Pagina titolo="Radiofari e percorsi accessibili" testID="radiofari" sottotitoloSalvato="Radiofari LETIsmart nel tuo Comune">
+      <Image
+        source={{ uri: LOGO_UICI_LETISMART }}
+        style={st.logo}
+        resizeMode="contain"
+        accessibilityLabel="Logo U.I.C.I. LETIsmart, di SCEN"
+      />
       <Intro>
-        LETIsmart è un progetto, collegato a UICI, per rendere luoghi e percorsi accessibili a chi non vede o vede poco.
+        U.I.C.I. LETIsmart è un progetto, collegato a UICI, per rendere luoghi e percorsi accessibili a chi non vede o vede poco.
         Come funziona e quali dispositivi servono lo spiega LETIsmart sul suo sito ufficiale. TutelApp ti dà solo le
         informazioni: non sostituisce LETIsmart e non guida i tuoi spostamenti.
       </Intro>
@@ -92,6 +100,23 @@ export default function Radiofari() {
               {voci.length > 1 ? <Text style={st.fonte}>Voce della mappa: {v.citta}.</Text> : null}
             </View>
           ))}
+
+          {installazioni ? (
+            <View style={paginaStili.card} testID="radiofari-installazioni">
+              <Text style={st.nome} accessibilityRole="header">
+                Radiofari installati: {installazioni.totale}
+              </Text>
+              <Text style={st.riga}>
+                Secondo l'elenco delle installazioni di LETIsmart, qui ci sono radiofari in questi luoghi:{" "}
+                {installazioni.categorie.map(([tipo, n]) => `${tipo} (${n})`).join(", ")}.
+              </Text>
+              <Text style={st.fonte}>
+                Fonte: elenco installazioni inviato da SCEN S.r.l. (LETIsmart) il {DATA_ELENCO_LETISMART}. I luoghi
+                esatti non sono nell'elenco: chiedili alla sede UICI o a LETIsmart. Gli impianti ancora in
+                realizzazione non sono compresi.
+              </Text>
+            </View>
+          ) : null}
 
           {luoghi.length ? (
             <>
@@ -186,6 +211,7 @@ export default function Radiofari() {
 }
 
 const st = StyleSheet.create({
+  logo: { width: "100%", maxWidth: 320, height: 70, marginBottom: spacing.sm },
   nome: { fontSize: 17, lineHeight: 24, fontWeight: "700", color: colors.onSurface, marginBottom: spacing.sm },
   riga: { fontSize: 15, lineHeight: 22, color: colors.onSurface, marginBottom: spacing.xs },
   fonte: { fontSize: 14, lineHeight: 20, color: colors.onSurface, marginTop: spacing.sm, marginBottom: spacing.xs },

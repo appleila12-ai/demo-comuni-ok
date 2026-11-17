@@ -18,8 +18,8 @@ export const milano: ComuneConfig = {
   provincia: "MI",
   regione: "Lombardia",
 
-  ente: "Servizi Sociali – Direzione Welfare e Salute",
-  responsabile: "Direzione Welfare e Salute",
+  ente: "Servizi Sociali del Comune",
+  responsabile: "",
   indirizzo: "Via Sile 8, 20139 Milano (MI)",
   telefono: "02 02 02",
   email: "",
@@ -48,9 +48,9 @@ export const milano: ComuneConfig = {
     },
     {
       icon: "medkit-outline",
-      title: "ATS Città Metropolitana di Milano",
-      subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
-      action: { type: "web", value: "https://www.ats-milano.it" },
+      title: "ASST di Milano · esenzioni ticket",
+      subtitle: "Richiesta o rinnovo online presso le tre ASST: tutti i nove Municipi. Servono email, cellulare e documenti in PDF. Fonte: portale interaziendale, controllato l'11/11/2026.",
+      action: { type: "web", value: "https://sr.asst-fbf-sacco.it/" },
     },
   ],
 
@@ -58,8 +58,8 @@ export const milano: ComuneConfig = {
     "Chiedi al Servizio Sociale del tuo Municipio quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
-    label: "ATS Milano · Esenzioni ticket",
-    url: "https://www.ats-milano.it",
+    label: "ASST di Milano · sportello online esenzioni",
+    url: "https://sr.asst-fbf-sacco.it/",
   },
 
   daVerificare: true,

@@ -11,7 +11,12 @@ import { useSezione } from "@/src/lib/statistiche";
 import { bonusDelComune, dataScadenzaLeggibile, GIORNI_SCADUTO_VISIBILE, STATO_BONUS, type Bonus, type StatoBonus } from "@/src/lib/bonus";
 import { Avviso, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
+import IN_VALIDAZIONE from "@/src/content/in-validazione.json";
 import { DOVE_CERCARE, PAROLE_GENERALI, PORTALE_NAZIONALE } from "@/src/lib/doveCercare";
+
+type RichiestaIV = { stato?: string; dal?: string; chiesto?: string };
+const richiestaBonusComunali = (slug: string): RichiestaIV | undefined =>
+  (IN_VALIDAZIONE as Record<string, Record<string, RichiestaIV>>)[slug]?.["bonus-comunali"];
 
 const apri = (url: string) => Linking.openURL(url).catch(() => {});
 
@@ -194,6 +199,17 @@ export default function Bonus() {
             </Pressable>
           )}
         </View>
+      ) : null}
+
+      {locali.length === 0 && richiestaBonusComunali(comune.slug) ? (
+        <Avviso>
+          Informazione in validazione: stiamo verificando con il Comune se esistono contributi propri per le persone con
+          disabilità.
+          {richiestaBonusComunali(comune.slug)?.stato === "chiesto" && richiestaBonusComunali(comune.slug)?.dal
+            ? ` Lo abbiamo chiesto ai ${richiestaBonusComunali(comune.slug)?.chiesto ?? "Servizi Sociali del Comune"} il ${dataScadenzaLeggibile(richiestaBonusComunali(comune.slug)?.dal ?? "")} e non abbiamo ancora ricevuto risposta.`
+            : ""}{" "}
+          Nel frattempo chiedi ai Servizi Sociali: possono indicarti anche le misure dell'ambito sociale.
+        </Avviso>
       ) : null}
 
       {locali.length > 0 ? (

@@ -108,11 +108,11 @@
     },
     {
       "d": "Con la riforma perdo il mio verbale attuale?",
-      "r": "No. I verbali già rilasciati restano validi a tempo indeterminato e non perdi nessuna agevolazione: la riforma vale solo per le nuove domande."
+      "r": "Non abbiamo ancora verificato sulle fonti ufficiali cosa cambia per i verbali già rilasciati: controlla sul sito INPS o chiedi al patronato prima di agire."
     },
     {
       "d": "Come funziona la nuova valutazione unica?",
-      "r": "Il tuo medico invia il certificato introduttivo e la pratica parte da sola: niente più domanda amministrativa separata. Una sola visita e un solo verbale. Puoi anche chiedere il Progetto di Vita personalizzato."
+      "r": "Il tuo medico invia il certificato introduttivo all'INPS. Dove la riforma è già attiva la pratica parte da sola, senza domanda separata; dove non lo è ancora serve anche la domanda entro 90 giorni. Dal 1° gennaio 2027 la nuova procedura vale in tutta Italia. Puoi anche chiedere il Progetto di Vita personalizzato."
     }
   ],
   "glossario": [
@@ -122,7 +122,7 @@
     },
     {
       "t": "Certificato medico introduttivo",
-      "d": "Il certificato del medico che avvia da solo la pratica: con la riforma non serve più una domanda separata."
+      "d": "Il certificato che il medico invia online all'INPS. Dove la riforma è già attiva avvia da solo la pratica; dal 1° gennaio 2027 vale in tutta Italia."
     },
     {
       "t": "Valutazione di Base",
@@ -192,11 +192,11 @@
   "riforma": {
     "regimeNazionale": "2027-01-01",
     "fonteUrl": "https://www.inps.it/it/it/inps-comunica/dossier/riforma-della-disabilita.html",
-    "intro": "La Riforma della Disabilità (D.Lgs. 62/2024) vale in tutta Italia dal 2027. La procedura è unica e uguale ovunque: ecco come funziona.",
+    "intro": "La Riforma della Disabilità (D.Lgs. 62/2024) vale in tutta Italia dal 1° gennaio 2027. Fino al 31 dicembre 2026 vale solo nelle province della sperimentazione: ecco come funziona.",
     "cosaCambia": [
       {
         "titolo": "Basta doppia domanda",
-        "testo": "Il certificato medico introduttivo del tuo medico avvia DA SOLO la pratica: non serve più presentare una domanda amministrativa separata all'INPS."
+        "testo": "Dove la riforma è attiva, il certificato medico introduttivo avvia da solo la pratica: non serve una domanda separata all'INPS. Dove non lo è ancora, serve anche la domanda entro 90 giorni."
       },
       {
         "titolo": "INPS unico valutatore",
@@ -211,7 +211,7 @@
         "testo": "Puoi chiedere un piano personalizzato che coordina in un unico documento sostegni sanitari, sociali, scuola, lavoro e vita indipendente."
       }
     ],
-    "salvaguardia": "Chi ha GIÀ un verbale (invalidità civile o Legge 104, incluso art. 3 comma 3) NON deve rifare nulla: i verbali già rilasciati restano validi a tempo indeterminato e le agevolazioni non si perdono. La riforma vale solo per le nuove domande."
+    "salvaguardia": "Hai già un verbale? Non abbiamo ancora verificato sulle fonti ufficiali cosa cambia per i verbali già rilasciati: controlla sul sito INPS o chiedi al patronato prima di agire."
   },
   "livelliSostegno": {
     "intro": "Con la Riforma 2027 l'esito della visita non è più solo una percentuale: indica il livello di sostegno di cui hai bisogno nella vita quotidiana. Tocca un livello per vedere le agevolazioni collegate.",

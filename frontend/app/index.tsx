@@ -19,6 +19,7 @@ import { MonoImage } from "@/src/components/MonoImage";
 import { ComuneLogo } from "@/src/components/ComuneLogo";
 import { PaeseCard } from "@/src/components/PaeseCard";
 import { comune, comuneScelto } from "@/src/config/comune";
+import IN_VALIDAZIONE from "@/src/content/in-validazione.json";
 import { colors, fonts, radius, spacing, topics } from "@/src/theme";
 import { useSezione } from "@/src/lib/statistiche";
 import { HA_BACKEND } from "@/src/config/servizi";
@@ -27,6 +28,7 @@ import { RiprendiHome } from "@/src/components/RiprendiHome";
 import { InvitoSalvataggio } from "@/src/components/InvitoSalvataggio";
 import { RecuperaDati } from "@/src/components/RecuperaDati";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
+import { apriMail as apriProgrammaPosta } from "@/src/lib/apriMail";
 import { RichiestaNome, RichiestaNomeHome } from "@/src/components/RichiestaNome";
 import { useNomeUtente } from "@/src/lib/nomeUtente";
 import { SITO_TUTELAPP, linkMailtoInserimentoComune } from "@/src/lib/richiestaComune";
@@ -250,11 +252,22 @@ function HomeDelComune() {
               {comune.tipo === "unione" ? "l'" : "il "}
               {comune.nome} non ha aderito a TutelApp.{" "}
               {comune.soloElenco
-                ? "In questa versione non ci sono ancora i recapiti dei suoi servizi sociali: trovi le informazioni generali valide in tutta Italia."
+                ? "In questa versione non ci sono ancora i recapiti dei suoi servizi sociali: trovi le informazioni generali valide in tutta Italia. Sito e PEC del Comune: Indice PA (AgID), licenza CC BY 4.0."
                 : "I recapiti vengono dal sito ufficiale e potrebbero non essere aggiornati."}
             </Text>
           </View>
         )}
+
+        {(IN_VALIDAZIONE as Record<string, Record<string, unknown>>)[comune.slug]?.["servizi-sociali"] ? (
+          <View style={styles.demoBanner} testID="comune-home-servizi-in-validazione">
+            <Ionicons name="information-circle-outline" size={16} color="#6B4E16" />
+            <Text style={styles.demoBannerText}>
+              <Text style={styles.demoBannerStrong}>Informazione in validazione: </Text>
+              i recapiti completi dei Servizi Sociali (telefono, email, orari) non sono ancora verificati. Li stiamo
+              chiedendo al Comune. Nel frattempo chiedi al centralino del Comune e segnalaci cosa non torna.
+            </Text>
+          </View>
+        ) : null}
 
         {/* Per gli enti: contatto con TutelApp, in forma compatta. La richiesta ai Comuni è la finestra che si apre al ritorno nella Home */}
         <Pressable
@@ -481,7 +494,7 @@ function HomeDelComune() {
           )}
           {!!comune.soloElenco && (
             <Pressable
-              onPress={() => Linking.openURL(linkMailtoInserimentoComune(comune)).catch(() => {})}
+              onPress={() => apriProgrammaPosta(linkMailtoInserimentoComune(comune)).catch(() => {})}
               style={({ pressed }) => [styles.contactRow, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel={`Chiedi a TutelApp di inserire il Comune di ${comune.nomeBreve}: apre la mail già compilata`}
@@ -490,6 +503,11 @@ function HomeDelComune() {
               <Ionicons name="mail-outline" size={16} color={t.warmDark} />
               <Text style={[styles.contactValue, styles.contactLink]}>Chiedi di inserire il tuo Comune</Text>
             </Pressable>
+          )}
+          {!!comune.soloElenco && (
+            <Text style={styles.contactText} selectable>
+              Se non si apre la posta, scrivi a info@tutelapp.it indicando il tuo Comune.
+            </Text>
           )}
 
           <View style={styles.contactRows}>

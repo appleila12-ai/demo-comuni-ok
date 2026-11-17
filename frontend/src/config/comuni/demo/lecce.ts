@@ -17,13 +17,13 @@ export const lecce: ComuneConfig = {
   provincia: "LE",
   regione: "Puglia",
 
-  ente: "Servizi Sociali",
+  ente: "Ufficio anziani e contatti sociali",
   responsabile: "",
   indirizzo: "Via San Massimiliano Kolbe angolo Via Pistoia, Lecce",
   telefono: "0832 682477",
   email: "servizi.sociali@comune.lecce.it",
   pec: "",
-  orari: "Martedì 09:00-12:00 (Ufficio anziani; orari degli altri servizi da verificare)",
+  orari: "Per il Segretariato Sociale è pubblicato anche il numero 0832 682682. Gli orari dell’Ufficio anziani differiscono tra la pagina dell’ufficio e quella sull’integrazione delle rette: telefona prima di andare.",
   sitoWeb: "https://www.comune.lecce.it",
 
   logo: null,

@@ -4,7 +4,8 @@ import { percorso } from "../percorso";
 // Comune di Ferrara (FE) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // È verificato solo l'indirizzo web indicato in sitoWeb.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: pagina «Sportello Sociale Unico Integrato» del Comune di Ferrara (aggiornata il 12/05/2026), letta il 14/11/2026.
+// Da fare: sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
 export const ferrara: ComuneConfig = {
   slug: "ferrara",
   tipo: "comune",
@@ -17,11 +18,11 @@ export const ferrara: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0532 419111",
-  email: "",
+  indirizzo: "Casa della Salute, Cittadella San Rocco, corso Giovecca 203",
+  telefono: "349 3142452",
+  email: "sportellosocialeui@comune.fe.it",
   pec: "",
-  orari: "",
+  orari: "Su appuntamento, prendendo prima contatto per telefono. Le fasce di apertura indicate dal sito possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.ferrara.it/it/b/11294/sportello-sociale-unico-integrato",
 
   logo: null,

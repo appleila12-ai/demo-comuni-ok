@@ -22,7 +22,7 @@ export const foggia: ComuneConfig = {
   email: "servizisociali@comune.foggia.it",
   pec: "",
   orari: "Lunedì-venerdì 09:00-12:00; martedì e giovedì 15:30-17:00",
-  sitoWeb: "https://ambitoterritoriale.comune.foggia.it",
+  sitoWeb: "https://comune.foggia.it/it/unita_organizzative/sociale-e-prevenzione-categorie-disagiate-e-minori-disabilita-dipendenze-immigrazione",
 
   logo: null,
 
