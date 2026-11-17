@@ -69,3 +69,5 @@ export function precompila(slug: string): DatiModulo {
   }
   return { versione: 0, campi, gruppi };
 }
+
+// Ricostruzione anteprima 17/11/2026: variabili PERCORSI_* impostate su Netlify.
