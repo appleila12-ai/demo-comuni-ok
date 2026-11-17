@@ -17,3 +17,16 @@ La scheda esistente indica come referente `Servizio Coordinamento Attività Ammi
 **Non completo.** Ancora da verificare: bonus Lombardia applicabili, bandi e contributi Pavia/Consorzio Sociale Pavese (anche fondi, requisiti e scadenze), destinatario effettivamente configurato, associazioni, avviso di incompletezza **visibile nella UI**. Non dichiarare assenza di bonus. Non usare «CHIUSO – IN ATTESA DI RISCONTRO» senza prova di richiesta ufficiale inviata e archiviata. Verificare prima l'archivio Drive delle richieste/risposte classificato da Claude; non inviare email senza autorizzazione.
 
 **Nessuna modifica applicativa né rimozione** in questa proposta. Nessuna email inviata, nessun merge/deploy. Node e anteprima Netlify non eseguiti/verificati. Conteggio: **0 Comuni completi**, **0 chiusi in attesa**, **1 Comune parziale con proposta pronta**. Seguire #262, #267 e #270.
+
+## Nuovo contributo comunale documentato — trasporto scolastico disabilità 2026/2027
+
+**Fonte primaria ufficiale, letta il 17/11/2026:** https://www.comune.pavia.it/servizi/contributi-per-trasporto-dei-figli-condizione-disabilita-per-lanno-scolastico (ultima modifica pagina **01/10/2026**; notizia del **30/09/2026**: https://www.comune.pavia.it/novita/notizie/contributo-al-trasporto-alunni-disabilita-as-20262027).
+
+- **Stato sulla pagina:** «Attivo». Domanda entro **31/05/2027, ore 23:59**. L'indicazione «attivo» è quella della pagina consultata, non garanzia di disponibilità residua delle risorse.
+- **Destinatari:** famiglie con minore residente a Pavia, certificazione di disabilità ai sensi della L. 104/1992, iscritto nel 2026/27 a scuola dell'infanzia, primaria o secondaria di primo grado statale o paritaria, anche fuori Pavia; il minore non deve usufruire del trasporto scolastico erogato direttamente dal Comune. Trasporto effettuato autonomamente dalla famiglia.
+- **Massimali annui:** **2.000 €** per scuole nel territorio comunale, **2.300 €** per scuole fuori dal territorio comunale. Per mezzi specificamente attrezzati la pagina richiede ricevute del servizio. **Non presentare i massimali come importi garantiti**.
+- **Domanda:** una per ciascun minore, utilizzando il modello B allegato alla pagina, da inviare all'ufficio Protocollo tramite PEC **protocollo@pec.comune.pavia.it**. La pagina elenca certificazione L.104, attestazione frequenza scolastica, documenti d'identità e codici fiscali; per cittadini extracomunitari anche documenti di soggiorno indicati nella pagina.
+- **Fondi:** assegnazione in ordine di arrivo al Protocollo **fino a esaurimento delle risorse**. Prima di inserire in app la nota sui fondi, recuperare la **formulazione fissa approvata da Ilaria**: non inventarla né sostituirla con un testo libero.
+- **Ambito:** misura espressamente del Comune di Pavia; **non estenderla automaticamente** agli altri Comuni del Consorzio Sociale Pavese.
+
+**Integrazione prevista:** aggiungere la misura comunale nella struttura bonus pertinente, esclusivamente se `frontend/src/lib/bonus.ts` non è occupato da PR aperte e dopo controllo di eventuale record già presente; altrimenti conservare questa proposta. Non aggiornare `pavia.ts` fingendo che la misura sia già visibile nell'app. Rimangono da verificare le altre misure comunali e ATS, bonus regionali e avviso UI. **Pavia resta PARZIALE, non completo.**
