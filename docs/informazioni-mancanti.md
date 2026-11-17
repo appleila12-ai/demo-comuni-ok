@@ -109,7 +109,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Carpi | MO | Emilia-Romagna | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Carrara | MS | Toscana | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Carrara | MS | Toscana | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
-| Comune di Carrodano | SP | Liguria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-12 |
+| Comune di Carrodano | SP | Liguria | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-17 |
 | Comune di Casalecchio di Reno | BO | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Casalecchio di Reno | BO | Emilia-Romagna | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Casalecchio di Reno | BO | Emilia-Romagna | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
@@ -425,7 +425,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Rende | CS | Calabria | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Riccione | RN | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Riccione | RN | Emilia-Romagna | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
-| Comune di Riccò del Golfo di Spezia | SP | Liguria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-12 |
+| Comune di Riccò del Golfo di Spezia | SP | Liguria | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-17 |
 | Comune di Rieti | RI | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Rieti | RI | Lazio | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Rieti | RI | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
