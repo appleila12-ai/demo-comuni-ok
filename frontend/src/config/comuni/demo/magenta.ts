@@ -3,8 +3,9 @@ import { INPS_TERZA_FASE } from "../percorso";
 
 // Comune di Magenta (MI) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Dati presi dal sito ufficiale del Comune/ente (settembre 2026), da verificare.
-// Da verificare: indirizzo
+// Verifica 17/11/2026: https://comune.magenta.mi.it/amministrazione/unita-organizzativa/settore-dei-servizi-al-cittadino/ufficio-servizi-sociali/ (aggiornata 24/02/2026).
+// Front office: https://comune.magenta.mi.it/luogo/front-office-servizi-alla-persona-e-sale/ (aggiornata 20/01/2026).
+// Restano da verificare: ticket, bonus e completezza del percorso.
 export const magenta: ComuneConfig = {
   slug: "magenta",
   tipo: "comune",
@@ -21,8 +22,8 @@ export const magenta: ComuneConfig = {
   telefono: "02 9735438",
   email: "sociale@comune.magenta.mi.it",
   pec: "protocollo@pec.comune.magenta.mi.it",
-  orari: "Lun–Ven 9:00–12:30, Mar e Gio 15:30–17:30",
-  sitoWeb: "https://comune.magenta.mi.it/amministrazione/unita-organizzativa/settore-dei-servizi-al-cittadino/servizio-sociale-professionale/",
+  orari: "Ufficio Servizi Sociali solo su appuntamento. Front office: lun–ven 9:00–12:30; mar e gio anche 15:30–17:30. Orari indicativi, possono cambiare: conferma all’ufficio prima di andare.",
+  sitoWeb: "https://comune.magenta.mi.it/amministrazione/unita-organizzativa/settore-dei-servizi-al-cittadino/ufficio-servizi-sociali/",
 
   logo: null,
 
