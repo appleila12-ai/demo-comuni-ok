@@ -5,7 +5,8 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Verifica 17/11/2026: https://comune.magenta.mi.it/amministrazione/unita-organizzativa/settore-dei-servizi-al-cittadino/ufficio-servizi-sociali/ (aggiornata 24/02/2026).
 // Front office: https://comune.magenta.mi.it/luogo/front-office-servizi-alla-persona-e-sale/ (aggiornata 20/01/2026).
-// Restano da verificare: ticket, bonus e completezza del percorso.
+// Ticket: sportello virtuale esenzioni ASST verificato 17/11/2026: https://www.asst-ovestmi.it/attivita-scelta-e-revoca.
+// Restano da verificare: bonus, destinatario Scrivi al Comune e avviso visibile.
 export const magenta: ComuneConfig = {
   slug: "magenta",
   tipo: "comune",
@@ -50,16 +51,16 @@ export const magenta: ComuneConfig = {
     {
       icon: "medkit-outline",
       title: "ASST Ovest Milanese",
-      subtitle: "Esenzione ticket per patologia e invalidità, prenotazioni e distretti sanitari",
-      action: { type: "web", value: "https://www.asst-ovestmi.it" },
+      subtitle: "Richiesta e rinnovo esenzioni tramite sportello virtuale ASST Ovest Milanese",
+      action: { type: "web", value: "https://www.asst-ovestmi.it/attivita-scelta-e-revoca" },
     },
   ],
 
   trasporto: "Chiedi ai Servizi Sociali di Magenta (02 9735438) quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie).",
 
   esenzioneTicket: {
-    label: "ASST Ovest Milanese · Esenzioni ticket",
-    url: "https://www.asst-ovestmi.it",
+    label: "ASST Ovest Milanese · Richiesta e rinnovo esenzioni ticket",
+    url: "https://www.asst-ovestmi.it/attivita-scelta-e-revoca",
   },
 
   daVerificare: true,
