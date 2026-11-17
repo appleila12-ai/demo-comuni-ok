@@ -281,8 +281,9 @@ export default function AccessoComuni() {
     return (
       <Pagina salvabile={false} titolo={config.titolo} testID="accesso-comuni-login">
         <Intro>
-          Area riservata a {config.nome}. Qui si compila, in più sessioni, il modulo con i servizi del Comune e i percorsi
-          che il cittadino segue. Quello che scrivi non compare subito nell'app: TutelApp lo controlla prima.
+          Area riservata a {config.nome}. I dati già presenti in TutelApp sono stati riportati nel modulo: controllali e
+          correggi solo ciò che non è esatto. Aggiungi il resto, in più sessioni, insieme ai percorsi che il cittadino segue.
+          Quello che scrivi non compare subito nell'app: TutelApp lo controlla prima.
         </Intro>
         <Avviso>Non scrivere dati personali o sanitari di cittadini: il modulo serve solo per i dati degli uffici.</Avviso>
         <Text style={stili.etichetta}>Password del Comune</Text>

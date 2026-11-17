@@ -17,6 +17,9 @@ export type ComunePercorsi = {
   scheda: ComuneConfig;
   /** referente iniziale indicato nel progetto, da confermare con il Comune */
   referenteIniziale: string;
+  /** ambito sociale e capofila, solo se già scritti nel progetto o nella scheda */
+  ambito?: string;
+  capofila?: string;
   /** note per chi compila */
   nota?: string;
 };
@@ -28,6 +31,8 @@ export const COMUNI_PERCORSI: Record<string, ComunePercorsi> = {
     nome: "Comune di Mediglia",
     scheda: mediglia,
     referenteIniziale: "Dott.ssa Irene C. Pierdominici (da confermare)",
+    ambito: "Distretto Sociale Paullese",
+    capofila: "Peschiera Borromeo",
     nota: "Mediglia fa parte del Distretto Sociale Paullese, con Pantigliate, Paullo, Peschiera Borromeo (capofila) e Tribiano.",
   },
   sarzana: {
@@ -62,7 +67,32 @@ export function precompila(slug: string): DatiModulo {
     metti("comune", "sito", s.sitoWeb);
     metti("referenti", "operativo", p.referenteIniziale);
     if (s.responsabile) metti("referenti", "responsabile", s.responsabile);
+    metti("comune", "ambito", p.ambito);
+    metti("comune", "capofila", p.capofila);
     gruppi["comune"] = { stato: "da-verificare", fonte: FONTE_PRECOMPILATO, data: "", nota: "" };
+
+    // Servizi sociali: i recapiti generali della scheda già in app
+    metti("servizi-sociali", "ufficio", s.ente);
+    metti("servizi-sociali", "indirizzo", s.indirizzo);
+    metti("servizi-sociali", "telefono", s.telefono);
+    metti("servizi-sociali", "email", s.email);
+    metti("servizi-sociali", "orari", s.orari);
+    // Trasporto sociale: il testo già mostrato in app
+    metti("trasporto", "note", s.trasporto);
+    // Esenzione ticket: l'azienda sanitaria indicata in app
+    if (s.esenzioneTicket) {
+      metti("esenzioni", "ufficio", s.esenzioneTicket.label);
+      metti("esenzioni", "note", s.esenzioneTicket.url ? `Pagina indicata in app: ${s.esenzioneTicket.url}` : "");
+    }
+    // Altri punti di supporto: l'elenco già mostrato in app, una riga per voce
+    const punti = (s.puntiSupporto ?? [])
+      .map((x) => `${x.title}${x.subtitle ? " – " + x.subtitle : ""}`)
+      .join("\n");
+    metti("supporto", "note", punti);
+    for (const sezione of ["servizi-sociali", "trasporto", "esenzioni", "supporto"]) {
+      const ha = Object.keys(campi).some((k) => k.startsWith(sezione + "."));
+      if (ha) gruppi[sezione] = { stato: "da-verificare", fonte: FONTE_PRECOMPILATO, data: "", nota: "" };
+    }
     if (campi[idCampoSezione("referenti", "operativo")] || campi[idCampoSezione("referenti", "responsabile")]) {
       gruppi["referenti"] = { stato: "da-verificare", fonte: FONTE_PRECOMPILATO, data: "", nota: "" };
     }
@@ -70,4 +100,3 @@ export function precompila(slug: string): DatiModulo {
   return { versione: 0, campi, gruppi };
 }
 
-// Ricostruzione anteprima 17/11/2026: variabili PERCORSI_* impostate su Netlify.
