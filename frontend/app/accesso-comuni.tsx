@@ -388,6 +388,11 @@ export default function AccessoComuni() {
         un'altra sessione. L'app pubblica non cambia da sola.
       </Intro>
       <ScriviciQuandoPronti comune={config.nome} />
+      <Avviso>
+        Da dove iniziare. Non serve compilare tutto e potete farlo poco alla volta, anche in giorni diversi. Partite da tre
+        cose: 1) controllare «Dati del Comune» e «Referenti»; 2) controllare «Servizi sociali»; 3) descrivere un solo
+        percorso, «Dopo una diagnosi: primi passi». Il resto è facoltativo e lo completiamo insieme.
+      </Avviso>
       {ruolo === "admin" && (
         <Avviso>
           Accesso TutelApp. Comune aperto: {config.nome}.{" "}
