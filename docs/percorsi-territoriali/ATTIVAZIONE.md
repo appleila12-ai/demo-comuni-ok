@@ -2,14 +2,10 @@
 
 Stato: PR in bozza, **non attiva**. Nulla è in produzione finché non scrivi «pubblica».
 
-## 1. Libreria di salvataggio (una volta, dal tuo computer o da GitHub Codespaces)
+## 1. Libreria di salvataggio
 
-Sul ramo `percorsi-territoriali-claude`, dentro la cartella `frontend`:
-
-    yarn add @netlify/blobs
-
-Il comando aggiorna `package.json` e `yarn.lock`. Poi si fa il commit e il push dei due file. Senza questo passo
-l'anteprima di Netlify non riesce a costruire la funzione (manca la libreria).
+Già dichiarata in `frontend/package.json` (`@netlify/blobs`, versione `latest`): Netlify la installa da solo a ogni build,
+non serve il terminale. Più avanti, per fissare la versione e aggiornare `yarn.lock`, da `frontend`: `yarn add @netlify/blobs`.
 
 ## 2. Impostazioni segrete in Netlify (mai nel repository, mai in email)
 

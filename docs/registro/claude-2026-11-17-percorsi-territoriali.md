@@ -9,6 +9,7 @@
 
 | Archivio | Voce | Azione | Fonte | Stato |
 |---|---|---|---|---|
+| frontend/package.json | aggiunta la dipendenza `@netlify/blobs` (una riga) | modifica | - | da provare in anteprima |
 | netlify.toml, frontend/netlify.toml | cartella delle funzioni, intestazioni noindex e no-store per /accesso-comuni | aggiunta | - | da provare in anteprima |
 | frontend/netlify/functions/percorsi.mjs | accesso con password per Comune, gettone firmato, salvataggio con storico (Netlify Blobs) | nuovo | - | logica provata con archivio simulato |
 | frontend/src/percorsi/ | schema del modulo (22 sezioni, 4 percorsi), configurazioni Mediglia e Sarzana | nuovo | scheda pubblicata del Comune | da provare in anteprima |
@@ -26,7 +27,7 @@ Nessun dato di Comuni, bonus o destinatari modificato (Lombardia è in quota Cha
 
 ## Cosa manca
 
-1. `yarn add @netlify/blobs` in `frontend` (aggiorna `yarn.lock`), da lanciare a mano.
+1. Libreria `@netlify/blobs` dichiarata come `latest` in `frontend/package.json` (installata da Netlify a ogni build): da fissare in seguito con `yarn add` per aggiornare `yarn.lock`.
 2. Le quattro variabili segrete su Netlify (`docs/percorsi-territoriali/ATTIVAZIONE.md`).
 3. Prova dell'anteprima con password di prova su computer e telefono, controllo di accessibilità e stampa.
 4. Dove Netlify conserva i dati e accordo sul trattamento dei dati.
