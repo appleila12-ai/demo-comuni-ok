@@ -8,7 +8,11 @@ import { percorso } from "../percorso";
 // 18/11/2026: link ticket sostituito con pagina istituzionale Regione Veneto, aggiornata 20/05/2026.
 // Fonte: https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni
 // Sportello ULSS 6 online: https://www.aulss6.veneto.it/index.cfm?action=mys.apridoc&iddoc=5659
-// Da fare: email, PEC e orari dei Servizi Sociali; bonus regionali e comunali/Ambito, destinatario, associazioni e verifica avviso UI.
+// 18/11/2026: CST 1 e 3 da pagine Comune aggiornate 19/02/2026; CST 4 pagina Comune senza data di aggiornamento rilevata.
+// Fonti CST: https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-1-centro-del-comune-di-padova
+// https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-3-est-del-comune-di-padova
+// https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-4-sud-est-del-comune-di-padova
+// Da fare: CST 2 e 5, email/PEC generiche e orari del Settore; bonus regionali e comunali/Ambito, destinatario, associazioni e verifica avviso UI.
 export const padova: ComuneConfig = {
   slug: "padova",
   tipo: "comune",
@@ -43,6 +47,24 @@ export const padova: ComuneConfig = {
       title: "Servizi Sociali del Comune",
       subtitle: "Ufficio informazioni: 049 8205933 · Via del Carmine 13",
       action: { type: "tel", value: "0498205933" },
+    },
+    {
+      icon: "people-outline",
+      title: "CST 1 Centro · Padova",
+      subtitle: "Sede temporanea: Via Boccaccio 80 · 049 8205982 · su appuntamento",
+      action: { type: "web", value: "https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-1-centro-del-comune-di-padova" },
+    },
+    {
+      icon: "people-outline",
+      title: "CST 3 Est · Padova",
+      subtitle: "Via Boccaccio 80 · 049 8204223 · su appuntamento",
+      action: { type: "web", value: "https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-3-est-del-comune-di-padova" },
+    },
+    {
+      icon: "people-outline",
+      title: "CST 4 Sud Est · Padova",
+      subtitle: "Via Piovese 74, ingresso Via Vecchia 3/d · 049 8205061 · su appuntamento",
+      action: { type: "web", value: "https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-4-sud-est-del-comune-di-padova" },
     },
     {
       icon: "medkit-outline",
