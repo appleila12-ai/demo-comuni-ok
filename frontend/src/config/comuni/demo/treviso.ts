@@ -13,7 +13,11 @@ import { percorso } from "../percorso";
 // Fonte: https://www.comune.treviso.it/myportal/C_L407/api/content/download?id=682d69c922c6d2008bfb0e9a
 // ULSS 2: richiesta esenzione per patologia online con SPID/CIE o presso sportelli distrettuali;
 // fonte aggiornata 28/03/2024: https://www.aulss2.veneto.it/Richiedere-lesenzione-per-patologia
-// Esenzione per invalidità civile non equiparata alla procedura INAIL; ticket e sportello locale da completare.
+// ULSS 2, esenzione invalidità civile: pagina aggiornata 03/02/2026, consultata 18/11/2026.
+// https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile
+// Richiesta con verbale tramite SPID/CIE oppure sportelli amministrativi distrettuali;
+// distinta dalla procedura per patologia e dalle esenzioni per invalidità sul lavoro.
+// Sportello locale competente da verificare.
 // Scheda PARZIALE: bonus regionali/comunali/Ambito, destinatario Scrivi al Comune, avviso UI.
 export const treviso: ComuneConfig = {
   slug: "treviso",
@@ -58,9 +62,9 @@ export const treviso: ComuneConfig = {
     },
     {
       icon: "medkit-outline",
-      title: "ULSS 2 Marca Trevigiana",
-      subtitle: "Esenzione ticket per patologia e invalidità, prenotazioni e distretti sanitari",
-      action: { type: "web", value: "https://www.aulss2.veneto.it" },
+      title: "ULSS 2 · Esenzione per invalidità civile",
+      subtitle: "Richiesta con verbale di invalidità civile, online con SPID/CIE oppure agli sportelli distrettuali",
+      action: { type: "web", value: "https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile" },
     },
   ],
 
