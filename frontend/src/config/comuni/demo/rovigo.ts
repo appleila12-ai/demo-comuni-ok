@@ -5,6 +5,9 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Verificato solo il sito del Comune (link ufficiale). Home del sito del Comune: la pagina dei servizi sociali va cercata e confermata (controllato il 14 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
 // Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Fonte regionale ticket/esenzioni: Regione Veneto, aggiornamento 20/05/2026, consultazione archivio #335 (17/11/2026), riuso 18/11/2026.
+// https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni
+// La procedura e lo sportello fisico specifici dell'ULSS locale restano da verificare; scheda PARZIALE.
 export const rovigo: ComuneConfig = {
   slug: "rovigo",
   tipo: "comune",
@@ -53,7 +56,7 @@ export const rovigo: ComuneConfig = {
 
   esenzioneTicket: {
     label: "ULSS 5 Polesana · Esenzioni ticket",
-    url: "https://www.aulss5.veneto.it",
+    url: "https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni",
   },
 
   daVerificare: true,
