@@ -12,7 +12,11 @@ import { percorso } from "../percorso";
 // Fonti CST: https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-1-centro-del-comune-di-padova
 // https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-3-est-del-comune-di-padova
 // https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-4-sud-est-del-comune-di-padova
-// Da fare: CST 2 e 5, email/PEC generiche e orari del Settore; bonus regionali e comunali/Ambito, destinatario, associazioni e verifica avviso UI.
+// 18/11/2026: CST 2 (pagina aggiornata 19/02/2026), CST 5 (data aggiornamento non indicata nella lettura), CST 6 (19/02/2026), tutti da Comune di Padova.
+// Fonti: https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-2-nord-del-comune-di-padova
+// https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-5-sud-ovest-del-comune-di-padova
+// https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-6-ovest-del-comune-di-padova
+// Da fare: email/PEC generiche e orari del Settore; bonus regionali e comunali/Ambito, destinatario, associazioni e verifica avviso UI.
 export const padova: ComuneConfig = {
   slug: "padova",
   tipo: "comune",
@@ -65,6 +69,24 @@ export const padova: ComuneConfig = {
       title: "CST 4 Sud Est · Padova",
       subtitle: "Via Piovese 74, ingresso Via Vecchia 3/d · 049 8205061 · su appuntamento",
       action: { type: "web", value: "https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-4-sud-est-del-comune-di-padova" },
+    },
+    {
+      icon: "people-outline",
+      title: "CST 2 Nord · Padova",
+      subtitle: "Viale dell'Arcella 23 · 049 8206720 · su appuntamento",
+      action: { type: "web", value: "https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-2-nord-del-comune-di-padova" },
+    },
+    {
+      icon: "people-outline",
+      title: "CST 5 Sud Ovest · Padova",
+      subtitle: "Sede temporanea: Via Boccaccio 80 · 049 8205982 · su appuntamento",
+      action: { type: "web", value: "https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-5-sud-ovest-del-comune-di-padova" },
+    },
+    {
+      icon: "people-outline",
+      title: "CST 6 Ovest · Padova",
+      subtitle: "Via Dal Piaz 3 · 049 8205064 · su appuntamento",
+      action: { type: "web", value: "https://padovaper.comune.padova.it/servizi/assistenza-e-protezione/centro-servizi-territoriali-cst-6-ovest-del-comune-di-padova" },
     },
     {
       icon: "medkit-outline",
