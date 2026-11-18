@@ -1594,11 +1594,6 @@
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
-    },
-    "esenzione-ticket": {
-      "dal": "2026-11-13",
-      "chiesto": "URP dell'azienda sanitaria",
-      "stato": "da chiedere"
     }
   },
   "lanusei": {
@@ -3143,13 +3138,6 @@
     "servizi-sociali": {
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    }
-  },
-  "collecchio": {
-    "esenzione-ticket": {
-      "dal": "2026-11-13",
-      "chiesto": "URP dell'azienda sanitaria",
       "stato": "da chiedere"
     }
   },
