@@ -1618,3 +1618,32 @@ ESENZIONE_ASL.piacenza = {
   fonte:
     "AUSL di Piacenza · risposta dell'URP del 16/11/2026, pagina «Esenzione per patologia» (aggiornata il 15/04/2025) e pagina Sportello unico di Piazzale Milano (aggiornata il 21/08/2026), controllate il 16/11/2026",
 };
+
+// AUSL di Parma, Distretto Sud-Est: risposta scritta dell'URP del 18/11/2026 (Collecchio, Langhirano, Traversetolo).
+const AUSL_PARMA_SUDEST: SchedaEsenzioneAsl = {
+  asl: "AUSL di Parma · Distretto Sud-Est",
+  intro:
+    "L'URP del Distretto Sud-Est indica come chiedere l'esenzione per patologia e per invalidità agli Sportelli unici–CUP di Collecchio, Langhirano e Traversetolo.",
+  titoloPassi: "Come si fa",
+  comeSiPresenta: [
+    "Allo Sportello unico–CUP di Collecchio, Langhirano o Traversetolo: non serve l'appuntamento, l'accesso è libero",
+    "Oppure per posta elettronica all'indirizzo indicato qui sotto: l'ufficio riceve anche da e-mail non PEC",
+    "La risposta via e-mail arriva entro 30 giorni",
+  ],
+  documenti: [
+    "Per l'esenzione per patologia: un documento d'identità e la copia di uno di questi documenti",
+    "Un certificato recente con la diagnosi e il codice della patologia cronica, rilasciato da un medico specialista di una struttura pubblica",
+    "Oppure la cartella clinica di una struttura ospedaliera pubblica, oppure il verbale di invalidità",
+    "Oppure la cartella clinica di una struttura ospedaliera privata accreditata, previa valutazione del medico del Distretto sanitario dell'Azienda sanitaria locale di residenza",
+    "Oppure i certificati delle Commissioni mediche degli Ospedali militari, oppure le certificazioni di Istituzioni sanitarie pubbliche di Paesi dell'Unione europea",
+    "Per l'esenzione per invalidità: un documento d'identità e la copia del verbale rilasciato dalla commissione medica competente",
+  ],
+  pec: "autocertificazionisudest@pec.ausl.pr.it",
+  telefoni: [{ etichetta: "URP Distretto Sud-Est (Langhirano)", numero: "0521 865324" }],
+  paginaUrl: "https://www.ausl.pr.it/servizi_online/esenzioni/default.aspx",
+  paginaLabel: "Esenzioni · AUSL di Parma",
+  manca:
+    "L'URP non ha indicato gli orari degli sportelli né il modulo ufficiale. Per gli orari chiedi all'URP, tel. 0521 865324.",
+  fonte: "AUSL di Parma · risposta scritta dell'URP del Distretto Sud-Est del 18/11/2026",
+};
+for (const slug of ["collecchio", "langhirano", "traversetolo"]) ESENZIONE_ASL[slug] = AUSL_PARMA_SUDEST;

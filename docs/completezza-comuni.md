@@ -5,7 +5,7 @@ Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
 Comuni con scheda: 424 · completi: 292 · incompleti: 132
 
-Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi sociali (recapiti) 77 · bonus regionali 4
+Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi sociali (recapiti) 71 · bonus regionali 4
 
 ## Completi
 
@@ -387,20 +387,20 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 | Comune di Verbania | VB | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Vercelli | VC | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Altamura | BA | Puglia | servizi sociali (recapiti), bonus comunali |
-| Comune di Andria | BT | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
+| Comune di Andria | BT | Puglia | bonus comunali, esenzione ticket |
 | Comune di Bari | BA | Puglia | servizi sociali (recapiti), bonus comunali |
-| Comune di Barletta | BT | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
+| Comune di Barletta | BT | Puglia | bonus comunali, esenzione ticket |
 | Comune di Bisceglie | BT | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Bitonto | BA | Puglia | servizi sociali (recapiti), bonus comunali |
 | Comune di Brindisi | BR | Puglia | bonus comunali, esenzione ticket |
 | Comune di Cerignola | FG | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Corato | BA | Puglia | servizi sociali (recapiti), bonus comunali |
 | Comune di Fasano | BR | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Foggia | FG | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
+| Comune di Foggia | FG | Puglia | bonus comunali, esenzione ticket |
 | Comune di Francavilla Fontana | BR | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Gravina in Puglia | BA | Puglia | servizi sociali (recapiti), bonus comunali |
 | Comune di Grottaglie | TA | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Lecce | LE | Puglia | servizi sociali (recapiti), bonus comunali |
+| Comune di Lecce | LE | Puglia | bonus comunali |
 | Comune di Lucera | FG | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Manduria | TA | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Manfredonia | FG | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
@@ -413,8 +413,8 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 | Comune di Nardò | LE | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di Ostuni | BR | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
 | Comune di San Severo | FG | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Taranto | TA | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Trani | BT | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
+| Comune di Taranto | TA | Puglia | bonus comunali, esenzione ticket |
+| Comune di Trani | BT | Puglia | bonus comunali, esenzione ticket |
 | Comune di Bolzano | BZ | Trentino-Alto Adige | servizi sociali (recapiti), bonus regionali, esenzione ticket |
 | Comune di Merano | BZ | Trentino-Alto Adige | servizi sociali (recapiti), bonus regionali, esenzione ticket |
 | Comune di Rovereto | TN | Trentino-Alto Adige | bonus regionali, esenzione ticket |
