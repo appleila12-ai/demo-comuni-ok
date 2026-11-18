@@ -58,7 +58,7 @@ export const verona: ComuneConfig = {
 
   esenzioneTicket: {
     label: "ULSS 9 Scaligera · Esenzioni ticket",
-    url: "https://www.aulss9.veneto.it",
+    url: "https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni",
   },
 
   daVerificare: true,
