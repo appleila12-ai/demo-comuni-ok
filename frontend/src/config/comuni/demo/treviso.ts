@@ -17,7 +17,7 @@ import { percorso } from "../percorso";
 // https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile
 // Richiesta con verbale tramite SPID/CIE oppure sportelli amministrativi distrettuali;
 // distinta dalla procedura per patologia e dalle esenzioni per invalidità sul lavoro.
-// Sportello locale competente da verificare.
+// Sportello amministrativo Treviso verificato su pagina ULSS 2 aggiornata 27/05/2026, consultata 18/11/2026.\n// https://www.aulss2.veneto.it/Sportelli-Amministrativi-di-Distretto-Treviso-Sud
 // Scheda PARZIALE: bonus regionali/comunali/Ambito, destinatario Scrivi al Comune, avviso UI.
 export const treviso: ComuneConfig = {
   slug: "treviso",
@@ -59,6 +59,12 @@ export const treviso: ComuneConfig = {
       title: "Sportello Famiglia Treviso",
       subtitle: "Portale informativo con servizi sociali, sostegni e contatti per le famiglie del territorio trevigiano",
       action: { type: "web", value: "https://www.sportellofamiglia.tv.it/" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "ULSS 2 · Sportello amministrativo Treviso",
+      subtitle: "Borgo Cavalli 42, piano 0 · Tel. 0422 323328 · Lun–Ven 11:00–13:00 solo su prenotazione. Registra esenzioni per patologia e reddito.",
+      action: { type: "tel", value: "0422323328" },
     },
     {
       icon: "medkit-outline",
