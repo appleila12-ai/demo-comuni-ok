@@ -5,7 +5,10 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Home del sito del Comune, controllata il 13 ottobre 2026; la pagina dei servizi sociali va cercata e confermata.
 // 16 ottobre 2026: indirizzo e telefono del Settore Servizi Sociali letti sulla scheda del Comune (aggiornata il 13/02/2026). Email non leggibile, PEC e orari del Settore non indicati.
-// Da fare: email, PEC e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// 18/11/2026: link ticket sostituito con pagina istituzionale Regione Veneto, aggiornata 20/05/2026.
+// Fonte: https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni
+// Sportello ULSS 6 online: https://www.aulss6.veneto.it/index.cfm?action=mys.apridoc&iddoc=5659
+// Da fare: email, PEC e orari dei Servizi Sociali; bonus regionali e comunali/Ambito, destinatario, associazioni e verifica avviso UI.
 export const padova: ComuneConfig = {
   slug: "padova",
   tipo: "comune",
@@ -44,8 +47,8 @@ export const padova: ComuneConfig = {
     {
       icon: "medkit-outline",
       title: "ULSS 6 Euganea",
-      subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
-      action: { type: "web", value: "https://www.aulss6.veneto.it" },
+      subtitle: "Sportello online per richieste amministrative ed esenzioni previste dalla ULSS",
+      action: { type: "web", value: "https://www.aulss6.veneto.it/index.cfm?action=mys.apridoc&iddoc=5659" },
     },
   ],
 
@@ -54,7 +57,7 @@ export const padova: ComuneConfig = {
 
   esenzioneTicket: {
     label: "ULSS 6 Euganea · Esenzioni ticket",
-    url: "https://www.aulss6.veneto.it",
+    url: "https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni",
   },
 
   daVerificare: true,
