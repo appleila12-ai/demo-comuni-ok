@@ -651,6 +651,31 @@ ESENZIONE_ASL.lodi = {
     "ASST di Lodi · risposta scritta del Distretto Alto Lodigiano del 30/10/2026 · pagina «Scelta e revoca» (senza data di aggiornamento, controllata il 05/11/2026) · Regione Lombardia, pagina «Ticket ed esenzioni»",
 };
 
+// ASST Cremona: risposta scritta dell'Ufficio di Pubblica Tutela (18/11/2026).
+ESENZIONE_ASL.cremona = {
+  asl: "ASST Cremona",
+  intro:
+    "L'Ufficio di Pubblica Tutela dell'ASST Cremona indica la pagina della Regione Lombardia, valida per tutte le ASST lombarde, e come sportelli di riferimento gli Uffici di Scelta e Revoca. Secondo la Regione Lombardia, chi ha una patologia cronica presenta la richiesta agli sportelli territoriali «Scelta e Revoca» della ASST.",
+  titoloPassi: "Dove si presenta",
+  comeSiPresenta: [
+    "Agli Uffici di Scelta e Revoca dell'ASST Cremona (contatti sulla pagina dell'ASST)",
+  ],
+  documenti: [
+    "Tessera sanitaria",
+    "Certificazione rilasciata da un medico specialista di una struttura pubblica o privata accreditata",
+  ],
+  telefoni: [],
+  paginaUrl: "https://www.regione.lombardia.it/sanita/ticket-ed-esenzioni/ticket-esenzioni-prestazioni-ssr",
+  paginaLabel: "Ticket ed esenzioni · Regione Lombardia",
+  altriLink: [
+    { label: "Scelta e revoca · ASST Cremona", url: "https://www.asst-cremona.it/strutture/scelta-e-revoca" },
+  ],
+  manca:
+    "Non è indicato se si può inviare la richiesta per e-mail o PEC, se serve l'appuntamento né i tempi di rilascio: chiedili allo sportello. Abbiamo scritto all'ASST per saperlo.",
+  fonte:
+    "ASST Cremona · risposta scritta dell'Ufficio di Pubblica Tutela del 18/11/2026 · Regione Lombardia, pagina «Ticket ed esenzioni» (controllata il 18/11/2026)",
+};
+
 // Azienda ULSS 2 Marca Trevigiana: risposta scritta dell'URP (29/10/2026).
 const ULSS2_TREVISO: SchedaEsenzioneAsl = {
   asl: "Azienda ULSS 2 Marca Trevigiana",
