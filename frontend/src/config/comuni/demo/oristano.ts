@@ -46,6 +46,12 @@ export const oristano: ComuneConfig = {
       subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
       action: { type: "web", value: "https://www.asloristano.it" },
     },
+    {
+      icon: "people-outline",
+      title: "PLUS - Ambito di Oristano",
+      subtitle: "Casella generale dell'Ambito: plus.oristano@comune.oristano.it · 0783 791230 · via Eleonora d'Arborea 44. È l'Ufficio PLUS, distinto dallo sportello sociale comunale. Fonte: pagina Contatti PLUS, aggiornata il 16/03/2023, letta il 17/11/2026.",
+      action: { type: "web", value: "https://plus.comune.oristano.it/it/utilita/contatti/index.html" },
+    },
   ],
 
   trasporto:
@@ -61,4 +67,4 @@ export const oristano: ComuneConfig = {
 };
 
 // Passi 4 e 5: servizi sociali già in scheda con fonte (lotto 18, 02/11/2026). Passi 1-3 vuoti: nessun recapito verificato.
-oristano.percorsoTerritorio = percorso(oristano.puntiSupporto, [0]);
+oristano.percorsoTerritorio = percorso(oristano.puntiSupporto, [0, 2]);
