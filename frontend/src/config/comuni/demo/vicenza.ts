@@ -6,7 +6,8 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // 18/11/2026: sede e recapiti della Segreteria Servizi Sociali verificati sul sito comunale.
 // Fonte: https://www.comune.vicenza.it/Vivere-il-Comune/Luoghi/Sede-Servizi-Sociali (orari validi dal 01/03/2024).
-// Da fare: bonus regionali e comunali/Ambito, procedura ULSS locale, destinatario Scrivi al Comune, avviso UI, associazioni.
+// CSST Centro Nord e Sud Est: pagine comunali consultate il 18/11/2026 (URL nei puntiSupporto).
+// Da fare: altri CSST, bonus regionali e comunali/Ambito, procedura ULSS locale, destinatario Scrivi al Comune, avviso UI, associazioni.
 // Fonte regionale ticket/esenzioni: Regione Veneto, aggiornamento 20/05/2026, consultazione archivio #335 (17/11/2026), riuso 18/11/2026.
 // https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni
 // La procedura e lo sportello fisico specifici dell'ULSS locale restano da verificare; scheda PARZIALE.
@@ -45,7 +46,19 @@ export const vicenza: ComuneConfig = {
       subtitle: "Segreteria · Contrà Giovanni Busato 19 · 0444 222520",
       action: { type: "tel", value: "0444222520" },
     },
-  ],
+
+    {
+      icon: "people-outline",
+      title: "Centro servizi sociali territoriali Centro Nord",
+      subtitle: "Via Antonio Turra 70 · 0444 222940 · ex circoscrizioni 1, 4, 5",
+      action: { type: "web", value: "https://www.comune.vicenza.it/Vivere-il-Comune/Luoghi/Centro-servizi-sociali-territoriali-Centro-Nord" },
+    },
+    {
+      icon: "people-outline",
+      title: "Centro servizi sociali territoriali Sud Est",
+      subtitle: "Via Adolfo Giuriato 72 · 0444 222930 · ex circoscrizioni 2, 3",
+      action: { type: "web", value: "https://www.comune.vicenza.it/Vivere-il-Comune/Luoghi/Centro-servizi-sociali-territoriali-Sud-Est/%28has_related_services%29/4" },
+    },  ],
 
   trasporto:
     "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
