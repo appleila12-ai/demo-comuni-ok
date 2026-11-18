@@ -8,7 +8,7 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Esenzione ticket per patologia ULSS 2, aggiornamento 28/03/2024.
 // https://www.aulss2.veneto.it/Richiedere-lesenzione-per-patologia
 // Esenzione per invalidità civile ULSS 2: https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile
-// Scheda parziale: bonus regionali, bonus comunali/Ambito e destinatario Scrivi al Comune da verificare; avviso UI da controllare.
+// Bonus acqua Piave Servizi 2026: pubblicazione 27/10/2026, aggiornamento 28/10/2026, verificato 19/11/2026.\n// https://www.comune.vittorio-veneto.tv.it/notizie/bonusacqua.html\n// Scheda parziale: altri bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare; avviso UI da controllare.
 export const vittorioVeneto: ComuneConfig = {
   slug: "vittorio-veneto",
   tipo: "comune",
@@ -43,6 +43,12 @@ export const vittorioVeneto: ComuneConfig = {
       title: "Servizi Sociali del Comune",
       subtitle: "Via Giosuè Carducci 28 · Tel. 0438 569305 · Lun, Mar, Gio, Ven 9:00–12:45; Gio 15:00–17:30",
       action: { type: "tel", value: "0438569305" },
+    },
+    {
+      icon: "water-outline",
+      title: "Bonus acqua Piave Servizi 2026",
+      subtitle: "Per famiglie residenti con ISEE fino a 16.000 euro e utenza idrica domestica. Domanda entro il 30/11/2026 ai Servizi Sociali, via Carducci 28 (lun, mar, gio, ven 9:00–12:45; gio 15:00–17:45). Tel. 0438 569318. Servono modulo, ISEE, documento e ultima bolletta.",
+      action: { type: "web", value: "https://www.comune.vittorio-veneto.tv.it/notizie/bonusacqua.html" },
     },
     {
       icon: "medkit-outline",
