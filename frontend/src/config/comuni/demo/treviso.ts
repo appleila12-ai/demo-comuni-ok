@@ -6,6 +6,9 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Dati presi dal sito ufficiale del Comune/ente (settembre 2026), da verificare.
 // Da verificare: indirizzo, telefono, email, orari, responsabile
+// Fonte regionale ticket/esenzioni: Regione Veneto, aggiornamento 20/05/2026, consultazione archivio #335 (17/11/2026), riuso 18/11/2026.
+// https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni
+// La procedura e lo sportello fisico specifici dell'ULSS locale restano da verificare; scheda PARZIALE.
 export const treviso: ComuneConfig = {
   slug: "treviso",
   tipo: "comune",
@@ -59,7 +62,7 @@ export const treviso: ComuneConfig = {
 
   esenzioneTicket: {
     label: "ULSS 2 Marca Trevigiana · Esenzioni ticket",
-    url: "https://www.aulss2.veneto.it",
+    url: "https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni",
   },
 
   daVerificare: true,
