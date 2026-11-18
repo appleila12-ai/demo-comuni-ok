@@ -6,7 +6,7 @@ const path = require("path");
 // Schermate che non si cercano: tecniche, riservate al team o pagine di rinvio.
 const ESCLUSE = new Set([
   "+html", "_layout", "index", "[comune]", "cittadino", "contatti",
-  "cruscotto", "sentinella", "test-pdf", "per-i-comuni", "risultati",
+  "cruscotto", "sentinella", "test-pdf", "per-i-comuni", "risultati", "accesso-comuni",
 ]);
 
 const radice = path.join(__dirname, "..");

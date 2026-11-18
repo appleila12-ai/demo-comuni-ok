@@ -145,7 +145,7 @@ export const BONUS: Bonus[] = [
       url: "https://www.regione.liguria.it/homepage-attivita-istituzionale/trasparenza/amministrazione-trasparente/beni-immobili-e-gestione-patrimonio/patrimonio-immobiliare/publiccompetition/4683%3Acontributi-acquisto-ausili-sportivi-2026.html",
     },
     verificatoIl: "10/11/2026",
-    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: la Regione non ha pubblicato la chiusura né i fondi residui. Prima di preparare la domanda chiedi conferma alla Consulta regionale (consulta@regione.liguria.it, 010 5484892, via Fieschi 15, Genova).",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: la Regione non ha pubblicato la chiusura né i fondi residui. Prima di preparare la domanda chiedi conferma alla Consulta regionale (consulta@regione.liguria.it, 010 5484892, via Fieschi 15, Genova). Se i fondi sono in esaurimento, la segreteria della Consulta può inserirti nella sua lista e contattarti quando esce il prossimo bando (risposta della Consulta del 10 e 11/11/2026).",
   },
   {
     id: "la-spezia-gravissima-disabilita",
@@ -310,9 +310,9 @@ export const BONUS: Bonus[] = [
     titolo: "Contributi per l'affitto (Fondo sociale affitti 2026)",
     perChi: "Residenti a Luni che pagano un affitto, secondo il bando del Comune (Legge 431/1998, art. 11).",
     cosa: "Un contributo per le spese di affitto. Importi e requisiti sono nel bando e nel modulo di domanda sul sito del Comune.",
-    stato: "aperto",
+    stato: "chiuso",
     scade: "2026-11-12",
-    quando: "Domande dal 12/10/2026 alle ore 12:00 del 12/11/2026.",
+    quando: "Domande dal 12/10/2026 alle ore 12:00 del 12/11/2026. Termine scaduto.",
     comeSiChiede:
       "Si presenta il modulo di domanda allegato al bando, pubblicato sul sito del Comune insieme alla scheda di monitoraggio. Per informazioni: Servizio 6 – Servizi socio-educativi, tel. 0187 690111.",
     fonte: {
@@ -457,16 +457,17 @@ export const BONUS: Bonus[] = [
       "Caregiver familiari di persone con disabilità grave (art. 3, comma 3, legge 104/1992) o gravissima (D.M. 26 settembre 2016). Il Comune precisa che il riconoscimento deve riferirsi al 2022: sono esclusi i riconoscimenti successivi. Ci sono regole anche per chi assiste più persone e per persone assistite decedute dopo il periodo di riferimento: leggi l'avviso.",
     cosa:
       "Contributo economico una tantum a sostegno del ruolo di cura (annualità FNA 2022). L'importo non è fissato nell'avviso: dipende dalle risorse e dalle domande presentate.",
-    stato: "aperto",
-    quando: "Domande entro l'11/11/2026, ore 23:59.",
+    stato: "scaduto",
+    scade: "2026-11-11",
+    quando: "Domande dalle 8:00 del 27/10/2026 alle 23:59 dell'11/11/2026: il portale è chiuso.",
     comeSiChiede:
       "La domanda va al Comune di residenza della persona assistita, online con SPID o CIE sul portale sociale del Comune di Palermo (trovi il link nell'avviso).",
     fonte: {
       label: "Comune di Palermo · Avviso pubblico Bonus caregiver (pagina del 03/11/2026)",
       url: "https://www.comune.palermo.it/novita/avviso-pubblico-bonus-caregiver-contributo-economico-una-tantum-per-il-sostegno-del-ruolo-di-cura-e-di-assistenza-dei-caregiver-familiari-di-persone-con-disabilit-grave-e-persone-con-disabilit-gravi/",
     },
-    verificatoIl: "10/11/2026",
-    nota: "Scade l'11/11/2026. Controlla i requisiti sull'avviso ufficiale prima di presentare la domanda.",
+    verificatoIl: "12/11/2026",
+    nota: "Il termine è scaduto l'11/11/2026. Nelle pagine del Comune non risulta una proroga: se ne esce una, la pagina dell'avviso la riporta. Chiedi conferma ai Servizi sociali del Comune di Palermo.",
   },
 
   // ---------------------------------------------------------------- LOMBARDIA
@@ -478,17 +479,17 @@ export const BONUS: Bonus[] = [
       "Persone con disabilità con necessità di sostegno intensivo molto elevato e anziani non autosufficienti con alto bisogno assistenziale, residenti in Lombardia e assistiti a casa. Servono l'indennità di accompagnamento (o la non autosufficienza riconosciuta) e un ISEE sociosanitario fino a 50.000 euro (ISEE ordinario fino a 65.000 euro per i minori). La condizione va attestata da un medico specialista.",
     cosa:
       "Misura Sostegno: contributo mensile da 565 a 1.300 euro, secondo la situazione (per esempio 565 euro con il solo caregiver familiare, 900 euro con un assistente regolarmente assunto da 10 ore a settimana, 1.200 euro a tempo pieno). Assegno di autonomia: fino a 800 euro al mese per chi ha un assistente personale e non ha un caregiver familiare. Misura Servizi: interventi sociali e voucher sociosanitari, senza importi scritti nella fonte.",
-    stato: "da-verificare",
+    stato: "attivo",
     quando:
-      "Le nuove domande alle ASST erano aperte dal 22 giugno al 31 ottobre 2026 (chiuse). Chi è già in carico non deve ripresentare la domanda e prosegue fino al 31 dicembre 2026.",
+      "Le nuove domande alle ASST erano aperte dal 22 giugno al 31 ottobre 2026 (chiuse). Chi è già in carico non deve ripresentare la domanda e prosegue fino al 31 dicembre 2026, se restano i requisiti. Sulla pagina della Regione non risultano proroghe.",
     comeSiChiede:
       "Si presenta l'istanza di valutazione alla propria ASST, con le sue modalità. Per informazioni: ATS e ASST di competenza o lo Spazio Disabilità di Regione Lombardia (sportello informativo gratuito).",
     fonte: {
       label: "Regione Lombardia · Misura Sostegno (ex B1)",
       url: "https://www.regione.lombardia.it/politiche-sociali-e-abitative/disabilita/politiche-e-misure-per-la-disabilita/sostegno-per-la-disabilit--gravissima-misura-sostegno",
     },
-    verificatoIl: "30/10/2026",
-    nota: "Chi rientra tra gli ex \"gravi\" (ex Misura B2) ha un ISEE sociosanitario fino a 25.000 euro (ISEE ordinario fino a 40.000 euro per i minorenni) e presenta la domanda all'Ambito territoriale sociale, con date proprie. Gli importi vengono dalla pagina di Lombardia Facile dedicata alla DGR 6320 del 15/06/2026; la pagina della Regione non scrive gli importi.",
+    verificatoIl: "16/11/2026",
+    nota: "Pagina della Regione aggiornata il 21/07/2026 (DGR 6320 del 15/06/2026). Chi rientra tra gli ex \"gravi\" (ex Misura B2) ha un ISEE sociosanitario fino a 25.000 euro (ISEE ordinario fino a 40.000 euro per i minorenni) e presenta la domanda all'Ambito territoriale sociale, con date proprie. Gli importi vengono dalla pagina di Lombardia Facile dedicata alla DGR 6320 del 15/06/2026; la pagina della Regione non scrive gli importi.",
   },
   {
     id: "lombardia-dopo-di-noi",
@@ -511,44 +512,6 @@ export const BONUS: Bonus[] = [
 
   // ------------------------------------------------------------ COMUNE DI GENOVA
   // Fonti: pagine dei servizi del Comune di Genova, lette il 25/10/2026.
-  {
-    id: "genova-gravissima-disabilita-asl3",
-    regione: "Liguria",
-    comuni: ["genova"],
-    titolo: "Gravissima disabilità: contributo per restare a casa (anche SLA)",
-    perChi:
-      "Adulti, anziani e minori che a casa hanno bisogno di assistenza continua nelle 24 ore. Servono: invalidità civile al 100% con indennità di accompagnamento, un quadro clinico tra quelli della DGR 1289/2016, ISEE sociosanitario fino a 50.000 euro (per i minori ISEE per prestazioni ai minorenni fino a 65.000 euro).",
-    cosa:
-      "Un contributo mensile per l'assistenza a casa. L'importo lo decide l'Unità di Valutazione Multidimensionale (UVM) nel Piano di Assistenza Individualizzato (PAI); una parte riconosce il lavoro di cura del familiare, il resto si rendiconta. È compatibile con il centro diurno. Non si può avere insieme al contributo \"Grave disabilità\", all'indennità di frequenza o al ricovero definitivo in struttura.",
-    stato: "da-verificare",
-    comeSiChiede:
-      "Si compila il modulo \"Gravissima disabilità\" e si allegano: verbale dell'indennità di accompagnamento, ISEE e documento d'identità di chi firma. La domanda si consegna al PUA o allo Sportello unico del tuo Distretto ASL3 (trovi telefoni e orari nella scheda del Comune, alla voce Distretti). Poi c'è la valutazione dell'UVM.",
-    fonte: {
-      label: "ASL3 · Fondo gravissima disabilità e SLA",
-      url: "https://www.asl3.liguria.it/territorio/servizi/disabili/4981-fondo-gravissima-disabilita-sla.html",
-    },
-    verificatoIl: "25/10/2026",
-    nota: "La pagina ASL3 è aggiornata al 23/10/2024 e il 26/10/2026 non è stato possibile rileggerla: chiedi conferma al PUA o allo Sportello unico del tuo Distretto. Che la misura sia attiva nel 2026, con gli stessi requisiti, lo conferma la scheda \"Gravissime disabilità (GD) – Servizio attivo\" del Comune di Rapallo (Distretto 14), controllata il 25/10/2026.",
-  },
-  {
-    id: "genova-vita-indipendente-asl3",
-    regione: "Liguria",
-    comuni: ["genova"],
-    titolo: "Progetti di vita indipendente",
-    perChi:
-      "Persone con disabilità motoria (Legge 104, art. 3 comma 3) o intellettiva (Legge 104, art. 3 comma 1), dai 18 ai 65 anni, capaci di esprimere la propria volontà, anche tramite amministratore di sostegno. ISEE sociosanitario fino a 25.000 euro.",
-    cosa:
-      "Un contributo fino a 1.200 euro al mese, secondo il Piano individuale (PIA) scritto insieme alla persona, da rendicontare ogni tre mesi. Serve per l'autonomia: andare a vivere da soli, il lavoro, un assistente personale, attività che favoriscono l'autonomia in famiglia; per ausili, domotica e barriere architettoniche è un rimborso fino a 350 euro al mese. Non si può avere insieme alla gravissima disabilità, al contributo caregiver per chi assiste la persona o al ricovero in struttura.",
-    stato: "da-verificare",
-    comeSiChiede:
-      "Si compila la domanda indicando come si vuole usare il contributo, con la certificazione della Legge 104, l'ISEE sociosanitario e il documento d'identità. La domanda si consegna al PUA o allo Sportello unico del tuo Distretto ASL3. Prima c'è una valutazione sanitaria sull'autodeterminazione, poi l'équipe (assistente sociale e medico ASL) scrive il progetto con te.",
-    fonte: {
-      label: "ASL3 · Progetti di vita indipendente",
-      url: "https://www.asl3.liguria.it/territorio/servizi/disabili/1102-progetti-di-vita-indipendente.html",
-    },
-    verificatoIl: "25/10/2026",
-    nota: "La pagina ASL3 è aggiornata al 23/10/2024 e il 26/10/2026 non è stato possibile rileggerla: chiedi conferma al PUA o allo Sportello unico del tuo Distretto. Importo, ISEE e stato \"attivo\" sono confermati nel 2026 dalle schede dei Comuni di Sarzana e di Rapallo, controllate a ottobre 2026.",
-  },
   {
     id: "genova-doge-domiciliarita-disabili",
     regione: "Liguria",
@@ -712,6 +675,188 @@ export const BONUS: Bonus[] = [
     verificatoIl: "21/10/2026",
     nota: "Pagina della Regione aggiornata il 04/03/2026. La pagina non indica soglie ISEE né scadenze: chiedile al Distretto.",
   },
+  {
+    id: "lazio-dopo-di-noi",
+    regione: "Lazio",
+    titolo: "Dopo di Noi (legge 112/2016): progetti per persone con disabilità grave senza il sostegno dei familiari",
+    perChi:
+      "Persone con disabilità grave, di norma maggiorenni, senza un adeguato sostegno familiare. La legge dà priorità a chi non ha più i genitori e non ha risorse economiche; a chi ha genitori che per l'età o per la loro disabilità non possono più garantire il sostegno necessario; a chi vive in strutture molto lontane da una casa familiare.",
+    cosa:
+      "Un progetto personalizzato, deciso dopo una valutazione multidimensionale, con interventi per l'autonomia, l'abitare e la vita indipendente. Il budget dipende dal progetto. Per il 2026 la Giunta regionale ha destinato 23 milioni di euro al Dopo di Noi e alle case famiglia (47,5 milioni nel biennio 2025-2026). Gli importi per la singola persona non sono scritti nelle pagine della Regione.",
+    stato: "attivo",
+    comeSiChiede:
+      "Le pagine della Regione non indicano una domanda da presentare in una data: l'accesso passa dalla valutazione dei servizi sociali e sanitari del tuo Distretto. Chiedi al Segretariato Sociale del tuo Comune o al PUA del tuo Distretto. Informazioni: Numero Unico Regionale 06 99 500 (lun-ven 8:00-17:30).",
+    fonte: {
+      label: "Regione Lazio · DGR n. 453 dell'11/06/2026 (BURL n. 48 del 16/06/2026), programmazione Dopo di Noi",
+      url: "https://www.regione.lazio.it/sites/default/files/documentazione/2026/POS-DGR-453-11-06-2026.pdf",
+    },
+    verificatoIl: "13/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda. Requisiti, documenti e soglie ISEE non sono nelle pagine lette: chiedili al Distretto.",
+  },
+
+  // ------------------------------------------------------------ CIVITAVECCHIA (14/11/2026)
+  {
+    id: "civitavecchia-voucher-natalizi-2026",
+    regione: "Lazio",
+    comuni: ["civitavecchia"],
+    titolo: "Voucher sociali natalizi 2026 (buono spesa per famiglie in difficoltà economica)",
+    perChi:
+      "Famiglie residenti a Civitavecchia in difficoltà economica e sociale, con ISEE ordinario o corrente 2026 entro la soglia per numero di componenti: 1 persona 6.000 euro, 2 persone 9.420, 3 persone 12.240, 4 persone 14.760, 5 persone 17.100, 6 persone 19.200, 7 persone 21.300, 8 persone 23.400, oltre 8 persone 25.500. Una sola domanda per famiglia. Non è una misura riservata alle persone con disabilità. Cittadini non UE: permesso di soggiorno valido da allegare.",
+    cosa:
+      "Un buono spesa per generi alimentari di prima necessità: 50 euro per una persona, 100 euro per famiglie fino a 2 persone, 200 euro per famiglie con 3 persone o più. Chi riceve altri sostegni pubblici può partecipare, ma ha priorità chi non ne ha.",
+    stato: "aperto",
+    scade: "2026-11-18",
+    quando: "Domande dalle 8:00 del 2 novembre alle 13:00 del 18 novembre 2026.",
+    comeSiChiede:
+      "Solo online, con SPID o CIE, dal modulo indicato nella pagina del Comune. Se l'ISEE non è ancora pronto si può presentare con la DSU 2026 già trasmessa. Informazioni per telefono: PUA 334 6195660 (lun-ven 13:00-14:00); Servizi Sociali 0766 590792 (martedì 15:00-18:00, venerdì 9:00-13:00).",
+    fonte: {
+      label: "Comune di Civitavecchia · Voucher sociali natalizi 2026 (avviso del 30/10/2026)",
+      url: "https://www.comune.civitavecchia.rm.it/it/news/2071495",
+    },
+    verificatoIl: "14/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda: l'avviso scrive che il voucher viene dato solo se ci sono risorse disponibili.",
+  },
+
+  // ------------------------------------------------------------ ALBANO LAZIALE, APRILIA, CISTERNA (14/11/2026)
+  {
+    id: "albano-laziale-rimborso-nido-privati-2026",
+    regione: "Lazio",
+    comuni: ["albano-laziale"],
+    titolo: "Rimborso delle rette degli asili nido privati, anno 2026",
+    perChi:
+      "Famiglie residenti ad Albano Laziale con figli minori a carico (anche adottati o affidati conviventi) che hanno pagato rette di asili nido privati autorizzati tra gennaio e dicembre 2026. Non è una misura riservata alle persone con disabilità.",
+    cosa: "Un contributo a rimborso delle rette pagate nel 2026 per l'asilo nido privato autorizzato.",
+    stato: "aperto",
+    scade: "2026-12-31",
+    quando: "Domande entro e non oltre il 31 dicembre 2026.",
+    comeSiChiede:
+      "Solo online, con SPID o CIE, dal modulo nella sezione Servizi del sito del Comune. Servono: documento d'identità, permesso di soggiorno se extra UE, fattura dell'asilo nido intestata a chi fa la domanda con le mensilità 2026 di frequenza.",
+    fonte: {
+      label: "Comune di Albano Laziale · Voucher / contributi economici asilo nido 2026",
+      url: "https://comune.albanolaziale.rm.it/servizio/voucher-contributi-economici-per-il-rimborsi-del-pagamento-delle-rette-degli-asili-nido-privati-in-favore-dei-minori-residenti-nel-comune-di-albano-laziale/",
+    },
+    verificatoIl: "14/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+  {
+    id: "albano-laziale-disabilita-gravissima-2026",
+    regione: "Lazio",
+    comuni: ["albano-laziale"],
+    titolo: "Contributo per disabilità gravissima, annualità 2026",
+    perChi: "Persone che già ricevono il contributo per disabilità gravissima dal Comune di Albano Laziale.",
+    cosa: "Dal 2026 per continuare a ricevere il contributo non serve presentare una nuova domanda.",
+    stato: "attivo",
+    quando: "Dal 2026, senza nuova domanda.",
+    comeSiChiede:
+      "Chi già lo riceve: basta avere l'ISEE 2026 in corso di validità e segnalare al Comune i cambiamenti. Nuove domande: i termini restano sempre aperti e la domanda si presenta al Punto Unico di Accesso (PUA) del Distretto, in via Olivella km 1, telefono 06 93275285, email pua.dh2@aslroma6.it. Servizi Sociali del Comune: 06 93295440 (interno 422), email servizisociali@comune.albanolaziale.rm.it.",
+    fonte: {
+      label: "Comune di Albano Laziale · Novità, «Disabilità gravissima – annualità 2026»",
+      url: "https://comune.albanolaziale.rm.it/novita/",
+    },
+    verificatoIl: "14/11/2026",
+    nota: "Gli importi non sono indicati nell'informativa 2026 (rimanda alla graduatoria individuale) e requisiti sanitari e soglia ISEE per le nuove domande non risultano: chiedili al PUA.",
+  },
+  {
+    id: "cisterna-di-latina-rimborso-nido-privati-2026-2027",
+    regione: "Lazio",
+    comuni: ["cisterna-di-latina"],
+    titolo: "Rimborso per figli iscritti ad asili nido privati autorizzati, anno scolastico 2026-2027",
+    perChi:
+      "Famiglie con figli iscritti ad asili nido privati regolarmente autorizzati dal Comune di Cisterna di Latina. Non è una misura riservata alle persone con disabilità.",
+    cosa: "Un rimborso delle rette dell'asilo nido privato per l'anno scolastico 2026-2027.",
+    stato: "aperto",
+    scade: "2026-11-20",
+    quando: "Domande entro le 23:59 del 20 novembre 2026.",
+    comeSiChiede:
+      "Per i bambini da 3 a 36 mesi iscritti a un nido privato autorizzato dal Comune, con famiglia residente a Cisterna e ISEE valido non superiore a 50.000 euro. Domanda solo per posta elettronica certificata o email al Comune (indirizzo welfare nel sito, sezione Servizi Sociali). Si allegano: documento d'identità e codice fiscale di chi fa la domanda, permesso di soggiorno se straniero, documenti che provano l'iscrizione al nido e l'importo della retta. Il rimborso non può superare la spesa pagata.",
+    fonte: {
+      label: "Comune di Cisterna di Latina · Avviso integrale rimborso rette nido privati (pubblicato il 17/10/2026), articolo 4",
+      url: "https://www.comune.cisterna.latina.it/s3/2139/allegati/servizi-sociali/asili-nido-rimborso-rette-avviso.pdf",
+    },
+    verificatoIl: "16/11/2026",
+    nota: "L'avviso (articolo 4) non indica un importo massimo per bambino né una tabella per fasce ISEE: il rimborso è la spesa effettiva, meno il bonus INPS spettante e ogni altro contributo sulle stesse spese. Se i fondi non bastano, i rimborsi si riducono tutti nella stessa percentuale, tranne per i nuclei con ISEE inferiore a 10.480 euro. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda."
+  },
+  {
+    id: "aprilia-assistenza-economica-straordinaria",
+    regione: "Lazio",
+    comuni: ["aprilia"],
+    titolo: "Assistenza economica straordinaria",
+    perChi:
+      "Persone residenti ad Aprilia con ISEE in corso di validità non superiore a 8.000 euro, che non hanno rifiutato né lasciato volontariamente misure nazionali di contrasto alla povertà (salvo situazioni valutate dai Servizi Sociali). Non è una misura riservata alle persone con disabilità.",
+    cosa: "Un contributo economico per i bisogni primari di chi è in difficoltà economica. Le spese devono riferirsi all'anno in corso.",
+    stato: "attivo",
+    quando: "Nessuna scadenza: la domanda si presenta a sportello.",
+    comeSiChiede: "Con il modulo «richiesta contributi economici straordinari» da consegnare ai Servizi Sociali del Comune.",
+    fonte: {
+      label: "Comune di Aprilia · Assistenza economica-sociale straordinaria",
+      url: "https://www.comune.aprilia.lt.it/servizi/assistenza-economica-sociale-straordinaria",
+    },
+    verificatoIl: "14/11/2026",
+    nota: "La pagina del Comune non è stata aggiornata di recente: i fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+
+  // ------------------------------------------------------------ MARINO E CIAMPINO (14/11/2026)
+  {
+    id: "marino-ciampino-autismo-minori-2026",
+    regione: "Lazio",
+    comuni: ["marino", "ciampino"],
+    titolo: "Sostegno economico alle famiglie di minori con disturbo dello spettro autistico, 2026 (Distretto RM 6.3)",
+    perChi:
+      "Famiglie di minori fino a 12 anni con disturbo dello spettro autistico, residenti nei Comuni di Marino e Ciampino (Distretto socio sanitario RM 6.3).",
+    cosa: "Un contributo economico a sostegno delle spese delle famiglie. I requisiti e gli importi sono nell'avviso del Distretto.",
+    stato: "aperto",
+    scade: "2026-11-30",
+    quando: "Domande entro il 30 novembre 2026.",
+    comeSiChiede:
+      "Con il modulo di domanda di sostegno economico pubblicato dal Comune di Marino, Distretto RM 6.3. Per i dettagli chiedi ai Servizi Sociali del tuo Comune.",
+    fonte: {
+      label: "Comune di Marino · Avviso minori con disturbo dello spettro autistico 2026, Distretto RM 6.3 (avviso del 02/11/2026)",
+      url: "https://www.comune.marino.rm.it/novita/avvisi/novita_3106.html",
+    },
+    verificatoIl: "16/11/2026",
+    nota: "Scadenza del 30 novembre confermata sulla pagina del Comune di Marino (avviso pubblicato e aggiornato il 02/11/2026; la stessa pagina vale per Marino e Ciampino). I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+
+  {
+    id: "marino-ciampino-caregiver-2026",
+    regione: "Lazio",
+    comuni: ["marino", "ciampino"],
+    titolo: "Interventi a favore dei caregiver familiari riconosciuti, 2026 (Distretto RM 6.3)",
+    perChi:
+      "Caregiver familiari riconosciuti formalmente (o con la Card del Caregiver familiare) di persone residenti a Marino o Ciampino, con ISEE ordinario non superiore a 24.000 euro per il budget personale e il supporto psicologico. Cittadini italiani o dell'Unione europea; per i cittadini di Paesi terzi serve il permesso di soggiorno CE per soggiornanti di lungo periodo.",
+    cosa: "Tre interventi: un budget personale di 1.000 euro una tantum; il rimborso del supporto psicologico, 50 euro per intervento fino a 500 euro l'anno; il sollievo domiciliare, fino a 500 euro l'anno (600 euro se la persona assistita ha una disabilità complessa ad alta intensità assistenziale, valutata dall'UVMD).",
+    stato: "aperto",
+    scade: "2026-12-10",
+    quando: "Domande entro il 10 dicembre 2026.",
+    comeSiChiede:
+      "Con l'Allegato A (domanda di sostegno economico) consegnato a mano all'ufficio protocollo del tuo Comune oppure inviato per PEC: Marino protocollo@pec.comune.marino.rm.it, Ciampino protocollo@pec.comune.ciampino.roma.it. L'avviso è del Distretto, con Marino capofila.",
+    fonte: {
+      label: "Comune di Marino · Avviso pubblico caregiver 2026, versione rettificata (pagina aggiornata l'11/11/2026)",
+      url: "https://www.comune.marino.rm.it/halley//ht/eg176/2026_DD_1446_AVVISO_PUBBLICO_CAREGIVER_2026_rett.pdf",
+    },
+    verificatoIl: "16/11/2026",
+    nota: "Scadenza del 10 dicembre confermata dagli avvisi dei Comuni di Marino e di Ciampino (pubblicati il 09/11/2026, aggiornati l'11/11/2026). Gli importi risultano dall'avviso rettificato e non sono stati riletti sul documento: conferma all'ufficio. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+
+  {
+    id: "marino-sostegno-socioeconomico",
+    regione: "Lazio",
+    comuni: ["marino"],
+    titolo: "Interventi di sostegno socioeconomico: contributi temporanei e straordinari (Marino)",
+    perChi:
+      "Residenti a Marino: i requisiti sono nella scheda del servizio sul sito del Comune. Non è una misura riservata alle persone con disabilità.",
+    cosa: "Contributi economici temporanei e straordinari. L'importo non è indicato nella scheda che abbiamo letto.",
+    stato: "attivo",
+    quando:
+      "Per i contributi temporanei e straordinari si può presentare domanda in ogni momento dell'anno in corso. I contributi continuativi hanno invece una finestra, dal 28 febbraio al 31 marzo.",
+    comeSiChiede: "Ai Servizi Sociali del Comune di Marino, con le modalità indicate nella scheda del servizio.",
+    fonte: {
+      label: "Comune di Marino · Interventi di sostegno socio economico (scheda aggiornata il 14/04/2025)",
+      url: "https://www.comune.marino.rm.it/servizi/salute_benessere_e_assistenza/servizio_95.html",
+    },
+    verificatoIl: "14/11/2026",
+    nota: "La scheda del Comune è stata aggiornata l'ultima volta il 14/04/2025: i fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
 
   // ------------------------------------------------------------ COMUNE DI LATINA
   // Fonti: pagine dei servizi del Comune di Latina, lette il 26/10/2026.
@@ -772,11 +917,11 @@ export const BONUS: Bonus[] = [
     comeSiChiede:
       "Solo online, sul portale Rete del Sociale (fondi.retedelsociale.it) con SPID. Allegati obbligatori: documento d'identità della persona assistita, codice fiscale o tessera sanitaria, ISEE ordinario in corso di validità del nucleo, verbale di invalidità civile, verbale ai sensi dell'art. 3 comma 3 della Legge 104/1992. La domanda vale solo se, dopo \"Spedisci\", passa da \"Bozza\" a \"Presentata\" con numero di protocollo; dopo l'invio non si può correggere. Per aiuto: PUA distrettuale di Fondi o di Terracina, oppure l'Ufficio Servizi Sociali del Comune di residenza.",
     fonte: {
-      label: "Distretto LT4 · Avviso pubblico per il riconoscimento del caregiver familiare",
-      url: "https://fondi.retedelsociale.it/upload/File/AllegatiNews/21.pdf",
+      label: "Comune di Terracina · Riconoscimento formale, valorizzazione sociale e promozione di interventi a sostegno del caregiver familiare (Distretto LT4, pagina aggiornata il 25/06/2025)",
+      url: "https://comune.terracina.lt.it/notizie/3418166/riconoscimento-formale-valorizzazione-sociale",
     },
-    verificatoIl: "26/10/2026",
-    nota: "L'avviso è datato 30/05/2025 e la pagina del portale che lo richiama è del 12/10/2026. L'avviso non indica telefoni né orari: chiedili al PUA o al Comune.",
+    verificatoIl: "16/11/2026",
+    nota: "La pagina del Comune di Terracina conferma che l'avviso è aperto, senza termini di scadenza, e che la domanda si fa solo online con SPID sulla piattaforma «Rete del Sociale» del Distretto, con aiuto al PUA di Fondi o di Terracina o all'Ufficio Servizi Sociali del Comune. Il nome «Card Giver», il ruolo dell'UVMD e i 90 giorni vengono dall'avviso del 30/05/2025 e non compaiono in quella pagina: conferma al PUA o al Comune. L'avviso non indica telefoni né orari.",
   },
 
   // ------------------------------------------------------------------ TOSCANA
@@ -826,7 +971,7 @@ export const BONUS: Bonus[] = [
       "Persone adulte con disabilità e certificazione di gravità (Legge 104/1992), residenti nella Zona distretto del progetto, in grado di esprimere la propria volontà, anche con supporto, e di gestire le proprie scelte. I requisiti vanno posseduti alla data della domanda.",
     cosa:
       "Finanziamento di progetti individuali di vita indipendente. La pagina non scrive quanto spetta a ogni persona: indica 46 milioni di euro per il triennio 2024-2026 per i progetti ammessi e, per il 2026-2027, quasi 6,25 milioni assegnati dalla Giunta il 27/04/2026 per ridurre le liste d'attesa e avviare nuovi progetti dal 1° luglio 2026.",
-    stato: "da-verificare",
+    stato: "attivo",
     quando:
       "Il bando per gli enti era aperto dall'1 al 16 agosto 2024. Nuovi progetti dal 1° luglio 2026 con i fondi assegnati ad aprile 2026. La pagina non indica una nuova finestra per le domande.",
     comeSiChiede:
@@ -835,8 +980,8 @@ export const BONUS: Bonus[] = [
       label: "Regione Toscana · Disabilità e grave limitazione dell'autonomia: finanziamenti per vita indipendente e inclusione",
       url: "https://www.regione.toscana.it/it/-/disabilit%C3%A0-e-grave-limitazione-dell-autonomia-finanziamenti-per-sostenere-vita-indipendente-e-inclusione",
     },
-    verificatoIl: "30/10/2026",
-    nota: "Pagina della Regione aggiornata il 22/06/2026. Il 16/06/2026 la Regione ha impegnato altri 4,8 milioni di euro per ridurre le liste d'attesa (decreto n. 13481). Importo per persona, requisiti ISEE e tempi vanno chiesti alla Società della Salute. Domande e informazioni sul bando: vitaindipendentefse@regione.toscana.it.",
+    verificatoIl: "16/11/2026",
+    nota: "Pagina della Regione aggiornata il 22/06/2026, nessun atto successivo. Il cittadino accede con gli avvisi delle singole Società della Salute o Zone distretto. Il 16/06/2026 la Regione ha impegnato altri 4,8 milioni di euro per ridurre le liste d'attesa (decreto n. 13481). Importo per persona, requisiti ISEE e tempi vanno chiesti alla Società della Salute. Domande e informazioni sul bando: vitaindipendentefse@regione.toscana.it.",
   },
   {
     id: "toscana-esenzione-bollo-disabilita",
@@ -860,6 +1005,40 @@ export const BONUS: Bonus[] = [
   },
 
   // ------------------------------------------------------------------- PUGLIA
+  {
+    id: "puglia-sostegno-familiare-2027-2028",
+    regione: "Puglia",
+    titolo: "Sostegno Familiare 2027-2028",
+    perChi: "Persone con disabilità gravissima e non autosufficienza, con accompagnamento o nelle condizioni alternative dell'Allegato 3 del DPCM 159/2013. Persona assistita e caregiver devono essere residenti in Puglia. Serve la valutazione UVM e un bisogno assistenziale inserito nel PAI. ISEE adulti fino a 60.000 euro (sociosanitario ristretto oppure ordinario se più favorevole); minorenni fino a 80.000 euro (ISEE minorenni).",
+    cosa: "700 euro mensili per 24 mesi, dal 1° gennaio 2027 al 31 dicembre 2028, per sostenere l'assistenza del caregiver familiare.",
+    stato: "aperto",
+    scade: "2026-12-17",
+    quando: "Domande dalle ore 12:00 del 17/11/2026 alle ore 12:00 del 17/12/2026.",
+    comeSiChiede: "Online su https://bandi.pugliasociale.regione.puglia.it. Occorrono la dichiarazione e l'impegno firmato del caregiver, con documento d'identità; seguono verifica dell'Ambito e valutazione UVM. Non si può richiedere anche Patto di Cura 2027-2029; esclusi i beneficiari PRO.V.I. e PRO.V.I. Dopo di Noi.",
+    fonte: {
+      label: "Regione Puglia · Determinazione 1747 del 09/11/2026 e avviso (PDF sul sito del Comune di Trani)",
+      url: "https://www.comune.trani.bt.it/s3/7382/allegati/determina-regionale-avviso.pdf",
+    },
+    verificatoIl: "17/11/2026",
+    nota: "Misura regionale. Fondi limitati: l'ammissione dipende dalla graduatoria e dalle risorse disponibili. Non è un contributo automatico.",
+  },
+  {
+    id: "puglia-patto-di-cura-2027-2029",
+    regione: "Puglia",
+    titolo: "Patto di Cura 2027-2029",
+    perChi: "Residenti in Puglia con disabilità gravissima e non autosufficienza, accompagnamento o condizioni alternative dell'Allegato 3 del DPCM 159/2013. ISEE fino a 60.000 euro per adulti (sociosanitario ristretto oppure ordinario se più favorevole), 80.000 euro per minorenni (ISEE minorenni). Non ammessi i destinatari finanziati PRO.V.I./Dopo di Noi né i richiedenti Sostegno Familiare 2027-2028.",
+    cosa: "Fino a 1.290 euro mensili con assunzione diretta, oppure 1.340 euro tramite agenzia autorizzata; massimo 27 mensilità, dal gennaio 2027 al marzo 2029. La decorrenza dipende anche dall'efficacia del contratto e dall'ammissione.",
+    stato: "aperto",
+    scade: "2026-12-17",
+    quando: "Domande dalle ore 12:00 del 17/11/2026 alle ore 12:00 del 17/12/2026.",
+    comeSiChiede: "Online su https://bandi.pugliasociale.regione.puglia.it con SPID livello 2, CIE o CNS. Serve assistenza domiciliare con contratto di almeno 12 mesi: minimo 104 ore mensili per personale non convivente, 143 per convivente, con inquadramento previsto dall'avviso. L'Ambito istruisce la domanda con il Distretto e l'UVM.",
+    fonte: {
+      label: "Regione Puglia · Determinazione 1749 del 09/11/2026 e avviso (PDF sul sito del Comune di Trani)",
+      url: "https://www.comune.trani.bt.it/s3/7382/allegati/determina-patto-di-cura-2027-2028-2029.pdf",
+    },
+    verificatoIl: "17/11/2026",
+    nota: "Misura regionale, con fondi limitati e selezione delle domande. Vietato finanziare lo stesso contratto con altri contributi pubblici.",
+  },
 
   // ------------------------------------------------------------------ VENETO
   {
@@ -1020,27 +1199,6 @@ export const BONUS: Bonus[] = [
   // ------------------------------------------------------------------ ABRUZZO
 
   // ----------------------------------------------------------- L'AQUILA (AQ)
-  {
-    id: "laquila-caregiver-2026",
-    regione: "Abruzzo",
-    comuni: ["laquila"],
-    titolo: "Fondo per il sostegno del caregiver familiare (2026)",
-    perChi:
-      "Caregiver familiari residenti all'Aquila che assistono un parente convivente (anagraficamente) in condizione di disabilità gravissima. ISEE ordinario familiare del caregiver non superiore a 36.000 euro.",
-    cosa:
-      "Contributo di sollievo per l'assistenza continuativa e, quando serve, per interventi di sostituzione nella cura o ricoveri temporanei di sollievo. L'importo non è indicato nelle fonti che abbiamo letto: dipende dall'intensità del bisogno, dalla rete di aiuto disponibile e dall'ISEE.",
-    stato: "aperto",
-    scade: "2026-11-02",
-    quando: "Domande entro le ore 23:59 del 2 novembre 2026.",
-    comeSiChiede:
-      "Solo online sulla piattaforma bandisocialescuola.comune.laquila.it. Per chi ha difficoltà c'è il Punto Digitale del Servizio Politiche Sociali (via Filomusi Guelfi 6/c, Villa Gioia), lo Sportello Unificato e il Servizio Sociale – Ufficio Disabilità, non autosufficienza e integrazione socio-sanitaria.",
-    fonte: {
-      label: "ReteAbruzzo · Comune dell'Aquila, avviso caregiver familiari (10/10/2026)",
-      url: "https://www.reteabruzzo.com/2026/10/10/comune-dellaquila-avviso-per-sostegno-ai-caregiver-familiari-domande-fino-al-2-novembre/",
-    },
-    verificatoIl: "12/10/2026",
-    nota: "La scadenza era il 2 novembre 2026. L'elenco dei documenti non è nella fonte: leggi l'avviso sul sito del Comune.",
-  },
 
   // ------------------------------------------------------------- OCRE (AQ)
 
@@ -1434,6 +1592,24 @@ export const BONUS: Bonus[] = [
   // ----------------------------------------------------------------- SARDEGNA
 
   // ------------------------------------------------------------------- MARCHE
+  {
+    id: "marche-vita-indipendente-regionale",
+    regione: "Marche",
+    titolo: "Progetti regionali di Vita indipendente per persone con disabilità grave",
+    perChi:
+      "Persone con disabilità con certificazione di gravità (Legge 104/1992, art. 3, comma 3). Chi assume direttamente l'assistente personale diventa datore di lavoro, con diritti e doveri.",
+    cosa:
+      "Contributo per assumere un assistente personale che affianca la persona nelle funzioni essenziali della vita: cura della persona, mobilità in casa e al lavoro, autonomia e inclusione sociale. L'importo dipende dal Piano personalizzato; la Carta dei Servizi non scrive cifre.",
+    stato: "attivo",
+    comeSiChiede:
+      "Il beneficiario invia il Piano personalizzato di Vita indipendente, scritto d'intesa con l'UMEA o il Dipartimento di Salute Mentale, sulla piattaforma regionale ProcediMarche. Per i progetti già attivi si invia la conferma di continuità con il contratto dell'assistente. Settore Contrasto al disagio della Regione: tel. 071 8064026, settore.contrastodisagio@regione.marche.it. Il servizio non ha costi per l'utente.",
+    fonte: {
+      label: "Regione Marche · Carta dei Servizi 2026, Progetti regionali di Vita indipendente",
+      url: "https://www.regione.marche.it/DesktopModules/CartaServizi/DownloadCartaServizi.ashx?IdErogazione=137&AnnoCarta=2026",
+    },
+    verificatoIl: "16/11/2026",
+    nota: "La Carta dei Servizi non indica scadenze per le domande: conferma tempi e importi con il Settore Contrasto al disagio.",
+  },
 
   // ----------------------------------------------------------------- CALABRIA
 
@@ -1608,7 +1784,7 @@ export const BONUS: Bonus[] = [
       "Contributo mensile per dodici mensilità: fino a 1.000 euro al mese per la dipendenza vitale con assistenza continua nelle 24 ore (per esempio ventilazione assistita, nutrizione artificiale, stato vegetativo), 600 euro al mese per le altre condizioni di disabilità gravissima. Per l'assistenza acquistata (assistenti con contratto, servizi accreditati, strutture semiresidenziali) c'è il rimborso della spesa documentata; per il familiare che assiste a casa basta un'autocertificazione. Le risorse sono 14,78 milioni di euro dal Fondo nazionale per le non autosufficienze.",
     stato: "attivo",
     quando:
-      "Notizia dell'8 ottobre 2026. La Regione non indica una scadenza: i termini sono nei singoli avvisi degli Ambiti territoriali sociali, che erano in fase di completamento. Per esempio l'Ambito di Rosarno (ATS n. 2: Gioia Tauro, Melicuccà, Palmi, Rizziconi, Rosarno, San Ferdinando, Seminara) ha un avviso aperto fino al 23 novembre 2026 (pagina del Comune di San Ferdinando del 05/11/2026).",
+      "Notizia dell'8 ottobre 2026. La Regione non indica una scadenza: i termini sono nei singoli avvisi degli Ambiti territoriali sociali, che erano in fase di completamento. Per esempio l'Ambito di Rosarno (ATS n. 2: Gioia Tauro, Melicuccà, Palmi, Rizziconi, Rosarno, San Ferdinando, Seminara) ha un avviso aperto fino al 23/11/2026 (pagina del Comune di San Ferdinando del 05/11/2026).",
     comeSiChiede:
       "La domanda si presenta all'Ambito territoriale sociale di residenza, di norma via PEC, secondo l'avviso dell'Ambito. La valutazione e la graduatoria sono fatte dall'Unità di valutazione multidimensionale con l'Azienda sanitaria provinciale. Moduli e avvisi si chiedono all'Ufficio di Piano del tuo Ambito.",
     fonte: {
@@ -1618,26 +1794,68 @@ export const BONUS: Bonus[] = [
     verificatoIl: "20/10/2026",
   },
 
-  // --- Raccolta 30/10/2026: Marche (misure regionali valide per tutta la Regione) ---
   {
-    id: "marche-frna-2026",
-    regione: "Marche",
-    titolo: "Fondo regionale per la non autosufficienza 2026: disabilità gravissima e assegni di cura",
+    id: "pescara-trasporto-scolastico-autonomo-2026-2027",
+    regione: "Abruzzo",
+    comuni: ["pescara"],
+    titolo: "Contributo per il trasporto scolastico autonomo di alunni con disabilità a Pescara",
     perChi:
-      "Persone con disabilità gravissima che vivono stabilmente al proprio domicilio, e anziani non autosufficienti assistiti a casa dalla famiglia. Le misure sono gestite dagli Ambiti Territoriali Sociali (ATS).",
+      "Residenti a Pescara con legge 104 art. 3 comma 3 che frequentano infanzia, primaria o secondaria di primo grado e non usano il trasporto scolastico comunale. Distanza casa-scuola oltre 500 metri (oltre 100 metri nei casi di grave limitazione della deambulazione); frequenza scolastica almeno del 50%.",
     cosa:
-      "Disabilità gravissima: contributo una tantum, con l'importo pieno per chi vive stabilmente a casa e riduzioni per chi frequenta percorsi educativi, riabilitativi o centri diurni (3 milioni di euro in totale). Anziani non autosufficienti: assegno di cura di 200 euro al mese per dodici mesi alle famiglie che assistono la persona a domicilio, e rafforzamento del servizio di assistenza domiciliare (SAD), che parte con la presa in carico sociale e sociosanitaria e un Piano assistenziale individualizzato.",
-    stato: "da-verificare",
+      "Contributo una tantum fino a 1.000 euro per l'anno scolastico 2026/2027: l'importo effettivo si decide dopo aver raccolto le domande.",
+    stato: "aperto",
     quando:
-      "La Giunta regionale ha approvato il programma il 28 maggio 2026 (5,5 milioni di euro); lo schema era ancora all'esame del Consiglio delle Autonomie Locali. Il comunicato non indica scadenze né date degli avvisi.",
+      "Domande entro il 31/05/2027, ore 13:00.",
     comeSiChiede:
-      "Per l'assegno di cura si risponde all'avviso pubblico del proprio ATS, con graduatoria in base a ISEE e valutazione del bisogno assistenziale. Il comunicato non spiega come chiedere il contributo per la disabilità gravissima: chiedi al Servizio sociale del tuo Comune o dell'ATS.",
+      "Domanda online con SPID, dalla pagina del Comune di Pescara indicata come fonte.",
     fonte: {
-      label: "Regione Marche · Non autosufficienza, 5,5 milioni per assistenza domiciliare e sostegni alle famiglie (28/05/2026)",
-      url: "https://www.regione.marche.it/Regione-Utile/Sociale/News-ed-eventi/post/115496",
+      label: "Comune di Pescara · Contributo una tantum per il trasporto scolastico in autonomia (pagina del 21/10/2026; avviso del 19/10/2026)",
+      url: "https://www.comune.pescara.it/novita/avviso-pubblico-per-lerogazione-di-contributo-economico-una-tantum-per-il-trasporto-scolastico-in-autonomia-di-alunni-con-disabilita/",
     },
-    verificatoIl: "30/10/2026",
-    nota: "Gli avvisi degli ATS possono avere requisiti e scadenze propri: controllali sul sito del tuo Ambito.",
+    verificatoIl: "10/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. Valgono tutte le condizioni dell'avviso, anche per i fratelli nella stessa scuola.",
+  },
+  {
+    id: "catanzaro-assegno-cura-gravissima-fna-2022",
+    regione: "Calabria",
+    comuni: ["catanzaro"],
+    titolo: "Assegno di cura per la disabilità gravissima a Catanzaro (FNA 2022)",
+    perChi:
+      "Residenti nell'ATS di Catanzaro con disabilità gravissima (DM 26/09/2016), invalidità civile al 100% con accompagnamento e legge 104 art. 3 comma 3. ISEE sociosanitario fino a 50.000 euro, 65.000 euro per i minorenni; altre condizioni e incompatibilità sono nell'avviso.",
+    cosa:
+      "1.000 euro al mese per la dipendenza vitale con assistenza continua nelle 24 ore, 600 euro al mese per le altre condizioni di disabilità gravissima, secondo la valutazione.",
+    stato: "aperto",
+    quando:
+      "Domande entro il 19/11/2026.",
+    comeSiChiede:
+      "Con la modulistica dell'avviso del Comune di Catanzaro, scaricabile dalla pagina indicata come fonte.",
+    fonte: {
+      label: "Comune di Catanzaro · Avviso per il supporto alle persone in condizione di disabilità gravissima (pubblicato il 21/10/2026)",
+      url: "https://www.comune.catanzaro.it/novita/pubblicato-lavviso-per-il-supporto-alle-persone-in-condizione-di-disabilita-gravissima-e-al-nucleo-familiare-di-appartenenza-domande-entro-il-19-novembre/",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "Scade tra pochi giorni: non aspettare l'ultimo giorno. Valgono tutte le condizioni dell'avviso integrale.",
+  },
+  {
+    id: "reggio-calabria-assegno-cura-gravissima-fna-2022",
+    regione: "Calabria",
+    comuni: ["reggio-calabria"],
+    titolo: "Assegno di cura e autonomia per la disabilità gravissima a Reggio Calabria (FNA 2022)",
+    perChi:
+      "Persone con disabilità gravissima secondo il DM 26/09/2016, con valutazione multidimensionale. ISEE sociosanitario fino a 50.000 euro, 65.000 euro per i minorenni. L'elenco completo dei requisiti è nell'allegato dell'avviso.",
+    cosa:
+      "Assegno per 12 mensilità riferite a gennaio-dicembre 2026, entro le risorse disponibili. L'importo individuale non è indicato nella pagina del Comune.",
+    stato: "aperto",
+    quando:
+      "Domande entro il 20/11/2026.",
+    comeSiChiede:
+      "Con la modulistica dell'avviso, trasmessa tramite PEC al Comune.",
+    fonte: {
+      label: "Comune di Reggio Calabria · Avviso assegno di cura e autonomia per la disabilità gravissima (21/10/2026)",
+      url: "https://comune.reggio-calabria.it/Notizie/Details/8681",
+    },
+    verificatoIl: "10/11/2026",
+    nota: "Scade tra pochi giorni: non aspettare l'ultimo giorno. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. Requisiti completi e importo non verificati: leggi l'allegato dell'avviso.",
   },
   // --- Raccolta 30/10/2026: Molise (misura regionale valida per tutta la Regione) ---
   {
@@ -1647,7 +1865,7 @@ export const BONUS: Bonus[] = [
     perChi:
       "Caregiver familiare disoccupato o inoccupato che assiste in modo continuativo una persona con disabilità o non autosufficiente, riconosciuta bisognosa di assistenza globale e continua ai sensi della legge 104/1992 o titolare di indennità di accompagnamento. L'ISEE socio-sanitario deve essere pari o inferiore a 50.000 euro, elevato a 65.000 euro per le famiglie con un minore convivente con disabilità. Lo status di caregiver viene riconosciuto dall'Ambito Territoriale Sociale (ATS), che rilascia la «Card del Caregiver» (L.R. 13/2025).",
     cosa: "Contributo di 5.000 euro per il caregiver familiare. La Regione ha stanziato 800.000 euro in totale.",
-    stato: "da-verificare",
+    stato: "aperto",
     quando:
       "Sulla pagina della Regione l'invio delle domande è indicato dal 1 ottobre 2026, con scadenza 30 maggio 2027. L'avviso rivolto ai caregiver lo pubblica ogni ATS: per il 2026 entro ottobre, per il 2027 entro maggio.",
     comeSiChiede:
@@ -1656,8 +1874,8 @@ export const BONUS: Bonus[] = [
       label: "Regione Molise · Misure per il riconoscimento e il sostegno del Caregiver familiare, annualità 2026 e 2027",
       url: "https://prfesrfse2127.regione.molise.it/bandi-avvisi/misure-per-il-riconoscimento-e-il-sostegno-del-caregiver-familiare-annualita-2026-e-2027/",
     },
-    verificatoIl: "30/10/2026",
-    nota: "La pagina regionale non dice se l'avviso del singolo Ambito sia già aperto: controlla sul sito del tuo ATS.",
+    verificatoIl: "12/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. La pagina regionale non dice se l'avviso del singolo Ambito sia già aperto: chiedilo al tuo ATS.",
   },
 
   // --- Raccolta 02/11/2026: Sardegna, Abruzzo, Campania, Molise, Basilicata (dossier verificato il 30/10/2026, solo fonti istituzionali) ---
@@ -1891,6 +2109,28 @@ export const BONUS: Bonus[] = [
     nota: "Il 6 novembre la Regione ha comunicato altri finanziamenti per non autosufficienza e vita indipendente assegnati alle USL e alle Zone sociali: sono fondi per gli enti, non un nuovo bando per le persone.",
   },
   {
+    id: "perugia-vita-indipendente-2026",
+    regione: "Umbria",
+    comuni: ["perugia"],
+    titolo: "Vita indipendente 2026: contributo per progetti personali (Zona sociale 2: Perugia, Corciano, Torgiano)",
+    perChi:
+      "Persone con disabilità grave (legge 104/1992, art. 3 comma 3), tra 18 e 64 anni, residenti a Perugia, Corciano o Torgiano, con i requisiti dell'avviso. Serve l'ISEE in corso di validità.",
+    cosa:
+      "Contributo per un progetto personale: assistente personale con contratto regolare, sostegno all'affitto di un alloggio, ausili tecnologici per l'autonomia. Fino a 18.000 euro per 18 mesi; riconosciuto al 100% con ISEE fino a 25.000 euro e al 60% oltre quella soglia (le fasce successive sono nell'avviso).",
+    stato: "scaduto",
+    scade: "2026-04-13",
+    quando:
+      "Domande dal 13 marzo al 13 aprile 2026: l'avviso è chiuso. Le graduatorie sono state approvate il 22/07/2026 e rettificate il 05/08/2026. L'avviso viene ripubblicato periodicamente.",
+    comeSiChiede:
+      "Quando l'avviso è aperto: domanda con modulo e allegati per PEC a comune.perugia@postacert.umbria.it o con raccomandata al Dirigente U.O. Servizi Sociali, Corte delle Clarisse snc, 06122 Perugia. Informazioni: Servizi sociali del Comune di Perugia, tel. 075 5773865 o 075 5773818.",
+    fonte: {
+      label: "Comune di Perugia · Servizi sociali, Vita indipendente",
+      url: "https://www.comune.perugia.it/servizio/servizi-sociali-vita-indipendente/",
+    },
+    verificatoIl: "12/11/2026",
+    nota: "Pagine del Comune lette il 12/11/2026. Un nuovo avviso non risulta pubblicato: controlla la pagina del servizio o chiedi ai Servizi sociali.",
+  },
+  {
     id: "puglia-buoni-servizio-2026-2027",
     regione: "Puglia",
     titolo: "Buoni Servizio per anziani e persone con disabilità 2026/2027 (seconda finestra)",
@@ -2041,7 +2281,7 @@ export const BONUS: Bonus[] = [
     cosa: "Un rimborso calcolato a 0,55 euro per chilometro, secondo il percorso e i limiti dell'avviso. Non è un importo fisso per famiglia.",
     stato: "aperto",
     scade: "2026-11-23",
-    quando: "Domande entro le 23:59 del 23 novembre 2026. Pagina del Comune aggiornata il 03/11/2026.",
+    quando: "Domande entro le 23:59 del 23/11/2026. Pagina del Comune aggiornata il 03/11/2026.",
     comeSiChiede: "Con il modulo dell'avviso del Comune di Sassari: leggi la pagina e il PDF dell'avviso per i documenti e il modo di consegna.",
     fonte: {
       label: "Comune di Sassari · Voucher per il servizio di trasporto scolastico per studenti con disabilità, anno 2026",
@@ -2059,7 +2299,7 @@ export const BONUS: Bonus[] = [
     cosa: "Un piano personalizzato di sostegno. L'importo non è indicato nell'avviso di riapertura: dipende dal piano e dalle risorse.",
     stato: "aperto",
     scade: "2026-11-16",
-    quando: "Nuove domande entro il 16 novembre 2026. Le domande sono accolte in ordine cronologico, fino a esaurimento delle risorse. Pagina aggiornata il 29/06/2026.",
+    quando: "Nuove domande entro il 16/11/2026. Le domande sono accolte in ordine cronologico, fino a esaurimento delle risorse. Pagina aggiornata il 29/06/2026.",
     comeSiChiede: "Secondo l'avviso di riapertura del Comune di Sassari (pagina e PDF).",
     fonte: {
       label: "Comune di Sassari · Bando 2026 L. 162/98, avviso per le nuove domande",
@@ -2078,7 +2318,7 @@ export const BONUS: Bonus[] = [
     cosa: "Il Comune contribuisce con 20 euro al mese; la quota a carico dell'utente è di 5 euro al mese, più le eventuali spese di prima emissione.",
     stato: "aperto",
     scade: "2026-11-20",
-    quando: "Domande entro il 20 novembre 2026. Pagina aggiornata il 01/10/2026.",
+    quando: "Domande entro il 20/11/2026. Pagina aggiornata il 01/10/2026.",
     comeSiChiede: "Secondo l'avviso del Comune di Trapani (pagina e PDF): leggi i documenti da allegare.",
     fonte: {
       label: "Comune di Trapani · Tessere ATM 2027, aperte le domande",
@@ -2096,7 +2336,7 @@ export const BONUS: Bonus[] = [
     cosa: "La tessera di libera circolazione sui mezzi AST extraurbani. Nessun contributo in denaro indicato.",
     stato: "aperto",
     scade: "2026-11-16",
-    quando: "Domande entro le 12:00 del 16 novembre 2026. Pagina del Comune aggiornata il 14/10/2026.",
+    quando: "Domande entro le 12:00 del 16/11/2026. Pagina del Comune aggiornata il 14/10/2026.",
     comeSiChiede: "Secondo l'avviso del Comune di Ragusa (PDF allegato alla pagina).",
     fonte: {
       label: "Comune di Ragusa · Rilascio tessera di libera circolazione extraurbana AST, marzo 2027 - febbraio 2028",
@@ -2104,6 +2344,73 @@ export const BONUS: Bonus[] = [
     },
     verificatoIl: "11/11/2026",
     nota: "Pagina letta nella versione inglese del sito del Comune. Il PDF dell'avviso non si legge: controlla requisiti e documenti con l'ufficio prima di preparare la domanda.",
+  },
+
+  // --- 12/11/2026: Emilia-Romagna, Collecchio (notizia del Comune letta l'11/11/2026) ---
+  {
+    id: "collecchio-voucher-sportivi-2026-2027",
+    regione: "Emilia-Romagna",
+    comuni: ["collecchio"],
+    titolo: "Voucher sportivi 2026/2027 per minori con disabilità o sovrappeso a Collecchio",
+    perChi:
+      "Minori da 6 a 17 anni residenti a Collecchio, con disabilità oppure in sovrappeso o obesità con complicanze. ISEE ordinario in corso di validità non superiore a 30.000 euro. La domanda la presenta il genitore o il tutore.",
+    cosa:
+      "Contributo fino a 250 euro a minore per le attività sportive. Le risorse sono 1.750 euro in tutto, quindi bastano per al massimo sette contributi.",
+    stato: "aperto",
+    quando:
+      "Domande entro il 2 dicembre 2026, ore 13:00 (la notizia del Comune scrive «martedì», ma il 2 dicembre 2026 è un mercoledì: conferma la scadenza all'ufficio). La graduatoria si fa per ISEE crescente. Le ricevute di pagamento e l'attestazione di avvio delle attività vanno consegnate entro il 15 gennaio 2027.",
+    comeSiChiede:
+      "Con il modulo del Comune e la documentazione richiesta, a mano all'Ufficio Protocollo oppure per PEC all'indirizzo protocollo@postacert.comune.collecchio.pr.it. Il modulo e il bando completo sono sulla pagina dei bandi del Comune: se non li trovi, chiedili all'Ufficio Protocollo. Per informazioni: Ufficio Sport, telefono 0521 301226, sport@comune.collecchio.pr.it.",
+    fonte: {
+      label: "Comune di Collecchio · Voucher sportivi 2026 (notizia del 02/11/2026, aggiornata il 03/11/2026)",
+      url: "https://www.comune.collecchio.pr.it/novita/notizie/voucher-sportivi-2026/",
+    },
+    verificatoIl: "11/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. Valgono tutte le condizioni del bando. Dati letti dalla notizia del Comune: il bando integrale e il modulo non sono stati consultati, quindi importi, requisiti e certificazioni richieste vanno controllati nel bando.",
+  },
+
+  // --- 16/11/2026: Liguria, Luni (pagina del Comune, ultimo aggiornamento 02/10/2024) ---
+  {
+    id: "luni-frna-contributo-non-autosufficienza",
+    regione: "Liguria",
+    comuni: ["luni"],
+    titolo: "Fondo regionale per la non autosufficienza (FRNA) a Luni",
+    perChi:
+      "Cittadini italiani o stranieri con carta di soggiorno, con ISEE familiare fino a 40.000 euro, che hanno compiuto 65 anni e sono invalidi al 100% con accompagnamento (o hanno presentato domanda all'ASL), oppure hanno un handicap grave (Legge 104/1992). Serve l'accertamento della non autosufficienza dell'Unità di Valutazione Multidimensionale dell'ASL, un Piano Individualizzato di Assistenza e un Patto Assistenziale con la famiglia, che si impegna all'assistenza a domicilio.",
+    cosa:
+      "Contributo mensile del fondo della Regione Liguria per mantenere a casa la persona non autosufficiente, calcolato sull'ISEE. La pagina non scrive le cifre. Non si somma all'Assegno Servizi: se già lo si riceve, viene revocato.",
+    stato: "attivo",
+    quando: "La pagina del Comune scrive: non è prevista alcuna scadenza.",
+    comeSiChiede:
+      "Con il modulo del Comune (la pagina non dice dove trovarlo), con scheda regionale del medico di famiglia, verbale di invalidità o handicap (o domanda all'ASL), ISEE e, per gli stranieri, carta di soggiorno. Servizio 6 - Assistenza Sociale, Via Castagno 61: tel. 0187 690143 o 0187 690128.",
+    fonte: {
+      label: "Comune di Luni · Fondo per le non autosufficienze (FNA)",
+      url: "https://www.comune.luni.sp.it/en-us/servizi/salute-benessere-e-assistenza/fondo-per-le-non-autosufficienze-fna-714-54994-1-c8c7deb0ce76eba59d295e7b6404697d",
+    },
+    verificatoIl: "16/11/2026",
+    nota: "Pagina aggiornata il 02/10/2024: conferma requisiti e importi con il Servizio Assistenza Sociale.",
+  },
+
+  // --- 16/11/2026: Lazio, Distretto 4.2 Cerveteri (capofila) e Ladispoli ---
+  {
+    id: "cerveteri-ladispoli-disabilita-sostegno-intensivo",
+    regione: "Lazio",
+    comuni: ["cerveteri", "ladispoli"],
+    titolo: "Assegno di cura e contributo di cura per persone con disabilità che hanno bisogno di sostegno intensivo (Distretto 4.2)",
+    perChi:
+      "Persone con disabilità che hanno bisogno di sostegno intensivo e integrato a casa, residenti nei Comuni di Cerveteri e Ladispoli (Distretto socio sanitario 4.2). Gli altri requisiti sono nel bando: la pagina del Comune non li elenca. Chi già riceve il contributo o è stato riconosciuto idoneo e in lista d'attesa non deve ripresentare la domanda completa.",
+    cosa:
+      "Assegno di cura o contributo di cura, pagato ogni mese. Per il contributo di cura serve un'autocertificazione e vanno conservate le ricevute per i controlli. Il Piano di Assistenza Individuale è fatto dall'Unità di Valutazione Multidimensionale. Secondo il bando (art. 5): assegno di cura da 500 a 1.200 euro al mese e contributo di cura da 400 a 1.000 euro al mese, per 12 mensilità; l'importo dipende da un punteggio (servizi già attivi e ISEE sociosanitario). Il bando parla anche di soglie ISEE alte (oltre 50.000 euro per gli adulti, oltre 65.000 per i minori) in modo non chiaro: chiedi all'Ufficio di Piano come si applicano.",
+    stato: "attivo",
+    quando: "Il bando (art. 3) dice che si può presentare domanda in qualsiasi momento; la pagina del Comune non indica una data di chiusura.",
+    comeSiChiede:
+      "Con il modulo «disabilità gravissima» e il bando che trovi sulla pagina del Comune di Cerveteri (capofila del Distretto), consegnati al Protocollo o per PEC a comunecerveteri@pec.it. Informazioni: URP di Cerveteri, tel. 06 896301, urp@comune.cerveteri.rm.it.",
+    fonte: {
+      label: "Comune di Cerveteri · Avviso per interventi a favore di persone con disabilità che necessitano di sostegno intensivo ed integrato (pubblicato l'11/02/2025, aggiornato il 28/02/2025)",
+      url: "https://www.comune.cerveteri.rm.it/novita/avviso-pubblico-la-realizzazione-di-interventi-favore-di-persone-con-disabilita-che",
+    },
+    verificatoIl: "16/11/2026",
+    nota: "La pagina è del 2025 e non ha una scadenza: chiedi conferma all'ufficio che l'avviso sia ancora aperto. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
   },
 ];
 

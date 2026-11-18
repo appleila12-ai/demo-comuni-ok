@@ -1,3 +1,4 @@
+// Recapiti controllati il 17/11/2026. Fonte: https://comune.caltanissetta.it/it/servizi/registro-unico-distrettuale-r-u-d ; aggiornamento fonte: 20/02/2026.
 import type { ComuneConfig } from "../types";
 import { INPS_TERZA_FASE } from "../percorso";
 import { percorso } from "../percorso";
@@ -5,7 +6,8 @@ import { percorso } from "../percorso";
 // Comune di Caltanissetta (CL) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Verificato solo il sito del Comune (link ufficiale). Pagina "Salute, benessere e assistenza" del sito del Comune (controllato il 14 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: scheda «Politiche Sociali e Socio-Sanitarie» del Comune di Caltanissetta (aggiornata il 31/03/2026), letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const caltanissetta: ComuneConfig = {
   slug: "caltanissetta",
   tipo: "comune",
@@ -18,12 +20,12 @@ export const caltanissetta: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
+  indirizzo: "Palazzo del Carmine, Corso Umberto I 134",
   telefono: "0934 74111",
-  email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.caltanissetta.it/it/page/salute-benessere-e-assistenza?fromService=1",
+  email: "servizisociali@comune.caltanissetta.it",
+  pec: "direzione.politiche.sociali@pec.comune.caltanissetta.it",
+  orari: "Email della Direzione Politiche Sociali pubblicata nella scheda RUD. Il numero principale in questa scheda è il centralino del Comune; telefono diretto dello sportello sociale non verificato.",
+  sitoWeb: "https://comune.caltanissetta.it/it/servizi/registro-unico-distrettuale-r-u-d",
 
   logo: null,
 
@@ -38,8 +40,8 @@ export const caltanissetta: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.caltanissetta.it/it/page/salute-benessere-e-assistenza?fromService=1" },
+      subtitle: "Recapiti istituzionali nella scheda; controllati il 17/11/2026",
+      action: { type: "web", value: "https://comune.caltanissetta.it/it/servizi/registro-unico-distrettuale-r-u-d" },
     },
     {
       icon: "medkit-outline",

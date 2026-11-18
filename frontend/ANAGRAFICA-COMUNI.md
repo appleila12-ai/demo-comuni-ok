@@ -13,7 +13,7 @@ Dal 9/11/2026 TutelApp conosce **tutti i Comuni italiani** (elenco ISTAT), oltre
 - L'etichetta di **aderente** non si deduce dall'elenco: si assegna a mano, Comune per Comune (non ancora introdotta).
 - L'identificativo stabile è il **codice ISTAT**; lo slug serve solo per gli indirizzi. Gli slug delle schede esistenti non cambiano. Per gli omonimi (es. Samone TO e TN) si aggiunge la sigla.
 - I Comuni che fanno parte di un'Unione con scheda propria (Vigne e Vini, Giudicarie) si trovano cercando l'Unione, non come voci separate.
-- Il **sito web** dei Comuni presente nel file di partenza (IndicePA) non si usa: indirizzi non verificati. Compare solo dove è stato controllato a mano.
+- Sito, PEC ed email generica dei Comuni vengono dall'**Indice PA** (AgID, CC BY 4.0, file `src/content/riferimenti-comuni.json`, rifatto con `docs/riferimenti/costruisci-riferimenti-ipa.py`): dato ufficiale, non ricontrollato Comune per Comune. Il file di partenza dell'anagrafica (opendatasicilia) non si usa per i siti. In «Scrivi al tuo Comune» l'email generica ha la precedenza sulla PEC (molte PEC rifiutano la posta normale).
 
 ## Fonte e limiti
 - File `main.csv` del repository opendatasicilia/comuni-italiani (codici ISTAT, centroide del municipio), copia del 25/10/2025. **Va confrontato con l'elenco ISTAT più recente** (fusioni e cambi di sigla successivi non ci sono).

@@ -19,8 +19,9 @@ export const reggioCalabria: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0965 362111",
-  email: "",
+  // Settore Welfare, portale del Comune (data non indicata), consultato il 10/11/2026.
+  telefono: "0965 3622145",
+  email: "servizisociali@reggiocal.it",
   pec: "protocollo@pec.reggiocal.it",
   orari: "",
   sitoWeb: "https://www.comune.reggio-calabria.it",

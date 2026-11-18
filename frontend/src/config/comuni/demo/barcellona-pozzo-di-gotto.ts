@@ -4,7 +4,8 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Comune di Barcellona Pozzo di Gotto (ME) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (15 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Argomento "Assistenza sociale" del sito del Comune (controllato il 15 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: schede «Servizio Sociale Amministrativo» (10/06/2026) e «Servizio Sociale Professionale» del Comune di Barcellona Pozzo di Gotto, letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const barcellonaPozzoDiGotto: ComuneConfig = {
   slug: "barcellona-pozzo-di-gotto",
   tipo: "comune",
@@ -17,10 +18,10 @@ export const barcellonaPozzoDiGotto: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "090 9790246",
-  email: "",
-  pec: "",
+  indirizzo: "Via San Giovanni Bosco 1 (Palazzo Municipio)",
+  telefono: "090 9790395",
+  email: "servizi.sociali@comune.barcellonapozzodigotto.me.it",
+  pec: "comunebarcellonapdg-servizisociale@pcert.postecert.it",
   orari: "",
   sitoWeb: "https://www.comune.barcellona-pozzo-di-gotto.me.it/argomento/assistenza-sociale/",
 

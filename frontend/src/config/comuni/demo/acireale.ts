@@ -5,7 +5,8 @@ import { percorso } from "../percorso";
 // Comune di Acireale (CT) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Pagina "Salute, benessere e assistenza" del sito del Comune (controllata il 14 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali (15/11/2026): pagina «3.2.2 Servizi alla persona e alla famiglia» del sito del Comune (aggiornata il 17/10/2024): sede in via degli Ulivi 19; email e orari non indicati per i Servizi Sociali, non inseriti.
+// Da fare: email e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
 export const acireale: ComuneConfig = {
   slug: "acireale",
   tipo: "comune",
@@ -18,7 +19,7 @@ export const acireale: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
+  indirizzo: "Via degli Ulivi 19",
   telefono: "095 895111",
   email: "",
   pec: "",

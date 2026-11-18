@@ -4,7 +4,7 @@ import { percorso } from "../percorso";
 
 // Comune di Lecce (LE) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// È verificato solo l'indirizzo web indicato in sitoWeb.
+// Recapiti verificati 11/11/2026: https://www.comune.lecce.it/aree-tematiche/uffici-comunali/ufficio-anziani
 // Il sito blocca la lettura automatica: indirizzo da confermare.
 // Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
 export const lecce: ComuneConfig = {
@@ -17,13 +17,13 @@ export const lecce: ComuneConfig = {
   provincia: "LE",
   regione: "Puglia",
 
-  ente: "Servizi Sociali",
+  ente: "Servizi Sociali - Ufficio anziani",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0832 682111",
-  email: "",
+  indirizzo: "Via San Massimiliano Kolbe angolo Via Pistoia, Lecce",
+  telefono: "0832 682477",
+  email: "servizi.sociali@comune.lecce.it",
   pec: "",
-  orari: "",
+  orari: "Per il Segretariato Sociale è pubblicato anche il numero 0832 682682. Gli orari dell’Ufficio anziani differiscono tra la pagina dell’ufficio e quella sull’integrazione delle rette: telefona prima di andare.",
   sitoWeb: "https://www.comune.lecce.it",
 
   logo: null,
@@ -39,8 +39,8 @@ export const lecce: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.lecce.it" },
+      subtitle: "Recapiti dell’Ufficio anziani; orari discordanti tra le fonti: telefona prima di andare.",
+      action: { type: "web", value: "https://www.comune.lecce.it/aree-tematiche/uffici-comunali/ufficio-anziani" },
     },
   ],
 

@@ -69,6 +69,40 @@ export function voceDaSlug(slug: string): VoceAnagrafica | undefined {
   return PER_SLUG!.get(slug);
 }
 
+type Riferimenti = Record<string, [string, string, string]>;
+let RIFERIMENTI: Riferimenti | null = null;
+
+/**
+ * Riferimenti istituzionali del Comune (sito, PEC, email generica) dall'Indice PA (AgID),
+ * licenza CC BY 4.0. Il file (circa 760 KB) si legge solo la prima volta che serve.
+ */
+export function riferimentiComune(slug: string): { sito: string; pec: string; email: string } | null {
+  if (!RIFERIMENTI) {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    RIFERIMENTI = require("../../content/riferimenti-comuni.json") as Riferimenti;
+  }
+  const r = RIFERIMENTI[slug];
+  if (!r) return null;
+  return { sito: r[0] ? `https://${r[0]}` : "", pec: r[1] || "", email: r[2] || "" };
+}
+
+type AmbitiMap = Record<string, [string, string]>;
+let AMBITI: AmbitiMap | null = null;
+
+/**
+ * Ambito Territoriale Sociale del Comune e Comune/ente capofila, dal Registro Ambiti del
+ * Ministero del Lavoro e delle Politiche Sociali (estratto del 06/03/2025,
+ * https://lavoro.gov.it/node/134). Null se il Comune non è nel Registro.
+ */
+export function ambitoComune(slug: string): { ambito: string; capofila: string } | null {
+  if (!AMBITI) {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    AMBITI = require("../../content/ambiti-territoriali.json") as AmbitiMap;
+  }
+  const a = AMBITI[slug];
+  return a ? { ambito: a[0], capofila: a[1] } : null;
+}
+
 /**
  * Cerca per nome tra i Comuni che NON hanno una scheda propria (gli altri si trovano
  * già nell'elenco delle schede). Prima chi inizia col testo scritto, poi gli altri.
@@ -133,11 +167,12 @@ const schede = new Map<string, ComuneConfig>();
 
 /**
  * Scheda MINIMA di un Comune presente solo nell'elenco ISTAT: nome, provincia e regione.
- * Nessun telefono, email, indirizzo, orario o servizio: non sono verificati.
+ * Sito e PEC vengono dall'Indice PA (AgID, CC BY 4.0). Nessun telefono, indirizzo, orario o servizio: non sono verificati.
  */
 export function schedaDaAnagrafica(v: VoceAnagrafica): ComuneConfig {
   const esistente = schede.get(v.slug);
   if (esistente) return esistente;
+  const rif = riferimentiComune(v.slug);
   const scheda: ComuneConfig = {
     slug: v.slug,
     tipo: "comune",
@@ -153,9 +188,9 @@ export function schedaDaAnagrafica(v: VoceAnagrafica): ComuneConfig {
     indirizzo: "",
     telefono: "",
     email: "",
-    pec: "",
+    pec: rif?.pec ?? "",
     orari: "",
-    sitoWeb: "",
+    sitoWeb: rif?.sito ?? "",
 
     logo: null,
     theme: TEMA_ELENCO,

@@ -45,6 +45,12 @@ export const roma: ComuneConfig = {
       action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-vii-uffici-e-contatti.page?contentId=UFF513958" },
     },
     {
+      icon: "location-outline",
+      title: "Municipio VII · Segretariato Sociale (Tuscolano e Appio)",
+      subtitle: "Sede Tuscolano: Via Tuscolana 950, 4° piano, Poliambulatorio San Raffaele; tel. 339 4632505; segretariatosocialetuscolano.mun07@comune.roma.it. Sede Appio: Via Tommaso Fortifiocca 71; tel. 06 69609650; segretariatosocialeappio.mun07@comune.roma.it. Per entrambe: lun, mar e gio 9–16, mer 9–13. La scheda del Comune è stata aggiornata il 02/04/2025: conferma orari e sede prima di recarti. Fonte Roma Capitale, letta il 14/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF24521" },
+    },
+    {
       icon: "people-outline",
       title: "Municipio VIII · Segretariato Sociale e PUA",
       subtitle: "Coordinatrice Rosa Paolella. Telefoni 06 69611670 / 671; famiglie e minori 06 69611690; responsabile 06 69611624. Email pua.mun08@comune.roma.it. Sede e orari da verificare nella pagina istituzionale.",
@@ -99,6 +105,18 @@ export const roma: ComuneConfig = {
       action: { type: "web", value: "https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF1037074" },
     },
     {
+      icon: "location-outline",
+      title: "Municipio X · Punti Unici di Accesso (PUA)",
+      subtitle: "Accesso libero, senza appuntamento. Sede Passeroni, Via Gian Carlo Passeroni 24: lunedì 9–12; tel. 06 69613519 / 345 7478064. Sede Toscanelli, Casa della Salute, Lungomare Paolo Toscanelli 230: martedì e giovedì 9–12 e 15–17; tel. 06 56483982 / 345 7478064. Sede Casal Bernocchi, Via Casal Bernocchi 61: venerdì 9–12; tel. 345 7478064. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte Roma Capitale, avviso del 16/04/2026, letto il 16/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/informazione-di-servizio.page?contentId=IDS1565312" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio XI · Segretariato Sociale e PUA",
+      subtitle: "Via della Magliana 296. Email pua.mun11@comune.roma.it. Per i servizi sociali per anziani, persone con disabilità e famiglie: tel. 06 69615669 / 06 69615678 / 06 69615507, lunedì e mercoledì 8:30–12:00 (altre fasce: vedi pagina). L'accesso agli uffici è su appuntamento. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte Roma Capitale, letta il 16/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-xi-uffici-e-contatti.page?contentId=UFF1137046" },
+    },
+    {
       icon: "people-outline",
       title: "Municipio VI · Ufficio Settore Disabilità",
       subtitle: "Viale Duilio Cambellotti 11. Segue SAISH adulti e minori, disabilità gravissima, caregiver, OEPAC, autismo, Dopo di Noi, vita indipendente e centri diurni. Referente: Annalisa Montagnoli, tel. 06 69608946. Fonte Roma Capitale, 09/11/2026.",
@@ -142,6 +160,29 @@ export const roma: ComuneConfig = {
     },
     {
       icon: "location-outline",
+      title: "Municipio X · Segretariato Sociale e PUA",
+      subtitle: "Lunedì 9–12 e martedì 9–12 e 15–17: Via G. C. Passeroni 24 (sede dei Servizi Sociali del Municipio). Giovedì 9–12 e 15–17: Lungomare P. Toscanelli 230 (Casa della Salute di Ostia). Venerdì 9–12: Sportello Caregiver in Via Passeroni 24 e sportello generico in Via di Casal Bernocchi 73 (Casa di Comunità). Mercoledì: sportello LGBTQIA+ a Lungomare Toscanelli 230. Scrivi a segretariatosociale.mun10@comune.roma.it o a segretariato.pua10@gmail.com. Il numero di telefono non ci è stato indicato nella risposta: l'abbiamo chiesto il 13/11/2026 a segretariatosociale.mun10@comune.roma.it; finché manca, usa le email. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte: risposta dell'Ufficio PUA del Municipio X, 13/11/2026.",
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio XI · Segretariato Sociale e PUA",
+      subtitle: "Via della Magliana 296, primo piano. Tel. 06 69615669 / 06 69615678 / 06 69615507; pua.mun11@comune.roma.it. Orari di sportello: il sito del Comune ne riporta versioni diverse, quindi non li indichiamo. Li abbiamo chiesti il 12/11/2026 a pua.mun11@comune.roma.it: puoi chiederli anche tu allo stesso indirizzo. Fonte Roma Capitale, 12/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/informazione-di-servizio.page?contentId=IDS549187" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio XII · Segretariato Sociale e PUA",
+      subtitle: "Via Panfilo Castaldi 28/B, piano terra. Lun e mer 8:30–13:00; mar e gio 8:30–17:00. Tel. 06 69616606 / 607 / 608; pua.mun12@comune.roma.it. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Mancano le altre sedi (Via Longhena 98 e Via Ramazzini): sedi e orari non sono chiari sul sito e li abbiamo chiesti il 12/11/2026 a pua.mun12@comune.roma.it, a cui puoi scrivere anche tu. Fonte Roma Capitale, 12/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-xii-uffici-e-contatti.page?contentId=UFF29748" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio XIV · Segretariato Sociale e PUA",
+      subtitle: "Piazza Santa Maria della Pietà 5, Padiglione 1 (dal 15/06/2026 la sede non è più il Padiglione 13). Lun, mer e ven 8:30–12:30; mar 14:00–16:00; gio 8:30–12:30 e 14:00–16:00. PUA tel. 06 60106805; altri recapiti 06 60106807 e 339 5694010; segretariatosociale.mun14@comune.roma.it. Fonte Roma Capitale, comunicazione del 09/06/2026, letta il 12/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/informazione-di-servizio.page?contentId=IDS1598149" },
+    },
+    {
+      icon: "location-outline",
       title: "Municipio XIII · Segretariato Sociale",
       subtitle: "Per orientamento e aiuto con le domande: 06 69618600 / 06 69618604; segretariatosociale.mun13@comune.roma.it. Consultare il sito municipale per appuntamento. Verifica 09/11/2026.",
       action: { type: "web", value: "https://www.comune.roma.it/web/it/bando-concorso.page?contentId=BEC1656054" },
@@ -182,8 +223,8 @@ export const roma: ComuneConfig = {
     "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
-    label: "ASL Roma 1 · Esenzioni ticket",
-    url: "https://www.aslroma1.it",
+    label: "ASL Roma 1 · Esenzione ticket: tesserino via email dal Distretto o di persona",
+    url: "https://www.aslroma1.it/esenzione-ticket-per-malattie-croniche-e-o-invalidanti",
   },
 
   daVerificare: true,

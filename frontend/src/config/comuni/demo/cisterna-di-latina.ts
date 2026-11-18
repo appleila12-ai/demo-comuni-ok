@@ -4,7 +4,8 @@ import { percorso } from "../percorso";
 // Comune di Cisterna di Latina (LT) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // L'indirizzo del sito del Comune è preso dalla scheda del Comune su tuttitalia.it (collegamento al sito istituzionale): il sito non è stato aperto in questo giro, quindi indirizzo e pagina dei servizi sociali sono da verificare. Il link dell'azienda sanitaria è ripreso dalle schede dei Comuni vicini: da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: Pagina «Welfare e Servizi Sociali» del Comune di Cisterna di Latina (verificata il 13/11/2026).
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const cisternaDiLatina: ComuneConfig = {
   slug: "cisterna-di-latina",
   tipo: "comune",
@@ -17,11 +18,11 @@ export const cisternaDiLatina: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
-  pec: "mail@pec.comune.cisterna.latina.it",
-  orari: "",
+  indirizzo: "Corso della Repubblica 186 (ex Palazzo comunale)",
+  telefono: "06 96834296",
+  email: "puac@comune.cisterna.latina.it",
+  pec: "welfare@pec.comune.cisterna.latina.it",
+  orari: "Segretariato sociale (PUAC): 06 96834315. Il sito del Comune riporta orari diversi in pagine diverse: chiama il PUAC per l'appuntamento. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.cisterna.latina.it",
 
   logo: null,

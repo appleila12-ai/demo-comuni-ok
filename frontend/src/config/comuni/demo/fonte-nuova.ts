@@ -4,7 +4,8 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Comune di Fonte Nuova (RM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (27 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sito del Comune: indirizzo indicato dalla titolare il 27/10/2026. PEC: domicilio digitale su IndicePA. Coordinate: database ISTAT/Belfiore dell'archivio. PUA: pagina ASL Roma 5 del Distretto di Monterotondo letta il 27/10/2026 (telefono: solo quello del Distretto; il PUA comunale non ha un numero proprio). Link generale dell'azienda sanitaria da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: pagine dell'Ufficio Servizi Sociali e della responsabile sul sito del Comune (scheda della responsabile aggiornata il 09/07/2025), riportate il 14/11/2026. Orari di apertura non indicati.
+// Da fare: orari; bonus del Comune, associazioni, sport e tempo libero.
 export const fonteNuova: ComuneConfig = {
   slug: "fonte-nuova",
   tipo: "comune",
@@ -17,9 +18,9 @@ export const fonteNuova: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
+  indirizzo: "Via Niccolò Machiavelli 1, Hub servizi, 1° piano",
+  telefono: "06 905522437 (responsabile dei Servizi Sociali); Segretariato sociale 06 905522440 / 06 905522446",
+  email: "sociale@fonte-nuova.it",
   pec: "protocollo@cert.fonte-nuova.it",
   orari: "",
   sitoWeb: "https://comune.fontenuova.rm.it",

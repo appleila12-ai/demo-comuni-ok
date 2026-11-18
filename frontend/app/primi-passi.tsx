@@ -50,7 +50,7 @@ function buildPrimiPassi() {
     body: comune.trasporto,
     ...(comune.telefono
       ? { link: { label: `Chiama ${comune.ente} · ${comune.telefono}`, url: `tel:${comune.telefono.replace(/\s+/g, "")}` } }
-      : { link: { label: "Sito dei servizi sociali", url: comune.sitoWeb } }),
+      : { link: { label: comune.soloElenco ? "Sito del Comune" : "Sito dei servizi sociali", url: comune.sitoWeb } }),
     color: topics.patronato,
   },
   {
@@ -81,7 +81,7 @@ function buildPrimiPassi() {
     body: `${[comune.ente, comune.indirizzo].filter(Boolean).join(" · ")}.${comune.orari ? ` Orari: ${comune.orari}.` : ""} Un primo ascolto gratuito per capire di cosa hai bisogno e quali servizi puoi attivare subito, anche senza verbale.${comune.telefono ? "" : comune.soloElenco ? " I recapiti di questo Comune non sono ancora in TutelApp." : " I recapiti li trovi sul sito del Comune."}`,
     link: comune.telefono
       ? { label: `Chiama ${comune.ente} · ${comune.telefono}`, url: `tel:${comune.telefono.replace(/\s+/g, "")}` }
-      : { label: "Sito dei servizi sociali", url: comune.sitoWeb },
+      : { label: comune.soloElenco ? "Sito del Comune" : "Sito dei servizi sociali", url: comune.sitoWeb },
     color: topics.patronato,
   },
   {

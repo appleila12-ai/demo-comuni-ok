@@ -20,6 +20,7 @@ import { colors, fonts, radius, spacing } from "@/src/theme";
 import { GuideStepsCard } from "@/src/components/NextStepsSection";
 import { LivelliSection } from "@/src/components/LivelliSection";
 import { NEXT_STEPS } from "@/src/lib/content";
+import { VOCI_RIFORMA, CASO_OVER_70, NOTA_CONTROLLA, RIFORMA_VERIFICATA_IL, riformaInTuttaItalia } from "@/src/lib/riformaDisabilita";
 import { SezioniBar } from "@/src/components/SezioniBar";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
@@ -111,6 +112,37 @@ export default function PercorsoScreen() {
             <Text style={styles.azioneText}>{azione.label}</Text>
             <Ionicons name="chevron-forward" size={16} color={colors.brandPrimaryDark} />
           </Pressable>
+
+          {/* Regole della riforma: dove la riforma è attiva basta il certificato; dal 1/1/2027 in tutta Italia */}
+          {passo === 0 ? (
+            <View style={styles.territorio} testID="percorso-riforma">
+              <Text style={styles.territorioTitolo} accessibilityRole="header">
+                Cosa sapere prima di partire
+              </Text>
+              <Text style={styles.puntoSub}>
+                {riformaInTuttaItalia()
+                  ? "Dal 1° gennaio 2027 la nuova procedura vale in tutta Italia: il certificato del medico avvia la pratica."
+                  : "Dove la riforma è già attiva basta il certificato del medico. Dove non lo è ancora serve anche la domanda all'INPS entro 90 giorni. Dal 1° gennaio 2027 vale in tutta Italia."}
+              </Text>
+              {[...VOCI_RIFORMA, CASO_OVER_70].map((v) => (
+                <View key={v.id} style={styles.punto} accessible accessibilityLabel={`${v.titolo}. ${v.testo}${v.nota ? ` ${v.nota}` : ""}`}>
+                  <View style={styles.flex}>
+                    <Text style={styles.puntoTitle}>{v.titolo}</Text>
+                    <Text style={styles.puntoSub}>{v.testo}</Text>
+                    {v.nota ? <Text style={styles.puntoSub}>{v.nota}</Text> : null}
+                    <Text
+                      style={styles.puntoSub}
+                      accessibilityRole="link"
+                      onPress={() => Linking.openURL(v.fonte.url).catch(() => {})}
+                    >
+                      Fonte: {v.fonte.etichetta} (verificata il {RIFORMA_VERIFICATA_IL})
+                    </Text>
+                  </View>
+                </View>
+              ))}
+              <Text style={styles.puntoSub}>Se un punto non è chiaro: {NOTA_CONTROLLA}.</Text>
+            </View>
+          ) : null}
 
           {/* Dove farlo, nel territorio del Comune */}
           {punti.length > 0 ? (

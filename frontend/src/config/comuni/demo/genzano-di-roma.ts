@@ -5,7 +5,8 @@ import { percorso } from "../percorso";
 // Comune di Genzano di Roma (RM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (11 novembre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sito e telefono (centralino) dai documenti del Comune (avvisi pubblici 2024-2026). Il link dell'azienda sanitaria è quello già usato per i Comuni della stessa ASL.
-// Da fare: email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: Scheda «Ufficio Servizi Sociali» del Comune di Genzano di Roma (13/11/2026). PEC generale del Comune.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const genzanoDiRoma: ComuneConfig = {
   slug: "genzano-di-roma",
   tipo: "comune",
@@ -18,11 +19,11 @@ export const genzanoDiRoma: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "06 937111",
-  email: "",
-  pec: "",
-  orari: "",
+  indirizzo: "Via Italo Belardi 81",
+  telefono: "06 93711310",
+  email: "servizisociali@comune.genzanodiroma.roma.it",
+  pec: "protocollo@comunegenzanodiromapec.it",
+  orari: "Solo su appuntamento, da fissare con l'ufficio ai numeri indicati. Giorni e fasce orarie non indicati dal Comune.",
   sitoWeb: "https://www.comune.genzanodiroma.roma.it",
 
   logo: null,
