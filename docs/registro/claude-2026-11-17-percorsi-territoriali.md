@@ -55,3 +55,8 @@ Nessun dato di Comuni, bonus o destinatari modificato (Lombardia è in quota Cha
 - Aggiunto riquadro «Da dove iniziare» (tre cose: Dati del Comune e Referenti, Servizi sociali, un solo percorso «Dopo una diagnosi»); il resto è facoltativo.
 - La sezione Modulistica si precompila col link «Modulistica» già in app, dove esiste (Mediglia sì, Sarzana nessuna voce: resta vuota).
 - Prova: `precompila` con dati reali. Schermata non provata dal vivo.
+
+## 18/11/2026 – Modulo Percorsi Territoriali anche per Genova
+- Aggiunto il Comune di Genova (`genova`) a `src/percorsi/comuni.ts` e all'elenco di `netlify/functions/percorsi.mjs`.
+- Il modulo si precompila dalla scheda del Comune di Genova già in app (15 campi: dati del Comune, servizi sociali, trasporto, esenzione ticket, punti di supporto, associazioni e sport). Referente: «Da confermare con il Comune»; ambito e capofila non indicati (nessuna fonte nella scheda).
+- Serve la password del Comune nelle impostazioni segrete di Netlify: `PERCORSI_PASSWORD_GENOVA` (non è nel repository). Dopo averla inserita va rifatto il deploy.

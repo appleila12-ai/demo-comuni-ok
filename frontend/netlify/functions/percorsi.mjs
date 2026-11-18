@@ -9,12 +9,13 @@
 //   PERCORSI_PASSWORD_ADMIN      password di TutelApp (apre tutti i moduli), almeno 12 caratteri
 //   PERCORSI_PASSWORD_MEDIGLIA   password del Comune di Mediglia, almeno 12 caratteri
 //   PERCORSI_PASSWORD_SARZANA    password del Comune di Sarzana, almeno 12 caratteri
+//   PERCORSI_PASSWORD_GENOVA     password del Comune di Genova, almeno 12 caratteri
 // Per aggiungere un Comune: aggiungerlo a COMUNI qui sotto e in src/percorsi/comuni.ts.
 
 import { getStore } from "@netlify/blobs";
 import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 
-const COMUNI = ["mediglia", "sarzana"];
+const COMUNI = ["mediglia", "sarzana", "genova"];
 const DURATA_SESSIONE_MS = 12 * 60 * 60 * 1000;
 const MAX_CARATTERI_RICHIESTA = 400_000;
 const MAX_CAMPI = 1000;
