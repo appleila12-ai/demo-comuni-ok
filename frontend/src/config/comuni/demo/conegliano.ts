@@ -4,7 +4,13 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Comune di Conegliano (TV) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Dati presi dal sito ufficiale del Comune/ente (settembre 2026), da verificare.
-// Recapiti dei Servizi Sociali preesistenti non ricontrollati in questo lotto.\n// Esenzione ticket ULSS 2: pagina ufficiale aggiornata 28/03/2024, consultata 18/11/2026.\n// https://www.aulss2.veneto.it/Richiedere-lesenzione-per-patologia\n// Invalidità civile ULSS 2: https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile\n// Email ordinaria protocollo@comune.conegliano.tv.it e sede Municipio Piazza Cima 8: sito istituzionale, consultato 18/11/2026.\n// https://pagopa.comune.conegliano.tv.it/it\n// Scheda parziale: bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare.
+// Recapiti dei Servizi Sociali preesistenti non ricontrollati in questo lotto.
+// Esenzione ticket ULSS 2: pagina ufficiale aggiornata 28/03/2024, consultata 18/11/2026.
+// https://www.aulss2.veneto.it/Richiedere-lesenzione-per-patologia
+// Invalidità civile ULSS 2: https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile
+// Email ordinaria protocollo@comune.conegliano.tv.it e sede Municipio Piazza Cima 8: sito istituzionale, consultato 18/11/2026.
+// https://pagopa.comune.conegliano.tv.it/it
+// Scheda parziale: bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare.
 export const conegliano: ComuneConfig = {
   slug: "conegliano",
   tipo: "comune",
