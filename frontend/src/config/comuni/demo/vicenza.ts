@@ -6,6 +6,9 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // È verificato solo l'indirizzo web indicato in sitoWeb.
 // Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
+// Fonte regionale ticket/esenzioni: Regione Veneto, aggiornamento 20/05/2026, consultazione archivio #335 (17/11/2026), riuso 18/11/2026.
+// https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni
+// La procedura e lo sportello fisico specifici dell'ULSS locale restano da verificare; scheda PARZIALE.
 export const vicenza: ComuneConfig = {
   slug: "vicenza",
   tipo: "comune",
@@ -48,7 +51,7 @@ export const vicenza: ComuneConfig = {
 
   esenzioneTicket: {
     label: "Esenzioni ticket · chiedi alla tua azienda sanitaria",
-    url: "https://www.comune.vicenza.it",
+    url: "https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni",
   },
 
   daVerificare: true,
