@@ -8,7 +8,13 @@ import { percorso } from "../percorso";
 // Da verificare: indirizzo, telefono, email, orari, responsabile
 // Fonte regionale ticket/esenzioni: Regione Veneto, aggiornamento 20/05/2026, consultazione archivio #335 (17/11/2026), riuso 18/11/2026.
 // https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni
-// La procedura e lo sportello fisico specifici dell'ULSS locale restano da verificare; scheda PARZIALE.
+// 18/11/2026: il PDF comunale «Servizio Sociale Professionale», aggiornato 20/05/2025, specifica
+// Segretariato Sociale: Viale Vittorio Veneto 27, 0422 658610, sociale@comune.treviso.it, lun–ven 9–11.
+// Fonte: https://www.comune.treviso.it/myportal/C_L407/api/content/download?id=682d69c922c6d2008bfb0e9a
+// ULSS 2: richiesta esenzione per patologia online con SPID/CIE o presso sportelli distrettuali;
+// fonte aggiornata 28/03/2024: https://www.aulss2.veneto.it/Richiedere-lesenzione-per-patologia
+// Esenzione per invalidità civile non equiparata alla procedura INAIL; ticket e sportello locale da completare.
+// Scheda PARZIALE: bonus regionali/comunali/Ambito, destinatario Scrivi al Comune, avviso UI.
 export const treviso: ComuneConfig = {
   slug: "treviso",
   tipo: "comune",
@@ -22,10 +28,10 @@ export const treviso: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "Servizi Sociali – Comune di Treviso",
   indirizzo: "Viale Vittorio Veneto 27, 31100 Treviso (TV)",
-  telefono: "0422 658362",
+  telefono: "0422 658610",
   email: "sociale@comune.treviso.it",
   pec: "postacertificata@cert.comune.treviso.it",
-  orari: "Lun–Ven 9:00–10:00 (contatto telefonico)",
+  orari: "Lun–Ven 9:00–11:00 (Segretariato Sociale, sportello e telefono)",
   sitoWeb: "https://www.comune.treviso.it/home/dettaglio/amministrazione-info/servizi-sociali",
 
   logo: null,
@@ -41,8 +47,8 @@ export const treviso: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali – Treviso",
-      subtitle: "Servizi Sociali – Comune di Treviso · Viale Vittorio Veneto 27, 31100 Treviso (TV) · Tel. 0422 658362",
-      action: { type: "tel", value: "0422658362" },
+      subtitle: "Servizi Sociali – Comune di Treviso · Viale Vittorio Veneto 27, 31100 Treviso (TV) · Tel. 0422 658610",
+      action: { type: "tel", value: "0422658610" },
     },
     {
       icon: "business-outline",
@@ -58,11 +64,11 @@ export const treviso: ComuneConfig = {
     },
   ],
 
-  trasporto: "Chiedi ai Servizi Sociali di Treviso (0422 658362) quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie).",
+  trasporto: "Chiedi al Segretariato Sociale di Treviso (0422 658610) quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie).",
 
   esenzioneTicket: {
     label: "ULSS 2 Marca Trevigiana · Esenzioni ticket",
-    url: "https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni",
+    url: "https://www.aulss2.veneto.it/Richiedere-lesenzione-per-patologia",
   },
 
   daVerificare: true,
