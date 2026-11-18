@@ -54,7 +54,7 @@ export const chioggia: ComuneConfig = {
 
   esenzioneTicket: {
     label: "Azienda ULSS 3 Serenissima",
-    url: "https://www.aulss3.veneto.it",
+    url: "https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni",
   },
 
   daVerificare: true,
