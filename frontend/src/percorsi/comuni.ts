@@ -3,6 +3,7 @@
 // e il suo slug nell'elenco COMUNI di netlify/functions/percorsi.mjs, poi la sua password
 // nelle impostazioni segrete di Netlify (mai nel repository).
 
+import { genova } from "@/src/config/comuni/demo/genova";
 import { mediglia } from "@/src/config/comuni/mediglia";
 import { sarzana } from "@/src/config/comuni/sarzana";
 import type { ComuneConfig } from "@/src/config/comuni/types";
@@ -41,6 +42,13 @@ export const COMUNI_PERCORSI: Record<string, ComunePercorsi> = {
     titolo: "TutelApp – Percorsi Territoriali | Comune di Sarzana",
     nome: "Comune di Sarzana",
     scheda: sarzana,
+    referenteIniziale: "Da confermare con il Comune",
+  },
+  genova: {
+    slug: "genova",
+    titolo: "TutelApp – Percorsi Territoriali | Comune di Genova",
+    nome: "Comune di Genova",
+    scheda: genova,
     referenteIniziale: "Da confermare con il Comune",
   },
 };

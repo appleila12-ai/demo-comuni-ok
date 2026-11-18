@@ -1,5 +1,5 @@
 // TutelApp – Percorsi Territoriali: area riservata ai Comuni (solo web).
-// Indirizzo: /accesso-comuni?comune=mediglia (oppure sarzana). Non è collegata da nessun menu
+// Indirizzo: /accesso-comuni?comune=mediglia (oppure sarzana, genova). Non è collegata da nessun menu
 // dell'app e non è indicizzata (intestazione X-Robots-Tag in netlify.toml).
 //
 // L'accesso è controllato sul server (netlify/functions/percorsi.mjs): nessuna password sta nel
