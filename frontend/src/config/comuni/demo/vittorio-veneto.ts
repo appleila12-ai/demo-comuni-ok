@@ -3,7 +3,12 @@ import { INPS_TERZA_FASE } from "../percorso";
 
 // Comune di Vittorio Veneto (TV) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (20 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Fonti ufficiali consultate il 18/11/2026: ufficio Servizi Sociali e Assistenziali, aggiornato 10/11/2023.\n// https://www.comune.vittorio-veneto.tv.it/home/amministrazione/uffici/Ufficio-26.html\n// Esenzione ticket per patologia ULSS 2, aggiornamento 28/03/2024.\n// https://www.aulss2.veneto.it/Richiedere-lesenzione-per-patologia\n// Esenzione per invalidità civile ULSS 2: https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile\n// Scheda parziale: bonus regionali, bonus comunali/Ambito e destinatario Scrivi al Comune da verificare; avviso UI da controllare.
+// Fonti ufficiali consultate il 18/11/2026: ufficio Servizi Sociali e Assistenziali, aggiornato 10/11/2023.
+// https://www.comune.vittorio-veneto.tv.it/home/amministrazione/uffici/Ufficio-26.html
+// Esenzione ticket per patologia ULSS 2, aggiornamento 28/03/2024.
+// https://www.aulss2.veneto.it/Richiedere-lesenzione-per-patologia
+// Esenzione per invalidità civile ULSS 2: https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile
+// Scheda parziale: bonus regionali, bonus comunali/Ambito e destinatario Scrivi al Comune da verificare; avviso UI da controllare.
 export const vittorioVeneto: ComuneConfig = {
   slug: "vittorio-veneto",
   tipo: "comune",
