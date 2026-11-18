@@ -4,8 +4,9 @@ import { percorso } from "../percorso";
 
 // Comune di Vicenza (VI) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// È verificato solo l'indirizzo web indicato in sitoWeb.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; sito dell'azienda sanitaria; bonus del Comune, associazioni, sport e tempo libero.
+// 18/11/2026: sede e recapiti della Segreteria Servizi Sociali verificati sul sito comunale.
+// Fonte: https://www.comune.vicenza.it/Vivere-il-Comune/Luoghi/Sede-Servizi-Sociali (orari validi dal 01/03/2024).
+// Da fare: bonus regionali e comunali/Ambito, procedura ULSS locale, destinatario Scrivi al Comune, avviso UI, associazioni.
 // Fonte regionale ticket/esenzioni: Regione Veneto, aggiornamento 20/05/2026, consultazione archivio #335 (17/11/2026), riuso 18/11/2026.
 // https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni
 // La procedura e lo sportello fisico specifici dell'ULSS locale restano da verificare; scheda PARZIALE.
@@ -21,12 +22,12 @@ export const vicenza: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0444 221111",
-  email: "",
+  indirizzo: "Palazzo Negrisolo, Contrà Giovanni Busato 19, Vicenza",
+  telefono: "0444 222520",
+  email: "segreteriadirezioneservizisociali@comune.vicenza.it",
   pec: "vicenza@cert.comune.vicenza.it",
-  orari: "",
-  sitoWeb: "https://www.comune.vicenza.it",
+  orari: "Segreteria Servizi Sociali: lun, mer, ven 10:00–12:30; mar e gio 10:00–12:30 e 16:30–18:00",
+  sitoWeb: "https://www.comune.vicenza.it/Vivere-il-Comune/Luoghi/Sede-Servizi-Sociali",
 
   logo: null,
 
@@ -41,8 +42,8 @@ export const vicenza: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.vicenza.it" },
+      subtitle: "Segreteria · Contrà Giovanni Busato 19 · 0444 222520",
+      action: { type: "tel", value: "0444222520" },
     },
   ],
 
