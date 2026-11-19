@@ -82,3 +82,14 @@ Controllato direttamente `frontend/src/config/comuni/destinatari.ts` su `main` (
 - **Conegliano:** slug `conegliano` **assente** dall'archivio destinatari su `main`. Il portale istituzionale comunale indica `protocollo@comune.conegliano.tv.it` (email ordinaria), `pec@comuneconegliano.legalmail.it` (PEC), telefono 0438 4131, Piazza Giovanni Battista Cima 8. Fonte https://pagopa.comune.conegliano.tv.it/it (consultata 19/11/2026; data di ultimo aggiornamento NON INDICATA). L'indirizzo ordinario è candidato per «Scrivi al tuo Comune»; prima dell'integrazione controllare il flusso e l'archivio delle comunicazioni Drive. Non modificato il file condiviso per evitare conflitti e riscritture estese.
 
 **Avanzamento effettivo:** una lacuna precedentemente segnalata (destinatario Vittorio Veneto) risulta già risolta nell'archivio; una lacuna Conegliano ha una fonte istituzionale utilizzabile, ma manca l'integrazione. Entrambe le schede restano **PARZIALI**, nessun nuovo completo o chiuso in attesa di riscontro. Controlli Node e verifica UI da effettuare; nessuna email, merge o pubblicazione.
+
+## Verifica 19/11/2026 — mini alloggi ERP over 65 a Vittorio Veneto
+
+**Dato nuovo inserito nella scheda:** bando speciale 2026 per mini alloggi di edilizia residenziale pubblica riservato ad anziani **autosufficienti** di almeno 65 anni; domande dal **09/11/2026 al 10/12/2026**, esclusivamente su appuntamento con Ufficio Servizi Sociali, telefono **0438 569319**, lun–ven 9–13 e giovedì anche 15–17. Email informazioni **ufficiocasa@comune.vittorio-veneto.tv.it**. Fonte ufficiale Comune di Vittorio Veneto, pagina **aggiornata 06/11/2026**, consultata **19/11/2026**:
+https://www.comune.vittorio-veneto.tv.it/home/vivere/Servizi-Sociali/Case-popolari---E.R.P..html
+
+La pagina rinvia al bando allegato per tutti i requisiti. **Non** presentare questa misura come specifica per persone con disabilità o non autosufficienti. Punto di supporto inserito solo nella scheda Vittorio Veneto; non toccati `bonus.ts`, `destinatari.ts`, file protetti o regioni di Claude. Commit scheda: `d67f41bb1a7b2e0dd9557bf57882c7a93828ef25`.
+
+**Conflitto trasporto scolastico disabilità tuttora irrisolto:** home comunale https://www.comune.vittorio-veneto.tv.it/ indica scadenza 30/11/2026, ma https://www.comune.vittorio-veneto.tv.it/home/vivere/Scuola/contributi.html (aggiornata 22/06/2026) dice «Bando non ancora disponibile». Non inserire la misura come aperta senza avviso 2026 specifico.
+
+**Stato:** Vittorio Veneto PARZIALE, Conegliano PARZIALE; 0 nuovi completi, 0 chiusi in attesa di riscontro. Mancano altri bonus regionali/comunali/ATS, destinatario Conegliano, prova visiva avviso UI. Controlli Node non eseguiti; controllare CI del nuovo commit e anteprima Netlify. Nessuna email, merge o pubblicazione.
