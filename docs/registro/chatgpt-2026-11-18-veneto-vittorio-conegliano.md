@@ -36,3 +36,12 @@ Modifica dati classe A **stimata**, da confermare con `node frontend/scripts/con
 - Il Comune appartiene all'ATS VEN-07 (28 Comuni, capofila Conegliano), fonte istituzionale https://www.comune.vittorio-veneto.tv.it/home/amministrazione/Attuazione-Misure-PNRR/Missione-5/m5c21.2-1.2.2.html (consultata 19/11/2026). Il progetto PNRR di autonomia non equivale a bando per singoli cittadini.
 
 **Stato invariato:** Vittorio Veneto PARZIALE, Conegliano PARZIALE, 0 Comuni completi e 0 chiusi in attesa di riscontro in questa esecuzione. Da verificare ancora bonus regionali e altri bonus ATS, recapiti Conegliano, destinatari Scrivi al Comune e avviso UI. Non sono state inviate email. Nessuna pubblicazione/merge. Controlli Node e anteprima Netlify non verificati.
+
+## Aggiornamento 19/11/2026, ore 02 — contributo prima infanzia
+
+**Vittorio Veneto: nuova misura 2026 inserita nella scheda** come punto di supporto (non in bonus.ts, condiviso). Contributo comunale per rimborso parziale delle rette di servizi educativi per l'infanzia 3–36 mesi sostenute nel 2026. Beneficiari: richiedente e figlio residenti a Vittorio Veneto, iscrizione a struttura che rispetta requisiti di frequenza (almeno 5 giorni/settimana e 4 ore/giorno), nido comunale escluso. Contributo variabile, calcolato sulla differenza con la retta teorica del nido comunale; compatibile con bonus INPS con decurtazione; non indicato importo fisso. In caso di risorse insufficienti si applicano criteri di priorità, inclusi residenza di almeno cinque anni di un genitore, ISEE minorenni e numero figli. Domanda entro **09/12/2026** via **asilonido@comune.vittorio-veneto.tv.it**, allegando modulo, spese documentate, documento e ISEE; una domanda per ogni figlio. Fonte ufficiale comunale aggiornata **20/10/2026**, consultata **19/11/2026**:
+https://www.comune.vittorio-veneto.tv.it/home/info/Asilo-nido/contributo2026.html
+Avviso ufficiale protocollo **40244/2026 del 19/10/2026**:
+https://www.comune.vittorio-veneto.tv.it/dam/jcr%3Ac6fb6b43-2b83-424d-afb9-206c17e6809c/AVVISO%20PUBBLICO%20CONTR%20NIDI.pdf
+
+**Attenzione:** contributo per famiglie in generale, non misura riservata alla disabilità. Non usare per affermare che la scheda è completa. **Stato:** Vittorio Veneto PARZIALE, Conegliano PARZIALE; **0** nuovi completi, **0** chiusi in attesa di riscontro. Mancano bonus regionali e ATS, destinatari «Scrivi al Comune», controllo avviso UI. Nessuna email, pubblicazione o merge. Test Node e anteprima Netlify non eseguiti in questa esecuzione.
