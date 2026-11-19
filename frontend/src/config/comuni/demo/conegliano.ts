@@ -17,7 +17,10 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Conferma recapito Servizi Sociali 0438 413210, email servizisociali@comune.conegliano.tv.it.
 // Voucher ATS prima infanzia: domande chiuse il 15/05/2026, NON presentare come aperto.
 // Recapiti ATS del 2024 da riconfermare prima di dichiarare completa la scheda.
-// Famiglie fragili Regione Veneto: pagina aggiornata 26/02/2025, consultata 19/11/2026.\n// https://www.regione.veneto.it/web/sociale/famiglie-fragili\n// Solo orientamento, nessun bando 2026 aperto confermato.\n// Scheda parziale: bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare.
+// Famiglie fragili Regione Veneto: pagina aggiornata 26/02/2025, consultata 19/11/2026.
+// https://www.regione.veneto.it/web/sociale/famiglie-fragili
+// Solo orientamento, nessun bando 2026 aperto confermato.
+// Scheda parziale: bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare.
 export const conegliano: ComuneConfig = {
   slug: "conegliano",
   tipo: "comune",
