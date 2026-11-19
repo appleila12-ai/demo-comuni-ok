@@ -73,3 +73,12 @@ https://www.comune.vittorio-veneto.tv.it/dam/jcr%3Ac6fb6b43-2b83-424d-afb9-206c1
 ## Checkpoint 19/11/2026 ore 06
 
 Riletti workflow, AGENTS, indice, assegnazioni e issue #262, #267, #270; PR aperte #357, #216, #209, #204 con relativi file e ultimi 10 commit main. Corrette le sequenze letterali `\n` nei commenti di fonti regionali delle schede Conegliano e Vittorio Veneto, commit 9992d55 e 342c1bb; nessun dato sostanziale alterato. Stato CI del commit 342c1bb: zero status e zero workflow run restituiti, dunque CI non verificata. Tre controlli Node e verifica visiva dell'anteprima Netlify non eseguiti. Schede ancora parziali, 0 nuovi Comuni completi su obiettivo 20, 0 chiusi in attesa di riscontro. Mancano bonus regionali/comunali/ATS, destinatari Scrivi al Comune e verifica avviso UI. Nessuna email, merge o pubblicazione.
+
+## Verifica destinatari «Scrivi al tuo Comune» — 19/11/2026, ore 07
+
+Controllato direttamente `frontend/src/config/comuni/destinatari.ts` su `main` (lettura, **nessuna modifica**).
+
+- **Vittorio Veneto:** destinatario **già presente**: `pec.comune.vittorioveneto.tv@pecveneto.it`, tipo `pec`, fonte preesistente IPA 20/10/2026. La PEC coincide con quella indicata sul sito comunale, https://www.comune.vittorio-veneto.tv.it/notizie/bonusacqua.html (pagina 28/10/2026, consultata 19/11/2026). **Non è più un campo assente**; resta da verificare che la funzione UI lo utilizzi e se sia preferibile un recapito ordinario per il cittadino.
+- **Conegliano:** slug `conegliano` **assente** dall'archivio destinatari su `main`. Il portale istituzionale comunale indica `protocollo@comune.conegliano.tv.it` (email ordinaria), `pec@comuneconegliano.legalmail.it` (PEC), telefono 0438 4131, Piazza Giovanni Battista Cima 8. Fonte https://pagopa.comune.conegliano.tv.it/it (consultata 19/11/2026; data di ultimo aggiornamento NON INDICATA). L'indirizzo ordinario è candidato per «Scrivi al tuo Comune»; prima dell'integrazione controllare il flusso e l'archivio delle comunicazioni Drive. Non modificato il file condiviso per evitare conflitti e riscritture estese.
+
+**Avanzamento effettivo:** una lacuna precedentemente segnalata (destinatario Vittorio Veneto) risulta già risolta nell'archivio; una lacuna Conegliano ha una fonte istituzionale utilizzabile, ma manca l'integrazione. Entrambe le schede restano **PARZIALI**, nessun nuovo completo o chiuso in attesa di riscontro. Controlli Node e verifica UI da effettuare; nessuna email, merge o pubblicazione.
