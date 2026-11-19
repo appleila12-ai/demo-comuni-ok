@@ -44,3 +44,20 @@
 - Fonte istituzionale Comune di Susegana, determinazione n. 217 del 30/03/2026 e avviso ufficiale `https://www.comune.susegana.tv.it/myportal/C_L014/api/content/download?id=69ca7cdb786d1d008a7d0343` (consultato 19/11/2026): conferma VEN-07 capofila Conegliano, budget ATS 138.649 euro, voucher 900–1.500 euro. L'intestazione menziona annualità 2025 e un punto del testo dice 'Voucher 2024': **non dedurre annualità da quella riga**; per la finestra domande 2026 usare la pagina regionale sopra.
 - ATTENZIONE: la pagina regionale `https://www.regione.veneto.it/web/sociale/fattore-famiglia` riporta ancora importi **900–1.300 euro** e frequenza **2023–2024**, quindi è materiale di un ciclo precedente. **Non usarla per sostituire le cifre 2026.**
 - Azione per il lotto: riutilizzare la stessa fonte regionale per Conegliano, Vittorio Veneto e Susegana; NON creare tre bonus duplicati; non presentare il voucher come aperto. Nessun nuovo Comune completo con questa verifica.
+
+
+## Verifica aggiuntiva 19/11/2026 — trasporto sociale e contributi sportivi Vittorio Veneto
+**Fonte 1 (Comune, pubblicata e aggiornata 22/09/2026, consultata 19/11/2026):** https://www.comune.vittorio-veneto.tv.it/notizie/trasportosociale.html
+- Avviso per individuare **un ente del Terzo Settore gestore** del servizio di trasporto sociale, periodo previsto 01/11/2026–31/12/2029. Destinatari previsti del servizio: anziani, persone con disabilità, persone fragili e minori. Scadenza della **candidatura degli enti gestori**: 13/10/2026, già trascorsa. Recapiti dell'ufficio Servizi Sociali: 0438 569311 / 0438 569318; sociale@comune.vittorio-veneto.tv.it.
+- **Distinzione essenziale:** l'avviso non è una domanda di contributo economico per cittadini e non prova che il servizio sia già operativo né quali siano requisiti, modalità di prenotazione, costi o accesso. Non creare un bonus aperto. **Prossimo passo:** cercare la pagina del servizio al cittadino, la convenzione stipulata o comunicazione istituzionale di avvio prima di integrare `puntiSupporto`.
+
+**Fonte 2 (Comune, pubblicata 13/11/2026, consultata 19/11/2026):** https://www.comune.vittorio-veneto.tv.it/notizie/contr.html
+- Avviso per contributi alle **associazioni e società sportive** organizzatrici di eventi nel 2026: stanziamento complessivo 20.000 €, massimo 3.000 € per evento, copertura fino all'80% del disavanzo, domande entro 29/11/2026. Tra i criteri di valutazione anche l'accessibilità alle persone con disabilità.
+- **Non è un bonus personale per cittadini con disabilità.** Non inserirlo tra i bonus comunali alle famiglie; possibile candidato per una futura sezione rivolta alle associazioni, previa verifica dell'avviso integrale.
+
+**Fonte 3 (Comune, aggiornata 22/06/2026, consultata 19/11/2026):** https://www.comune.vittorio-veneto.tv.it/home/vivere/Scuola/contributi.html
+- La pagina del trasporto scolastico per studenti con disabilità riporta ancora «Bando non ancora disponibile»; la homepage https://www.comune.vittorio-veneto.tv.it/ (consultata 19/11/2026, data aggiornamento non indicata) mostra invece scadenza 30/11/2026. **Conflitto non risolto**: non inserire requisiti o bando aperto senza l'avviso integrale del 2026.
+
+**Impatto sui cinque requisiti:** nessuno dei tre riscontri completa una scheda. Stato invariato: Conegliano e Vittorio Veneto parziali; Susegana solo ricercata; **0/20 completi, 0 chiusi in attesa**. Nessuna richiesta ufficiale inviata. Non è stata verificata visivamente l'UI dell'avviso #270. Nessuna modifica ai dati applicativi.
+
+**Controlli di questa esecuzione:** consultate sei PR aperte (#368, #367, #365, #216, #209, #204), file interessati e ultimi dieci commit; `docs/AUTORIZZAZIONI.md` mantiene pubblicazione automatica disattivata. Node non eseguito tramite connettore GitHub; verifica CI e Netlify separata. Prossimo lotto: cercare i requisiti di accesso del trasporto sociale, completare bonus regionali/d'Ambito e destinatari, senza duplicare le ricerche già annotate.
