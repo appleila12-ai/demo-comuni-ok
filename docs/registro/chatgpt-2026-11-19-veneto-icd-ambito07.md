@@ -8,3 +8,11 @@
 - **Controlli:** Node non eseguito; CI/Netlify non verificati, nessuna anteprima visiva.
 - **Mancano:** verifica integrale bonus regionali/comunali/Ambito, integrazione destinatario Conegliano, prova visiva avviso incompleti; nessuna email autorizzata.
 - **Prossimo passo:** riuso ICD e fonti ULSS 2 per il successivo lotto VEN-07; verifica dei 5 requisiti per ogni Comune, senza bloccare il lotto su un singolo dato.
+
+## Controllo anti-duplicazione del catalogo (19/11/2026, ore 11)
+
+- Letto `frontend/src/lib/bonus.ts` sul ramo della PR: la misura regionale **ICD esiste già** con id `veneto-impegnative-cura-domiciliare`, regione `Veneto`, fonte ufficiale Regione Veneto; presente anche `veneto-icd-caregiver-familiare`. **Non aggiungere una seconda voce ICD né replicarla nelle singole schede come nuovo bonus.** Verificare invece che la visualizzazione regionale sia effettivamente raggiungibile da Conegliano e Vittorio Veneto.
+- Letti `frontend/src/config/comuni/demo/conegliano.ts` e `vittorio-veneto.ts`: entrambe hanno `daVerificare: true`, `dimostrativo: true`, recapiti sociali e collegamenti ULSS 2; il flag non sostituisce la prova visiva dell'avviso. Vittorio Veneto contiene già bonus acqua, nido e mini alloggi; non duplicarli. Conegliano contiene protocollo e ATS VEN-07 nei `puntiSupporto`, ma non risulta per questo completato il destinatario dell'azione «Scrivi al tuo Comune».
+- Controllate PR aperte e relativi file: #362 (solo proposta e registro Veneto), #361 (proposta MVP), #216 (anagrafica e codice), #209 (diario), #204 (pagina bianca). Nessun file app dei due Comuni occupato da altre PR; `bonus.ts` e `destinatari.ts` non modificati. Letti ultimi dieci commit disponibili di repository; il controllo separato della sola cronologia `main` non è garantito dalla ricerca commit.
+- **Stato invariato:** 0 Comuni nuovi completi, 2 parziali, 0 chiusi in attesa. Mancano verifica bonus comunali/Ambito, prova end-to-end destinatari e avviso UI. Prossima azione concreta: verifica funzionamento del bonus ICD già globale e del pulsante «Scrivi al tuo Comune» senza modificare file condivisi; poi passare al lotto indipendente VEN-07.
+- **Controlli:** Node non eseguito; anteprima Netlify per #362 segnalata *canceled* nel commento automatico del 19/11/2026, quindi nessuna verifica visiva. Nessun invio, merge o pubblicazione.
