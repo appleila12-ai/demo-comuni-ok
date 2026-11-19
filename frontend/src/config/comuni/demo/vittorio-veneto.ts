@@ -95,7 +95,7 @@ export const vittorioVeneto: ComuneConfig = {
   ],
 
   trasporto:
-    "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
+    "Per sapere se e come utilizzare il trasporto sociale, contatta i Servizi Sociali e Assistenziali: 0438 569311 / 0438 569318, sociale@comune.vittorio-veneto.tv.it. Il Comune ha pubblicato il 22/09/2026 un avviso per individuare un ente gestore (https://www.comune.vittorio-veneto.tv.it/notizie/trasportosociale.html), ma l’avviso non conferma che il servizio sia già attivo né le modalità di accesso per i cittadini.",
 
   esenzioneTicket: {
     label: "ULSS 2 Marca Trevigiana · Esenzioni ticket",
