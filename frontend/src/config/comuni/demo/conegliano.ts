@@ -8,7 +8,7 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Esenzione ticket ULSS 2: pagina ufficiale aggiornata 28/03/2024, consultata 18/11/2026.
 // https://www.aulss2.veneto.it/Richiedere-lesenzione-per-patologia
 // Invalidità civile ULSS 2: https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile
-// Email ordinaria protocollo@comune.conegliano.tv.it e sede Municipio Piazza Cima 8: sito istituzionale, consultato 18/11/2026.
+// Email ordinaria protocollo@comune.conegliano.tv.it e sede Municipio Piazza Cima 8: sito istituzionale, consultato 19/11/2026.\n// Data di ultimo aggiornamento della pagina non indicata; recapiti verificati sul portale comunale.
 // https://pagopa.comune.conegliano.tv.it/it
 // Ufficio ATS VEN-07: fonte primaria, avviso comunale DGR 69/2024, consultato 19/11/2026.
 // https://www.comune.conegliano.tv.it/myportal/C_C957/api/content/download?id=66a8d225103327008c224481
@@ -55,6 +55,12 @@ export const conegliano: ComuneConfig = {
       title: "Servizi Sociali – Conegliano",
       subtitle: "5° Settore Servizi alla Persona – Servizio Politiche Sociali · Piazzale Beccaria, 31015 Conegliano (TV) · Tel. 0438 413210 (confermato in avviso comunale 30/03/2026)",
       action: { type: "tel", value: "0438413210" },
+    },
+    {
+      icon: "business-outline",
+      title: "Comune di Conegliano · Protocollo",
+      subtitle: "Per comunicazioni al Comune: protocollo@comune.conegliano.tv.it · PEC pec@comuneconegliano.legalmail.it · Piazza Giovanni Battista Cima 8, 31015 Conegliano · Tel. 0438 4131",
+      action: { type: "web", value: "https://pagopa.comune.conegliano.tv.it/it" },
     },
     {
       icon: "people-outline",
