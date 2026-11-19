@@ -64,3 +64,26 @@ Nessuna nuova PR: sono già aperte più di due PR attribuite a ChatGPT (#296, #2
 - I 29 controlli di Oggi e il controllo strutturale dati passano sulla base aggiornata: 113 bonus, 426 schede, 343 destinatari, 259 associazioni. Il confronto non segnala aggiunte o rimozioni negli archivi.
 - L'installazione interrotta non aveva prodotto né node_modules né un lockfile aggiornato. È stata riavviata con il registro npm ufficiale, timeout delle richieste e cache temporanea dedicata; nessuna protezione del repository viene disattivata. Compilazione e congelamento del nuovo lockfile ancora da verificare.
 - SHA-256 package.json invariato: 4b5b8e908add6cf1e53f84c20e61aaa62ffae54f8d6ba4a6844b339f2a9138ce.
+
+### Esiti conclusivi del 19/11/2026
+
+| Controllo | Esito e limite |
+| --- | --- |
+| Installazione delle dipendenze dichiarate | Riuscita, con preinstall del progetto eseguito |
+| Aggiornamento autorizzato del lockfile | 469 righe aggiunte, nessuna riga rimossa; package.json invariato |
+| Reinstallazione --frozen-lockfile --offline | Riuscita, hash del lockfile invariato prima/dopo: 40cca3f40367ecdff8fda828c7ad7ea69d8e19275141c0970d72c66b2123c904 |
+| yarn build (Expo web + anteprime Comuni) | Riuscito, esportazione dist completata |
+| Build Netlify del commit 1ba5a71e0a28e0af7d5f77905da7855a8ffe92c2 | Riuscito; https://deploy-preview-365--tutelappcomuni.netlify.app |
+| Browser desktop, stessa anteprima | Scelto Sarzana, senza inserire nome o altri dati personali; aggiunta la sola voce fittizia PROVA Cartella Blu per il 20/11/2026 ore 12 |
+| Ritrovare la data | Riuscito: voce visibile in Oggi, etichettata Data inserita da te |
+| Preparare il calendario | Riuscito fino al messaggio File calendario preparato; visibili titolo generico e piano B. NON verificati importazione nel calendario esterno o ricezione dell'avviso |
+| Modalità discreta | Nascondi Oggi seguito da ricaricamento: dettagli ancora nascosti; successivo Mostra Oggi funzionante |
+| Controllo completo TypeScript | Non superato: 10 errori. Ripetuto il confronto con l'index.tsx di origin/main ed esclusi i tre nuovi moduli dalle radici del programma: gli stessi 10 errori negli stessi file/codici sono presenti nella base. Nessun errore nuovo nei file di questo intervento |
+| Controlli dati, confronto e classificazione | Zero errori strutturali e zero voci territoriali aggiunte/rimosse. Classe C per il solo lockfile protetto, già autorizzato da Ilaria |
+
+I dieci errori TypeScript riguardano cassetto.tsx (4), roma.ts (1), associazioni.ts (1), esenzioneAslRisposte.ts (2), pdf-extract.ts (2). Non modificati qui. Il build Metro passa ma questo non equivale a un controllo globale dei tipi superato.
+
+Per evitare che le dipendenze appena installate saturassero l'elenco dei file non tracciati, le sole cartelle generate frontend/node_modules, frontend/dist, frontend/.expo e frontend/.metro-cache sono escluse localmente dal Git del checkout. Nessuna regola del controllo e nessun file tracciato sono stati modificati per aggirare verifiche.
+
+Non è un via libera alla pubblicazione generale: restano l'uniformazione del vecchio calendario di Le mie scadenze con #209, i telefoni reali, l'accessibilità e la verifica complessiva della privacy. La schermata è ora effettivamente visibile nell'anteprima, non soltanto nel codice. L'app pubblica non viene modificata in questo turno.
+
