@@ -10,7 +10,14 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Invalidità civile ULSS 2: https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile
 // Email ordinaria protocollo@comune.conegliano.tv.it e sede Municipio Piazza Cima 8: sito istituzionale, consultato 18/11/2026.
 // https://pagopa.comune.conegliano.tv.it/it
-// Ufficio ATS VEN-07: fonte primaria, avviso comunale DGR 69/2024, consultato 19/11/2026.\n// https://www.comune.conegliano.tv.it/myportal/C_C957/api/content/download?id=66a8d225103327008c224481\n// Recapiti ATS storici da riconfermare prima di dichiarare completa la scheda.\n// Scheda parziale: bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare.
+// Ufficio ATS VEN-07: fonte primaria, avviso comunale DGR 69/2024, consultato 19/11/2026.
+// https://www.comune.conegliano.tv.it/myportal/C_C957/api/content/download?id=66a8d225103327008c224481
+// Avviso voucher prima infanzia ATS VEN-07 prot. 17017 del 30/03/2026, consultato 19/11/2026:
+// https://www.comune.conegliano.tv.it/myportal/C_C957/api/content/download?id=69ca4fcdf00987008b10c9e6
+// Conferma recapito Servizi Sociali 0438 413210, email servizisociali@comune.conegliano.tv.it.
+// Voucher ATS prima infanzia: domande chiuse il 15/05/2026, NON presentare come aperto.
+// Recapiti ATS del 2024 da riconfermare prima di dichiarare completa la scheda.
+// Scheda parziale: bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare.
 export const conegliano: ComuneConfig = {
   slug: "conegliano",
   tipo: "comune",
@@ -43,7 +50,7 @@ export const conegliano: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali – Conegliano",
-      subtitle: "5° Settore Servizi alla Persona – Servizio Politiche Sociali · Piazzale Beccaria, 31015 Conegliano (TV) · Tel. 0438 413210",
+      subtitle: "5° Settore Servizi alla Persona – Servizio Politiche Sociali · Piazzale Beccaria, 31015 Conegliano (TV) · Tel. 0438 413210 (confermato in avviso comunale 30/03/2026)",
       action: { type: "tel", value: "0438413210" },
     },
     {
