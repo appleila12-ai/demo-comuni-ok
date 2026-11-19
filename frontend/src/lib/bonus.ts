@@ -2282,12 +2282,13 @@ export const BONUS: Bonus[] = [
     stato: "aperto",
     scade: "2026-11-23",
     quando: "Domande entro le 23:59 del 23/11/2026. Pagina del Comune aggiornata il 03/11/2026.",
-    comeSiChiede: "Con il modulo dell'avviso del Comune di Sassari: leggi la pagina e il PDF dell'avviso per i documenti e il modo di consegna.",
+    comeSiChiede: "Un genitore, tutore o affidatario presenta una domanda per ciascun minore, esclusivamente online su https://cizrm.municipia.eng.it/?ente=I452 con il proprio SPID. Nell'area personale apri Domande Online, i servizi del Settore Politiche Educative e il modulo Contributo trasporto scolastico in favore di alunni con disabilità. Allega obbligatoriamente la certificazione legge 104, art. 3, comma 3. Indica un IBAN intestato o cointestato al richiedente. Per informazioni: contributi.trasporto@comune.sassari.it; telefoni 079 279699, 079 279689, 079 279675. L'email serve per informazioni, non per inviare la domanda.",
     fonte: {
       label: "Comune di Sassari · Voucher per il servizio di trasporto scolastico per studenti con disabilità, anno 2026",
       url: "https://www.comune.sassari.it/it/amministrazione/documenti-dati/documento-pubblico/Voucher-per-il-servizio-di-trasporto-scolastico-in-favore-di-studenti-disabili-frequentanti-il-primo-ciclo-di-studi-residenti-nel-Comune-di-Sassari-anno-2026/",
     },
-    verificatoIl: "11/11/2026",
+    verificatoIl: "19/11/2026",
+    nota: "Fondi limitati: se le richieste superano le risorse, si applica una graduatoria. Per correggere una domanda già inviata devi presentarne una nuova; viene considerata l'ultima per lo stesso minore. Il PDF del 03/11/2026 chiarisce che l'ISEE assente o irregolare comporta l'inserimento in coda, anche se la pagina di sintesi lo elenca tra i documenti richiesti.",
   },
   {
     id: "sassari-piani-162-98-nuove-domande-2026",
