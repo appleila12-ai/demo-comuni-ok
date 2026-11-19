@@ -45,3 +45,13 @@ Avviso ufficiale protocollo **40244/2026 del 19/10/2026**:
 https://www.comune.vittorio-veneto.tv.it/dam/jcr%3Ac6fb6b43-2b83-424d-afb9-206c17e6809c/AVVISO%20PUBBLICO%20CONTR%20NIDI.pdf
 
 **Attenzione:** contributo per famiglie in generale, non misura riservata alla disabilità. Non usare per affermare che la scheda è completa. **Stato:** Vittorio Veneto PARZIALE, Conegliano PARZIALE; **0** nuovi completi, **0** chiusi in attesa di riscontro. Mancano bonus regionali e ATS, destinatari «Scrivi al Comune», controllo avviso UI. Nessuna email, pubblicazione o merge. Test Node e anteprima Netlify non eseguiti in questa esecuzione.
+
+## Aggiornamento 19/11/2026 — ufficio ATS VEN-07 e controlli incrociati
+
+**Conegliano:** aggiunto alla scheda un punto di supporto distinto per l'ufficio dell'Ambito Territoriale Sociale VEN-07, di cui Conegliano è capofila. Recapiti riportati nell'avviso istituzionale DGR 69/2024: ufficionoa@comune.conegliano.tv.it, telefoni 0438 413238 / 413237 / 413215, sede Piazza Beccaria 1. Fonte consultata il 19/11/2026: https://www.comune.conegliano.tv.it/myportal/C_C957/api/content/download?id=66a8d225103327008c224481 . La scheda segnala espressamente che i recapiti provengono dall'avviso 2024; la loro attualità non è stata confermata e non sono stati dedotti bandi aperti.
+
+**Fonte di riscontro aggiuntiva:** avviso ufficiale del Comune con riferimento a capofila VEN-07 e contatto Servizi Sociali servizisociali@comune.conegliano.tv.it: https://www.comune.conegliano.tv.it/myportal/C_C957/api/content/download?id=67e68a723970fe0090a0aa69 (consultato 19/11/2026). Per la sede e il protocollo generale: https://pagopa.comune.conegliano.tv.it/it (consultato 19/11/2026). Non modificato destinatari.ts, che richiede controllo di assegnazione e archivio Drive.
+
+**Controllo conflitti:** al 19/11/2026 le PR aperte risultano #357, #216, #209 e #204; la modifica riguarda soltanto un file già appartenente alla propria #357 e il relativo registro. Nessun file delle altre PR toccato. Ultimi 10 commit main riletti. Issue #262, #267, #270 e istruzioni di progetto rilette.
+
+**Stato e limiti:** Conegliano PARZIALE, Vittorio Veneto PARZIALE; nuovi Comuni completi **0/20**, chiusi in attesa di riscontro **0**, schede parziali aggiornate in questo passaggio **1**. Mancano bonus regionali e dell'Ambito/Comune, destinatari Scrivi al Comune, verifica aggiornata dei recapiti ATS e dell'avviso accessibile in UI. Nessuna prova di richiesta ufficiale inviata. Node e anteprima Netlify non verificati. Nessuna email, merge o pubblicazione.
