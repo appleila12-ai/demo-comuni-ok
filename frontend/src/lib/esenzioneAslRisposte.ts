@@ -919,7 +919,26 @@ ESENZIONE_ASL.ferrara = {
   ],
   manca:
     "La pagina dello Sportello Unico CUP non dice se per le esenzioni serva l'appuntamento (lo indica solo per l'iscrizione al Servizio sanitario dei cittadini extracomunitari) né i tempi di rilascio e le regole sulla delega: chiedili allo Sportello Unico CUP.",
-  fonte: "AUSL Ferrara · risposta scritta dell'URP del 02/11/2026 e pagine ufficiali «Esenzioni ticket» (aggiornata l'11/06/2025) e «Sportello Unico - CUP» (aggiornata il 29/10/2026)",
+  fonte: "AUSL Ferrara · risposte scritte dell'URP del 02/11/2026 e del 16/11/2026 (che rimanda alla stessa pagina «Esenzioni ticket») e pagine ufficiali «Esenzioni ticket» (aggiornata l'11/06/2025) e «Sportello Unico - CUP» (aggiornata il 29/10/2026)",
+};
+
+// AUSL di Imola: risposta scritta dell'URP del 18/11/2026 (solo indicazione delle pagine ufficiali; dettagli non inseriti).
+ESENZIONE_ASL.imola = {
+  asl: "AUSL di Imola",
+  intro:
+    "L'URP dell'AUSL di Imola indica che le esenzioni vengono registrate presso l'Anagrafe sanitaria dell'Azienda USL e che tutte le informazioni sono nelle due pagine ufficiali qui sotto.",
+  telefoni: [{ etichetta: "URP · Azienda USL di Imola", numero: "0542 604121" }],
+  paginaUrl: "https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/5055",
+  paginaLabel: "Esenzioni · pagina indicata dall'URP dell'AUSL di Imola",
+  altriLink: [
+    {
+      label: "Seconda pagina indicata dall'URP dell'AUSL di Imola",
+      url: "https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/30",
+    },
+  ],
+  manca:
+    "L'URP non ha scritto dove si presenta la richiesta, quali documenti servono, se serve l'appuntamento né i tempi di rilascio: li trovi nelle pagine qui sotto o chiedili all'URP.",
+  fonte: "AUSL di Imola · risposta scritta dell'URP del 18/11/2026 (pagine indicate dall'ufficio, non ancora lette per intero da TutelApp)",
 };
 
 // ASP Catanzaro: risposta scritta dell'URP del 02/11/2026 (distretti citati: Catanzaro e Lamezia Terme).
@@ -1320,7 +1339,13 @@ ESENZIONE_ASL.padova = {
   paginaLabel: "Sportello amministrativo distrettuale · ULSS 6 Euganea",
   manca:
     "I documenti da allegare sono indicati solo nelle istruzioni di ogni richiesta, e la guida non chiarisce tutti i casi di invalidità civile. Non ho trovato gli orari degli sportelli fisici: chiedili all'URP.",
-  fonte: "ULSS 6 Euganea · guida allo sportello online (aggiornamento non indicato) e Carta di accoglienza del Distretto Padova Bacchiglione (novembre 2025), consultate il 10/11/2026",
+  altriLink: [
+    {
+      label: "Medicina legale · ULSS 6 Euganea (visite per invalidità civile e L. 104)",
+      url: "https://www.aulss6.veneto.it/servizio-di-medicina-legale",
+    },
+  ],
+  fonte: "ULSS 6 Euganea · risposte scritte dell'URP del 19/11/2026 (pagina «Sportello amministrativo distrettuale», sezione «Esenzioni», e pagina «Servizio di medicina legale») · guida allo sportello online (aggiornamento non indicato) e Carta di accoglienza del Distretto Padova Bacchiglione (novembre 2025), consultate il 10/11/2026",
 };
 
 // ASL Latina: Carta dei servizi 2026 (rev. 25/03/2026) e pagine dei Distretti 2 (04/12/2025) e 4 (02/12/2025), controllate il 10/11/2026.
