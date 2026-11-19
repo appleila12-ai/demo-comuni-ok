@@ -2163,12 +2163,12 @@ export const BONUS: Bonus[] = [
     scade: "2026-11-23",
     quando: "Dal 27 ottobre 2026 alle 16:30 del 23 novembre 2026.",
     comeSiChiede:
-      "Si consegnano il modulo e gli allegati al Front-office Politiche sociali, Palazzo Satellite, piazza della Repubblica 40. La pagina non dice se può presentarla un rappresentante.",
+      "Si consegnano il modulo e gli allegati al Front-office Politiche sociali, Palazzo Satellite, piazza della Repubblica 40: lunedì-venerdì 8:30-12:30; martedì e giovedì anche 14:30-16:30. La pagina non dice se può presentarla un rappresentante.",
     fonte: {
       label: "Comune di Messina · Avviso tessere AST 2027/2028 (27/10/2026)",
-      url: "https://comune.messina.it/it/news/6488620",
+      url: "https://www.comune.messina.it/Novita/Comunicati/Tessere-AST-per-persone-con-disabilita-al-via-le-domande-per-il-biennio-2027-2028",
     },
-    verificatoIl: "10/11/2026",
+    verificatoIl: "19/11/2026",
   },
   {
     id: "vda-vita-indipendente-art22",
@@ -2197,17 +2197,17 @@ export const BONUS: Bonus[] = [
     perChi:
       "Persone con disabilità grave (legge 104, art. 3, comma 3) prive del sostegno familiare, da 18 a 64 anni (oltre i 64 solo per chi è già beneficiario), residenti in Puglia da almeno un anno, nelle condizioni familiari previste dall'art. 2 dell'avviso. È incompatibile con Pro.V.I. (linee A e C), Patto di cura e Sostegno familiare. Serve l'ISEE ordinario; la soglia non è indicata nella fonte.",
     cosa: "Un budget fino a 15.000 euro per un progetto personalizzato, per un massimo di 12 mesi.",
-    stato: "attivo",
+    stato: "aperto",
     scade: "2026-12-16",
     quando:
-      "Le domande si aprono alle 12:00 del 16 novembre 2026 e si chiudono alle 12:00 del 16 dicembre 2026 (art. 7 dell'avviso). Finora non è aperto.",
+      "Domande aperte dalle 12:00 del 16 novembre 2026 alle 12:00 del 16 dicembre 2026 (art. 7 dell'avviso).",
     comeSiChiede:
       "Online sulla piattaforma regionale PugliaSociale con SPID, CIE o CNS. La domanda la presenta la persona, un familiare di riferimento o un delegato.",
     fonte: {
       label: "Regione Puglia · Avviso Dopo di Noi (testo pubblicato dal Comune di Altamura, 06/11/2026)",
       url: "https://www.comune.altamura.ba.it/it/news/avviso-pubblico-dei-progetti-personalizzati-dopo-di-noi-linea-b",
     },
-    verificatoIl: "11/11/2026",
+    verificatoIl: "19/11/2026",
     nota: "Fondi dell'annualità 2024, determina n. 1722 del 03/11/2026. Chi ha rinunciato alla graduatoria Linea A o ha un progetto Dopo di Noi attivo ha condizioni particolari: leggi l'art. 2. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
   },
   {
@@ -2319,12 +2319,12 @@ export const BONUS: Bonus[] = [
     stato: "aperto",
     scade: "2026-11-20",
     quando: "Domande entro il 20/11/2026. Pagina aggiornata il 01/10/2026.",
-    comeSiChiede: "Secondo l'avviso del Comune di Trapani (pagina e PDF): leggi i documenti da allegare.",
+    comeSiChiede: "Invia la domanda via PEC a servizi.sociali@pec.comune.trapani.it oppure consegnala a mano al Protocollo dei Servizi Sociali, via Archimede 1. Allega l'ISEE in corso di validità e gli altri documenti previsti dall'avviso.",
     fonte: {
       label: "Comune di Trapani · Tessere ATM 2027, aperte le domande",
       url: "https://comune.trapani.it/novita/tessere-atm-2027-aperte-le-domande-per-gli-aventi-diritto/",
     },
-    verificatoIl: "11/11/2026",
+    verificatoIl: "19/11/2026",
   },
   {
     id: "ragusa-tessere-ast-2027-2028",
