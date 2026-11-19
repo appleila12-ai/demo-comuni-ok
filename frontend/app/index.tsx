@@ -29,6 +29,7 @@ import { InvitoSalvataggio } from "@/src/components/InvitoSalvataggio";
 import { RecuperaDati } from "@/src/components/RecuperaDati";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
 import { apriMail as apriProgrammaPosta } from "@/src/lib/apriMail";
+import { ambitoComune } from "@/src/config/comuni/anagrafica";
 import { RichiestaNome, RichiestaNomeHome } from "@/src/components/RichiestaNome";
 import { useNomeUtente } from "@/src/lib/nomeUtente";
 import { SITO_TUTELAPP, linkMailtoInserimentoComune } from "@/src/lib/richiestaComune";
@@ -490,6 +491,12 @@ function HomeDelComune() {
           {!!comune.soloElenco && (
             <Text style={styles.contactText}>
               I recapiti dei servizi di questo Comune non sono ancora in TutelApp.
+            </Text>
+          )}
+          {!!comune.soloElenco && !!ambitoComune(comune.slug) && (
+            <Text style={styles.contactText}>
+              Ambito sociale: {ambitoComune(comune.slug)!.ambito}. Capofila: {ambitoComune(comune.slug)!.capofila}.
+              {"\n"}Fonte: Ministero del Lavoro, Registro Ambiti (06/03/2025).
             </Text>
           )}
           {!!comune.soloElenco && (

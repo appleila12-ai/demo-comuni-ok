@@ -111,7 +111,7 @@ export const DESTINATARI: Record<string, Destinatario> = {
   // Barcellona Pozzo di Gotto (ME)
   "barcellona-pozzo-di-gotto": { email: "comunebarcellonapdg@postecert.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Bari (BA)
-  "bari": { email: "archiviogenerale.comunebari@pec.rupar.puglia.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
+  "bari": { email: "rip.serviziallapersona@comune.bari.it", tipo: "ordinaria", fonte: "Comune di Bari · colloquio con il servizio sociale: https://www.comune.bari.it/-/richiesta-colloquio-con-servizio-sociale-professionale (aggiornata 28/09/2026; controllata 11/11/2026)" },
   // Barletta (BT)
   "barletta": { email: "protocollo@cert.comune.barletta.bt.it", tipo: "pec", fonte: "elenco PEC degli enti (protocollo generale)" },
   // Belluno (BL)

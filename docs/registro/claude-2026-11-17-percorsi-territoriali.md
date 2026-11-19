@@ -55,3 +55,14 @@ Nessun dato di Comuni, bonus o destinatari modificato (Lombardia è in quota Cha
 - Aggiunto riquadro «Da dove iniziare» (tre cose: Dati del Comune e Referenti, Servizi sociali, un solo percorso «Dopo una diagnosi»); il resto è facoltativo.
 - La sezione Modulistica si precompila col link «Modulistica» già in app, dove esiste (Mediglia sì, Sarzana nessuna voce: resta vuota).
 - Prova: `precompila` con dati reali. Schermata non provata dal vivo.
+
+## 18/11/2026 – Modulo Percorsi Territoriali anche per Genova
+- Aggiunto il Comune di Genova (`genova`) a `src/percorsi/comuni.ts` e all'elenco di `netlify/functions/percorsi.mjs`.
+- Il modulo si precompila dalla scheda del Comune di Genova già in app (15 campi: dati del Comune, servizi sociali, trasporto, esenzione ticket, punti di supporto, associazioni e sport). Referente: «Da confermare con il Comune»; ambito e capofila non indicati (nessuna fonte nella scheda).
+- Serve la password del Comune nelle impostazioni segrete di Netlify: `PERCORSI_PASSWORD_GENOVA` (non è nel repository). Dopo averla inserita va rifatto il deploy.
+
+## 18/11/2026 – Percorso «Dopo una diagnosi» in bozza e un solo percorso visibile
+- Motivo: i percorsi vuoti (4 percorsi, 23 passaggi, 11 campi ciascuno) erano troppo lavoro per un referente comunale.
+- `precompila()` ora scrive una bozza del percorso «Dopo una diagnosi» (passaggi 1-5): «situazione» = titolo del passo già in app (`NEXT_STEPS`); «ufficio», «accesso» e «link» = voci del territorio già presenti nella scheda del Comune (`percorsoTerritorio`), con la loro fonte. Nessun dato nuovo: solo ciò che è già pubblicato in app. I passi senza voci del territorio hanno solo il titolo e una nota «manca l'ufficio del Comune». Tutti i passaggi partono «da verificare». Il sesto passaggio resta vuoto.
+- Nel modulo, la scheda «Percorsi del cittadino» mostra un solo percorso; gli altri compaiono con «Mostra gli altri percorsi (facoltativi)» o da soli se hanno già testo.
+- Vale per Mediglia, Sarzana e Genova. Chi ha già salvato il modulo non vede cambiare i propri dati (la bozza si usa solo al primo salvataggio).

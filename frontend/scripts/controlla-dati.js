@@ -332,5 +332,12 @@ if (!confronto && !classificazione || ha("--coda")) {
     out.push("");
   }
 }
+// Gli errori devono comparire anche nel log Actions quando stdout è reindirizzato al riepilogo.
+// Non modifica i controlli né il codice di uscita: migliora solo la diagnostica.
+if (errori.length) {
+  console.error(`CONTROLLO DATI: ${errori.length} errori strutturali (dettagli nel riepilogo GitHub).`);
+  for (const e of errori.slice(0, 60)) console.error(`[${e.area}] ${e.msg}${e.dove ? ` -> ${e.dove}` : ""}`);
+  if (errori.length > 60) console.error(`... e altri ${errori.length - 60} errori`);
+}
 console.log(out.join("\n"));
 process.exit(errori.length ? 1 : 0);

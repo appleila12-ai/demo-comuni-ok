@@ -18,11 +18,11 @@ export const enna: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0935 40446",
+  telefono: "0935 40111",
   email: "",
   pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.enna.it/amministrazione/unita-organizzativa/5/AREA-5",
+  orari: "Il numero indicato è il centralino comunale, non un telefono diretto dei Servizi Sociali. Email generale e orari dello sportello sociale non verificati. Fonte comunale consultata il 17/11/2026; data di aggiornamento non indicata.",
+  sitoWeb: "https://www.comune.enna.it/amministrazione/unita-organizzativa/142/Politiche-Sociali---Disabili---Minori---Anziani---Cantieri-di-Servizio",
 
   logo: null,
 
@@ -37,14 +37,20 @@ export const enna: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.enna.it/amministrazione/unita-organizzativa/5/AREA-5" },
+      subtitle: "Recapiti diretti dello sportello sociale non verificati. Per contattare il Comune sono disponibili centralino e Protocollo generale, distinti dal servizio sociale.",
+      action: { type: "web", value: "https://www.comune.enna.it/amministrazione/unita-organizzativa/142/Politiche-Sociali---Disabili---Minori---Anziani---Cantieri-di-Servizio" },
     },
     {
       icon: "medkit-outline",
       title: "ASP Enna",
       subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
       action: { type: "web", value: "https://www.asp.enna.it" },
+    },
+    {
+      icon: "people-outline",
+      title: "Protocollo generale del Comune di Enna",
+      subtitle: "protocollo@comune.enna.it · centralino 0935 40111. Contatto generale del Comune, non email dedicata dei Servizi Sociali. Fonte: pagina comunale dell'ufficio sociale, letta il 17/11/2026; aggiornamento non indicato.",
+      action: { type: "web", value: "https://www.comune.enna.it/amministrazione/unita-organizzativa/142/Politiche-Sociali---Disabili---Minori---Anziani---Cantieri-di-Servizio" },
     },
   ],
 
@@ -61,4 +67,4 @@ export const enna: ComuneConfig = {
 };
 
 // Passi 4 e 5: servizi sociali già in scheda con fonte (lotto 18, 02/11/2026). Passi 1-3 vuoti: nessun recapito verificato.
-enna.percorsoTerritorio = percorso(enna.puntiSupporto, [0]);
+enna.percorsoTerritorio = percorso(enna.puntiSupporto, [0, 2]);

@@ -6,6 +6,19 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Dati presi dal sito ufficiale del Comune/ente (settembre 2026), da verificare.
 // Da verificare: indirizzo, telefono, email, orari, responsabile
+// Fonte regionale ticket/esenzioni: Regione Veneto, aggiornamento 20/05/2026, consultazione archivio #335 (17/11/2026), riuso 18/11/2026.
+// https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni
+// 18/11/2026: il PDF comunale «Servizio Sociale Professionale», aggiornato 20/05/2025, specifica
+// Segretariato Sociale: Viale Vittorio Veneto 27, 0422 658610, sociale@comune.treviso.it, lun–ven 9–11.
+// Fonte: https://www.comune.treviso.it/myportal/C_L407/api/content/download?id=682d69c922c6d2008bfb0e9a
+// ULSS 2: richiesta esenzione per patologia online con SPID/CIE o presso sportelli distrettuali;
+// fonte aggiornata 28/03/2024: https://www.aulss2.veneto.it/Richiedere-lesenzione-per-patologia
+// ULSS 2, esenzione invalidità civile: pagina aggiornata 03/02/2026, consultata 18/11/2026.
+// https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile
+// Richiesta con verbale tramite SPID/CIE oppure sportelli amministrativi distrettuali;
+// distinta dalla procedura per patologia e dalle esenzioni per invalidità sul lavoro.
+// Sportello locale competente da verificare.
+// Scheda PARZIALE: bonus regionali/comunali/Ambito, destinatario Scrivi al Comune, avviso UI.
 export const treviso: ComuneConfig = {
   slug: "treviso",
   tipo: "comune",
@@ -19,10 +32,10 @@ export const treviso: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "Servizi Sociali – Comune di Treviso",
   indirizzo: "Viale Vittorio Veneto 27, 31100 Treviso (TV)",
-  telefono: "0422 658362",
+  telefono: "0422 658610",
   email: "sociale@comune.treviso.it",
   pec: "postacertificata@cert.comune.treviso.it",
-  orari: "Lun–Ven 9:00–10:00 (contatto telefonico)",
+  orari: "Lun–Ven 9:00–11:00 (Segretariato Sociale, sportello e telefono)",
   sitoWeb: "https://www.comune.treviso.it/home/dettaglio/amministrazione-info/servizi-sociali",
 
   logo: null,
@@ -38,8 +51,8 @@ export const treviso: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali – Treviso",
-      subtitle: "Servizi Sociali – Comune di Treviso · Viale Vittorio Veneto 27, 31100 Treviso (TV) · Tel. 0422 658362",
-      action: { type: "tel", value: "0422658362" },
+      subtitle: "Servizi Sociali – Comune di Treviso · Viale Vittorio Veneto 27, 31100 Treviso (TV) · Tel. 0422 658610",
+      action: { type: "tel", value: "0422658610" },
     },
     {
       icon: "business-outline",
@@ -49,17 +62,17 @@ export const treviso: ComuneConfig = {
     },
     {
       icon: "medkit-outline",
-      title: "ULSS 2 Marca Trevigiana",
-      subtitle: "Esenzione ticket per patologia e invalidità, prenotazioni e distretti sanitari",
-      action: { type: "web", value: "https://www.aulss2.veneto.it" },
+      title: "ULSS 2 · Esenzione per invalidità civile",
+      subtitle: "Richiesta con verbale di invalidità civile, online con SPID/CIE oppure agli sportelli distrettuali",
+      action: { type: "web", value: "https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile" },
     },
   ],
 
-  trasporto: "Chiedi ai Servizi Sociali di Treviso (0422 658362) quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie).",
+  trasporto: "Chiedi al Segretariato Sociale di Treviso (0422 658610) quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie).",
 
   esenzioneTicket: {
     label: "ULSS 2 Marca Trevigiana · Esenzioni ticket",
-    url: "https://www.aulss2.veneto.it",
+    url: "https://www.aulss2.veneto.it/Richiedere-lesenzione-per-patologia",
   },
 
   daVerificare: true,

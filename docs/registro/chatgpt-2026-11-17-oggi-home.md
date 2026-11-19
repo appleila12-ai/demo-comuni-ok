@@ -55,3 +55,12 @@ Non viene pubblicata la pagina di simulazione preparata nell'altro ramo; non vie
 ## Revisione e pubblicazione
 
 Nessuna nuova PR: sono già aperte più di due PR attribuite a ChatGPT (#296, #257, #251); il workflow limita a due. Il codice è conservato in questo ramo, senza chiudere lavori ancora in revisione. Nessuna unione su main e nessun deploy. Le regole del progetto richiedono il «pubblica» di Ilaria per il codice, dopo aver completato i controlli mancanti. In questo turno Ilaria ha confermato lo sviluppo delle funzioni reali, non ha chiesto la pubblicazione del ramo incompleto.
+
+## Aggiornamento del 19/11/2026 (sostituisce lo stato operativo sopra)
+
+- Ilaria ha autorizzato esplicitamente l'aggiornamento del solo frontend/yarn.lock mantenendo invariato frontend/package.json. L'autorizzazione non viene richiesta di nuovo.
+- Riallineato il ramo con main 99694f1b26df27368622c0ea6b2cbe2daf03751a; mantenute le aggiunte arrivate nel frattempo nella Home.
+- Le vecchie PR dati citate sopra risultano chiuse: aperta la bozza #365, https://github.com/appleila12-ai/demo-comuni-ok/pull/365. Il precedente impedimento sul numero di PR non vale più.
+- I 29 controlli di Oggi e il controllo strutturale dati passano sulla base aggiornata: 113 bonus, 426 schede, 343 destinatari, 259 associazioni. Il confronto non segnala aggiunte o rimozioni negli archivi.
+- L'installazione interrotta non aveva prodotto né node_modules né un lockfile aggiornato. È stata riavviata con il registro npm ufficiale, timeout delle richieste e cache temporanea dedicata; nessuna protezione del repository viene disattivata. Compilazione e congelamento del nuovo lockfile ancora da verificare.
+- SHA-256 package.json invariato: 4b5b8e908add6cf1e53f84c20e61aaa62ffae54f8d6ba4a6844b339f2a9138ce.

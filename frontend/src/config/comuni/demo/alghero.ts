@@ -5,8 +5,8 @@ import { percorso } from "../percorso";
 // Comune di Alghero (SS) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Pagina "Salute, benessere e assistenza" del sito del Comune (controllata il 14 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Telefono dell'area servizi sociali (15/11/2026): pagina «Benessere della persona, delle famiglie e della comunità» del sito del Comune (aggiornata il 30/06/2026). Indirizzo dell'ufficio, email e orari non indicati con certezza, non inseriti.
-// Da fare: email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Telefono dell'area servizi sociali (15/11/2026): pagina «Benessere della persona, delle famiglie e della comunità» del sito del Comune (aggiornata il 30/06/2026). Indirizzo e PEC dalla pagina «Organizzazione e coordinamento del sistema servizi sociali» del sito del Comune (aggiornata il 30/06/2026, letta il 19/11/2026). Email specifica e orari non indicati, non inseriti.
+// Da fare: email e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
 export const alghero: ComuneConfig = {
   slug: "alghero",
   tipo: "comune",
@@ -19,10 +19,10 @@ export const alghero: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
+  indirizzo: "Largo San Francesco & Largo Lo Quarter, 07041 Alghero (SS)",
   telefono: "079 9978570",
   email: "",
-  pec: "",
+  pec: "protocollo@pec.comune.alghero.ss.it",
   orari: "",
   sitoWeb: "https://comune.alghero.ss.it/it/servizi/salute-benessere-e-assistenza/",
 

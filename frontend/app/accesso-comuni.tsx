@@ -1,5 +1,5 @@
 // TutelApp – Percorsi Territoriali: area riservata ai Comuni (solo web).
-// Indirizzo: /accesso-comuni?comune=mediglia (oppure sarzana). Non è collegata da nessun menu
+// Indirizzo: /accesso-comuni?comune=mediglia (oppure sarzana, genova). Non è collegata da nessun menu
 // dell'app e non è indicizzata (intestazione X-Robots-Tag in netlify.toml).
 //
 // L'accesso è controllato sul server (netlify/functions/percorsi.mjs): nessuna password sta nel
@@ -140,6 +140,7 @@ export default function AccessoComuni() {
   const [vista, setVista] = useState<"dati" | "percorsi">("dati");
   const [aperto, setAperto] = useState<string | null>(null);
   const [percorsoAperto, setPercorsoAperto] = useState<string | null>(null);
+  const [mostraAltri, setMostraAltri] = useState(false);
 
   const esci = useCallback(
     (testo = "") => {
@@ -331,6 +332,12 @@ export default function AccessoComuni() {
 
   const stati = STATI.filter((s) => ruolo === "admin" || s.chiPuoImpostarlo === "comune");
   const percorso = BLOCCHI_PERCORSI.find((p) => p.id === percorsoAperto) || null;
+  // Gli altri percorsi restano nascosti finché non servono; compaiono da soli se c'è già del testo.
+  const altriConDati = new Set(
+    BLOCCHI_PERCORSI.slice(1)
+      .filter((p) => Object.keys(dati?.campi || {}).some((k) => k.startsWith(`percorso.${p.id}.`) && (dati?.campi[k] || "").trim()))
+      .map((p) => p.id),
+  );
 
   const renderBlocco = (b: Blocco) => {
     const g = dati.gruppi[b.gid] || gruppoVuoto();
@@ -429,8 +436,14 @@ export default function AccessoComuni() {
         }}
       />
       {vista === "dati" && BLOCCHI_DATI.map(renderBlocco)}
+      {vista === "percorsi" && !percorso && (
+        <Avviso>
+          Cominciate da un solo percorso: «Dopo una diagnosi: primi passi». Abbiamo già scritto una bozza con i passi e i
+          riferimenti presenti in TutelApp: controllatela e correggete solo ciò che non è esatto.
+        </Avviso>
+      )}
       {vista === "percorsi" && !percorso &&
-        BLOCCHI_PERCORSI.map((p) => (
+        BLOCCHI_PERCORSI.filter((p, i) => i === 0 || mostraAltri || altriConDati.has(p.id)).map((p) => (
           <Pressable
             key={p.id}
             accessibilityRole="button"
@@ -442,6 +455,9 @@ export default function AccessoComuni() {
             <Text style={paginaStili.piccolo}>{p.descrizione}</Text>
           </Pressable>
         ))}
+      {vista === "percorsi" && !percorso && !mostraAltri && BLOCCHI_PERCORSI.some((p, i) => i > 0 && !altriConDati.has(p.id)) && (
+        <Bottone variante="vuoto" label="Mostra gli altri percorsi (facoltativi)" onPress={() => setMostraAltri(true)} />
+      )}
       {vista === "percorsi" && percorso && (
         <View>
           <Bottone variante="vuoto" label="Torna all'elenco dei percorsi" onPress={() => setPercorsoAperto(null)} />

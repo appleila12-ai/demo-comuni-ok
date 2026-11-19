@@ -3,12 +3,14 @@
 // e il suo slug nell'elenco COMUNI di netlify/functions/percorsi.mjs, poi la sua password
 // nelle impostazioni segrete di Netlify (mai nel repository).
 
+import { genova } from "@/src/config/comuni/demo/genova";
 import { mediglia } from "@/src/config/comuni/mediglia";
 import { sarzana } from "@/src/config/comuni/sarzana";
 import type { ComuneConfig } from "@/src/config/comuni/types";
 
 import { associazioniLegateAlComune, type Associazione } from "@/src/lib/associazioni";
-import { idCampoSezione, type DatiModulo, type GruppoDati } from "./schema";
+import { NEXT_STEPS } from "@/src/lib/content";
+import { idCampoPassaggio, idCampoSezione, idGruppoPassaggio, type DatiModulo, type GruppoDati } from "./schema";
 
 export type ComunePercorsi = {
   slug: string;
@@ -43,8 +45,17 @@ export const COMUNI_PERCORSI: Record<string, ComunePercorsi> = {
     scheda: sarzana,
     referenteIniziale: "Da confermare con il Comune",
   },
+  genova: {
+    slug: "genova",
+    titolo: "TutelApp – Percorsi Territoriali | Comune di Genova",
+    nome: "Comune di Genova",
+    scheda: genova,
+    referenteIniziale: "Da confermare con il Comune",
+  },
 };
 
+const FONTE_PERCORSO = "Percorso già pubblicato in TutelApp, con i riferimenti del territorio indicati in app (fonti: INPS, ASL, sito del Comune)";
+const FONTE_PASSO_GENERALE = "Passo del percorso nazionale già pubblicato in TutelApp (fonte: INPS, D.Lgs. 62/2024)";
 const FONTE_PRECOMPILATO = "Scheda del Comune già pubblicata in TutelApp (fonte: sito del Comune)";
 
 /**
@@ -111,6 +122,29 @@ export function precompila(slug: string): DatiModulo {
     if (campi[idCampoSezione("referenti", "operativo")] || campi[idCampoSezione("referenti", "responsabile")]) {
       gruppi["referenti"] = { stato: "da-verificare", fonte: FONTE_PRECOMPILATO, data: "", nota: "" };
     }
+
+    // Percorso «Dopo una diagnosi»: una bozza dai passi già in app (i cinque passi del riconoscimento)
+    // e dai riferimenti del territorio già scritti, con la loro fonte, per ciascun passo.
+    // Il Comune controlla e corregge: non si aggiunge nulla che non sia già pubblicato in app.
+    const territorio = s.percorsoTerritorio ?? {};
+    NEXT_STEPS.forEach((passo, i) => {
+      const n = i + 1;
+      const voci = territorio[n as 1 | 2 | 3 | 4 | 5] ?? [];
+      const id = (campo: string) => idCampoPassaggio("dopo-diagnosi", n, campo);
+      campi[id("situazione")] = passo.title;
+      if (voci.length) {
+        campi[id("ufficio")] = voci.map((v) => v.title).join("\n");
+        campi[id("accesso")] = voci.map((v) => v.subtitle).filter(Boolean).join("\n");
+        const link = voci.find((v) => v.action?.type === "web")?.action.value;
+        if (link) campi[id("link")] = link;
+      }
+      gruppi[idGruppoPassaggio("dopo-diagnosi", n)] = {
+        stato: "da-verificare",
+        fonte: voci.length ? FONTE_PERCORSO : FONTE_PASSO_GENERALE,
+        data: "",
+        nota: voci.length ? "" : "Passo del percorso già in app, senza riferimenti del territorio: manca l'ufficio del Comune.",
+      };
+    });
   }
   return { versione: 0, campi, gruppi };
 }

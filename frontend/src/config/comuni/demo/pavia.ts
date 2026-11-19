@@ -4,8 +4,9 @@ import { percorso } from "../percorso";
 
 // Comune di Pavia (PV) — VERSIONE DIMOSTRATIVA.
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Dati presi dal sito ufficiale del Comune/ente (settembre 2026), da verificare.
-// Da verificare: telefono, orari
+// Verifica puntuale 17/11/2026: https://www.comune.pavia.it/amministrazione/servizio-coordinamento-interventi-sociali (pagina aggiornata 12/03/2026).
+// Ticket: https://asst-pavia.it/servizio/rilascio-rinnovo-esenzioni-per-patologia-cronica-o-malattia-rara-status-invalidita-reddito/ (aggiornata 11/02/2026; consultata 17/11/2026).
+// Restano da verificare: orari del servizio comunale, bonus regionali e comunali/ATS, completezza UI.
 export const pavia: ComuneConfig = {
   slug: "pavia",
   tipo: "comune",
@@ -17,13 +18,13 @@ export const pavia: ComuneConfig = {
   regione: "Lombardia",
 
   ente: "Servizi Sociali",
-  responsabile: "Settore Servizi Sociali – Servizio Coordinamento Attività Amministrativa",
-  indirizzo: "Via Scopoli 1, 27100 Pavia (PV)",
-  telefono: "0382 3991",
+  responsabile: "Servizio Coordinamento ed Interventi Sociali",
+  indirizzo: "Corso Garibaldi 69, 27100 Pavia (PV)",
+  telefono: "0382 399546",
   email: "servizisociali@comune.pv.it",
   pec: "protocollo@pec.comune.pavia.it",
-  orari: "Orari: vedi il sito del Comune o telefona",
-  sitoWeb: "https://www.comune.pavia.it/schede-informative/servizi-promozione-sociale",
+  orari: "",
+  sitoWeb: "https://www.comune.pavia.it/amministrazione/servizio-coordinamento-interventi-sociali",
 
   logo: null,
 
@@ -38,8 +39,8 @@ export const pavia: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali – Pavia",
-      subtitle: "Settore Servizi Sociali – Servizio Coordinamento Attività Amministrativa · Via Scopoli 1, 27100 Pavia (PV) · Tel. 0382 3991",
-      action: { type: "tel", value: "03823991" },
+      subtitle: "Servizio Coordinamento ed Interventi Sociali · Corso Garibaldi 69 · Tel. 0382 399546",
+      action: { type: "tel", value: "0382399546" },
     },
     {
       icon: "business-outline",
@@ -51,15 +52,15 @@ export const pavia: ComuneConfig = {
       icon: "medkit-outline",
       title: "ASST Pavia",
       subtitle: "Esenzione ticket per patologia e invalidità, prenotazioni e distretti sanitari",
-      action: { type: "web", value: "https://www.asst-pavia.it" },
+      action: { type: "web", value: "https://asst-pavia.it/servizio/rilascio-rinnovo-esenzioni-per-patologia-cronica-o-malattia-rara-status-invalidita-reddito/" },
     },
   ],
 
-  trasporto: "Chiedi ai Servizi Sociali di Pavia (0382 3991) quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie).",
+  trasporto: "Chiedi ai Servizi Sociali di Pavia (0382 399546) quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie).",
 
   esenzioneTicket: {
     label: "ASST Pavia · Esenzioni ticket",
-    url: "https://www.asst-pavia.it",
+    url: "https://asst-pavia.it/servizio/rilascio-rinnovo-esenzioni-per-patologia-cronica-o-malattia-rara-status-invalidita-reddito/",
   },
 
   daVerificare: true,

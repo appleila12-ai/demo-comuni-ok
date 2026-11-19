@@ -86,6 +86,23 @@ export function riferimentiComune(slug: string): { sito: string; pec: string; em
   return { sito: r[0] ? `https://${r[0]}` : "", pec: r[1] || "", email: r[2] || "" };
 }
 
+type AmbitiMap = Record<string, [string, string]>;
+let AMBITI: AmbitiMap | null = null;
+
+/**
+ * Ambito Territoriale Sociale del Comune e Comune/ente capofila, dal Registro Ambiti del
+ * Ministero del Lavoro e delle Politiche Sociali (estratto del 06/03/2025,
+ * https://lavoro.gov.it/node/134). Null se il Comune non è nel Registro.
+ */
+export function ambitoComune(slug: string): { ambito: string; capofila: string } | null {
+  if (!AMBITI) {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    AMBITI = require("../../content/ambiti-territoriali.json") as AmbitiMap;
+  }
+  const a = AMBITI[slug];
+  return a ? { ambito: a[0], capofila: a[1] } : null;
+}
+
 /**
  * Cerca per nome tra i Comuni che NON hanno una scheda propria (gli altri si trovano
  * già nell'elenco delle schede). Prima chi inizia col testo scritto, poi gli altri.

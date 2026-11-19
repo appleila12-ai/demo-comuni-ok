@@ -3,8 +3,9 @@ import { INPS_TERZA_FASE } from "../percorso";
 
 // Comune di Abbiategrasso (MI) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (27 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Sito del Comune: indirizzo indicato dalla titolare il 27/10/2026. PEC: domicilio digitale su IndicePA. Coordinate: database ISTAT/Belfiore dell'archivio. Link dell'azienda sanitaria da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Servizi sociali verificati il 17/11/2026: https://comune.abbiategrasso.mi.it/it/unita_organizzative/politiche-sociali (aggiornata 06/03/2026).
+// Ticket: sportello virtuale esenzioni ASST verificato 17/11/2026: https://www.asst-ovestmi.it/attivita-scelta-e-revoca.
+// Restano da verificare: bonus, associazioni, destinatario Scrivi al Comune e avviso visibile.
 export const abbiategrasso: ComuneConfig = {
   slug: "abbiategrasso",
   tipo: "comune",
@@ -17,12 +18,12 @@ export const abbiategrasso: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
+  indirizzo: "Via Fratelli Cairoli 1, 20081 Abbiategrasso (MI)",
+  telefono: "02 94692516",
+  email: "segretariato@comune.abbiategrasso.mi.it",
   pec: "comune.abbiategrasso@legalpec.it",
-  orari: "",
-  sitoWeb: "https://comune.abbiategrasso.mi.it",
+  orari: "Accesso solo su appuntamento: chiama il Segretariato Sociale al 02 94692516.",
+  sitoWeb: "https://comune.abbiategrasso.mi.it/it/unita_organizzative/politiche-sociali",
 
   logo: null,
 
@@ -37,14 +38,14 @@ export const abbiategrasso: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://comune.abbiategrasso.mi.it" },
+      subtitle: "Segretariato Sociale · Via Fratelli Cairoli 1 · Accesso su appuntamento · Tel. 02 94692516",
+      action: { type: "tel", value: "0294692516" },
     },
     {
       icon: "medkit-outline",
       title: "ASST Ovest Milanese",
-      subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
-      action: { type: "web", value: "https://www.asst-ovestmi.it" },
+      subtitle: "Richiesta e rinnovo esenzioni tramite sportello virtuale ASST Ovest Milanese",
+      action: { type: "web", value: "https://www.asst-ovestmi.it/attivita-scelta-e-revoca" },
     },
   ],
 
@@ -52,8 +53,8 @@ export const abbiategrasso: ComuneConfig = {
     "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
-    label: "ASST Ovest Milanese · Esenzioni ticket",
-    url: "https://www.asst-ovestmi.it",
+    label: "ASST Ovest Milanese · Richiesta e rinnovo esenzioni ticket",
+    url: "https://www.asst-ovestmi.it/attivita-scelta-e-revoca",
   },
 
   daVerificare: true,
