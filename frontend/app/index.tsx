@@ -327,11 +327,11 @@ function HomeDelComune() {
         {/* Prima ci si presenta (solo se manca il nome), poi si dice di cosa si ha bisogno */}
         {!nome ? <RichiestaNomeHome /> : null}
 
-        {/* Un solo punto di ripresa: legge date e pratica già salvate, senza duplicarle. */}
-        <OggiHome />
-
         {/* Il centro della Home: scrivi cosa ti serve, la risposta arriva subito */}
         <CasellaRicerca testID="home-ricerca" />
+
+        {/* Dopo la ricerca, le date e il punto di ripresa già salvati. */}
+        <OggiHome />
 
         {/* Scorciatoia ai salvati, solo se c'è qualcosa */}
         {salvati.length > 0 && (

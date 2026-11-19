@@ -9,7 +9,7 @@
 
 ## Cambiamenti visibili dopo un eventuale rilascio
 
-- La Home mostra Oggi prima del box di ricerca. Sostituisce l'uso di RiprendiHome, senza modificarne il file.
+- La Home mostra prima il box «Di cosa hai bisogno?» e poi Oggi. Sostituisce l'uso di RiprendiHome, senza modificarne il file.
 - Un unico collegamento al percorso già iniziato: pratica, verbale o Progetto di Vita. È un punto di ripresa, non una nuova istruzione amministrativa e non un catalogo di passi verificati.
 - Le date già salvate nell'archivio delle scadenze compaiono entro 14 giorni, ordinate; oltre tre date si possono espandere. Anche le date passate vengono segnalate, senza presumere che siano incompiute.
 - Distinzione tra data personale e data indicativa calcolata dall'app. Nessuna data viene promossa a scadenza ufficiale verificata.
@@ -87,3 +87,8 @@ Per evitare che le dipendenze appena installate saturassero l'elenco dei file no
 
 Non è un via libera alla pubblicazione generale: restano l'uniformazione del vecchio calendario di Le mie scadenze con #209, i telefoni reali, l'accessibilità e la verifica complessiva della privacy. La schermata è ora effettivamente visibile nell'anteprima, non soltanto nel codice. L'app pubblica non viene modificata in questo turno.
 
+
+
+### Priorità della Home confermata da Ilaria — 19/11/2026
+
+Dopo l'inserimento del nome, il box «Di cosa hai bisogno?» resta il primo elemento principale della Home. Oggi viene dopo il box, come supporto alle date e alla ripresa del percorso. Spostato solo l'ordine dei due componenti in frontend/app/index.tsx; nessuna modifica a salvataggio, calendario o archivi. Verificato nel sorgente che CasellaRicerca preceda OggiHome.
