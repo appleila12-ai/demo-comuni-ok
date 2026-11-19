@@ -49,7 +49,7 @@ export const conegliano: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Ambito Sociale VEN-07 · Conegliano",
-      subtitle: "Comune capofila dell'Ambito VEN-07. Per informazioni sui servizi territoriali: ufficionoa@comune.conegliano.tv.it · Tel. 0438 413238 / 413237 / 413215. Verificare con l'ufficio gli appuntamenti.",
+      subtitle: "Comune capofila dell'Ambito VEN-07. Per informazioni sui servizi territoriali: ufficionoa@comune.conegliano.tv.it · Tel. 0438 413238 / 413237 / 413215. Recapiti indicati nell'avviso comunale 2024.",
       action: { type: "tel", value: "0438413238" },
     },
     {
