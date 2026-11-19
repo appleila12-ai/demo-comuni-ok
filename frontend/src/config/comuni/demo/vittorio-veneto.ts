@@ -47,6 +47,8 @@ export const vittorioVeneto: ComuneConfig = {
     cream: "#F6F2F5",
   },
 
+  // ULSS 2, esenzione per invalidità/infortunio sul lavoro: pagina aggiornata 03/02/2026; verifica 19/11/2026.
+  // https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-e-infortunio-sul-lavoro
   puntiSupporto: [
     {
       icon: "people-outline",
@@ -83,6 +85,12 @@ export const vittorioVeneto: ComuneConfig = {
       title: "ULSS 2 Marca Trevigiana",
       subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
       action: { type: "web", value: "https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "ULSS 2 · Esenzione per invalidità da lavoro",
+      subtitle: "Informazioni ufficiali per chiedere l'esenzione ticket in caso di invalidità o infortunio sul lavoro. Consulta la procedura e i documenti richiesti dall'ULSS 2.",
+      action: { type: "web", value: "https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-e-infortunio-sul-lavoro" },
     },
   ],
 
