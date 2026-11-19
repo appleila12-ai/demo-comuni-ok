@@ -25,3 +25,16 @@
 **Controlli:** Node non eseguibile attraverso il connettore GitHub; CI e anteprima Netlify da verificare sulla PR. Nessuna verifica visiva dell'avviso #270. Nessuna email, nessuna modifica alle schede dell'app, nessun merge o deploy.
 
 **Prossimo passo:** controllare l'archivio Drive prima di ogni eventuale richiesta; verificare con le fonti ufficiali le cinque sezioni di Susegana e l'ATS VEN-07, poi preparare integrazione chirurgica e controlli Node. Non bloccare gli altri Comuni se una fonte è indisponibile.
+
+## Controllo puntuale delle due schede esistenti — 19/11/2026, lettura diretta su main
+- **Conegliano** (`frontend/src/config/comuni/demo/conegliano.ts`): Servizi Sociali presenti con telefono 0438 413210 ed email ordinaria `servizisociali@comune.conegliano.tv.it`; fonte indicata nel file: avviso comunale 30/03/2026, https://www.comune.conegliano.tv.it/myportal/C_C957/api/content/download?id=69ca4fcdf00987008b10c9e6. Esenzione ticket: link ULSS 2 per patologia https://www.aulss2.veneto.it/Richiedere-lesenzione-per-patologia e rinvio all'invalidità civile. Bonus: la scheda mostra solo orientamento alle famiglie fragili, senza elenco completo dei bonus regionali e comunali/d'Ambito. Email in configurazione presente, ma pulsante non testato in UI. **Parziale, non completo.**
+- **Vittorio Veneto** (`frontend/src/config/comuni/demo/vittorio-veneto.ts`): Servizi Sociali presenti con telefono 0438 569305, email `sociale@comune.vittorio-veneto.tv.it`, fonte https://www.comune.vittorio-veneto.tv.it/home/amministrazione/uffici/Ufficio-26.html (aggiornamento dichiarato nel file 10/11/2023). Esenzione ticket ULSS 2 presente. Tre interventi comunali elencati: bonus acqua (scadenza 30/11/2026), rette prima infanzia (09/12/2026), mini alloggi anziani (10/12/2026); i requisiti restano da confrontare con gli avvisi integrali. Non risultano completi tutti i bonus d'Ambito e regionali. Email presente, pulsante non testato. **Parziale, non completo.**
+- **Susegana:** manca ancora il file di scheda; non conteggiare come scheda parziale esistente né come completamento.
+- **Avviso #270:** `daVerificare: true` è presente nelle due configurazioni, ma non dimostra che l'avviso richiesto sia visibile; nessuna prova visiva acquisita. Non modificare la UI senza autorizzazione.
+
+## Esito tecnico della PR #367 — 19/11/2026
+- Commit esaminato: `4f1ab9984c3e6f4f14c02ef702827288166fff4c`.
+- GitHub riporta `netlify/tutelappcomuni/deploy-preview: success`, dettaglio https://app.netlify.com/projects/tutelappcomuni/deploys/6aff38b882731f0505dd72ff . È **solo esito del controllo**, non una verifica visiva delle schermate; questa PR modifica esclusivamente il registro.
+- I tre comandi Node richiesti non eseguiti nell'ambiente del connettore. Non inferire che i test dati siano superati dal solo stato Netlify.
+- PR aperte controllate: #368 (Claude: risposte URP), #367 (questa), #365, #216, #209, #204; nessun file modificato da questa PR coincide con quelli delle altre. Ultimi 10 commit consultati prima di questo aggiornamento.
+- **Bilancio invariato:** 0 Comuni completi / obiettivo 20; 0 chiusi in attesa; 2 schede esistenti parziali e 1 Comune solo ricercato. Nessuna richiesta ufficiale inviata in questa esecuzione.
