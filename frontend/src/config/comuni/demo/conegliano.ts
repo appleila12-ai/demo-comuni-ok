@@ -10,7 +10,7 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Invalidità civile ULSS 2: https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile
 // Email ordinaria protocollo@comune.conegliano.tv.it e sede Municipio Piazza Cima 8: sito istituzionale, consultato 18/11/2026.
 // https://pagopa.comune.conegliano.tv.it/it
-// Scheda parziale: bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare.
+// Ufficio ATS VEN-07: fonte primaria, avviso comunale DGR 69/2024, consultato 19/11/2026.\n// https://www.comune.conegliano.tv.it/myportal/C_C957/api/content/download?id=66a8d225103327008c224481\n// Recapiti ATS storici da riconfermare prima di dichiarare completa la scheda.\n// Scheda parziale: bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare.
 export const conegliano: ComuneConfig = {
   slug: "conegliano",
   tipo: "comune",
@@ -45,6 +45,12 @@ export const conegliano: ComuneConfig = {
       title: "Servizi Sociali – Conegliano",
       subtitle: "5° Settore Servizi alla Persona – Servizio Politiche Sociali · Piazzale Beccaria, 31015 Conegliano (TV) · Tel. 0438 413210",
       action: { type: "tel", value: "0438413210" },
+    },
+    {
+      icon: "people-outline",
+      title: "Ambito Sociale VEN-07 · Conegliano",
+      subtitle: "Comune capofila dell'Ambito VEN-07. Per informazioni sui servizi territoriali: ufficionoa@comune.conegliano.tv.it · Tel. 0438 413238 / 413237 / 413215. Verificare con l'ufficio gli appuntamenti.",
+      action: { type: "tel", value: "0438413238" },
     },
     {
       icon: "medkit-outline",
