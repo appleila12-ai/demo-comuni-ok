@@ -17,7 +17,7 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Conferma recapito Servizi Sociali 0438 413210, email servizisociali@comune.conegliano.tv.it.
 // Voucher ATS prima infanzia: domande chiuse il 15/05/2026, NON presentare come aperto.
 // Recapiti ATS del 2024 da riconfermare prima di dichiarare completa la scheda.
-// Scheda parziale: bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare.
+// Famiglie fragili Regione Veneto: pagina aggiornata 26/02/2025, consultata 19/11/2026.\n// https://www.regione.veneto.it/web/sociale/famiglie-fragili\n// Solo orientamento, nessun bando 2026 aperto confermato.\n// Scheda parziale: bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare.
 export const conegliano: ComuneConfig = {
   slug: "conegliano",
   tipo: "comune",
@@ -58,6 +58,12 @@ export const conegliano: ComuneConfig = {
       title: "Ambito Sociale VEN-07 · Conegliano",
       subtitle: "Comune capofila dell'Ambito VEN-07. Per informazioni sui servizi territoriali: ufficionoa@comune.conegliano.tv.it · Tel. 0438 413238 / 413237 / 413215. Recapiti indicati nell'avviso comunale 2024.",
       action: { type: "tel", value: "0438413238" },
+    },
+    {
+      icon: "people-outline",
+      title: "Veneto · Sostegni per famiglie fragili",
+      subtitle: "La Regione prevede interventi per famiglie con minori orfani, un solo genitore in difficoltà economica, oppure almeno quattro figli o parti trigemellari. Chiedi ai Servizi Sociali se sono aperti avvisi nel tuo Ambito: la pagina regionale non conferma un bando 2026 aperto.",
+      action: { type: "web", value: "https://www.regione.veneto.it/web/sociale/famiglie-fragili" },
     },
     {
       icon: "medkit-outline",
