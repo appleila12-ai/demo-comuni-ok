@@ -67,10 +67,11 @@ export function ShareModal({ visible, onClose, shareUrl, qrUrl }: Props) {
               source={{ uri: qrUrl }}
               style={styles.qrImage}
               resizeMode="contain"
+              accessibilityLabel="Codice QR per condividere il report con un familiare. In alternativa usa i pulsanti per copiare o inviare il link."
               testID="share-qr"
             />
           ) : (
-            <View style={styles.qrPlaceholder}>
+            <View style={styles.qrPlaceholder} accessibilityLabel="Sto preparando il codice QR" accessibilityLiveRegion="polite">
               <ActivityIndicator color={colors.brandPrimary} />
             </View>
           )}
