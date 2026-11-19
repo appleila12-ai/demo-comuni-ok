@@ -16,6 +16,8 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Famiglie fragili Regione Veneto: pagina aggiornata 26/02/2025, consultata 19/11/2026.
 // https://www.regione.veneto.it/web/sociale/famiglie-fragili
 // Solo orientamento, nessun bando 2026 aperto confermato.
+// Mini alloggi ERP anziani autosufficienti 65+: pagina comunale aggiornata 06/11/2026, consultata 19/11/2026.
+// https://www.comune.vittorio-veneto.tv.it/home/vivere/Servizi-Sociali/Case-popolari---E.R.P..html
 // Scheda parziale: altri bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare; avviso UI da controllare.
 export const vittorioVeneto: ComuneConfig = {
   slug: "vittorio-veneto",
@@ -63,6 +65,12 @@ export const vittorioVeneto: ComuneConfig = {
       title: "Contributo rette prima infanzia 2026",
       subtitle: "Per famiglie residenti con figli di 3–36 mesi iscritti nel 2026 a servizi educativi per l'infanzia. Rimborso parziale delle rette documentate, con esclusione del nido comunale. Domanda entro il 9/12/2026: modulo, ricevute, documento e ISEE a asilonido@comune.vittorio-veneto.tv.it.",
       action: { type: "web", value: "https://www.comune.vittorio-veneto.tv.it/home/info/Asilo-nido/contributo2026.html" },
+    },
+    {
+      icon: "home-outline",
+      title: "Mini alloggi comunali per anziani 2026",
+      subtitle: "Bando speciale per anziani autosufficienti con almeno 65 anni. Domande dal 9/11 al 10/12/2026, solo su appuntamento con l'Ufficio Servizi Sociali: 0438 569319 (lun–ven 9:00–13:00, gio anche 15:00–17:00). Per informazioni: ufficiocasa@comune.vittorio-veneto.tv.it. Verifica nel bando tutti i requisiti.",
+      action: { type: "web", value: "https://www.comune.vittorio-veneto.tv.it/home/vivere/Servizi-Sociali/Case-popolari---E.R.P..html" },
     },
     {
       icon: "people-outline",
