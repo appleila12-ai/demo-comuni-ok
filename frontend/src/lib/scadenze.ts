@@ -18,6 +18,13 @@ export type Scadenza = {
   ora?: string;
   /** Solo per "altro": nota facoltativa (es. cosa portare) */
   nota?: string;
+  /** true = è un incontro preparato con "Preparo l'incontro" (dopo la data l'app chiede "Com'è andato?") */
+  incontro?: boolean;
+  /** Incontro: dove o con chi (es. "Sportello Disabilità") */
+  dove?: string;
+  /** Incontro: cosa porto e cosa chiedo (elenchi preparati dalla persona) */
+  portare?: string[];
+  chiedere?: string[];
 };
 
 export type Evento = {
@@ -34,6 +41,13 @@ export type Evento = {
   nota?: string;
   /** true = appuntamento in agenda (inserito dalla persona), false = scadenza calcolata */
   appuntamento?: boolean;
+  /** Id della scadenza salvata da cui nasce l'evento (solo appuntamenti) */
+  scadenzaId?: string;
+  /** true = incontro preparato con "Preparo l'incontro" */
+  incontro?: boolean;
+  dove?: string;
+  portare?: string[];
+  chiedere?: string[];
 };
 
 export type TipoInfo = {
@@ -225,11 +239,18 @@ export function calcolaEventi(lista: Scadenza[], oggi = new Date()): Evento[] {
             id: `${s.id}-altro`,
             titolo: s.titolo?.trim() || "Appuntamento",
             data: d,
-            spiegazione: s.nota?.trim() || "Appuntamento inserito da te.",
+            spiegazione:
+              s.nota?.trim() ||
+              (s.incontro && s.dove?.trim() ? `Dove o con chi: ${s.dove.trim()}` : "Appuntamento inserito da te."),
             anticipo: 2,
             ora: s.ora && daTestoOra(s.ora) ? s.ora : undefined,
             nota: s.nota?.trim() || undefined,
             appuntamento: true,
+            scadenzaId: s.id,
+            ...(s.incontro ? { incontro: true } : {}),
+            ...(s.dove?.trim() ? { dove: s.dove.trim() } : {}),
+            ...(s.portare?.length ? { portare: s.portare } : {}),
+            ...(s.chiedere?.length ? { chiedere: s.chiedere } : {}),
           });
         break;
     }
@@ -272,7 +293,9 @@ export function creaIcs(eventi: Evento[], nomeComune: string): string {
       conOra ? `DTSTART:${inizioOra}` : `DTSTART;VALUE=DATE:${icsData(e.data)}`,
       conOra ? `DTEND:${fineOra}` : `DTEND;VALUE=DATE:${icsData(fine)}`,
       `SUMMARY:${icsTesto(e.titolo)}`,
-      `DESCRIPTION:${icsTesto(e.spiegazione)}`,
+      // Negli appuntamenti NON si scrivono note né elenchi: il calendario del telefono può
+      // sincronizzarsi con servizi online. Nel file vanno solo titolo e ora.
+      `DESCRIPTION:${icsTesto(e.appuntamento ? "Appuntamento inserito in TutelApp." : e.spiegazione)}`,
       "BEGIN:VALARM",
       "ACTION:DISPLAY",
       `DESCRIPTION:${icsTesto(e.titolo)}`,
