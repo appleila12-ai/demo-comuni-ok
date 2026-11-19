@@ -8,7 +8,12 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Esenzione ticket per patologia ULSS 2, aggiornamento 28/03/2024.
 // https://www.aulss2.veneto.it/Richiedere-lesenzione-per-patologia
 // Esenzione per invalidità civile ULSS 2: https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile
-// Bonus acqua Piave Servizi 2026: pubblicazione 27/10/2026, aggiornamento 28/10/2026, verificato 19/11/2026.\n// https://www.comune.vittorio-veneto.tv.it/notizie/bonusacqua.html\n// Scheda parziale: altri bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare; avviso UI da controllare.
+// Bonus acqua Piave Servizi 2026: pubblicazione 27/10/2026, aggiornamento 28/10/2026, verificato 19/11/2026.
+// https://www.comune.vittorio-veneto.tv.it/notizie/bonusacqua.html
+// Contributo rette prima infanzia 2026: pagina comunale aggiornata 20/10/2026, bando protocollato 19/10/2026; verificato 19/11/2026.
+// https://www.comune.vittorio-veneto.tv.it/home/info/Asilo-nido/contributo2026.html
+// https://www.comune.vittorio-veneto.tv.it/dam/jcr%3Ac6fb6b43-2b83-424d-afb9-206c17e6809c/AVVISO%20PUBBLICO%20CONTR%20NIDI.pdf
+// Scheda parziale: altri bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare; avviso UI da controllare.
 export const vittorioVeneto: ComuneConfig = {
   slug: "vittorio-veneto",
   tipo: "comune",
@@ -49,6 +54,12 @@ export const vittorioVeneto: ComuneConfig = {
       title: "Bonus acqua Piave Servizi 2026",
       subtitle: "Per famiglie residenti con ISEE fino a 16.000 euro e utenza idrica domestica. Domanda entro il 30/11/2026 ai Servizi Sociali, via Carducci 28 (lun, mar, gio, ven 9:00–12:45; gio 15:00–17:45). Tel. 0438 569318. Servono modulo, ISEE, documento e ultima bolletta.",
       action: { type: "web", value: "https://www.comune.vittorio-veneto.tv.it/notizie/bonusacqua.html" },
+    },
+    {
+      icon: "school-outline",
+      title: "Contributo rette prima infanzia 2026",
+      subtitle: "Per famiglie residenti con figli di 3–36 mesi iscritti nel 2026 a servizi educativi per l'infanzia. Rimborso parziale delle rette documentate, con esclusione del nido comunale. Domanda entro il 9/12/2026: modulo, ricevute, documento e ISEE a asilonido@comune.vittorio-veneto.tv.it.",
+      action: { type: "web", value: "https://www.comune.vittorio-veneto.tv.it/home/info/Asilo-nido/contributo2026.html" },
     },
     {
       icon: "medkit-outline",
