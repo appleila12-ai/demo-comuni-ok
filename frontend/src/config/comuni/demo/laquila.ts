@@ -54,6 +54,12 @@ export const laquila: ComuneConfig = {
       action: { type: "tel", value: "08626451" },
     },
     {
+      icon: "heart-outline",
+      title: "Ufficio Disabilità, non autosufficienza e integrazione socio-sanitaria – L'Aquila",
+      subtitle: "Tel. 0862 645500 (Servizio Sociale) · informazioni generali anche da daniela.volpe@comune.laquila.it, tel. 0862 645505 · Fonte: risposta del Comune del 19/11/2026",
+      action: { type: "tel", value: "0862645500" },
+    },
+    {
       icon: "medkit-outline",
       title: "ASL 1 Abruzzo",
       subtitle: "Esenzione ticket per patologia e invalidità, prenotazioni e distretti sanitari",
