@@ -13,7 +13,10 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Contributo rette prima infanzia 2026: pagina comunale aggiornata 20/10/2026, bando protocollato 19/10/2026; verificato 19/11/2026.
 // https://www.comune.vittorio-veneto.tv.it/home/info/Asilo-nido/contributo2026.html
 // https://www.comune.vittorio-veneto.tv.it/dam/jcr%3Ac6fb6b43-2b83-424d-afb9-206c17e6809c/AVVISO%20PUBBLICO%20CONTR%20NIDI.pdf
-// Famiglie fragili Regione Veneto: pagina aggiornata 26/02/2025, consultata 19/11/2026.\n// https://www.regione.veneto.it/web/sociale/famiglie-fragili\n// Solo orientamento, nessun bando 2026 aperto confermato.\n// Scheda parziale: altri bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare; avviso UI da controllare.
+// Famiglie fragili Regione Veneto: pagina aggiornata 26/02/2025, consultata 19/11/2026.
+// https://www.regione.veneto.it/web/sociale/famiglie-fragili
+// Solo orientamento, nessun bando 2026 aperto confermato.
+// Scheda parziale: altri bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare; avviso UI da controllare.
 export const vittorioVeneto: ComuneConfig = {
   slug: "vittorio-veneto",
   tipo: "comune",
