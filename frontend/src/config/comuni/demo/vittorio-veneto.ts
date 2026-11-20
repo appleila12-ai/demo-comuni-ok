@@ -18,6 +18,8 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Solo orientamento, nessun bando 2026 aperto confermato.
 // Mini alloggi ERP anziani autosufficienti 65+: pagina comunale aggiornata 06/11/2026, consultata 19/11/2026.
 // https://www.comune.vittorio-veneto.tv.it/home/vivere/Servizi-Sociali/Case-popolari---E.R.P..html
+// Trasporto scolastico studenti con disabilità: pagina comunale aggiornata 20/10/2026, verificata 20/11/2026.
+// https://www.comune.vittorio-veneto.tv.it/home/vivere/Scuola/contributi.html
 // Scheda parziale: altri bonus regionali, comunali/Ambito e destinatario Scrivi al Comune da verificare; avviso UI da controllare.
 export const vittorioVeneto: ComuneConfig = {
   slug: "vittorio-veneto",
@@ -71,6 +73,12 @@ export const vittorioVeneto: ComuneConfig = {
       title: "Bonus rifiuti SAVNO 2026 (chiuso)",
       subtitle: "Riduzione della tariffa rifiuti per utenze domestiche residenti con ISEE tra 9.796 e 15.000 euro. Le domande per il 2026 sono scadute il 15/11/2026. Per eventuali nuove edizioni chiedi ai Servizi Sociali.",
       action: { type: "web", value: "https://www.comune.vittorio-veneto.tv.it/notizie/savno26.html" },
+    },
+    {
+      icon: "bus-outline",
+      title: "Trasporto scolastico studenti con disabilità 2026",
+      subtitle: "Il Comune ha pubblicato un bando per contributi economici al trasporto scolastico di studenti con disabilità. Domande entro il 30/11/2026. Consulta l’avviso e il modulo sulla pagina ufficiale per requisiti e modalità di richiesta.",
+      action: { type: "web", value: "https://www.comune.vittorio-veneto.tv.it/home/vivere/Scuola/contributi.html" },
     },
     {
       icon: "water-outline",
