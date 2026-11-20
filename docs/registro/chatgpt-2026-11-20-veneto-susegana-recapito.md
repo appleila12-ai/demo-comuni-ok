@@ -1,0 +1,11 @@
+# Checkpoint ChatGPT — Veneto / Susegana — 20/11/2026
+
+- **Proprietario:** ChatGPT. **Regione:** Veneto. **Ambito:** VEN_07, Comune capofila Conegliano (come dichiarato nell'avviso comunale sotto).
+- **Stato:** ricerca verificata, scheda comunale **non ancora creata**. Non contare come Comune completo o parziale con scheda. Nessuna richiesta ufficiale inviata e nessuna chiusura in attesa.
+- **Nuova fonte istituzionale verificata:** Comune di Susegana, avviso firmato il **30/03/2026**, URL esatto: https://www.comune.susegana.tv.it/myportal/C_L014/api/content/download?id=69ca7cdb786d1d008a7d0343 ; letto il **20/11/2026**. Nella sezione 7 «Informazioni» indica **Ufficio Servizi Sociali** e indirizzo ordinario **servizisociali@comune.susegana.tv.it**. L'avviso indica il Comune di Conegliano come capofila dell'Ambito VEN_07.
+- **Uso previsto:** recapito istituzionale da riusare per la futura scheda e per «Scrivi al tuo Comune», dopo controllo del funzionamento dell'azione; non inserire come destinatario PEC. Non usare nomi personali presenti nel documento.
+- **Fonte secondaria consultata:** https://www.comune.susegana.tv.it/pagamenti-pagopa/ (portale Comune, aggiornamento indicato 12/10/2026): il «Buono libri» 2026/27 riporta periodo 14/09–09/10/2026, **già scaduto** alla verifica; non inserirlo come bando aperto.
+- **Da verificare prima di creare la scheda:** bonus regionali applicabili e già censiti, contributi comunali e VEN_07, esenzione ticket ULSS 2 con fonte puntuale, recapiti completi e rendering dell'avviso obbligatorio issue #270. Verificare prima l'archivio richieste/risposte Drive; non inviare email senza autorizzazione.
+- **Regole applicate:** issue #262, #267, #270; assegnazione Veneto a ChatGPT. PR aperte #375, #372, #365, #209: nessuna modifica ai loro file. Ricerca commit recenti effettuata, ma la ricerca non garantisce il filtro esclusivo ai 10 commit di main.
+- **Test:** nessuna modifica all'app, comandi Node non eseguiti; CI e anteprima Netlify da verificare sulla PR. **Conteggio nuovo:** 0/20 Comuni completi, 0 chiusi in attesa, 2 schede Veneto preesistenti parziali (Conegliano, Vittorio Veneto); Susegana è ricerca documentale.
+- **Prossimo passo:** completare il lotto VEN_07 con verifica delle sezioni mancanti, riutilizzando la fonte del recapito qui documentata, senza duplicare bonus regionali.
