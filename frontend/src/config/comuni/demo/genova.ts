@@ -165,6 +165,12 @@ export const genova: ComuneConfig = {
     },
     POLO_DISABILITA,
     {
+      icon: "home-outline",
+      title: "Assistenza domiciliare Do.Ge (persone con disabilità, 18-64 anni; dai 65 senza certificazioni)",
+      subtitle: "Dai 18 ai 64 anni serve l'accertamento di disabilità con sostegno intensivo (art. 3 c. 3 L. 104/1992) oppure di disabilità con sostegno (art. 3 c. 1) e invalidità civile oltre il 75%. Dai 65 anni si accede senza queste certificazioni. Con ISEE sotto i 12.000 euro si accede al servizio e al buono servizio; sopra quel valore puoi avere orientamento e chiedere una valutazione. Il primo passo è il colloquio di segretariato sociale: porta ISEE e certificazioni sanitarie, se le hai (non sono obbligatorie). Di norma entro 60 giorni segue l'affiancamento di un assistente sociale. I tempi di attivazione dipendono dal budget del Comune · Fonte: risposta del Comune di Genova, Area Disabilità, del 20/11/2026",
+      action: { type: "web", value: "https://www.comune.genova.it/servizi/salute-benessere-e-assistenza/servizio-di-ascolto-e-orientamento-sociale-segretariato" },
+    },
+    {
       icon: "people-outline",
       title: "Municipio I Centro Est",
       subtitle: "Via San Giorgio 1, int. 7 · Tel. 010 5574534 · senza prenotazione lun, mer, ven 9:00–11:00 · municipio1servizisociali@comune.genova.it",
