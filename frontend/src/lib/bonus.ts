@@ -1682,16 +1682,17 @@ export const BONUS: Bonus[] = [
       "Persone ospiti di strutture residenziali autorizzate (aree anziani, disabilità, salute mentale) e loro familiari che pagano la retta. Per i familiari paganti: requisiti di territorio e ISEE ordinario e ISEE sociosanitario residenze non superiori a 25.000 euro. Per gli ospiti che pagano da soli valgono requisiti specifici di residenza e ISEE: leggi l'avviso.",
     cosa:
       "Contributo di 250 euro al mese, fino a 12 mensilità e 3.000 euro all'anno, per le rette delle strutture residenziali.",
-    stato: "aperto",
-    quando: "Domande entro il 16/11/2026.",
+    stato: "scaduto",
+    scade: "2026-11-16",
+    quando: "Termine scaduto il 16/11/2026 («termine perentorio» nella pagina del Comune). Nella pagina non c'è nessuna proroga.",
     comeSiChiede:
       "Con l'apposito modulo, per PEC, raccomandata o al protocollo del Comune di Ancona.",
     fonte: {
       label: "Comune di Ancona · Rette per strutture residenziali: contributi economici (pagina del 05/11/2026)",
       url: "https://www.comune.ancona.it/it/page/rette-per-strutture-residenziali-contributi-economici-a-sostegno-delle-famiglie-e-degli-ospiti",
     },
-    verificatoIl: "10/11/2026",
-    nota: "Scade il 16/11/2026.",
+    verificatoIl: "20/11/2026",
+    nota: "Domande chiuse il 16/11/2026. Per sapere se ci saranno nuove aperture chiedi all'Ufficio di Promozione Sociale del Comune.",
   },
   {
     id: "salerno-assegni-di-cura",
@@ -2298,16 +2299,17 @@ export const BONUS: Bonus[] = [
     perChi:
       "Persone con disabilità grave (legge 104, art. 3, comma 3, anche con certificazione provvisoria) residenti a Sassari. Servono la scheda salute, i documenti richiesti e l'ISEE adatto: senza ISEE il finanziamento è ridotto dell'80%. Ci sono incompatibilità, con eccezioni per «Ritornare a casa».",
     cosa: "Un piano personalizzato di sostegno. L'importo non è indicato nell'avviso di riapertura: dipende dal piano e dalle risorse.",
-    stato: "aperto",
+    stato: "scaduto",
     scade: "2026-11-16",
-    quando: "Nuove domande entro il 16/11/2026. Le domande sono accolte in ordine cronologico, fino a esaurimento delle risorse. Pagina aggiornata il 29/06/2026.",
+    scade: "2026-11-16",
+    quando: "Termine per le nuove domande scaduto il 16/11/2026: nella pagina del Comune non c'è nessuna proroga. Il Comune si riserva di riaprire i termini nel corso dell'anno, ma oggi non ha indicato nuove date. Le domande sono accolte in ordine cronologico, fino a esaurimento delle risorse. Pagina aggiornata il 29/06/2026.",
     comeSiChiede: "Secondo l'avviso di riapertura del Comune di Sassari (pagina e PDF).",
     fonte: {
       label: "Comune di Sassari · Bando 2026 L. 162/98, avviso per le nuove domande",
       url: "https://www.comune.sassari.it/it/amministrazione/documenti-dati/documento-pubblico/Bando-annualita-2026-L.162-98-piani-personalizzati-in-favore-di-persone-con-disabilita-grave-avviso-presentazione-nuove-domande/",
     },
-    verificatoIl: "11/11/2026",
-    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+    verificatoIl: "20/11/2026",
+    nota: "Per sapere se i termini riaprono chiedi al Settore Diritti sociali o all'URP del Comune.",
   },
   {
     id: "trapani-tessere-atm-2027",
@@ -2335,16 +2337,17 @@ export const BONUS: Bonus[] = [
     perChi:
       "Persone con disabilità con invalidità di almeno il 67% o equiparate (art. 21 L.R. 68/81 e art. 2 L.R. 9/92). Altre condizioni e costi sono nell'allegato dell'avviso, che non abbiamo potuto leggere: chiedi al Comune.",
     cosa: "La tessera di libera circolazione sui mezzi AST extraurbani. Nessun contributo in denaro indicato.",
-    stato: "aperto",
+    stato: "scaduto",
     scade: "2026-11-16",
-    quando: "Domande entro le 12:00 del 16/11/2026. Pagina del Comune aggiornata il 14/10/2026.",
+    scade: "2026-11-16",
+    quando: "Termine scaduto alle 12:00 del 16/11/2026; nella pagina del Comune non c'è nessuna proroga. Pagina del Comune aggiornata il 14/10/2026.",
     comeSiChiede: "Secondo l'avviso del Comune di Ragusa (PDF allegato alla pagina).",
     fonte: {
       label: "Comune di Ragusa · Rilascio tessera di libera circolazione extraurbana AST, marzo 2027 - febbraio 2028",
       url: "https://comune.ragusa.it/en/news/rilascio-tessera-di-libera-circolazione-extraurbana-sui-mezzi-a-s-t-marzo-2027-febbraio-2028-per-soggetti-disabili-art21-l-r-68-81-e-art-2-l-r-9-92-con-invalidita-non-inferiore-al-67-o-equiparati",
     },
-    verificatoIl: "11/11/2026",
-    nota: "Pagina letta nella versione inglese del sito del Comune. Il PDF dell'avviso non si legge: controlla requisiti e documenti con l'ufficio prima di preparare la domanda.",
+    verificatoIl: "20/11/2026",
+    nota: "Per sapere se i termini riaprono chiedi al Settore Servizi alla persona del Comune. Pagina letta nella versione inglese del sito del Comune. Il PDF dell'avviso non si legge: controlla requisiti e documenti con l'ufficio prima di preparare la domanda.",
   },
 
   // --- 12/11/2026: Emilia-Romagna, Collecchio (notizia del Comune letta l'11/11/2026) ---
