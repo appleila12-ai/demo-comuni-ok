@@ -137,7 +137,7 @@ export default function Risultati() {
       <SafeAreaView style={styles.safe}>
         <View style={styles.centered}>
           <Text style={styles.emptyText}>Report non trovato.</Text>
-          <Pressable onPress={() => router.replace("/")} style={styles.retryBtn}>
+          <Pressable accessibilityRole="button" onPress={() => router.replace("/")} style={styles.retryBtn}>
             <Text style={styles.retryBtnText}>Torna alla home</Text>
           </Pressable>
         </View>
@@ -155,7 +155,7 @@ export default function Risultati() {
         behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
         <View style={styles.header}>
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}
             style={styles.iconBtn}
             hitSlop={12}

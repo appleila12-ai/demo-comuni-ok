@@ -174,7 +174,7 @@ export function ScadenzeSezione({ mostraTitolo = true }: { mostraTitolo?: boolea
                   </View>
                 </View>
                 <Text style={paginaStili.piccolo}>{e.spiegazione}</Text>
-                <Pressable onPress={() => togli(e.id)} hitSlop={8} style={styles.togli}>
+                <Pressable accessibilityRole="button" onPress={() => togli(e.id)} hitSlop={8} style={styles.togli}>
                   <Ionicons name="trash-outline" size={14} color={colors.onSurfaceSecondary} />
                   <Text style={styles.togliText}>Togli</Text>
                 </Pressable>

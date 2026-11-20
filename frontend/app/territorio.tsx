@@ -103,7 +103,7 @@ export default function Territorio() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="territorio-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -349,7 +349,7 @@ export default function Territorio() {
 
         {/* Portale regionale: informazione secondaria */}
         {portal && (
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => apri(portal.url)}
             style={styles.regionLine}
             hitSlop={6}

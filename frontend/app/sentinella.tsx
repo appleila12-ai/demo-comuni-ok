@@ -183,7 +183,7 @@ export default function Sentinella() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="sentinella-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -250,7 +250,7 @@ export default function Sentinella() {
               </View>
             </View>
           ) : (
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={startCheck}
               disabled={starting}
               style={[styles.startBtn, starting && styles.btnDisabled]}
@@ -338,7 +338,7 @@ export default function Sentinella() {
                   {!!r.nota && <Text style={styles.nota}>{r.nota}</Text>}
 
                   {!!r.fonte && (
-                    <Pressable
+                    <Pressable accessibilityRole="button"
                       onPress={() => Linking.openURL(r.fonte!).catch(() => {})}
                       hitSlop={6}
                       style={styles.linkRow}
@@ -353,7 +353,7 @@ export default function Sentinella() {
                   {pending &&
                     (r.tipo === "riforma" ? (
                       <View style={styles.actionsRow}>
-                        <Pressable
+                        <Pressable accessibilityRole="button"
                           onPress={() => resolve(r.nome, "ignora")}
                           disabled={resolving === r.nome}
                           style={[styles.applyBtn, resolving === r.nome && styles.btnDisabled]}
@@ -369,7 +369,7 @@ export default function Sentinella() {
                       </View>
                     ) : (
                     <View style={styles.actionsRow}>
-                      <Pressable
+                      <Pressable accessibilityRole="button"
                         onPress={() => resolve(r.nome, "applica")}
                         disabled={resolving === r.nome}
                         style={[styles.applyBtn, resolving === r.nome && styles.btnDisabled]}
@@ -382,7 +382,7 @@ export default function Sentinella() {
                         )}
                         <Text style={styles.applyText}>Applica aggiornamento</Text>
                       </Pressable>
-                      <Pressable
+                      <Pressable accessibilityRole="button"
                         onPress={() => resolve(r.nome, "ignora")}
                         disabled={resolving === r.nome}
                         style={styles.ignoreBtn}

@@ -393,7 +393,7 @@ function DocumentoRiga({ file, indice, onRemove }: { file: VaultFile; indice: nu
           color={haFile ? topics.patronato.main : colors.borderStrong}
         />
         <View style={styles.flex}>
-          <Pressable onPress={apri} disabled={!haFile}>
+          <Pressable accessibilityRole="button" onPress={apri} disabled={!haFile}>
             <Text style={styles.docNome} numberOfLines={1}>{file.name}</Text>
           </Pressable>
           <Text style={paginaStili.piccolo}>
@@ -405,7 +405,7 @@ function DocumentoRiga({ file, indice, onRemove }: { file: VaultFile; indice: nu
 
         {/* Bottone leggi documento */}
         {haFile && (
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={haEstrazione ? () => setEspanso(!espanso) : leggiDocumento}
             hitSlop={8}
             disabled={estraendo}
@@ -420,7 +420,7 @@ function DocumentoRiga({ file, indice, onRemove }: { file: VaultFile; indice: nu
           </Pressable>
         )}
 
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={rimuovi}
           hitSlop={8}
           accessibilityLabel={`Elimina ${file.name}`}
@@ -464,7 +464,7 @@ function DocumentoRiga({ file, indice, onRemove }: { file: VaultFile; indice: nu
           )}
 
           {/* Riesegui estrazione */}
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={leggiDocumento}
             disabled={estraendo}
             style={({ pressed }) => [styles.rieseguiBtn, pressed && { opacity: 0.85 }]}

@@ -327,7 +327,7 @@ export default function Cruscotto() {
         keyboardShouldPersistTaps="handled"
       >
         <View style={styles.header}>
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}
             hitSlop={12}
             style={styles.back}

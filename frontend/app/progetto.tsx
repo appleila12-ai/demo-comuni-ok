@@ -128,7 +128,7 @@ export default function ProgettoDiVita() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="progetto-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -197,6 +197,7 @@ export default function ProgettoDiVita() {
               placeholder="Es. Maria"
               placeholderTextColor={colors.muted}
               style={styles.nameInput}
+              accessibilityLabel="Il tuo nome, facoltativo"
               testID="progetto-nome-input"
             />
           </View>
@@ -274,6 +275,7 @@ export default function ProgettoDiVita() {
                       placeholderTextColor={colors.muted}
                       multiline
                       style={styles.freeInput}
+                      accessibilityLabel="Aggiungi un desiderio con le tue parole"
                       testID={`progetto-libero-${a.id}`}
                     />
                 </View>

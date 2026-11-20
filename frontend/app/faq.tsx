@@ -57,7 +57,7 @@ export default function Faq() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="faq-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -79,7 +79,7 @@ export default function Faq() {
           <Text style={styles.errText}>
             Contenuti non disponibili. Controlla la connessione.
           </Text>
-          <Pressable onPress={load} style={styles.retryBtn} testID="faq-retry">
+          <Pressable accessibilityRole="button" onPress={load} style={styles.retryBtn} testID="faq-retry">
             <Text style={styles.retryText}>Riprova</Text>
           </Pressable>
         </View>

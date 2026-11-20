@@ -134,7 +134,7 @@ export default function Lettere() {
         </View>
       }
     >
-      <Pressable onPress={() => router.setParams({ id: "" })} hitSlop={8} style={styles.tutte}>
+      <Pressable accessibilityRole="button" onPress={() => router.setParams({ id: "" })} hitSlop={8} style={styles.tutte}>
         <Ionicons name="arrow-back" size={14} color={colors.onSurface} />
         <Text style={styles.tutteText}>Tutte le lettere</Text>
       </Pressable>

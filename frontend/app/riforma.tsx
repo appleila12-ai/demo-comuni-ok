@@ -49,7 +49,7 @@ export default function RiformaScreen() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="riforma-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -117,7 +117,7 @@ export default function RiformaScreen() {
           </View>
 
           {/* Fonte */}
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => Linking.openURL(riforma.fonteUrl).catch(() => {})}
             style={styles.fonteRow}
             hitSlop={6}

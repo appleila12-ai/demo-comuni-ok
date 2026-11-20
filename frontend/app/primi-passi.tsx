@@ -106,7 +106,7 @@ export default function PrimiPassiScreen() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="primi-passi-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}

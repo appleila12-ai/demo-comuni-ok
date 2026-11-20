@@ -81,7 +81,7 @@ export default function Agevolazioni() {
     const aree = Array.from(new Set(elenco.map((a) => a.area)));
     return (
       <Pagina titolo="Bonus e agevolazioni" testID="agevolazioni-risultati">
-        <Pressable onPress={() => setRisultati(false)} hitSlop={8} style={styles.indietro}>
+        <Pressable accessibilityRole="button" onPress={() => setRisultati(false)} hitSlop={8} style={styles.indietro}>
           <Ionicons name="arrow-back" size={14} color={colors.onSurface} />
           <Text style={styles.indietroText}>Cambia le risposte</Text>
         </Pressable>
@@ -114,7 +114,7 @@ export default function Agevolazioni() {
                   <Text style={styles.etichetta}>Cosa fare</Text>
                   <Text style={paginaStili.testo}>{a.come}</Text>
                   {a.link ? (
-                    <Pressable onPress={() => apri(a.link!.href)} hitSlop={6} style={styles.link}>
+                    <Pressable accessibilityRole="button" onPress={() => apri(a.link!.href)} hitSlop={6} style={styles.link}>
                       <Text style={styles.linkText}>{a.link.label}</Text>
                       <Ionicons
                         name={a.link.href.startsWith("http") ? "open-outline" : "arrow-forward"}

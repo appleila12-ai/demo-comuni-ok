@@ -228,7 +228,7 @@ export default function Hub() {
       >
         {/* Top bar: indietro + logo + stemma */}
         <View style={styles.topBar} testID="home-topbar">
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => router.back()}
             hitSlop={12}
             style={styles.hubBackBtn}

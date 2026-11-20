@@ -53,7 +53,7 @@ export function Pagina({
     <SafeAreaView style={s.safe} edges={["top"]} testID={testID}>
       <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
       <View style={s.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}
           style={s.back}
           hitSlop={12}

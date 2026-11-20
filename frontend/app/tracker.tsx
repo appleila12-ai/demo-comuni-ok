@@ -369,7 +369,7 @@ export default function Tracker() {
 
       {/* Header */}
       <View style={[styles.header, { backgroundColor: warm.cream }]}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -380,7 +380,7 @@ export default function Tracker() {
         </Pressable>
         <Text style={styles.headerTitle}>La mia pratica</Text>
         <HeaderComune />
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={openNotifs}
           style={styles.iconBtn}
           hitSlop={12}
@@ -434,7 +434,7 @@ export default function Tracker() {
 
           <View style={styles.comuneContacts}>
             {!!comune.telefono && (
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={call}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
               testID="tracker-comune-call"
@@ -446,7 +446,7 @@ export default function Tracker() {
             </Pressable>
             )}
             {!!comune.email && (
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={email}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
               testID="tracker-comune-email"
@@ -458,7 +458,7 @@ export default function Tracker() {
             </Pressable>
             )}
             {!comune.telefono && !comune.email && !!comune.sitoWeb && (
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={() => Linking.openURL(comune.sitoWeb).catch(() => {})}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
               testID="tracker-comune-sito"
@@ -470,7 +470,7 @@ export default function Tracker() {
             </Pressable>
             )}
             {!!comune.indirizzo && (
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={map}
               style={({ pressed }) => [styles.contactChip, pressed && { opacity: 0.7 }]}
               testID="tracker-comune-map"
@@ -649,7 +649,7 @@ export default function Tracker() {
                   )}
 
                   {/* Toggle editor */}
-                  <Pressable
+                  <Pressable accessibilityRole="button"
                     onPress={() => {
                       // Aprendo l'editor, se manca la data propone quella di oggi (modificabile).
                       if (!isOpen && !entry.date) setField(stage.id, "date", formatItDate(new Date()));
@@ -684,6 +684,7 @@ export default function Tracker() {
                         onChangeText={(t) => setField(stage.id, "date", autoSlash(t))}
                         keyboardType="number-pad"
                         maxLength={10}
+                        accessibilityLabel="Data, giorno, mese e anno"
                         testID={`tracker-date-input-${stage.id}`}
                       />
                       <Text style={[styles.editorLabel, { marginTop: spacing.md }]}>
@@ -696,6 +697,7 @@ export default function Tracker() {
                         value={entry.note}
                         onChangeText={(t) => setField(stage.id, "note", t)}
                         multiline
+                        accessibilityLabel="Nota personale"
                         testID={`tracker-note-input-${stage.id}`}
                       />
                       <View style={styles.editorActions}>
@@ -722,7 +724,7 @@ export default function Tracker() {
                             </Text>
                           </Pressable>
                         )}
-                        <Pressable
+                        <Pressable accessibilityRole="button"
                           onPress={() => setOpenId(null)}
                           style={({ pressed }) => [
                             styles.saveBtn,
@@ -792,7 +794,7 @@ export default function Tracker() {
         animationType="slide"
         onRequestClose={() => setNotifOpen(false)}
       >
-        <Pressable
+        <Pressable accessibilityRole="button"
           style={styles.modalOverlay}
           onPress={() => setNotifOpen(false)}
           testID="tracker-notif-overlay"
@@ -808,6 +810,8 @@ export default function Tracker() {
               <Pressable
                 onPress={() => setNotifOpen(false)}
                 hitSlop={10}
+                accessibilityRole="button"
+                accessibilityLabel="Chiudi avvisi e promemoria"
                 testID="tracker-notif-close"
               >
                 <Ionicons name="close" size={22} color={colors.onSurfaceTertiary} />

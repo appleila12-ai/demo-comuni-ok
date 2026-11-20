@@ -49,7 +49,7 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
           testID={`${testID}-input`}
         />
         {testo ? (
-          <Pressable onPress={() => setTesto("")} hitSlop={10} accessibilityLabel="Cancella">
+          <Pressable accessibilityRole="button" onPress={() => setTesto("")} hitSlop={10} accessibilityLabel="Cancella">
             <Ionicons name="close-circle" size={20} color={colors.onSurfaceSecondary} />
           </Pressable>
         ) : null}
