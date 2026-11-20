@@ -2152,6 +2152,95 @@ PER_PROVINCIA.PR.sport.unshift({
   comuni: ["fornovo-di-taro", "collecchio", "borgo-val-di-taro", "medesano", "langhirano", "lesignano-de-bagni"],
 });
 
+PER_PROVINCIA.SS = PER_PROVINCIA.SS ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.SS.volontariato.push({
+  nome: "ENS – Ente Nazionale Sordi, sezione di Sassari",
+  cosa: "Sezione locale dell’Ente Nazionale Sordi. Contattala per informazioni e orientamento.",
+  dove: "Via Principessa Jolanda 73, Sassari",
+  telefono: "079 293747",
+  sito: "https://sassari.ens.it/?Itemid=109&id=191&option=com_content&view=article",
+  comuni: ["sassari"],
+});
+
+PER_PROVINCIA.ME = PER_PROVINCIA.ME ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.ME.volontariato.push({
+  nome: "ENS – Ente Nazionale Sordi, sezione di Messina",
+  cosa: "Sezione locale dell’Ente Nazionale Sordi. Contattala per informazioni e orientamento.",
+  dove: "SS 114 km 5,800, Tremestieri 36, scala B, Palazzo Presti, Messina",
+  telefono: "090 6019986",
+  sito: "https://messina.ens.it/contatti-e-dove-siamo",
+  comuni: ["messina"],
+});
+
+PER_PROVINCIA.TP = PER_PROVINCIA.TP ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.TP.volontariato.push({
+  nome: "ENS – Ente Nazionale Sordi, sezione di Trapani",
+  cosa: "Sezione locale dell’Ente Nazionale Sordi. Contattala per informazioni e orientamento.",
+  dove: "Via Col Romey 15, Trapani",
+  telefono: "0923 28340",
+  sito: "https://trapani.ens.it/contatti-e-dove-siamo",
+  comuni: ["trapani"],
+});
+
+PER_PROVINCIA.OR = PER_PROVINCIA.OR ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.OR.volontariato.push({
+  nome: "ENS – Ente Nazionale Sordi, sezione di Oristano",
+  cosa: "Sezione locale dell’Ente Nazionale Sordi. Contattala per informazioni e orientamento.",
+  dove: "Via Grazia Deledda 29 A, piano terra, Oristano",
+  telefono: "0783 903710",
+  sito: "https://oristano.ens.it/contatti-e-dove-siamo",
+  comuni: ["oristano"],
+});
+
+PER_PROVINCIA.BT = PER_PROVINCIA.BT ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.BT.volontariato.push({
+  nome: "ENS – Ente Nazionale Sordi, sezione di Trani",
+  cosa: "Sezione locale dell’Ente Nazionale Sordi. Contattala per informazioni e orientamento.",
+  dove: "Via Giuseppe e Cesare Gualandi 8/10, Trani",
+  telefono: "0883 957918",
+  sito: "https://bat.ens.it/contatti-e-dove-siamo",
+  comuni: ["trani"],
+});
+
+PER_PROVINCIA.SS.sport.push({
+  nome: "Dinamo Lab Sassari",
+  cosa: "Basket in carrozzina. La squadra è affiliata alla Federazione Italiana Pallacanestro in Carrozzina.",
+  dove: "Sassari",
+  sito: "https://www.fipic.online/attivita-sportiva/club-affiliati",
+  comuni: ["sassari"],
+});
+
+PER_PROVINCIA.CT = PER_PROVINCIA.CT ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.CT.volontariato.push({
+  nome: "ENS – Ente Nazionale Sordi, sezione di Catania",
+  cosa: "Sezione locale dell’Ente Nazionale Sordi. Contattala per informazioni e orientamento.",
+  dove: "Piazza San Domenico 11, Catania",
+  telefono: "095 312021",
+  sito: "https://catania.ens.it/contatti-e-dove-siamo",
+  comuni: ["catania"],
+});
+
+PER_PROVINCIA.RG = PER_PROVINCIA.RG ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.RG.volontariato.push({
+  nome: "ENS – Ente Nazionale Sordi, sezione di Ragusa",
+  cosa: "Sezione locale dell’Ente Nazionale Sordi. Contattala per informazioni e orientamento.",
+  dove: "Via Aldo Moro 31, lotto 54, scala B, Ragusa",
+  telefono: "0932 251818",
+  sito: "https://ragusa.ens.it/contatti-e-dove-siamo",
+  comuni: ["ragusa"],
+});
+
+PER_PROVINCIA.SR = PER_PROVINCIA.SR ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.SR.volontariato.push({
+  nome: "ENS – Ente Nazionale Sordi, sezione di Siracusa",
+  cosa: "Sezione locale dell’Ente Nazionale Sordi. Contattala per informazioni e orientamento.",
+  dove: "Via Augusto Murri 20, Siracusa",
+  telefono: "0931 33567",
+  email: "siracusa@ens.it",
+  sito: "https://siracusa.ens.it/contatti-e-dove-siamo",
+  comuni: ["siracusa"],
+});
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",
