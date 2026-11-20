@@ -1294,16 +1294,16 @@ export const BONUS: Bonus[] = [
       "Residenti nel periodo interessato che frequentano la scuola primaria o secondaria di primo grado, con certificazione della legge 104 oppure invalidità con accompagnamento o frequenza.",
     cosa:
       "Contributo da 350 a 4.383,66 euro, con possibile superamento della soglia alle condizioni del bando.",
-    stato: "aperto",
+    stato: "chiuso",
     quando:
-      "Domande entro il 15/11/2026.",
+      "Scaduto: le domande erano da presentare entro il 15/11/2026. Chiedi al Comune se è prevista una nuova finestra.",
     comeSiChiede:
       "Le modalità sono nell'avviso del Comune di Legnano, nella pagina indicata come fonte.",
     fonte: {
       label: "Comune di Legnano · Contributo trasporto scolastico (aggiornata il 30/09/2026)",
       url: "https://comune.legnano.mi.it/notizie/3654974/richiesta-contributo-trasporto-scolastico",
     },
-    verificatoIl: "10/11/2026",
+    verificatoIl: "20/11/2026",
     nota: "Il bando è per l'anno scolastico 2025/26 e scade tra pochi giorni: non aspettare l'ultimo giorno. Requisiti riassunti: valgono tutte le condizioni dell'avviso.",
   },
   {
@@ -1825,16 +1825,16 @@ export const BONUS: Bonus[] = [
       "Residenti nell'ATS di Catanzaro con disabilità gravissima (DM 26/09/2016), invalidità civile al 100% con accompagnamento e legge 104 art. 3 comma 3. ISEE sociosanitario fino a 50.000 euro, 65.000 euro per i minorenni; altre condizioni e incompatibilità sono nell'avviso.",
     cosa:
       "1.000 euro al mese per la dipendenza vitale con assistenza continua nelle 24 ore, 600 euro al mese per le altre condizioni di disabilità gravissima, secondo la valutazione.",
-    stato: "aperto",
+    stato: "chiuso",
     quando:
-      "Domande entro il 19/11/2026.",
+      "Scaduto: le domande erano da presentare entro il 19/11/2026. Chiedi al Comune se è prevista una nuova finestra.",
     comeSiChiede:
       "Con la modulistica dell'avviso del Comune di Catanzaro, scaricabile dalla pagina indicata come fonte.",
     fonte: {
       label: "Comune di Catanzaro · Avviso per il supporto alle persone in condizione di disabilità gravissima (pubblicato il 21/10/2026)",
       url: "https://www.comune.catanzaro.it/novita/pubblicato-lavviso-per-il-supporto-alle-persone-in-condizione-di-disabilita-gravissima-e-al-nucleo-familiare-di-appartenenza-domande-entro-il-19-novembre/",
     },
-    verificatoIl: "10/11/2026",
+    verificatoIl: "20/11/2026",
     nota: "Scade tra pochi giorni: non aspettare l'ultimo giorno. Valgono tutte le condizioni dell'avviso integrale.",
   },
   {
