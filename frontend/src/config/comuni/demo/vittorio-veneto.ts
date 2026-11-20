@@ -47,12 +47,30 @@ export const vittorioVeneto: ComuneConfig = {
     cream: "#F6F2F5",
   },
 
+  // Carta Dedicata a te 2026–2027: pagina comunale aggiornata 03/11/2026, verificata 20/11/2026.
+  // https://www.comune.vittorio-veneto.tv.it/home/vivere/Servizi-Sociali/Contributi--assegni-e-sussidi-economici/Carta-acquisti-dedicata-a-te.html
+  // Bonus SAVNO 2026: pubblicato 23/09/2026, domande scadute 15/11/2026; verificato 20/11/2026.
+  // https://www.comune.vittorio-veneto.tv.it/notizie/savno26.html
+  // ULSS 2, esenzione per invalidità/infortunio sul lavoro: pagina aggiornata 03/02/2026; verifica 19/11/2026.
+  // https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-e-infortunio-sul-lavoro
   puntiSupporto: [
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
       subtitle: "Via Giosuè Carducci 28 · Tel. 0438 569305 · Lun, Mar, Gio, Ven 9:00–12:45; Gio 15:00–17:30",
       action: { type: "tel", value: "0438569305" },
+    },
+    {
+      icon: "card-outline",
+      title: "Carta Dedicata a te 2026–2027",
+      subtitle: "Sostegno alimentare da 500 euro per anno per nuclei selezionati dall'INPS con ISEE fino a 15.000 euro e almeno tre componenti. Non si presenta domanda: il Comune pubblica la lista dei beneficiari. Per il 2026 il primo utilizzo della carta deve avvenire entro il 16/12/2026. Controlla la pagina ufficiale per le esclusioni e il ritiro.",
+      action: { type: "web", value: "https://www.comune.vittorio-veneto.tv.it/home/vivere/Servizi-Sociali/Contributi--assegni-e-sussidi-economici/Carta-acquisti-dedicata-a-te.html" },
+    },
+    {
+      icon: "receipt-outline",
+      title: "Bonus rifiuti SAVNO 2026 (chiuso)",
+      subtitle: "Riduzione della tariffa rifiuti per utenze domestiche residenti con ISEE tra 9.796 e 15.000 euro. Le domande per il 2026 sono scadute il 15/11/2026. Per eventuali nuove edizioni chiedi ai Servizi Sociali.",
+      action: { type: "web", value: "https://www.comune.vittorio-veneto.tv.it/notizie/savno26.html" },
     },
     {
       icon: "water-outline",
@@ -79,15 +97,27 @@ export const vittorioVeneto: ComuneConfig = {
       action: { type: "web", value: "https://www.regione.veneto.it/web/sociale/famiglie-fragili" },
     },
     {
+      icon: "people-outline",
+      title: "Ambito VEN-07 · Voucher prima infanzia 2026 (chiuso)",
+      subtitle: "Il bando 2026 dell’Ambito VEN-07 prevedeva un contributo per servizi per la prima infanzia. Le domande si sono chiuse il 15 maggio 2026: non è possibile presentare una nuova domanda per questa edizione. Per eventuali nuove aperture contatta i Servizi Sociali del Comune.",
+      action: { type: "web", value: "https://www.comune.conegliano.tv.it/myportal/C_C957/api/content/download?id=69ca4fcdf00987008b10c9e6" },
+    },
+    {
       icon: "medkit-outline",
       title: "ULSS 2 Marca Trevigiana",
       subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
       action: { type: "web", value: "https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile" },
     },
+    {
+      icon: "medkit-outline",
+      title: "ULSS 2 · Esenzione per invalidità da lavoro",
+      subtitle: "Informazioni ufficiali per chiedere l'esenzione ticket in caso di invalidità o infortunio sul lavoro. Consulta la procedura e i documenti richiesti dall'ULSS 2.",
+      action: { type: "web", value: "https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-e-infortunio-sul-lavoro" },
+    },
   ],
 
   trasporto:
-    "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
+    "Per sapere se e come utilizzare il trasporto sociale, contatta i Servizi Sociali e Assistenziali: 0438 569311 / 0438 569318, sociale@comune.vittorio-veneto.tv.it. Il Comune ha pubblicato il 22/09/2026 un avviso per individuare un ente gestore (https://www.comune.vittorio-veneto.tv.it/notizie/trasportosociale.html), ma l’avviso non conferma che il servizio sia già attivo né le modalità di accesso per i cittadini.",
 
   esenzioneTicket: {
     label: "ULSS 2 Marca Trevigiana · Esenzioni ticket",

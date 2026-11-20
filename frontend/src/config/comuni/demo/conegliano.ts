@@ -49,6 +49,8 @@ export const conegliano: ComuneConfig = {
     cream: "#F2F5F6",
   },
 
+  // ULSS 2, esenzione per invalidità/infortunio sul lavoro: pagina aggiornata 03/02/2026; verifica 19/11/2026.
+  // https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-e-infortunio-sul-lavoro
   puntiSupporto: [
     {
       icon: "people-outline",
@@ -75,10 +77,22 @@ export const conegliano: ComuneConfig = {
       action: { type: "web", value: "https://www.regione.veneto.it/web/sociale/famiglie-fragili" },
     },
     {
+      icon: "people-outline",
+      title: "Ambito VEN-07 · Voucher prima infanzia 2026 (chiuso)",
+      subtitle: "Il bando 2026 dell’Ambito VEN-07 prevedeva un contributo per servizi per la prima infanzia. Le domande si sono chiuse il 15 maggio 2026: non è possibile presentare una nuova domanda per questa edizione. Per eventuali nuove aperture contatta i Servizi Sociali del Comune.",
+      action: { type: "web", value: "https://www.comune.conegliano.tv.it/myportal/C_C957/api/content/download?id=69ca4fcdf00987008b10c9e6" },
+    },
+    {
       icon: "medkit-outline",
       title: "ULSS 2 Marca Trevigiana",
       subtitle: "Esenzione ticket per patologia e invalidità, prenotazioni e distretti sanitari",
       action: { type: "web", value: "https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile" },
+    },
+    {
+      icon: "medkit-outline",
+      title: "ULSS 2 · Esenzione per invalidità da lavoro",
+      subtitle: "Informazioni ufficiali per chiedere l'esenzione ticket in caso di invalidità o infortunio sul lavoro. Consulta la procedura e i documenti richiesti dall'ULSS 2.",
+      action: { type: "web", value: "https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-e-infortunio-sul-lavoro" },
     },
   ],
 
