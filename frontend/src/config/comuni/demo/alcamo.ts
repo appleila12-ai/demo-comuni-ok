@@ -4,7 +4,8 @@ import { percorso } from "../percorso";
 // Comune di Alcamo (TP) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (15 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Argomento "Assistenza sociale" del sito del Comune (controllato il 15 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: scheda «Area 2 – Servizio Sociale Territoriale» del Comune di Alcamo (aggiornata il 21/09/2026), letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const alcamo: ComuneConfig = {
   slug: "alcamo",
   tipo: "comune",
@@ -18,9 +19,9 @@ export const alcamo: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0924 590111",
-  email: "",
-  pec: "",
+  telefono: "0924 21695",
+  email: "assistentisociali@comune.alcamo.tp.it",
+  pec: "comunedialcamo.protocollo@pec.it",
   orari: "",
   sitoWeb: "https://www.comune.alcamo.tp.it/it/topics/7",
 

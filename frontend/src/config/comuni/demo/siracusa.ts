@@ -1,3 +1,4 @@
+// Recapiti controllati il 17/11/2026. Fonte: https://static-www.comune.siracusa.it/wp-content/uploads/2026/05/1-AVVISO_signed.pdf ; aggiornamento fonte: 25/05/2026 (firma del documento).
 import type { ComuneConfig } from "../types";
 import { percorso } from "../percorso";
 
@@ -18,12 +19,12 @@ export const siracusa: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0931 451111",
-  email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.siracusa.it",
+  indirizzo: "Via Italia 103, n. 105, Siracusa",
+  telefono: "0931 781300",
+  email: "politichesociali@comune.siracusa.it",
+  pec: "servizisociali@comune.siracusa.legalmail.it",
+  orari: "Recapiti del Settore Politiche Sociali pubblicati nel documento comunale del 25/05/2026. Orari non indicati nel documento.",
+  sitoWeb: "https://static-www.comune.siracusa.it/wp-content/uploads/2026/05/1-AVVISO_signed.pdf",
 
   logo: null,
 
@@ -38,8 +39,8 @@ export const siracusa: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.siracusa.it" },
+      subtitle: "Recapiti istituzionali nella scheda; controllati il 17/11/2026",
+      action: { type: "web", value: "https://static-www.comune.siracusa.it/wp-content/uploads/2026/05/1-AVVISO_signed.pdf" },
     },
   ],
 

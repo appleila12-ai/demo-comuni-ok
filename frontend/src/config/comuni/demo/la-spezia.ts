@@ -42,6 +42,12 @@ export const laSpezia: ComuneConfig = {
       action: { type: "tel", value: "0187745670" },
     },
     {
+      icon: "call-outline",
+      title: "Sportello di cittadinanza",
+      subtitle: "Via Fiume 207, La Spezia · Tel. 0187 028414 (numero operativo dal 05/10/2026) · sportellocittadinanza@comune.sp.it · Fonte: pagina del Comune, consultata il 10/11/2026 (data di aggiornamento non indicata)",
+      action: { type: "tel", value: "0187028414" },
+    },
+    {
       icon: "business-outline",
       title: "Segretariato Sociale",
       subtitle: "Servizio comunale di informazione, accoglienza e orientamento sui servizi sociali e sociosanitari",

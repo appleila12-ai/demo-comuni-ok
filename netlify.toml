@@ -3,7 +3,9 @@
 # viene usato frontend/netlify.toml, con lo stesso contenuto.
 [build]
   base = "frontend"
-  command = "yarn build"
+  # Prima del build si controllano i dati (bonus, Comuni, destinatari, associazioni): se c'è un errore
+  # strutturale il build si ferma e il sito resta sull'ultima versione buona. Vedi CHATGPT_WORKFLOW.md.
+  command = "node scripts/controlla-dati.js --bloccante && yarn build"
   publish = "dist"
 
 [build.environment]
@@ -13,3 +15,16 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Percorsi Territoriali (area riservata ai Comuni): funzione server e intestazioni.
+# La funzione sta in frontend/netlify/functions/percorsi.mjs e usa Netlify Blobs.
+# Password e segreto di firma si impostano SOLO in Netlify > Environment variables (vedi docs/percorsi-territoriali).
+[functions]
+  directory = "netlify/functions"
+
+[[headers]]
+  for = "/accesso-comuni*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
+    Referrer-Policy = "no-referrer"

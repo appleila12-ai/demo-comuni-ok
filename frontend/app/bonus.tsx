@@ -8,14 +8,20 @@ import Ionicons from "@react-native-vector-icons/ionicons";
 import { colors, fonts, radius, spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
-import { bonusDelComune, STATO_BONUS, type Bonus, type StatoBonus } from "@/src/lib/bonus";
+import { bonusDelComune, dataScadenzaLeggibile, GIORNI_SCADUTO_VISIBILE, STATO_BONUS, type Bonus, type StatoBonus } from "@/src/lib/bonus";
 import { Avviso, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
 import { BottoneSalva } from "@/src/components/BottoneSalva";
+import IN_VALIDAZIONE from "@/src/content/in-validazione.json";
 import { DOVE_CERCARE, PAROLE_GENERALI, PORTALE_NAZIONALE } from "@/src/lib/doveCercare";
+
+type RichiestaIV = { stato?: string; dal?: string; chiesto?: string };
+const richiestaBonusComunali = (slug: string): RichiestaIV | undefined =>
+  (IN_VALIDAZIONE as Record<string, Record<string, RichiestaIV>>)[slug]?.["bonus-comunali"];
 
 const apri = (url: string) => Linking.openURL(url).catch(() => {});
 
 const COLORI_STATO: Record<StatoBonus, { fondo: string; testo: string }> = {
+  scaduto: { fondo: colors.errorSoft, testo: colors.onSurface },
   aperto: { fondo: colors.successSoft, testo: colors.onSurface },
   attivo: { fondo: colors.successSoft, testo: colors.onSurface },
   chiuso: { fondo: colors.surfaceTertiary, testo: colors.onSurface },
@@ -42,12 +48,23 @@ function Scheda({ b }: { b: Bonus }) {
         accessibilityLabel={`Stato: ${stato.etichetta}. ${stato.spiegazione}`}
       >
         <Ionicons
-          name={b.stato === "chiuso" ? "lock-closed-outline" : b.stato === "da-verificare" ? "help-circle-outline" : "checkmark-circle-outline"}
+          name={b.stato === "scaduto" ? "alert-circle-outline" : b.stato === "chiuso" ? "lock-closed-outline" : b.stato === "da-verificare" ? "help-circle-outline" : "checkmark-circle-outline"}
           size={16}
           color={c.testo}
         />
-        <Text style={[styles.badgeText, { color: c.testo }]}>{stato.etichetta}</Text>
+        <Text style={[styles.badgeText, { color: c.testo }]}>
+          {b.stato === "scaduto" && b.scade ? `Scaduto il ${dataScadenzaLeggibile(b.scade)}` : stato.etichetta}
+        </Text>
       </View>
+
+      {b.stato === "scaduto" && b.scade ? (
+        <View style={styles.scadutoBox} accessible accessibilityRole="alert">
+          <Text style={styles.scadutoTesto}>
+            Questo bando è scaduto il {dataScadenzaLeggibile(b.scade)}: non si può più chiedere. Lo teniamo qui per
+            {" "}{GIORNI_SCADUTO_VISIBILE} giorni, per aiutare chi ha già presentato domanda a ritrovare le informazioni.
+          </Text>
+        </View>
+      ) : null}
 
       <Text style={styles.titolo} accessibilityRole="header">
         {b.titolo}
@@ -131,8 +148,8 @@ function DoveCercareRiquadro({ regione, nessuna }: { regione: string; nessuna: b
 
 export default function Bonus() {
   useSezione("bonus");
-  const { locali, regionali, regione } = bonusDelComune();
-  const nessuna = locali.length + regionali.length === 0;
+  const { locali, regionali, nazionali, regione } = bonusDelComune();
+  const nessuna = locali.length + regionali.length + nazionali.length === 0;
 
   return (
     <Pagina titolo="Bonus e contributi" testID="bonus-screen" sottotitoloSalvato="Misure della Regione e del territorio">
@@ -184,6 +201,17 @@ export default function Bonus() {
         </View>
       ) : null}
 
+      {locali.length === 0 && richiestaBonusComunali(comune.slug) ? (
+        <Avviso>
+          Informazione in validazione: stiamo verificando con il Comune se esistono contributi propri per le persone con
+          disabilità.
+          {richiestaBonusComunali(comune.slug)?.stato === "chiesto" && richiestaBonusComunali(comune.slug)?.dal
+            ? ` Lo abbiamo chiesto ai ${richiestaBonusComunali(comune.slug)?.chiesto ?? "Servizi Sociali del Comune"} il ${dataScadenzaLeggibile(richiestaBonusComunali(comune.slug)?.dal ?? "")} e non abbiamo ancora ricevuto risposta.`
+            : ""}{" "}
+          Nel frattempo chiedi ai Servizi Sociali: possono indicarti anche le misure dell'ambito sociale.
+        </Avviso>
+      ) : null}
+
       {locali.length > 0 ? (
         <>
           <Text style={paginaStili.titoloSezione} accessibilityRole="header">
@@ -201,6 +229,17 @@ export default function Bonus() {
             Regione {regione}
           </Text>
           {regionali.map((b) => (
+            <Scheda key={b.id} b={b} />
+          ))}
+        </>
+      ) : null}
+
+      {nazionali.length > 0 ? (
+        <>
+          <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+            In tutta Italia
+          </Text>
+          {nazionali.map((b) => (
             <Scheda key={b.id} b={b} />
           ))}
         </>
@@ -230,6 +269,15 @@ const styles = StyleSheet.create({
     marginBottom: spacing.sm,
   },
   badgeText: { fontSize: 14, fontWeight: "800" },
+  scadutoBox: {
+    backgroundColor: colors.errorSoft,
+    borderWidth: 1.5,
+    borderColor: colors.error,
+    borderRadius: radius.md,
+    padding: spacing.md,
+    marginBottom: spacing.sm,
+  },
+  scadutoTesto: { fontSize: 15, lineHeight: 22, fontWeight: "700", color: colors.onSurface },
   titolo: {
     fontFamily: fonts.serif,
     fontSize: 18,

@@ -4,7 +4,13 @@ import { percorso } from "../percorso";
 // Comune di Rovigo (RO) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Verificato solo il sito del Comune (link ufficiale). Home del sito del Comune: la pagina dei servizi sociali va cercata e confermata (controllato il 14 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// 18/11/2026: sede, sportello, telefono ed email da avviso istituzionale del Comune, documento pubblicato nel 2024 (controllato 18/11/2026).
+// https://www.comune.rovigo.it/myportal/C_H620/api/content/download?id=67483dc495d135008d862b00
+// Riscontro su avviso comunale successivo: https://www.comune.rovigo.it/myportal/C_H620/api/content/download?id=67af1b6cb98554008bd8fafd
+// Orari non presenti nelle fonti; non inventarli. Mancano bonus, Ambito, destinatario e avviso UI.
+// Fonte regionale ticket/esenzioni: Regione Veneto, aggiornamento 20/05/2026, consultazione archivio #335 (17/11/2026), riuso 18/11/2026.
+// https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni
+// La procedura e lo sportello fisico specifici dell'ULSS locale restano da verificare; scheda PARZIALE.
 export const rovigo: ComuneConfig = {
   slug: "rovigo",
   tipo: "comune",
@@ -17,9 +23,9 @@ export const rovigo: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0425 2061",
-  email: "",
+  indirizzo: "Viale G. Marconi 2, 45100 Rovigo",
+  telefono: "0425 206556",
+  email: "sportelloservizisociali@comune.rovigo.it",
   pec: "comunerovigo@legalmail.it",
   orari: "",
   sitoWeb: "https://www.comune.rovigo.it",
@@ -37,8 +43,8 @@ export const rovigo: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.rovigo.it" },
+      subtitle: "Sportello Servizi Sociali · Viale G. Marconi 2 · Tel. 0425 206556",
+      action: { type: "tel", value: "0425206556" },
     },
     {
       icon: "medkit-outline",
@@ -53,7 +59,7 @@ export const rovigo: ComuneConfig = {
 
   esenzioneTicket: {
     label: "ULSS 5 Polesana · Esenzioni ticket",
-    url: "https://www.aulss5.veneto.it",
+    url: "https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni",
   },
 
   daVerificare: true,

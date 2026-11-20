@@ -1,4 +1,4 @@
-import { Stack, useRouter } from "expo-router";
+import { Stack, usePathname, useRouter } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect, useState } from "react";
 import { LogBox, Platform } from "react-native";
@@ -17,6 +17,18 @@ import {
 
 LogBox.ignoreAllLogs(true)
 
+// Titoli fissi delle pagine generali (uguali per tutti i Comuni): servono ai motori di ricerca.
+// Le pagine di un singolo Comune e le altre schermate continuano a mostrare il Comune attivo.
+const TITOLI_PAGINE: Record<string, string> = {
+  "/": "TutelApp – L'app gratuita per diritti, Legge 104 e Riforma disabilità",
+  "/comuni": "Scegli il tuo Comune | TutelApp",
+  "/per-i-comuni": "Per i Comuni: contattaci | TutelApp",
+  "/primi-passi": "Primi passi dopo una diagnosi | TutelApp",
+  "/riforma": "Riforma della disabilità: cosa cambia | TutelApp",
+  "/domande-104": "Domande sulla Legge 104 | TutelApp",
+  "/faq": "Domande frequenti | TutelApp",
+};
+
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
@@ -25,6 +37,7 @@ export default function RootLayout() {
   const [nomeReady, setNomeReady] = useState(false);
   const [comuneSlug, setComuneSlug] = useState(getComuneAttivo().slug);
   const router = useRouter();
+  const pathname = usePathname();
   const nome = useNomeUtente();
 
   useEffect(() => {
@@ -42,10 +55,12 @@ export default function RootLayout() {
   // Sul web il titolo della scheda del browser riporta il Comune attivo
   useEffect(() => {
     if (Platform.OS === "web" && typeof document !== "undefined") {
-      document.title = `TutelApp · ${getComuneAttivo().nome}`;
+      const percorso = (pathname || "/").replace(/\/+$/, "") || "/";
+      document.title =
+        TITOLI_PAGINE[percorso] ?? `TutelApp · ${getComuneAttivo().nome}`;
       document.documentElement.lang = "it";
     }
-  }, [comuneSlug]);
+  }, [comuneSlug, pathname]);
 
   // Avvisi gentili (solo app installata): a ogni apertura, e a ogni cambio di Comune,
   // si ricorda l'ultima visita e si riallineano gli avvisi ai dati salvati sul telefono

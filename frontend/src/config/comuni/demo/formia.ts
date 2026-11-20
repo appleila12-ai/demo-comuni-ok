@@ -4,7 +4,8 @@ import { percorso } from "../percorso";
 // Comune di Formia (LT) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (15 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Home del sito del Comune (controllata il 15 ottobre 2026): la pagina dei servizi sociali va cercata e confermata. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: Pagine «Uffici» e «Orari uffici comunali» del Comune di Formia (13/11/2026). PEC generale del Comune; email dei Servizi Sociali non confermata.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const formia: ComuneConfig = {
   slug: "formia",
   tipo: "comune",
@@ -17,11 +18,11 @@ export const formia: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
+  indirizzo: "Via Mamurra 41, Palazzo Piazzetta delle Erbe",
   telefono: "0771 7781",
   email: "",
-  pec: "",
-  orari: "",
+  pec: "protocollo@pec.cittadiformia.it",
+  orari: "Lunedì e giovedì 10–13; martedì 15–17, su appuntamento telefonico. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.formia.lt.it",
 
   logo: null,

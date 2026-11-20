@@ -5,7 +5,8 @@ import { percorso } from "../percorso";
 // Comune di Ardea (RM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: pagine dell'ufficio (aggiornata l'11/03/2026) e della sede di via Crispi (aggiornata il 24/02/2026) del Comune di Ardea, riportate il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const ardea: ComuneConfig = {
   slug: "ardea",
   tipo: "comune",
@@ -18,11 +19,11 @@ export const ardea: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "06 913800",
-  email: "",
+  indirizzo: "Via Francesco Crispi 12, Ardea (sede distaccata)",
+  telefono: "06 913800 (interno 160 o 703 per i Servizi Sociali; interno 106 per il Segretariato Sociale)",
+  email: "uff.sociali@comune.ardea.rm.it",
   pec: "",
-  orari: "",
+  orari: "Segretariato Sociale: lunedì, martedì, mercoledì e venerdì 9:00–12:00; giovedì 9:00–12:00 e 15:00–17:00. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.ardea.rm.it",
 
   logo: null,

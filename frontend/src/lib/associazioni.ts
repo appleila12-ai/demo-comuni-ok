@@ -16,6 +16,7 @@
 // Aggiornamento 27/10/2026: elenco libere forme associative di Arezzo.
 // Aggiornamento 27/10/2026: Albo comunale delle associazioni della disabilità di Pisa.
 // Aggiornamento 07/11/2026: Liguria Calcio Non Vedenti (Sanremo), nuova sede e descrizione comunicate dal presidente dell'associazione via email il 07/11/2026; telefono fisso tolto (non più attivo), 09/11/2026.
+// Aggiornamento 16/11/2026: A.I.S.EA ETS (malattia rara, associazione nazionale) tra le nazionali, dal sito aiseaets.org; senza logo.
 // Aggiornamento 25/10/2026: provincia di Genova (Anffas, ANGSA, UICI, Chiossone, AISM, UILDM, ENS, ANGLAT, Asperger,
 // e dall'elenco ASL3 'Comitato Misto Consultivo - Associazioni' agg. 18/06/2025: Consulta disabilità, Alzheimer Liguria,
 // ALFAPP, Parkinson, tutela del malato, AVO).
@@ -518,11 +519,20 @@ PER_PROVINCIA.GE.volontariato.unshift(
   {
     nome: "ALFAPP – Associazione Ligure Famiglie Pazienti Psichiatrici",
     cosa: "Accoglienza e consulenza per persone con disagio psichiatrico e famiglie, gruppi di aiuto, laboratori, progetti per lavoro e autonomia abitativa.",
-    dove: "Via Malta, Genova · accoglienza lun–ven 15:00–19:00",
+    dove: "Sede regionale: Via Malta 3/4, Genova · accoglienza lun–ven 15:00–19:00",
     telefono: "010 540740",
     email: "alfapp.genova@gmail.com",
     sito: "https://www.alfapp.it",
     comuni: ["genova"],
+  },
+  // Aggiornamento 10/11/2026: sezione Tigullio, dati inseriti dall'associazione con il modulo "Adesione associazioni" del sito (10/11/2026).
+  {
+    nome: "ALFAPP Tigullio – Associazione Ligure Famiglie Pazienti Psichiatrici",
+    cosa: "Volontari e familiari che affiancano le famiglie dei pazienti psichiatrici nella gestione delle patologie dei loro cari e si attivano perché le leggi statali e regionali siano pienamente applicate.",
+    dove: "Sezione Tigullio: Via Caboto 13/a, Sestri Levante",
+    telefono: "010 540740",
+    email: "alfapp.tigullio@gmail.com",
+    comuni: ["sestri-levante"],
   },
   {
     nome: "Associazione Ligure Parkinson",
@@ -2220,6 +2230,14 @@ const VOLONTARIATO_NAZIONALI: Associazione[] = [
     email: "segreteria@uniamo.org",
     sito: "https://uniamo.org",
   },
+  {
+    nome: "A.I.S.EA ETS – Associazione Italiana Sindrome di Emiplegia Alternante",
+    cosa: "Associazione nazionale formata da famiglie con figli che hanno l'emiplegia alternante, una malattia rara. Aiuta le famiglie nella vita di ogni giorno, fa conoscere la malattia e sostiene la ricerca. Dal sito: per i soci c'è un servizio di consulenza medica; per altri servizi o per le persone non socie scrivi all'email indicata. Non sono pubblicati orari di apertura né sedi locali: non li abbiamo inseriti perché non verificati (al 16/11/2026 non sono ancora stati chiesti all'associazione: puoi chiederli tu a info@aiseaets.org). Recapiti letti sul sito dell'associazione il 16/11/2026 (la pagina dei contatti non riporta la data).",
+    dove: "Sede legale: Via Giorgio Politeo 20, 00139 Roma",
+    telefono: "327 9276116",
+    email: "info@aiseaets.org",
+    sito: "https://www.aiseaets.org",
+  },
 ];
 
 // Raggio entro cui un'associazione si considera "vicina" (anche oltre il confine della provincia).
@@ -2290,3 +2308,15 @@ export function associazioniDelComune() {
 }
 
 // 21/10/2026: tolte le associazioni con recapito non confermato (regola: nessuna informazione dubbia in app).
+
+/**
+ * Associazioni e realtà sportive legate in modo esplicito a un Comune (campo `comuni`), senza l'elenco di provincia.
+ * Serve al modulo riservato ai Comuni (percorsi/comuni.ts), che deve mostrare ciò che TutelApp ha già per quel Comune.
+ */
+export function associazioniLegateAlComune(slug: string): { volontariato: Associazione[]; sport: Associazione[] } {
+  const tutte = (tipo: "volontariato" | "sport") =>
+    Object.values(PER_PROVINCIA)
+      .flatMap((e) => e[tipo])
+      .filter((a) => a.comuni?.includes(slug));
+  return { volontariato: tutte("volontariato"), sport: tutte("sport") };
+}

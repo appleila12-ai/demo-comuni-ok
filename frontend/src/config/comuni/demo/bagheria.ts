@@ -5,7 +5,8 @@ import { percorso } from "../percorso";
 // Comune di Bagheria (PA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Pagina del Distretto socio-sanitario 39 del sito del Comune (controllata il 14 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: scheda «Direzione II Politiche Sociali» del Comune di Bagheria (aggiornata il 09/11/2026), letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const bagheria: ComuneConfig = {
   slug: "bagheria",
   tipo: "comune",
@@ -20,8 +21,8 @@ export const bagheria: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "091 943111",
-  email: "",
-  pec: "",
+  email: "assistsoc@comune.bagheria.pa.it",
+  pec: "politichesociali@pec.comune.bagheria.pa.it",
   orari: "",
   sitoWeb: "https://www.comune.bagheria.pa.it/it/page/133342",
 

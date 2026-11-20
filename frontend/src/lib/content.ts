@@ -11,7 +11,7 @@ export interface GuideStep {
 export const NEXT_STEPS: GuideStep[] = [
   {
     title: "Vai dal tuo medico con la diagnosi",
-    body: "Chiedi al medico curante (o a un medico certificatore) il Certificato Medico Introduttivo e fattelo inviare all'INPS. Con la riforma questo certificato avvia da solo la valutazione: non serve più una domanda separata.",
+    body: "Chiedi al medico curante (o a un medico certificatore) il Certificato Medico Introduttivo: lo invia lui all'INPS, online. Dove la riforma è già attiva il certificato avvia da solo la pratica; dove non lo è ancora serve anche la domanda all'INPS entro 90 giorni. Dal 1° gennaio 2027 la nuova procedura vale in tutta Italia.",
   },
   {
     title: "Un'unica valutazione di base",
@@ -35,16 +35,14 @@ export const NEXT_STEPS: GuideStep[] = [
 export const CERT_EXPLAINER = {
   title: "Cos'è il Certificato Medico Introduttivo?",
   intro:
-    "È il documento che AVVIA tutta la pratica: con la riforma è il certificato stesso a far partire la valutazione, senza una domanda amministrativa separata.",
+    "È il documento che AVVIA la pratica: dove la riforma è già attiva è il certificato stesso a far partire la valutazione, senza una domanda separata. Dal 1° gennaio 2027 vale in tutta Italia.",
   points: [
     "Lo compila il tuo medico curante (o un medico certificatore abilitato) e lo invia telematicamente all'INPS.",
     "Contiene le diagnosi e i dati clinici: porta con te referti e documentazione aggiornata.",
-    "Ti viene consegnata una ricevuta: conservala, è il riferimento della tua pratica.",
     "Avvia automaticamente l'unica valutazione di base (invalidità + disabilità insieme).",
-    "Costa in media tra 30€ e 80€, secondo la tariffa del medico.",
   ],
   reform:
-    "Con la Riforma della disabilità (D.Lgs. 62/2024), pienamente attiva dal 2027 in tutta Italia, la valutazione è unica e il certificato del medico la avvia da solo: una sola visita, un solo verbale.",
+    "Con la Riforma della disabilità (D.Lgs. 62/2024), che dal 1° gennaio 2027 vale in tutta Italia, la valutazione è unica e il certificato del medico la avvia da solo.",
 };
 
 export interface BenefitItem {

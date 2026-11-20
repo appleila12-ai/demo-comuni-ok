@@ -4,7 +4,8 @@ import { percorso } from "../percorso";
 // Comune di Arzano (NA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (20 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // L'indirizzo del sito del Comune è preso dalla scheda del Comune su tuttitalia.it (collegamento al sito istituzionale): il sito non è stato aperto in questo giro, quindi indirizzo e pagina dei servizi sociali sono da verificare. Il link dell'azienda sanitaria è ripreso dalle schede dei Comuni della stessa provincia: da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: pagina «Politiche Sociali» del sito del Comune di Arzano, letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const arzano: ComuneConfig = {
   slug: "arzano",
   tipo: "comune",
@@ -16,12 +17,12 @@ export const arzano: ComuneConfig = {
   regione: "Campania",
 
   ente: "Servizi Sociali",
-  responsabile: "",
-  indirizzo: "",
-  telefono: "",
+  responsabile: "Dott.ssa Rosa Funaro (Caposettore Politiche sociali)",
+  indirizzo: "Via A. Pecchia 90",
+  telefono: "081 5850412",
   email: "",
   pec: "",
-  orari: "",
+  orari: "Dal lunedì al venerdì 9–12; martedì e giovedì anche 15:30–17:30. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.arzano.na.it",
 
   logo: null,

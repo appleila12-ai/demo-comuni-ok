@@ -1,3 +1,4 @@
+// Recapiti controllati il 17/11/2026. Fonte: https://comune.taranto.it/it/unita_organizzative/segreteria-della-direzione-servizi-sociali ; aggiornamento fonte: 02/04/2026.
 import type { ComuneConfig } from "../types";
 import { percorso } from "../percorso";
 
@@ -15,14 +16,14 @@ export const taranto: ComuneConfig = {
   provincia: "TA",
   regione: "Puglia",
 
-  ente: "Servizi Sociali",
+  ente: "Segreteria Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "099 4581111",
-  email: "",
+  indirizzo: "Via Lazio 45, Taranto",
+  telefono: "099 4581881",
+  email: "segreteria.servizisociali@comune.taranto.it",
   pec: "",
   orari: "",
-  sitoWeb: "https://www.comune.taranto.it/it/topics/7",
+  sitoWeb: "https://comune.taranto.it/it/unita_organizzative/segreteria-della-direzione-servizi-sociali",
 
   logo: null,
 
@@ -36,9 +37,9 @@ export const taranto: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.taranto.it/it/topics/7" },
+      title: "Segreteria Servizi Sociali",
+      subtitle: "Recapiti istituzionali nella scheda; controllati il 17/11/2026",
+      action: { type: "web", value: "https://comune.taranto.it/it/unita_organizzative/segreteria-della-direzione-servizi-sociali" },
     },
     {
       icon: "medkit-outline",

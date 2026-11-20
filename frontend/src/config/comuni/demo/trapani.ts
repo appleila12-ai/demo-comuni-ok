@@ -1,3 +1,4 @@
+// Recapiti controllati il 17/11/2026. Fonte: https://comune.trapani.it/unita_organizzativa/servizi-sociali/ ; aggiornamento fonte: 22/10/2026.
 import type { ComuneConfig } from "../types";
 import { percorso } from "../percorso";
 
@@ -17,12 +18,12 @@ export const trapani: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0923 590111",
-  email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.trapani.it",
+  indirizzo: "Centro Nino Via, via Archimede 1, Trapani",
+  telefono: "334 1128975",
+  email: "servizisociali@comune.trapani.it",
+  pec: "servizi.sociali@pec.comune.trapani.it",
+  orari: "Il numero principale è quello della responsabile dell’ufficio. Personale amministrativo: 348 3552438, 348 3552448, 333 6139937. Front office: lunedì e giovedì 15:00-17:00; mercoledì e venerdì 09:15-12:00. Telefona prima di andare.",
+  sitoWeb: "https://comune.trapani.it/unita_organizzativa/servizi-sociali/",
 
   logo: null,
 
@@ -37,8 +38,8 @@ export const trapani: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.trapani.it" },
+      subtitle: "Recapiti istituzionali nella scheda; controllati il 17/11/2026",
+      action: { type: "web", value: "https://comune.trapani.it/unita_organizzativa/servizi-sociali/" },
     },
     {
       icon: "medkit-outline",

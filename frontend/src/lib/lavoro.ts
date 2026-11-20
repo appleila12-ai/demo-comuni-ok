@@ -100,7 +100,7 @@ export function lavoroDelComune(): {
   regione: string;
 } {
   const regione = comune.regione;
-  const ordine = { aperto: 0, attivo: 1, "da-verificare": 2, chiuso: 3 } as const;
+  const ordine = { aperto: 0, attivo: 1, "da-verificare": 2, scaduto: 3, chiuso: 4 } as const;
   const ordina = (l: Bonus[]) => [...l].sort((a, b) => ordine[a.stato] - ordine[b.stato]);
   const nazionali = LAVORO.filter((b) => b.regione === REGIONE_ITALIA);
   const dellaRegione = LAVORO.filter((b) => b.regione === regione);

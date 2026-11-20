@@ -5,7 +5,8 @@ import { percorso } from "../percorso";
 // Comune di Campi Bisenzio (FI) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (18 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sito ufficiale e pagina "Salute, benessere e assistenza" verificati il 18/10/2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: avviso «Segretariato Sociale» del Comune di Campi Bisenzio (21/10/2026); l'email è della USL, letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const campiBisenzio: ComuneConfig = {
   slug: "campi-bisenzio",
   tipo: "comune",
@@ -19,10 +20,10 @@ export const campiBisenzio: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "",
-  email: "",
+  telefono: "055 6930444",
+  email: "segretariatosociale.fiorentinanordovest@uslcentro.toscana.it",
   pec: "",
-  orari: "",
+  orari: "Telefono: lunedì, mercoledì e venerdì 9–11; martedì 14:30–16:30. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.campi-bisenzio.fi.it",
 
   logo: null,

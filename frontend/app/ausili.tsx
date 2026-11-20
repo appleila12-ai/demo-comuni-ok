@@ -1,6 +1,6 @@
 // Ausili, protesi e ortesi: parte NAZIONALE, scritta solo dal DPCM 12 gennaio 2017 (artt. 17 e 18),
 // Gazzetta Ufficiale n. 65 del 18/03/2017, S.O. n. 15. Le regole locali (uffici, moduli, tempi dell'ASL)
-// non sono qui: si aggiungono solo con la risposta scritta dell'ASL.
+// non sono qui: si aggiungono solo con la risposta scritta dell'ASL (ASL 5 Spezzino: src/lib/ausiliAsl5.ts, risposta dell'URP, novembre 2026).
 
 import React from "react";
 import { Linking, StyleSheet, Text, View } from "react-native";
@@ -9,6 +9,19 @@ import { spacing } from "@/src/theme";
 import { comune } from "@/src/config/comune";
 import { useSezione } from "@/src/lib/statistiche";
 import { Avviso, Bottone, Intro, Pagina, paginaStili } from "@/src/components/Pagina";
+import { fattoCapoAsl5 } from "@/src/lib/esenzioneAsl5";
+import {
+  COME_SI_PRESENTA_AUSILI_ASL5,
+  DOCUMENTI_AUSILI_ASL5,
+  FONTE_AUSILI_ASL5,
+  PAGINA_AUSILI_ASL5,
+  RIPARAZIONE_AUSILI_ASL5,
+  TRASPORTO_ASL5_MANCA,
+  SENZA_MAIL_AUSILI_ASL5,
+  SPORTELLI_AUSILI_ASL5,
+  TEMPI_AUSILI_ASL5,
+  mailProtesicaAsl5,
+} from "@/src/lib/ausiliAsl5";
 
 const apri = (url: string) => Linking.openURL(url).catch(() => {});
 
@@ -55,6 +68,79 @@ function Elenco({ voci }: { voci: string[] }) {
   );
 }
 
+// Carro, Maissana e Varese Ligure sono in provincia della Spezia ma fanno capo all'ASL 4: per loro la scheda ASL 5 non vale
+const asl5 = () => comune.provincia === "SP" && fattoCapoAsl5(comune.nomeBreve);
+
+function AusiliAsl5() {
+  const { mail, zona } = mailProtesicaAsl5(comune.nomeBreve);
+  return (
+    <View testID="ausili-asl5">
+      <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+        Dove presentare la richiesta (ASL 5)
+      </Text>
+      <Text style={[paginaStili.testo, st.nota]}>{COME_SI_PRESENTA_AUSILI_ASL5}</Text>
+      <Bottone
+        label={PAGINA_AUSILI_ASL5.label}
+        icon="open-outline"
+        variante="vuoto"
+        onPress={() => apri(PAGINA_AUSILI_ASL5.url)}
+        testID="ausili-asl5-pagina"
+      />
+      <Text style={[paginaStili.testo, st.nota]}>{PAGINA_AUSILI_ASL5.nota}</Text>
+      <Text style={[paginaStili.testo, st.nota]}>Per {zona}:</Text>
+      <Bottone
+        label={`Scrivi a ${mail}`}
+        icon="mail-outline"
+        onPress={() => apri(`mailto:${mail}`)}
+        testID="ausili-asl5-mail"
+      />
+      <Text style={[paginaStili.testo, st.nota]}>{SENZA_MAIL_AUSILI_ASL5}</Text>
+      <View style={paginaStili.card}>
+        {SPORTELLI_AUSILI_ASL5.map((s) => (
+          <Text key={s.luogo} style={[paginaStili.testo, { marginBottom: spacing.sm }]}>
+            • {s.luogo}: {s.quando}
+          </Text>
+        ))}
+      </View>
+
+      <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+        Cosa portare
+      </Text>
+      <Elenco voci={DOCUMENTI_AUSILI_ASL5} />
+
+      <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+        Quanto ci vuole
+      </Text>
+      <Elenco voci={TEMPI_AUSILI_ASL5} />
+      <Text style={[paginaStili.testo, st.nota]}>{RIPARAZIONE_AUSILI_ASL5}</Text>
+
+      <Text style={paginaStili.titoloSezione} accessibilityRole="header">
+        {TRASPORTO_ASL5_MANCA.titolo}
+      </Text>
+      <Avviso>{TRASPORTO_ASL5_MANCA.testo}</Avviso>
+      <Text style={[paginaStili.testo, st.nota]}>{TRASPORTO_ASL5_MANCA.invito}</Text>
+      <Bottone
+        label={`Scrivi all'URP dell'ASL 5 · ${TRASPORTO_ASL5_MANCA.mail}`}
+        icon="mail-outline"
+        variante="vuoto"
+        onPress={() => apri(`mailto:${TRASPORTO_ASL5_MANCA.mail}`)}
+        testID="ausili-asl5-trasporto-mail"
+      />
+      <Bottone
+        label={`Chiama l'URP · ${TRASPORTO_ASL5_MANCA.telefono}`}
+        icon="call-outline"
+        variante="vuoto"
+        onPress={() => apri(`tel:${TRASPORTO_ASL5_MANCA.telefono.replace(/\s+/g, "")}`)}
+        testID="ausili-asl5-trasporto-tel"
+      />
+      <Text style={[paginaStili.testo, st.nota]}>
+        Dal telefono fisso si può chiamare anche il numero verde {TRASPORTO_ASL5_MANCA.telefonoVerde}.
+      </Text>
+      <Text style={[paginaStili.testo, st.fonte]}>Fonte: {FONTE_AUSILI_ASL5}</Text>
+    </View>
+  );
+}
+
 export default function Ausili() {
   useSezione("ausili");
   return (
@@ -94,11 +180,15 @@ export default function Ausili() {
         nomenclatore, secondo le procedure della tua Regione.
       </Text>
 
-      <Avviso>
-        Non abbiamo ancora i dati della tua ASL: a quale ufficio presentare la richiesta, quali moduli usare e i tempi
-        di risposta cambiano da una ASL all&apos;altra. Chiedili all&apos;ufficio protesi e ausili del tuo Distretto
-        o ai Servizi Sociali {comune.delEnte}.
-      </Avviso>
+      {asl5() ? (
+        <AusiliAsl5 />
+      ) : (
+        <Avviso>
+          Non abbiamo ancora i dati della tua ASL: a quale ufficio presentare la richiesta, quali moduli usare e i tempi
+          di risposta cambiano da una ASL all&apos;altra. Chiedili all&apos;ufficio protesi e ausili del tuo Distretto
+          o ai Servizi Sociali {comune.delEnte}.
+        </Avviso>
+      )}
 
       {comune.telefono ? (
         <Bottone

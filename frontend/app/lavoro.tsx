@@ -16,6 +16,7 @@ import { BottoneSalva } from "@/src/components/BottoneSalva";
 const apri = (url: string) => Linking.openURL(url).catch(() => {});
 
 const COLORI_STATO: Record<StatoBonus, { fondo: string; testo: string }> = {
+  scaduto: { fondo: colors.errorSoft, testo: colors.onSurface },
   aperto: { fondo: colors.successSoft, testo: colors.onSurface },
   attivo: { fondo: colors.successSoft, testo: colors.onSurface },
   chiuso: { fondo: colors.surfaceTertiary, testo: colors.onSurface },
