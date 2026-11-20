@@ -47,6 +47,10 @@ export const vittorioVeneto: ComuneConfig = {
     cream: "#F6F2F5",
   },
 
+  // Carta Dedicata a te 2026–2027: pagina comunale aggiornata 03/11/2026, verificata 20/11/2026.
+  // https://www.comune.vittorio-veneto.tv.it/home/vivere/Servizi-Sociali/Contributi--assegni-e-sussidi-economici/Carta-acquisti-dedicata-a-te.html
+  // Bonus SAVNO 2026: pubblicato 23/09/2026, domande scadute 15/11/2026; verificato 20/11/2026.
+  // https://www.comune.vittorio-veneto.tv.it/notizie/savno26.html
   // ULSS 2, esenzione per invalidità/infortunio sul lavoro: pagina aggiornata 03/02/2026; verifica 19/11/2026.
   // https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-e-infortunio-sul-lavoro
   puntiSupporto: [
@@ -55,6 +59,18 @@ export const vittorioVeneto: ComuneConfig = {
       title: "Servizi Sociali del Comune",
       subtitle: "Via Giosuè Carducci 28 · Tel. 0438 569305 · Lun, Mar, Gio, Ven 9:00–12:45; Gio 15:00–17:30",
       action: { type: "tel", value: "0438569305" },
+    },
+    {
+      icon: "card-outline",
+      title: "Carta Dedicata a te 2026–2027",
+      subtitle: "Sostegno alimentare da 500 euro per anno per nuclei selezionati dall'INPS con ISEE fino a 15.000 euro e almeno tre componenti. Non si presenta domanda: il Comune pubblica la lista dei beneficiari. Per il 2026 il primo utilizzo della carta deve avvenire entro il 16/12/2026. Controlla la pagina ufficiale per le esclusioni e il ritiro.",
+      action: { type: "web", value: "https://www.comune.vittorio-veneto.tv.it/home/vivere/Servizi-Sociali/Contributi--assegni-e-sussidi-economici/Carta-acquisti-dedicata-a-te.html" },
+    },
+    {
+      icon: "receipt-outline",
+      title: "Bonus rifiuti SAVNO 2026 (chiuso)",
+      subtitle: "Riduzione della tariffa rifiuti per utenze domestiche residenti con ISEE tra 9.796 e 15.000 euro. Le domande per il 2026 sono scadute il 15/11/2026. Per eventuali nuove edizioni chiedi ai Servizi Sociali.",
+      action: { type: "web", value: "https://www.comune.vittorio-veneto.tv.it/notizie/savno26.html" },
     },
     {
       icon: "water-outline",
