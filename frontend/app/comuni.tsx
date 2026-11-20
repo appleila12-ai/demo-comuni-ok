@@ -196,7 +196,7 @@ export default function ScegliComune() {
         <View>
           {primoAccesso ? (
             <>
-              <Text style={styles.title}>Benvenuto in TutelApp</Text>
+              <Text style={styles.title} accessibilityRole="header">Benvenuto in TutelApp</Text>
               <Text style={styles.lead}>
                 Per iniziare, cerca il tuo Comune: troverai i contatti, gli sportelli
                 e i servizi del tuo territorio. Lo sceglierai una volta sola.
@@ -295,7 +295,7 @@ export default function ScegliComune() {
 
         {gruppi.map(([regione, tutte]) => (
           <View key={regione} style={styles.group}>
-            <Text style={styles.groupLabel}>{regione.toUpperCase()}</Text>
+            <Text style={styles.groupLabel} accessibilityRole="header">{regione.toUpperCase()}</Text>
             <View testID={`comuni-lista-${regione}`}>
             <View style={styles.list}>
               {[...tutte].sort((a, b) => a.comune.nomeBreve.localeCompare(b.comune.nomeBreve, "it")).map((r) => {

@@ -384,7 +384,7 @@ function HomeDelComune() {
         </Pressable>
 
         {/* Cosa trovi */}
-        <Text style={styles.sectionLabel}>COSA PUOI FARE</Text>
+        <Text style={styles.sectionLabel} accessibilityRole="header">COSA PUOI FARE</Text>
         <View style={styles.features}>
           {/* Ogni scheda porta alla sua sezione: niente riquadri "finti" */}
           {FEATURES.map((feature) => (
@@ -414,7 +414,7 @@ function HomeDelComune() {
         </View>
 
         {/* Strumenti pratici: aiutano a fare le pratiche */}
-        <Text style={styles.sectionLabel}>STRUMENTI PRATICI</Text>
+        <Text style={styles.sectionLabel} accessibilityRole="header">STRUMENTI PRATICI</Text>
         <View style={styles.infoLinks}>
           {STRUMENTI.map((l) => (
             <Pressable
@@ -438,7 +438,7 @@ function HomeDelComune() {
         </View>
 
         {/* Informazioni utili: sempre disponibili, anche offline */}
-        <Text style={styles.sectionLabel}>INFORMAZIONI UTILI</Text>
+        <Text style={styles.sectionLabel} accessibilityRole="header">INFORMAZIONI UTILI</Text>
         <View style={styles.infoLinks}>
           {INFO_LINKS.map((l) => (
             <Pressable
@@ -484,7 +484,7 @@ function HomeDelComune() {
 
         {/* Contatti */}
         <View style={styles.contactCard}>
-          <Text style={[styles.contactEyebrow, { color: t.warmDark }]}>HAI BISOGNO DI SUPPORTO?</Text>
+          <Text style={[styles.contactEyebrow, { color: t.warmDark }]} accessibilityRole="header">HAI BISOGNO DI SUPPORTO?</Text>
           <Text style={styles.contactTitle}>{comune.ente}</Text>
           {!!comune.responsabile && <Text style={styles.contactText}>{comune.responsabile}</Text>}
           {!!comune.indirizzo && <Text style={styles.contactText}>{comune.indirizzo}</Text>}
