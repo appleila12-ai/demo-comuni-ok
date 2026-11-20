@@ -1939,6 +1939,26 @@ export const BONUS: Bonus[] = [
 
   // ---------------------------------------------------------------- CAMPANIA
   {
+    id: "abruzzo-vita-indipendente-2026",
+    regione: "Abruzzo",
+    titolo: "Vita indipendente: sostegno ai progetti 2026",
+    perChi:
+      "Persone adulte con disabilità e necessità di sostegno elevato o molto elevato, che vogliono un progetto personalizzato di vita indipendente con assistenza personale scelta da loro (legge regionale 57/2012). Chi aveva già un progetto lo conferma con lo stesso avviso.",
+    cosa:
+      "Il finanziamento del progetto di assistenza personale. L'importo mensile dipende dal livello di bisogno di assistenza; gli importi non sono indicati nei testi letti. La Regione ha stanziato circa 12 milioni di euro, per finanziare almeno 1.380 progetti (notizia del 17/11/2026).",
+    stato: "chiuso",
+    quando:
+      "Avviso 2026: richiesta o conferma al Comune entro il 31 gennaio 2026. La Regione pubblica un nuovo avviso ogni anno: la data del prossimo non è ancora indicata.",
+    comeSiChiede:
+      "Al Comune di residenza, con il progetto personalizzato e il modello di domanda allegati all'avviso. Per il prossimo avviso chiedi all'Ufficio sociale del tuo Comune o all'Ambito distrettuale sociale.",
+    fonte: {
+      label: "Regione Abruzzo · Per la Vita Indipendente stanziati circa 12 milioni di euro (17/11/2026)",
+      url: "https://www.regione.abruzzo.it/notizie/sociale-la-vita-indipendente-stanziati-circa-12-milioni-di-euro",
+    },
+    verificatoIl: "20/11/2026",
+    nota: "Fondi del programma regionale FSE+ 2021-2027. La scadenza del 31/01/2026 è scritta negli avvisi pubblicati dai Comuni abruzzesi (L'Aquila, Silvi, Atri, Teramo). Non abbiamo potuto aprire la pagina della Regione: i numeri dello stanziamento vengono dall'anteprima ufficiale della notizia.",
+  },
+  {
     id: "campania-registro-caregiver",
     regione: "Campania",
     titolo: "Registro regionale dei caregiver familiari",
@@ -2013,6 +2033,26 @@ export const BONUS: Bonus[] = [
   },
 
   // ------------------------------------------------------------ COMUNE DI LESIGNANO DE' BAGNI
+  {
+    id: "basilicata-disabilita-gravissima",
+    regione: "Basilicata",
+    titolo: "Contributo per l'assistenza a casa di persone con disabilità gravissima",
+    perChi:
+      "Familiari residenti in Basilicata che hanno in casa una persona con disabilità gravissima (art. 3 del D.M. 26 settembre 2016) e le prestano cura, direttamente o pagando altri familiari o terzi. La persona deve essere residente in Basilicata da almeno 6 mesi dalla pubblicazione dell'avviso, essere non autosufficiente secondo la direttiva regionale e avere la certificazione medico-specialistica delle strutture sanitarie regionali. I familiari devono convivere con lei o garantire la presenza in casa.",
+    cosa:
+      "500 euro al mese (D.G.R. 1037/2018). Non spetta per periodi inferiori a 15 giorni di un mese. Non si cumula con altri contributi, come quelli per SLA o stato vegetativo e l'assegno di cura. Lo paga il Comune capofila dell'Ambito socio-territoriale, finché i requisiti restano e fino a esaurimento delle risorse.",
+    stato: "attivo",
+    quando:
+      "La pagina dell'avviso non indica né una scadenza né la data di pubblicazione. Le domande sono esaminate in ordine di arrivo e il contributo parte dal mese di presentazione.",
+    comeSiChiede:
+      "Si compila online il modello A sul portale regionale dell'avviso (con l'aiuto, se vuoi, dell'Ufficio sociale del Comune), poi si stampa in tre copie, si firma e si consegna con i documenti al Comune di residenza, a mano o per PEC. Servono: certificato di invalidità, certificazione medico-specialistica, stato di famiglia storico, autocertificazioni sull'assistenza e ISEE sociosanitario (o ISEE minorenni).",
+    fonte: {
+      label: "Regione Basilicata · Avviso Disabilità Gravissime",
+      url: "https://gravissimi.regione.basilicata.it/cose.html",
+    },
+    verificatoIl: "20/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda. La Regione ha comunicato che le risorse del Fondo non autosufficienze 2022-2024 sono state trasferite agli Ambiti a novembre 2024.",
+  },
   {
     id: "lesignano-voucher-sportivi-2026-2027",
     regione: "Emilia-Romagna",
