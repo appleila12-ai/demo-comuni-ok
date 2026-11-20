@@ -35,7 +35,7 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
 
   return (
     <View style={[styles.box, { borderColor: t.warm }]} testID={testID}>
-      <Text style={styles.titolo}>{nome ? `${nome}, di cosa hai bisogno?` : "Di cosa hai bisogno?"}</Text>
+      <Text style={styles.titolo} accessibilityRole="header">{nome ? `${nome}, di cosa hai bisogno?` : "Di cosa hai bisogno?"}</Text>
       <View style={styles.inputRiga}>
         <Ionicons name="search" size={20} color={colors.onSurfaceSecondary} />
         <TextInput
