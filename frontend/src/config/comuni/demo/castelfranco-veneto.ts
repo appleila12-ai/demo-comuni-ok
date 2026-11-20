@@ -46,6 +46,12 @@ export const castelfrancoVeneto: ComuneConfig = {
       action: { type: "web", value: "https://www.comune.castelfrancoveneto.tv.it/documento_pubblico/informazioni-servizi-sociali/" },
     },
     {
+      icon: "heart-outline",
+      title: "Impegnative di cura domiciliare (ICD) · Ufficio Servizi Sociali",
+      subtitle: "Per le ICD di tipo B, B plus, M, Mgs, A e SLA non ci sono scadenze: puoi chiedere informazioni quando vuoi. Tel. 0423 735770 / 0423 735525; attivitasociali@comune.castelfranco-veneto.tv.it. Per le ICD del caregiver il Comune indica di rivolgersi al distretto sanitario di Asolo (ULSS 2): il Comune non ha dato altri dettagli. Gli avvisi e i bandi (compreso il trasporto scolastico 2026) escono nelle News del sito del Comune. Fonte: risposta dell'ufficio, 20/11/2026.",
+      action: { type: "tel", value: "0423735770" },
+    },
+    {
       icon: "medkit-outline",
       title: "ULSS 2 Marca Trevigiana",
       subtitle: "Esenzione ticket per patologia e invalidità, prenotazioni e distretti sanitari",
