@@ -19,8 +19,9 @@ export const catanzaro: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0961 8811",
-  email: "",
+  // Settore Politiche Sociali, sito del Comune (data non indicata), consultato il 10/11/2026.
+  telefono: "0961 881507",
+  email: "politichesociali@comune.catanzaro.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.catanzaro.it/servizi-categoria/salute-benessere-e-assistenza/",

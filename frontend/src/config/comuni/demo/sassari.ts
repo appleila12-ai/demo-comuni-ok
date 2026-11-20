@@ -22,8 +22,8 @@ export const sassari: ComuneConfig = {
   telefono: "079 279111",
   email: "",
   pec: "protocollo@pec.comune.sassari.it",
-  orari: "",
-  sitoWeb: "https://www.comune.sassari.it",
+  orari: "Il Comune ha quattro Servizi Sociali Territoriali: usa i recapiti distinti nei Punti di supporto e chiedi quale segue la tua zona. Il numero principale della scheda è il centralino comunale. Orari dei quattro uffici non verificati in questo controllo.",
+  sitoWeb: "https://www.comune.sassari.it/it/servizi/servizio/Piani-personalizzati-a-favore-delle-persone-con-riconoscimento-della-condizione-di-disabilita-grave-L.-162-98/",
 
   logo: null,
 
@@ -37,9 +37,27 @@ export const sassari: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.sassari.it" },
+      title: "Servizio Sociale Territoriale 1",
+      subtitle: "Piazza Santa Caterina 25 · 079 279733 · st1@comune.sassari.it. Fonte: pagina comunale Piani personalizzati L. 162/98, aggiornata il 13/03/2026, controllata il 17/11/2026.",
+      action: { type: "tel", value: "079279733" },
+    },
+    {
+      icon: "people-outline",
+      title: "Servizio Sociale Territoriale 2",
+      subtitle: "Via Giovanni Caboto · 079 2497410 · st2@comune.sassari.it. Stessa fonte comunale, controllo 17/11/2026.",
+      action: { type: "tel", value: "0792497410" },
+    },
+    {
+      icon: "people-outline",
+      title: "Servizio Sociale Territoriale 3",
+      subtitle: "Via Zara 2 · 079 279537 · st3@comune.sassari.it. Stessa fonte comunale, controllo 17/11/2026.",
+      action: { type: "tel", value: "079279537" },
+    },
+    {
+      icon: "people-outline",
+      title: "Servizio Sociale Territoriale 4",
+      subtitle: "Via Rockfeller 54 · 079 279576 · st4@comune.sassari.it. Stessa fonte comunale, controllo 17/11/2026.",
+      action: { type: "tel", value: "079279576" },
     },
   ],
 
@@ -56,5 +74,5 @@ export const sassari: ComuneConfig = {
 };
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (28/10/2026).
-sassari.percorsoTerritorio = percorso(sassari.puntiSupporto, [0]);
+sassari.percorsoTerritorio = percorso(sassari.puntiSupporto, [0, 1, 2, 3]);
 sassari.percorsoTerritorio = { ...sassari.percorsoTerritorio, 1: [INPS_PRIMA_FASE] };

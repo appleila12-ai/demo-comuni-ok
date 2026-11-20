@@ -4,7 +4,8 @@ import { percorso } from "../percorso";
 // Comune di Cento (FE) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Link ai Servizi Sociali: Pagina "Gestione Associata Funzioni Socio Assistenziali" sul sito ufficiale (controllato il 19 ottobre 2026). Link dell'azienda sanitaria controllato sul sito dell'azienda il 19 ottobre 2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: scheda «Gestione Associata Funzioni Socio Assistenziali» del Comune di Cento (aggiornata il 09/06/2026), letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const cento: ComuneConfig = {
   slug: "cento",
   tipo: "comune",
@@ -17,11 +18,11 @@ export const cento: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
+  indirizzo: "Via Venticinque Aprile 1 (Municipio, sede operativa)",
+  telefono: "051 6843350",
+  email: "gestass@comune.cento.fe.it",
   pec: "",
-  orari: "",
+  orari: "Solo su appuntamento telefonico. Conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.cento.fe.it",
 
   logo: null,

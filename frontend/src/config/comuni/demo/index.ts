@@ -9,6 +9,7 @@ import { acerra } from "./acerra";
 import { acireale } from "./acireale";
 import { adrano } from "./adrano";
 import { afragola } from "./afragola";
+import { agropoli } from "./agropoli";
 import { agrigento } from "./agrigento";
 import { alba } from "./alba";
 import { albanoLaziale } from "./albano-laziale";
@@ -27,6 +28,7 @@ import { aprilia } from "./aprilia";
 import { arcola } from "./arcola";
 import { ardea } from "./ardea";
 import { arezzo } from "./arezzo";
+import { arianoIrpino } from "./ariano-irpino";
 import { arzano } from "./arzano";
 import { ascoliPiceno } from "./ascoli-piceno";
 import { asti } from "./asti";
@@ -146,6 +148,7 @@ import { frosinone } from "./frosinone";
 import { galbiate } from "./galbiate";
 import { gallarate } from "./gallarate";
 import { gela } from "./gela";
+import { genzanoDiRoma } from "./genzano-di-roma";
 import { genova } from "./genova";
 import { giudicarie } from "./giudicarie";
 import { giuglianoInCampania } from "./giugliano-in-campania";
@@ -262,6 +265,7 @@ import { pisa } from "./pisa";
 import { pistoia } from "./pistoia";
 import { podenzano } from "./podenzano";
 import { pomezia } from "./pomezia";
+import { pompei } from "./pompei";
 import { pomiglianoDArco } from "./pomigliano-d-arco";
 import { pontedera } from "./pontedera";
 import { pordenone } from "./pordenone";
@@ -414,6 +418,14 @@ import { borgoValDiTaro } from "./borgo-val-di-taro";
 import { medesano } from "./medesano";
 import { langhirano } from "./langhirano";
 import { lesignanoDeBagni } from "./lesignano-de-bagni";
+import { calcata } from "./calcata";
+import { castelSantElia } from "./castel-sant-elia";
+import { corchiano } from "./corchiano";
+import { faleria } from "./faleria";
+import { gallese } from "./gallese";
+import { vallerano } from "./vallerano";
+import { vasanello } from "./vasanello";
+import { vignanello } from "./vignanello";
 
 export const COMUNI_DEMO: ComuneConfig[] = [
   acerra,
@@ -421,6 +433,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   adrano,
   afragola,
   agrigento,
+  agropoli,
   alba,
   albanoLaziale,
   albenga,
@@ -438,6 +451,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   arcola,
   ardea,
   arezzo,
+  arianoIrpino,
   arzano,
   ascoliPiceno,
   asti,
@@ -558,6 +572,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   gallarate,
   gela,
   genova,
+  genzanoDiRoma,
   giudicarie,
   giuglianoInCampania,
   gorizia,
@@ -673,6 +688,7 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   pistoia,
   podenzano,
   pomezia,
+  pompei,
   pomiglianoDArco,
   pontedera,
   pordenone,
@@ -825,4 +841,12 @@ export const COMUNI_DEMO: ComuneConfig[] = [
   medesano,
   langhirano,
   lesignanoDeBagni,
+  calcata,
+  castelSantElia,
+  corchiano,
+  faleria,
+  gallese,
+  vallerano,
+  vasanello,
+  vignanello,
 ];

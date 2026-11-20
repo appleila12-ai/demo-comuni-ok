@@ -5,7 +5,8 @@ import { percorso } from "../percorso";
 // Comune di Anzio (RM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: Scheda «Inclusione Sociale» del Comune di Anzio (13/11/2026). PEC e orari non confermati.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const anzio: ComuneConfig = {
   slug: "anzio",
   tipo: "comune",
@@ -18,9 +19,9 @@ export const anzio: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "06 984991",
-  email: "",
+  indirizzo: "Via di Villa Adele 2",
+  telefono: "06 98499416",
+  email: "servizi.sociali@comune.anzio.roma.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.anzio.rm.it",

@@ -5,7 +5,8 @@ import { percorso } from "../percorso";
 // Comune di Cosenza (CS) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Argomento "Assistenza sociale" del sito del Comune, controllato il 14 ottobre 2026. Il sito dell'ASP non si è letto in automatico.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: scheda «Servizi Sociali – PNRR» del Comune di Cosenza (aggiornata il 03/09/2026), letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const cosenza: ComuneConfig = {
   slug: "cosenza",
   tipo: "comune",
@@ -19,10 +20,10 @@ export const cosenza: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0984 8131",
-  email: "",
+  telefono: "0984 813740",
+  email: "welfare@comune.cosenza.it",
   pec: "",
-  orari: "",
+  orari: "Lunedì e giovedì 9–12 e 16–18; martedì 9–12. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
   sitoWeb: "https://www.comune.cosenza.it/it/argomenti/assistenza-sociale",
 
   logo: null,

@@ -12,6 +12,8 @@ export const luni: ComuneConfig = {
   tipo: "comune",
   nome: "Comune di Luni",
   nomeBreve: "Luni",
+  // Fino al cambio di denominazione il Comune si chiamava Ortonovo (Regione Liguria; codice ISTAT 011020): chi lo cerca col vecchio nome lo trova.
+  nomiPrecedenti: ["Ortonovo"],
   delEnte: "del Comune di Luni",
   soggetto: "Il Comune",
   provincia: "SP",

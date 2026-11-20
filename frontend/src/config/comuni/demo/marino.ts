@@ -4,7 +4,8 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Comune di Marino (RM) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Nessun link ancora verificato: l'indirizzo del sito del Comune non è stato aperto in questo giro. Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: pagina «Servizi Sociali e Distretto sociosanitario RM 6.3» del Comune di Marino (aggiornata l'08/07/2026), riportata il 14/11/2026. Orari NON inseriti: la pagina ne riporta di diversi tra segretariato e ufficio. Email ordinaria non indicata, solo la PEC del protocollo.
+// Da fare: orari; bonus del Comune, associazioni, sport e tempo libero.
 export const marino: ComuneConfig = {
   slug: "marino",
   tipo: "comune",
@@ -17,10 +18,10 @@ export const marino: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "06 936621",
+  indirizzo: "Piazza Repubblica 1, 00047 Marino",
+  telefono: "06 93662304 (anche interni 333 e 410)",
   email: "",
-  pec: "",
+  pec: "protocollo@pec.comune.marino.rm.it",
   orari: "",
   sitoWeb: "https://www.comune.marino.rm.it",
 

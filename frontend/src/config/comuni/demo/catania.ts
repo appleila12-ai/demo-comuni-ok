@@ -4,8 +4,8 @@ import { percorso } from "../percorso";
 
 // Comune di Catania (CT) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (13 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Il sito del Comune non è leggibile in automatico (robots): la pagina dei servizi sociali va cercata e confermata.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti della Segreteria dalla Carta dei servizi comunale, revisione 2024, pag. 29; lettura 17/11/2026. Non attribuire al documento una revisione 2026.
+// Da fare: orari aggiornati, bonus del Comune, associazioni, sport e tempo libero.
 export const catania: ComuneConfig = {
   slug: "catania",
   tipo: "comune",
@@ -18,12 +18,12 @@ export const catania: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "095 7421111",
-  email: "",
-  pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.catania.it",
+  indirizzo: "Via Cardinale Dusmet 141, Catania",
+  telefono: "095 7422625",
+  email: "segreteria.direzionepolitichesociali@comune.catania.it",
+  pec: "politichesociali.catania@pec.it",
+  orari: "Recapiti della Segreteria della Direzione Famiglia e Politiche Sociali, pubblicati nella Carta dei servizi, revisione 2024, letta il 17/11/2026. Altro telefono della Segreteria: 095 7422621. Orari aggiornati non verificati.",
+  sitoWeb: "https://www.comune.catania.it/il-comune/uffici/socio-sanitari/allegati/carta-dei-servizi-2024-aggiornata.pdf",
 
   logo: null,
 
@@ -37,9 +37,9 @@ export const catania: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.catania.it" },
+      title: "Segreteria dei Servizi Sociali",
+      subtitle: "095 7422625 / 095 7422621 · segreteria.direzionepolitichesociali@comune.catania.it. Carta dei servizi comunale, revisione 2024; lettura 17/11/2026.",
+      action: { type: "web", value: "https://www.comune.catania.it/il-comune/uffici/socio-sanitari/allegati/carta-dei-servizi-2024-aggiornata.pdf" },
     },
     {
       icon: "medkit-outline",

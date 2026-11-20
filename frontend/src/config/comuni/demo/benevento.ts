@@ -4,7 +4,8 @@ import { percorso } from "../percorso";
 // Comune di Benevento (BN) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Argomento "Servizi Sociali" del sito del Comune, controllato il 14 ottobre 2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: scheda «Servizi Sociali Comunali» del Comune di Benevento (aggiornata il 30/06/2026); civico della sede non inserito perché il sito ne indica due, letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const benevento: ComuneConfig = {
   slug: "benevento",
   tipo: "comune",
@@ -18,9 +19,9 @@ export const benevento: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0824 772111",
-  email: "",
-  pec: "protocollogenerale@pec.comunebn.it",
+  telefono: "0824 772830",
+  email: "servizisociali@comune.benevento.it",
+  pec: "servizisociali@pec.comunebn.it",
   orari: "",
   sitoWeb: "https://comune.benevento.it/argomento/assistenza-sociale/",
 

@@ -11,10 +11,12 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
-    "verifica:ricerca": "node scripts/verifica-ricerca.js"
+    "verifica:ricerca": "node scripts/verifica-ricerca.js",
+    "verifica:anagrafica": "node scripts/verifica-anagrafica.js"
   },
   "dependencies": {
     "@expo/metro-runtime": "~57.0.15",
+    "@netlify/blobs": "latest",
     "@react-native-async-storage/async-storage": "2.2.0",
     "@react-native-community/datetimepicker": "9.1.0",
     "@react-native-vector-icons/ionicons": "13.1.3",

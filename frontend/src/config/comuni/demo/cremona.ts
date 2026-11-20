@@ -3,8 +3,11 @@ import { percorso } from "../percorso";
 
 // Comune di Cremona (CR) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// Sono verificati solo il sito del Comune e il sito dell'azienda sanitaria. Pagina "Salute, benessere e assistenza" del sito del Comune, controllata il 14 ottobre 2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// POIS, accesso ai servizi sociali: fonte Comune aggiornata 30/09/2025, consultata il 17/11/2026.
+// https://www.comune.cremona.it/amministrazione/pois-porta-informativa-dei-servizi-sociali-porta-unitaria-accesso
+// Ticket: fonte ASST Cremona aggiornata 12/08/2025, consultata 17/11/2026.
+// https://www.asst-cremona.it/strutture/gestione-cronicita-cremona-ex-cure-primarie
+// Da completare: bonus regionali/comunali e Ambito, destinatario Scrivi al Comune, avviso UI e associazioni.
 export const cremona: ComuneConfig = {
   slug: "cremona",
   tipo: "comune",
@@ -15,14 +18,14 @@ export const cremona: ComuneConfig = {
   provincia: "CR",
   regione: "Lombardia",
 
-  ente: "Servizi Sociali",
+  ente: "POIS - Porta Informativa dei Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0372 4071",
-  email: "",
+  indirizzo: "Corso Vittorio Emanuele II 42, 26100 Cremona (CR)",
+  telefono: "334 1043608",
+  email: "pois@comune.cremona.it",
   pec: "",
-  orari: "",
-  sitoWeb: "https://www.comune.cremona.it/servizi/salute-benessere-assistenza",
+  orari: "Sportello lun–ven 8:30–13:00; informazioni telefoniche lun–ven 8:30–12:30",
+  sitoWeb: "https://www.comune.cremona.it/amministrazione/pois-porta-informativa-dei-servizi-sociali-porta-unitaria-accesso",
 
   logo: null,
 
@@ -36,15 +39,15 @@ export const cremona: ComuneConfig = {
   puntiSupporto: [
     {
       icon: "people-outline",
-      title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.cremona.it/servizi/salute-benessere-assistenza" },
+      title: "POIS - Accesso ai Servizi Sociali",
+      subtitle: "Corso Vittorio Emanuele II 42 · 334 1043608 · Lun–Ven 8:30–13:00",
+      action: { type: "tel", value: "3341043608" },
     },
     {
       icon: "medkit-outline",
       title: "ASST Cremona",
-      subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
-      action: { type: "web", value: "https://www.asst-cremona.it" },
+      subtitle: "Esenzioni ticket per reddito, patologia cronica o rara e invalidità: sportelli Scelta e Revoca",
+      action: { type: "web", value: "https://www.asst-cremona.it/strutture/gestione-cronicita-cremona-ex-cure-primarie" },
     },
   ],
 
@@ -53,7 +56,7 @@ export const cremona: ComuneConfig = {
 
   esenzioneTicket: {
     label: "ASST Cremona · Esenzioni ticket",
-    url: "https://www.asst-cremona.it",
+    url: "https://www.asst-cremona.it/strutture/gestione-cronicita-cremona-ex-cure-primarie",
   },
 
   daVerificare: true,

@@ -4,7 +4,8 @@ import { percorso } from "../percorso";
 // Comune di Caivano (NA) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (19 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Link ai Servizi Sociali: Pagina "Servizio Politiche Sociali" sul sito ufficiale (controllato il 19 ottobre 2026). Link dell'azienda sanitaria controllato sul sito dell'azienda il 19 ottobre 2026.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Recapiti Servizi Sociali: scheda «Servizio Politiche Sociali» del Comune di Caivano (aggiornata il 28/07/2025), letta il 14/11/2026.
+// Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const caivano: ComuneConfig = {
   slug: "caivano",
   tipo: "comune",
@@ -17,9 +18,9 @@ export const caivano: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
+  indirizzo: "Corso Umberto 413",
+  telefono: "081 8800823",
+  email: "politichesociali@comune.caivano.na.it",
   pec: "",
   orari: "",
   sitoWeb: "https://comune.caivano.na.it",

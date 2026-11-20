@@ -57,7 +57,7 @@ export const castelfrancoVeneto: ComuneConfig = {
 
   esenzioneTicket: {
     label: "ULSS 2 Marca Trevigiana · Esenzioni ticket",
-    url: "https://www.aulss2.veneto.it",
+    url: "https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni",
   },
 
   daVerificare: true,

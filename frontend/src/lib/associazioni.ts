@@ -15,7 +15,8 @@
 // Aggiornamento 26/10/2026: spiagge inclusive di Genova, 8 spiagge, recapiti e prenotazione dalla pagina del Comune (agg. 23/06/2026).
 // Aggiornamento 27/10/2026: elenco libere forme associative di Arezzo.
 // Aggiornamento 27/10/2026: Albo comunale delle associazioni della disabilità di Pisa.
-// Aggiornamento 07/11/2026: Liguria Calcio Non Vedenti (Sanremo), nuova sede e descrizione comunicate dal presidente dell'associazione via email il 07/11/2026.
+// Aggiornamento 07/11/2026: Liguria Calcio Non Vedenti (Sanremo), nuova sede e descrizione comunicate dal presidente dell'associazione via email il 07/11/2026; telefono fisso tolto (non più attivo), 09/11/2026.
+// Aggiornamento 16/11/2026: A.I.S.EA ETS (malattia rara, associazione nazionale) tra le nazionali, dal sito aiseaets.org; senza logo.
 // Aggiornamento 25/10/2026: provincia di Genova (Anffas, ANGSA, UICI, Chiossone, AISM, UILDM, ENS, ANGLAT, Asperger,
 // e dall'elenco ASL3 'Comitato Misto Consultivo - Associazioni' agg. 18/06/2025: Consulta disabilità, Alzheimer Liguria,
 // ALFAPP, Parkinson, tutela del malato, AVO).
@@ -160,6 +161,27 @@ const PER_PROVINCIA: Record<string, Elenco> = {
       },
     ],
   },
+};
+
+// Associazioni territoriali: recapiti pubblicati dagli enti e dai gestori (09/11/2026).
+// Le schede senza telefono espongono email o sito, senza inventare numeri.
+PER_PROVINCIA["RM"] = {
+  volontariato: [
+    { nome: "Ascoltami ETS", cosa: "Sostegno alle famiglie di bambini autistici e iniziative di supporto psicologico.", dove: "Via Cavour 39, Monterotondo", sito: "https://ascoltamiets.it/", comuni: ["monterotondo"] },
+    { nome: "Il Tamburo", cosa: "Inclusione e servizi residenziali per persone adulte con disabilità, tra cui Casa Famiglia Domus.", dove: "Via Panaro 15, Monterotondo", telefono: "06 90626515", sito: "https://www.iltamburo.org/cooperativa/casa-famiglia-domus/", comuni: ["monterotondo"] },
+    { nome: "Il Pungiglione", cosa: "Cooperativa sociale: centro diurno Il Funambolo e percorsi abitativi Dopo di Noi.", dove: "Via San Martino 21, Monterotondo", telefono: "06 90622518", sito: "https://ilpungiglione.it/contatti-2/", comuni: ["monterotondo"] },
+    { nome: "Folias", cosa: "Cooperativa sociale: orientamento e percorsi di inclusione lavorativa per persone con disabilità.", dove: "Via Don Milani 1–3, Monterotondo", telefono: "06 9066963", sito: "https://www.folias.it/site/centro-per-lorientamento/", comuni: ["monterotondo"] },
+    { nome: "Riabilmente", cosa: "Attività riabilitative, logopedia, neuropsicomotricità e sostegno a minori e famiglie.", dove: "Viale Fausto Cecconi 6, Monterotondo", telefono: "06 99084435", email: "riabilmente.cm@gmail.com", sito: "https://riabilmente.com/informazioni/", comuni: ["monterotondo"] },
+  ],
+  sport: [
+    { nome: "ASD Integra Sport 2013", cosa: "Basket, calcio, karate e psicomotricità in attività sportive integrate per persone con e senza disabilità.", dove: "Via Monte Pollino 6, Monterotondo (sede legale)", email: "segreteriaintegrasport@gmail.com", sito: "https://www.asdintegrasport2013.com/", comuni: ["monterotondo"] },
+  ],
+};
+PER_PROVINCIA["IM"] = {
+  volontariato: [
+    { nome: "ANFFAS Sanremo", cosa: "Associazione di famiglie e persone con disabilità intellettiva e relazionale.", dove: "Via Giovanni Borea 57, Sanremo", telefono: "0184 513449", comuni: ["sanremo"] },
+  ],
+  sport: [],
 };
 
 // ---------------------------------------------------------------- per regione (sport)
@@ -497,11 +519,20 @@ PER_PROVINCIA.GE.volontariato.unshift(
   {
     nome: "ALFAPP – Associazione Ligure Famiglie Pazienti Psichiatrici",
     cosa: "Accoglienza e consulenza per persone con disagio psichiatrico e famiglie, gruppi di aiuto, laboratori, progetti per lavoro e autonomia abitativa.",
-    dove: "Via Malta, Genova · accoglienza lun–ven 15:00–19:00",
+    dove: "Sede regionale: Via Malta 3/4, Genova · accoglienza lun–ven 15:00–19:00",
     telefono: "010 540740",
     email: "alfapp.genova@gmail.com",
     sito: "https://www.alfapp.it",
     comuni: ["genova"],
+  },
+  // Aggiornamento 10/11/2026: sezione Tigullio, dati inseriti dall'associazione con il modulo "Adesione associazioni" del sito (10/11/2026).
+  {
+    nome: "ALFAPP Tigullio – Associazione Ligure Famiglie Pazienti Psichiatrici",
+    cosa: "Volontari e familiari che affiancano le famiglie dei pazienti psichiatrici nella gestione delle patologie dei loro cari e si attivano perché le leggi statali e regionali siano pienamente applicate.",
+    dove: "Sezione Tigullio: Via Caboto 13/a, Sestri Levante",
+    telefono: "010 540740",
+    email: "alfapp.tigullio@gmail.com",
+    comuni: ["sestri-levante"],
   },
   {
     nome: "Associazione Ligure Parkinson",
@@ -1211,7 +1242,6 @@ PER_PROVINCIA.IM.sport.push(
     nome: "Liguria Calcio Non Vedenti",
     cosa: "Calcio per non vedenti (FISPIC), un'attività svolta da circa 30 anni. Accoglie ragazze e ragazzi con disabilità visiva già dai 10-11 anni, per fare sport come i coetanei. Società affiliata al CIP Liguria.",
     dove: "Strada San Martino 131, 18038 Sanremo",
-    telefono: "0184 570827",
     email: "info@liguriacalcio.it",
     comuni: ["sanremo"],
   },
@@ -2200,6 +2230,14 @@ const VOLONTARIATO_NAZIONALI: Associazione[] = [
     email: "segreteria@uniamo.org",
     sito: "https://uniamo.org",
   },
+  {
+    nome: "A.I.S.EA ETS – Associazione Italiana Sindrome di Emiplegia Alternante",
+    cosa: "Associazione nazionale formata da famiglie con figli che hanno l'emiplegia alternante, una malattia rara. Aiuta le famiglie nella vita di ogni giorno, fa conoscere la malattia e sostiene la ricerca. Dal sito: per i soci c'è un servizio di consulenza medica; per altri servizi o per le persone non socie scrivi all'email indicata. Non sono pubblicati orari di apertura né sedi locali: non li abbiamo inseriti perché non verificati (al 16/11/2026 non sono ancora stati chiesti all'associazione: puoi chiederli tu a info@aiseaets.org). Recapiti letti sul sito dell'associazione il 16/11/2026 (la pagina dei contatti non riporta la data).",
+    dove: "Sede legale: Via Giorgio Politeo 20, 00139 Roma",
+    telefono: "327 9276116",
+    email: "info@aiseaets.org",
+    sito: "https://www.aiseaets.org",
+  },
 ];
 
 // Raggio entro cui un'associazione si considera "vicina" (anche oltre il confine della provincia).
@@ -2270,3 +2308,15 @@ export function associazioniDelComune() {
 }
 
 // 21/10/2026: tolte le associazioni con recapito non confermato (regola: nessuna informazione dubbia in app).
+
+/**
+ * Associazioni e realtà sportive legate in modo esplicito a un Comune (campo `comuni`), senza l'elenco di provincia.
+ * Serve al modulo riservato ai Comuni (percorsi/comuni.ts), che deve mostrare ciò che TutelApp ha già per quel Comune.
+ */
+export function associazioniLegateAlComune(slug: string): { volontariato: Associazione[]; sport: Associazione[] } {
+  const tutte = (tipo: "volontariato" | "sport") =>
+    Object.values(PER_PROVINCIA)
+      .flatMap((e) => e[tipo])
+      .filter((a) => a.comuni?.includes(slug));
+  return { volontariato: tutte("volontariato"), sport: tutte("sport") };
+}

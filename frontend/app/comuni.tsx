@@ -3,7 +3,9 @@
 //  - ricerca per nome, provincia o regione (senza badare ad accenti e maiuscole);
 //  - cercando un paese che fa parte di un'Unione (es. "Mombaruzzo") si trova
 //    l'Unione, e il paese viene già impostato come "il tuo Comune";
-//  - elenco raggruppato per regione, in ordine alfabetico.
+//  - elenco raggruppato per regione, in ordine alfabetico;
+//  - scrivendo almeno due lettere si cerca anche tra TUTTI i Comuni italiani (elenco ISTAT):
+//    quelli senza scheda propria si possono scegliere lo stesso, in versione dimostrativa.
 
 import { useMemo, useState } from "react";
 import {
@@ -21,6 +23,7 @@ import { useRouter } from "expo-router";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
 import { Wordmark } from "@/src/components/Brand";
+import COMPLETI from "@/src/content/completezza-comuni.json";
 import {
   COMUNI,
   chiavePerComune,
@@ -29,6 +32,8 @@ import {
   setComuneAttivo,
   type ComuneConfig,
 } from "@/src/config/comune";
+import { MOSTRA_ANAGRAFICA } from "@/src/config/comuni";
+import { cercaAnagrafica, schedaDaAnagrafica } from "@/src/config/comuni/anagrafica";
 import { PAESE_KEY, salvaPaese } from "@/src/lib/paese";
 import { colors, fonts, radius, spacing } from "@/src/theme";
 
@@ -51,7 +56,7 @@ function cerca(query: string): Risultato[] {
 
   const risultati: Risultato[] = [];
   for (const c of tutti) {
-    const campi = [c.nome, c.nomeBreve, c.provincia, c.regione].map(norm);
+    const campi = [c.nome, c.nomeBreve, ...(c.nomiPrecedenti ?? []), c.provincia, c.regione].map(norm);
     if (campi.some((f) => f.includes(q))) {
       risultati.push({ comune: c });
       continue;
@@ -62,6 +67,47 @@ function cerca(query: string): Risultato[] {
   return risultati;
 }
 
+/** Quanti Comuni dell'elenco ISTAT (senza scheda propria) si mostrano al massimo in una ricerca. */
+const LIMITE_ELENCO = 60;
+
+/** Cerca tra le schede e, dopo due lettere, anche tra tutti i Comuni italiani. */
+function cercaTutti(query: string): { risultati: Risultato[]; altri: number } {
+  const risultati = cerca(query);
+  if (!MOSTRA_ANAGRAFICA) return { risultati, altri: 0 };
+  const { voci, totale } = cercaAnagrafica(query, LIMITE_ELENCO);
+  voci.forEach((v) => risultati.push({ comune: schedaDaAnagrafica(v) }));
+  // Se si scrive il nome intero di un Comune (es. "Roma") si mostra solo quel Comune,
+  // non tutti quelli della stessa provincia o con un nome simile.
+  const q = norm(query);
+  const esatti = risultati.filter(
+    (r) => !r.paese && [r.comune.nome, r.comune.nomeBreve, ...(r.comune.nomiPrecedenti ?? [])].some((n) => norm(n) === q),
+  );
+  if (q.length >= 2 && esatti.length > 0) return { risultati: esatti, altri: 0 };
+  return { risultati, altri: Math.max(0, totale - voci.length) };
+}
+
+/** Schede complete: servizi sociali, bonus regionali e comunali, esenzione ticket (elenco in src/content/completezza-comuni.json). */
+const SCHEDE_COMPLETE = new Set<string>(COMPLETI);
+
+/**
+ * Semaforo della scheda, mostrato come pallino accanto al Comune (una sola lista, senza sezioni):
+ *  - verde: scheda completa, con almeno un indirizzo o un'email dei Servizi Sociali;
+ *  - giallo: scheda in lavorazione (ci sono dei dati, ma non tutte le sezioni);
+ *  - rosso: solo l'ingresso (nome, provincia e Regione), nessun servizio verificato.
+ * Il colore non basta da solo: ogni stato ha anche una parola, letta dagli screen reader.
+ */
+type StatoScheda = "verde" | "giallo" | "rosso";
+const STATI: Record<StatoScheda, { colore: string; etichetta: string }> = {
+  verde: { colore: colors.success, etichetta: "Scheda completa" },
+  giallo: { colore: colors.warning, etichetta: "In lavorazione" },
+  rosso: { colore: colors.error, etichetta: "Pochi dati" },
+};
+function statoScheda(c: ComuneConfig): StatoScheda {
+  if (c.soloElenco) return "rosso";
+  if (SCHEDE_COMPLETE.has(c.slug) && (c.indirizzo || c.email)) return "verde";
+  return "giallo";
+}
+
 export default function ScegliComune() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
@@ -70,7 +116,7 @@ export default function ScegliComune() {
   const attivo = primoAccesso ? "" : getComuneAttivo().slug;
   const [query, setQuery] = useState("");
 
-  const risultati = useMemo(() => cerca(query), [query]);
+  const { risultati, altri } = useMemo(() => cercaTutti(query), [query]);
 
   // Raggruppa per regione (in ordine alfabetico)
   const gruppi = useMemo(() => {
@@ -177,17 +223,30 @@ export default function ScegliComune() {
           <Text style={styles.count} testID="comuni-count">
             {query
               ? `${risultati.length} ${risultati.length === 1 ? "risultato" : "risultati"}`
-              : "Elenco degli enti"}
+              : MOSTRA_ANAGRAFICA
+                ? "Qui vedi i Comuni con scheda. Scrivi almeno 2 lettere per cercare anche tutti gli altri Comuni italiani (versione dimostrativa)."
+                : "Qui vedi i Comuni disponibili in questa versione."}
+            {query && altri > 0 ? ` · altri ${altri} Comuni: scrivi più lettere del nome` : ""}
           </Text>
+          <View style={styles.legenda} testID="comuni-legenda">
+            {(["verde", "giallo", "rosso"] as const).map((k) => (
+              <View key={k} style={styles.legendaVoce}>
+                <View style={[styles.semaforo, { backgroundColor: STATI[k].colore }]} />
+                <Text style={styles.legendaTesto}>{STATI[k].etichetta}</Text>
+              </View>
+            ))}
+          </View>
         </View>
 
-        {gruppi.map(([regione, voci]) => (
+        {gruppi.map(([regione, tutte]) => (
           <View key={regione} style={styles.group}>
             <Text style={styles.groupLabel}>{regione.toUpperCase()}</Text>
+            <View testID={`comuni-lista-${regione}`}>
             <View style={styles.list}>
-              {voci.map((r) => {
+              {[...tutte].sort((a, b) => a.comune.nomeBreve.localeCompare(b.comune.nomeBreve, "it")).map((r) => {
                 const c = r.comune;
                 const selected = c.slug === attivo;
+                const stato = STATI[statoScheda(c)];
                 return (
                   <Pressable
                     key={c.slug}
@@ -199,7 +258,7 @@ export default function ScegliComune() {
                     ]}
                     accessibilityRole="button"
                     accessibilityState={{ selected }}
-                    accessibilityLabel={`Scegli ${c.nome}${r.paese ? `, comune di ${r.paese}` : ""}`}
+                    accessibilityLabel={`Scegli ${c.nome}${r.paese ? `, comune di ${r.paese}` : ""}. ${stato.etichetta}`}
                     testID={`comuni-item-${c.slug}`}
                   >
                     <View style={[styles.dot, { backgroundColor: c.theme.warmSoft, borderColor: c.theme.warm }]}>
@@ -215,9 +274,15 @@ export default function ScegliComune() {
                           : c.tipo === "unione" && c.paesi
                             ? `${c.paesi.length} Comuni · ${c.provincia}`
                             : `Provincia di ${c.provincia}`}
-                        {c.dimostrativo ? " · demo" : ""}
+                        {c.soloElenco ? " · demo, recapiti in arrivo" : c.dimostrativo ? " · demo" : ""}
                       </Text>
                     </View>
+                    <View
+                      style={[styles.semaforo, { backgroundColor: stato.colore }]}
+                      accessibilityElementsHidden
+                      importantForAccessibility="no"
+                      testID={`comuni-stato-${c.slug}`}
+                    />
                     {selected ? (
                       <Ionicons name="checkmark-circle" size={22} color={c.theme.warmDark} />
                     ) : (
@@ -227,6 +292,7 @@ export default function ScegliComune() {
                 );
               })}
             </View>
+            </View>
           </View>
         ))}
 
@@ -234,17 +300,17 @@ export default function ScegliComune() {
           <View style={styles.empty} testID="comuni-empty">
             <Ionicons name="location-outline" size={22} color={colors.onSurfaceTertiary} />
             <Text style={styles.emptyTitle}>
-              «{query.trim()}» non aderisce ancora a TutelApp
+              Non troviamo «{query.trim()}»
             </Text>
             <Text style={styles.emptyText}>
-              Puoi comunque usare le informazioni generali scegliendo un Comune vicino,
-              oppure chiedere ai Servizi Sociali del tuo Comune di aderire.
+              Controlla come hai scritto il nome del Comune, oppure scegli un Comune vicino:
+              le informazioni generali valgono in tutta Italia.
             </Text>
           </View>
         ) : (
           <Text style={styles.note}>
-            Il tuo Comune non è in elenco? Chiedi ai Servizi Sociali se aderisce a
-            TutelApp.
+            Non vedi il tuo Comune? Scrivi il suo nome nella casella: ci sono tutti i
+            Comuni italiani, quasi tutti in versione dimostrativa.
           </Text>
         )}
 
@@ -320,6 +386,10 @@ const styles = StyleSheet.create({
     color: colors.onSurfaceTertiary,
     marginBottom: spacing.sm,
   },
+  semaforo: { width: 12, height: 12, borderRadius: 6 },
+  legenda: { flexDirection: "row", flexWrap: "wrap", gap: spacing.md, marginTop: spacing.sm, marginLeft: 4 },
+  legendaVoce: { flexDirection: "row", alignItems: "center", gap: 6 },
+  legendaTesto: { fontSize: 11, color: colors.onSurfaceSecondary },
   list: { gap: spacing.sm },
   card: {
     flexDirection: "row",

@@ -46,6 +46,8 @@ export type ComuneConfig = {
   /** Regione: usata come regione predefinita in tutta l'app */
   regione: string;
   /** Per le Unioni: i Comuni aderenti con i recapiti del municipio */
+  /** Nomi precedenti del Comune (es. Luni, già Ortonovo): servono solo alla ricerca per nome */
+  nomiPrecedenti?: string[];
   paesi?: Paese[];
 
   /** Servizio che segue la pratica e recapiti principali */
@@ -101,4 +103,10 @@ export type ComuneConfig = {
    * L'app mostra ai cittadini l'avviso "Versione dimostrativa".
    */
   dimostrativo?: boolean;
+
+  /**
+   * true = Comune presente solo nell'elenco nazionale ISTAT (anagrafica.ts):
+   * ha nome, provincia e regione, ma nessun recapito né servizio verificato.
+   */
+  soloElenco?: boolean;
 };

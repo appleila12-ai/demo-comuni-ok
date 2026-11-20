@@ -20,10 +20,11 @@ export const rimini: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0541 704111",
-  email: "",
+  // Segretariato sociale: https://www.comune.rimini.it/amministrazione/uffici/ufficio-segretariato-sociale (pagina del 04/06/2025, consultata il 10/11/2026). Altri numeri: 0541 704662, 0541 704664.
+  telefono: "0541 704000",
+  email: "segretariatosociale@comune.rimini.it",
   pec: "",
-  orari: "",
+  orari: "Lunedì–venerdì 8:30–13:30; martedì e giovedì anche 14:30–17:00",
   sitoWeb: "https://www.comune.rimini.it",
 
   logo: null,

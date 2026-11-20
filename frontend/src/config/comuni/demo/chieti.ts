@@ -19,8 +19,9 @@ export const chieti: ComuneConfig = {
   ente: "Servizi Sociali",
   responsabile: "",
   indirizzo: "",
-  telefono: "0871 3411",
-  email: "",
+  // Segretariato sociale, Carta dei servizi del Comune (data non indicata), consultata il 10/11/2026. Altro numero: 0871 341330.
+  telefono: "0871 341566",
+  email: "segretariato.sociale@comune.chieti.it",
   pec: "",
   orari: "",
   sitoWeb: "https://comune.chieti.it/servizi-categoria/salute-benessere-e-assistenza/",

@@ -142,6 +142,51 @@ ESENZIONE_ASL.arezzo = sudest("zona Aretina", "anagrafe.aretina@uslsudest.toscan
 ESENZIONE_ASL.grosseto = sudest("zona Grossetana", "anagrafe.grossetana@uslsudest.toscana.it");
 
 // ASL Gallura, Distretto di Olbia: risposta scritta dell'Ufficio Scelte e Revoche (29/10/2026).
+// ASL Sassari (aggiunto il 12/11/2026): solo da pagine ufficiali dell'ASL (vedi "fonte"); nessuna risposta scritta dell'URP.
+ESENZIONE_ASL.sassari = {
+  asl: "ASL Sassari",
+  intro:
+    "A Sassari l'esenzione per patologia e per invalidità si richiede allo sportello Scelta e Revoca dell'ASL, che rilascia l'attestato. Gli sportelli sono undici, in tutto il territorio dell'ASL: sotto trovi sede, giorni e telefono di ciascuno.",
+  titoloPassi: "Dove e quando",
+  comeSiPresenta: [
+    "Sassari, via Tempio 5, piano terra: per patologia e invalidità è aperto il giovedì dalle 8:30 alle 12:30 (telefono 079 2062469; informazioni per telefono dal lunedì al venerdì, dalle 12:30 alle 13:30)",
+    "Alghero, Poliambulatorio, via degli Orti 93: lunedì–venerdì 8:30–12:30; martedì e giovedì anche 15:00–17:00. Telefono 079 9951678 / 079 9951618 / 079 9951605",
+    "Bonorva, Poliambulatorio Manai, via Vittorio Emanuele III 138: lunedì–venerdì 8:15–12:15. Telefono 079 8659016",
+    "Ittiri, Presidio sanitario, via Ospedale: lunedì–venerdì 8:30–12:30; martedì e giovedì anche 16:00–17:30. Telefono 079 4453138",
+    "Thiesi, Presidio sanitario, viale Madonna di Seunis: lunedì–mercoledì 8:30–12:30. Telefono 079 8849423",
+    "Ozieri, via Colle Cappuccini, palazzina amministrativi, piano terra: lunedì–venerdì 8:30–12:00; martedì anche 15:00–17:00. Telefono 079 779125",
+    "Castelsardo, via Colombo 6: lunedì–venerdì 8:30–12:30; lunedì anche 15:00–17:00. Telefono 079 470375",
+    "Nulvi, via Sassari: giovedì 9:00–13:00. Telefono 079 577048",
+    "Perfugas, via Toti: lunedì–venerdì 8:30–12:30; lunedì e mercoledì anche 15:00–16:30. Telefono 079 564340",
+    "Porto Torres, Regione Andreolu: lunedì–venerdì 8:00–12:30; martedì e giovedì anche 14:00–16:30. Telefono 079 5049611. Attenzione: la Carta dei servizi dell'ASL scrive «Località Andriolu» e indica solo il martedì pomeriggio. Le due versioni non coincidono: chiedi conferma all'ufficio",
+    "Sorso, via Dessì: lunedì–venerdì 8:30–12:30; martedì e giovedì anche 15:00–16:30. Telefono 079 3550009. Attenzione: la Carta dei servizi dell'ASL indica solo il giovedì pomeriggio. Le due versioni non coincidono: chiedi conferma all'ufficio",
+  ],
+  documenti: [
+    "Fotocopia della carta d'identità, tessera sanitaria ed eventuali certificati",
+    "Per la patologia: certificato di un presidio pubblico del Servizio sanitario nazionale che attesti la malattia. L'ASL accetta anche, tra gli altri, la copia della cartella clinica di un ospedale pubblico, la copia del verbale di invalidità e le certificazioni sanitarie pubbliche dell'Unione europea",
+    "Per l'invalidità: la pagina dell'ASL non elenca gli allegati per la relativa esenzione. Chiedi allo sportello quale certificazione portare",
+    "Sono le indicazioni generali dell'ASL: non risultano elenchi diversi per ogni sportello",
+  ],
+  importante:
+    "Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Gli orari vengono dalla pagina dell'ASL modificata l'ultima volta il 1 giugno 2023; quello di via Tempio dall'avviso del 6 giugno 2025.",
+  telefoni: [
+    { etichetta: "Sportello di via Tempio (informazioni)", numero: "079 2062469" },
+    { etichetta: "URP dell'ASL (informazioni e segnalazioni, non rilascia le esenzioni)", numero: "079 2084477" },
+    { etichetta: "URP dell'ASL (secondo numero)", numero: "079 2084490" },
+  ],
+  paginaUrl: "https://www.asl1sassari.it/gli-orari-degli-sportelli-di-scelta-e-revoca-dedicati-alle-esenzioni/",
+  paginaLabel: "Pagina dell'ASL Sassari con gli orari degli sportelli",
+  altriLink: [
+    { label: "ASL Sassari · Le esenzioni: chi ne ha diritto e come richiederle", url: "https://www.asl1sassari.it/le-esenzioni-chi-ne-ha-diritto-e-come-richiederla/" },
+    { label: "ASL Sassari · Avviso sull'orario dell'ufficio di via Tempio (06/06/2025)", url: "https://www.asl1sassari.it/ufficio-amministrativi-di-via-tempiomodifica-dellorario-di-apertura/" },
+    { label: "ASL Sassari · Ufficio Relazioni con il Pubblico (via Enrico Costa 57)", url: "https://www.asl1sassari.it/azienda/ufficio-relazioni-con-il-pubblico-urp/" },
+    { label: "ASL Sassari · Carta dei servizi (PDF)", url: "https://www.asl1sassari.it/wp-content/uploads/2024/09/PDEL-1303-Carta-dei-servizi-assl-ss-n.-1216-allegato.pdf" },
+  ],
+  manca:
+    "L'ASL non pubblica un indirizzo e-mail degli sportelli (nella pagina è nascosto) né i tempi di rilascio. Per Porto Torres e Sorso la pagina del 2023 e la Carta dei servizi (di cui non è indicata la data di aggiornamento) non coincidono. Nessuna conferma diretta degli orari da parte dell'ufficio.",
+  fonte: "ASL Sassari · pagine ufficiali (esenzioni, orari sportelli, avviso di via Tempio del 06/06/2025) lette l'11/11/2026; telefoni, pagina URP (ultima modifica 29/06/2026) e Carta dei servizi riletti il 12/11/2026",
+};
+
 ESENZIONE_ASL.olbia = {
   asl: "ASL Gallura · Distretto di Olbia",
   intro:
@@ -177,7 +222,9 @@ ESENZIONE_ASL.ancona = {
   comeSiPresenta: [
     "Online: entra nella piattaforma dell'AST Ancona, registrati (con SPID, CIE o email, con successivo cambio password), compila la domanda e carica i documenti",
     "In presenza: vai in uno dei presìdi del Distretto nei giorni e negli orari indicati qui sotto",
+    "Puoi fare la richiesta per te o per un'altra persona, che deve essere residente in un Comune del Distretto di Ancona o di Jesi",
     "Il medico valuta la documentazione e, se l'esito è positivo, ti invia o consegna la copia della tessera sanitaria cartacea con il codice della patologia",
+    "Se manca un documento, le richieste di integrazione arrivano direttamente nella piattaforma",
     "Poliambulatorio 2000 Ancona (Viale C. Colombo 106, palazzina 23, primo piano): mercoledì e giovedì 8:30 – 11:30",
     "Casa di Comunità «Giulia Bonarelli» (Largo Cappelli 1, Ancona): lunedì e venerdì 9:00 – 12:00",
     "Poliambulatorio di Falconara (Via F.lli Rosselli 11): martedì 9:30 – 12:30",
@@ -194,9 +241,9 @@ ESENZIONE_ASL.ancona = {
   paginaUrl: "https://teknecloud.it/SIOC-ASTANCONA/",
   paginaLabel: "Piattaforma per inviare la richiesta online",
   manca:
-    "L'AST non indica i tempi di rilascio né l'elenco dettagliato dei documenti da allegare oltre alla certificazione. Gli orari possono cambiare: controlla la pagina ufficiale del Distretto.",
+    "L'AST non indica i tempi di rilascio né un telefono dedicato alla richiesta online. Gli orari possono cambiare: controlla la pagina ufficiale del Distretto.",
   fonte:
-    "AST Ancona · pagine «Esenzione ticket per patologia – Distretto Ancona» e «Richiesta esenzioni per patologia: nuova modalità telematica», indicate dall'URP il 29/10/2026",
+    "AST Ancona · pagine «Esenzione ticket per patologia – Distretto Ancona» e «Richiesta esenzioni per patologia: nuova modalità telematica», indicate dall'URP il 29/10/2026; risposta scritta di U.O.C. Comunicazione Formazione e URP del 12/11/2026 (orario del Poliambulatorio 2000 e passi della richiesta online)",
 };
 
 // AUSL Reggio Emilia: dati letti il 05/11/2026 sulle pagine ufficiali dell'AUSL (scheda SAUB Santa Maria Nuova,
@@ -215,6 +262,8 @@ ESENZIONE_ASL["reggio-emilia"] = {
     "Per l'esenzione per patologia: la certificazione relativa alla patologia, rilasciata dallo specialista su apposito modulo",
     "Per l'esenzione per invalidità: la certificazione che documenta lo stato di invalidità e/o i requisiti che danno diritto all'esenzione",
   ],
+  importante:
+    "L'attestato di esenzione per patologia lo rilascia l'Azienda USL, non la Regione (risposta del Settore Assistenza territoriale della Regione Emilia-Romagna, 11/11/2026). Le modalità di richiesta dipendono dall'AUSL: quelle di questa scheda valgono per Reggio Emilia.",
   mail: "info.saub@ausl.re.it",
   telefoni: [{ etichetta: "SAUB Santa Maria Nuova (8:00 – 12:30, lun–ven)", numero: "0522 335508" }],
   paginaUrl: "https://www.ausl.re.it/ticket-ed-esenzioni",
@@ -282,6 +331,14 @@ ESENZIONE_ASL.siracusa = {
   asl: "ASP Siracusa · Distretto di Siracusa",
   intro: "L'URP dell'ASP di Siracusa indica questo indirizzo e-mail per le esenzioni ticket per patologia del Distretto di Siracusa.",
   mail: "ticketpatologia.distrettosiracusa@asp.sr.it",
+  comeSiPresenta: [
+    "Di persona allo sportello del Distretto Ancona (Poli2000, palazzina 23, viale Cristoforo Colombo 106), il mercoledì e il giovedì",
+    "Per email, oppure con il servizio telematico",
+  ],
+  documenti: ["Documentazione sanitaria che attesta la patologia"],
+  mail: "pua.ancona.ast.an@sanita.marche.it",
+  importante:
+    "Gli orari dello sportello non sono certi: la guida dell'AST indica 8:30–11:30, un comunicato dell'AST indica 9:00–12:00. Scrivi o chiedi conferma prima di andare.",
   telefoni: [],
   manca:
     "L'ASP non ha indicato i documenti, se serve l'appuntamento né i tempi di rilascio: chiedili all'indirizzo qui sopra.",
@@ -502,25 +559,37 @@ const ASL_BARI: SchedaEsenzioneAsl = {
 };
 for (const slug of ["bari", "altamura", "bitonto", "corato", "gravina-in-puglia", "modugno", "mola-di-bari", "molfetta", "monopoli"]) ESENZIONE_ASL[slug] = ASL_BARI;
 
-// ASL Città di Torino: risposta scritta dell'URP (29/10/2026) e pagina ufficiale dell'ASL «Richiedere l'esenzione ticket» (aggiornata il 16/06/2026, letta il 02/11/2026).
+// ASL Città di Torino: https://www.aslcittaditorino.it/sportelli-per-pratiche-amministrative/ (aggiornata 04/09/2026, controllata 11/11/2026).
 ESENZIONE_ASL.torino = {
   asl: "ASL Città di Torino",
   intro:
     "L'ASL Città di Torino indica che l'esenzione ticket per patologia (malattie croniche, malattie rare, malattie invalidanti, patologie oncologiche, attesa di trapianto) si chiede presso gli sportelli amministrativi del Distretto di competenza territoriale.",
   titoloPassi: "Come si chiede",
-  comeSiPresenta: ["Agli sportelli amministrativi del Distretto di competenza per la tua residenza"],
+  comeSiPresenta: [
+    "Agli sportelli amministrativi del Distretto di competenza per la tua residenza. Orario lun-ven 8:00-14:00, ultimo numero alle 13:30. Via Botticelli apre alle 10:00",
+    "Circoscrizione 1: via Juvarra 19 (Presidio Oftalmico). Circoscrizione 8: corso Corsica 55",
+    "Circoscrizione 2: via Farinelli 25 e via Gorizia 114. Circoscrizione 3: via Monginevro 130",
+    "Circoscrizione 4: via Pacchiotti 4. Circoscrizione 5: Casa di Comunità Marco Antonetto, via Luzzatti 50",
+    "Circoscrizione 6: via Montanaro 60, via Borgo Ticino 7 e via Botticelli 130 (10:00-14:00; ultimo numero 13:30)",
+    "Circoscrizione 7: via Cigna 74, Lungo Dora Savona 26 e via Cavezzale 6",
+  ],
   documenti: [
-    "Documentazione medica che attesti la patologia",
+    "Per patologia: documentazione medica che attesti la patologia",
+    "Per invalidità: verbale di invalidità",
     "Copia del codice fiscale / tessera sanitaria",
     "Copia del documento di identità",
   ],
   mail: "urp@aslcittaditorino.it",
   telefoni: [],
-  paginaUrl: "https://www.aslcittaditorino.it/come-fare-per/richiedere-lesenzione-ticket/",
-  paginaLabel: "Richiedere l'esenzione ticket · ASL Città di Torino",
+  paginaUrl: "https://www.aslcittaditorino.it/sportelli-per-pratiche-amministrative/",
+  paginaLabel: "Sedi e orari degli sportelli · ASL Città di Torino",
+  altriLink: [
+    { label: "Esenzione per patologia", url: "https://www.aslcittaditorino.it/prestazioni/esenzione-ticket-per-patologia-malattia/" },
+    { label: "Esenzione per invalidità", url: "https://www.aslcittaditorino.it/prestazioni/esenzione-per-invalidita/" },
+  ],
   manca:
-    "La pagina non indica sedi e orari degli sportelli, se serve l'appuntamento, se si può inviare per mail né i tempi di rilascio: chiedili al tuo Distretto o all'URP (urp@aslcittaditorino.it).",
-  fonte: "ASL Città di Torino · pagina ufficiale sull'esenzione ticket (aggiornata il 16/06/2026) e risposta scritta dell'URP del 29/10/2026",
+    "Le pagine non indicano se serve l'appuntamento, se si può inviare la domanda per email né i tempi di rilascio. Chiedi informazioni al Distretto o all'URP (urp@aslcittaditorino.it); questo indirizzo è per informazioni, non è indicato per presentare la domanda.",
+  fonte: "ASL Città di Torino · sportelli per pratiche amministrative (aggiornata il 04/09/2026), pagine esenzione per patologia e invalidità; controllate il 11/11/2026. Risposta scritta URP del 29/10/2026",
 };
 
 // ATS Brescia: l'esenzione non è gestita dall'ATS ma dalle tre ASST (risposta scritta del 30/10/2026).
@@ -580,6 +649,31 @@ ESENZIONE_ASL.lodi = {
     "La pagina dello sportello non indica telefono né e-mail specifici, la data di aggiornamento, eventuali documenti oltre a quelli della Regione né i tempi di rilascio: chiedili all'ASST.",
   fonte:
     "ASST di Lodi · risposta scritta del Distretto Alto Lodigiano del 30/10/2026 · pagina «Scelta e revoca» (senza data di aggiornamento, controllata il 05/11/2026) · Regione Lombardia, pagina «Ticket ed esenzioni»",
+};
+
+// ASST Cremona: risposta scritta dell'Ufficio di Pubblica Tutela (18/11/2026).
+ESENZIONE_ASL.cremona = {
+  asl: "ASST Cremona",
+  intro:
+    "L'Ufficio di Pubblica Tutela dell'ASST Cremona indica la pagina della Regione Lombardia, valida per tutte le ASST lombarde, e come sportelli di riferimento gli Uffici di Scelta e Revoca. Secondo la Regione Lombardia, chi ha una patologia cronica presenta la richiesta agli sportelli territoriali «Scelta e Revoca» della ASST.",
+  titoloPassi: "Dove si presenta",
+  comeSiPresenta: [
+    "Agli Uffici di Scelta e Revoca dell'ASST Cremona (contatti sulla pagina dell'ASST)",
+  ],
+  documenti: [
+    "Tessera sanitaria",
+    "Certificazione rilasciata da un medico specialista di una struttura pubblica o privata accreditata",
+  ],
+  telefoni: [],
+  paginaUrl: "https://www.regione.lombardia.it/sanita/ticket-ed-esenzioni/ticket-esenzioni-prestazioni-ssr",
+  paginaLabel: "Ticket ed esenzioni · Regione Lombardia",
+  altriLink: [
+    { label: "Scelta e revoca · ASST Cremona", url: "https://www.asst-cremona.it/strutture/scelta-e-revoca" },
+  ],
+  manca:
+    "Non è indicato se si può inviare la richiesta per e-mail o PEC, se serve l'appuntamento né i tempi di rilascio: chiedili allo sportello. Abbiamo scritto all'ASST per saperlo.",
+  fonte:
+    "ASST Cremona · risposta scritta dell'Ufficio di Pubblica Tutela del 18/11/2026 · Regione Lombardia, pagina «Ticket ed esenzioni» (controllata il 18/11/2026)",
 };
 
 // Azienda ULSS 2 Marca Trevigiana: risposta scritta dell'URP (29/10/2026).
@@ -825,7 +919,26 @@ ESENZIONE_ASL.ferrara = {
   ],
   manca:
     "La pagina dello Sportello Unico CUP non dice se per le esenzioni serva l'appuntamento (lo indica solo per l'iscrizione al Servizio sanitario dei cittadini extracomunitari) né i tempi di rilascio e le regole sulla delega: chiedili allo Sportello Unico CUP.",
-  fonte: "AUSL Ferrara · risposta scritta dell'URP del 02/11/2026 e pagine ufficiali «Esenzioni ticket» (aggiornata l'11/06/2025) e «Sportello Unico - CUP» (aggiornata il 29/10/2026)",
+  fonte: "AUSL Ferrara · risposte scritte dell'URP del 02/11/2026 e del 16/11/2026 (che rimanda alla stessa pagina «Esenzioni ticket») e pagine ufficiali «Esenzioni ticket» (aggiornata l'11/06/2025) e «Sportello Unico - CUP» (aggiornata il 29/10/2026)",
+};
+
+// AUSL di Imola: risposta scritta dell'URP del 18/11/2026 (solo indicazione delle pagine ufficiali; dettagli non inseriti).
+ESENZIONE_ASL.imola = {
+  asl: "AUSL di Imola",
+  intro:
+    "L'URP dell'AUSL di Imola indica che le esenzioni vengono registrate presso l'Anagrafe sanitaria dell'Azienda USL e che tutte le informazioni sono nelle due pagine ufficiali qui sotto.",
+  telefoni: [{ etichetta: "URP · Azienda USL di Imola", numero: "0542 604121" }],
+  paginaUrl: "https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/5055",
+  paginaLabel: "Esenzioni · pagina indicata dall'URP dell'AUSL di Imola",
+  altriLink: [
+    {
+      label: "Seconda pagina indicata dall'URP dell'AUSL di Imola",
+      url: "https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/30",
+    },
+  ],
+  manca:
+    "L'URP non ha scritto dove si presenta la richiesta, quali documenti servono, se serve l'appuntamento né i tempi di rilascio: li trovi nelle pagine qui sotto o chiedili all'URP.",
+  fonte: "AUSL di Imola · risposta scritta dell'URP del 18/11/2026 (pagine indicate dall'ufficio, non ancora lette per intero da TutelApp)",
 };
 
 // ASP Catanzaro: risposta scritta dell'URP del 02/11/2026 (distretti citati: Catanzaro e Lamezia Terme).
@@ -1087,11 +1200,11 @@ ESENZIONE_ASL.verona = {
     "Documentazione sanitaria che attesta la patologia: la pagina ammette diverse forme, comprese certificazioni specialistiche e cartelle cliniche",
   ],
   mail: "distretto1@aulss9.veneto.it",
-  telefoni: [],
+  telefoni: [{ etichetta: "Distretto 1 · via Campania 1 (scheda del Comune di Verona, solo su appuntamento, lun–ven 8:00–12:30)", numero: "045 8157340" }],
   paginaUrl: "https://www.aulss9.veneto.it/per-patologia",
   paginaLabel: "Esenzione per patologia · ULSS 9 Scaligera",
   manca:
-    "La pagina non indica gli orari né il telefono degli sportelli per le esenzioni, e non dice se serve l'appuntamento né i tempi di rilascio: chiedili al tuo Distretto. L'e-mail indicata è quella del Distretto 1 (Verona città). Il documento con le sedi è senza data.",
+    "La pagina dell'ULSS non indica gli orari né il telefono degli sportelli per le esenzioni; il telefono e l'orario di via Campania 1 vengono dalla scheda del Distretto sul sito del Comune di Verona, che non indica la data né i tempi di rilascio: chiedili al tuo Distretto. L'e-mail indicata è quella del Distretto 1 (Verona città). Il documento con le sedi è senza data.",
   fonte:
     "ULSS 9 Scaligera · pagina «Esenzione per patologia» (18/08/2026) e documento aziendale sugli sportelli dei Distretti, controllati il 05/11/2026",
 };
@@ -1108,3 +1221,479 @@ ESENZIONE_ASL.catania = {
     "La pagina non indica gli indirizzi degli uffici, gli orari, i telefoni, le e-mail, se serve l'appuntamento né i tempi di rilascio. L'elenco dei documenti da portare non è confermato: chiedilo al Distretto di residenza. Pagina aggiornata il 12/05/2025.",
   fonte: "ASP Catania · pagina «Esenzione per patologia» dell'Anagrafe (aggiornata il 12/05/2025), controllata il 05/11/2026",
 };
+
+// Pisa: Azienda USL Toscana nord ovest. Contenuti dalle pagine ufficiali dell'azienda (consultate il 10/11/2026,
+// data di aggiornamento non indicata). Nessun indirizzo di ufficio o e-mail indicati nelle pagine lette: non inseriti.
+ESENZIONE_ASL.pisa = {
+  asl: "Azienda USL Toscana nord ovest",
+  intro:
+    "L'esenzione per patologia cronica o invalidante si chiede all'Azienda USL Toscana nord ovest. Per l'invalidità serve il riconoscimento INPS.",
+  titoloPassi: "Come si chiede",
+  comeSiPresenta: [
+    "Esenzione per patologia: agli uffici anagrafe dell'azienda, con documento d'identità e tessera sanitaria; oppure per e-mail, con il documento e la certificazione medica",
+    "Esenzione per invalidità: allo sportello, oppure per e-mail con il modulo dell'azienda; serve il riconoscimento dell'invalidità da parte dell'INPS",
+  ],
+  documenti: [
+    "Documento d'identità",
+    "Tessera sanitaria",
+    "Certificazione medica della patologia (per l'esenzione per patologia)",
+    "Riconoscimento INPS dell'invalidità e modulo dell'azienda (per l'esenzione per invalidità)",
+  ],
+  telefoni: [],
+  paginaUrl: "https://www.uslnordovest.toscana.it/come-fare-per/esenzioni-dal-pagamento-del-ticket",
+  paginaLabel: "Esenzioni dal pagamento del ticket · Azienda USL Toscana nord ovest",
+  altriLink: [
+    {
+      label: "Esenzione per patologia cronica o invalidante",
+      url: "https://www.uslnordovest.toscana.it/come-fare-per/312-esenzioni/14290-esenzioni-per-patologia-cronica-o-invalidante",
+    },
+    {
+      label: "Esenzione per invalidità",
+      url: "https://www.uslnordovest.toscana.it/come-fare-per/esenzioni/esenzioni-per-invalidita",
+    },
+  ],
+  manca:
+    "Le pagine lette non indicano gli indirizzi degli uffici, gli orari, i telefoni, le e-mail, se serve l'appuntamento né i tempi di rilascio: chiedili all'ufficio anagrafe della tua zona.",
+  fonte: "Azienda USL Toscana nord ovest · pagine «Esenzioni» consultate il 10/11/2026 (data di aggiornamento non indicata)",
+};
+
+// Massa e Pietrasanta: stessa Azienda USL Toscana nord ovest di Pisa. Pagina «Esenzioni per patologia cronica o invalidante»
+// (https://www.uslnordovest.toscana.it/come-fare-per/esenzioni/esenzioni-per-patologia-cronica-o-invalidante), consultata il 10/11/2026.
+// Sportelli locali di Massa e Pietrasanta non trovati: la scheda lo dice.
+for (const slug of ["massa", "pietrasanta"]) ESENZIONE_ASL[slug] = ESENZIONE_ASL.pisa;
+
+// Firenze: Azienda USL Toscana centro. Sportelli e procedura dalle pagine dell'azienda (consultate il 10/11/2026;
+// pagina sportelli aggiornata il 10/07/2026, pagina procedura senza data).
+ESENZIONE_ASL.firenze = {
+  asl: "Azienda USL Toscana centro",
+  intro:
+    "L'esenzione per patologia cronica si chiede all'ASL, con la certificazione della malattia rilasciata da una struttura del Servizio sanitario nazionale.",
+  comeSiPresenta: [
+    "Agli sportelli dell'ASL di Firenze (elenco qui sotto), dal lunedì al venerdì dalle 8:00 alle 12:30",
+    "Via Chiusi 4/2 · via D'Annunzio 29 · viale Europa 207/E · via Chiantigiana 37 · via dell'Osteria 18 · lungarno Santa Rosa 15",
+  ],
+  documenti: ["Certificazione della malattia rilasciata da una struttura del Servizio sanitario nazionale"],
+  telefoni: [],
+  paginaUrl: "https://www.uslcentro.toscana.it/guida-ai-servizi/servizi-amministrativi/esenzione-ticket/esenzioni-dal-ticket-per-patologia/zona-firenze",
+  paginaLabel: "Sportelli dell'ASL Toscana centro a Firenze",
+  altriLink: [
+    {
+      label: "Come richiedere l'esenzione",
+      url: "https://www.uslcentro.toscana.it/guida-ai-servizi/servizi-amministrativi/esenzione-ticket/esenzioni-dal-ticket-per-patologia/come-richiedere-l-esenzione",
+    },
+  ],
+  manca:
+    "Le pagine lette non indicano se serve l'appuntamento, i tempi di rilascio né i telefoni degli sportelli, e non descrivono l'esenzione per invalidità: chiedili allo sportello.",
+  fonte: "Azienda USL Toscana centro · pagine «Esenzioni dal ticket per patologia» (sportelli: aggiornata il 10/07/2026), consultate il 10/11/2026",
+};
+
+// Venezia: ULSS 3 Serenissima. Sportello amministrativo online, pagina consultata il 10/11/2026 (data di aggiornamento non indicata).
+ESENZIONE_ASL.venezia = {
+  asl: "ULSS 3 Serenissima",
+  intro:
+    "Per registrare l'esenzione per patologia o per invalidità civile l'ULSS 3 Serenissima mette a disposizione lo Sportello amministrativo online.",
+  comeSiPresenta: ["Online, dallo Sportello amministrativo dell'ULSS 3, con la funzione «Richiesta registrazione esenzione per patologia o per invalidità civile»"],
+  telefoni: [],
+  paginaUrl: "https://www.aulss3.veneto.it/home/servizi-al-cittadino/sportello-amministrativo-online",
+  paginaLabel: "Sportello amministrativo online · ULSS 3 Serenissima",
+  manca:
+    "La pagina letta non indica i documenti richiesti né gli sportelli fisici, i telefoni, gli orari o i tempi di rilascio: chiedili all'ULSS.",
+  fonte: "ULSS 3 Serenissima · Sportello amministrativo online, consultato il 10/11/2026 (data di aggiornamento non indicata)",
+};
+
+// Fiumicino: ASL Roma 3. Pagina «Esenzioni ticket» consultata il 10/11/2026 (data di aggiornamento non indicata).
+ESENZIONE_ASL.fiumicino = {
+  asl: "ASL Roma 3",
+  intro:
+    "Per il rilascio e il rinnovo delle esenzioni dal ticket nel Comune di Fiumicino la ASL Roma 3 indica tre sedi.",
+  comeSiPresenta: [
+    "Fiumicino · via Coni Zugna 173",
+    "Fregene · via della Pineta di Fregene 76",
+    "Palidoro · Casa della Salute, via Aurelia km 30,600",
+  ],
+  documenti: [
+    "Per rinnovare per email l'esenzione da reddito: modulo firmato, codice fiscale e documento d'identità",
+  ],
+  importante:
+    "Gli orari e la procedura online indicati nella pagina valgono per l'esenzione da reddito 2026: non vanno applicati alle esenzioni per patologia o invalidità, che hanno percorsi distinti.",
+  telefoni: [],
+  paginaUrl: "https://www.aslroma3.it/servizi-dalla-a-alla-z/e/esenzioni-ticket/",
+  paginaLabel: "Esenzioni ticket · ASL Roma 3",
+  manca:
+    "La pagina non dà un elenco unico di documenti per patologia e invalidità, né telefoni e orari per queste esenzioni: chiedili allo sportello o all'URP della ASL.",
+  fonte: "ASL Roma 3 · pagina «Esenzioni ticket», consultata il 10/11/2026 (data di aggiornamento non indicata)",
+};
+
+// Padova: ULSS 6 Euganea. Documenti della ULSS consultati il 10/11/2026 (aggiornamento della guida non indicato).
+ESENZIONE_ASL.padova = {
+  asl: "ULSS 6 Euganea",
+  intro:
+    "Per richiedere le esenzioni dal ticket l'ULSS 6 Euganea indica lo Sportello Amministrativo Distrettuale Online, con accesso SPID. Restano possibili gli sportelli fisici.",
+  comeSiPresenta: [
+    "Online, dallo Sportello Amministrativo Distrettuale, con SPID",
+    "Tra i servizi online ci sono l'esenzione per patologia e per malattia rara",
+    "Per le invalidità la guida elenca quelle sul lavoro, di servizio, di guerra e altre categorie specifiche",
+  ],
+  telefoni: [{ etichetta: "URP · lunedì–venerdì 8:30–14:00", numero: "800 201 301" }],
+  paginaUrl: "https://www.aulss6.veneto.it/Sportello-amministrativo-distrettuale",
+  paginaLabel: "Sportello amministrativo distrettuale · ULSS 6 Euganea",
+  manca:
+    "I documenti da allegare sono indicati solo nelle istruzioni di ogni richiesta, e la guida non chiarisce tutti i casi di invalidità civile. Non ho trovato gli orari degli sportelli fisici: chiedili all'URP.",
+  altriLink: [
+    {
+      label: "Medicina legale · ULSS 6 Euganea (visite per invalidità civile e L. 104)",
+      url: "https://www.aulss6.veneto.it/servizio-di-medicina-legale",
+    },
+  ],
+  fonte: "ULSS 6 Euganea · risposte scritte dell'URP del 19/11/2026 (pagina «Sportello amministrativo distrettuale», sezione «Esenzioni», e pagina «Servizio di medicina legale») · guida allo sportello online (aggiornamento non indicato) e Carta di accoglienza del Distretto Padova Bacchiglione (novembre 2025), consultate il 10/11/2026",
+};
+
+// ASL Latina: Carta dei servizi 2026 (rev. 25/03/2026) e pagine dei Distretti 2 (04/12/2025) e 4 (02/12/2025), controllate il 10/11/2026.
+const DOCUMENTI_ASL_LATINA = [
+  "Patologia cronica: certificazione su apposita modulistica di uno specialista pubblico (per diabete e ipertensione la Carta dei servizi ammette anche il medico curante)",
+  "Invalidità civile: verbale di riconoscimento dell'invalidità civile",
+  "Invalidità da lavoro: verbale INAIL con punteggio (sotto il 67% anche l'indicazione della patologia invalidante)",
+  "Invalidità di guerra o di servizio: verbale con la categoria (dalla VI all'VIII anche la patologia invalidante)",
+  "Vittime del dovere o del terrorismo: documentazione che comprova la condizione",
+];
+const FONTE_CARTA_LATINA = "https://www.ausl.latina.it/attachments/article/183/CARTA%20ASL%20Rev.%2011%20%20DEF%202025%20-%20Mod.%202026%20%28Agg.%2025.03.2026%29.pdf";
+
+ESENZIONE_ASL.latina = {
+  asl: "ASL Latina",
+  intro: "L'esenzione dal ticket si chiede all'Ufficio esenzioni del Distretto di residenza. Per Latina è il Distretto 2.",
+  comeSiPresenta: [
+    "Distretto 2 · Piazza Celli 8 / via Cesare Battisti 50, Latina · lunedì–venerdì 8:30–12:30 (indicati per l'esenzione per patologia e per reddito)",
+    "Per il rinnovo per patologia serve una nuova certificazione specialistica o una documentazione sanitaria recente",
+  ],
+  documenti: DOCUMENTI_ASL_LATINA,
+  mail: "sceltamedico.distretto2@ausl.latina.it",
+  telefoni: [{ etichetta: "Segreteria del Distretto 2", numero: "0773 6556022" }],
+  paginaUrl: "https://www.ausl.latina.it/gs-servterritoriali/290-dis2-servizi?tmpl=component",
+  paginaLabel: "Servizi del Distretto 2 · ASL Latina",
+  altriLink: [{ label: "Carta dei servizi ASL Latina 2026 (sezione 3.1.2)", url: FONTE_CARTA_LATINA }],
+  manca:
+    "Non è indicato un telefono dedicato alle esenzioni, né se per l'invalidità valgono lo stesso sportello e lo stesso orario, né come presentare la domanda per email: chiedili al Distretto.",
+  fonte: "ASL Latina · Carta dei servizi 2026 (rev. 25/03/2026) e pagina del Distretto 2 (aggiornata il 04/12/2025), controllate il 10/11/2026",
+};
+
+ESENZIONE_ASL.fondi = {
+  asl: "ASL Latina",
+  intro: "L'esenzione dal ticket si chiede all'Ufficio esenzioni del Distretto di residenza. Per Fondi è il Distretto 4.",
+  documenti: DOCUMENTI_ASL_LATINA,
+  telefoni: [],
+  paginaUrl: "https://www.ausl.latina.it/gs-servterritoriali/294-dis4-servizi",
+  paginaLabel: "Servizi del Distretto 4 · ASL Latina",
+  altriLink: [{ label: "Carta dei servizi ASL Latina 2026 (sezione 3.1.2)", url: FONTE_CARTA_LATINA }],
+  manca:
+    "La pagina del Distretto 4 non indica lo sportello esenzioni di Fondi, né telefono e orari. Elenca un ufficio «Esenzione Ticket» a Terracina (Ospedale Fiorini, via Firenze, 1° piano, 0773 708315, lunedì–venerdì 8:30–12:30), ma non dice che i residenti di Fondi debbano andare lì: chiedi conferma al Distretto.",
+  fonte: "ASL Latina · Carta dei servizi 2026 (rev. 25/03/2026) e pagina del Distretto 4 (aggiornata il 02/12/2025), controllate il 10/11/2026",
+};
+
+ESENZIONE_ASL.laquila = {
+  asl: "ASL 1 Abruzzo",
+  intro:
+    "A L'Aquila (e per i cittadini di Ocre, a cui l'URP ha risposto nella stessa mail) l'esenzione per patologia o per invalidità si attiva allo sportello «Scelta e Revoca del Medico», senza appuntamento.",
+  titoloPassi: "Come si fa",
+  comeSiPresenta: [
+    "Vai allo sportello «Scelta e Revoca del Medico», Via Capocroce 1, L'Aquila, dal lunedì al venerdì dalle 8:15 alle 13:00, senza appuntamento",
+    "Oppure scrivi a sceltadelmedicoaq@asl1abruzzo.it allegando i documenti qui sotto, più documento d'identità e tessera sanitaria",
+    "Per ristampare il tesserino di esenzione usa il portale Sanità Regione Abruzzo (link qui sotto)",
+    "Non c'è un modulo da compilare: basta presentare la certificazione indicata qui sotto. Allo sportello la tessera si rilascia subito; se scrivi per email, i tempi sono da 3 a 5 giorni lavorativi",
+    "I residenti a Ocre possono rivolgersi allo stesso sportello di Via Capocroce",
+  ],
+  documenti: [
+    "Esenzione per patologia: certificato di «malattia cronico invalidante» con codice e sottocodice della patologia, rilasciato dal medico specialista ospedaliero o da una struttura sanitaria convenzionata",
+    "Esenzione per invalidità: verbale INPS (invalidità civile)",
+    "Se scrivi per email: anche documento d'identità e tessera sanitaria",
+  ],
+  importante: "Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.",
+  mail: "sceltadelmedicoaq@asl1abruzzo.it",
+  telefoni: [
+    { etichetta: "URP ASL 1 Abruzzo · lun–ven 8:30–13:30", numero: "0863 499943" },
+    { etichetta: "Informazioni sportello · lun–ven 13:00–14:00, anche mar e gio 15:00–17:30", numero: "0862 368937" },
+  ],
+  paginaUrl: "https://trasparenza.asl1abruzzo.it/page/40/details/6627/u-o-s-d-cure-primarie-l-aquila.html",
+  paginaLabel: "U.O.S.D. Cure Primarie L'Aquila · ASL 1 Abruzzo",
+  altriLink: [{ label: "Ristampa del tesserino di esenzione · Sanità Regione Abruzzo", url: "https://sanitaonline.regione.abruzzo.it/portaleservizi/#/pages/listaservizi" }],
+  fonte: "ASL 1 Abruzzo · risposte scritte dell'URP e dello sportello Scelta e Revoca del Medico del 16/11/2026 (richiesta del 10/11/2026) e pagina U.O.S.D. Cure Primarie L'Aquila (aggiornata il 28/10/2026)",
+};
+
+ESENZIONE_ASL.ocre = ESENZIONE_ASL.laquila;
+
+// Milano — portale condiviso dalle tre ASST, per tutti i nove Municipi.
+// Fonti istituzionali e limiti: docs/registro/chatgpt-2026-11-11-lombardia-milano-servizi.md.
+ESENZIONE_ASL.milano = {
+  asl: "ASST di Milano · sportello online condiviso",
+  intro:
+    "A Milano puoi chiedere il rilascio o il rinnovo dell'esenzione dal ticket sul portale condiviso da Fatebenefratelli Sacco, Santi Paolo e Carlo e Niguarda. Il servizio copre tutti i nove Municipi; per le esenzioni occorre essere residenti in Lombardia.",
+  comeSiPresenta: [
+    "Apri lo sportello online qui sotto. Servono un indirizzo email personale, un cellulare per il codice di sicurezza ricevuto via SMS e i documenti scansionati in PDF.",
+    "Se non puoi fare la pratica online, prenota un appuntamento: Fatebenefratelli Sacco, 02 6363 4729 o 02 6363 4446 (lun–ven 14:00–15:30); Santi Paolo e Carlo, 02 8184 7900 (lun–ven 13:30–15:30).",
+  ],
+  documenti: [
+    "Documento d'identità e tessera sanitaria, fronte e retro, per la richiesta online.",
+    "Patologia cronica: certificazione dello specialista di una struttura pubblica o privata accreditata. Malattia rara: certificazione sul modulo del presidio abilitato alla diagnosi.",
+    "Invalidità civile: verbale che attesta l'invalidità. Il verbale della legge 104 da solo non permette il rilascio dell'esenzione per invalidità.",
+  ],
+  telefoni: [
+    { etichetta: "Fatebenefratelli Sacco · appuntamenti lun–ven 14:00–15:30", numero: "02 6363 4729" },
+    { etichetta: "Santi Paolo e Carlo · appuntamenti lun–ven 13:30–15:30", numero: "02 8184 7900" },
+    { etichetta: "Niguarda · appuntamenti lun–ven 13:30–15:15", numero: "02 6444 5743" },
+  ],
+  paginaUrl: "https://sr.asst-fbf-sacco.it/",
+  paginaLabel: "Sportello online delle tre ASST di Milano",
+  altriLink: [
+    { label: "Fatebenefratelli Sacco · esenzioni e sportelli", url: "https://www.asst-fbf-sacco.it/servizi-territoriali/ticket-ed-esenzioni-8" },
+    { label: "Santi Paolo e Carlo · sportello Monreale, via Monreale 13", url: "https://www.asst-santipaolocarlo.it/strutture/casa-comunita-monreale" },
+    { label: "Niguarda · appuntamento allo sportello", url: "https://sportellovirtuale.ospedaleniguarda.it/#/queue/home" },
+    { label: "Regione Lombardia · documenti e tipi di esenzione", url: "https://www.regione.lombardia.it/sanita/ticket-ed-esenzioni/ticket-esenzioni-prestazioni-ssr" },
+  ],
+  manca:
+    "Per informazioni: sceltarevoca.info@asst-fbf-sacco.it (Fatebenefratelli Sacco) oppure sceltarevoca.bandenere@asst-santipaolocarlo.it (Santi Paolo e Carlo). Questi indirizzi sono per informazioni: presenta la pratica sullo sportello online o all'appuntamento.",
+  fonte:
+    "Portale delle tre ASST di Milano; pagine Fatebenefratelli Sacco, Monreale (aggiornata 08/10/2026), Regione Lombardia e volantino Scelta e Revoca (novembre 2025), letti l'11/11/2026. PDF: https://www.asst-santipaolocarlo.it/system/files/struttura/files/14466/36715/VOLANTINO%20SCELTA%20REVOCA%20con%20QRCode%20NOVEMBRE%202025.pdf",
+};
+
+// ATS Liguria · ASL 4: Carro, Maissana e Varese Ligure (in provincia della Spezia) fanno capo al Distretto 16 (Sestri Levante).
+// Risposta scritta dell'Ufficio Anagrafe Sanitaria dell'ASL 4 del 12/11/2026 (in copia l'URP).
+const ASL4_DISTRETTO16: SchedaEsenzioneAsl = {
+  asl: "ASL 4 Liguria · Anagrafe Sanitaria del Distretto 16 (Sestri Levante)",
+  intro:
+    "I residenti di Carro, Maissana e Varese Ligure fanno capo al Distretto 16 di Sestri Levante: l'ufficio di Anagrafe Sanitaria di Sestri Levante è quello di riferimento.",
+  comeSiPresenta: [
+    "Di persona all'ufficio di Anagrafe Sanitaria, in Via Terzi 43 a Sestri Levante: non serve l'appuntamento",
+    "Oppure per e-mail, inviando tutta la documentazione all'indirizzo dell'ufficio",
+    "Le pratiche vengono espletate, se possibile, entro 5 giorni",
+    "A Varese Ligure c'è lo sportello di Anagrafe Sanitaria il martedì dalle 9:00 alle 13:00 (salvo modifiche)",
+  ],
+  documenti: [
+    "Certificato medico (modulo «Esenzione ticket per patologia» dell'ASL 4) compilato dal medico specialista di una struttura pubblica (ospedale), con i dati dell'assistito, il codice dell'esenzione, timbro e firma del medico",
+    "Documento d'identità dell'assistito",
+    "Se la documentazione è inviata da un indirizzo e-mail non personale, oppure se a presentarla è un'altra persona: il modulo di delega e i documenti d'identità di chi delega e di chi è delegato",
+    "Gli stessi documenti servono se ti presenti allo sportello dell'Anagrafe Sanitaria",
+  ],
+  mail: "anagrafe.ds16@asl4.liguria.it",
+  telefoni: [{ etichetta: "Anagrafe Sanitaria Distretto 16 · lunedì–venerdì 8:00–14:00", numero: "0185 329815" }],
+  manca:
+    "Il modulo del certificato e quello di delega sono sulla pagina della modulistica dell'ASL 4 (indicata dall'ufficio): in app non c'è ancora il collegamento diretto. Gli orari possono cambiare: conferma all'ufficio prima di andare.",
+  fonte: "ASL 4 · Ufficio Anagrafe Sanitaria, risposte scritte del 12/11/2026 (in copia URP Chiavari), con i moduli allegati (certificato «Esenzione ticket per patologia» e delega)",
+};
+for (const slug of ["carro", "maissana", "varese-ligure"]) ESENZIONE_ASL[slug] = ASL4_DISTRETTO16;
+
+// Lazio · ASL Latina Distretto 1 (Aprilia, Cisterna), ASL Roma 4 (Civitavecchia), ASL Roma 6 (Albano, Anzio, Ciampino).
+// Pagine dei siti delle ASL, controllate il 14/11/2026. Orari spesso non aggiornati o su pagine datate: avviso fisso in app.
+const AVVISO_ORARI = "Orari indicativi, possono cambiare: conferma all'ufficio prima di andare.";
+
+ESENZIONE_ASL.aprilia = {
+  asl: "ASL Latina · Distretto 1 (Aprilia)",
+  intro: "L'esenzione per patologia si chiede allo sportello del Distretto 1 ad Aprilia, nella sede di via Giustiniano.",
+  comeSiPresenta: [
+    "Via Giustiniano snc, Aprilia · martedì e giovedì 8:30–12:00, su appuntamento",
+    "Per l'appuntamento scrivi all'indirizzo dello sportello o chiama il centralino della sede",
+    AVVISO_ORARI,
+  ],
+  mail: "d5.distretto1@ausl.latina.it",
+  telefoni: [{ etichetta: "Centralino della sede di Aprilia", numero: "06 9286341" }],
+  paginaUrl: "https://www.ausl.latina.it/gs-servterritoriali/288-dis1-servizi",
+  paginaLabel: "Servizi del Distretto 1 · ASL Latina",
+  altriLink: [{ label: "Carta dei servizi ASL Latina 2026", url: FONTE_CARTA_LATINA }],
+  manca:
+    "La pagina non indica un telefono diretto dello sportello esenzioni né i documenti da portare. Per i documenti vedi la Carta dei servizi o chiedi al Distretto.",
+  fonte: "ASL Latina · pagina «Servizi – Distretto 1» (ultima modifica 29/09/2026), controllata il 14/11/2026",
+};
+
+ESENZIONE_ASL["cisterna-di-latina"] = {
+  asl: "ASL Latina · Distretto 1 (Cisterna di Latina)",
+  intro: "A Cisterna lo sportello del Distretto 1 si occupa di esenzione ticket e di tessere sanitarie.",
+  comeSiPresenta: [
+    "Cisterna di Latina · dal lunedì al venerdì 8:30–12:30",
+    "La pagina scrive solo «Esenzione Ticket», senza distinguere tra patologia e reddito: chiedi allo sportello",
+    AVVISO_ORARI,
+  ],
+  mail: "sceltamedico.cisterna@ausl.latina.it",
+  telefoni: [{ etichetta: "Sportello Distretto 1 · Cisterna", numero: "06 96025305" }],
+  paginaUrl: "https://www.ausl.latina.it/gs-servterritoriali/288-dis1-servizi",
+  paginaLabel: "Servizi del Distretto 1 · ASL Latina",
+  altriLink: [{ label: "Carta dei servizi ASL Latina 2026", url: FONTE_CARTA_LATINA }],
+  manca:
+    "La pagina non indica l'indirizzo preciso dello sportello né i documenti da portare. Chiedi al Distretto o vedi la Carta dei servizi.",
+  fonte: "ASL Latina · pagina «Servizi – Distretto 1» (ultima modifica 29/09/2026), controllata il 14/11/2026",
+};
+
+ESENZIONE_ASL.civitavecchia = {
+  asl: "ASL Roma 4 · Casa della Comunità di Civitavecchia",
+  intro: "A Civitavecchia le esenzioni per reddito e per patologia si chiedono alla Casa della Comunità, in viale Lazio.",
+  comeSiPresenta: [
+    "Viale Lazio 34/B, Civitavecchia · dal lunedì al venerdì 8:30–11:30 e 14:30–16:30 (per italiani e stranieri)",
+    AVVISO_ORARI,
+  ],
+  telefoni: [
+    { etichetta: "Casa della Comunità di Civitavecchia", numero: "06 96669377" },
+    { etichetta: "PUA (Punto Unico di Accesso)", numero: "06 96669353" },
+  ],
+  paginaUrl: "https://www.aslroma4.it/strutture-sanitarie/case-della-comunita/casa-della-comunita-civitavecchia",
+  paginaLabel: "Casa della Comunità di Civitavecchia · ASL Roma 4",
+  altriLink: [{ label: "Esenzione ticket · ASL Roma 4", url: "https://www.aslroma4.it/come-fare-per/come-fare-per-ticket-ed-esenzioni/esenzione-ticket" }],
+  manca:
+    "L'elenco dei documenti e la data di aggiornamento della pagina non sono indicati nella pagina della sede: vedi la pagina «Esenzione ticket» dell'ASL Roma 4 o chiedi allo sportello.",
+  fonte: "ASL Roma 4 · pagina della Casa della Comunità di Civitavecchia, controllata il 14/11/2026",
+};
+
+ESENZIONE_ASL.ciampino = {
+  asl: "ASL Roma 6 · Distretto 3 (Ciampino)",
+  intro: "A Ciampino le esenzioni per patologia cronica, invalidità e malattie rare si chiedono agli sportelli Scelta e revoca del medico del Distretto, in via Mario Calò 5.",
+  comeSiPresenta: [
+    "Sportelli Scelta e revoca del medico: via Mario Calò 5, Ciampino, 1° piano, stanze 20-21 · gli orari degli sportelli non sono indicati sulla pagina",
+    "La segreteria Cure Primarie (1° piano, stanza 9 / 12) risponde martedì, mercoledì e giovedì 8:00–10:00",
+    "Nella sezione «Modulistica» della pagina del Distretto c'è il modulo per la richiesta di esenzione per patologia cronica e/o invalidità",
+    AVVISO_ORARI,
+  ],
+  documenti: [
+    "Certificato dello specialista di struttura pubblica o accreditata, con diagnosi, codice della malattia, timbro e firma",
+    "Documento d'identità in corso di validità e tessera sanitaria (anche in fotocopia)",
+    "Per il rinnovo: attestato di esenzione in scadenza e certificato con data di rilascio non oltre 6 mesi prima",
+    "Se va un'altra persona: delega firmata, con documento e codice fiscale di chi delega e di chi ritira",
+  ],
+  mail: "cure.primarie.dh3@aslroma6.it",
+  telefoni: [
+    { etichetta: "Cure Primarie · Distretto 3", numero: "06 9327 2943" },
+    { etichetta: "Cure Primarie · Distretto 3", numero: "06 9327 5423" },
+    { etichetta: "Cure Primarie · Distretto 3", numero: "06 9327 5415" },
+  ],
+  paginaUrl: "https://www.aslroma6.it/distretti/dh3-ciampino/uos-cure-primarie",
+  paginaLabel: "Cure Primarie · Distretto 3 Ciampino · ASL Roma 6",
+  manca: "La pagina non indica gli orari degli sportelli né la data di aggiornamento: l'orario che si legge è quello della segreteria, chiedi conferma prima di andare.",
+  fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 3, testo della pagina verificato il 14/11/2026 (data di aggiornamento non indicata)",
+};
+
+ESENZIONE_ASL["albano-laziale"] = {
+  asl: "ASL Roma 6 · Distretto 2 (Albano Laziale)",
+  intro: "Ad Albano Laziale le esenzioni si chiedono al Distretto 2; si possono presentare anche per email, con tutta la documentazione.",
+  comeSiPresenta: [
+    "Sportelli 4-5-6 al piano terra del Distretto · lunedì–venerdì 8:00–11:00; martedì e giovedì 14:30–16:00 (pagina non recente, il pomeriggio è a numero limitato)",
+    "Oppure per email, allegando la documentazione richiesta",
+    AVVISO_ORARI,
+  ],
+  documenti: [
+    "Certificato dello specialista di struttura pubblica o accreditata, con diagnosi, codice della malattia, timbro e firma",
+    "Documento d'identità in corso di validità e tessera sanitaria (anche in fotocopia)",
+    "Per il rinnovo: attestato di esenzione in scadenza e certificato con data di rilascio non oltre 6 mesi prima",
+    "Se va un'altra persona: delega firmata, con documento e codice fiscale di chi delega e di chi ritira",
+  ],
+  mail: "esenzioni.dh2@aslroma6.it",
+  telefoni: [],
+  paginaUrl: "https://www.aslroma6.it/distretti/dh2-albano-laziale/uos-cure-primarie",
+  paginaLabel: "Cure Primarie · Distretto 2 Albano Laziale · ASL Roma 6",
+  manca:
+    "La pagina non indica l'indirizzo preciso né un telefono, e non è aggiornata di recente: conferma tutto con l'ufficio. L'elenco dei documenti è quello generale dell'ASL Roma 6.",
+  fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 2, controllata il 14/11/2026 (pagina datata)",
+};
+
+ESENZIONE_ASL.anzio = {
+  asl: "ASL Roma 6 · Distretto 6 (Anzio e Nettuno)",
+  intro: "Ad Anzio le esenzioni per patologia sono indicate solo per le nuove richieste; per l'esenzione per reddito si va al Poliambulatorio Barberini di Nettuno.",
+  comeSiPresenta: [
+    "Esenzione per reddito: accesso diretto al Poliambulatorio Barberini, Nettuno · lunedì–venerdì 8:00–13:00; martedì e giovedì 14:30–16:30",
+    "Esenzione per patologia (nuove richieste): per email a scelta.revoca@aslroma6.it oppure agli sportelli del Poliambulatorio Barberini, Nettuno, con gli stessi orari",
+    AVVISO_ORARI,
+  ],
+  documenti: [
+    "Certificato dello specialista di struttura pubblica o accreditata, con diagnosi, codice della malattia, timbro e firma",
+    "Documento d'identità in corso di validità e tessera sanitaria (anche in fotocopia)",
+    "Per il rinnovo: attestato di esenzione in scadenza e certificato con data di rilascio non oltre 6 mesi prima",
+    "Se va un'altra persona: delega firmata, con documento e codice fiscale di chi delega e di chi ritira",
+  ],
+  mail: "scelta.revoca@aslroma6.it",
+  telefoni: [{ etichetta: "Esenzioni ticket · Distretto 6", numero: "06 9327 2756" }],
+  paginaUrl: "https://www.aslroma6.it/distretti/dh6-anzio/uos-cure-primarie",
+  paginaLabel: "Cure Primarie · Distretto 6 Anzio · ASL Roma 6",
+  manca:
+    "L'elenco dei documenti è quello generale dell'ASL Roma 6: conferma con il Distretto prima di andare.",
+  fonte: "ASL Roma 6 · pagina Cure Primarie del Distretto 6, controllata il 14/11/2026 (pagina datata)",
+};
+
+// Lazio · ASL Latina Distretto 4 (Campodimele). Pagine «Servizi – Distretto 4» e «Distretti» dell'ASL Latina, controllate il 14/11/2026.
+ESENZIONE_ASL.campodimele = {
+  asl: "ASL Latina · Distretto 4 (Campodimele)",
+  intro:
+    "Campodimele fa parte del Distretto 4 dell'ASL Latina, con Terracina, Fondi, Monte San Biagio, San Felice Circeo, Lenola e Sperlonga. L'esenzione ticket si chiede agli uffici del Distretto.",
+  comeSiPresenta: [
+    "Ufficio Esenzione ticket di Terracina · Ospedale «A. Fiorini», via Firenze, 1° piano · dal lunedì al venerdì 8:30–12:30",
+    "Lo sportello di Fondi (Ospedale «S. Giovanni di Dio», via S. Magno, 4° piano) pubblica gli orari della scelta e revoca del medico: per le esenzioni chiedi prima di andare",
+    AVVISO_ORARI,
+  ],
+  telefoni: [
+    { etichetta: "Esenzione ticket · Terracina", numero: "0773 708315" },
+    { etichetta: "Scelta e revoca medico · Fondi", numero: "0771 505808" },
+  ],
+  paginaUrl: "https://www.ausl.latina.it/gs-servterritoriali/294-dis4-servizi",
+  paginaLabel: "Servizi del Distretto 4 · ASL Latina",
+  manca:
+    "L'ASL non indica se i residenti di Campodimele devono andare a Terracina o a Fondi, né l'elenco completo dei documenti da portare per l'esenzione per patologia: chiedilo al numero di Terracina qui sopra. Per una patologia cronica la Carta dei servizi ASL (par. 3.1.2, revisione del 25/03/2026) chiede la «certificazione rilasciata, su apposita modulistica, da un Medico Specialista pubblico», oppure quella del medico curante solo nei casi di diabete o ipertensione. In attesa della risposta, controlla anche la pagina «Esenzioni» dell'ASL Latina.",
+  fonte: "ASL Latina · pagina «Servizi – Distretto 4» (ultima modifica 02/12/2025) e Carta dei servizi (revisione 25/03/2026), letti il 14/11/2026",
+};
+
+// Emilia-Romagna · AUSL di Piacenza. Risposta dell'URP del 16/11/2026 (con il link alla pagina ufficiale) e pagine ufficiali dell'AUSL.
+ESENZIONE_ASL.piacenza = {
+  asl: "AUSL di Piacenza",
+  intro:
+    "A Piacenza l'esenzione per patologia (malattie croniche e invalidanti, malattie rare) si chiede agli Sportelli unici dell'Azienda USL, con la certificazione di uno specialista di una struttura pubblica.",
+  titoloPassi: "Come si fa",
+  comeSiPresenta: [
+    "Vai a uno degli Sportelli unici aziendali con la documentazione che attesta la malattia",
+    "Allo Sportello unico di Piazzale Milano 2, Piacenza (Casa della Salute) serve prenotare l'appuntamento con Zerocoda; lo sportello è aperto dal lunedì al venerdì",
+    "Se ti ha già codificato la malattia un reparto di una struttura pubblica, l'esenzione si registra subito allo sportello",
+    "Puoi mandare una persona di fiducia con la delega e le copie dei documenti d'identità di chi delega e di chi ritira",
+    "Se hai il Fascicolo sanitario elettronico non devi ripresentarti all'AUSL",
+  ],
+  documenti: [
+    "Certificazione dello specialista di una struttura pubblica, con la malattia e il suo codice",
+    "Oppure lettere di dimissioni, cartelle cliniche e simili, in fotocopia: l'AUSL non trattiene gli originali, ma un medico dell'Azienda valuta i documenti e la registrazione avviene dopo",
+    "Se va un'altra persona: modulo di delega e copie dei documenti d'identità",
+  ],
+  importante:
+    "Se i documenti vanno valutati da un medico, l'esenzione si ritira al punto informativo dopo una settimana dalla consegna. Se sei residente fuori regione ma hai il medico a Piacenza, registra prima l'esenzione nella tua AUSL di residenza. Per usarla, il medico deve scrivere il codice della malattia sull'impegnativa.",
+  telefoni: [
+    { etichetta: "Centralino unico AUSL di Piacenza", numero: "0523 301111" },
+    { etichetta: "URP AUSL di Piacenza · dalle 8:30 alle 12:30", numero: "0523 404616" },
+  ],
+  paginaUrl: "https://www.ausl.pc.it/it/come-fare-per/esenzioni-e-contributi/esenzione-per-patologia",
+  paginaLabel: "Esenzione per patologia · AUSL di Piacenza",
+  altriLink: [
+    { label: "Prenotare allo Sportello unico di Piazzale Milano · Zerocoda", url: "https://auslpiacenza.zerocoda.it/" },
+    { label: "Sportelli unici aziendali · AUSL di Piacenza", url: "https://www.ausl.pc.it/it/prestazioni-e-percorsi-di-cura/rete-territoriale/sportello-unico" },
+  ],
+  manca:
+    "L'URP ha risposto solo con il link alla pagina ufficiale: gli orari degli sportelli non sono pubblicati sulla pagina (si vedono in Zerocoda), né l'indirizzo di posta o PEC per mandare la richiesta a distanza né un modulo ufficiale. Chiedi all'URP, tel. 0523 404616.",
+  fonte:
+    "AUSL di Piacenza · risposta dell'URP del 16/11/2026, pagina «Esenzione per patologia» (aggiornata il 15/04/2025) e pagina Sportello unico di Piazzale Milano (aggiornata il 21/08/2026), controllate il 16/11/2026",
+};
+
+// AUSL di Parma, Distretto Sud-Est: risposta scritta dell'URP del 18/11/2026 (Collecchio, Langhirano, Traversetolo).
+const AUSL_PARMA_SUDEST: SchedaEsenzioneAsl = {
+  asl: "AUSL di Parma · Distretto Sud-Est",
+  intro:
+    "L'URP del Distretto Sud-Est indica come chiedere l'esenzione per patologia e per invalidità agli Sportelli unici–CUP di Collecchio, Langhirano e Traversetolo.",
+  titoloPassi: "Come si fa",
+  comeSiPresenta: [
+    "Allo Sportello unico–CUP di Collecchio, Langhirano o Traversetolo: non serve l'appuntamento, l'accesso è libero",
+    "Oppure per posta elettronica all'indirizzo indicato qui sotto: l'ufficio riceve anche da e-mail non PEC",
+    "La risposta via e-mail arriva entro 30 giorni",
+  ],
+  documenti: [
+    "Per l'esenzione per patologia: un documento d'identità e la copia di uno di questi documenti",
+    "Un certificato recente con la diagnosi e il codice della patologia cronica, rilasciato da un medico specialista di una struttura pubblica",
+    "Oppure la cartella clinica di una struttura ospedaliera pubblica, oppure il verbale di invalidità",
+    "Oppure la cartella clinica di una struttura ospedaliera privata accreditata, previa valutazione del medico del Distretto sanitario dell'Azienda sanitaria locale di residenza",
+    "Oppure i certificati delle Commissioni mediche degli Ospedali militari, oppure le certificazioni di Istituzioni sanitarie pubbliche di Paesi dell'Unione europea",
+    "Per l'esenzione per invalidità: un documento d'identità e la copia del verbale rilasciato dalla commissione medica competente",
+  ],
+  pec: "autocertificazionisudest@pec.ausl.pr.it",
+  telefoni: [{ etichetta: "URP Distretto Sud-Est (Langhirano)", numero: "0521 865324" }],
+  paginaUrl: "https://www.ausl.pr.it/servizi_online/esenzioni/default.aspx",
+  paginaLabel: "Esenzioni · AUSL di Parma",
+  manca:
+    "L'URP non ha indicato gli orari degli sportelli né il modulo ufficiale. Per gli orari chiedi all'URP, tel. 0521 865324.",
+  fonte: "AUSL di Parma · risposta scritta dell'URP del Distretto Sud-Est del 18/11/2026",
+};
+for (const slug of ["collecchio", "langhirano", "traversetolo"]) ESENZIONE_ASL[slug] = AUSL_PARMA_SUDEST;

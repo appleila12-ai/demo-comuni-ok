@@ -33,8 +33,9 @@ export const sarzana: ComuneConfig = {
   ente: "Servizi Sociali e Welfare",
   responsabile: "",
   indirizzo: "Piazza Matteotti 1, 19038 Sarzana (SP) (sede del Comune)",
-  telefono: "0187 614456",
-  email: "",
+  telefono: "0187 614454",
+  // Telefono ed email: pagina «Welfare» del Comune, https://www.comune.sarzana.sp.it/punti-di-contatto/welfare.html (consultata il 10/11/2026; data di aggiornamento non indicata)
+  email: "servizi.sociali@comune.sarzana.sp.it",
   orari: "",
   sitoWeb: "https://www.comune.sarzana.sp.it/servizi-sociali.html",
 
