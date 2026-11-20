@@ -2210,6 +2210,37 @@ PER_PROVINCIA.SS.sport.push({
   comuni: ["sassari"],
 });
 
+PER_PROVINCIA.CT = PER_PROVINCIA.CT ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.CT.volontariato.push({
+  nome: "ENS – Ente Nazionale Sordi, sezione di Catania",
+  cosa: "Sezione locale dell’Ente Nazionale Sordi. Contattala per informazioni e orientamento.",
+  dove: "Piazza San Domenico 11, Catania",
+  telefono: "095 312021",
+  sito: "https://catania.ens.it/contatti-e-dove-siamo",
+  comuni: ["catania"],
+});
+
+PER_PROVINCIA.RG = PER_PROVINCIA.RG ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.RG.volontariato.push({
+  nome: "ENS – Ente Nazionale Sordi, sezione di Ragusa",
+  cosa: "Sezione locale dell’Ente Nazionale Sordi. Contattala per informazioni e orientamento.",
+  dove: "Via Aldo Moro 31, lotto 54, scala B, Ragusa",
+  telefono: "0932 251818",
+  sito: "https://ragusa.ens.it/contatti-e-dove-siamo",
+  comuni: ["ragusa"],
+});
+
+PER_PROVINCIA.SR = PER_PROVINCIA.SR ?? { volontariato: [], sport: [] };
+PER_PROVINCIA.SR.volontariato.push({
+  nome: "ENS – Ente Nazionale Sordi, sezione di Siracusa",
+  cosa: "Sezione locale dell’Ente Nazionale Sordi. Contattala per informazioni e orientamento.",
+  dove: "Via Augusto Murri 20, Siracusa",
+  telefono: "0931 33567",
+  email: "siracusa@ens.it",
+  sito: "https://siracusa.ens.it/contatti-e-dove-siamo",
+  comuni: ["siracusa"],
+});
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",

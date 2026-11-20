@@ -14,3 +14,13 @@ Verifica del 20/11/2026. Cinque sezioni ENS nell’elenco territoriale e una soc
 Fonti aggiuntive: Commissione Disabilità del Comune di Sassari (aggiornata 24/07/2025), https://www.comune.sassari.it/it/amministrazione/unita-organizzativa/Commissione-Disabilita/ . Attività della Dinamo Lab confermata dal CIP il 15/05/2026, https://www.comitatoparalimpico.it/comunicazione/attivita/notizie/item/basket-in-carrozzina-si-decidono-le-finaliste-scudetto.html . Telefono dedicato alla squadra non verificato.
 
 La sede ENS per la provincia BT è a Trani e compare anche per Andria e Barletta. Omesse email oscurate nelle pagine ufficiali. Per Messina gli orari della sezione e del repertorio regionale divergono, quindi sono omessi. A Sassari restano da verificare i recapiti di Progetto Lavor@bile, Basaglia e Parkinson Sassari. Olbia e gli altri capoluoghi restano in verifica. Queste voci descrivono risorse del territorio.
+
+## Secondo gruppo, 20/11/2026
+
+Aggiunte tre sezioni ENS con sede e telefono. A Siracusa è pubblicata anche la casella generale.
+
+- Catania: https://catania.ens.it/contatti-e-dove-siamo . Data di aggiornamento non indicata.
+- Ragusa: https://ragusa.ens.it/contatti-e-dove-siamo . Data di aggiornamento non indicata.
+- Siracusa: https://siracusa.ens.it/contatti-e-dove-siamo . Data di aggiornamento non indicata.
+
+A Olbia le fonti comunali e ASL consultate descrivono servizi pubblici. Sede e recapiti di un’associazione locale ancora da verificare. Per le altre associazioni citate dalla Commissione di Sassari restano da verificare i recapiti diretti.
