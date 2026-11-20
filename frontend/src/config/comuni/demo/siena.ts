@@ -41,6 +41,12 @@ export const siena: ComuneConfig = {
       action: { type: "web", value: "https://www.comune.siena.it/categorie-dei-servizi/salute-benessere-e-assistenza" },
     },
     {
+      icon: "location-outline",
+      title: "PUA Siena (Azienda USL Toscana Sud Est)",
+      subtitle: "Punto Unico di Accesso: tel. 0577 535904; pua.siena@uslsudest.toscana.it. Lun, mer e ven 8:30–10:30; mar e gio 14:00–17:00. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Il vecchio indirizzo del Segretariato Sociale della Società della Salute (sdssenese) non è più controllato: scrivi al PUA. Fonte: risposta automatica dell'ufficio, 20/11/2026.",
+      action: { type: "tel", value: "0577535904" },
+    },
+    {
       icon: "medkit-outline",
       title: "Azienda USL Toscana Sud Est",
       subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
@@ -61,4 +67,4 @@ export const siena: ComuneConfig = {
 };
 
 // Passi 4 e 5: voci già in scheda con fonte. Passi 1-3 vuoti: nessun recapito verificato (29/10/2026).
-siena.percorsoTerritorio = percorso(siena.puntiSupporto, [0]);
+siena.percorsoTerritorio = percorso(siena.puntiSupporto, [0, 1]);

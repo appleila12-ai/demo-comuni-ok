@@ -101,7 +101,7 @@ export const roma: ComuneConfig = {
     {
       icon: "location-outline",
       title: "Municipio XII · Sportello Caregiver",
-      subtitle: "Via Fabiola 14, primo piano, stanze 1.18/1.19. Martedì e mercoledì 8:30–13:00 e 14:00–17:00; altri giorni su appuntamento. Offre orientamento e raccoglie le domande di riconoscimento caregiver. Fonte Roma Capitale, 09/11/2026.",
+      subtitle: "Via Fabiola 14, primo piano, stanze 1.18/1.19. Martedì e mercoledì 8:30–13:00 e 14:00–17:00; altri giorni su appuntamento. Offre orientamento e raccoglie le domande di riconoscimento caregiver. Servizio Sociale Area Anziani e Sportello Caregiver: tel. 06 69616613 / 06 69616220. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte Roma Capitale, 09/11/2026; telefoni dalla risposta del Municipio XII del 20/11/2026.",
       action: { type: "web", value: "https://www.comune.roma.it/web/it/dettaglio.page?contentId=UFF1037074" },
     },
     {
@@ -172,7 +172,25 @@ export const roma: ComuneConfig = {
     {
       icon: "location-outline",
       title: "Municipio XII · Segretariato Sociale e PUA",
-      subtitle: "Via Panfilo Castaldi 28/B, piano terra. Lun e mer 8:30–13:00; mar e gio 8:30–17:00. Tel. 06 69616606 / 607 / 608; pua.mun12@comune.roma.it. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Mancano le altre sedi (Via Longhena 98 e Via Ramazzini): sedi e orari non sono chiari sul sito e li abbiamo chiesti il 12/11/2026 a pua.mun12@comune.roma.it, a cui puoi scrivere anche tu. Fonte Roma Capitale, 12/11/2026.",
+      subtitle: "Accesso senza appuntamento in tutte le sedi. Segretariato Sociale: Via Panfilo Castaldi 28/B, lun e mer 8:30–13:00, mar e gio 8:30–17:00; tel. 06 69616606 / 607 / 608; pua.mun12@comune.roma.it. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Le altre sedi sono nelle schede qui sotto. Fonte: risposta del Municipio XII del 20/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-xii-uffici-e-contatti.page?contentId=UFF29748" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio XII · PUA Via Ramazzini (Casa della Comunità ASL)",
+      subtitle: "Via Ramazzini 15, piano terra, Casa della Comunità ASL. Lun–ven 8:30–12:30, senza appuntamento. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte: risposta del Municipio XII del 20/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-xii-uffici-e-contatti.page?contentId=UFF29748" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio XII · PUA e Segretariato Via Longhena",
+      subtitle: "Via Longhena 98. Martedì e giovedì 15:00–18:00, senza appuntamento. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte: risposta del Municipio XII del 20/11/2026.",
+      action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-xii-uffici-e-contatti.page?contentId=UFF29748" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio XII · PUA Via della Consolata (informazioni e orientamento)",
+      subtitle: "Via della Consolata 52, Casa della Comunità. Solo informazioni e orientamento, senza appuntamento. Lunedì 8:30–17:00; martedì 8:30–17:00 (con l'assistente sociale del Municipio dalle 8:30 alle 13:00); mercoledì, giovedì e venerdì 8:30–14:00. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte: risposta del Municipio XII del 20/11/2026.",
       action: { type: "web", value: "https://www.comune.roma.it/web/it/municipio-xii-uffici-e-contatti.page?contentId=UFF29748" },
     },
     {
@@ -184,8 +202,20 @@ export const roma: ComuneConfig = {
     {
       icon: "location-outline",
       title: "Municipio XIII · Segretariato Sociale",
-      subtitle: "Per orientamento e aiuto con le domande: 06 69618600 / 06 69618604; segretariatosociale.mun13@comune.roma.it. Consultare il sito municipale per appuntamento. Verifica 09/11/2026.",
+      subtitle: "Via Aurelia 470, su appuntamento. Tel. 06 69618600 / 06 69618604 / 3332315060; segretariatosociale.mun13@comune.roma.it. Lun, mer e ven 9–13; mar e gio 9–17. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte: risposta del Municipio XIII del 20/11/2026.",
       action: { type: "web", value: "https://www.comune.roma.it/web/it/bando-concorso.page?contentId=BEC1656054" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio XIII · PUA Casa della Comunità Boccea",
+      subtitle: "Via di Valcannuta 12. Tel. 06 60105115; puadistretto13@aslroma1.it. Lun e mer 14:30–16:30; mar 8:30–12:30 e 14:30–16:30; gio e ven 8:30–12:30. Martedì e giovedì il PUA è integrato con il Municipio. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte: risposta del Municipio XIII del 20/11/2026.",
+      action: { type: "web", value: "https://www.aslroma1.it/punto-unico-accesso" },
+    },
+    {
+      icon: "location-outline",
+      title: "Municipio XIII · PUA Casa della Comunità Montespaccato",
+      subtitle: "Via Tornabuoni 50. Tel. 06 60105115; puadistretto13@aslroma1.it. Lunedì e mercoledì 8:30–12:30. Orari indicativi, possono cambiare: conferma all'ufficio prima di andare. Fonte: risposta del Municipio XIII del 20/11/2026.",
+      action: { type: "web", value: "https://www.aslroma1.it/punto-unico-accesso" },
     },
     {
       icon: "location-outline",
