@@ -87,7 +87,7 @@ export function AssistantCard({ answers }: { answers?: Answers }) {
       <Text style={styles.aiSuggLabel}>Suggerimenti veloci</Text>
       <View style={styles.aiSuggs}>
         {suggestions.map((s, idx) => (
-          <Pressable
+          <Pressable accessibilityRole="button"
             key={s}
             onPress={() => {
               setQuestion(s);

@@ -308,7 +308,7 @@ export default function ReclamoAttese() {
                       {struttura[2] ? "" : " · mail URP non pubblicata: inseriscila a mano"}
                     </Text>
                   </View>
-                  <Pressable onPress={() => setStruttura(undefined)} hitSlop={8} accessibilityLabel="Cambia struttura">
+                  <Pressable accessibilityRole="button" onPress={() => setStruttura(undefined)} hitSlop={8} accessibilityLabel="Cambia struttura">
                     <Text style={st.cambia}>Cambia</Text>
                   </Pressable>
                 </View>

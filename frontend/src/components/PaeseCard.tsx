@@ -123,7 +123,7 @@ export function PaeseCard({ testID = "paese-card" }: { testID?: string }) {
         transparent
         onRequestClose={() => setAperto(false)}
       >
-        <Pressable
+        <Pressable accessibilityRole="button"
           style={styles.backdrop}
           onPress={() => setAperto(false)}
           accessibilityLabel="Chiudi"

@@ -350,7 +350,7 @@ export default function Bianca() {
     <SafeAreaView style={st.safe} edges={["top"]} testID="bianca-screen">
       <StatusBar barStyle="dark-content" backgroundColor="#FFFFFF" />
       <View style={st.header}>
-        <Pressable onPress={indietro} style={st.back} hitSlop={12} accessibilityLabel="Indietro" testID="bianca-back">
+        <Pressable accessibilityRole="button" onPress={indietro} style={st.back} hitSlop={12} accessibilityLabel="Indietro" testID="bianca-back">
           <Ionicons name="chevron-back" size={22} color={colors.onSurface} />
         </Pressable>
         <Text style={st.headerTitolo} numberOfLines={1}>

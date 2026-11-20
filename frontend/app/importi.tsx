@@ -47,7 +47,7 @@ export default function Importi() {
     <SafeAreaView style={styles.safe} edges={["top"]} testID="importi-screen">
       <StatusBar barStyle="dark-content" backgroundColor={colors.surface} />
       <View style={styles.header}>
-        <Pressable
+        <Pressable accessibilityRole="button"
           onPress={() => router.back()}
           style={styles.iconBtn}
           hitSlop={12}
@@ -69,7 +69,7 @@ export default function Importi() {
           <Text style={styles.errText}>
             Contenuti non disponibili. Controlla la connessione.
           </Text>
-          <Pressable onPress={load} style={styles.retryBtn} testID="importi-retry">
+          <Pressable accessibilityRole="button" onPress={load} style={styles.retryBtn} testID="importi-retry">
             <Text style={styles.retryText}>Riprova</Text>
           </Pressable>
         </View>
@@ -126,7 +126,7 @@ export default function Importi() {
                 />
                 <Text style={styles.rowText}>{it.reddito}</Text>
               </View>
-              <Pressable
+              <Pressable accessibilityRole="button"
                 onPress={() => Linking.openURL(it.url).catch(() => {})}
                 hitSlop={6}
                 style={styles.linkRow}

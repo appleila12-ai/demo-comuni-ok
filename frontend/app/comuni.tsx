@@ -180,7 +180,7 @@ export default function ScegliComune() {
       >
         <View style={styles.header}>
           {!primoAccesso && (
-            <Pressable
+            <Pressable accessibilityRole="button"
               onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}
               style={styles.back}
               hitSlop={12}
@@ -232,7 +232,7 @@ export default function ScegliComune() {
               testID="comuni-search"
             />
             {query ? (
-              <Pressable
+              <Pressable accessibilityRole="button"
                 onPress={() => setQuery("")}
                 hitSlop={10}
                 accessibilityLabel="Cancella la ricerca"

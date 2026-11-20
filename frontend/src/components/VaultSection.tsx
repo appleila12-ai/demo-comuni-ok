@@ -206,7 +206,7 @@ export function VaultSection({ report }: { report?: Report }) {
                   size={16}
                   color={topics.patronato.main}
                 />
-                <Pressable style={styles.flex} onPress={() => openFile(f)}>
+                <Pressable accessibilityRole="button" style={styles.flex} onPress={() => openFile(f)}>
                   <Text style={styles.fileName} numberOfLines={1}>
                     {f.name}
                   </Text>
@@ -214,7 +214,7 @@ export function VaultSection({ report }: { report?: Report }) {
                     {new Date(f.date).toLocaleDateString("it-IT")}
                   </Text>
                 </Pressable>
-                <Pressable
+                <Pressable accessibilityRole="button"
                   onPress={() => removeFile(f)}
                   hitSlop={8}
                   accessibilityLabel={`Elimina ${f.name}`}

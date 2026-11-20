@@ -29,7 +29,7 @@ export default function Wizard() {
         behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
         <View style={styles.header}>
-          <Pressable
+          <Pressable accessibilityRole="button"
             onPress={() => router.back()}
             style={styles.iconBtn}
             hitSlop={12}
