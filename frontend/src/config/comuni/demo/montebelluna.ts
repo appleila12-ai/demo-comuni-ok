@@ -5,6 +5,8 @@ import { INPS_TERZA_FASE } from "../percorso";
 // Servizi Sociali: fonte ufficiale Comune di Montebelluna, orari in vigore dal 02/03/2026,
 // https://www.comune.montebelluna.tv.it/c026046/po/mostra_news.php?area=H&id=3625
 // Servizio sociale professionale: https://www.comune.montebelluna.tv.it/c026046/zf/index.php/servizi-aggiuntivi/index/index/idtesto/75
+// Ticket invalidità civile: ULSS 2, pagina aggiornata il 03/02/2026,
+// https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile
 // Fonti consultate il 21/11/2026. Restano da verificare bonus comunali/d'Ambito e altri contenuti.
 export const montebelluna: ComuneConfig = {
   slug: "montebelluna",
@@ -54,7 +56,7 @@ export const montebelluna: ComuneConfig = {
 
   esenzioneTicket: {
     label: "ULSS 2 Marca Trevigiana · Esenzioni ticket",
-    url: "https://salute.regione.veneto.it/organizzazione-sssr/attivit%C3%A0--del-servizio-socio-sanitario-veneto/assistenza-distrettuale/visite-ed-esami-ambulatoriali/ticket-ed-esenzioni",
+    url: "https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile",
   },
 
   daVerificare: true,
