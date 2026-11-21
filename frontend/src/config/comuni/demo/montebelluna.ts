@@ -1,10 +1,11 @@
 import type { ComuneConfig } from "../types";
 import { INPS_TERZA_FASE } from "../percorso";
 
-// Comune di Montebelluna (TV) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (20 ottobre 2026).
-// Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
-// L'indirizzo del sito del Comune è preso dalla scheda del Comune su tuttitalia.it (collegamento al sito istituzionale): il sito non è stato aperto in questo giro, quindi indirizzo e pagina dei servizi sociali sono da verificare. Il link dell'azienda sanitaria è ripreso dalle schede dei Comuni della stessa provincia: da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// Comune di Montebelluna (TV) — VERSIONE DIMOSTRATIVA, scheda parziale.
+// Servizi Sociali: fonte ufficiale Comune di Montebelluna, orari in vigore dal 02/03/2026,
+// https://www.comune.montebelluna.tv.it/c026046/po/mostra_news.php?area=H&id=3625
+// Servizio sociale professionale: https://www.comune.montebelluna.tv.it/c026046/zf/index.php/servizi-aggiuntivi/index/index/idtesto/75
+// Fonti consultate il 21/11/2026. Restano da verificare bonus comunali/d'Ambito e altri contenuti.
 export const montebelluna: ComuneConfig = {
   slug: "montebelluna",
   tipo: "comune",
@@ -17,11 +18,11 @@ export const montebelluna: ComuneConfig = {
 
   ente: "Servizi Sociali",
   responsabile: "",
-  indirizzo: "",
-  telefono: "",
-  email: "",
+  indirizzo: "Casa Roncato, Largo X Martiri 2",
+  telefono: "0423 617589",
+  email: "servizisociali@comune.montebelluna.tv.it",
   pec: "",
-  orari: "",
+  orari: "Lunedì, mercoledì e venerdì 8:30–13:00; mercoledì anche 14:30–18:00. Assistenti sociali su appuntamento.",
   sitoWeb: "https://www.comune.montebelluna.tv.it",
 
   logo: null,
@@ -37,8 +38,8 @@ export const montebelluna: ComuneConfig = {
     {
       icon: "people-outline",
       title: "Servizi Sociali del Comune",
-      subtitle: "Primo ascolto sociale: recapiti e orari sono sul sito del Comune",
-      action: { type: "web", value: "https://www.comune.montebelluna.tv.it" },
+      subtitle: "Casa Roncato, Largo X Martiri 2 · 0423 617589 · servizisociali@comune.montebelluna.tv.it",
+      action: { type: "web", value: "https://www.comune.montebelluna.tv.it/c026046/zf/index.php/servizi-aggiuntivi/index/index/idtesto/75" },
     },
     {
       icon: "medkit-outline",
