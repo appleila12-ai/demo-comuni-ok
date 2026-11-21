@@ -55,7 +55,7 @@ export const montebelluna: ComuneConfig = {
     "Chiedi ai Servizi Sociali del Comune quali servizi di trasporto sociale sono attivi. Puoi rivolgerti anche alle associazioni di volontariato della zona (Croce Rossa, Pubbliche Assistenze, Misericordie) e alle associazioni che trovi nella sezione Associazioni.",
 
   esenzioneTicket: {
-    label: "ULSS 2 Marca Trevigiana · Esenzioni ticket",
+    label: "ULSS 2 Marca Trevigiana · Esenzione ticket per invalidità civile",
     url: "https://www.aulss2.veneto.it/Richiedere-lesenzione-per-invalidit-civile",
   },
 
