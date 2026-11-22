@@ -1499,6 +1499,26 @@ export const BONUS: Bonus[] = [
     nota: "Pagina della Regione aggiornata il 16/06/2026. Gli importi dipendono dalla valutazione e dal budget dell'Ambito: conferma con il Servizio sociale.",
   },
   {
+    id: "fvg-contributo-caregiver-familiari",
+    regione: "Friuli-Venezia Giulia",
+    titolo: "Contributo regionale ai caregiver familiari",
+    perChi:
+      "Caregiver familiari (coniuge, partner di unione civile, convivente di fatto, familiare o affine entro il secondo grado; il terzo grado nei casi dell'art. 33, comma 3, Legge 104/1992) residenti in Friuli-Venezia Giulia, che assistono a casa una persona residente in regione non autosufficiente: invalida con bisogno di assistenza globale e continua di lunga durata, oppure con indennità di accompagnamento. ISEE del nucleo del caregiver fino a 30.000 euro. Hanno priorità i caregiver di persone con disabilità gravissima. Non può chiederlo chi lo ha già ricevuto in passato né un secondo caregiver principale per la stessa persona.",
+    cosa:
+      "300 euro al mese per un massimo di 12 mesi, dentro un progetto personalizzato. Per il 2026 la Regione ha messo 702.000 euro dal Fondo statale e 400.000 euro propri.",
+    stato: "attivo",
+    quando:
+      "Ogni Ambito territoriale sociale pubblica il suo bando entro 30 giorni da quando riceve i fondi regionali; le domande vanno presentate entro 60 giorni dalla pubblicazione. A fondi esauriti il procedimento si chiude, senza lista d'attesa, fino a nuova assegnazione.",
+    comeSiChiede:
+      "Ci si rivolge al Servizio sociale del Comune o al punto unico di accesso per la valutazione in équipe; la domanda va presentata all'Ambito territoriale sociale, secondo il suo bando.",
+    fonte: {
+      label: "Regione FVG · Contributi ai caregiver familiari",
+      url: "https://www.regione.fvg.it/rafvg/cms/RAFVG/salute-sociale/interventi-socio-sanitari/FOGLIA23/",
+    },
+    verificatoIl: "22/11/2026",
+    nota: "Pagina della Regione aggiornata il 16/11/2026. Non sappiamo se il tuo Ambito ha già pubblicato il bando 2026 e quando scade: chiedilo al Servizio sociale del tuo Comune. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+  {
     id: "fvg-barriere-architettoniche",
     regione: "Friuli-Venezia Giulia",
     titolo: "Contributo regionale per abbattere le barriere architettoniche in casa",
