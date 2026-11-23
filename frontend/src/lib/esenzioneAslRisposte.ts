@@ -658,22 +658,28 @@ ESENZIONE_ASL.cremona = {
     "L'Ufficio di Pubblica Tutela dell'ASST Cremona indica la pagina della Regione Lombardia, valida per tutte le ASST lombarde, e come sportelli di riferimento gli Uffici di Scelta e Revoca. Secondo la Regione Lombardia, chi ha una patologia cronica presenta la richiesta agli sportelli territoriali «Scelta e Revoca» della ASST.",
   titoloPassi: "Dove si presenta",
   comeSiPresenta: [
-    "Agli Uffici di Scelta e Revoca dell'ASST Cremona (contatti sulla pagina dell'ASST)",
+    "Sportello Scelta e Revoca, via San Sebastiano 14, edificio B. Accesso senza prenotazione",
+    "Per malattia rara, porta la tessera sanitaria e il certificato del presidio ospedaliero abilitato",
+    "Per reddito, puoi presentare l’autocertificazione allo sportello Scelta e Revoca o tramite il Fascicolo Sanitario Elettronico lombardo",
   ],
   documenti: [
     "Tessera sanitaria",
     "Certificazione rilasciata da un medico specialista di una struttura pubblica o privata accreditata",
   ],
-  telefoni: [],
+  telefoni: [
+    { etichetta: "Scelta e Revoca · lunedì–venerdì 9:00–12:30", numero: "0372 408635" },
+    { etichetta: "Scelta e Revoca · secondo recapito", numero: "0372 408636" },
+  ],
   paginaUrl: "https://www.regione.lombardia.it/sanita/ticket-ed-esenzioni/ticket-esenzioni-prestazioni-ssr",
   paginaLabel: "Ticket ed esenzioni · Regione Lombardia",
   altriLink: [
+    { label: "Assistenza sanitaria ed esenzioni · ASST Cremona", url: "https://www.asst-cremona.it/strutture/gestione-cronicita-cremona-ex-cure-primarie" },
     { label: "Scelta e revoca · ASST Cremona", url: "https://www.asst-cremona.it/strutture/scelta-e-revoca" },
   ],
   manca:
-    "Non è indicato se si può inviare la richiesta per e-mail o PEC, se serve l'appuntamento né i tempi di rilascio: chiedili allo sportello. Abbiamo scritto all'ASST per saperlo.",
+    "Per sapere se puoi inviare la pratica a distanza e quali sono i tempi di rilascio, chiedi allo sportello.",
   fonte:
-    "ASST Cremona · risposta scritta dell'Ufficio di Pubblica Tutela del 18/11/2026 · Regione Lombardia, pagina «Ticket ed esenzioni» (controllata il 18/11/2026)",
+    "ASST Cremona · risposta scritta dell'Ufficio di Pubblica Tutela del 18/11/2026 · Regione Lombardia, pagina «Ticket ed esenzioni» (controllata il 18/11/2026) · pagine ASST e Regione verificate il 23/11/2026",
 };
 
 // Azienda ULSS 2 Marca Trevigiana: risposta scritta dell'URP (29/10/2026).
@@ -899,6 +905,7 @@ ESENZIONE_ASL.ferrara = {
     "Agli Sportelli Unici CUP: la persona interessata, o chi ha una delega, presenta la certificazione della patologia, rilasciata su apposito modulo da uno specialista di una struttura pubblica",
     "Il diritto all'esenzione risulta sul documento di iscrizione al Servizio sanitario regionale che rilasciano gli Sportelli Unici CUP. L'AUSL registra l'esenzione e la comunica al tuo medico di famiglia o pediatra",
     "Malattia rara: ti rivolgi allo Sportello Unico CUP dell'AUSL di residenza con il certificato di diagnosi rilasciato da uno dei Centri accreditati della Rete nazionale malattie rare",
+    "Puoi chiedere la registrazione dell’esenzione per invalidità anche dal Portale del Cittadino, con SPID, se risiedi in provincia di Ferrara o sei assistito dall’AUSL di Ferrara",
     "Invalidità: lo Sportello Unico CUP dell'AUSL di residenza rilascia la certificazione di esenzione a chi (o il suo delegato) presenta il documento che attesta lo stato di invalidità. Stato e grado di invalidità li accerta la Commissione medica dell'AUSL di residenza",
     "Hanno diritto all'esenzione per invalidità, tra gli altri, i cittadini con invalidità civile, di guerra o del lavoro, con cecità o sordomutismo, iscritti al Servizio sanitario nazionale. Per i cittadini comunitari con tessera TEAM, la certificazione di invalidità rilasciata all'estero la valuta un medico funzionario del Distretto",
   ],
@@ -908,6 +915,7 @@ ESENZIONE_ASL.ferrara = {
   paginaUrl: "https://www.ausl.fe.it/come-fare-per/esenzioni-ticket",
   paginaLabel: "Esenzioni ticket · AUSL Ferrara",
   altriLink: [
+    { label: "Portale del Cittadino · AUSL Ferrara", url: "https://www.ausl.fe.it/servizi-e-prestazioni/portalecittadino" },
     {
       label: "Sportelli Unici CUP · AUSL Ferrara",
       url: "https://www.ausl.fe.it/servizi-e-prestazioni/esami-e-analisi/c-u-p",
@@ -919,7 +927,7 @@ ESENZIONE_ASL.ferrara = {
   ],
   manca:
     "La pagina dello Sportello Unico CUP non dice se per le esenzioni serva l'appuntamento (lo indica solo per l'iscrizione al Servizio sanitario dei cittadini extracomunitari) né i tempi di rilascio e le regole sulla delega: chiedili allo Sportello Unico CUP.",
-  fonte: "AUSL Ferrara · risposte scritte dell'URP del 02/11/2026 e del 16/11/2026 (che rimanda alla stessa pagina «Esenzioni ticket») e pagine ufficiali «Esenzioni ticket» (aggiornata l'11/06/2025) e «Sportello Unico - CUP» (aggiornata il 29/10/2026)",
+  fonte: "AUSL Ferrara · risposte scritte dell'URP del 02/11/2026 e del 16/11/2026 (che rimanda alla stessa pagina «Esenzioni ticket») e pagine ufficiali «Esenzioni ticket» (aggiornata l'11/06/2025) e «Sportello Unico - CUP» (aggiornata il 29/10/2026) · Portale del Cittadino verificato il 23/11/2026",
 };
 
 // AUSL di Imola: risposta scritta dell'URP del 18/11/2026 (solo indicazione delle pagine ufficiali; dettagli non inseriti).
@@ -927,18 +935,26 @@ ESENZIONE_ASL.imola = {
   asl: "AUSL di Imola",
   intro:
     "L'URP dell'AUSL di Imola indica che le esenzioni vengono registrate presso l'Anagrafe sanitaria dell'Azienda USL e che tutte le informazioni sono nelle due pagine ufficiali qui sotto.",
-  telefoni: [{ etichetta: "URP · Azienda USL di Imola", numero: "0542 604121" }],
+  comeSiPresenta: [
+    "Sportello Unico distrettuale – Anagrafe sanitaria, piazzale Giovanni dalle Bande Nere 11. Orari: lunedì–venerdì 8:00–12:45, martedì anche 14:30–17:30, sabato 8:00–12:00",
+    "Per patologia, presenta allo sportello il certificato dello specialista su apposito modulo",
+    "Per reddito, controlla il Fascicolo Sanitario Elettronico. Se l’esenzione non risulta e hai i requisiti, consulta la procedura regionale di autocertificazione",
+  ],
+  telefoni: [{ etichetta: "Anagrafe sanitaria · 8:00–10:00", numero: "0542 604313" }, { etichetta: "URP · Azienda USL di Imola", numero: "0542 604121" }],
   paginaUrl: "https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/5055",
   paginaLabel: "Esenzioni · pagina indicata dall'URP dell'AUSL di Imola",
   altriLink: [
+    { label: "Anagrafe sanitaria e orari · Guida regionale", url: "https://guidaservizi.fascicolo-sanitario.it/dettaglio/luogo/3155530/3152788" },
+    { label: "Esenzione per patologia · Guida regionale", url: "https://guidaservizi.fascicolo-sanitario.it/dettaglio/prestazione/3152780" },
+    { label: "Esenzione per reddito · Regione Emilia-Romagna", url: "https://salute.regione.emilia-romagna.it/cure-primarie/ticket-esenzioni/esenzioni/esenzione-ticket-per-reddito" },
     {
       label: "Seconda pagina indicata dall'URP dell'AUSL di Imola",
       url: "https://www.ausl.imola.bo.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/30",
     },
   ],
   manca:
-    "L'URP non ha scritto dove si presenta la richiesta, quali documenti servono, se serve l'appuntamento né i tempi di rilascio: li trovi nelle pagine qui sotto o chiedili all'URP.",
-  fonte: "AUSL di Imola · risposta scritta dell'URP del 18/11/2026 (pagine indicate dall'ufficio, non ancora lette per intero da TutelApp)",
+    "Per i tempi di rilascio puoi chiedere allo sportello.",
+  fonte: "AUSL di Imola · risposta scritta dell'URP del 18/11/2026 · Guida ai servizi e Regione Emilia-Romagna, consultate il 23/11/2026",
 };
 
 // ASP Catanzaro: risposta scritta dell'URP del 02/11/2026 (distretti citati: Catanzaro e Lamezia Terme).
@@ -1331,7 +1347,7 @@ ESENZIONE_ASL.padova = {
     "Per richiedere le esenzioni dal ticket l'ULSS 6 Euganea indica lo Sportello Amministrativo Distrettuale Online, con accesso SPID. Restano possibili gli sportelli fisici.",
   comeSiPresenta: [
     "Online, dallo Sportello Amministrativo Distrettuale, con SPID",
-    "Tra i servizi online ci sono l'esenzione per patologia e per malattia rara",
+    "Tra i servizi online ci sono le esenzioni per reddito, patologia e malattia rara",
     "Per le invalidità la guida elenca quelle sul lavoro, di servizio, di guerra e altre categorie specifiche",
   ],
   telefoni: [{ etichetta: "URP · lunedì–venerdì 8:30–14:00", numero: "800 201 301" }],
@@ -1340,12 +1356,13 @@ ESENZIONE_ASL.padova = {
   manca:
     "I documenti da allegare sono indicati solo nelle istruzioni di ogni richiesta, e la guida non chiarisce tutti i casi di invalidità civile. Non ho trovato gli orari degli sportelli fisici: chiedili all'URP.",
   altriLink: [
+    { label: "Guida allo sportello online · ULSS 6 Euganea", url: "https://www.aulss6.veneto.it/mys/apridoc/iddoc/5659" },
     {
       label: "Medicina legale · ULSS 6 Euganea (visite per invalidità civile e L. 104)",
       url: "https://www.aulss6.veneto.it/servizio-di-medicina-legale",
     },
   ],
-  fonte: "ULSS 6 Euganea · risposte scritte dell'URP del 19/11/2026 (pagina «Sportello amministrativo distrettuale», sezione «Esenzioni», e pagina «Servizio di medicina legale») · guida allo sportello online (aggiornamento non indicato) e Carta di accoglienza del Distretto Padova Bacchiglione (novembre 2025), consultate il 10/11/2026",
+  fonte: "ULSS 6 Euganea · risposte scritte dell'URP del 19/11/2026 (pagina «Sportello amministrativo distrettuale», sezione «Esenzioni», e pagina «Servizio di medicina legale») · guida allo sportello online (aggiornamento non indicato) e Carta di accoglienza del Distretto Padova Bacchiglione (novembre 2025), consultate il 10/11/2026 · guida ricontrollata il 23/11/2026",
 };
 
 // ASL Latina: Carta dei servizi 2026 (rev. 25/03/2026) e pagine dei Distretti 2 (04/12/2025) e 4 (02/12/2025), controllate il 10/11/2026.
