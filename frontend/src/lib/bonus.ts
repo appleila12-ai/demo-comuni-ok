@@ -1062,6 +1062,27 @@ export const BONUS: Bonus[] = [
     nota: "La pagina regionale non indica la data di aggiornamento degli importi: confermali con il tuo Distretto o con l'ULSS prima di fare conto sul contributo. Esistono altre tipologie (ad esempio ICDb e ICDm) non descritte nella pagina letta.",
   },
 
+  {
+    id: "conegliano-erp-2026",
+    regione: "Veneto",
+    comuni: ["conegliano"],
+    titolo: "Conegliano: bando alloggi pubblici ERP 2026",
+    perChi:
+      "Chi ha la residenza anagrafica in Veneto quando presenta la domanda e un ISEE-ERP non superiore a 22.990 euro. Il bando indica anche i requisiti di cittadinanza o soggiorno, quelli relativi agli immobili e le altre condizioni di accesso. Si può partecipare in un solo Comune del Veneto.",
+    cosa:
+      "Assegnazione in affitto di alloggi di edilizia residenziale pubblica tramite graduatoria. La presenza nel nucleo di una persona con invalidità superiore ai due terzi vale 3 punti. La presenza di una persona con riconoscimento ai sensi dell’articolo 3, comma 3, della legge 104 vale 5 punti. Questi due punteggi non si sommano.",
+    stato: "aperto",
+    scade: "2026-12-28",
+    quando: "Domande dal 19 novembre 2026 fino alle ore 12:00 del 28 dicembre 2026.",
+    comeSiChiede:
+      "Online su https://erp.regione.veneto.it con SPID o CIE. Servono una DSU ISEE in corso di validità e una marca da bollo da 16 euro. Solo chi risiede a Conegliano può chiedere assistenza per caricare la domanda all’Ufficio casa: 0438 413418 o 0438 413212, dal lunedì al venerdì dalle 9:30 alle 12:30.",
+    fonte: {
+      label: "Comune di Conegliano · Bando ERP 2026 (PDF su ATER Treviso, 18/11/2026)",
+      url: "https://atertv.it/wp-content/uploads/2026/11/ERP-2026-CONEGLIANO.pdf",
+    },
+    verificatoIl: "23/11/2026",
+  },
+
   // ----------------------------------------------------------------- PIEMONTE
 
   {
