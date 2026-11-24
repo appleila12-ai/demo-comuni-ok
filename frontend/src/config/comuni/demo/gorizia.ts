@@ -4,7 +4,7 @@ import { percorso } from "../percorso";
 // Comune di Gorizia (GO) — VERSIONE DIMOSTRATIVA, SCHEDA SNELLA (14 ottobre 2026).
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Verificato solo il sito del Comune (link ufficiale). Home del sito del Comune: la pagina dei servizi sociali va cercata e confermata (controllato il 14 ottobre 2026). Il link dell'azienda sanitaria è da verificare.
-// Da fare: telefono, email, indirizzo e orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
+// 24/11/2026: recapiti del Servizio Sociale dei Comuni (telefono, email, sede) dalla firma della risposta ufficiale del 23/11/2026. Da fare: orari dei Servizi Sociali; bonus del Comune, associazioni, sport e tempo libero.
 export const gorizia: ComuneConfig = {
   slug: "gorizia",
   tipo: "comune",
@@ -15,11 +15,11 @@ export const gorizia: ComuneConfig = {
   provincia: "GO",
   regione: "Friuli-Venezia Giulia",
 
-  ente: "Servizi Sociali",
+  ente: "Servizio Sociale dei Comuni · Ambito Collio–Alto Isonzo (ente gestore: Comune di Gorizia)",
   responsabile: "",
-  indirizzo: "",
-  telefono: "0481 383111",
-  email: "",
+  indirizzo: "Via Baiamonti 22, Gorizia (sede operativa; sede legale Piazza Municipio 1)",
+  telefono: "0481 383377",
+  email: "info.sociale@comune.gorizia.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.gorizia.it",
@@ -45,6 +45,13 @@ export const gorizia: ComuneConfig = {
       title: "ASUGI",
       subtitle: "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
       action: { type: "web", value: "https://asugi.sanita.fvg.it" },
+    },
+    {
+      icon: "calendar-outline",
+      title: "Contributo caregiver familiari 2026",
+      subtitle:
+        "Risposta del Servizio Sociale dei Comuni (Ambito Collio–Alto Isonzo) del 23/11/2026: il bando del Fondo caregiver sarà pubblicato entro la fine di dicembre 2026 sui siti dei 15 Comuni dell'Ambito; dopo la pubblicazione si scarica il bando e si seguono le istruzioni per presentare la domanda. Scadenza, requisiti e modulo non sono ancora noti. Informazioni: info.sociale@comune.gorizia.it · Tel. 0481 383377",
+      action: { type: "tel", value: "0481383377" },
     },
   ],
 
