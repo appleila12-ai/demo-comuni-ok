@@ -24,6 +24,7 @@ const COLORI_STATO: Record<StatoBonus, { fondo: string; testo: string }> = {
   scaduto: { fondo: colors.errorSoft, testo: colors.onSurface },
   aperto: { fondo: colors.successSoft, testo: colors.onSurface },
   attivo: { fondo: colors.successSoft, testo: colors.onSurface },
+  "in-scadenza": { fondo: "#F9C88F", testo: colors.onSurface },
   chiuso: { fondo: colors.surfaceTertiary, testo: colors.onSurface },
   "da-verificare": { fondo: colors.warningSoft, testo: colors.onSurface },
 };
@@ -48,12 +49,16 @@ function Scheda({ b }: { b: Bonus }) {
         accessibilityLabel={`Stato: ${stato.etichetta}. ${stato.spiegazione}`}
       >
         <Ionicons
-          name={b.stato === "scaduto" ? "alert-circle-outline" : b.stato === "chiuso" ? "lock-closed-outline" : b.stato === "da-verificare" ? "help-circle-outline" : "checkmark-circle-outline"}
+          name={b.stato === "scaduto" ? "alert-circle-outline" : b.stato === "in-scadenza" ? "time-outline" : b.stato === "chiuso" ? "lock-closed-outline" : b.stato === "da-verificare" ? "help-circle-outline" : "checkmark-circle-outline"}
           size={16}
           color={c.testo}
         />
         <Text style={[styles.badgeText, { color: c.testo }]}>
-          {b.stato === "scaduto" && b.scade ? `Scaduto il ${dataScadenzaLeggibile(b.scade)}` : stato.etichetta}
+          {b.stato === "scaduto" && b.scade
+            ? `Scaduto il ${dataScadenzaLeggibile(b.scade)}`
+            : b.stato === "in-scadenza" && b.scade
+              ? `In scadenza: ultimo giorno ${dataScadenzaLeggibile(b.scade)}`
+              : stato.etichetta}
         </Text>
       </View>
 

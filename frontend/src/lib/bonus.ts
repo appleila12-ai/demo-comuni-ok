@@ -30,7 +30,7 @@
 
 import { comune } from "@/src/config/comune";
 
-export type StatoBonus = "aperto" | "attivo" | "chiuso" | "scaduto" | "da-verificare";
+export type StatoBonus = "aperto" | "attivo" | "in-scadenza" | "chiuso" | "scaduto" | "da-verificare";
 
 export type Bonus = {
   id: string;
@@ -65,6 +65,7 @@ export type Bonus = {
 export const STATO_BONUS: Record<StatoBonus, { etichetta: string; spiegazione: string }> = {
   aperto: { etichetta: "Aperto", spiegazione: "Si può presentare domanda adesso" },
   attivo: { etichetta: "Attivo", spiegazione: "Misura in corso: controlla le date con l'ente" },
+  "in-scadenza": { etichetta: "In scadenza", spiegazione: "Si può ancora chiedere, ma il termine è vicino" },
   chiuso: { etichetta: "Chiuso", spiegazione: "La finestra per le domande è finita" },
   scaduto: { etichetta: "Scaduto", spiegazione: "Non si può più chiedere: lo vedi ancora per pochi giorni" },
   "da-verificare": { etichetta: "Da confermare con l'ente", spiegazione: "Informazioni incomplete o non recenti" },
@@ -72,6 +73,9 @@ export const STATO_BONUS: Record<StatoBonus, { etichetta: string; spiegazione: s
 
 /** Giorni in cui una misura scaduta resta visibile, con l'avviso «scaduto». Dall'undicesimo giorno non compare più. */
 export const GIORNI_SCADUTO_VISIBILE = 10;
+
+/** Quando mancano questi giorni (o meno) alla scadenza, la scheda passa a «in scadenza» (arancione). */
+export const GIORNI_IN_SCADENZA = 7;
 
 const MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"];
 
@@ -81,7 +85,7 @@ export function dataScadenzaLeggibile(scade: string): string {
   return `${d} ${MESI[m - 1]} ${y}`;
 }
 
-function giorniDallaScadenza(scade: string, oggi: Date): number {
+export function giorniDallaScadenza(scade: string, oggi: Date): number {
   const [y, m, d] = scade.split("-").map(Number);
   const fine = Date.UTC(y, m - 1, d);
   const adesso = Date.UTC(oggi.getFullYear(), oggi.getMonth(), oggi.getDate());
@@ -90,7 +94,8 @@ function giorniDallaScadenza(scade: string, oggi: Date): number {
 
 /**
  * Applica la regola dei dieci giorni:
- *  - fino al giorno della scadenza: la scheda resta com'è
+ *  - fino a 7 giorni prima della scadenza (compreso il giorno stesso): stato "in scadenza" (arancione), se la misura era aperta o attiva
+ *  - prima: la scheda resta com'è
  *  - dal giorno dopo, per 10 giorni: stato "scaduto" (si vede, con l'avviso)
  *  - dall'undicesimo giorno: null (non compare più negli elenchi)
  * Senza `scade` la scheda non cambia mai.
@@ -98,7 +103,11 @@ function giorniDallaScadenza(scade: string, oggi: Date): number {
 export function conScadenza(b: Bonus, oggi: Date = new Date()): Bonus | null {
   if (!b.scade) return b;
   const g = giorniDallaScadenza(b.scade, oggi);
-  if (g <= 0) return b;
+  if (g <= 0) {
+    // g = 0 è l'ultimo giorno utile, g = -7 mancano sette giorni. Solo le misure ancora aperte o attive diventano «in scadenza».
+    if (-g <= GIORNI_IN_SCADENZA && (b.stato === "aperto" || b.stato === "attivo")) return { ...b, stato: "in-scadenza" };
+    return b;
+  }
   if (g > GIORNI_SCADUTO_VISIBILE) return null;
   return { ...b, stato: "scaduto" };
 }
@@ -2511,7 +2520,7 @@ export function bonusDelComune(): { locali: Bonus[]; regionali: Bonus[]; naziona
   const nazionali = vive(BONUS.filter((b) => b.regione === REGIONE_NAZIONALE));
   const locali = deLaRegione.filter((b) => b.comuni?.includes(comune.slug));
   const regionali = deLaRegione.filter((b) => !b.comuni);
-  const ordine: Record<StatoBonus, number> = { aperto: 0, attivo: 1, "da-verificare": 2, scaduto: 3, chiuso: 4 };
+  const ordine: Record<StatoBonus, number> = { "in-scadenza": 0, aperto: 1, attivo: 2, "da-verificare": 3, scaduto: 4, chiuso: 5 };
   const ordina = (l: Bonus[]) => [...l].sort((a, b) => ordine[a.stato] - ordine[b.stato]);
   return { locali: ordina(locali), regionali: ordina(regionali), nazionali: ordina(nazionali), regione };
 }
