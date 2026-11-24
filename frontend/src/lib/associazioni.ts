@@ -2250,6 +2250,16 @@ PER_PROVINCIA.SS.volontariato.push({
   comuni: ["olbia"],
 });
 
+PER_PROVINCIA.SS.volontariato.push({
+  nome: "Associazione Parkinson Sassari ODV",
+  cosa: "Organizza attività sociali e culturali a Casa Park per le persone con Parkinson.",
+  dove: "Casa Park, via Ardara 12, Sassari",
+  telefono: "079 4365502",
+  email: "info@associazioneparkinsonsassari.it",
+  sito: "https://www.associazioneparkinsonsassari.it/contatti/",
+  comuni: ["sassari"],
+});
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",
