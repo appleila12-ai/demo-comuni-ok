@@ -2241,6 +2241,25 @@ PER_PROVINCIA.SR.volontariato.push({
   comuni: ["siracusa"],
 });
 
+PER_PROVINCIA.SS.volontariato.push({
+  nome: "Un incontro, una speranza – associazione per persone con disabilità e famiglie",
+  cosa: "Associazione di volontariato nell’area dell’assistenza sociale. Il recapito è pubblicato da Sardegna Salute. Verifica gli orari prima di andare.",
+  dove: "Via Fausto Noce 66, Olbia",
+  telefono: "0789 25066",
+  sito: "https://www.sardegnasalute.it/index.php?c=2964&f=330&na=1&p=33&qr=1&s=9&v=9&xsl=316",
+  comuni: ["olbia"],
+});
+
+PER_PROVINCIA.SS.volontariato.push({
+  nome: "Associazione Parkinson Sassari ODV",
+  cosa: "Organizza attività sociali e culturali a Casa Park per le persone con Parkinson.",
+  dove: "Casa Park, via Ardara 12, Sassari",
+  telefono: "079 4365502",
+  email: "info@associazioneparkinsonsassari.it",
+  sito: "https://www.associazioneparkinsonsassari.it/contatti/",
+  comuni: ["sassari"],
+});
+
 const VOLONTARIATO_NAZIONALI: Associazione[] = [
   {
     nome: "Centri di Servizio per il Volontariato (CSVnet)",
