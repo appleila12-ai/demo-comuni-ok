@@ -1779,6 +1779,26 @@ export const BONUS: Bonus[] = [
     nota: "Importi 2026 letti sulla pagina «Pagamento dell'assegno di cura» della Provincia. Novità di settembre 2026: per il primo livello, chi ha almeno 70 anni e un riconoscimento definitivo della legge 104 (art. 3, comma 3), non soggetto a revisione, ha una procedura semplificata: per le domande prima del 1° ottobre 2026 serve una richiesta scritta, per quelle successive, con i requisiti, il livello è assegnato d'ufficio.",
   },
   {
+    id: "taa-copertura-previdenziale-assistenza-familiari",
+    regione: "Trentino-Alto Adige",
+    titolo: "Contributo per la pensione di chi assiste un familiare non autosufficiente (Regione)",
+    perChi:
+      "Chi assiste a casa un familiare non autosufficiente: in provincia di Bolzano il familiare deve essere inserito nel 2°, 3° o 4° livello di assistenza dell'assegno di cura; in provincia di Trento deve ricevere l'indennità di accompagnamento. Chi assiste non deve avere una pensione diretta né fare contemporaneamente un lavoro, e serve la residenza ininterrotta in Trentino-Alto Adige da almeno 5 anni (oppure da almeno 1 anno con 15 anni di residenza nell'arco della vita). Può essere chi non lavora e può versare i contributi volontari, chi è in aspettativa non retribuita senza copertura, chi ha un part-time fino al 70%, un lavoratore autonomo o un collaboratore domestico. Non conta la situazione economica della famiglia.",
+    cosa:
+      "Un contributo per la pensione (obbligatoria o complementare) durante i periodi di assistenza a casa. Fino a 4.000 euro l'anno per chi non lavora, per gli autonomi e per la previdenza complementare; fino a 2.000 euro l'anno per il part-time. Per la pensione obbligatoria e volontaria è un rimborso: i contributi si pagano prima all'INPS o alla propria cassa. La Regione indica anche il bollo da 16 euro.",
+    stato: "attivo",
+    quando:
+      "La domanda va presentata ogni anno. Provincia di Trento: entro il 31 dicembre dell'anno successivo ai versamenti (per la previdenza complementare, entro il 31 dicembre dell'anno successivo all'assistenza). Provincia di Bolzano: entro il 31 ottobre dell'anno successivo ai versamenti.",
+    comeSiChiede:
+      "Presso un qualsiasi patronato del Trentino-Alto Adige. Chi risiede in provincia di Bolzano può rivolgersi anche all'Agenzia ASSE della Provincia. Per informazioni: Ufficio previdenza della Regione, telefono 0461 201444, email previdenza@regione.taa.it (lunedì-giovedì 8.45-12.30 e 14.30-16.00, venerdì 8.45-12.30).",
+    fonte: {
+      label: "Regione Trentino-Alto Adige · Copertura previdenziale periodi di assistenza a familiari non autosufficienti (pagina aggiornata il 06/03/2026)",
+      url: "https://www.regione.taa.it/Servizi/Copertura-previdenziale-periodi-di-assistenza-a-familiari-non-autosufficienti",
+    },
+    verificatoIl: "24/11/2026",
+    nota: "Gli orari e i recapiti dell'ufficio possono cambiare: conferma all'ufficio prima di andare.",
+  },
+  {
     id: "vda-fondo-inclusione-autismo-2026",
     regione: "Valle d'Aosta",
     titolo: "Interventi per persone con autismo e disturbi del neurosviluppo (Fondo per l'inclusione 2025)",

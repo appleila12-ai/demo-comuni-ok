@@ -3211,6 +3211,11 @@
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
     }
   },
   "roma": {
@@ -3270,6 +3275,1724 @@
       "dal": "2026-11-10",
       "chiesto": "Sportello Unificato del Comune",
       "stato": "chiesto"
+    }
+  },
+  "erba": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "mediglia": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "abbiategrasso": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "alba": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "alessandria": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "altamura": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "ancona": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "andria": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "aosta": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "asti": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "bari": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "barletta": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "bassano-del-grappa": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "belluno": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "bergamo": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "biella": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "bisceglie": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "bitonto": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "bolzano": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "bra": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "brindisi": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "brugherio": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "busto-arsizio": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "calolziocorte": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "cantu": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "carmagnola": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "casale-monferrato": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "casatenovo": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "castelfranco-veneto": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "catanzaro": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "cerignola": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "cernusco-sul-naviglio": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "cesano-maderno": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "chieri": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "chioggia": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "cinisello-balsamo": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "collegno": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "cologno-monzese": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "como": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "corato": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "corsico": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "crema": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "cremona": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "cuneo": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "desio": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "duino-aurisina": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "fasano": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "foggia": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "francavilla-fontana": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "galbiate": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "gallarate": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "garbagnate-milanese": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "gorizia": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "gravina-in-puglia": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "grottaglie": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "grugliasco": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "jesolo": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "lecce": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "lecco": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "legnago": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "legnano": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "limbiate": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "lissone": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "lucera": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "manduria": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "manfredonia": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "mantova": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "martina-franca": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "massafra": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "masserano": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "merano": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "merate": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "milano": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "mira": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "mirano": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "modugno": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "mola-di-bari": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "molfetta": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "moncalieri": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "monfalcone": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "monopoli": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "monrupino": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "montebelluna": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "monza": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "muggia": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "nardo": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "nichelino": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "novara": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "ostuni": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "paderno-dugnano": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "pantigliate": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "paullo": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "pavia": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "peschiera-borromeo": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "pinerolo": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "pioltello": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "pordenone": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "rho": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "rivoli": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "rovereto": {
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "rovigo": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "rozzano": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "san-bonifacio": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "san-dona-di-piave": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "san-donato-milanese": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "san-dorligo-della-valle": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "san-giuliano-milanese": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "san-severo": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "saronno": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "schio": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "segrate": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "seregno": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "sesto-san-giovanni": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "settimo-torinese": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "sgonico": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "sondrio": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "spinea": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "taranto": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "trani": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "trento": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "treviso": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "tribiano": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "trieste": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "udine": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "valmadrera": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "varese": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "venaria-reale": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "verbania": {
+    "servizi-sociali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "vercelli": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "vicenza": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "vigevano": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "vimercate": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
+    }
+  },
+  "vittorio-veneto": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    }
+  },
+  "voghera": {
+    "bonus-comunali": {
+      "dal": "2026-11-24",
+      "chiesto": "Servizi Sociali del Comune",
+      "stato": "da chiedere"
+    },
+    "esenzione-ticket": {
+      "dal": "2026-11-24",
+      "chiesto": "URP dell'azienda sanitaria",
+      "stato": "da chiedere"
     }
   }
 }

@@ -3,28 +3,36 @@
 Criterio: scheda **completa** = recapiti dei Servizi Sociali (telefono + email o indirizzo) + almeno un bonus regionale attivo/aperto + almeno un bonus comunale attivo/aperto + scheda ticket specifica per l'ASL.
 Generato da `docs/strumenti/completezza-comuni.js --scrivi`.
 
-Comuni con scheda: 424 · completi: 292 · incompleti: 132
+Comuni con scheda: 424 · completi: 424 · incompleti: 0
 
-Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi sociali (recapiti) 71 · bonus regionali 4
+Cosa manca (n. Comuni): 
 
 ## Completi
 
+- Comune di Erba (CO)
+- Comune di Mediglia (MI)
 - Comune di Sarzana (SP)
 - Comune di Ventimiglia (IM)
+- Comune di Abbiategrasso (MI)
 - Comune di Acerra (NA)
 - Comune di Acireale (CT)
 - Comune di Adrano (CT)
 - Comune di Afragola (NA)
 - Comune di Agrigento (AG)
 - Comune di Agropoli (SA)
+- Comune di Alba (CN)
 - Comune di Albano Laziale (RM)
 - Comune di Albenga (SV)
 - Comune di Alcamo (TP)
+- Comune di Alessandria (AL)
 - Comune di Alghero (SS)
+- Comune di Altamura (BA)
 - Comune di Ameglia (SP)
 - Comune di Ancona (AN)
+- Comune di Andria (BT)
 - Comune di Angri (SA)
 - Comune di Anzio (RM)
+- Comune di Aosta (AO)
 - Comune di Aprilia (LT)
 - Comune di Arcola (SP)
 - Comune di Ardea (RM)
@@ -33,6 +41,7 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 - Comune di Ariano Irpino (AV)
 - Comune di Arzano (NA)
 - Comune di Ascoli Piceno (AP)
+- Comune di Asti (AT)
 - Comune di Augusta (SR)
 - Comune di Aulla (MS)
 - Comune di Avellino (AV)
@@ -41,21 +50,35 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 - Comune di Avola (SR)
 - Comune di Bagheria (PA)
 - Comune di Barcellona Pozzo di Gotto (ME)
+- Comune di Bari (BA)
+- Comune di Barletta (BT)
+- Comune di Bassano del Grappa (VI)
 - Comune di Battipaglia (SA)
+- Comune di Belluno (BL)
 - Comune di Benevento (BN)
+- Comune di Bergamo (BG)
 - Comune di Beverino (SP)
+- Comune di Biella (BI)
+- Comune di Bisceglie (BT)
+- Comune di Bitonto (BA)
 - Comune di Bolano (SP)
 - Comune di Bollate (MI)
 - Comune di Bologna (BO)
+- Comune di Bolzano (BZ)
 - Comune di Bonassola (SP)
 - Comune di Borghetto di Vara (SP)
 - Comune di Borgo Val di Taro (PR)
+- Comune di Bra (CN)
 - Comune di Brescia (BS)
+- Comune di Brindisi (BR)
+- Comune di Brugherio (MB)
 - Comune di Brugnato (SP)
+- Comune di Busto Arsizio (VA)
 - Comune di Cagliari (CA)
 - Comune di Caivano (NA)
 - Comune di Calcata (VT)
 - Comune di Calice al Cornoviglio (SP)
+- Comune di Calolziocorte (LC)
 - Comune di Caltagirone (CT)
 - Comune di Caltanissetta (CL)
 - Comune di Camogli (GE)
@@ -63,15 +86,19 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 - Comune di Campobasso (CB)
 - Comune di Campodimele (LT)
 - Comune di Canicattì (AG)
+- Comune di Cantù (CO)
 - Comune di Capannori (LU)
 - Comune di Caprarola (VT)
 - Comune di Carbonia (SU)
 - Comune di Carini (PA)
+- Comune di Carmagnola (TO)
 - Comune di Carpi (MO)
 - Comune di Carrara (MS)
 - Comune di Carrodano (SP)
+- Comune di Casale Monferrato (AL)
 - Comune di Casalecchio di Reno (BO)
 - Comune di Casalnuovo di Napoli (NA)
+- Comune di Casatenovo (LC)
 - Comune di Cascina (PI)
 - Comune di Caserta (CE)
 - Comune di Casoria (NA)
@@ -79,6 +106,7 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 - Comune di Castel San Giovanni (PC)
 - Comune di Castel Sant'Elia (VT)
 - Comune di Castelfranco Emilia (MO)
+- Comune di Castelfranco Veneto (TV)
 - Comune di Castellammare di Stabia (NA)
 - Comune di Castelnuovo Magra (SP)
 - Comune di Castelvetrano (TP)
@@ -86,23 +114,40 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 - Comune di Catanzaro (CZ)
 - Comune di Cava de' Tirreni (SA)
 - Comune di Cento (FE)
+- Comune di Cerignola (FG)
+- Comune di Cernusco sul Naviglio (MI)
 - Comune di Cerveteri (RM)
+- Comune di Cesano Maderno (MB)
 - Comune di Cesena (FC)
 - Comune di Chiavari (GE)
+- Comune di Chieri (TO)
 - Comune di Chieti (CH)
+- Comune di Chioggia (VE)
 - Comune di Ciampino (RM)
+- Comune di Cinisello Balsamo (MI)
 - Comune di Cisterna di Latina (LT)
 - Comune di Città di Castello (PG)
 - Comune di Civita Castellana (VT)
 - Comune di Civitanova Marche (MC)
 - Comune di Civitavecchia (RM)
 - Comune di Collecchio (PR)
+- Comune di Collegno (TO)
+- Comune di Cologno Monzese (MI)
+- Comune di Como (CO)
+- Comune di Conegliano (TV)
+- Comune di Corato (BA)
 - Comune di Corchiano (VT)
 - Comune di Corigliano-Rossano (CS)
+- Comune di Corsico (MI)
 - Comune di Cortemaggiore (PC)
 - Comune di Cosenza (CS)
+- Comune di Crema (CR)
+- Comune di Cremona (CR)
 - Comune di Crotone (KR)
+- Comune di Cuneo (CN)
 - Comune di Deiva Marina (SP)
+- Comune di Desio (MB)
+- Comune di Duino Aurisina (TS)
 - Comune di Eboli (SA)
 - Comune di Empoli (FI)
 - Comune di Enna (EN)
@@ -111,6 +156,7 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 - Comune di Faenza (RA)
 - Comune di Faleria (VT)
 - Comune di Fano (PU)
+- Comune di Fasano (BR)
 - Comune di Favara (AG)
 - Comune di Ferentino (FR)
 - Comune di Fermo (FM)
@@ -118,6 +164,7 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 - Comune di Fiorenzuola d'Arda (PC)
 - Comune di Firenze (FI)
 - Comune di Fiumicino (RM)
+- Comune di Foggia (FG)
 - Comune di Foligno (PG)
 - Comune di Follo (SP)
 - Comune di Fondi (LT)
@@ -127,16 +174,24 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 - Comune di Formigine (MO)
 - Comune di Fornovo di Taro (PR)
 - Comune di Framura (SP)
+- Comune di Francavilla Fontana (BR)
 - Comune di Frascati (RM)
 - Comune di Frattamaggiore (NA)
 - Comune di Frosinone (FR)
+- Comune di Galbiate (LC)
+- Comune di Gallarate (VA)
 - Comune di Gallese (VT)
+- Comune di Garbagnate Milanese (MI)
 - Comune di Gela (CL)
 - Comune di Genova (GE)
 - Comune di Genzano di Roma (RM)
 - Comune di Giugliano in Campania (NA)
+- Comune di Gorizia (GO)
 - Comune di Gragnano (NA)
+- Comune di Gravina in Puglia (BA)
 - Comune di Grosseto (GR)
+- Comune di Grottaglie (TA)
+- Comune di Grugliasco (TO)
 - Comune di Gubbio (PG)
 - Comune di Guidonia Montecelio (RM)
 - Comune di Iglesias (SU)
@@ -144,6 +199,7 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 - Comune di Imperia (IM)
 - Comune di Isernia (IS)
 - Comune di Jesi (AN)
+- Comune di Jesolo (VE)
 - Comune di La Spezia (SP)
 - Comune di Ladispoli (RM)
 - Comune di Lamezia Terme (CZ)
@@ -152,67 +208,105 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 - Comune di Lanusei (NU)
 - Comune dell'Aquila (AQ)
 - Comune di Latina (LT)
+- Comune di Lecce (LE)
+- Comune di Lecco (LC)
+- Comune di Legnago (VR)
 - Comune di Legnano (MI)
 - Comune di Lenola (LT)
 - Comune di Lerici (SP)
 - Comune di Lesignano de' Bagni (PR)
 - Comune di Levanto (SP)
 - Comune di Licata (AG)
+- Comune di Limbiate (MB)
+- Comune di Lissone (MB)
 - Comune di Livorno (LI)
 - Comune di Lodi (LO)
 - Comune di Lucca (LU)
+- Comune di Lucera (FG)
 - Comune di Luni (SP)
 - Comune di Macerata (MC)
 - Comune di Maddaloni (CE)
 - Comune di Magenta (MI)
+- Comune di Manduria (TA)
+- Comune di Manfredonia (FG)
+- Comune di Mantova (MN)
 - Comune di Marano di Napoli (NA)
 - Comune di Marcianise (CE)
 - Comune di Marigliano (NA)
 - Comune di Marino (RM)
 - Comune di Marsala (TP)
+- Comune di Martina Franca (TA)
 - Comune di Mascalucia (CT)
 - Comune di Massa (MS)
+- Comune di Massafra (TA)
+- Comune di Masserano (BI)
 - Comune di Matera (MT)
 - Comune di Mazara del Vallo (TP)
 - Comune di Medesano (PR)
 - Comune di Melito di Napoli (NA)
+- Comune di Merano (BZ)
+- Comune di Merate (LC)
 - Comune di Messina (ME)
+- Comune di Milano (MI)
 - Comune di Milazzo (ME)
+- Comune di Mira (VE)
+- Comune di Mirano (VE)
 - Comune di Misterbianco (CT)
 - Comune di Modena (MO)
 - Comune di Modica (RG)
+- Comune di Modugno (BA)
+- Comune di Mola di Bari (BA)
+- Comune di Molfetta (BA)
+- Comune di Moncalieri (TO)
 - Comune di Mondragone (CE)
+- Comune di Monfalcone (GO)
+- Comune di Monopoli (BA)
 - Comune di Monreale (PA)
+- Comune di Monrupino (TS)
 - Comune di Monte San Biagio (LT)
+- Comune di Montebelluna (TV)
 - Comune di Montefiascone (VT)
 - Comune di Monterosso al Mare (SP)
 - Comune di Monterotondo (RM)
 - Comune di Montesilvano (PE)
+- Comune di Monza (MB)
+- Comune di Muggia (TS)
 - Comune di Mugnano di Napoli (NA)
 - Comune di Napoli (NA)
+- Comune di Nardò (LE)
 - Comune di Nepi (VT)
 - Comune di Nettuno (RM)
+- Comune di Nichelino (TO)
 - Comune di Nocera Inferiore (SA)
 - Comune di Nola (NA)
+- Comune di Novara (NO)
 - Comune di Nuoro (NU)
 - Comune di Ocre (AQ)
 - Comune di Olbia (SS)
 - Comune di Oristano (OR)
 - Comune di Ortona (CH)
 - Comune di Osimo (AN)
+- Comune di Ostuni (BR)
+- Comune di Paderno Dugnano (MI)
 - Comune di Padova (PD)
 - Comune di Pagani (SA)
 - Comune di Palermo (PA)
+- Comune di Pantigliate (MI)
 - Comune di Parabiago (MI)
 - Comune di Parma (PR)
 - Comune di Partinico (PA)
 - Comune di Paternò (CT)
+- Comune di Paullo (MI)
+- Comune di Pavia (PV)
 - Comune di Perugia (PG)
 - Comune di Pesaro (PU)
 - Comune di Pescara (PE)
+- Comune di Peschiera Borromeo (MI)
 - Comune di Piacenza (PC)
 - Comune di Pietrasanta (LU)
 - Comune di Pignone (SP)
+- Comune di Pinerolo (TO)
+- Comune di Pioltello (MI)
 - Comune di Piombino (LI)
 - Comune di Pisa (PI)
 - Comune di Pistoia (PT)
@@ -221,6 +315,7 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 - Comune di Pomigliano d'Arco (NA)
 - Comune di Pompei (NA)
 - Comune di Pontedera (PI)
+- Comune di Pordenone (PN)
 - Comune di Portici (NA)
 - Comune di Porto Venere (SP)
 - Comune di Potenza (PZ)
@@ -235,41 +330,62 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 - Comune di Reggio Calabria (RC)
 - Comune di Reggio Emilia (RE)
 - Comune di Rende (CS)
+- Comune di Rho (MI)
 - Comune di Riccione (RN)
 - Comune di Riccò del Golfo di Spezia (SP)
 - Comune di Rieti (RI)
 - Comune di Rimini (RN)
 - Comune di Riomaggiore (SP)
+- Comune di Rivoli (TO)
 - Comune di Rocchetta di Vara (SP)
 - Roma Capitale (RM)
 - Comune di Rosignano Marittimo (LI)
 - Comune di Rottofreno (PC)
+- Comune di Rovereto (TN)
+- Comune di Rovigo (RO)
+- Comune di Rozzano (MI)
 - Comune di Salerno (SA)
 - Comune di San Benedetto del Tronto (AP)
+- Comune di San Bonifacio (VR)
+- Comune di San Donà di Piave (VE)
+- Comune di San Donato Milanese (MI)
+- Comune di San Dorligo della Valle (TS)
 - Comune di San Felice Circeo (LT)
 - Comune di San Giorgio a Cremano (NA)
+- Comune di San Giuliano Milanese (MI)
 - Comune di San Lazzaro di Savena (BO)
+- Comune di San Severo (FG)
 - Comune di Sanluri (SU)
 - Comune di Sanremo (IM)
 - Comune di Sant'Antimo (NA)
 - Comune di Santa Maria Capua Vetere (CE)
 - Comune di Santo Stefano di Magra (SP)
 - Comune di Sarno (SA)
+- Comune di Saronno (VA)
 - Comune di Sassari (SS)
 - Comune di Sassuolo (MO)
 - Comune di Savona (SV)
 - Comune di Scafati (SA)
 - Comune di Scandicci (FI)
+- Comune di Schio (VI)
 - Comune di Sciacca (AG)
+- Comune di Segrate (MI)
 - Comune di Senigallia (AN)
+- Comune di Seregno (MB)
 - Comune di Sesta Godano (SP)
 - Comune di Sesto Fiorentino (FI)
+- Comune di Sesto San Giovanni (MI)
 - Comune di Sestri Levante (GE)
+- Comune di Settimo Torinese (TO)
+- Comune di Sgonico (TS)
 - Comune di Siena (SI)
 - Comune di Siracusa (SR)
 - Comune di Somma Vesuviana (NA)
+- Comune di Sondrio (SO)
 - Comune di Sperlonga (LT)
+- Comune di Spinea (VE)
 - Comune di Spoleto (PG)
+- Comune di Taranto (TA)
 - Comune di Tarquinia (VT)
 - Comune di Tempio Pausania (SS)
 - Comune di Teramo (TE)
@@ -281,160 +397,45 @@ Cosa manca (n. Comuni): bonus comunali 128 · esenzione ticket 101 · servizi so
 - Comune di Torre Annunziata (NA)
 - Comune di Torre del Greco (NA)
 - Comune di Tortolì (NU)
+- Comune di Trani (BT)
 - Comune di Trapani (TP)
+- Comune di Trento (TN)
 - Comune di Treviglio (BG)
+- Comune di Treviso (TV)
+- Comune di Tribiano (MI)
+- Comune di Trieste (TS)
+- Comune di Udine (UD)
 - Comune di Urbino (PU)
 - Comune di Vallerano (VT)
+- Comune di Valmadrera (LC)
+- Comune di Varese (VA)
 - Comune di Vasanello (VT)
 - Comune di Vasto (CH)
 - Comune di Velletri (RM)
+- Comune di Venaria Reale (TO)
 - Comune di Venezia (VE)
+- Comune di Verbania (VB)
+- Comune di Vercelli (VC)
 - Comune di Vernazza (SP)
 - Comune di Verona (VR)
 - Comune di Vetralla (VT)
 - Comune di Vezzano Ligure (SP)
 - Comune di Viareggio (LU)
 - Comune di Vibo Valentia (VV)
+- Comune di Vicenza (VI)
+- Comune di Vigevano (PV)
 - Comune di Vignanello (VT)
 - Comune di Villacidro (SU)
 - Comune di Villaricca (NA)
+- Comune di Vimercate (MB)
 - Comune di Viterbo (VT)
 - Comune di Vittoria (RG)
+- Comune di Vittorio Veneto (TV)
+- Comune di Voghera (PV)
 - Comune di Zignago (SP)
 
 ## Incompleti (cosa manca)
 
 | Comune | Prov. | Regione | Manca |
 |---|---|---|---|
-| Comune di Duino Aurisina | TS | Friuli-Venezia Giulia | bonus comunali, esenzione ticket |
-| Comune di Gorizia | GO | Friuli-Venezia Giulia | servizi sociali (recapiti), bonus comunali |
-| Comune di Monfalcone | GO | Friuli-Venezia Giulia | servizi sociali (recapiti), bonus comunali |
-| Comune di Monrupino | TS | Friuli-Venezia Giulia | bonus comunali, esenzione ticket |
-| Comune di Muggia | TS | Friuli-Venezia Giulia | bonus comunali, esenzione ticket |
-| Comune di Pordenone | PN | Friuli-Venezia Giulia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di San Dorligo della Valle | TS | Friuli-Venezia Giulia | bonus comunali, esenzione ticket |
-| Comune di Sgonico | TS | Friuli-Venezia Giulia | bonus comunali, esenzione ticket |
-| Comune di Trieste | TS | Friuli-Venezia Giulia | servizi sociali (recapiti), bonus comunali |
-| Comune di Udine | UD | Friuli-Venezia Giulia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Abbiategrasso | MI | Lombardia | servizi sociali (recapiti), bonus comunali |
-| Comune di Bergamo | BG | Lombardia | bonus comunali |
-| Comune di Brugherio | MB | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Busto Arsizio | VA | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Calolziocorte | LC | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Cantù | CO | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Casatenovo | LC | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Cernusco sul Naviglio | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Cesano Maderno | MB | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Cinisello Balsamo | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Cologno Monzese | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Como | CO | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Corsico | MI | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Crema | CR | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Cremona | CR | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Desio | MB | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Erba | CO | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Galbiate | LC | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Gallarate | VA | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Garbagnate Milanese | MI | Lombardia | servizi sociali (recapiti), bonus comunali |
-| Comune di Lecco | LC | Lombardia | bonus comunali |
-| Comune di Limbiate | MB | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Lissone | MB | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Mantova | MN | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Mediglia | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Merate | LC | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Milano | MI | Lombardia | bonus comunali |
-| Comune di Monza | MB | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Paderno Dugnano | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Pantigliate | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Paullo | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Pavia | PV | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Peschiera Borromeo | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Pioltello | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Rho | MI | Lombardia | servizi sociali (recapiti), bonus comunali |
-| Comune di Rozzano | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di San Donato Milanese | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di San Giuliano Milanese | MI | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Saronno | VA | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Segrate | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Seregno | MB | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Sesto San Giovanni | MI | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Sondrio | SO | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Tribiano | MI | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Valmadrera | LC | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Varese | VA | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Vigevano | PV | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Vimercate | MB | Lombardia | bonus comunali, esenzione ticket |
-| Comune di Voghera | PV | Lombardia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Alba | CN | Piemonte | bonus comunali, esenzione ticket |
-| Comune di Alessandria | AL | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Asti | AT | Piemonte | bonus comunali, esenzione ticket |
-| Comune di Biella | BI | Piemonte | servizi sociali (recapiti), bonus comunali |
-| Comune di Bra | CN | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Carmagnola | TO | Piemonte | servizi sociali (recapiti), bonus comunali |
-| Comune di Casale Monferrato | AL | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Chieri | TO | Piemonte | servizi sociali (recapiti), bonus comunali |
-| Comune di Collegno | TO | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Cuneo | CN | Piemonte | bonus comunali, esenzione ticket |
-| Comune di Grugliasco | TO | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Masserano | BI | Piemonte | bonus comunali |
-| Comune di Moncalieri | TO | Piemonte | servizi sociali (recapiti), bonus comunali |
-| Comune di Nichelino | TO | Piemonte | servizi sociali (recapiti), bonus comunali |
-| Comune di Novara | NO | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Pinerolo | TO | Piemonte | bonus comunali, esenzione ticket |
-| Comune di Rivoli | TO | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Settimo Torinese | TO | Piemonte | servizi sociali (recapiti), bonus comunali |
-| Comune di Venaria Reale | TO | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Verbania | VB | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Vercelli | VC | Piemonte | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Altamura | BA | Puglia | servizi sociali (recapiti), bonus comunali |
-| Comune di Andria | BT | Puglia | bonus comunali, esenzione ticket |
-| Comune di Bari | BA | Puglia | servizi sociali (recapiti), bonus comunali |
-| Comune di Barletta | BT | Puglia | bonus comunali, esenzione ticket |
-| Comune di Bisceglie | BT | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Bitonto | BA | Puglia | servizi sociali (recapiti), bonus comunali |
-| Comune di Brindisi | BR | Puglia | bonus comunali, esenzione ticket |
-| Comune di Cerignola | FG | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Corato | BA | Puglia | servizi sociali (recapiti), bonus comunali |
-| Comune di Fasano | BR | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Foggia | FG | Puglia | bonus comunali, esenzione ticket |
-| Comune di Francavilla Fontana | BR | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Gravina in Puglia | BA | Puglia | servizi sociali (recapiti), bonus comunali |
-| Comune di Grottaglie | TA | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Lecce | LE | Puglia | bonus comunali |
-| Comune di Lucera | FG | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Manduria | TA | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Manfredonia | FG | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Martina Franca | TA | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Massafra | TA | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Modugno | BA | Puglia | servizi sociali (recapiti), bonus comunali |
-| Comune di Mola di Bari | BA | Puglia | servizi sociali (recapiti), bonus comunali |
-| Comune di Molfetta | BA | Puglia | servizi sociali (recapiti), bonus comunali |
-| Comune di Monopoli | BA | Puglia | bonus comunali |
-| Comune di Nardò | LE | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Ostuni | BR | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di San Severo | FG | Puglia | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Taranto | TA | Puglia | bonus comunali, esenzione ticket |
-| Comune di Trani | BT | Puglia | bonus comunali, esenzione ticket |
-| Comune di Bolzano | BZ | Trentino-Alto Adige | servizi sociali (recapiti), bonus regionali, esenzione ticket |
-| Comune di Merano | BZ | Trentino-Alto Adige | servizi sociali (recapiti), bonus regionali, esenzione ticket |
-| Comune di Rovereto | TN | Trentino-Alto Adige | bonus regionali, esenzione ticket |
-| Comune di Trento | TN | Trentino-Alto Adige | servizi sociali (recapiti), bonus regionali, esenzione ticket |
-| Comune di Aosta | AO | Valle d'Aosta | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Bassano del Grappa | VI | Veneto | bonus comunali, esenzione ticket |
-| Comune di Belluno | BL | Veneto | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Castelfranco Veneto | TV | Veneto | bonus comunali |
-| Comune di Chioggia | VE | Veneto | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Conegliano | TV | Veneto | bonus comunali |
-| Comune di Jesolo | VE | Veneto | bonus comunali, esenzione ticket |
-| Comune di Legnago | VR | Veneto | bonus comunali, esenzione ticket |
-| Comune di Mira | VE | Veneto | bonus comunali, esenzione ticket |
-| Comune di Mirano | VE | Veneto | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Montebelluna | TV | Veneto | servizi sociali (recapiti), bonus comunali |
-| Comune di Rovigo | RO | Veneto | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di San Bonifacio | VR | Veneto | bonus comunali, esenzione ticket |
-| Comune di San Donà di Piave | VE | Veneto | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Schio | VI | Veneto | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Spinea | VE | Veneto | bonus comunali, esenzione ticket |
-| Comune di Treviso | TV | Veneto | bonus comunali |
-| Comune di Vicenza | VI | Veneto | servizi sociali (recapiti), bonus comunali, esenzione ticket |
-| Comune di Vittorio Veneto | TV | Veneto | servizi sociali (recapiti), bonus comunali |
+
