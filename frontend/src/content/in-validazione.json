@@ -201,11 +201,6 @@
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
-    },
-    "servizi-sociali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
     }
   },
   "adrano": {
@@ -234,11 +229,6 @@
   },
   "agrigento": {
     "bonus-comunali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
-    "servizi-sociali": {
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
@@ -290,11 +280,6 @@
       "dal": "2026-11-13",
       "chiesto": "URP dell'azienda sanitaria",
       "stato": "da chiedere"
-    },
-    "servizi-sociali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
     }
   },
   "angri": {
@@ -342,9 +327,9 @@
   },
   "arezzo": {
     "bonus-comunali": {
-      "dal": "2026-11-13",
+      "dal": "2026-11-25",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
+      "stato": "chiesto"
     }
   },
   "ariano-irpino": {
@@ -911,14 +896,9 @@
   },
   "catania": {
     "bonus-comunali": {
-      "dal": "2026-11-13",
+      "dal": "2026-11-25",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
-    "servizi-sociali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
+      "stato": "chiesto"
     }
   },
   "cava-de-tirreni": {
@@ -946,11 +926,6 @@
     }
   },
   "cerveteri": {
-    "bonus-comunali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
     "esenzione-ticket": {
       "dal": "2026-11-14",
       "chiesto": "ASL Roma 4 · Distretto 2 (mail del 14/11/2026)",
@@ -1238,9 +1213,9 @@
   },
   "ferrara": {
     "bonus-comunali": {
-      "dal": "2026-11-13",
+      "dal": "2026-11-25",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
+      "stato": "chiesto"
     }
   },
   "fiorenzuola-d-arda": {
@@ -1257,9 +1232,9 @@
   },
   "firenze": {
     "bonus-comunali": {
-      "dal": "2026-11-13",
+      "dal": "2026-11-25",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
+      "stato": "chiesto"
     }
   },
   "fiumicino": {
@@ -1290,9 +1265,9 @@
   },
   "forli": {
     "bonus-comunali": {
-      "dal": "2026-11-13",
+      "dal": "2026-11-25",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
+      "stato": "chiesto"
     }
   },
   "formia": {
@@ -1500,11 +1475,6 @@
       "dal": "2026-11-13",
       "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
-    },
-    "esenzione-ticket": {
-      "dal": "2026-11-13",
-      "chiesto": "URP dell'azienda sanitaria",
-      "stato": "da chiedere"
     }
   },
   "imperia": {
@@ -1549,11 +1519,6 @@
     }
   },
   "ladispoli": {
-    "bonus-comunali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
     "esenzione-ticket": {
       "dal": "2026-11-13",
       "chiesto": "URP dell'azienda sanitaria",
@@ -2131,9 +2096,9 @@
   },
   "parma": {
     "bonus-comunali": {
-      "dal": "2026-11-13",
+      "dal": "2026-11-25",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
+      "stato": "chiesto"
     },
     "esenzione-ticket": {
       "dal": "2026-11-13",
@@ -2196,9 +2161,9 @@
   },
   "piacenza": {
     "bonus-comunali": {
-      "dal": "2026-11-13",
+      "dal": "2026-11-25",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
+      "stato": "chiesto"
     }
   },
   "piombino": {
@@ -2479,9 +2444,9 @@
   },
   "rimini": {
     "bonus-comunali": {
-      "dal": "2026-11-13",
+      "dal": "2026-11-25",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
+      "stato": "chiesto"
     }
   },
   "rosignano-marittimo": {
@@ -2781,14 +2746,9 @@
   },
   "siracusa": {
     "bonus-comunali": {
-      "dal": "2026-11-13",
+      "dal": "2026-11-25",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
-    "servizi-sociali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
+      "stato": "chiesto"
     }
   },
   "somma-vesuviana": {
@@ -3207,11 +3167,6 @@
       "chiesto": "URP dell'azienda sanitaria",
       "stato": "da chiedere"
     },
-    "servizi-sociali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
     "bonus-comunali": {
       "dal": "2026-11-24",
       "chiesto": "Servizi Sociali del Comune",
@@ -3241,11 +3196,6 @@
     "esenzione-ticket": {
       "dal": "2026-11-13",
       "chiesto": "URP dell'azienda sanitaria",
-      "stato": "da chiedere"
-    },
-    "servizi-sociali": {
-      "dal": "2026-11-13",
-      "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
     }
   },
@@ -3406,9 +3356,9 @@
   },
   "barletta": {
     "bonus-comunali": {
-      "dal": "2026-11-24",
+      "dal": "2026-11-25",
       "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
+      "stato": "chiesto"
     },
     "esenzione-ticket": {
       "dal": "2026-11-24",
@@ -3947,11 +3897,6 @@
     }
   },
   "gorizia": {
-    "servizi-sociali": {
-      "dal": "2026-11-24",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
     "bonus-comunali": {
       "dal": "2026-11-24",
       "chiesto": "Servizi Sociali del Comune",
@@ -4838,11 +4783,6 @@
   },
   "trieste": {
     "servizi-sociali": {
-      "dal": "2026-11-24",
-      "chiesto": "Servizi Sociali del Comune",
-      "stato": "da chiedere"
-    },
-    "bonus-comunali": {
       "dal": "2026-11-24",
       "chiesto": "Servizi Sociali del Comune",
       "stato": "da chiedere"
