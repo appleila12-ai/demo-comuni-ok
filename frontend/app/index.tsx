@@ -502,7 +502,7 @@ function HomeDelComune() {
           {!!comune.soloElenco && !!ambitoComune(comune.slug) && serviziAmbito(ambitoComune(comune.slug)!.ambito).length > 0 && (
             <Text style={styles.contactText}>
               Servizi sociali segnalati come attivi nel tuo Ambito: {serviziAmbito(ambitoComune(comune.slug)!.ambito).join("; ")}.
-              {"\n"}Fonte: Ministero del Lavoro, SIOSS. Dato dichiarato dall'Ambito, senza data: conferma sempre con il tuo Comune. Un servizio manca o non è corretto? Scrivi a info@tutelapp.it.
+              {"\n"}Fonte: Ministero del Lavoro, SIOSS (file del 07/02/2025). Dato dichiarato dall'Ambito: conferma sempre con il tuo Comune. Un servizio manca o non è corretto? Scrivi a info@tutelapp.it.
             </Text>
           )}
           {!!comune.soloElenco && (
