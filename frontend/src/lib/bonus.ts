@@ -1297,6 +1297,27 @@ export const BONUS: Bonus[] = [
     nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. La scadenza della Misura Sostegno è passata: vale solo per chi era già in carico.",
   },
   {
+    id: "monza-fna-2026-2027",
+    regione: "Lombardia",
+    comuni: ["monza", "brugherio"],
+    titolo: "Fondo Non Autosufficienza 2026/2027 (ex Misura B2) nell'Ambito di Monza",
+    perChi:
+      "Anziani non autosufficienti a basso bisogno assistenziale e persone con disabilità con necessità di sostegno intensivo elevato, residenti a Monza, Brugherio e Villasanta.",
+    cosa:
+      "Misura Sostegno: contributo per il caregiver familiare, contributo per l'assistente personale regolarmente assunto, assegno di autonomia (Vita Indipendente). Misura Servizi: interventi di sollievo e a supporto del caregiver, voucher per minori e per adulti con disabilità. Gli importi dipendono dall'ISEE e non sono indicati nel documento consultato.",
+    stato: "attivo",
+    quando:
+      "Le nuove domande si accolgono fino a esaurimento delle risorse e comunque non oltre il 31/12/2027. Hanno la precedenza i progetti già in corso al 30/06/2026. Il documento consultato non indica una data di apertura né di scadenza.",
+    comeSiChiede:
+      "La domanda si presenta al Comune di residenza. Dettagli e moduli sono nell'Avviso d'Ambito pubblicato dall'Ufficio di Piano (tel. 039 2372074, ufficiodipiano@ambitodimonza.it).",
+    fonte: {
+      label: "Ambito di Monza · Piano Operativo FNA 2026-2027 (pubblicato dal Comune di Brugherio)",
+      url: "https://brugherio-api.municipiumapp.it/s3/947/allegati/doc-pubbl/sociali/determina-1597.pdf",
+    },
+    verificatoIl: "25/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. Mancano in app le soglie ISEE e gli importi: li trovi nell'Avviso d'Ambito.",
+  },
+  {
     id: "bollate-trasporto-scolastico-disabilita-2026-2027",
     regione: "Lombardia",
     comuni: ["bollate"],
