@@ -1549,6 +1549,29 @@ export const BONUS: Bonus[] = [
     nota: "Pagina della Regione aggiornata il 24/03/2026. Chiedi al Comune i tempi di istruttoria e il modulo aggiornato.",
   },
 
+  // ------------------------------------------------------------ COMUNE DI TRIESTE (24/11/2026)
+  {
+    id: "trieste-sostegno-socio-educativo-invernale-2026-27",
+    regione: "Friuli-Venezia Giulia",
+    comuni: ["trieste"],
+    titolo: "Sostegno socio-educativo extrascolastico invernale, anno scolastico 2026/2027",
+    perChi:
+      "Minori e giovani adulti con disabilità che vogliono un supporto socio-educativo nei ricreatori, nel Servizio Integrativo Scolastico (S.I.S.), nei gruppi adolescenti e nei doposcuola privati.",
+    cosa:
+      "Un servizio di sostegno socio-educativo durante le attività extrascolastiche invernali. Non è un contributo in denaro: gli importi non sono indicati nell'avviso.",
+    stato: "attivo",
+    quando:
+      "L'avviso, pubblicato il 23/07/2026, dice che le domande di iscrizione online sono attive. Non indica una data di scadenza.",
+    comeSiChiede:
+      "Online dal portale Trieste Sociale, entrando con LoginFVG (SPID, CIE o CNS). L'avviso non indica recapiti. Per il servizio estivo dello stesso ufficio il portale indica minori.con.disabilita@comune.trieste.it.",
+    fonte: {
+      label: "Comune di Trieste · Trieste Sociale, avviso sostegno socio-educativo extra scolastico invernale AS 2026/2027",
+      url: "https://servizisociali.online.trieste.it/",
+    },
+    verificatoIl: "24/11/2026",
+    nota: "L'avviso non scrive una scadenza: chiedi conferma all'ufficio prima di preparare la domanda.",
+  },
+
   // ------------------------------------------------------------------ SARDEGNA
   {
     id: "cagliari-legge-162-98-piani-2026",
