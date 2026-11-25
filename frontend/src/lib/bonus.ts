@@ -1189,11 +1189,11 @@ export const BONUS: Bonus[] = [
     comeSiChiede:
       "La scheda rimanda al sito di Roma Capitale (scheda INF117423) per contatti e moduli. Puoi anche chiedere informazioni al PUA o all'Agenzia per la Vita Indipendente.",
     fonte: {
-      label: "Agenzia per la Vita Indipendente di Roma Capitale · Assegno di cura e contributo di cura",
-      url: "https://www.vitaindipendenteroma.it/schede/assegno-di-cura-e-contributo-di-cura-caregiver/",
+      label: "Roma Capitale · Assegno di cura e contributo caregiver familiare per disabilità gravissima (scheda del servizio, non aggiornata di recente)",
+      url: "https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF117423",
     },
-    verificatoIl: "13/10/2026",
-    nota: "La scheda non riporta la data di aggiornamento. L'assegno è sospeso con ricoveri di sollievo a carico del Fondo Sanitario Regionale, residenzialità continuativa o cambio di regione. Conferma importi e moduli con il Comune.",
+    verificatoIl: "24/11/2026",
+    nota: "Attenzione: la scheda ufficiale di Roma Capitale è vecchia e gli importi potrebbero essere cambiati. Prima di preparare la domanda chiama il PUA (Punto Unico di Accesso) del tuo Municipio: i numeri sono sul sito di Roma Capitale, alla pagina «Disabilità gravissima: presentazione nuove domande». L'assegno è sospeso con ricoveri di sollievo a carico del Fondo Sanitario Regionale, residenzialità continuativa o cambio di regione.",
   },
 
   // ----------------------------------------------------------- COMUNE DI FIUMICINO
@@ -1347,8 +1347,8 @@ export const BONUS: Bonus[] = [
       label: "Ufficio di Piano di Lodi · Misura Sostegno e Misura Servizi (aggiornamento non indicato)",
       url: "https://www.ufficiodipiano.lodi.it/attivita-dettaglio.php?id=162",
     },
-    verificatoIl: "10/11/2026",
-    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda.",
+    verificatoIl: "24/11/2026",
+    nota: "Attenzione: abbiamo trovato questo avviso solo sul sito dell'Ufficio di Piano di Lodi e non abbiamo trovato una conferma sul sito del Comune o di Regione Lombardia. Prima di preparare la domanda chiama l'Ufficio di Piano: 0371 442905, da lunedì a venerdì dalle 9 alle 13. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi.",
   },
   {
     id: "parabiago-misura-sostegno-servizi-2026-2027",
@@ -2331,8 +2331,8 @@ export const BONUS: Bonus[] = [
       label: "Società della Salute Area Pratese · Avviso progetti di Vita Indipendente «Chi fa da sé»",
       url: "https://www.sds.prato.it/it/bacheca/bandi-avvisi/attivi/progetti-vita-indipendente/pagina1182.html",
     },
-    verificatoIl: "11/11/2026",
-    nota: "Pagina della Società della Salute aggiornata il 04/08/2025. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi, chiedi conferma all'ufficio prima di preparare la domanda.",
+    verificatoIl: "24/11/2026",
+    nota: "Pagina della Società della Salute aggiornata il 04/08/2025. Il servizio è confermato anche sul sito del Comune di Prato, ma le date e le risorse vanno controllate. Per informazioni scrivi a vitaindipendente.prato@uslcentro.toscana.it oppure chiama il Numero Verde 800 922 912 del Servizio Sociale della Società della Salute. I fondi sono limitati e potrebbero essere già esauriti alla data di oggi.",
   },
   {
     id: "piemonte-esenzione-bollo-disabilita",
