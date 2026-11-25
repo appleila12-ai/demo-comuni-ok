@@ -29,7 +29,7 @@ import { InvitoSalvataggio } from "@/src/components/InvitoSalvataggio";
 import { RecuperaDati } from "@/src/components/RecuperaDati";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
 import { apriMail as apriProgrammaPosta } from "@/src/lib/apriMail";
-import { ambitoComune } from "@/src/config/comuni/anagrafica";
+import { ambitoComune, serviziAmbito } from "@/src/config/comuni/anagrafica";
 import { RichiestaNome, RichiestaNomeHome } from "@/src/components/RichiestaNome";
 import { useNomeUtente } from "@/src/lib/nomeUtente";
 import { SITO_TUTELAPP, linkMailtoInserimentoComune } from "@/src/lib/richiestaComune";
@@ -497,6 +497,12 @@ function HomeDelComune() {
             <Text style={styles.contactText}>
               Ambito sociale: {ambitoComune(comune.slug)!.ambito}. Capofila: {ambitoComune(comune.slug)!.capofila}.
               {"\n"}Fonte: Ministero del Lavoro, Registro Ambiti (06/03/2025).
+            </Text>
+          )}
+          {!!comune.soloElenco && !!ambitoComune(comune.slug) && serviziAmbito(ambitoComune(comune.slug)!.ambito).length > 0 && (
+            <Text style={styles.contactText}>
+              Servizi sociali segnalati come attivi nel tuo Ambito: {serviziAmbito(ambitoComune(comune.slug)!.ambito).join("; ")}.
+              {"\n"}Fonte: Ministero del Lavoro, SIOSS. Dato dichiarato dall'Ambito, senza data: conferma sempre con il tuo Comune. Un servizio manca o non è corretto? Scrivi a info@tutelapp.it.
             </Text>
           )}
           {!!comune.soloElenco && (
