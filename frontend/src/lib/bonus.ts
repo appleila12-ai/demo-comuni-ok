@@ -1276,6 +1276,27 @@ export const BONUS: Bonus[] = [
 
   // ------------------------------------------------------------- MONZA
   {
+    id: "mantova-fna-2026-2027",
+    regione: "Lombardia",
+    comuni: ["mantova"],
+    titolo: "Fondo Non Autosufficienza 2026/2027 (ex Misura B2) nel Distretto di Mantova",
+    perChi:
+      "Residenti in uno dei 14 Comuni del Distretto di Mantova, a casa propria: persone con disabilità con necessità di sostegno intensivo elevato e anziani non autosufficienti a basso bisogno assistenziale. ISEE sociosanitario fino a 25.000 euro per adulti e anziani, ISEE ordinario fino a 40.000 euro per i minori.",
+    cosa:
+      "Misura Sostegno (solo continuità): contributo per il caregiver familiare e per il personale di assistenza regolarmente impiegato. Misura Servizi: supporto e sollievo per i caregiver familiari e interventi per il benessere della persona. Gli importi non sono indicati nell'avviso consultato.",
+    stato: "attivo",
+    quando:
+      "Misura Sostegno (continuità, per chi ha già un progetto FNA 2024): domande dal 24/08/2026 al 12/09/2026, già chiuse. Misura Servizi, a sportello: dal 24/08/2026 al 31/10/2026 per il 2026 e dal 15/01/2027 al 31/10/2027 per il 2027.",
+    comeSiChiede:
+      "La Misura Sostegno si chiede al Comune di residenza. Per la Misura Servizi, l'avviso consultato non indica l'ufficio: chiedilo ai Servizi Sociali del tuo Comune.",
+    fonte: {
+      label: "Distretto di Mantova · Avviso FNA 2025-26, esercizio 2026-27 (pubblicato dal Comune di Castel d'Ario; delibera dell'Assemblea consortile n. 20 del 04/08/2026)",
+      url: "https://castel-d-ario-api.municipiumapp.it/s3/1591/allegati/misura-b2-2026/avviso_fna.pdf",
+    },
+    verificatoIl: "25/11/2026",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. La scadenza della Misura Sostegno è passata: vale solo per chi era già in carico.",
+  },
+  {
     id: "bollate-trasporto-scolastico-disabilita-2026-2027",
     regione: "Lombardia",
     comuni: ["bollate"],
