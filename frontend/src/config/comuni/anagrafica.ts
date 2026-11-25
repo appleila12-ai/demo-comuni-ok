@@ -103,6 +103,22 @@ export function ambitoComune(slug: string): { ambito: string; capofila: string }
   return a ? { ambito: a[0], capofila: a[1] } : null;
 }
 
+type ServiziAmbiti = { servizi: string[]; ambiti: Record<string, number[]> };
+let SERVIZI: ServiziAmbiti | null = null;
+
+/**
+ * Servizi sociali segnalati come attivi nell'Ambito (SIOSS, Ministero del Lavoro): dato dichiarato
+ * dall'Ambito, senza data nel file. Elenco vuoto se l'Ambito non è nel file.
+ */
+export function serviziAmbito(nomeAmbito: string): string[] {
+  if (!SERVIZI) {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    SERVIZI = require("../../content/ambiti-servizi.json") as ServiziAmbiti;
+  }
+  const idx = SERVIZI.ambiti[nomeAmbito];
+  return idx ? idx.map((i) => SERVIZI!.servizi[i].replace(/^[A-Z]\.\d+\.\s*/, "")) : [];
+}
+
 /**
  * Cerca per nome tra i Comuni che NON hanno una scheda propria (gli altri si trovano
  * già nell'elenco delle schede). Prima chi inizia col testo scritto, poi gli altri.
