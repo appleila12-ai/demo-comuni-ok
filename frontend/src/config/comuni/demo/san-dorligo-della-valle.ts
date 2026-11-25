@@ -58,6 +58,13 @@ export const sanDorligoDellaValle: ComuneConfig = {
         "Esenzione ticket per patologia e invalidità, scelta del medico e servizi sanitari del territorio",
       action: { type: "web", value: "https://asugi.sanita.fvg.it" },
     },
+    {
+      icon: "calendar-outline",
+      title: "Contributo caregiver familiari 2026",
+      subtitle:
+        "Risposta dell'Ambito Carso Giuliano del 23/11/2026: il bando sarà pubblicato indicativamente a dicembre 2026 sul sito del Comune di Muggia e dei Comuni dell'Ambito, e si potrà presentare domanda per 60 giorni dalla pubblicazione. Requisiti e modalità non sono ancora definiti (si attendono le linee guida della Regione): saranno scritti nel bando. Informazioni: ambito.sociale@comunedimuggia.ts.it · Tel. 040 3360434",
+      action: { type: "tel", value: "0403360434" },
+    },
   ],
 
   trasporto:
