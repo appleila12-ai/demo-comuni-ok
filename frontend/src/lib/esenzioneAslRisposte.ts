@@ -658,7 +658,8 @@ ESENZIONE_ASL.cremona = {
     "L'Ufficio di Pubblica Tutela dell'ASST Cremona indica la pagina della Regione Lombardia, valida per tutte le ASST lombarde, e come sportelli di riferimento gli Uffici di Scelta e Revoca. Secondo la Regione Lombardia, chi ha una patologia cronica presenta la richiesta agli sportelli territoriali «Scelta e Revoca» della ASST.",
   titoloPassi: "Dove si presenta",
   comeSiPresenta: [
-    "Sportello Scelta e Revoca, via San Sebastiano 14, edificio B. Accesso senza prenotazione",
+    "Sportello Scelta e Revoca, via San Sebastiano 14, edificio B. Accesso senza appuntamento negli orari di apertura al pubblico: l’attestato di esenzione viene rilasciato subito",
+    "Puoi anche inviare la richiesta per e-mail ordinaria (non serve la PEC): l’attestato ti viene mandato all’indirizzo e-mail che indichi",
     "Per malattia rara, porta la tessera sanitaria e il certificato del presidio ospedaliero abilitato",
     "Per reddito, puoi presentare l’autocertificazione allo sportello Scelta e Revoca o tramite il Fascicolo Sanitario Elettronico lombardo",
   ],
@@ -677,9 +678,9 @@ ESENZIONE_ASL.cremona = {
     { label: "Scelta e revoca · ASST Cremona", url: "https://www.asst-cremona.it/strutture/scelta-e-revoca" },
   ],
   manca:
-    "Per sapere se puoi inviare la pratica a distanza e quali sono i tempi di rilascio, chiedi allo sportello.",
+    "Per l’invio per e-mail, l’ufficio non ha indicato i tempi di rilascio dell’attestato: chiedili allo sportello.",
   fonte:
-    "ASST Cremona · risposta scritta dell'Ufficio di Pubblica Tutela del 18/11/2026 · Regione Lombardia, pagina «Ticket ed esenzioni» (controllata il 18/11/2026) · pagine ASST e Regione verificate il 23/11/2026",
+    "ASST Cremona · risposta scritta dell'Ufficio di Pubblica Tutela del 18/11/2026 · Regione Lombardia, pagina «Ticket ed esenzioni» (controllata il 18/11/2026) · pagine ASST e Regione verificate il 23/11/2026 · seconda risposta scritta dell'UPT del 25/11/2026 (accesso senza appuntamento, presentazione di persona o per e-mail ordinaria)",
 };
 
 // Azienda ULSS 2 Marca Trevigiana: risposta scritta dell'URP (29/10/2026).
