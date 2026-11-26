@@ -45,6 +45,25 @@ const ALTRI_CONTATTI = [
   { icon: "medkit-outline", title: "Ministero della Salute — 1500", subtitle: "Numero di pubblica utilità per informazioni sanitarie", type: "tel", value: "1500" },
 ] as const;
 
+function stampaGuidaWeb(html: string): Promise<void> {
+  return new Promise((resolve) => {
+    const frame = document.createElement("iframe");
+    frame.setAttribute("aria-hidden", "true");
+    frame.style.cssText = "position:fixed;right:0;bottom:0;width:0;height:0;border:0;";
+    frame.onload = () => {
+      const w = frame.contentWindow;
+      if (w) {
+        w.focus();
+        w.print();
+      }
+      setTimeout(() => frame.remove(), 60000);
+      resolve();
+    };
+    frame.srcdoc = html;
+    document.body.appendChild(frame);
+  });
+}
+
 function toast(msg: string) {
   if (Platform.OS === "android") ToastAndroid.show(msg, ToastAndroid.SHORT);
   else console.log(msg);
@@ -67,11 +86,12 @@ export default function Territorio() {
   const downloadGuide = async () => {
     if (downloading) return;
     setDownloading(true);
-    const html = buildGuideHtml(regione);
+    const html = buildGuideHtml(regione, ALTRI_CONTATTI);
     const guideName = `Guida_Servizi_${comune.slug}.pdf`;
     try {
       if (Platform.OS === "web") {
-        await Print.printAsync({ html });
+        // Sul web Print.printAsync stampa la pagina aperta e non la guida: si stampa la guida in un frame nascosto.
+        await stampaGuidaWeb(html);
         await addVaultFile(guideName);
         toast("Guida aggiunta all'elenco documenti sul dispositivo");
         return;
