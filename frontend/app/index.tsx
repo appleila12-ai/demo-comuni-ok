@@ -28,11 +28,10 @@ import { RiprendiHome } from "@/src/components/RiprendiHome";
 import { InvitoSalvataggio } from "@/src/components/InvitoSalvataggio";
 import { RecuperaDati } from "@/src/components/RecuperaDati";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
-import { apriMail as apriProgrammaPosta } from "@/src/lib/apriMail";
 import { ambitoComune, serviziAmbito } from "@/src/config/comuni/anagrafica";
 import { RichiestaNome, RichiestaNomeHome } from "@/src/components/RichiestaNome";
 import { useNomeUtente } from "@/src/lib/nomeUtente";
-import { SITO_TUTELAPP, linkMailtoInserimentoComune } from "@/src/lib/richiestaComune";
+import { SITO_TUTELAPP } from "@/src/lib/richiestaComune";
 import { useSalvati } from "@/src/lib/salvati";
 
 const FEATURES = [
@@ -503,23 +502,6 @@ function HomeDelComune() {
             <Text style={styles.contactText}>
               Servizi sociali segnalati come attivi nel tuo Ambito: {serviziAmbito(ambitoComune(comune.slug)!.ambito).join("; ")}.
               {"\n"}Fonte: Ministero del Lavoro, SIOSS (file del 07/02/2025). Dato dichiarato dall'Ambito: conferma sempre con il tuo Comune. Un servizio manca o non è corretto? Scrivi a info@tutelapp.it.
-            </Text>
-          )}
-          {!!comune.soloElenco && (
-            <Pressable
-              onPress={() => apriProgrammaPosta(linkMailtoInserimentoComune(comune)).catch(() => {})}
-              style={({ pressed }) => [styles.contactRow, pressed && styles.pressed]}
-              accessibilityRole="button"
-              accessibilityLabel={`Chiedi a TutelApp di inserire il Comune di ${comune.nomeBreve}: apre la mail già compilata`}
-              testID="comune-home-chiedi-inserimento"
-            >
-              <Ionicons name="mail-outline" size={16} color={t.warmDark} />
-              <Text style={[styles.contactValue, styles.contactLink]}>Chiedi di inserire il tuo Comune</Text>
-            </Pressable>
-          )}
-          {!!comune.soloElenco && (
-            <Text style={styles.contactText} selectable>
-              Se non si apre la posta, scrivi a info@tutelapp.it indicando il tuo Comune.
             </Text>
           )}
 
