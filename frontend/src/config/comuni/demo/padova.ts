@@ -31,7 +31,7 @@ export const padova: ComuneConfig = {
   responsabile: "",
   indirizzo: "Via del Carmine 13, Padova",
   telefono: "049 8205933",
-  email: "",
+  email: "servizisociali@comune.padova.it",
   pec: "",
   orari: "",
   sitoWeb: "https://padovaper.comune.padova.it/strutture/ente-pubblico/comune-di-padova-settore-servizi-sociali",

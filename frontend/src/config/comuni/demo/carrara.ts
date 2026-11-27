@@ -21,7 +21,7 @@ export const carrara: ComuneConfig = {
   responsabile: "Settore 8 – Supporto organi istituzionali / Servizi sociali e politiche abitative",
   indirizzo: "Piazza 2 Giugno 1, 54033 Carrara (MS)",
   telefono: "0585 641732",
-  email: "",
+  email: "segretariato@comune.carrara.ms.it",
   pec: "comune.carrara@postecert.it",
   orari: "Lunedì–venerdì 9:00–13:00; martedì e giovedì anche 15:30–17:00",
   sitoWeb: "https://www.comune.carrara.ms.it/it/unita_organizzative/settore-8-supporto-organi-istituzionali-servizi-sociali-e-politiche-abitative",

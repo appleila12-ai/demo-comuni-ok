@@ -19,7 +19,7 @@ export const pesaro: ComuneConfig = {
   responsabile: "",
   indirizzo: "Via Mameli 9, 3° piano, 61121 Pesaro",
   telefono: "0721 387401",
-  email: "",
+  email: "servizi.sociali@comune.pesaro.pu.it",
   pec: "comune.pesaro@emarche.it",
   orari: "Segretariato sociale: lun, mar e gio 10:00-13:00, gio anche 15:00-17:00 (colloqui per telefono fino a nuove disposizioni). Informazioni: lun-ven 8:00-14:00, mar e gio anche 15:00-17:00",
   sitoWeb: "https://www.comune.pesaro.pu.it/servizisociali/",

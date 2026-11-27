@@ -19,7 +19,7 @@ export const gravinaInPuglia: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "080 3259111",
-  email: "",
+  email: "servizi.sociali@comune.gravina.ba.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.gravina.ba.it",

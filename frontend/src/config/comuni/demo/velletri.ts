@@ -19,7 +19,7 @@ export const velletri: ComuneConfig = {
   responsabile: "",
   indirizzo: "Piazza Cesare Ottaviano Augusto 1, 00049 Velletri (RM)",
   telefono: "06 961581",
-  email: "",
+  email: "segretariato.sociale@comune.velletri.rm.it",
   pec: "protocollo@pec.comune.velletri.rm.it",
   orari: "Chiedi dei Servizi Sociali al centralino del Comune: orari dell'ufficio non pubblicati sulla pagina",
   sitoWeb: "https://www.comune.velletri.rm.it/area_letturaServizio/pagsistema.html?type=28",

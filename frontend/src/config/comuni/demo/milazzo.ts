@@ -19,7 +19,7 @@ export const milazzo: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "090 9231218",
-  email: "",
+  email: "staffservizisociali@comune.milazzo.me.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.milazzo.me.it/argomenti/assistenza-sociale/",

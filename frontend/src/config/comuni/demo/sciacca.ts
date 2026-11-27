@@ -19,7 +19,7 @@ export const sciacca: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "0925 20111",
-  email: "",
+  email: "servizioassistenza@comunedisciacca.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.sciacca.ag.it",

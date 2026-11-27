@@ -19,7 +19,7 @@ export const livorno: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "0586 820204",
-  email: "",
+  email: "segretariatosociale@comune.livorno.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.livorno.it/it/topics/7",

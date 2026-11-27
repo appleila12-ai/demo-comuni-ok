@@ -19,7 +19,7 @@ export const sassuolo: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "",
-  email: "",
+  email: "servizisociali@comune.sassuolo.mo.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.sassuolo.mo.it",

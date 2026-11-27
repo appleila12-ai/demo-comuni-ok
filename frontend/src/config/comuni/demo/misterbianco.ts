@@ -19,7 +19,7 @@ export const misterbianco: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "095 7556200",
-  email: "",
+  email: "servizisociali@comune.misterbianco.ct.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.misterbianco.ct.it",

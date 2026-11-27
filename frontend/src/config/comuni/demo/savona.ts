@@ -20,7 +20,7 @@ export const savona: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "019 83101",
-  email: "",
+  email: "servizi.sociali@comune.savona.it",
   pec: "posta@pec.comune.savona.it",
   orari: "",
   sitoWeb: "https://www.comune.savona.it/it/topics/7",

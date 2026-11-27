@@ -20,7 +20,7 @@ export const potenza: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "0971 415111",
-  email: "",
+  email: "segretariato.sociale@comune.potenza.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.potenza.it",

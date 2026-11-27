@@ -19,7 +19,7 @@ export const bustoArsizio: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "0331 390111",
-  email: "",
+  email: "servizisociali@comune.bustoarsizio.va.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.bustoarsizio.va.it/it/page/140050?fromService=1",

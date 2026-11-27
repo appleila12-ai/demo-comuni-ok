@@ -19,7 +19,7 @@ export const gallarate: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "0331 75411",
-  email: "",
+  email: "servsoc@comune.gallarate.va.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.gallarate.va.it/argomento/assistenza-sociale/",

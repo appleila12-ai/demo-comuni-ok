@@ -19,7 +19,7 @@ export const sanSevero: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "0882 339111",
-  email: "",
+  email: "ufficioservizisociali@comune.san-severo.fg.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.san-severo.fg.it",
