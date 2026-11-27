@@ -6,6 +6,15 @@ import { ImageSourcePropType } from "react-native";
 import { topics } from "@/src/theme";
 import { IMAGES } from "@/src/lib/images";
 import { comune } from "@/src/config/comune";
+import {
+  esc,
+  raggruppa,
+  rigaDaNumero,
+  rigaDaVoce,
+  tabellaHtml,
+  type NumeroUtile,
+  type RigaGuida,
+} from "@/src/lib/guidaTabella";
 
 export const REGIONE_KEY = "salutenav:regione";
 
@@ -168,77 +177,53 @@ export function getHelpCards(regione: string): HelpCard[] {
   });
 }
 
-function escapeHtml(t: string) {
-  return String(t)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
-export function buildGuideHtml(regione: string): string {
-  const cards = getHelpCards(regione);
-  const portal = REGIONAL_PORTALS[regione];
-  const cardsHtml = cards
-    .map(
-      (c) => `
-    <div class="card" style="border-left: 4px solid ${c.color};">
-      <div class="label" style="color:${c.color};">${c.label}</div>
-      <div class="title">${c.title}</div>
-      <div class="body">${c.body}</div>
-      ${c.rows.map((r) => `<div class="row"><b>${r.label}:</b> ${r.text}</div>`).join("")}
-    </div>`,
-    )
-    .join("");
+export function buildGuideHtml(regione: string, numeriUtili: readonly NumeroUtile[] = []): string {
+  // Guida in forma di tabella: Nome · Servizio · Recapiti. Solo i dati già verificati della scheda del Comune.
+  const primo: RigaGuida = {
+    nome: `${comune.nome} — ${comune.ente}`,
+    servizio: "Primo riferimento per assistenza a casa, trasporto, contributi e ausili: chiedi un colloquio",
+    recapiti: [
+      comune.indirizzo,
+      comune.telefono ? `Tel. ${comune.telefono}` : "",
+      comune.email,
+      comune.orari,
+    ].filter(Boolean),
+    sito: comune.sitoWeb && comune.sitoWeb.startsWith("https://") ? comune.sitoWeb : undefined,
+  };
+  const gruppi = raggruppa(comune.puntiSupporto.map(rigaDaVoce));
+  gruppi.unshift({ titolo: "Il Comune", righe: [primo] });
+  if (numeriUtili.length > 0) gruppi.push({ titolo: "Numeri utili", righe: numeriUtili.map(rigaDaNumero) });
 
   return `<!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="utf-8" />
-<title>TutelApp — Guida ai servizi ${escapeHtml(comune.delEnte)}</title>
+<title>TutelApp — Guida ai servizi ${esc(comune.delEnte)}</title>
 <style>
-  body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; color: #0F172A; padding: 40px; margin: 0; }
-  .ente { background: #FFF8EC; border: 1px solid #E8D9BD; border-radius: 12px; padding: 16px 18px; margin-bottom: 18px; font-size: 13px; line-height: 1.6; }
-  .ente b { font-size: 15px; }
-  .brand { color: #C1602F; font-weight: 800; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; }
-  h1 { font-size: 22px; margin: 8px 0 4px 0; letter-spacing: -0.4px; }
-  .sub { color: #6B7280; font-size: 13px; margin-bottom: 24px; line-height: 1.5; }
-  .card { background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; padding: 18px; margin-bottom: 14px; }
-  .label { font-size: 10px; font-weight: 800; letter-spacing: 1.2px; margin-bottom: 4px; }
-  .title { font-weight: 800; font-size: 15px; color: #111827; margin-bottom: 6px; }
-  .body { font-size: 13px; color: #1F2937; line-height: 1.55; margin-bottom: 10px; }
-  .row { font-size: 12.5px; color: #374151; line-height: 1.55; margin-bottom: 6px; }
-  .steps { background: #F5F8FC; border-radius: 12px; padding: 16px 18px; margin-top: 20px; }
-  .steps .title { margin-bottom: 8px; }
-  ol { margin: 0; padding-left: 20px; }
-  ol li { font-size: 13px; color: #1F2937; line-height: 1.6; margin-bottom: 4px; }
-  .disclaimer { margin-top: 24px; padding-top: 12px; border-top: 1px solid #E5E7EB; color: #6B7280; font-size: 11px; line-height: 1.5; }
+  @page { size: A4; margin: 14mm; }
+  body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; color: #0F172A; margin: 0; padding: 0; }
+  .brand { color: #C1602F; font-weight: 800; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; }
+  h1 { font-size: 21px; margin: 4px 0 2px 0; }
+  .sub { color: #4B5563; font-size: 12px; margin-bottom: 10px; }
+  h2 { font-size: 14px; margin: 18px 0 6px 0; color: #8A3F1C; }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  th { text-align: left; font-size: 10.5px; color: #6B7280; border-bottom: 2px solid #E5D3BF; padding: 4px 6px; }
+  td { vertical-align: top; font-size: 11.5px; line-height: 1.45; padding: 6px; border-bottom: 1px solid #EEE4D6; overflow-wrap: anywhere; }
+  tr { break-inside: avoid; }
+  th:nth-child(1), td:nth-child(1) { width: 27%; }
+  th:nth-child(2), td:nth-child(2) { width: 36%; }
+  td.nome { font-weight: 700; }
+  td.rec div { margin-bottom: 2px; }
+  a { color: #8A3F1C; text-decoration: none; }
+  .nota { margin-top: 16px; padding-top: 8px; border-top: 1px solid #E5E7EB; color: #4B5563; font-size: 10.5px; line-height: 1.5; }
 </style>
 </head>
 <body>
   <div class="brand">TutelApp</div>
-  <h1>Guida ai servizi ${escapeHtml(comune.delEnte)}</h1>
-  <div class="sub">Aiuti pratici sul territorio: assistenza, trasporti, riabilitazione e ricoveri di sollievo. Regione di riferimento: <b>${regione}</b>${portal ? ` — portale ufficiale: ${portal.url}` : ""}.</div>
-  <div class="ente">
-    <b>${escapeHtml(comune.nome)} — ${escapeHtml(comune.ente)}</b><br/>
-    ${escapeHtml(comune.indirizzo)} · Tel. ${escapeHtml(comune.telefono)} · ${escapeHtml(comune.email)}<br/>
-    Orari: ${escapeHtml(comune.orari)}
-    ${comune.puntiSupporto
-      .map((p) => `<div style="margin-top:8px"><b style="font-size:13px">${escapeHtml(p.title)}</b><br/>${escapeHtml(p.subtitle)}</div>`)
-      .join("")}
-  </div>
-  ${cardsHtml}
-  <div class="steps">
-    <div class="title">Come muoversi con i Servizi Sociali del Comune</div>
-    <ol>
-      <li>Chiama i <b>${escapeHtml(comune.ente)}</b> (tel. ${escapeHtml(comune.telefono)}) o passa in ${escapeHtml(comune.indirizzo)}.</li>
-      <li>Fissa un appuntamento con l'<b>assistente sociale</b> di zona: è gratuito.</li>
-      <li>Porta: documento, tessera sanitaria, ISEE aggiornato e verbale di invalidità/104 se già disponibile.</li>
-      <li>Chiedi la <b>valutazione del bisogno</b>: da lì si attivano SAD, contributi, pasti a domicilio e telesoccorso.</li>
-      <li>Per i servizi sanitari (ADI, UVM, riabilitazione) il riferimento è il <b>Medico Curante</b> e il distretto ASL.</li>
-    </ol>
-  </div>
-  <div class="disclaimer">Contenuto orientativo generato da TutelApp. Servizi, tempi e contributi variano da Comune a Comune: verifica sempre con i ${escapeHtml(comune.ente)}.</div>
+  <h1>Guida ai servizi ${esc(comune.delEnte)}</h1>
+  <div class="sub">Regione ${esc(regione)}. Chi chiamare, per cosa, e dove trovarlo.</div>
+  ${tabellaHtml(gruppi)}
+  <div class="nota">Informazioni di orientamento prese dai siti ufficiali degli enti: verifica sempre prima di andare. Tutto il resto, con i dettagli, è nell'app: www.tutelapp.it · info.tutelapp.it · info@tutelapp.it</div>
 </body>
 </html>`;
 }
