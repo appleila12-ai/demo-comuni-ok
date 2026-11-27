@@ -1315,7 +1315,7 @@ export const BONUS: Bonus[] = [
       url: "https://brugherio-api.municipiumapp.it/s3/947/allegati/doc-pubbl/sociali/determina-1597.pdf",
     },
     verificatoIl: "25/11/2026",
-    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. Mancano in app le soglie ISEE e gli importi: li trovi nell'Avviso d'Ambito.",
+    nota: "I fondi sono limitati e potrebbero essere già esauriti alla data di oggi: chiedi conferma all'ufficio prima di preparare la domanda. Mancano in app le soglie ISEE e gli importi: li trovi nell'Avviso d'Ambito. Le date di apertura e chiusura dell'Avviso non sono ancora confermate dall'Ufficio di Piano: chiedile all'ufficio (tel. 039 2372074) prima di preparare la domanda.",
   },
   {
     id: "bollate-trasporto-scolastico-disabilita-2026-2027",
