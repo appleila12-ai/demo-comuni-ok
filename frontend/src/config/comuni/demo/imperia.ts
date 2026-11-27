@@ -5,6 +5,7 @@ import { percorso } from "../percorso";
 // Il Comune NON ha aderito a TutelApp: l'app lo segnala ai cittadini con un avviso.
 // Verificato solo il sito del Comune (link ufficiale). Pagina dell'Assessorato alla Comunità Solidale del sito del Comune. Il sito dell'azienda sanitaria non è stato controllato.
 // Recapiti Servizi Sociali: scheda «Servizi Sociali ATS 11» del Comune di Imperia (aggiornata il 10/03/2025); orari non indicati, letta il 14/11/2026.
+// Referente Servizi Sociali: Dott.ssa Claudia Lanteri, indicata dal Comune nella risposta del 23/11/2026 (la mail è già in «email»).
 // Da fare: bonus del Comune, associazioni, sport e tempo libero.
 export const imperia: ComuneConfig = {
   slug: "imperia",
@@ -17,7 +18,7 @@ export const imperia: ComuneConfig = {
   regione: "Liguria",
 
   ente: "Servizi Sociali",
-  responsabile: "",
+  responsabile: "Dott.ssa Claudia Lanteri",
   indirizzo: "Piazza Dante 4 (ex Palazzo Comunale)",
   telefono: "0183 701401",
   email: "sportelloalpubblico_servizisociali@comune.imperia.it",
