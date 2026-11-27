@@ -20,7 +20,7 @@ export const monza: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "039 23721",
-  email: "",
+  email: "sociali.segretariato@comune.monza.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.monza.it",

@@ -19,7 +19,7 @@ export const cantu: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "031 7171",
-  email: "",
+  email: "servizi.sociali@comune.cantu.co.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.cantu.co.it",

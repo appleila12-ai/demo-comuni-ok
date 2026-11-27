@@ -19,7 +19,7 @@ export const lucca: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "0583 4422",
-  email: "",
+  email: "segretariatosociale@comune.lucca.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.lucca.it/servizi-categoria/salute-benessere-e-assistenza/",

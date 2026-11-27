@@ -19,7 +19,7 @@ export const frattamaggiore: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "081 8890206",
-  email: "",
+  email: "servizisociali@comune.frattamaggiore.na.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.frattamaggiore.na.it/servizi/salute-benessere-e-assistenza",

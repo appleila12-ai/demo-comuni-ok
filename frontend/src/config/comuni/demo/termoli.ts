@@ -19,7 +19,7 @@ export const termoli: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "0875 7121",
-  email: "",
+  email: "ufficiosassistenza@comune.termoli.cb.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.termoli.cb.it",

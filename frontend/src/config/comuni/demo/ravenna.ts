@@ -20,7 +20,7 @@ export const ravenna: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "0544 482111",
-  email: "",
+  email: "accoglienzasociale@comune.ravenna.it",
   pec: "",
   orari: "",
   sitoWeb: "https://comune.ravenna.it",

@@ -19,7 +19,7 @@ export const portici: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "081 7862111",
-  email: "",
+  email: "politiche.sociali@comune.portici.na.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.portici.na.it",

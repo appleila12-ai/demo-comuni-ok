@@ -21,7 +21,7 @@ export const cagliari: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "070 6771",
-  email: "",
+  email: "servizi.sociali@comune.cagliari.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.cagliari.it/portale/page/it/servizi_salute",

@@ -19,7 +19,7 @@ export const varese: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "0332 255111",
-  email: "",
+  email: "sociali@comune.varese.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.varese.it",

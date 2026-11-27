@@ -19,7 +19,7 @@ export const brugherio: ComuneConfig = {
   responsabile: "",
   indirizzo: "Piazza Cesare Battisti 1, 20861 Brugherio (MB)",
   telefono: "039 28931",
-  email: "",
+  email: "sociali@comune.brugherio.mb.it",
   pec: "protocollo.brugherio@legalmail.it",
   orari: "Chiedi dei Servizi Sociali al centralino del Comune: orari dell'ufficio non pubblicati sulla pagina",
   sitoWeb: "https://www.comune.brugherio.mb.it/it/topics/7",

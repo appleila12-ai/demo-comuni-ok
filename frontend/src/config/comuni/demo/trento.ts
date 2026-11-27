@@ -19,7 +19,7 @@ export const trento: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "0461 884111",
-  email: "",
+  email: "servizio.welfare@comune.trento.it",
   pec: "protocollo@pec.comune.trento.it",
   orari: "",
   sitoWeb: "https://www.comune.trento.it",

@@ -20,7 +20,7 @@ export const aversa: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "081 5049111",
-  email: "",
+  email: "servizisocialiaversa@gmail.com",
   pec: "",
   orari: "",
   sitoWeb: "https://comune.aversa.ce.it/servizi-categoria/salute-benessere-e-assistenza/",

@@ -19,7 +19,7 @@ export const cernuscoSulNaviglio: ComuneConfig = {
   responsabile: "",
   indirizzo: "Via Tizzoni 2, 20063 Cernusco sul Naviglio (MI)",
   telefono: "02 92781",
-  email: "",
+  email: "ssociali1@comune.cernuscosulnaviglio.mi.it",
   pec: "",
   orari: "Chiedi dei Servizi Sociali al centralino del Comune: orari dell'ufficio non pubblicati sulla pagina",
   sitoWeb: "https://comune.cernuscosulnaviglio.mi.it/argomento/assistenza-sociale/",

@@ -19,7 +19,7 @@ export const lucera: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "0881 541111",
-  email: "",
+  email: "politichesociali@comune.lucera.fg.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.lucera.fg.it",

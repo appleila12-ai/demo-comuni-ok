@@ -19,7 +19,7 @@ export const monfalcone: ComuneConfig = {
   responsabile: "",
   indirizzo: "",
   telefono: "",
-  email: "",
+  email: "servizisociali@comune.monfalcone.go.it",
   pec: "",
   orari: "",
   sitoWeb: "https://www.comune.monfalcone.go.it",

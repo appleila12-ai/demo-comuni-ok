@@ -19,7 +19,7 @@ export const treviglio: ComuneConfig = {
   responsabile: "",
   indirizzo: "Piazza Manara 1, 24047 Treviglio (BG)",
   telefono: "0363 3171",
-  email: "",
+  email: "servizio.sociale@comune.treviglio.bg.it",
   pec: "comune.treviglio@legalmail.it",
   orari: "Chiedi dei Servizi Sociali al centralino del Comune: orari dell'ufficio non pubblicati sulla pagina",
   sitoWeb: "https://www.comune.treviglio.bg.it/it/topics/7",
