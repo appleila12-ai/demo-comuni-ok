@@ -84,7 +84,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Bari | BA | Puglia | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-24 |
 | Comune di Barletta | BT | Puglia | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-25 |
 | Comune di Barletta | BT | Puglia | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
-| Comune di Bassano del Grappa | VI | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Bassano del Grappa | VI | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-28 |
 | Comune di Bassano del Grappa | VI | Veneto | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Battipaglia | SA | Campania | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Belluno | BL | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
@@ -122,7 +122,6 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Busto Arsizio | VA | Lombardia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Busto Arsizio | VA | Lombardia | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Busto Arsizio | VA | Lombardia | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
-| Comune di Cagliari | CA | Sardegna | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Caivano | NA | Campania | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Caivano | NA | Campania | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Calcata | VT | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
@@ -220,7 +219,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Chieri | TO | Piemonte | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Chieti | CH | Abruzzo | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Chieti | CH | Abruzzo | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
-| Comune di Chioggia | VE | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Chioggia | VE | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-28 |
 | Comune di Chioggia | VE | Veneto | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Chioggia | VE | Veneto | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Cinisello Balsamo | MI | Lombardia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
@@ -367,7 +366,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Jesi | AN | Marche | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Jesi | AN | Marche | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Jesi | AN | Marche | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
-| Comune di Jesolo | VE | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Jesolo | VE | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-28 |
 | Comune di Jesolo | VE | Veneto | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Ladispoli | RM | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Lamezia Terme | CZ | Calabria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
@@ -382,7 +381,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune dell'Aquila | AQ | Abruzzo | bonus comunali | Sportello Unificato del Comune | chiesto | 2026-11-10 |
 | Comune di Lecce | LE | Puglia | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-24 |
 | Comune di Lecco | LC | Lombardia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
-| Comune di Legnago | VR | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Legnago | VR | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-28 |
 | Comune di Legnago | VR | Veneto | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Legnano | MI | Lombardia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Lenola | LT | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
@@ -462,9 +461,9 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Milazzo | ME | Sicilia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Milazzo | ME | Sicilia | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Milazzo | ME | Sicilia | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
-| Comune di Mira | VE | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Mira | VE | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-06 |
 | Comune di Mira | VE | Veneto | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
-| Comune di Mirano | VE | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Mirano | VE | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-28 |
 | Comune di Mirano | VE | Veneto | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Mirano | VE | Veneto | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Misterbianco | CT | Sicilia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
@@ -495,7 +494,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Monrupino | TS | Friuli-Venezia Giulia | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Monte San Biagio | LT | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Monte San Biagio | LT | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
-| Comune di Montebelluna | TV | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Montebelluna | TV | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-28 |
 | Comune di Montefiascone | VT | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Montefiascone | VT | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Monterosso al Mare | SP | Liguria | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-12 |
@@ -645,7 +644,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Rottofreno | PC | Emilia-Romagna | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Rottofreno | PC | Emilia-Romagna | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Rovereto | TN | Trentino-Alto Adige | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
-| Comune di Rovigo | RO | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Rovigo | RO | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-28 |
 | Comune di Rovigo | RO | Veneto | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Rozzano | MI | Lombardia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Rozzano | MI | Lombardia | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
@@ -703,7 +702,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Scafati | SA | Campania | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Scandicci | FI | Toscana | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Scandicci | FI | Toscana | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
-| Comune di Schio | VI | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Schio | VI | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-28 |
 | Comune di Schio | VI | Veneto | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Schio | VI | Veneto | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Sciacca | AG | Sicilia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
@@ -738,7 +737,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Sondrio | SO | Lombardia | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Sperlonga | LT | Lazio | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Sperlonga | LT | Lazio | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
-| Comune di Spinea | VE | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Spinea | VE | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-28 |
 | Comune di Spinea | VE | Veneto | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Spoleto | PG | Umbria | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Spoleto | PG | Umbria | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
@@ -774,7 +773,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Trapani | TP | Sicilia | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Trento | TN | Trentino-Alto Adige | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Trento | TN | Trentino-Alto Adige | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
-| Comune di Treviso | TV | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Treviso | TV | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-06 |
 | Comune di Tribiano | MI | Lombardia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Tribiano | MI | Lombardia | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Trieste | TS | Friuli-Venezia Giulia | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
