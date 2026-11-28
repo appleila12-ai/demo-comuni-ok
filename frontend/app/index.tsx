@@ -30,6 +30,8 @@ import { RecuperaDati } from "@/src/components/RecuperaDati";
 import { RichiestaComuneFinestra } from "@/src/components/ScriviAlComune";
 import { ambitoComune, serviziAmbito } from "@/src/config/comuni/anagrafica";
 import { RichiestaNome, RichiestaNomeHome } from "@/src/components/RichiestaNome";
+import { BloccoHome, type VoceBlocco } from "@/src/components/BloccoHome";
+import { BonusInScadenzaHome } from "@/src/components/BonusInScadenzaHome";
 import { useNomeUtente } from "@/src/lib/nomeUtente";
 import { SITO_TUTELAPP } from "@/src/lib/richiestaComune";
 import { useSalvati } from "@/src/lib/salvati";
@@ -181,6 +183,20 @@ const INFO_LINKS = [
     : []),
 ];
 
+// Le stesse voci di prima, raccolte in quattro blocchi. Ogni voce nuova va aggiunta a UN blocco (la ricerca le trova già da sola).
+const TUTTE_LE_VOCI: VoceBlocco[] = [
+  ...FEATURES.map((f) => ({ id: f.href, icon: f.icon, title: f.title, sub: f.text, href: f.href, color: f.color, testID: `comune-feature-${f.href.slice(1)}` })),
+  ...STRUMENTI.map((l) => ({ id: l.id, icon: l.icon, title: l.title, sub: l.sub, href: l.href, color: l.color, testID: `comune-strumento-${l.id}` })),
+  ...INFO_LINKS.map((l) => ({ id: l.id, icon: l.icon, title: l.title, sub: l.sub, href: l.href, color: l.color, testID: `comune-info-${l.id}` })),
+];
+
+const BLOCCHI = [
+  { id: "percorso", titolo: "Il mio percorso", icon: "footsteps-outline" as const, ids: ["/progetto", "/tracker", "scadenze", "cassetto", "salvati"] },
+  { id: "diritti", titolo: "Cosa mi spetta", icon: "shield-checkmark-outline" as const, ids: ["diritti", "importi", "lettere", "reclamo"] },
+  { id: "aiuti", titolo: "Aiuti vicino a me", icon: "people-outline" as const, ids: ["/territorio", "salute", "associazioni"] },
+  { id: "capire", titolo: "Per capire meglio", icon: "help-circle-outline" as const, ids: ["faq", "glossario", "infortunio-lavoro", "lavoro", "domande-104"] },
+].map((b) => ({ ...b, voci: b.ids.map((id) => TUTTE_LE_VOCI.find((v) => v.id === id)).filter((v): v is VoceBlocco => !!v) }));
+
 export default function ComuneHome() {
   // Primo accesso senza Comune nel link: prima si sceglie il proprio Comune
   if (!comuneScelto()) return <Redirect href="/comuni" />;
@@ -250,10 +266,17 @@ function HomeDelComune() {
             <Text style={styles.demoBannerText}>
               <Text style={styles.demoBannerStrong}>Versione dimostrativa: </Text>
               {comune.tipo === "unione" ? "l'" : "il "}
-              {comune.nome} non ha aderito a TutelApp.{" "}
-              {comune.soloElenco
-                ? "In questa versione non ci sono ancora i recapiti dei suoi servizi sociali: trovi le informazioni generali valide in tutta Italia. Sito e PEC del Comune: Indice PA (AgID), licenza CC BY 4.0."
-                : "I recapiti vengono dal sito ufficiale e potrebbero non essere aggiornati."}
+              {comune.nome} non ha aderito a TutelApp. Verifica sempre i recapiti sui canali ufficiali.{" "}
+              {comune.soloElenco ? "Sito e PEC del Comune: Indice PA (AgID), licenza CC BY 4.0. " : ""}
+              <Text
+                style={styles.demoBannerLink}
+                onPress={() => router.push("/come-leggere" as any)}
+                accessibilityRole="link"
+                accessibilityLabel="Come leggere TutelApp"
+                testID="home-come-leggere"
+              >
+                Come leggere TutelApp
+              </Text>
             </Text>
           </View>
         )}
@@ -323,6 +346,9 @@ function HomeDelComune() {
           ) : null}
         </View>
 
+        {/* Solo se un bonus del Comune sta per scadere */}
+        <BonusInScadenzaHome />
+
         {/* Prima ci si presenta (solo se manca il nome), poi si dice di cosa si ha bisogno */}
         {!nome ? <RichiestaNomeHome /> : null}
 
@@ -382,101 +408,11 @@ function HomeDelComune() {
           </View>
         </Pressable>
 
-        {/* Cosa trovi */}
-        <Text style={styles.sectionLabel} accessibilityRole="header">COSA PUOI FARE</Text>
-        <View style={styles.features}>
-          {/* Ogni scheda porta alla sua sezione: niente riquadri "finti" */}
-          {FEATURES.map((feature) => (
-            <Pressable
-              key={feature.title}
-              onPress={() => router.push(feature.href as any)}
-              style={({ pressed }) => [styles.featureCard, pressed && styles.pressed]}
-              accessibilityRole="button"
-              accessibilityLabel={feature.title}
-              testID={`comune-feature-${feature.href.slice(1)}`}
-            >
-              <View style={[styles.featureIcon, { backgroundColor: feature.color.soft }]}>
-                <Ionicons name={feature.icon} size={22} color={feature.color.main} />
-              </View>
-              <View style={styles.flex}>
-                <Text style={styles.featureTitle}>{feature.title}</Text>
-                <Text style={styles.featureText}>{feature.text}</Text>
-              </View>
-              <Ionicons
-                name="chevron-forward"
-                size={16}
-                color={colors.onSurfaceTertiary}
-                style={styles.featureChevron}
-              />
-            </Pressable>
-          ))}
-        </View>
-
-        {/* Strumenti pratici: aiutano a fare le pratiche */}
-        <Text style={styles.sectionLabel} accessibilityRole="header">STRUMENTI PRATICI</Text>
-        <View style={styles.infoLinks}>
-          {STRUMENTI.map((l) => (
-            <Pressable
-              key={l.id}
-              onPress={() => router.push(l.href as any)}
-              style={({ pressed }) => [styles.infoLink, pressed && styles.pressed]}
-              accessibilityRole="button"
-              accessibilityLabel={l.title}
-              testID={`comune-strumento-${l.id}`}
-            >
-              <View style={[styles.infoLinkIcon, { backgroundColor: l.color.soft }]}>
-                <Ionicons name={l.icon} size={20} color={l.color.main} />
-              </View>
-              <View style={styles.flex}>
-                <Text style={styles.infoLinkTitle}>{l.title}</Text>
-                <Text style={styles.infoLinkSub}>{l.sub}</Text>
-              </View>
-              <Ionicons name="chevron-forward" size={16} color={colors.onSurfaceTertiary} />
-            </Pressable>
-          ))}
-        </View>
-
-        {/* Informazioni utili: sempre disponibili, anche offline */}
-        <Text style={styles.sectionLabel} accessibilityRole="header">INFORMAZIONI UTILI</Text>
-        <View style={styles.infoLinks}>
-          {INFO_LINKS.map((l) => (
-            <Pressable
-              key={l.id}
-              onPress={() => router.push(l.href as any)}
-              style={({ pressed }) => [styles.infoLink, pressed && styles.pressed]}
-              accessibilityRole="button"
-              accessibilityLabel={l.title}
-              testID={`comune-info-${l.id}`}
-            >
-              <View style={[styles.infoLinkIcon, { backgroundColor: l.color.soft }]}>
-                <Ionicons name={l.icon} size={20} color={l.color.main} />
-              </View>
-              <View style={styles.flex}>
-                <Text style={styles.infoLinkTitle}>{l.title}</Text>
-                <Text style={styles.infoLinkSub}>{l.sub}</Text>
-              </View>
-              <Ionicons name="chevron-forward" size={16} color={colors.onSurfaceTertiary} />
-            </Pressable>
-          ))}
-        </View>
-
-        {/* Messaggio istituzionale */}
-        <View style={styles.infoCard}>
-          <View style={[styles.infoIcon, { backgroundColor: t.warmSoft }]}>
-            <Ionicons name="heart-outline" size={20} color={t.warmDark} />
-          </View>
-          <View style={styles.flex}>
-            <Text style={styles.infoTitle}>
-              {comune.dimostrativo
-                ? "I Servizi Sociali restano il tuo riferimento"
-                : `${comune.soggetto} resta al tuo fianco`}
-            </Text>
-            <Text style={styles.infoText}>
-              TutelApp non sostituisce l&apos;INPS, l&apos;azienda sanitaria, l&apos;Ambito Territoriale Sociale o i servizi comunali.
-              Ti aiuta a capire dove andare e cosa preparare.
-            </Text>
-          </View>
-        </View>
+        {/* Quattro blocchi: si aprono solo quando servono */}
+        {BLOCCHI.map((b) => (
+          <BloccoHome key={b.id} titolo={b.titolo} icon={b.icon} voci={b.voci} testID={`home-blocco-${b.id}`} />
+        ))}
+        <View style={styles.spazioBlocchi} />
 
         {/* Unioni: il tuo paese e i recapiti del municipio */}
         <PaeseCard testID="comune-home-paese" />
@@ -579,12 +515,22 @@ function HomeDelComune() {
           <Ionicons name="download-outline" size={22} color={colors.brandPrimaryDark} />
         </Pressable>
 
-        <Text style={styles.footer}>
-          Informazioni di orientamento · Verifica sempre le procedure sui canali ufficiali degli enti competenti.
-          {HA_BACKEND
-            ? `\nPer aiutare ${comune.soggetto.toLowerCase()} a migliorare i servizi, TutelApp conta in forma anonima quali sezioni vengono usate: nessun dato personale.`
-            : ""}
-        </Text>
+        {HA_BACKEND ? (
+          <Text style={styles.footer}>
+            {`Per aiutare ${comune.soggetto.toLowerCase()} a migliorare i servizi, TutelApp conta in forma anonima quali sezioni vengono usate: nessun dato personale.`}
+          </Text>
+        ) : null}
+
+        <Pressable
+          onPress={() => router.push("/come-leggere" as any)}
+          style={({ pressed }) => [styles.switchLink, pressed && styles.pressed]}
+          accessibilityRole="link"
+          accessibilityLabel="Come leggere TutelApp"
+          testID="home-footer-come-leggere"
+        >
+          <Ionicons name="information-circle-outline" size={14} color={colors.onSurfaceTertiary} />
+          <Text style={styles.switchText}>Come leggere TutelApp</Text>
+        </Pressable>
 
         <Pressable
           onPress={() => router.push("/comuni")}
@@ -633,6 +579,7 @@ const styles = StyleSheet.create({
   },
   demoBannerText: { flex: 1, fontSize: 12, lineHeight: 17, color: "#4A3A14" },
   demoBannerStrong: { fontWeight: "800" },
+  demoBannerLink: { fontWeight: "800", textDecorationLine: "underline" },
   safe: { flex: 1 },
   flex: { flex: 1 },
   container: {
@@ -937,6 +884,7 @@ const styles = StyleSheet.create({
   brochureTesti: { flex: 1 },
   brochureTitolo: { fontSize: 16, fontWeight: "800", color: colors.onSurface },
   brochureSotto: { fontSize: 14, lineHeight: 20, color: colors.onSurface, marginTop: 2 },
+  spazioBlocchi: { height: spacing.md },
   footer: {
     fontSize: 10,
     lineHeight: 15,

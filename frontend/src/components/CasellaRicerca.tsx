@@ -13,6 +13,9 @@ import { BottoneSalva } from "@/src/components/BottoneSalva";
 import { dimenticaRicerca, leggiRicerca, salvaRicerca } from "@/src/lib/riprendi";
 import { useNomeUtente } from "@/src/lib/nomeUtente";
 
+// Si mostrano solo gli esempi che portano davvero a qualcosa: se un contenuto cambia, l'esempio vecchio sparisce da solo
+const ESEMPI_VALIDI = ESEMPI.filter((e) => cerca(e).length > 0);
+
 export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string }) {
   const router = useRouter();
   const nome = useNomeUtente();
@@ -88,7 +91,7 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
         <View style={styles.esempi}>
           <Text style={styles.esempiLabel}>Per esempio:</Text>
           <View style={styles.chips}>
-            {ESEMPI.map((e) => (
+            {ESEMPI_VALIDI.map((e) => (
               <Pressable
                 key={e}
                 onPress={() => setTesto(e)}
@@ -175,7 +178,7 @@ export function CasellaRicerca({ testID = "casella-ricerca" }: { testID?: string
         </View>
       )}
 
-      <Text style={styles.privacy}>Quello che scrivi resta sul tuo telefono.</Text>
+      <Text style={styles.privacy}>Quello che scrivi e il tuo nome restano sul tuo telefono.</Text>
     </View>
   );
 }
