@@ -148,8 +148,7 @@ export function RichiestaNomeHome({ testID = "home-nome" }: { testID?: string })
         Come ti chiami?
       </Text>
       <Text style={h.testo}>
-        Così TutelApp può chiamarti per nome. Resta solo su questo dispositivo: non viene inviato a
-        nessuno.
+        Così TutelApp può chiamarti per nome.
       </Text>
       <TextInput
         value={testo}
