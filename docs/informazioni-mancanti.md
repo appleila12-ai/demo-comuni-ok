@@ -219,7 +219,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Chieri | TO | Piemonte | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Chieti | CH | Abruzzo | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Chieti | CH | Abruzzo | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
-| Comune di Chioggia | VE | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Chioggia | VE | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-28 |
 | Comune di Chioggia | VE | Veneto | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Chioggia | VE | Veneto | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Cinisello Balsamo | MI | Lombardia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
@@ -463,7 +463,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Milazzo | ME | Sicilia | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
 | Comune di Mira | VE | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-06 |
 | Comune di Mira | VE | Veneto | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
-| Comune di Mirano | VE | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Mirano | VE | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-28 |
 | Comune di Mirano | VE | Veneto | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Mirano | VE | Veneto | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Misterbianco | CT | Sicilia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
@@ -702,7 +702,7 @@ Generato da `docs/strumenti/completezza-comuni.js . --scrivi`.
 | Comune di Scafati | SA | Campania | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Scandicci | FI | Toscana | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
 | Comune di Scandicci | FI | Toscana | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-13 |
-| Comune di Schio | VI | Veneto | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
+| Comune di Schio | VI | Veneto | bonus comunali | Servizi Sociali del Comune | chiesto | 2026-11-28 |
 | Comune di Schio | VI | Veneto | servizi sociali (recapiti) | Servizi Sociali del Comune | da chiedere | 2026-11-24 |
 | Comune di Schio | VI | Veneto | esenzione ticket | URP dell'azienda sanitaria | da chiedere | 2026-11-24 |
 | Comune di Sciacca | AG | Sicilia | bonus comunali | Servizi Sociali del Comune | da chiedere | 2026-11-13 |
